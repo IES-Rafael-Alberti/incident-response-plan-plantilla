@@ -1,7 +1,7 @@
 ---
 
 # The name of your organization (e.g., Acme, Inc.)
-COMPANY_NAME: ''
+COMPANY_NAME: '{{COMPANY_NAME}}'
 
 # Name and email of plan author (e.g., Chris)
 AUTHOR_NAME: '{{AUTHOR_NAME}}'
