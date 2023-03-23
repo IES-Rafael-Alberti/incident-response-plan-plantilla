@@ -1,15 +1,17 @@
 /* TEAM */
-Creator: Chris Hendricks
+Creator: Emilio José Iglesias Valera 
 Site: https://www.counteractive.net
-Twitter: @counteract_ive
-Location: San Antonio, Texas, USA
+Twitter: @jijijijaja_no
+Location: Cadiz, Chiclana de la frontera, España
 
-Contributor: Katherine Henry
-Twitter: @kathenry11
-Location: Oklahoma City, Oklahoma, USA
+Contributor: Jose Antonio Montero Rodriguez
+Twitter: @loletete
+Location: Cadiz, Chiclana de la frontera, España
 
-Contributor: William Rowe
-Location: Fredericksburg, Virginia, USA
+Contributor: Alejandro Sánchez Ramos
+Site: https://www.gravekeeper.net
+Twitter: @alive_undead
+Location: Cadiz, Chiclana de la frontera, España
 
 /* THANKS */
 Inspirations: Everyone involved in the prior art listed in the README
