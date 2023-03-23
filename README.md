@@ -2,7 +2,7 @@
 
 ## Acerca de
 
-Esta plantilla ha sido creada por el equipo de [Counteractive Security](https://www.counteractive.net/), para ayudar a todas las organizaciones a comenzar de forma concisa, directa, especifica, flexible y gratuita un plan de respuesta de incidentes. Crea un plan [que utilizaras](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) para responder de manera eficiente, minimizando los costes e impactos, para volver a trabajar lo mas rápido posible.
+Esta plantilla ha sido creada por el equipo de [Counteractive Security](https://www.counteractive.net/), para ayudar a todas las organizaciones a comenzar de forma concisa, directa, especifica, flexible y gratuita un plan de respuesta de incidentes. Crea un plan [que utilizaras](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) para responder de manera eficiente, minimizando los costes e impactos, para volver a trabajar lo mas rápido posible
 
 Descarga la última versión [aquí](https://github.com/counteractive/incident-response-plan-template/releases/latest), por favor cree un problema o suba un pull request con retroalimentación, sugerencias, o actualizaciones. 
 
