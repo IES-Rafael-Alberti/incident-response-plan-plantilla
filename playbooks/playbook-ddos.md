@@ -1,4 +1,4 @@
-# Playbook para responder a un ataque DDoS
+# Playbook: Ataque DDoS
 ### Identificar, informar, configurar y comunicar!
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es meramente secuencial. Utilice su mejor criterio.
 
