@@ -1,4 +1,3 @@
-
 ## Playbook: Denegación de servicio/Denegación de servicio distribuida
 
 **Investigar, remediar (contener, erradicar) y comunicar en paralelo!**

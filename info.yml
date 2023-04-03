@@ -94,11 +94,11 @@ MEMORY_COLLECTION_TOOL: '[winpmem](https://github.com/Velocidex/WinPmem)'
 DISK_IMAGE_TOOL: '[sumuri](https://sumuri.com/software)'
 
 # URL/path to IR report template (e.g., ir.acme.tld/report/template)
-INCIDENT_REPORT_TEMPLATE: 404_WNF.com/plantillas
+INCIDENT_REPORT_TEMPLATE: '404_WNF.com/plantillas'
 
 # URL/path to report recipient list (e.g., ir.acme.tld/report/recipients)
 INCIDENT_REPORT_RECIPIENTS: '404_WNF.com/informe/receptores'
-0
+
 # Compliance team name and contact info (e.g., the legal team, legal@acme.tld)
 COMPLIANCE_TEAM:  'legal@wnf.com'
 
@@ -121,7 +121,7 @@ CNI_CONTACT: 'Manuel Rivas'
 INCIDENT_RESPONSE_VENDOR: '[Counteractive Security](https://www.counteractive.net)'
 
 # Vendor for PR support (e.g., public relations llc, pr.firm.tld)
-PUBLIC_RELATIONS_VENDOR: rrpp.404_WNFcom
+PUBLIC_RELATIONS_VENDOR: 'rrpp.404_WNFcom'
 
 # (Cyber) insurance provider (e.g., AAA insurance co., cyber.insurance.tld)
 INSURANCE_VENDOR: 'cyber_albert.IES.soc'
