@@ -19,6 +19,10 @@ Fase inicial en la que debe pereparar las medidas, para asegurarse que pueden re
 
 ### Investigar 
 
+<<<<<<< Updated upstream
+=======
+<!--`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el incidente de escalada de privilegio.`-->
+>>>>>>> Stashed changes
 
 En esta fase debe esforzarse por detectar y validar los incidentes rápidamente, porque las infecciones pueden propagarse en cuestión de minutos. La detección temprana puede ayudarle a minimizar el número de sistemas infectados. Lo que reducirá la magnitud del esfuerzo de recuperación y la cantidad de daños que sufra como resultado del incidente.
 
@@ -64,7 +68,13 @@ aceptable para la organización.
 
 #### Contención
 
+<<<<<<< Updated upstream
 
+=======
+<!--`TODO: Personalizar los pasos de contención, tácticos y estratégicos, en la escalada de privilegio.`
+
+`TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.`-->
+>>>>>>> Stashed changes
 
 1. Identifique los sistemas que han sido accedidos, mediante la escalada de privilegios o que estén en riesgo, de los ya analizados anteriormente.
 2. Identifique los sistemas que estén fuera de línea debido a que fueron comprometidos.
@@ -93,13 +103,23 @@ aceptable para la organización.
 * Antivirus: _En los equipos de trabajo Windows Defender_ y _dispositivos móviles ESET mobile_.
 * Herramientas de monitorización de red: _Herramienta básica, propia de la organización_.
 
+<<<<<<< Updated upstream
+=======
+<!--`TODO: Considerar la automatización de las medidas de contención utilizando herramientas de orquestación.`-->
+>>>>>>> Stashed changes
 
 * Deberá consultar con el proveedor/es de seguridad. Si dispone, alguna implantación de alguna herramienta de automatización, que permita realizar la contención en mejor forma y tiempo.
 * También para seguir perfeccionando, el plan de respuesta a incidentes. Del tipo de respuesta a escalada de privilegios.
 
 #### Erradicar
 
+<<<<<<< Updated upstream
 
+=======
+<!--`TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la identidad y acceso.`
+
+`TODO: Especificar herramientas y procedimientos para cada paso, a continuación.`-->
+>>>>>>> Stashed changes
 
 En esta fase el equipo de operaciones, deberá realizar el correspondiente triaje y junto al Escriba, la confirmación del informe del Incidente.
 Por lo que debe realizar peticiones de parcheo de los sistemas.
@@ -115,6 +135,10 @@ Y, realizando las siguientes acciones, entre los distintos roles del equipo:
 
 #### Referencia: Recursos de Remediación
 
+<<<<<<< Updated upstream
+=======
+<!--`TODO: Especificar los recursos financieros, de personal y logísticos para llevar a cabo la remediación.`-->
+>>>>>>> Stashed changes
 
 Para llevar a cabo todo el proceso descrito anteriormente. Se utilizarán los siguiente recursos tanto financieros, personal y logísticos:
 
@@ -125,8 +149,15 @@ Para llevar a cabo todo el proceso descrito anteriormente. Se utilizarán los si
 * Dispone de servicios de protección y monitorización, contratados de manera externalizada.
 
 ### Comunicar
+<<<<<<< Updated upstream
 
 
+=======
+<!--
+`TODO: Personalizar los pasos de comunicación para el compromiso de la identidad y el acceso.`
+
+`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`-->
+>>>>>>> Stashed changes
 
 1. Durante la llamada del incidente. Debe realizar comunicaciones, entre los integrantes del equipo de operaciones:
 2. En el incidente, el IC será quien esté al mando y gestione a los demás del equipo. Se deben realizar alguno de los tipos de comunicación que se dictan, a continuación:
@@ -144,8 +175,15 @@ Para llevar a cabo todo el proceso descrito anteriormente. Se utilizarán los si
       3. [Fuerzas de seguridad europeas o nacionales](#TODO-link-to-actual-resource)
 
 ### Recuperación
+<<<<<<< Updated upstream
 
 
+=======
+<!--
+`TODO: Personalizar los pasos de recuperación para el compromiso de la identidad y acceso.`
+
+`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`-->
+>>>>>>> Stashed changes
 
 Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
 Y de las medidas de remediación y salvaguardas que se tuvieran a disposición. El equipo de respuesta a incidentes, junto al departamento TI de la organización.

@@ -17,7 +17,7 @@ AUTHOR_EMAIL: '404_WNF@wnf.com'
 REVISION_NUMBER: '1'
 
 # Document control metadata (e.g., 7 Jan 2021)
-RELEASE_DATE: '23 Mar 2023' 
+RELEASE_DATE: '23 Mar 2023'
 
 # Date someone last reviewed the plan (e.g., 7 Jan 2021)
 REVIEW_DATE: '23 Mar 2023'
@@ -35,7 +35,7 @@ RESPONSE_PHONE: '+34 123456789'
 RESPONSE_VTC: 'Skype'
 
 # Description/URL for alternate email (e.g., alt 365 tenant at ir.acme.tld/othermail)
-ALTERNATE_EMAIL: '{{200_WNF@wnf.com}}'
+ALTERNATE_EMAIL: '200_WNF@wnf.com'
 
 # Domain name for your organization (e.g., acme.tld)
 ORGANIZATION_DOMAIN: '404_WNF.com'
