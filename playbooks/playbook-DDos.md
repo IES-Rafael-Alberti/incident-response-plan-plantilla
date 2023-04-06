@@ -127,10 +127,10 @@ Contactar con los proveedores de seguros
   -  ¿Con quién más se ha puesto en contacto en relación con este incidente y qué le ha dicho?
 - Haga las preguntas de seguimiento que sean necesarias.  **Usted es una persona que responde al incidente, contamos con usted.**
 - Registre toda la información en el ticket, incluyendo notas manuscritas y de voz.
--  Póngase en contacto con el [equipo de seguridad] (#TODO-link-to-actual-resource) y prepárese para participar en la respuesta según las indicaciones: investigación, reparación, comunicación y recuperación.
+-  Póngase en contacto con el [equipo de seguridad](#TODO-link-to-actual-resource) y prepárese para participar en la respuesta según las indicaciones: investigación, reparación, comunicación y recuperación.
 
 ### 9. Información adicional
 
 - [¿Qué es un DDos?](https://www.innovaciondigital360.com/cyber-security/ataque-DDos-que-es-como-se-hace-como-defenderse/)
-- [Remediaciones]((https://www.innovaciondigital360.com/cyber-security/ataque-DDos-que-es-como-se-hace-como-defenderse/))
+- [Remediaciones](https://www.innovaciondigital360.com/cyber-security/ataque-DDos-que-es-como-se-hace-como-defenderse/)
 
