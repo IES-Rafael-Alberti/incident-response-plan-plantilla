@@ -109,10 +109,10 @@ Contactar con los proveedores de seguros
 
 - Mantenga la calma y respire profundamente.
 - Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  Todo ayuda.  Documenta lo siguiente:
-  - ​    1. ¿Qué has notado?
-  - ​    1. ¿Cuándo ocurrió por primera vez, y con qué frecuencia desde entonces?
-  - ​    1. ¿A qué datos suele acceder?
-  -     1. ¿Con quién más se ha puesto en contacto en relación con este incidente y qué le ha dicho?
+  - ¿Qué has notado?
+  - ¿Cuándo ocurrió por primera vez, y con qué frecuencia desde entonces?
+  - ¿A qué datos suele acceder?
+  - ¿Con quién más se ha puesto en contacto en relación con este incidente y qué le ha dicho?
 - Ponte en contacto con el [servicio de asistencia](#TODO-enlace-al-recurso) y sé lo más servicial posible.
 - Ten paciencia: deja que el personal informático lo controle, ¡puedes estar protegiendo a otros de un daño!  **Gracias.**
 
@@ -132,5 +132,5 @@ Contactar con los proveedores de seguros
 ### 9. Información adicional
 
 - [¿Qué es un DDos?](https://www.innovaciondigital360.com/cyber-security/ataque-DDos-que-es-como-se-hace-como-defenderse/)
-- [Remediaciones]([Ataque DDos: qué es, cómo funciona y cómo protegerse (innovaciondigital360.com)](https://www.innovaciondigital360.com/cyber-security/ataque-DDos-que-es-como-se-hace-como-defenderse/))
+- [Remediaciones]((https://www.innovaciondigital360.com/cyber-security/ataque-DDos-que-es-como-se-hace-como-defenderse/))
 
