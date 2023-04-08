@@ -1,5 +1,14 @@
 ## Playbook: Ataque de DDos
 
+### 0. Preparación
+
+- Practicar diferentes metodos de defensa ante DDos
+  - Bloqueo de IP, puertos, usuarios, dominios y URLs externas.
+  - Listar, recolectar e identificar diferente información transferida por la red, tanto de forma interna como externa.
+  - Listar y editar las reglas del firewall de forma rapida.
+- Tener un mapa de la infraestructura de red, tanto lógica como física almacenada en una zona de fácil acceso por los técnicos.
+- Adquirir habilidad para realizar de forma rapida bloqueo de usuarios o remover credenciales de autentificación.
+
 ### 1. Investigar
 
 - Identificar la fuente del ataque DDos
@@ -43,12 +52,18 @@
 
 - Hacer una copia de seguridad de todos los datos almacenados en los servidores con fines forenses.
 - Aislar los sistemas y dispositivos afectados para prevenir la propagación del ataque.
-  - Configurar políticas de red para bloquear el tráfico generado por los dispositivos infectados.
-  - Implementar medidas de aislamiento de red, como VLAN, para prevenir que el tráfico de ataque se propague.
+  - Configurar políticas de red para bloquear el tráfico generado por los dispositivos infectados externos o internos.
+  - Reajustar las medidas de aislamiento de red, como VLAN, para prevenir que el tráfico de ataque se propague.
+- Bloquear comunicaciones
+  - puertos externos
+  - puertos internos
+  - usuarios externos
+  - usuarios internos
 
 - Reducir el ancho de banda disponible para el ataque para minimizar su impacto.
   - Implementar políticas de ancho de banda para limitar la cantidad de tráfico permitido a través de la red.
   - Utilizar servicios de protección DDos para mitigar el tráfico de ataque y reducir su impacto en la red.
+- En casos extremos, deshabilitar los servicios del sistema que están siendo afectados.
 
 
 ### 4. Erradicar
@@ -95,6 +110,7 @@ Contactar con los proveedores de seguros
 
 - Restablecer los servicios afectados y los sistemas a su estado normal de funcionamiento
   - En caso de haber tenido que realizar modificaciones en la configuración para soportar el ataque restablecer la configuración predeterminada de los sistemas y dispositivos afectados.
+  - Desbloquear puertos, dominios, usuarios y direcciones IP que se utilizaron durante el ataque.
 
 
 ### 8. Recursos
