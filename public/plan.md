@@ -512,6 +512,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 1. Poner en marcha un plan de continuidad de negocio/recuperación de desastres: Por ejemplo, considerar la migración a ubicaciones operativas alternativas, sitios de conmutación por error, sistemas de copia de seguridad.
 2. Integrar las acciones de seguridad con los esfuerzos de recuperación de la organización.
+
 # Playbook
 
 Los siguientes playbooks capturan los pasos comunes de [investigación](#investigate), [remediación](#remediate) y [comunicación](#communicate) para determinados tipos de incidentes.
@@ -889,7 +890,9 @@ La documentación es la parte más importante ya que nos servirá para tener cla
 Para realizar dicho informe de manera adecuada podremos seguir los siguientes consejos:
 
 - Registrar todos los detalles del incidente: incluyendo la fecha y hora, las personas involucradas, la descripción del incidente, las medidas tomadas y los resultados.
-- Documentar las lecciones aprendidas: esto te puede ayudar a mejorar las políticas y procedimientos de seguridad de la información de su organización.## Playbook: Phishing
+- Documentar las lecciones aprendidas: esto te puede ayudar a mejorar las políticas y procedimientos de seguridad de la información de su organización.
+
+## Playbook: Phishing
 
 **Investigar, remediar (contener, erradicar), y comunicar en paralelo!**
 
