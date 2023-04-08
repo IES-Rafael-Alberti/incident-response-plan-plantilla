@@ -1,0 +1,3617 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Autor: Grupo 4, powerpuff@proton.me" />
+  <title>Plan de respuesta a incidentes para Powerpuff</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Plan de respuesta a incidentes para Powerpuff</h1>
+<p class="author">Autor: Grupo 4, powerpuff@proton.me</p>
+<p class="date">Revisión 1, Publicado 23 Mar 2023</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>Este plan de respuesta a incidentes está basado en el plan conciso,
+directivo, específico, flexible y gratuito disponible <a
+href="https://github.com/counteractive/incident-response-plan-template">Github</a>
+de Counteractive Security’s y discutido en <a
+href="https://www.counteractive.net/posts/an-ir-plan-you-will-use/">www.counteractive.net</a></p>
+<p>Fue revisado por última vez el 23 Mar 2023. Fue probado por última
+vez en 28 Mar 2023.</p>
+</div>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#plan-de-respuesta-a-incidentes-para-powerpuff"
+id="toc-plan-de-respuesta-a-incidentes-para-powerpuff">Plan de respuesta
+a incidentes para Powerpuff</a></li>
+<li><a href="#evaluar" id="toc-evaluar">Evaluar</a>
+<ul>
+<li><a href="#evaluar-el-impacto-funcional"
+id="toc-evaluar-el-impacto-funcional">Evaluar el impacto
+funcional</a></li>
+<li><a href="#evaluar-el-impacto-de-la-información"
+id="toc-evaluar-el-impacto-de-la-información">Evaluar el impacto de la
+información</a></li>
+</ul></li>
+<li><a href="#iniciar-la-respuesta"
+id="toc-iniciar-la-respuesta">Iniciar la respuesta</a>
+<ul>
+<li><a href="#nombrar-el-incidente"
+id="toc-nombrar-el-incidente">Nombrar el incidente</a></li>
+<li><a href="#reunir-el-equipo-de-respuesta"
+id="toc-reunir-el-equipo-de-respuesta">Reunir el equipo de respuesta</a>
+<ul>
+<li><a href="#referencia-estructura-del-equipo-de-respuesta"
+id="toc-referencia-estructura-del-equipo-de-respuesta">Referencia:
+Estructura del equipo de respuesta</a></li>
+<li><a
+href="#referencia-información-de-contacto-del-equipo-de-respuesta"
+id="toc-referencia-información-de-contacto-del-equipo-de-respuesta">Referencia:
+Información de contacto del equipo de respuesta</a></li>
+</ul></li>
+<li><a href="#establecer-el-ritmo-de-batalla"
+id="toc-establecer-el-ritmo-de-batalla">Establecer el ritmo de
+batalla</a>
+<ul>
+<li><a href="#realizar-la-primera-llamada-de-respuesta"
+id="toc-realizar-la-primera-llamada-de-respuesta">Realizar la primera
+llamada de respuesta</a></li>
+<li><a href="#realizar-la-actualización-de-la-respuesta"
+id="toc-realizar-la-actualización-de-la-respuesta">Realizar la
+actualización de la respuesta</a></li>
+</ul></li>
+<li><a href="#supervisar-el-alcance"
+id="toc-supervisar-el-alcance">Supervisar el alcance</a>
+<ul>
+<li><a href="#crear-sub-equipos" id="toc-crear-sub-equipos">Crear
+Sub-Equipos</a></li>
+<li><a href="#incidente-dividido" id="toc-incidente-dividido">Incidente
+dividido</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#investigar" id="toc-investigar">Investigar</a>
+<ul>
+<li><a href="#crear-el-archivo-del-incidente"
+id="toc-crear-el-archivo-del-incidente">Crear el archivo del
+incidente</a></li>
+<li><a href="#recoger-las-pistas-iniciales"
+id="toc-recoger-las-pistas-iniciales">Recoger las pistas iniciales</a>
+<ul>
+<li><a href="#referencia-lista-de-recursos-de-respuesta"
+id="toc-referencia-lista-de-recursos-de-respuesta">Referencia: Lista de
+recursos de respuesta</a></li>
+</ul></li>
+<li><a
+href="#actualizar-el-plan-de-investigación-y-el-archivo-del-incidente"
+id="toc-actualizar-el-plan-de-investigación-y-el-archivo-del-incidente">Actualizar
+el plan de investigación y el archivo del incidente</a>
+<ul>
+<li><a
+href="#referencia-táctica-del-atacante-a-la-matriz-de-preguntas-clave"
+id="toc-referencia-táctica-del-atacante-a-la-matriz-de-preguntas-clave">Referencia:
+Táctica del atacante a la matriz de preguntas clave</a></li>
+</ul></li>
+<li><a href="#crear-y-desplegar-indicadores-de-compromiso-ioc"
+id="toc-crear-y-desplegar-indicadores-de-compromiso-ioc">Crear y
+desplegar indicadores de compromiso (IOC)</a></li>
+<li><a href="#identificar-los-sistemas-de-interés"
+id="toc-identificar-los-sistemas-de-interés">Identificar los sistemas de
+interés</a></li>
+<li><a href="#recogida-de-pruebas" id="toc-recogida-de-pruebas">Recogida
+de pruebas</a>
+<ul>
+<li><a href="#ejemplo-de-artefactos-útiles"
+id="toc-ejemplo-de-artefactos-útiles">Ejemplo de artefactos
+útiles</a></li>
+</ul></li>
+<li><a href="#analizar-las-pruebas"
+id="toc-analizar-las-pruebas">Analizar las pruebas</a>
+<ul>
+<li><a href="#ejemplo-de-indicadores-útiles"
+id="toc-ejemplo-de-indicadores-útiles">Ejemplo de indicadores
+útiles</a></li>
+</ul></li>
+<li><a href="#iterar-la-investigación"
+id="toc-iterar-la-investigación">Iterar la investigación</a></li>
+</ul></li>
+<li><a href="#remediar" id="toc-remediar">Remediar</a>
+<ul>
+<li><a href="#actualización-del-plan-de-remediación"
+id="toc-actualización-del-plan-de-remediación">Actualización del plan de
+remediación</a>
+<ul>
+<li><a href="#protección" id="toc-protección">Protección</a></li>
+<li><a href="#detección" id="toc-detección">Detección</a></li>
+<li><a href="#contención" id="toc-contención">Contención</a></li>
+<li><a href="#erradicar" id="toc-erradicar">Erradicar</a></li>
+</ul></li>
+<li><a href="#elegir-el-momento-de-la-reparación"
+id="toc-elegir-el-momento-de-la-reparación">Elegir el momento de la
+reparación</a></li>
+<li><a href="#ejecutar-la-remediación"
+id="toc-ejecutar-la-remediación">Ejecutar la remediación</a></li>
+<li><a href="#iterar-la-remediación"
+id="toc-iterar-la-remediación">Iterar la remediación</a></li>
+</ul></li>
+<li><a href="#comunicar" id="toc-comunicar">Comunicar</a>
+<ul>
+<li><a href="#comunicación-interna"
+id="toc-comunicación-interna">Comunicación Interna</a>
+<ul>
+<li><a href="#notificar-y-actualizar-a-las-partes-interesadas"
+id="toc-notificar-y-actualizar-a-las-partes-interesadas">Notificar y
+actualizar a las partes interesadas</a></li>
+<li><a href="#notificar-y-actualizar-la-organización"
+id="toc-notificar-y-actualizar-la-organización">Notificar y actualizar
+la organización</a></li>
+<li><a href="#crear-informe-de-incidentes"
+id="toc-crear-informe-de-incidentes">Crear Informe de
+Incidentes</a></li>
+</ul></li>
+<li><a href="#comunicar-al-exterior"
+id="toc-comunicar-al-exterior">Comunicar al exterior</a>
+<ul>
+<li><a href="#notificar-a-los-reguladores"
+id="toc-notificar-a-los-reguladores">Notificar a los
+reguladores</a></li>
+<li><a href="#notificar-a-los-clientes"
+id="toc-notificar-a-los-clientes">Notificar a los clientes</a></li>
+<li><a href="#notificar-a-los-proveedores-y-socios"
+id="toc-notificar-a-los-proveedores-y-socios">Notificar a los
+proveedores y socios</a></li>
+<li><a href="#notificar-a-las-fuerzas-de-seguridad"
+id="toc-notificar-a-las-fuerzas-de-seguridad">Notificar a las Fuerzas de
+Seguridad</a></li>
+<li><a
+href="#contactar-con-el-servicio-de-asistencia-de-respuesta-externa"
+id="toc-contactar-con-el-servicio-de-asistencia-de-respuesta-externa">Contactar
+con el servicio de asistencia de respuesta externa</a></li>
+<li><a href="#compartir-inteligencia"
+id="toc-compartir-inteligencia">Compartir Inteligencia</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#recuperación" id="toc-recuperación">Recuperación</a>
+<ul>
+<li><a href="#identificar-informar-configurar-y-comunicar"
+id="toc-identificar-informar-configurar-y-comunicar">Identificar,
+informar, configurar y comunicar!</a></li>
+<li><a href="#identificar-el-ataque"
+id="toc-identificar-el-ataque">Identificar el ataque</a></li>
+<li><a href="#informar-al-proveedor-de-servicios-de-internet-isp"
+id="toc-informar-al-proveedor-de-servicios-de-internet-isp">Informar al
+proveedor de servicios de internet (ISP)</a></li>
+<li><a
+href="#configurar-el-cortafuegos-para-bloquear-el-tráfico-no-deseado"
+id="toc-configurar-el-cortafuegos-para-bloquear-el-tráfico-no-deseado">Configurar
+el cortafuegos para bloquear el tráfico no deseado</a></li>
+<li><a href="#redirigir-el-tráfico-legítimo-a-servidores-alternativos"
+id="toc-redirigir-el-tráfico-legítimo-a-servidores-alternativos">Redirigir
+el tráfico legítimo a servidores alternativos</a></li>
+<li><a href="#monitorear-el-tráfico-y-ajustar-las-medidas-de-seguridad"
+id="toc-monitorear-el-tráfico-y-ajustar-las-medidas-de-seguridad">Monitorear
+el tráfico y ajustar las medidas de seguridad</a></li>
+<li><a href="#mantener-informados-a-los-usuarios"
+id="toc-mantener-informados-a-los-usuarios">Mantener informados a los
+usuarios</a></li>
+<li><a href="#lista-de-verificación"
+id="toc-lista-de-verificación">Lista de verificación</a></li>
+<li><a href="#playbook-desaparición-de-sitios-web"
+id="toc-playbook-desaparición-de-sitios-web">Playbook: Desaparición de
+sitios web</a>
+<ul>
+<li><a href="#investigar-1" id="toc-investigar-1">Investigar</a></li>
+<li><a href="#remediar-1" id="toc-remediar-1">Remediar</a></li>
+<li><a href="#recover" id="toc-recover">Recover</a></li>
+<li><a href="#comunicar-1" id="toc-comunicar-1">Comunicar</a></li>
+<li><a href="#recursos" id="toc-recursos">Recursos</a></li>
+</ul></li>
+<li><a href="#playbook-compromiso-de-identidad-y-acceso"
+id="toc-playbook-compromiso-de-identidad-y-acceso">Playbook: Compromiso
+de identidad y acceso</a>
+<ul>
+<li><a href="#investigar-2" id="toc-investigar-2">Investigar</a></li>
+<li><a href="#remediar-2" id="toc-remediar-2">Remediar</a></li>
+<li><a href="#comunicar-2" id="toc-comunicar-2">Comunicar</a></li>
+<li><a href="#recuperación-1"
+id="toc-recuperación-1">Recuperación</a></li>
+<li><a href="#recursos-1" id="toc-recursos-1">Recursos</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#playbook-ingenieria-social"
+id="toc-playbook-ingenieria-social">playbook-ingenieria-social</a>
+<ul>
+<li><a href="#identificación."
+id="toc-identificación.">Identificación.</a></li>
+<li><a href="#investigación."
+id="toc-investigación.">Investigación.</a></li>
+<li><a href="#respuesta-y-mitigación."
+id="toc-respuesta-y-mitigación.">Respuesta y mitigación.</a></li>
+<li><a href="#documentación." id="toc-documentación.">Documentación.</a>
+<ul>
+<li><a href="#investigar-3" id="toc-investigar-3">Investigar</a></li>
+<li><a href="#remediar-3" id="toc-remediar-3">Remediar</a></li>
+<li><a href="#comunicar-3" id="toc-comunicar-3">Comunicar</a></li>
+<li><a href="#recuperación-2"
+id="toc-recuperación-2">Recuperación</a></li>
+<li><a href="#recursos-2" id="toc-recursos-2">Recursos</a></li>
+</ul></li>
+<li><a href="#playbook-ransomware"
+id="toc-playbook-ransomware">Playbook: Ransomware</a>
+<ul>
+<li><a href="#investigación"
+id="toc-investigación">Investigación</a></li>
+<li><a href="#remediar-4" id="toc-remediar-4">Remediar</a></li>
+<li><a href="#comunicar-4" id="toc-comunicar-4">Comunicar</a></li>
+<li><a href="#recursos-3" id="toc-recursos-3">Recursos</a></li>
+</ul></li>
+<li><a href="#playbook-compromiso-de-la-cadena-de-suministro"
+id="toc-playbook-compromiso-de-la-cadena-de-suministro">Playbook:
+Compromiso de la cadena de suministro</a>
+<ul>
+<li><a href="#investigar-4" id="toc-investigar-4">Investigar</a></li>
+<li><a href="#remediar-5" id="toc-remediar-5">Remediar</a></li>
+<li><a href="#comunicar-5" id="toc-comunicar-5">Comunicar</a></li>
+<li><a href="#recuperación-3"
+id="toc-recuperación-3">Recuperación</a></li>
+<li><a href="#recursos-4" id="toc-recursos-4">Recursos</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#roles" id="toc-roles">Roles</a>
+<ul>
+<li><a href="#estructura-de-los-roles"
+id="toc-estructura-de-los-roles">Estructura de los roles</a></li>
+<li><a href="#tiempos-de-guerra-vs.-tiempos-de-paz"
+id="toc-tiempos-de-guerra-vs.-tiempos-de-paz">Tiempos de Guerra
+vs. Tiempos de Paz</a></li>
+<li><a href="#roles-todos-los-participantes"
+id="toc-roles-todos-los-participantes">Roles: Todos los
+participantes</a>
+<ul>
+<li><a href="#descripción" id="toc-descripción">Descripción</a></li>
+<li><a href="#deberes" id="toc-deberes">Deberes</a></li>
+<li><a href="#capacitación" id="toc-capacitación">Capacitación</a></li>
+<li><a href="#descripcion" id="toc-descripcion">Descripcion</a></li>
+<li><a href="#deberes-1" id="toc-deberes-1">Deberes</a></li>
+<li><a href="#prácticas" id="toc-prácticas">Prácticas</a></li>
+</ul></li>
+<li><a href="#rol-adjunto-del-incident-commander-adjunto"
+id="toc-rol-adjunto-del-incident-commander-adjunto">Rol: adjunto del
+Incident Commander (adjunto)</a>
+<ul>
+<li><a href="#descripción-1" id="toc-descripción-1">Descripción</a></li>
+<li><a href="#funciones" id="toc-funciones">Funciones</a></li>
+<li><a href="#formación" id="toc-formación">Formación</a></li>
+</ul></li>
+<li><a href="#rol-escriba" id="toc-rol-escriba">Rol: Escriba</a>
+<ul>
+<li><a href="#descripción-2" id="toc-descripción-2">Descripción</a></li>
+<li><a href="#funciones-1" id="toc-funciones-1">Funciones</a></li>
+<li><a href="#formación-1" id="toc-formación-1">Formación</a></li>
+</ul></li>
+<li><a href="#rol-experto-en-la-materia-subject-matter-expert-sme"
+id="toc-rol-experto-en-la-materia-subject-matter-expert-sme">Rol:
+Experto en la materia {Subject Matter Expert (SME)}</a>
+<ul>
+<li><a href="#descripción-3" id="toc-descripción-3">Descripción</a></li>
+<li><a href="#funciones-2" id="toc-funciones-2">Funciones</a></li>
+<li><a href="#formación-2" id="toc-formación-2">Formación</a></li>
+</ul></li>
+<li><a href="#rol-enlace" id="toc-rol-enlace">Rol: Enlace</a>
+<ul>
+<li><a href="#descripción-4" id="toc-descripción-4">Descripción</a></li>
+<li><a href="#deberes-2" id="toc-deberes-2">Deberes</a></li>
+<li><a href="#formación-3" id="toc-formación-3">Formación</a></li>
+</ul></li>
+</ul></li>
+<li><a
+href="#realizar-una-revisión-posterior-a-la-acción-conduct-an-after-action-review-aar"
+id="toc-realizar-una-revisión-posterior-a-la-acción-conduct-an-after-action-review-aar">Realizar
+una revisión posterior a la acción (Conduct an After Action Review,
+AAR)</a>
+<ul>
+<li><a href="#realización-de-la-reunión-aar"
+id="toc-realización-de-la-reunión-aar">Realización de la reunión
+AAR</a></li>
+<li><a href="#comunicar-el-estado-y-los-resultados-del-aar"
+id="toc-comunicar-el-estado-y-los-resultados-del-aar">Comunicar el
+estado y los resultados del AAR</a>
+<ul>
+<li><a href="#descripciones-de-estado"
+id="toc-descripciones-de-estado">Descripciones de estado</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#acerca-de" id="toc-acerca-de">Acerca de</a>
+<ul>
+<li><a href="#licencia" id="toc-licencia">Licencia</a></li>
+<li><a href="#instrucciones"
+id="toc-instrucciones">Instrucciones</a></li>
+<li><a href="#referencias-y-material-adicional"
+id="toc-referencias-y-material-adicional">Referencias y material
+adicional</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="plan-de-respuesta-a-incidentes-para-powerpuff">Plan de respuesta
+a incidentes para Powerpuff</h1>
+<p>Autor: Grupo 4, powerpuff@proton.me</p>
+<p>Revisión 1, Publicado 23 Mar 2023</p>
+<p>Este plan de respuesta a incidentes está basado en el plan conciso,
+directivo, específico, flexible y gratuito disponible en <a
+href="https://github.com/counteractive/incident-response-plan-template">Github</a>
+de Counteractive Security y discutido en <a
+href="https://www.counteractive.net/blog/an-ir-plan-you-will-use/">www.counteractive.net</a></p>
+<p>Fue revisado por última vez el 23 Mar 2023. Fue probado por última
+vez en 28 Mar 2023.</p>
+<h1 id="evaluar">Evaluar</h1>
+<ol type="1">
+<li><strong>Mantenga la calma y la profesionalidad.</strong></li>
+<li>Reúna la información pertinente, <em>por ejemplo</em>, alarmas,
+eventos, datos, suposiciones, intuiciones
+(<strong>observar</strong>).</li>
+<li>Considerar las categorías de impacto, a continuación
+(<strong>orientar</strong>), y determinar si hay un posible incidente
+(<strong>decidir</strong>):</li>
+<li>Iniciar una respuesta si hay un incidente (<strong>actuar</strong>).
+En caso de duda, inicie una respuesta. El responsable de gestión de
+incidentes y el equipo de respuesta pueden ajustarse tras la
+investigación y la revisión.</li>
+</ol>
+<h2 id="evaluar-el-impacto-funcional">Evaluar el impacto funcional</h2>
+<p>¿Cuál es el impacto directo o probable en su trabajo? (<em>por
+ejemplo</em>, operaciones comerciales, empleados, clientes,
+usuarios)</p>
+<ul>
+<li>Degradación o fracaso del trabajo/negocio:
+<strong>incidente!</strong></li>
+<li>Ninguno: evalúe el impacto de la información.</li>
+</ul>
+<h2 id="evaluar-el-impacto-de-la-información">Evaluar el impacto de la
+información</h2>
+<p>¿Cuál es el impacto directo o probable sobre sus datos/información,
+en particular los sensibles? (<em>por ejemplo</em>, información
+personal, datos de propiedad, financieros o sanitarios)</p>
+<ul>
+<li>Información a la que se ha accedido, cogido, cambiado o borrado:
+<strong>incidente!</strong></li>
+<li>Ninguno: gestión a través de canales no relacionados con incidentes
+(por ejemplo, un ticket de soporte).</li>
+</ul>
+<p><strong>Cada miembro del equipo está facultado para comenzar este
+proceso.</strong> Si ves algo, dilo.</p>
+<h1 id="iniciar-la-respuesta">Iniciar la respuesta</h1>
+<h2 id="nombrar-el-incidente">Nombrar el incidente</h2>
+<p>Cree una <a href="http://creativityforyou.com/combomaker.html">frase
+simple de dos palabras</a> para referirse al incidente -un nombre en
+clave- que se utilizará para el archivo y el canal del incidente.</p>
+<h2 id="reunir-el-equipo-de-respuesta">Reunir el equipo de
+respuesta</h2>
+<ol type="1">
+<li>Llame al Incident Commander de turno/de guardia.</li>
+<li><strong>No</strong> discuta el incidente fuera del equipo de
+respuesta a menos que el Incident Commander lo autorice</li>
+<li>Inicie y/o únase al chat de respuesta en discord.gg/IkdosuTSm.</li>
+<li>Iniciar y/o unirse a la llamada de respuesta en 609128234 y/o
+meet.google.org/syn-fcts-xzh.</li>
+<li>Preferible usar la llamada de voz, el chat y el intercambio seguro
+de archivos sobre cualquier otro método.</li>
+<li><strong>No</strong> utilizar el correo electrónico principal si es
+posible. Si el correo electrónico es necesario, utilícelo con moderación
+o use correo alternativo en pm.power.puff@proton.me. Encripte los
+correos electrónicos cuando cualquier participante esté fuera del
+dominio powerpuff.org.</li>
+<li><strong>No</strong> usar SMS/texto para comunicar el incidente, a
+menos que sea para decirle a alguien que se mueva a un canal más
+seguro.</li>
+<li>Invite al personal de turno/guardia a la llamada y al chat de
+respuesta.
+<ul>
+<li>Invite al equipo de seguridad.<br />
+</li>
+<li>Invitar al SME de los equipos y sistemas afectados.</li>
+<li>Invitar a las partes interesadas ejecutivas y a los asesores
+jurídicos lo antes posible, pero dar prioridad a los responsables
+operativos.<br />
+</li>
+</ul></li>
+<li>OPCIONAL:_ Establecer una sala de colaboración en persona (“sala de
+guerra”) para incidentes complejos o graves.</li>
+</ol>
+<h3 id="referencia-estructura-del-equipo-de-respuesta">Referencia:
+Estructura del equipo de respuesta</h3>
+<ul>
+<li>Equipo de Mando
+<ul>
+<li><a href="#rol-incident-commander">Incident Commander</a></li>
+<li><a href="#rol-delegado-del-incident-commander-subdelegado">Incident
+Commander-Adjunto</a></li>
+<li><a href="#rol-scriba">Escriba</a></li>
+</ul></li>
+<li>Equipo de enlace
+<ul>
+<li>Enlace <a href="#rol-enlace">interno</a></li>
+<li>Enlace externo</li>
+</ul></li>
+<li>Equipo de operaciones
+<ul>
+<li><a
+href="#rol-experto-en-la-materia-subject-matter-expert-sme">Expertos en
+la materia</a> (SME) para sistemas</li>
+<li>SME para equipos/unidades de negocio</li>
+<li>SME para Funciones Ejecutivas (<em>por ejemplo</em>, Legal, RRHH,
+Finanzas)</li>
+</ul></li>
+</ul>
+<h3
+id="referencia-información-de-contacto-del-equipo-de-respuesta">Referencia:
+Información de contacto del equipo de respuesta</h3>
+<table>
+<colgroup>
+<col style="width: 56%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rol del equipo de respuesta</th>
+<th>Información de contacto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Localizador del Incident Commander</td>
+<td>{INCIDENT_COMMANDER_PAGER_NUMBER}}</td>
+</tr>
+<tr class="even">
+<td>Url del Incident Commander</td>
+<td>powerpuff.org/incident_commander</td>
+</tr>
+<tr class="odd">
+<td>Lista del Incident Commander</td>
+<td>powerpuff.org/incident_commander_roster</td>
+</tr>
+<tr class="even">
+<td>Lista del equipo de seguridad</td>
+<td>Ismael García Vela</td>
+</tr>
+<tr class="odd">
+<td>Lista del equipo SME</td>
+<td>María Dolores Galán Tejero</td>
+</tr>
+<tr class="even">
+<td>Lista de ejecutivos</td>
+<td>Daniel Sánchez Gómez</td>
+</tr>
+</tbody>
+</table>
+<h2 id="establecer-el-ritmo-de-batalla">Establecer el ritmo de
+batalla</h2>
+<h3 id="realizar-la-primera-llamada-de-respuesta">Realizar la primera
+llamada de respuesta</h3>
+<ol type="1">
+<li>Realice la llamada inicial utilizando la <a
+href="#referencia-estructura-de-la-llamada-de-respuesta-inicial">estructura
+de llamada de respuesta inicial</a></li>
+<li>Siga las instrucciones del Incident Commander. Si el Incident
+Commander de turno/de guardia no se une a la llamada <strong>dentro de
+10 minutos</strong> y usted es un Incident Commander capacitado, tome el
+mando de la llamada.</li>
+<li>Siga las <a href="#roles">instrucciones correspondientes a su
+función</a>.</li>
+<li>Siga la llamada y el chat, y comente según corresponda. Si no es un
+SME, comunique las aportaciones a través del SME de su equipo si es
+posible.</li>
+<li><strong>Mantenga la llamada y el chat activos durante todo el
+incidente para una comunicación basada en eventos.</strong></li>
+<li>Programe actualizaciones <strong>cada 7 horas</strong> sobre la
+comunicación activa.</li>
+</ol>
+<h4
+id="referencia-estructura-de-la-llamada-de-respuesta-inicial">Referencia:
+Estructura de la llamada de respuesta inicial</h4>
+<ul>
+<li>Incident Commander (IC): Mi nombre es [NOMBRE], soy el Incident
+Commander. He designado a [NOMBRE] como adjunto y a [NOMBRE] como
+esccriba. ¿Quién está en la llamada?</li>
+<li>ESCRIBA: [Toma asistencia]</li>
+<li>IC: [Si falta personal clave] Adjunto, por favor llame a [PERSONAL
+FALTANTE].</li>
+<li>IC: [Hace preguntas para comprender la situación, los síntomas, el
+alcance, el vector, el impacto y el calendario del reportador del
+incidente, los SME aplicables para los sistemas y las unidades de
+negocio].</li>
+<li>SMEs: [Responde brevemente a las preguntas del IC].</li>
+<li>IC: [Si se trata de un incidente]:
+<ul>
+<li>En este momento, el resumen del incidente es el siguiente: [reitera
+el resumen]. El equipo de investigación estará dirigido por [NOMBRE], el
+equipo de reparación estará dirigido por [NOMBRE] y el equipo de
+comunicación estará dirigido por [NOMBRE]. Ellos coordinarán la
+composición del equipo y me informarán. Los miembros del equipo, por
+favor, informen a su jefe de equipo correspondiente.</li>
+<li>¿Qué medidas de investigación, corrección o comunicación se han
+tomado ya? [esta debería ser una lista corta, pero tiene que salir
+ahora]</li>
+<li>Esta llamada y el chat permanecerán activos y disponibles hasta el
+cierre del incidente, por favor, utilícelos para todas las
+comunicaciones relacionadas con el incidente. Proporcione
+actualizaciones de estado en tiempo real en el chat, si es posible. ¿Hay
+alguna pregunta o aportación restante? [responde a las preguntas]</li>
+<li>Líderes de equipo, por favor procedan con sus acciones planeadas.
+Nos reuniremos de nuevo en [UPDATE_TIME] para discutir el estado.
+Gracias.</li>
+</ul></li>
+<li>IC: [Si esto no es un incidente]: En este momento, estos hechos no
+alcanzan el nivel de un incidente. Me coordinaré directamente con el
+reportador del incidente para las acciones de seguimiento. Gracias por
+su tiempo.</li>
+</ul>
+<h4 id="referencia-etiqueta-de-la-llamada">Referencia: Etiqueta de la
+llamada</h4>
+<ul>
+<li>Únase tanto a la llamada como al chat.</li>
+<li>Mantenga el ruido de fondo al mínimo.</li>
+<li>Mantenga su micrófono silenciado hasta que tenga algo que
+decir.</li>
+<li>Identifícate cuando te unas a la llamada; di tu nombre y tu función
+(por ejemplo, “Soy el SME del equipo x”).</li>
+<li>Habla con claridad.</li>
+<li>Sea directo y objetivo.</li>
+<li>Mantenga conversaciones/discusiones cortas y al grano.</li>
+<li>Comunicar cualquier preocupación al Incident Commander (CI) en la
+llamada.</li>
+<li>Respetar las limitaciones de tiempo impuestas por el Incident
+Commander.</li>
+<li>**Utilizar una terminología clara y evitar acrónimos o abreviaturas.
+La claridad y la precisión son más importantes que la brevedad.</li>
+</ul>
+<h3 id="realizar-la-actualización-de-la-respuesta">Realizar la
+actualización de la respuesta</h3>
+<ul>
+<li>Llevar a cabo actualizaciones programadas utilizando la <a
+href="#referencia-estructura-de-la-llamada-de-actualización-de-la-respuesta">estructura
+de llamada de actualización</a> cada 7 horas en el puente activo.</li>
+<li>Ajustar la frecuencia según sea necesario.</li>
+<li>Coordinar las actualizaciones independientes (<em>por ejemplo</em>,
+ejecutivas, legales) según sea necesario, pero con la menor frecuencia
+posible.</li>
+</ul>
+<h4
+id="referencia-estructura-de-la-llamada-de-actualización-de-la-respuesta">Referencia:
+Estructura de la llamada de actualización de la respuesta</h4>
+<ul>
+<li>Incident Commander (IC): Desde la última actualización programada,
+el resumen del incidente es el siguiente:
+<ul>
+<li>[Impacto]</li>
+<li>[Vector]</li>
+<li>[Actualización del resumen]</li>
+<li>[Actualización de la línea de tiempo]</li>
+</ul></li>
+<li>IC: Equipo de investigación, por favor proporcione una breve
+actualización
+<ul>
+<li>LÍDER DE LA INVESTIGACIÓN: [Actividades de investigación o “nada que
+informar”]</li>
+<li>¿Cuál es su plan de investigación recomendado?</li>
+<li>¿Qué acciones de investigación necesitan ser asignadas o aprobadas?
+[escuchar, obtener consenso, encargar/aprobar]</li>
+</ul></li>
+<li>IC: Equipo de remediación, por favor proporcione una breve
+actualización
+<ul>
+<li>Líder de remediación: [Actividades de remediación o “nada que
+informar”]</li>
+<li>¿Cuál es su estrategia de corrección recomendada? ¿Objeciones
+fuertes? [escuchar, obtener el consenso, asignar/aprobar]</li>
+<li>¿Qué acciones de corrección necesitan ser asignadas o
+aprobadas?</li>
+</ul></li>
+<li>IC: Equipo de comunicación, por favor, proporcione una breve
+actualización:
+<ul>
+<li>COMMUNICATIONS LEAD: [Actividades de comunicación o “nada que
+informar”]</li>
+<li>¿Cuál es su estrategia de comunicación recomendada? ¿Objeciones
+fuertes? [escuchar, obtener consenso, encargar/aprobar]</li>
+<li>¿Qué acciones de comunicación necesitan ser asignadas o
+aprobadas?</li>
+</ul></li>
+<li>IC: Esta llamada y el chat permanecerán activos y disponibles hasta
+el cierre del incidente, por favor, utilícelos para todas las
+comunicaciones relacionadas con el incidente. Si es posible, proporcione
+actualizaciones del estado en tiempo real en el chat. ¿Hay alguna
+pregunta o aportación restante? [responde a las preguntas]</li>
+<li>IC: Líderes de equipo, por favor procedan. Nos reuniremos de nuevo
+en [] para discutir el estado. Gracias.</li>
+</ul>
+<h2 id="supervisar-el-alcance">Supervisar el alcance</h2>
+<ul>
+<li>Supervisar el alcance de la respuesta para asegurarse de que no
+excede el ámbito de control del Incident Commander.</li>
+<li>Si un incidente es lo suficientemente complejo y hay suficientes
+intervinientes, considere la posibilidad de crear subequipos.</li>
+</ul>
+<h3 id="crear-sub-equipos">Crear Sub-Equipos</h3>
+<ul>
+<li>En la preparación de incidentes complejos, se predefinen tres
+subequipos: Investigación, Remediación y Comunicación, generalmente
+responsables de esas funciones de respuesta.</li>
+<li>Crear un puente de llamadas y un chat para cada subequipo.</li>
+<li>El Incident Commander designará a los líderes de los equipos, que
+dependen del IC, y a los miembros de los equipos, que dependen de su
+líder. <em>Los líderes de equipo no tienen que estar formados como
+Incident Commanders, pero es preferible que tengan alguna experiencia de
+liderazgo.</em></li>
+<li>El Incident Commander puede ajustar el propósito o el nombre de los
+subequipos según sea necesario.</li>
+<li>Si desea cambiar de equipo, pregunte a su <strong>líder de equipo
+actual</strong>. <strong>No</strong> pregunte al Incident Commander, o
+al líder del otro(s) equipo(s). Utilice la cadena de mando.</li>
+</ul>
+<h3 id="incidente-dividido">Incidente dividido</h3>
+<p>Si un incidente resulta ser dos o más incidentes distintos:</p>
+<ul>
+<li>Establezca un nuevo <a
+href="#crear-el-archivo-del-incidente">archivo de incidentes</a>.</li>
+<li>Haga un seguimiento y coordine la investigación, la reparación y la
+comunicación en el archivo correspondiente.</li>
+<li>Considere la posibilidad de establecer subequipos para cada
+incidente.</li>
+<li><strong>Mantener un Incident Commander de alto nivel</strong>, para
+coordinar los activos de baja densidad y alta demanda y mantener la
+unidad de mando.</li>
+</ul>
+<h1 id="investigar">Investigar</h1>
+<p><strong><a href="#investigar">Investigar</a>, <a
+href="#remediar">Remediar</a> y <a href="#communicate">comunicar</a> en
+paralelo, utilizando equipos separados, si es posible.</strong> El
+Incident Commander coordinará estas actividades. Notifique al Incident
+Commander si hay pasos que el equipo debe considerar.</p>
+<h2 id="crear-el-archivo-del-incidente">Crear el archivo del
+incidente</h2>
+<ol type="1">
+<li>Cree un nuevo archivo de incidentes en powerpuff.org/files/823982
+utilizando el <a href="#nombre-del-incidente">nombre del incidente</a>.
+Utilice este archivo para el almacenamiento seguro de documentación,
+pruebas, artefactos, <em>etc.</em>.
+<ul>
+<li>Proporcionar un almacenamiento digital seguro.</li>
+<li>Proporcionar un intercambio de archivos seguro.</li>
+<li>Obtener almacenamiento físico.</li>
+<li>Compartir la ubicación del archivo del incidente en la llamada y el
+chat.</li>
+</ul></li>
+<li>Documente el impacto funcional y de la información, si se conoce
+(véase <a href="#evaluar">Evaluar</a>).</li>
+<li>Documentar el vector, si se conoce (<em>por ejemplo</em> web, correo
+electrónico, medios extraíbles).</li>
+<li>Documente el resumen del incidente: un breve resumen del vector, el
+impacto, la investigación y la situación de la reparación, si se
+conoce.</li>
+<li>Documente la línea de tiempo del incidente, incluyendo la actividad
+del atacante y la actividad de la respuesta.</li>
+<li>Documente los pasos de investigación, reparación y comunicación.
+Documente las actividades de forma independiente para que puedan
+combinarse y reutilizarse, si es posible.</li>
+<li>Registre la información significativa, como:
+<strong>Pruebas</strong>, con la hora de recogida, la fuente, la cadena
+de custodia, <em>etc.</em>.
+<ul>
+<li><strong>Sistemas afectados</strong>, con el modo y el momento en que
+se identificó el sistema, y el resumen del efecto (_por ejemplo, tiene
+malware, datos a los que se ha accedido).</li>
+<li><strong>Archivos de interés</strong>, como el malware o los archivos
+de datos, con el sistema y los metadatos.</li>
+<li><strong>Datos accedidos y tomados</strong>, con nombres de archivos,
+metadatos y hora de presunta exposición.</li>
+<li><strong>Actividad significativa del atacante</strong>, como inicios
+de sesión y ejecución de malware, con la hora del evento.</li>
+<li><strong>Indicadores de compromiso (IOC)</strong> basados en la red,
+como direcciones IP y dominios.</li>
+<li><strong>Indicadores de compromiso basados en el host</strong>, como
+nombres de archivos, hashes y claves de registro.</li>
+</ul></li>
+</ol>
+<ul>
+<li><strong>Cuentas comprometidas</strong>, con el alcance del acceso y
+la hora del compromiso.</li>
+</ul>
+<h2 id="recoger-las-pistas-iniciales">Recoger las pistas iniciales</h2>
+<ol type="1">
+<li>Entrevistar a los reportadores del incidente.</li>
+<li>Recoger los datos de apoyo iniciales (<em>e.</em>, alarmas, eventos,
+datos, suposiciones, intuiciones) en el archivo del incidente.</li>
+<li>Entrevistar a lo(s) SME con experiencia en el dominio o el sistema,
+para comprender los detalles técnicos, el contexto y el riesgo.</li>
+<li>Entrevistar a lo(s) SME de la unidad de negocio afectada, para
+comprender el impacto de la misión/negocio, el contexto y el
+riesgo.</li>
+<li>Asegúrese de que las pistas son relevantes, detalladas y
+procesables.</li>
+</ol>
+<h3 id="referencia-lista-de-recursos-de-respuesta">Referencia: Lista de
+recursos de respuesta</h3>
+<table>
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Recurso</th>
+<th>Ubicación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lista de información crítica</td>
+<td>powerpuff.org/cil</td>
+</tr>
+<tr class="even">
+<td>Lista de activos críticos</td>
+<td>powerpuff.org/cal</td>
+</tr>
+<tr class="odd">
+<td>Base de datos de gestión de activos</td>
+<td>powerpuff.org/assets</td>
+</tr>
+<tr class="even">
+<td>Mapa de red</td>
+<td>powerpuff.org/netmap</td>
+</tr>
+<tr class="odd">
+<td>Consola SIEM</td>
+<td>siem.powerpuff.org</td>
+</tr>
+<tr class="even">
+<td>Agregador de registros</td>
+<td>elk.powerpuff.org</td>
+</tr>
+</tbody>
+</table>
+<h2
+id="actualizar-el-plan-de-investigación-y-el-archivo-del-incidente">Actualizar
+el plan de investigación y el archivo del incidente</h2>
+<ol type="1">
+<li>Revisar y perfeccionar el impacto del incidente.</li>
+<li>Revisar y refinar el vector del incidente.</li>
+<li>Revisar y perfeccionar el resumen del incidente.</li>
+<li>Revisar y perfeccionar la línea de tiempo del incidente con hechos e
+inferencias.</li>
+<li>Crear hipótesis: qué puede haber ocurrido y con qué seguridad.</li>
+<li><strong>Identificar y priorizar las preguntas clave</strong>
+(lagunas de información) para apoyar o desacreditar las hipótesis.
+<ul>
+<li>Utilizar la matriz ATT&amp;CK de MITRE o un marco similar para <a
+href="#reference-attacker-tactics-to-key-questions-matrix">desarrollar
+preguntas</a>.
+<ul>
+<li><a href="https://attack.mitre.org/wiki/Main_Page">ATT&amp;CK for
+Enterprise</a>, incluyendo enlaces a los específicos de Windows, Mac y
+Linux.</li>
+<li><a
+href="https://attack.mitre.org/mobile/index.php/Main_Page">ATT&amp;CK
+Mobile Profile</a> para dispositivos móviles.</li>
+</ul></li>
+<li>Utilizar palabras interrogativas como inspiración:
+<ul>
+<li><strong>¿Cuándo?</strong>: primer compromiso, primera pérdida de
+datos, acceso a x datos, acceso a y sistema, etc.</li>
+<li><strong>¿Qué?</strong>: impacto, vector, causa de origen,
+motivación, herramientas/explotaciones utilizadas, cuentas/sistemas
+comprometidos, datos atacados/perdidos, infraestructura, COIs,
+etc.?</li>
+<li><strong>¿Dónde?</strong>: ubicación del atacante, unidades de
+negocio afectadas, infraestructura, etc.?</li>
+<li><strong>¿Cómo?</strong>: compromiso (explotación), persistencia,
+acceso, exfiltración, movimiento lateral, etc.?</li>
+<li><strong>¿Por qué?</strong>: objetivo, momento, acceso a x datos,
+acceso a y sistema, etc.</li>
+<li><strong>¿Quién?</strong>: atacante, usuarios afectados, clientes
+afectados, etc.?</li>
+</ul></li>
+</ul></li>
+<li><strong>Identificar y priorizar los dispositivos y estrategias
+testigo</strong> para responder a las preguntas clave.
+<ul>
+<li>Consultar los diagramas de la red, los sistemas de gestión de
+activos y la experiencia de las SME</li>
+<li>Consultar la <a
+href="#referencia-lista-de-recursos-de-respuesta">Lista de recursos de
+respuesta</a>)</li>
+</ul></li>
+<li>Consulte los <a href="#playbooks">playbook de incidentes</a> para
+conocer las preguntas clave, los dispositivos testigos y las estrategias
+para investigar las amenazas comunes o muy dañinas.</li>
+</ol>
+<p><strong>El plan de investigación es fundamental para una respuesta
+eficaz; impulsa todas las acciones de investigación. Utilice el
+pensamiento crítico, la creatividad y el buen juicio.</strong></p>
+<h3
+id="referencia-táctica-del-atacante-a-la-matriz-de-preguntas-clave">Referencia:
+Táctica del atacante a la matriz de preguntas clave</h3>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 38%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Táctica del atacante</th>
+<th>La forma en que los atacantes …</th>
+<th>Posibles preguntas clave</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Reconocimiento</td>
+<td>… aprender sobre los objetivos</td>
+<td>¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?</td>
+</tr>
+<tr class="even">
+<td>Desarrollo de recursos</td>
+<td>… construir infraestructuras.</td>
+<td>¿Qué sistemas?</td>
+</tr>
+<tr class="odd">
+<td>Acceso inicial</td>
+<td>… entrar</td>
+<td>¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?</td>
+</tr>
+<tr class="even">
+<td>Ejecución</td>
+<td>… ejecutar código hostil</td>
+<td>¿Qué malware? ¿Qué herramientas? ¿Dónde? ¿Cuándo?</td>
+</tr>
+<tr class="odd">
+<td>Persistencia</td>
+<td>… quedarse en el sistema</td>
+<td>¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?</td>
+</tr>
+<tr class="even">
+<td>Escalada de Privilegios</td>
+<td>… obtener acceso de mayor nivel</td>
+<td>¿Cómo? ¿Dónde? ¿Qué herramientas?</td>
+</tr>
+<tr class="odd">
+<td>Evasión de la defensa</td>
+<td>… esquivar la seguridad</td>
+<td>¿Cómo? ¿Dónde? ¿Desde cuándo?</td>
+</tr>
+<tr class="even">
+<td>Acceso a credenciales</td>
+<td>… obtener/crear cuentas</td>
+<td>¿Qué cuentas? ¿Desde cuándo? ¿Por qué?</td>
+</tr>
+<tr class="odd">
+<td>Descubrimiento</td>
+<td>… aprender nuestra red</td>
+<td>¿Cómo? ¿Dónde? ¿Qué saben?</td>
+</tr>
+<tr class="even">
+<td>Movimiento lateral</td>
+<td>… moverse</td>
+<td>¿Cómo? ¿Cuándo? ¿Qué cuentas?</td>
+</tr>
+<tr class="odd">
+<td>Recogida</td>
+<td>… encontrar y reunir datos</td>
+<td>¿Qué datos? ¿Por qué? ¿Cuándo? ¿Dónde?</td>
+</tr>
+<tr class="even">
+<td>Mando y control</td>
+<td>… herramientas y sistemas de control</td>
+<td>¿Cómo? ¿Dónde? ¿Quién? ¿Por qué?</td>
+</tr>
+<tr class="odd">
+<td>Exfiltración</td>
+<td>… tomar datos</td>
+<td>¿Qué datos? ¿Cómo? ¿Cuándo? ¿Dónde?</td>
+</tr>
+<tr class="even">
+<td>Impacto</td>
+<td>… romper cosas.</td>
+<td>¿Qué sistemas o datos? ¿Cómo? ¿Cuándo? ¿Dónde? ¿Cómo de malo?</td>
+</tr>
+</tbody>
+</table>
+<p>Consulte la página <a href="https://attack.mitre.org/">MITRE
+ATT&amp;CK</a> para obtener más información e ideas.</p>
+<h2 id="crear-y-desplegar-indicadores-de-compromiso-ioc">Crear y
+desplegar indicadores de compromiso (IOC)</h2>
+<blockquote>
+<p>Haga hincapié en los indicadores <strong>dinámicos y de
+comportamiento</strong> junto con las huellas digitales estáticas.</p>
+</blockquote>
+<ul>
+<li>Crear IOCs basados en <a href="#recoger-las-pistas-iniciales">pistas
+iniciales</a> y <a href="#analyze-evidence">análisis</a>.</li>
+<li>Cree IOCs usando un formato abierto soportado por sus herramientas
+(<em>por ejemplo</em>, <a
+href="https://oasis-open.github.io/cti-documentation/stix/intro">STIX
+2.0</a>), si es posible.</li>
+<li>Utilice la automatización, si es posible.</li>
+<li><strong>No</strong> desplegar “feeds” de IOCs no relacionados y no
+curados, ya que pueden causar confusión y fatiga.</li>
+<li>Considerar todos los tipos de IOC:
+<ul>
+<li>IOC basados en la red, como direcciones IP o MAC, puertos,
+direcciones de correo electrónico, contenido o metadatos del correo
+electrónico, URLs, dominios o patrones PCAP.</li>
+<li>IOC basados en el host, como rutas, hashes de archivos, contenido o
+metadatos de archivos, claves de registro, MUTEXes, autoejecuciones o
+artefactos y permisos de usuarios.</li>
+<li>IOCs basados en la nube, como patrones de registro para despliegues
+<a href="https://en.wikipedia.org/wiki/Software_as_a_service">SaaS</a> o
+<a
+href="https://en.wikipedia.org/wiki/Infrastructure_as_a_service">IaaS</a></li>
+<li>IOCs de comportamiento (a.ka., patrones, TTPs) tales como patrones
+de árbol de procesos, heurística, desviación de la línea base y patrones
+de inicio de sesión.</li>
+</ul></li>
+<li>Correlacionar varios tipos de IOC, como indicadores basados en la
+red y en el host en los mismos sistemas.</li>
+</ul>
+<h2 id="identificar-los-sistemas-de-interés">Identificar los sistemas de
+interés</h2>
+<ol type="1">
+<li>Validar si son relevantes.</li>
+<li>Categorizar la(s) razón(es) por la(s) que son “de interés”: tiene
+malware, acceso por cuenta comprometida, tiene datos sensibles, etc.
+Trátelas como “etiquetas”, puede haber más de una categoría por
+sistema.</li>
+<li>Prioriza la recogida, el análisis y la reparación en función de las
+necesidades de la investigación, el impacto en el negocio,
+<em>etc</em>.</li>
+</ol>
+<h2 id="recogida-de-pruebas">Recogida de pruebas</h2>
+<ul>
+<li>Priorizar en base al plan de investigación</li>
+<li>Recoger datos de respuesta en vivo utilizando <a
+href="https://www.sophos.com">sophos</a>.</li>
+<li>Recoger los registros relevantes de los sistemas (si no forman parte
+de la respuesta en vivo), agregadores, SIEM o consolas de
+dispositivos.<br />
+</li>
+<li>Recoger la imagen de la memoria, si es necesario y si no forma parte
+de la respuesta en vivo, utilizando <a
+href="https://www.magnetforensics.com/resources/magnet-dumpit-for-windows/">DumpIT</a>.</li>
+<li>Recoger la imagen del disco, si es necesario, utilizando <a
+href="https://www.exterro.com/ftk-imager">FTK Imager</a>.<br />
+</li>
+<li>Recoger y almacenar las pruebas de acuerdo con la política, y con la
+cadena de custodia adecuada.</li>
+</ul>
+<p>Considere la posibilidad de recopilar los siguientes artefactos como
+evidencia, ya sea en tiempo real (<em>por ejemplo</em>, a través de EDR
+o un SIEM) o bajo demanda:</p>
+<h3 id="ejemplo-de-artefactos-útiles">Ejemplo de artefactos útiles</h3>
+<ul>
+<li>Procesos en ejecución</li>
+<li>Servicios en ejecución</li>
+<li>Hashes ejecutables</li>
+<li>Aplicaciones instaladas</li>
+<li>Usuarios locales y de dominio</li>
+<li>Puertos de escucha y servicios asociados</li>
+<li>Configuración de resolución del sistema de nombres de dominio (DNS)
+y rutas estáticas</li>
+<li>Conexiones de red establecidas y recientes</li>
+<li>Clave de ejecución y otra persistencia de la ejecución
+automática</li>
+<li>Tareas programadas y trabajos cron</li>
+<li>Artefactos de ejecución pasada (por ejemplo, Prefetch y
+Shimcache)</li>
+<li>Registros de eventos</li>
+<li>Política de grupo y artefactos WMI</li>
+<li>Detecciones antivirus</li>
+<li>Binarios en ubicaciones de almacenamiento temporal</li>
+<li>Credenciales de acceso remoto</li>
+<li>Telemetría de conexiones de red (por ejemplo, netflow, permisos de
+cortafuegos)</li>
+<li>Tráfico y actividad de DNS</li>
+<li>Actividad de acceso remoto, incluido el Protocolo de Escritorio
+Remoto (RDP), la red privada virtual (VPN), SSH, la informática de red
+virtual (VNC) y otras herramientas de acceso remoto</li>
+<li>Cadenas de identificadores de recursos uniformes (URI), cadenas de
+agentes de usuario y acciones de aplicación del proxy</li>
+<li>Tráfico web (HTTP/HTTPS)</li>
+</ul>
+<h2 id="analizar-las-pruebas">Analizar las pruebas</h2>
+<ul>
+<li>Priorizar basándose en el plan de investigación</li>
+<li>Analizar y clasificar los datos de la respuesta en vivo</li>
+<li>Analizar la memoria y las imágenes de disco (es decir, realizar
+análisis forenses)</li>
+<li>Analizar el malware</li>
+<li><em>OPCIONAL:</em> Enriquecer con investigación e inteligencia</li>
+<li>Documentar nuevos indicadores de compromiso (IOCs)</li>
+<li>Actualizar el archivo del caso</li>
+</ul>
+<h3 id="ejemplo-de-indicadores-útiles">Ejemplo de indicadores
+útiles</h3>
+<ul>
+<li>Comportamiento inusual de autenticación (<em>e.</em>, frecuencia,
+sistemas, hora del día, ubicación remota)</li>
+<li>Nombres de usuario con formato no estándar</li>
+<li>Binarios no firmados que se conectan a la red</li>
+<li>Balizamiento o transferencias de datos significativas</li>
+<li>Solicitudes de línea de comandos PowerShell con comandos codificados
+en Base64</li>
+<li>Actividad excesiva de RAR, 7zip o WinZip, especialmente con nombres
+de archivo sospechosos</li>
+<li>Conexiones en puertos no utilizados previamente.</li>
+<li>Patrones de tráfico relacionados con el tiempo, la frecuencia y el
+recuento de bytes</li>
+<li>Cambios en las tablas de enrutamiento, como la ponderación, las
+entradas estáticas, las pasarelas y las relaciones entre pares.</li>
+</ul>
+<h2 id="iterar-la-investigación">Iterar la investigación</h2>
+<p><a
+href="#actualizar-el-plan-de-investigación-y-el-archivo-del-incidente">Actualizar
+el plan de investigación</a> y repetir hasta el cierre.</p>
+<h1 id="remediar">Remediar</h1>
+<p><strong><a href="#investigar">Investigar</a>, <a
+href="#remediar">Remediar</a> y <a href="#comunicar">Comunicar</a> en
+paralelo, utilizando equipos separados, si es posible.</strong> El
+Incident Commander coordinará estas actividades. Notifique al Incident
+Commander si hay pasos que el equipo debe considerar</p>
+<h2 id="actualización-del-plan-de-remediación">Actualización del plan de
+remediación</h2>
+<ol type="1">
+<li>Revise el archivo del incidente en powerpuff.org/files/823982
+utilizando el <a href="#nombre-del-incidente">nombre del
+incidente</a></li>
+<li>Revise los <a href="#playbooks">playbook</a> aplicables.</li>
+<li>Revise la <a href="#referencia-lista-de-recursos-de-respuesta">lista
+de recursos de respuesta</a>.</li>
+<li>Considere qué tácticas del atacante están en juego en este
+incidente. Utilice la lista de MITRE <a
+href="https://attack.mitre.org/wiki/Main_Page">ATT&amp;CK</a>
+(<em>i.</em>, Persistencia, Escalada de Privilegios, Evasión de la
+Defensa, Acceso a Credenciales, Descubrimiento, Movimiento Lateral,
+Ejecución, Recolección, Exfiltración y Mando y Control), o un marco
+similar.</li>
+<li>Desarrollar remedios para cada táctica en juego, en la medida en que
+sea factible teniendo en cuenta las herramientas y los recursos
+existentes. Considere remedios para <a href="#protección">Proteger</a>,
+<a href="#detección">Detectar</a>, <a href="#contención">Contener</a>, y
+<a href="#erradicar">Erradicar</a> cada comportamiento del
+atacante.</li>
+<li>Priorizar en base a la <a
+href="#choose-remediation-timing">estrategia de tiempo</a>, el impacto y
+la urgencia.</li>
+<li>Documentar en el archivo de incidentes.</li>
+</ol>
+<p>Utilice <a href="https://www.nist.gov/cyberframework">marcos de
+seguridad de la información (infosec)</a> como inspiración, pero
+<strong>no utilice la reparación de incidentes como sustituto de un
+programa de infosec con un marco apropiado.</strong> Utilícelos para
+complementarse.</p>
+<h3 id="protección">Protección</h3>
+<blockquote>
+<p>“¿Cómo podemos evitar que la táctica X se repita o reducir el riesgo?
+¿Cómo podemos mejorar la protección futura?”</p>
+</blockquote>
+<p>Utilice lo siguiente como punto de partida para la corrección de la
+protección:</p>
+<ul>
+<li>Parchear las aplicaciones.</li>
+<li>Parchee los sistemas operativos.</li>
+<li>Actualice las firmas de IPS de la red y del host.</li>
+<li>Actualizar las firmas de protección de puntos
+finales/EDR/antivirus.</li>
+<li>Reducir las ubicaciones con datos críticos.</li>
+<li>Reducir las cuentas administrativas o privilegiadas.</li>
+<li>Habilitar la autenticación multifactor.</li>
+<li>Reforzar los requisitos de las contraseñas.</li>
+<li>Bloquear los puertos y protocolos no utilizados en los límites del
+segmento y de la red, tanto entrantes como salientes.</li>
+<li>Poner en lista blanca las conexiones de red para los servidores y
+servicios críticos.</li>
+</ul>
+<h3 id="detección">Detección</h3>
+<blockquote>
+<p>“¿Cómo podemos detectar esto en los nuevos sistemas o en el futuro?
+¿Cómo podemos mejorar la detección y la investigación en el futuro?”</p>
+</blockquote>
+<p>Utilice lo siguiente como punto de partida para la corrección de
+detecciones:</p>
+<ul>
+<li>Mejorar el registro y la retención de los registros del sistema, en
+particular de los sistemas críticos.</li>
+<li>Mejorar el registro de las aplicaciones, incluidas las aplicaciones
+SaaS.</li>
+<li>Mejorar la agregación de registros.</li>
+<li>Actualizar las firmas de IDS de la red y del host utilizando
+IOC.</li>
+</ul>
+<h3 id="contención">Contención</h3>
+<blockquote>
+<p>“¿Cómo podemos evitar que esto se extienda o se agrave? ¿Cómo podemos
+mejorar la contención en el futuro?”</p>
+</blockquote>
+<p>Utilice lo siguiente como punto de partida para la corrección de la
+contención:</p>
+<ul>
+<li>Implementar listas de acceso (ACL) en los límites de los segmentos
+de la red.</li>
+<li>Implementar bloqueos en el límite de la empresa, en múltiples capas
+del <a href="https://en.wikipedia.org/wiki/OSI_model">modelo
+OSI</a>.</li>
+<li>Desactivar o eliminar el acceso de las cuentas comprometidas.</li>
+<li>Bloquear direcciones IP o redes maliciosas.</li>
+<li>Bloquee los dominios maliciosos.</li>
+<li>Actualizar las firmas de IPS y antimalware de la red y el host
+mediante COI.</li>
+<li>Retirar de la red los sistemas críticos o comprometidos.</li>
+<li>Póngase en contacto con los proveedores para obtener ayuda (por
+ejemplo, proveedores de servicios de Internet, proveedores de
+SaaS).</li>
+<li>Poner en lista blanca las conexiones de red para los servidores y
+servicios críticos.</li>
+<li>Matar o deshabilitar procesos o servicios.</li>
+<li>Bloquear o eliminar el acceso de proveedores y socios externos,
+especialmente el acceso privilegiado.</li>
+</ul>
+<h3 id="erradicar">Erradicar</h3>
+<blockquote>
+<p>“¿Cómo podemos eliminar esto de nuestros activos? ¿Cómo podemos
+mejorar la erradicación en el futuro?”</p>
+</blockquote>
+<p>Utilice lo siguiente como punto de partida para la remediación de la
+erradicación:</p>
+<ul>
+<li>Reconstruir o restaurar los sistemas y datos comprometidos a partir
+de un estado bueno conocido.</li>
+<li>Restablecer las contraseñas de las cuentas.</li>
+<li>Eliminar cuentas o credenciales hostiles.</li>
+<li>Borrar o eliminar malware específico (¡difícil!).</li>
+<li>Implementar proveedores alternativos.</li>
+<li>Activar y migrar a ubicaciones, servicios o servidores
+alternativos.</li>
+</ul>
+<h2 id="elegir-el-momento-de-la-reparación">Elegir el momento de la
+reparación</h2>
+<p>Determine la estrategia de plazos -cuando se llevarán a cabo las
+acciones de remediación- involucrando al Incident Commander, a los SME y
+propietarios del sistema, a los SMEs y propietarios de la unidad de
+negocio, y al equipo ejecutivo. Cada estrategia es apropiada en
+diferentes circunstancias:</p>
+<ul>
+<li>Elija la reparación <strong>inmediata</strong> cuando sea más
+importante detener inmediatamente las actividades del atacante que
+seguir investigando. Por ejemplo, una pérdida financiera en curso, o un
+fracaso de la misión en curso, una pérdida de datos activa, o la
+prevención de una amenaza significativa inminente.</li>
+<li>Elija una reparación <strong>retrasada</strong> cuando sea
+importante completar la investigación o no alertar al atacante. Por
+ejemplo, el compromiso a largo plazo de un atacante avanzado, el
+espionaje corporativo o el compromiso a gran escala de un número
+desconocido de sistemas.</li>
+<li>Elija la remediación <strong>combinada</strong> cuando las
+circunstancias inmediatas y retardadas se apliquen en el mismo
+incidente. Por ejemplo, la segmentación inmediata de un servidor o red
+sensible para cumplir con los requisitos reglamentarios mientras se
+investiga un compromiso a largo plazo.</li>
+</ul>
+<h2 id="ejecutar-la-remediación">Ejecutar la remediación</h2>
+<ul>
+<li>Evaluar y explicar los riesgos de las acciones de remediación a las
+partes interesadas.<br />
+</li>
+<li>Implementar inmediatamente aquellas acciones de remediación que
+afecten poco o nada al atacante (a veces llamadas “acciones de
+postura”). Por ejemplo, muchas de las acciones de <a
+href="#protección">protección</a> y <a href="#detección">detección</a>
+anteriores son buenas candidatas.</li>
+<li>Programar y asignar acciones de remediación de acuerdo con la
+estrategia de tiempo.</li>
+<li>Ejecute las acciones de corrección en lotes, como eventos, para
+lograr la máxima eficacia y el mínimo riesgo.</li>
+<li>Documentar el estado de ejecución y el tiempo en el archivo de
+incidentes, especialmente para las medidas temporales.</li>
+</ul>
+<h2 id="iterar-la-remediación">Iterar la remediación</h2>
+<p><a href="#actualización-del-plan-de-remediación">Actualizar el plan
+de remediación</a> y repetir hasta el cierre.</p>
+<h1 id="comunicar">Comunicar</h1>
+<ul>
+<li><a href="#investigar">Investigar</a>, <a
+href="#remediar">Remediar</a> y <a href="#comunicar">Comunicar</a> en
+paralelo, utilizando equipos separados, si es posible. Notifique al
+Incident Commander si hay pasos que el equipo debe considerar</li>
+</ul>
+<p>Toda comunicación debe incluir la información más precisa disponible.
+Muestre integridad. No comunicar especulaciones.</p>
+<h2 id="comunicación-interna">Comunicación Interna</h2>
+<h3 id="notificar-y-actualizar-a-las-partes-interesadas">Notificar y
+actualizar a las partes interesadas</h3>
+<ul>
+<li>Comunicarse con las partes interesadas como parte de las llamadas
+iniciales y de actualización, así como a través de actualizaciones
+basadas en eventos en la llamada y el chat.</li>
+<li>Coordinar las actualizaciones independientes (<em>e.</em>,
+ejecutivas, legales) según sea necesario, pero con la menor frecuencia
+posible, para mantener el foco en la investigación y la reparación.</li>
+<li>Concéntrese en la mejor evaluación del vector, el impacto, el
+resumen y los aspectos más destacados de la línea de tiempo, incluidos
+los pasos de remediación. No especule.</li>
+</ul>
+<h3 id="notificar-y-actualizar-la-organización">Notificar y actualizar
+la organización</h3>
+<ul>
+<li><strong>No</strong> notifique o actualice al personal que no
+responde hasta que el Incident Commander lo autorice, en particular si
+existe el riesgo de una amenaza interna.</li>
+<li>Coordine las actualizaciones de los equipos o de toda la
+organización con los ejecutivos y la dirección de la empresa.</li>
+<li>Concéntrese en la mejor evaluación del vector, el impacto, el
+resumen y los aspectos más destacados de la línea de tiempo, incluidos
+los pasos de remediación. No especule.</li>
+</ul>
+<h3 id="crear-informe-de-incidentes">Crear Informe de Incidentes</h3>
+<ul>
+<li>Tras el cierre del incidente, capture la información en el <a
+href="#crear-archivo-del-incidente">archivo del incidente</a> para su
+distribución utilizando el formato en ir.powerpuff.org/report/template.
+<strong>Si los informes de vector, impacto, resumen, línea de tiempo y
+actividad están completos, esto puede ser totalmente
+automatizado.</strong></li>
+<li>Distribuir el informe de incidentes a lo siguiente:
+ir.powerpuff.org/report/recipients.</li>
+</ul>
+<h2 id="comunicar-al-exterior">Comunicar al exterior</h2>
+<h3 id="notificar-a-los-reguladores">Notificar a los reguladores</h3>
+<ul>
+<li><strong>No</strong> notifique ni ponga al día al personal que no ha
+respondido hasta que el Incident Commander lo autorice.</li>
+<li>Notificar a los organismos reguladores (por ejemplo, HIPAA/HITRUST,
+PCI DSS, SOX) si es necesario y de acuerdo con la política.</li>
+<li>Coordinar los requisitos, el formato y los plazos con el equipo de
+cumplimiento, legal@powerpuff.org.</li>
+</ul>
+<h3 id="notificar-a-los-clientes">Notificar a los clientes</h3>
+<ul>
+<li><strong>No</strong> notifique o actualice al personal que no
+responde hasta que el Incident Commander lo autorice.</li>
+<li>Coordine las notificaciones a los clientes con equipo de marketing,
+marketing@powerpuff.org.</li>
+<li>Incluya la fecha en el título de cualquier anuncio, para evitar
+confusiones.</li>
+<li>No utilice tópicos como “nos tomamos la seguridad muy en serio”.
+Céntrese en los hechos.</li>
+<li>Sea honesto, acepte la responsabilidad y presente los hechos, junto
+con el plan para prevenir incidentes similares en el futuro.</li>
+<li>Sea lo más detallado posible con la línea de tiempo.</li>
+<li>Sea lo más detallado posible en cuanto a la información que se vio
+comprometida y cómo afecta a los clientes. Si estábamos almacenando algo
+que no debíamos, sé honesto al respecto. Saldrá a la luz más tarde y
+será mucho peor.</li>
+<li>No hablemos de las partes externas que podrían haber causado el
+problema, a menos que ya lo hayan hecho público, en cuyo caso
+enlazaremos con su información. Comunícate con ellos de forma
+independiente (ver <a
+href="#notificar-a-los-proveedores-y-socios">Notificar a los
+proveedores</a>)</li>
+<li>Publique la comunicación externa lo antes posible. Las malas
+noticias no mejoran con el tiempo.</li>
+<li>Si es posible, contacte con los equipos de seguridad internos de los
+clientes antes de notificar al público.</li>
+</ul>
+<h3 id="notificar-a-los-proveedores-y-socios">Notificar a los
+proveedores y socios</h3>
+<ul>
+<li><strong>No</strong> notifique o actualice al personal que no
+responde hasta que el Incident Commander lo autorice.</li>
+<li>Si es posible, póngase en contacto con los equipos de seguridad
+internos de los proveedores y socios antes de notificar al público.</li>
+<li>Céntrese en los aspectos específicos del incidente que afectan o
+implican al proveedor o socio.</li>
+<li>Coordine los esfuerzos de respuesta y comparta la información si es
+posible.</li>
+</ul>
+<h3 id="notificar-a-las-fuerzas-de-seguridad">Notificar a las Fuerzas de
+Seguridad</h3>
+<ul>
+<li><strong>No</strong> notifique o actualice al personal que no
+responde hasta que el Incident Commander lo autorice.</li>
+<li>Coordinar con la oficina principal, bosses@powerpuff.org y equipo de
+lo legal, legal@powerpuff.org antes de interactuar con las fuerzas del
+orden.</li>
+<li>Póngase en contacto con las fuerzas del orden locales en Cuerpo
+Nacional de Policía, policia@gov.es.</li>
+<li>Póngase en contacto con el FBI en 1-800-CALL-FBI (225-5324),
+https://www.fbi.gov/contact-us o a través del <a
+href="https://www.ic3.gov">Internet Crime Complaint Center
+(IC3)</a>.</li>
+<li>Póngase en contacto con los operadores de los sistemas utilizados en
+el ataque, sus sistemas también pueden haber sido comprometidos.</li>
+</ul>
+<h3
+id="contactar-con-el-servicio-de-asistencia-de-respuesta-externa">Contactar
+con el servicio de asistencia de respuesta externa</h3>
+<ul>
+<li>Póngase en contacto con <a
+href="https://www.infosecinstitute.com">Infosec Institute</a> para que
+le ayude a evaluar el riesgo, la gestión de incidentes, la respuesta a
+los mismos y el apoyo posterior al incidente.</li>
+<li>Póngase en contacto con {https://www.support.net para que le ayude
+con las relaciones públicas y la comunicación externa.</li>
+<li>Póngase en contacto con Ifar, https://ifar.es para obtener ayuda con
+el seguro cibernético.</li>
+</ul>
+<h3 id="compartir-inteligencia">Compartir Inteligencia</h3>
+<ul>
+<li>Comparta los IOCs con <a
+href="https://www.infragard.org/">Infragard</a> si procede.</li>
+<li>Comparta los IOCs con su <a
+href="https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center">ISAC</a>
+de servicio a través de https://info.net/industry/contact, si
+procede.</li>
+</ul>
+<h1 id="recuperación">Recuperación</h1>
+<p><strong>La recuperación suele estar dirigida por las unidades de
+negocio y los propietarios de los sistemas. Tome medidas de recuperación
+sólo en colaboración con las partes interesadas
+pertinentes.</strong></p>
+<ol type="1">
+<li>Poner en marcha un plan de continuidad de negocio/recuperación de
+desastres: Por ejemplo, considerar la migración a ubicaciones operativas
+alternativas, sitios de conmutación por error, sistemas de copia de
+seguridad.</li>
+<li>Integrar las acciones de seguridad con los esfuerzos de recuperación
+de la organización. # Playbook</li>
+</ol>
+<p>Los siguientes playbooks capturan los pasos comunes de <a
+href="#investigate">investigación</a>, <a
+href="#remediate">remediación</a> y <a
+href="#communicate">comunicación</a> para determinados tipos de
+incidentes. # Playbook: Ataque DDoS</p>
+<h3 id="identificar-informar-configurar-y-comunicar">Identificar,
+informar, configurar y comunicar!</h3>
+<p>Asigna pasos a individuos o equipos para que trabajen
+simultáneamente, cuando sea posible; este playbook no es meramente
+secuencial. Utilice su mejor criterio.</p>
+<h2 id="identificar-el-ataque">Identificar el ataque</h2>
+<p>El primer paso es determinar si realmente se está produciendo un
+ataque DDoS. A menudo, los sistemas afectados pueden parecer lentos o
+inaccesibles, pero esto también puede ser causado por problemas de red o
+por el tráfico legítimo excesivo. Para determinar si realmente se trata
+de un ataque DDoS, debemos realizar las siguientes acciones:</p>
+<ul>
+<li>Monitorear los registros del servidor para ver si hay un aumento
+inusual en la cantidad de tráfico de entrada.</li>
+<li>Verificar si hay múltiples solicitudes de un solo origen o varias
+solicitudes de múltiples orígenes.</li>
+<li>Utilizar herramientas de análisis de red, como Wireshark, para
+capturar y analizar el tráfico de red.</li>
+</ul>
+<p>Si se confirma que estamos siendo objeto de un ataque DDoS, debemos
+pasar al siguiente paso.</p>
+<h2 id="informar-al-proveedor-de-servicios-de-internet-isp">Informar al
+proveedor de servicios de internet (ISP)</h2>
+<p>Es importante informar al proveedor de servicios de internet (ISP)
+para que puedan ayudarnos a mitigar el ataque. Muchos ISP tienen medidas
+de seguridad en su lugar para detectar y mitigar los ataques DDoS.</p>
+<p>Al informarles, podemos obtener su asistencia para proteger nuestra
+red y reducir el impacto del ataque. Es importante tener disponible el
+número de teléfono o dirección de correo electrónico de contacto del
+proveedor de servicios de internet.</p>
+<h2
+id="configurar-el-cortafuegos-para-bloquear-el-tráfico-no-deseado">Configurar
+el cortafuegos para bloquear el tráfico no deseado</h2>
+<p>Para reducir el impacto del ataque, podemos configurar el cortafuegos
+para bloquear el tráfico no deseado. Podemos hacer esto configurando las
+reglas del firewall para bloquear todo el tráfico excepto el tráfico de
+los puertos necesarios para el funcionamiento normal del sistema.</p>
+<p>También podemos bloquear direcciones IP sospechosas o todo el tráfico
+entrante de un país en particular si detectamos que la mayor parte del
+tráfico malintencionado proviene de ese país.</p>
+<h2
+id="redirigir-el-tráfico-legítimo-a-servidores-alternativos">Redirigir
+el tráfico legítimo a servidores alternativos</h2>
+<p>Otra estrategia para reducir el impacto del ataque es redirigir el
+tráfico legítimo a servidores alternativos. Podemos hacer esto mediante
+la configuración de DNS o mediante la redirección de tráfico a través de
+un balanceador de carga.</p>
+<p>Si bien esto puede no detener completamente el ataque DDoS, puede
+reducir su impacto al asegurarnos de que el tráfico legítimo pueda
+llegar a nuestros servidores.</p>
+<h2
+id="monitorear-el-tráfico-y-ajustar-las-medidas-de-seguridad">Monitorear
+el tráfico y ajustar las medidas de seguridad</h2>
+<p>Es importante monitorear continuamente el tráfico de red para
+asegurarnos de que las medidas de seguridad que hemos implementado estén
+funcionando correctamente.</p>
+<p>Si detectamos nuevas fuentes de tráfico malicioso, debemos ajustar
+nuestras medidas de seguridad para bloquearlos.</p>
+<h2 id="mantener-informados-a-los-usuarios">Mantener informados a los
+usuarios</h2>
+<p>Durante un ataque DDoS, es importante mantener informados a los
+usuarios sobre el estado de nuestros sistemas y las medidas que estamos
+tomando para mitigar el ataque.</p>
+<p>Podemos hacer esto mediante la publicación de actualizaciones en
+nuestro sitio web o a través de las redes sociales.</p>
+<h2 id="lista-de-verificación">Lista de verificación</h2>
+<p>Para finalizar, se tendrían que verificar que la siguiente lista de
+acciones se han realizado:</p>
+<ul>
+<li>Monitorear registros del servidor</li>
+<li>Verificar origen del tráfico</li>
+<li>Utilizar herramientas de análisis de red</li>
+<li>Tener disponible información de contacto del proveedor de servicios
+de internet</li>
+<li>Informar al proveedor de servicios de internet</li>
+<li>Configurar reglas del firewall</li>
+<li>Bloquear direcciones IP sospechosas</li>
+<li>Bloquear tráfico entrante de países sospechosos</li>
+<li>Redirigir tráfico legítimo a servidores alternativos</li>
+<li>Monitorear tráfico de red</li>
+<li>Ajustar medidas de seguridad</li>
+<li>Publicar actualizaciones en nuestro sitio web o a través de las
+redes sociales</li>
+</ul>
+<h2 id="playbook-desaparición-de-sitios-web">Playbook: Desaparición de
+sitios web</h2>
+<p><strong>Investigar, remediar (contener, erradicar) y comunicar en
+paralelo!</strong> Asigne los pasos a individuos o equipos para que
+trabajen simultáneamente, cuando sea posible; este playbook no es
+puramente secuencial. Utilice su mejor criterio.</p>
+<h3 id="investigar-1">Investigar</h3>
+<ol type="1">
+<li>Desconecte inmediatamente el servidor desconfigurado para
+investigarlo.
+<ul>
+<li>Esto es especialmente importante si la desfiguración es insultante o
+provocadora de algún modo. Elimine esto de la vista del público tan
+pronto como sea posible para evitar daños, así como para mitigar el
+impacto del negocio.</li>
+<li>El mensaje de desfiguración también puede contener información falsa
+que podría confundir a los usuarios o ponerlos en peligro.</li>
+<li>Desconectar el servidor permitirá una investigación más profunda de
+la desfiguración. Esto puede ser necesario, ya que el ciberdelincuente
+puede haberse adentrado en la organización accediendo a servidores de
+aplicaciones, bases de datos, etc.</li>
+</ul></li>
+<li>Determine el origen de la vulnerabilidad del sistema que ha
+utilizado el atacante. Los exploits más comunes son:
+<ul>
+<li>Ataques de inyección SQL
+<ul>
+<li>Este tipo de ataque se produce cuando un atacante interfiere en las
+consultas de una aplicación a la base de datos. Por lo tanto, esto puede
+conducir a un acceso no autorizado a datos privados o sensibles. Lea más
+sobre los ataques de inyección SQL <a
+href="https://www.acunetix.com/websitesecurity/sql-injection/">aquí</a></li>
+</ul></li>
+<li>Ataques de inclusión remota de archivos (RFI)
+<ul>
+<li>Este tipo de ataque explota la función de referencia de una
+aplicación para cargar malware desde una URL remota. Más información
+sobre los ataques RFI <a
+href="https://www.acunetix.com/blog/articles/remote-file-inclusion-rfi/">aquí</a></li>
+</ul></li>
+<li>webshells
+<ul>
+<li>Más información sobre web shells y defacement de sitios web <a
+href="https://www.wordfence.com/blog/2017/06/wso-shell/">aquí</a></li>
+</ul></li>
+<li>mal diseño de aplicaciones web
+<ul>
+<li>hacks de javascript</li>
+<li>hacks de PHP/ASP</li>
+<li>Aquí hay más sobre <a
+href="https://itnext.io/how-companies-are-hacked-via-malicious-javascript-code-12aa82560bdc">hacking
+con javascript</a></li>
+</ul></li>
+<li>otros métodos de detección incluyen:
+<ul>
+<li>Comprobar los registros del servidor
+<ul>
+<li>buscar en el registro de acceso y en el registro de errores de la
+página web cualquier actividad sospechosa o desconocida</li>
+<li>por supuesto, también es una buena idea comprobar los registros del
+firewall IDS o IPS, si están disponibles</li>
+</ul></li>
+<li>Comprobar los archivos con contenido estático</li>
+<li>Escanear las bases de datos en busca de contenido malicioso</li>
+<li>Comprobación de los enlaces presentes en la página</li>
+</ul></li>
+</ul></li>
+<li>Recoge cualquier pista sobre quién es el ciberdelincuente o para qué
+organización trabaja. Considera las siguientes preguntas:
+<ul>
+<li>¿Qué representa la desfiguración? ¿Incluía un mensaje obvio?</li>
+<li>¿Parece que la desfiguración es inofensiva o intencionada? ¿Podría
+ser el ciberdelincuente un niño jugando o un grupo profesional que
+trabaja con un motivo?</li>
+<li>¿Parece que su organización haya sido el objetivo? ¿Quién podría
+querer atacar a su organización?</li>
+<li>¿Qué esperaba conseguir el ciberdelincuente?</li>
+<li>Consulta <a
+href="https://www.geeksforgeeks.org/types-of-hackers/">aquí</a> para
+saber más sobre los tipos de ciberdelincuentes que pueden haber atacado
+tu página web.</li>
+</ul></li>
+<li>Recoge otra información importante de la página que ha sido
+desfigurada, como por ejemplo
+<ul>
+<li>una captura de pantalla de la desfiguración</li>
+<li>el dominio y la dirección IP de la página</li>
+<li>detalles del servidor web</li>
+<li>el código fuente de la página
+<ul>
+<li>analizarlo cuidadosamente para identificar el problema y asegurarse
+de que se encuentra en un servidor de la empresa</li>
+</ul></li>
+<li>nombre o cualquier información sobre el atacante</li>
+</ul></li>
+<li>También existen herramientas que ayudan a la detección y al análisis
+de los registros. A continuación se enumeran algunas de ellas:
+<ul>
+<li>Weblog Expert</li>
+<li>Sawmill</li>
+<li>Deep Log Analyzer</li>
+</ul></li>
+</ol>
+<h3 id="remediar-1">Remediar</h3>
+<p><strong>Planificar eventos de reparación</strong> en los que estos
+pasos se pongan en marcha juntos (o de forma coordinada), con los
+equipos adecuados listos para responder a cualquier interrupción. *
+<strong>Considere el momento y las compensaciones</strong> de las
+acciones de remediación: su respuesta tiene consecuencias.</p>
+<h4 id="contención-1">Contención</h4>
+<ol type="1">
+<li>Haga una copia de seguridad de todos los datos almacenados en el
+servidor web con fines forenses.</li>
+<li>Como se ha mencionado anteriormente, asegúrese de que el servidor de
+la página desfigurada está temporalmente fuera de servicio mientras se
+lleva a cabo la investigación.
+<ul>
+<li>Debe tener una página de error preparada para esta situación que
+informe al usuario y/o a los empleados de que el mantenimiento está en
+marcha y que la página que buscaban volverá en breve. Incluso podría
+tener preparada una página web de respaldo en la que pueda publicar
+contenido mientras se lleva a cabo la investigación y la reparación, y
+hacer que su página de error temporal redirija a los usuarios a este
+sitio de respaldo.</li>
+<li>Compruebe su mapa de arquitectura de red. Si la brecha es otro
+sistema de la red, descárguelo e investíguelo.</li>
+</ul></li>
+<li>Una vez que se haya determinado el origen del ataque, aplique los
+pasos necesarios para garantizar que esto no vuelva a suceder. Esto
+puede incluir la modificación del código o la edición de los derechos de
+acceso.
+<ul>
+<li>Consulte la sección “Investigar” para conocer las fuentes comunes de
+vulnerabilidad.</li>
+<li>Si esto está fuera de su dominio, simplemente asegúrese de que ha
+dado al personal apropiado toda la información sobre el ataque que tiene
+y permita que los expertos hagan su trabajo.</li>
+</ul></li>
+</ol>
+<h3 id="recover">Recover</h3>
+<ol type="1">
+<li>Elimine el mensaje del ciberdelincuente y reemplácelo por el
+contenido original y legítimo. Si se han perdido datos en el ataque,
+consulte las copias de seguridad y restaure la página original en la
+medida de lo posible.
+<ul>
+<li>Compruebe las copias de seguridad en busca de indicadores de
+compromiso</li>
+<li>Considere la recuperación parcial y la prueba de integridad de las
+copias de seguridad</li>
+</ul></li>
+<li>Considere pedir a los usuarios que cambien sus credenciales de
+acceso si el servidor web tiene autenticación de usuario.</li>
+<li>Después de aplicar las medidas para evitar riesgos (como se
+recomienda a continuación), restaure su servidor mostrando el contenido
+original de la página.</li>
+<li>Si es necesario y/o aplicable, prepare una disculpa/explicación del
+ataque ocurrido para los usuarios o cualquier persona que haya
+presenciado la desfiguración. Asegúrese de que queda claro que el
+contenido desfigurado no refleja a su organización de ninguna
+manera.</li>
+</ol>
+<h4 id="evitar-riesgos">Evitar riesgos</h4>
+<ol type="1">
+<li>Utilice el menor número de plug-ins posible. Los piratas
+informáticos tienen como objetivo los sitios web que son vulnerables y
+tienen muchas fuentes de entrada. Puedes limitar estas fuentes de
+entrada utilizando sólo lo que necesites y eliminando los plug-ins y el
+software que no utilices o sean antiguos. También es importante
+actualizarlos lo antes posible.</li>
+<li>Controle de cerca y ordene el acceso a los contenidos
+administrativos. Permita que las personas accedan sólo a lo que
+necesitan. Esto reducirá la posibilidad de que un error humano provoque
+un ciberataque. Hay más métodos de prevención DIY mencionados en <a
+href="https://cirt.gy/index.php/node/116">este artículo</a> (pasos 6-12)
+y en el recurso #4 al final de este playbook.</li>
+<li>Comprueba regularmente si hay malware en tu sitio web escaneando el
+código fuente. Busca scripts, iframes o URLs que te parezcan
+desconocidos y asegúrate de escanear también las URLs que sí te resulten
+familiares.</li>
+<li>Hay muchos escáneres automáticos de sitios web de gran reputación
+que no le costarán nada de su tiempo y escanearán a fondo su sitio en
+busca de vulnerabilidades con regularidad. Aquí hay un <a
+href="https://resources.infosecinstitute.com/14-popular-web-application-vulnerability-scanners/#gref">enlace
+a escáneres populares</a>.</li>
+<li>Defiéndase contra los puntos comunes de explotación, como las
+inyecciones SQL y los ataques XSS. <a
+href="https://www.banffcyber.com/knowledge-base/articles/best-practices-address-issue-web-defacement/">Este
+artículo</a> incluye las mejores prácticas para defender estos
+ataques.</li>
+<li>Instala programas de detección de desfiguración para que, si
+volviera a producirse un ataque, estés preparado y respondas
+rápidamente. Aquí hay un <a
+href="https://www.techradar.com/news/best-website-defacement-monitoring-service">artículo</a>
+que resume algunos de los mejores servicios de monitoreo de 2020.</li>
+<li>Habla con tus empleados de la importancia de mantener el acceso
+administrativo limitado y confidencial e infórmales de estos pasos para
+evitar incidentes, incluyendo la formación periódica de concienciación
+sobre ciberseguridad.</li>
+</ol>
+<h3 id="comunicar-1">Comunicar</h3>
+<ol type="1">
+<li><ol type="1">
+<li>Elevar el incidente y comunicarlo a la dirección según el
+procedimiento</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Documentar el incidente según el procedimiento (e informar si
+procede)</li>
+</ol></li>
+<li>Comunicarse con los asesores jurídicos internos y externos según el
+procedimiento, incluyendo discusiones sobre el cumplimiento, la
+exposición al riesgo, la responsabilidad, el contacto con las fuerzas
+del orden, <em>etc.</em>.</li>
+<li>Comunicarse con los usuarios (internos)
+<ol type="1">
+<li>Comunicar las actualizaciones de la respuesta a incidentes según el
+procedimiento</li>
+<li>Comunicar el impacto del incidente <strong>y</strong> las acciones
+de respuesta al incidente (por ejemplo, contención: “¿por qué está caído
+el archivo compartido?”)</li>
+<li>Comunicar los requisitos: “¿qué deben hacer y no hacer los
+usuarios?”<br />
+</li>
+</ol></li>
+<li>Comunicar a los clientes
+<ol type="1">
+<li>Centrarse especialmente en aquellos cuyos datos se vieron
+afectados</li>
+<li>Generar las notificaciones requeridas en base a las regulaciones
+aplicables (particularmente aquellas que puedan considerar la
+desfiguración como una violación de datos o que requieran notificaciones
+de otro tipo).</li>
+</ol></li>
+<li>Contactar con los proveedores de seguros
+<ol type="1">
+<li>Discutir qué recursos pueden poner a disposición, qué herramientas y
+proveedores apoyan y pagarán, <em>etc.</em>.</li>
+<li>Cumplir con los requisitos de presentación de informes y
+reclamaciones para proteger la elegibilidad</li>
+</ol></li>
+<li>Considerar la posibilidad de notificar e implicar a las fuerzas del
+orden. TODO: Vincule las siguientes viñetas con los recursos reales de
+su organización
+<ol type="1">
+<li><a href="#TODO-link-to-actual-resource">Aplicación de la ley
+local</a></li>
+<li><ol type="1">
+<li><a href="#TODO-link-to-actual-resource">Aplicación de la ley a nivel
+estatal o regional</a></li>
+</ol></li>
+<li><ol type="1">
+<li><a href="#TODO-link-to-actual-resource">Fuerzas de seguridad
+federales o nacionales</a></li>
+</ol></li>
+</ol></li>
+<li>Comuníquese con los proveedores de seguridad y de TI
+<ol type="1">
+<li>Notifique y colabore con <a
+href="#TODO-link-to-actual-resource">proveedores gestionados</a> según
+el procedimiento</li>
+<li><ol start="2" type="1">
+<li>Notificar y colaborar con <a
+href="#TODO-link-to-actual-resource">consultores de respuesta a
+incidentes</a> por procedimiento</li>
+</ol></li>
+</ol></li>
+</ol>
+<h3 id="recursos">Recursos</h3>
+<h4
+id="referencia-acciones-del-usuario-ante-un-ataque-de-sospecha-de-defacement">Referencia:
+Acciones del usuario ante un ataque de sospecha de defacement</h4>
+<ol type="1">
+<li>Mantenga la calma y respire profundamente.</li>
+<li><ol start="2" type="1">
+<li>Desconecte su sistema de la red.</li>
+</ol></li>
+<li>Haz fotos de la página que veas con tu smartphone mostrando las
+cosas que has notado: el mensaje de desfiguración y cualquier otro
+cambio en el sitio habitual.</li>
+<li><ol start="2" type="1">
+<li>Toma notas sobre el problema o los problemas utilizando la
+aplicación de notas de voz de tu smartphone o con papel y lápiz. Todo
+ayuda. Documenta lo siguiente:</li>
+<li>¿Qué has notado?</li>
+<li>¿Cuándo ocurrió por primera vez, y con qué frecuencia desde
+entonces?</li>
+<li>¿A qué datos suele acceder?</li>
+<li>¿Con quién más se ha puesto en contacto en relación con este
+incidente y qué le ha dicho?</li>
+</ol></li>
+<li>Ponte en contacto con el <a href="#TODO-enlace-al-recurso">servicio
+de asistencia</a> y sé lo más servicial posible.</li>
+<li>Ten paciencia: deja que el personal informático lo controle, ¡puedes
+estar protegiendo a otros de un daño! <strong>Gracias.</strong></li>
+</ol>
+<h4
+id="referencia-acciones-del-help-desk-ante-un-presunto-ataque-de-defacement">Referencia:
+Acciones del Help Desk ante un presunto ataque de defacement</h4>
+<ol type="1">
+<li>Mantenga la calma y respire profundamente.</li>
+<li>Abra un ticket para documentar el incidente, según el
+procedimiento.</li>
+<li>Utiliza tu mejor criterio para decidir qué pasos priorizar (por
+ejemplo, si la desfiguración dejó contenido dañino o desencadenante,
+prioriza la retirada del servidor inmediatamente).</li>
+<li>Pídele al usuario que tome fotos de su pantalla con su teléfono
+inteligente mostrando las cosas que notó.</li>
+<li>Toma notas sobre el problema o los problemas utilizando la
+aplicación de notas de voz de tu smartphone o con papel y lápiz. 2. Si
+se trata de un informe de usuario, haga preguntas detalladas, incluyendo
+1. ¿Qué has notado?
+<ol type="1">
+<li>¿Cuándo ocurrió por primera vez, y con qué frecuencia desde
+entonces?</li>
+<li>¿A qué datos suele acceder?</li>
+<li>¿Con quién más se ha puesto en contacto en relación con este
+incidente y qué le ha dicho?</li>
+</ol></li>
+<li>Haga las preguntas de seguimiento que sean necesarias. <strong>Usted
+es una persona que responde al incidente, contamos con
+usted.</strong></li>
+<li>Obtenga información de contacto detallada del usuario (domicilio,
+oficina, móvil), si procede.</li>
+<li>Registre toda la información en el ticket, incluyendo notas
+manuscritas y de voz.</li>
+<li>Ponga en cuarentena a los usuarios y sistemas afectados.</li>
+<li>Póngase en contacto con el [equipo de seguridad]
+(#TODO-link-to-actual-resource) y prepárese para participar en la
+respuesta según las indicaciones: investigación, reparación,
+comunicación y recuperación.</li>
+</ol>
+<h4 id="información-adicional">Información adicional</h4>
+<ol type="1">
+<li><a name="defacement-playbook-ref-1"></a>Un útil y detallado <a
+href="https://pdfs.semanticscholar.org/899e/2d629e06d920b9059edb21fcb52cdb33f783.pdf">paper</a>
+sobre la detección de la desfiguraciónw</li>
+<li><a name="defacement-playbook-ref-2"></a>10 herramientas para<a
+href="https://geekflare.com/website-defacement-monitoring/">better
+website monitoring and security</a></li>
+<li><a name="defacement-playbook-ref-3"></a><a
+href="https://sucuri.net/reports/2019-hacked-website-report/">2019
+Website Threat Research Report</a> con estadísticas útiles</li>
+<li><a name="defacement-playbook-ref-4"></a><a
+href="https://www.imperva.com/learn/application-security/website-defacement-attack/">Article</a>
+incluyendo bricolaje y mejores prácticas para evitar la desfiguración de
+sitios web</li>
+</ol>
+<h2 id="playbook-compromiso-de-identidad-y-acceso">Playbook: Compromiso
+de identidad y acceso</h2>
+<p>El compromiso de identidad y acceso es una de las amenazas más
+comunes en el mundo de la seguridad informática. Es fundamental contar
+con un plan de acción para minimizar el impacto y recuperarse
+rápidamente.</p>
+<h3 id="investigar-2">Investigar</h3>
+<ul>
+<li><p>Identificar la fuente del compromiso de identidad y acceso. ¿Fue
+a través de un ataque externo o interno?</p></li>
+<li><p>Analizar los registros de actividad del sistema y la red para
+detectar cualquier actividad sospechosa.</p></li>
+<li><p>Identificar el alcance del compromiso. ¿Qué datos, sistemas o
+recursos se han visto comprometidos?</p></li>
+<li><p>Recopilar información sobre los usuarios afectados. ¿Qué usuarios
+se vieron afectados por el compromiso de identidad y acceso?</p></li>
+<li><p>Realizar un análisis forense para determinar cómo se produjo el
+compromiso de identidad y acceso.</p></li>
+<li><p>Identificar cualquier otra amenaza potencial y tomar medidas
+preventivas adicionales.</p></li>
+</ul>
+<h3 id="remediar-2">Remediar</h3>
+<ul>
+<li><p>Planificar eventos de remediación en los que estos pasos se
+lancen juntos (o de forma coordinada), con los equipos apropiados listos
+para responder a cualquier interrupción.</p></li>
+<li><p>Considere el tiempo y las compensaciones de las acciones de
+remediación: su respuesta tiene consecuencias.</p></li>
+</ul>
+<h4 id="contención-2">Contención</h4>
+<ul>
+<li><p>Pasos en la conteción:</p>
+<ul>
+<li>Identificar y aislar el sistema comprometido:
+<ul>
+<li>Identificar el sistema afectado, aislarlo y establecer controles de
+acceso.</li>
+</ul></li>
+<li>Detener la propagación del compromiso:
+<ul>
+<li>Identificar y detener el compromiso.</li>
+</ul></li>
+<li>Recopilar evidencia y datos de actividad:
+<ul>
+<li>Activar la monitorización recopilando logs y registros de actividad
+relevantes.</li>
+<li>Identificar y recuperar cualquier dato o archivo comprometido.</li>
+</ul></li>
+<li>Actualizar y parchear sistemas afectados:
+<ul>
+<li>Identificar vulnerabilidades explotadas, aplicarles actualizaciones
+y parches de seguridad en los sistemas afectados y verificarción de
+ello.</li>
+</ul></li>
+<li>Realizar análisis forense:
+<ul>
+<li>Realizar análisis forense para identificar la causa raíz del
+compromiso.</li>
+<li>Identificar y analizar cualquier malware encontrado en los sistemas
+afectados.</li>
+<li>Identificar cualquier acceso no autorizado o actividad
+maliciosa.</li>
+</ul></li>
+<li>Comunicación y colaboración:
+<ul>
+<li>Mantener una comunicación abierta y constante con el equipo.</li>
+<li>Trabajar en colaboración para compartir información y recursos.</li>
+</ul></li>
+</ul></li>
+<li><p>Herramientas y procedimientos:</p>
+<p>Estas son algunas herramientas que se pueden utilizar tras un
+compromiso de identidad y acceso:</p>
+<ul>
+<li><p>Identificación y aislamiento: Herramientas de monitorización de
+red y firewall para bloquear tráfico no autorizado. (Wireshark)</p></li>
+<li><p>Detención de la propagación: Herramientas de detección de
+malware, análisis de procesos y bloqueo de direcciones IP y dominios.
+(Malwarebytes o Norton)</p></li>
+<li><p>Recopilación de evidencia: Herramientas de monitorización de
+actividad, recuperación de datos y análisis de logs. (OSSEC, Recuva y
+Splunk)</p></li>
+<li><p>Actualización y parcheo: Herramientas de análisis de
+vulnerabilidades. (Nessus y WSUS)</p></li>
+<li><p>Análisis forense: Herramientas de análisis de malware, análisis
+de memoria y análisis de registro. (Volatility, FTKImager o
+RegRipper)</p></li>
+</ul></li>
+</ul>
+<h4 id="erradicar-1">Erradicar</h4>
+<ul>
+<li><p>Pasos en la erradicación:</p>
+<ul>
+<li><p>Eliminar el malware o software malicioso que se haya identificado
+como responsable del compromiso.</p></li>
+<li><p>Realizar una revisión exhaustiva de los sistemas y dispositivos
+comprometidos para asegurarse de que se han eliminado todas las
+amenazas.</p></li>
+<li><p>Restablecer los sistemas y dispositivos afectados a un estado
+seguro conocido.</p></li>
+<li><p>Realizar una revisión de seguridad adicional para confirmar que
+se han eliminado todas las amenazas y que los sistemas y dispositivos
+son seguros para su uso.</p></li>
+</ul></li>
+<li><p>Herramientas y procedimientos:</p>
+<p>Estas son algunas herramientas que se pueden utilizar tras un
+compromiso de identidad y acceso:</p>
+<ul>
+<li><p>Herramientas de eliminación de malware: Malwarebytes.</p></li>
+<li><p>Herramientas de recuperación de sistemas: System Restore en
+Windows o Acronis.</p></li>
+<li><p>Herramientas de verificación de integridad del sistema: Como
+Microsoft Baseline Security Analyzer o Nessus.</p></li>
+</ul></li>
+</ul>
+<h4 id="referencia-recursos-de-remediación">Referencia: Recursos de
+remediación</h4>
+<ul>
+<li><p>Identificar los recursos financieros necesarios para llevar a
+cabo la remediación.</p></li>
+<li><p>Identificar los recursos de personal necesarios para llevar a
+cabo la remediación.</p></li>
+<li><p>Identificar los recursos logísticos necesarios para llevar a cabo
+la remediación.</p></li>
+</ul>
+<h3 id="comunicar-2">Comunicar</h3>
+<ul>
+<li><p>Comunicar a los usuarios afectados sobre el compromiso y las
+medidas que se están tomando para remediarlo.</p></li>
+<li><p>Comunicar a los equipos de TI y de seguridad sobre el compromiso
+y las medidas que se están tomando para remediarlo.</p></li>
+<li><p>Comunicar a la alta dirección sobre el compromiso y las medidas
+que se están tomando para remediarlo.</p></li>
+<li><p>Comunicar a los accionistas sobre el compromiso y las medidas que
+se están tomando para remediarlo.</p></li>
+</ul>
+<h3 id="recuperación-1">Recuperación</h3>
+<ul>
+<li><p>Restaurar los sistemas y recursos afectados a su estado anterior
+al compromiso.</p></li>
+<li><p>Realizar una revisión de seguridad adicional para confirmar que
+los sistemas y recursos restaurados son seguros para su uso.</p></li>
+</ul>
+<h3 id="recursos-1">Recursos</h3>
+<h4 id="información-adicional-1">Información adicional</h4>
+<pre><code>1. Compromiso de identidad y acceso, Sánchez (28/03/2023)</code></pre>
+<h1 id="playbook-ingenieria-social">playbook-ingenieria-social</h1>
+<p>Es fundamental que los empleados de la organización puedan
+identificar y saber actuar ante una alerta de una posible amenaza de
+ingeniería social.</p>
+<p>¡Este documento puede variar dependiendo del tipo de ataque que se
+realice!</p>
+<h2 id="identificación.">Identificación.</h2>
+<p>Para empezar deberemos responder a las siguientes preguntas para
+tener una idea clara de a lo que nos enfrentamos:</p>
+<ul>
+<li>¿Nos han pedido demasiada información o información muy
+específica?</li>
+<li>¿El correo electrónico, mensaje o llamada contiene errores de
+ortografía, gramática, formato o contenido inusual?</li>
+<li>¿El remitente o la persona que llama ejerce presión para que se tome
+una acción rápida sin pensar?</li>
+<li>¿Se solicita que se haga alguna acción sin consentimiento previo a
+algún superior?</li>
+</ul>
+<p>Si la respuesta a algunas de estas preguntas ha sido “Sí”, nos
+enfrentamos a un ataque de ingeniería social.</p>
+<h2 id="investigación.">Investigación.</h2>
+<p>Si se ha identificado un posible intento de ingeniería social, es
+importante investigar y recopilar información para determinar si se
+trata de una amenaza real y su gravedad.</p>
+<p>Para ello podemos seguir estas acciones:</p>
+<ul>
+<li>Verificar al remitente: obtener información sobre el remitente y
+rastrear su origen para determinar si es legítimo o no.</li>
+<li>Consultar con el personal de seguridad o TI: verifique si se han
+reportado incidentes similares recientemente. Pregunte al personal de
+seguridad o de TI si han visto alguna actividad sospechosa o si hay
+alguna amenaza conocida que pueda estar relacionada con el mensaje o
+llamada.</li>
+<li>Buscar patrones o tendencias: revise otros mensajes de correo
+electrónico, llamadas o solicitudes similares que se hayan recibido
+recientemente para identificar patrones o tendencias. Si hay varios
+incidentes similares, esto puede indicar una campaña de ingeniería
+social más amplia.</li>
+</ul>
+<p>Una vez que se ha recopilado la información, determine el nivel de
+gravedad del incidente. La gravedad se puede determinar por el tipo de
+información solicitada o acción requerida, la credibilidad del remitente
+o la persona que llama, y la probabilidad de que la amenaza se
+materialice.</p>
+<p>Es importante recordar que durante esta fase se deben tomar
+precauciones para evitar que la amenaza se propague. La información
+recopilada debe manejarse de manera segura y sólo debe ser compartida
+con las personas involucradas en la respuesta al incidente.</p>
+<h2 id="respuesta-y-mitigación.">Respuesta y mitigación.</h2>
+<p>La respuesta a un incidente de ingeniería social debe ser rápida y
+eficiente para minimizar el daño potencial. Además, se deben tomar
+medidas para prevenir futuros incidentes.</p>
+<p>Estas medidas podrían ser:</p>
+<ul>
+<li>Informar a las partes afectadas: si se ha comprometido información
+confidencial, informe a las partes afectadas de inmediato. Proporcione
+detalles sobre lo que ha sucedido y las medidas que se están tomando
+para remediar la situación.</li>
+<li>Restablecer contraseñas: en caso de que se haya comprometido una
+contraseña o credencial de inicio de sesión, es importante restablecerla
+de inmediato. Se deben restablecer todas las contraseñas relacionadas y
+se deben establecer políticas más estrictas para la creación y el
+almacenamiento de contraseñas.</li>
+<li>Eliminar archivos infectados: elimine los archivos infectados y
+actualice el software de seguridad para prevenir futuras
+infecciones.</li>
+<li>Concienciar al personal: avisar al personal para que este atento a
+cualquier mensaje o llamada extraños.</li>
+<li>Informar a las autoridades: si hay sospecha de delito o pérdida de
+información, es importante informar a las autoridades relevantes, como
+la policía o el departamento de seguridad nacional.</li>
+<li>Usar herramientas: utilice herramientas de análisis de correo
+electrónico y otros sistemas para identificar cualquier amenaza
+potencial. Estas herramientas pueden identificar virus, malware o
+intentos de phishing.</li>
+<li>Actualizar políticas y procedimientos: utilice el incidente como una
+oportunidad para actualizar las políticas y procedimientos de seguridad
+de la información de su organización, como por ejemplo, incluir
+políticas más estrictas para la creación y el almacenamiento de
+contraseñas y actualización del software de seguridad.</li>
+</ul>
+<h2 id="documentación.">Documentación.</h2>
+<p>La documentación es la parte más importante ya que nos servirá para
+tener claro cada paso que se ha realizado y las consecuencias que ha
+tenido, esta deberá de ser detallada y precisa para ayudarnos a prevenir
+futuros incidentes, además de servir como guía para un futuro.</p>
+<p>Para realizar dicho informe de manera adecuada podremos seguir los
+siguientes consejos:</p>
+<ul>
+<li>Registrar todos los detalles del incidente: incluyendo la fecha y
+hora, las personas involucradas, la descripción del incidente, las
+medidas tomadas y los resultados.</li>
+<li>Documentar las lecciones aprendidas: esto te puede ayudar a mejorar
+las políticas y procedimientos de seguridad de la información de su
+organización.## Playbook: Phishing</li>
+</ul>
+<p><strong>Investigar, remediar (contener, erradicar), y comunicar en
+paralelo!</strong></p>
+<p>Asigna pasos a individuos o equipos para que trabajen
+simultáneamente, cuando sea posible; este playbook no es meramente
+secuencial. Utilice su mejor criterio.</p>
+<h3 id="investigar-3">Investigar</h3>
+<ol type="1">
+<li><p><strong>Ámbito del ataque</strong> Normalmente se le notificará
+que se está produciendo un posible ataque de phishing, ya sea por parte
+de un usuario, cliente o socio.</p>
+<ul>
+<li>Determinar el <strong>número total de usuarios
+afectados</strong>.</li>
+<li>Comprender <strong>las acciones de los usuarios</strong> en la
+respuesta al phishing de un correo electrónico (<em>e.j.</em>,
+¿Descargarón el archivo adjunto?, ¿Visitarón el sitio suplantado?, ¿O,
+dieron alguna información personal o comercial como credenciales?)</li>
+<li>Encontrar la actividad potencialmente relacionada. Comprueba:
+<ul>
+<li>Redes Sociales</li>
+<li>Cualquier correo electrónico sospechoso posible.</li>
+<li>Correos electrónicos con enlaces a URL’s externas y
+desconocidas.</li>
+<li>Correos electrónicos de no-retorno o no-entregables.</li>
+<li>Cualquier tipo de notificación de actividad sospechosa.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Analizar el mensaje</strong> utilizando un dispositivo
+seguro (es decir, <strong>no</strong> abrir los mensajes en un
+dispositivo con acceso a datos sensibles o credenciales ya que el
+mensaje puede contener malware), determinar:</p>
+<ul>
+<li>Quién ha recibido el mensaje</li>
+<li>Quién era el objetivo del mensaje (puede ser diferente de los
+destinatarios a los que iba realmente dirigido el mensaje)</li>
+<li>Dirección de correo electrónico del remitente</li>
+<li>línea de asunto</li>
+<li>Cuerpo del mensaje</li>
+<li>Adjuntos (<strong>no abra los archivos adjuntos</strong> salvo según
+los procedimientos establecidos)</li>
+<li>Enlaces, dominios, y nombres de host (<strong>no siga los
+enlaces</strong>, excepto según los procedimientos establecidos)</li>
+<li>Metadatos del correo electrónico inluidas las cabeceras de los
+mensajes (véase más adelante)
+<ul>
+<li>Información del remitente en el campo “de” y en la cabecera del
+usuario autenticado-X</li>
+<li>Todas las direcciones IP del cliente y del servidor de correo</li>
+</ul></li>
+<li>Anotar las “peculiaridades” o características sospechosas</li>
+</ul></li>
+<li><p><strong>Analizar los enlaces y los archivos adjuntos</strong></p>
+<ul>
+<li>Utilizar la recopilación pasiva como nslookup y whois para encontrar
+direcciones IP e información de registro</li>
+<li>Encontrar dominios relacionados utilizando OSINT (<em>e.j.</em>, <a
+href="https://www.whoxy.com/reverse-whois/">reverse whois</a>) en
+direcciones de correo electrónico y otros datos de registro.</li>
+<li>Enviar enlaces, archivos adjuntos y/o hashes a <a
+href="https://www.virustotal.com/gui/">VirusTotal</a></li>
+<li>Enviar enlaces, adjuntos y/o hashes a un sandbox de malware como <a
+href="https://cuckoosandbox.org/">Cuckoo</a>, <a
+href="https://www.hybrid-analysis.com/">Hybrid Analysis</a>, <a
+href="https://www.joesecurity.org/">Joe Sandbox</a>, o <a
+href="https://www.vmray.com/">VMray</a>.</li>
+</ul></li>
+<li><p>Categorice el tipo de ataque.</p></li>
+<li><p><strong>Determine la gravedad.</strong> Considerar:</p>
+<ul>
+<li>Si la seguridad pública o personal está en riesgo</li>
+<li>Si los datos personales (u otros datos sensibles) están en
+riesgo</li>
+<li>Si hay pruebas de quién está detrás del ataque</li>
+<li>Número de activos afectados</li>
+<li>El impacto preliminar en el negocio</li>
+<li>Si los servicios se ven afectados</li>
+<li>Si se pueden controlar/registrar los sistemas críticos</li>
+</ul></li>
+</ol>
+<h3 id="remediar-3">Remediar</h3>
+<ul>
+<li><strong>Planificar eventos de remediación</strong> en los que estos
+pasos se pongan en marcha juntos (o de forma coordinada), con los
+equipos adecuados listos para responder a cualquier interrupción.</li>
+<li><strong>Considere el momento y las compensaciones</strong> de las
+acciones de remediación: su respuesta tiene consecuencias.</li>
+</ul>
+<h4 id="contener">Contener</h4>
+<ul>
+<li>Contener las cuentas afectadas
+<ul>
+<li>Cambiar las credenciales de acceso</li>
+<li>Reducir el acceso a los servicios, sistemas o datos críticos hasta
+que se complete la investigación</li>
+<li>Reforzar la autenticación multifactor (MFA)</li>
+</ul></li>
+<li>Bloquear la actividad en función de los indicadores de compromiso
+descubiertos, <em>e.j.</em>:
+<ul>
+<li>Bloquear dominios maliciosos mediante DNS, cortafuegos o
+proxies</li>
+<li>Bloquear los mensajes con remitentes, cuerpos de mensajes, asuntos,
+enlaces, archivos adjuntos similares, etc., utilizando la puerta de
+enlace predeterminada o el servicio de correo electrónico.</li>
+</ul></li>
+<li>Implementar la retención forense o conservar copias forenses de los
+mensajes</li>
+<li>Purgar los mensajes relacionados de las bandejas de entrada de otros
+usuarios, o hacerlos inaccesibles de otro modo.</li>
+<li>Contener el compromiso más amplio de acuerdo con el plan general de
+IR</li>
+<li>Considerar medidas de contención de los dispositivos móviles, como
+el borrado a través de la gestión de dispositivos móviles (MDM).
+Equilibrio con el impacto de la investigación/forense.</li>
+<li>Aumentar el “nivel de alerta” de la detección, con una mayor
+supervisión, en particular de las cuentas, dominios o direcciones IP
+relacionadas.</li>
+<li>Considerar la posibilidad de contar con asistencia externa en
+materia de seguridad para apoyar la investigación y la correción.</li>
+<li>Confirmar las actualizaciones de software y antimalware
+pertinenestes en los activos.</li>
+</ul>
+<h3 id="comunicar-3">Comunicar</h3>
+<ol type="1">
+<li>Elevar el incidente y comunicarlo a la dirección según el
+procedimiento</li>
+<li>Documente el incidente según el procedimiento (y <a
+href="https://us-cert.cisa.gov/report-phishing">informe</a>)</li>
+<li>Comunicarse con los asesores jurídicos internos y externos según el
+procedimiento, incluyendo discusiones sobre el cumplimiento, la
+exposición al riesgo, la responsabilidad, el contacto con las fuerzas
+del orden, <em>etc.</em></li>
+<li>Comnunicación con los usuarios (interna)
+<ol type="1">
+<li>Comunicar las actualizaciones de la respuesta a incidentes según el
+procedimiento</li>
+<li>Comunicar el impacto del incidente <strong>y</strong> las acciones
+de respuesta al mismo (e.j., contención: “¿Por qué está caído el archivo
+compartido?”)</li>
+<li>Comunicar los requisitos: “¿Qué deben hacer y no hacer los
+usuarios?”</li>
+</ol></li>
+<li>Comunicar a los clientes
+<ol type="1">
+<li>Centrarse especialmente en aquellos cuyos datos se vieron
+afectados</li>
+<li>Genere las notificaciones requeridas en base a las regulaciones
+aplicables (particularmente aquellas que puedan considerar el phishing
+como una violación de datos o que requieren notificaciones de otro
+tipo)</li>
+</ol></li>
+<li>Contactar con el/los proveedor/es de seguros
+<ol type="1">
+<li>Discutir qué recursos pueden poner a disposición, qué herramientas y
+proveedores apoyan y pagarán, <em>etc.</em></li>
+<li>Cumplir con los requisitos de presentación de informes y
+reclamaciones para proteger la elegibilidad.</li>
+</ol></li>
+<li>Considere la posibilidad de notificar e implicar a <a
+href="https://www.policia.es/_es/tupolicia_conocenos_estructura_dao_cgpoliciajudicial_bcit.php">las
+fuerzas del orden</a>
+<ol type="1">
+<li><a href="#TODO-enlace-a-actual-recurso">Aplicación de la ley
+local</a></li>
+<li><a href="#TODO-enlace-a-actual-recurso">Aplicación de la ley a nivel
+estatal o regional</a></li>
+<li><a href="#TODO-enlace-a-actual-recurso">Fuerzas de seguridad
+nacionales o europeas</a></li>
+</ol></li>
+<li>Comuníquese con los proveedores de seguridad y de TI
+<ol type="1">
+<li>Notifique y colabore con <a
+href="#TODO-enlace-a-actual-recurso">proveedores gestionados</a> para el
+procedimiento</li>
+<li>Notifique y colabore con <a
+href="#TODO-enlace-a-actual-recurso">consultores de respuesta ante
+incidentes</a> para el procedimiento</li>
+</ol></li>
+</ol>
+<h3 id="recuperación-2">Recuperación</h3>
+<ol type="1">
+<li>Poner en marcha un plan de continuidad de negocio/recuperación de
+desastres si el compromiso implica interrupciones de negocio:
+<em>e.j.</em>, considerar la migración a ubicaciones operativas
+alternativas, clústers de conmutación por error, sistemas de copias de
+seguridad.</li>
+<li>Reforzar los programas de formación sobre los ataques de phishing
+sospechosos. Los principales indicadores de sospecha pueden ser:
+<ul>
+<li>Errores ortográficos en el mensaje o en el asunto</li>
+<li>Nombres de remitentes que parezcan de telélefono, incluida la falta
+de coincidencia entre el nombre y la dirección de correo
+electrónico.</li>
+<li>Direcciones de correo electrónico personales para asuntos oficiales
+(e.j., correos electrónicos de gmail o yahoo de colegas de trabajo)</li>
+<li>Líneas de asunto marcadas con “[EXTERNO]” en correos electrónicos
+que parecen internos.</li>
+<li><a
+href="https://www.pcworld.com/article/248963/how-to-tell-if-a-link-is-safe-without-clicking-on-it.html">enlaces
+maliciosos o sospechosos</a></li>
+<li>Recibir un correo electrónico o un archivo adjunto que no se
+esperaba, pero que proviene de alguien conocido (contactar con el
+remitente antes de abrirlo).</li>
+<li>Informar de actividades sospechosas al departamento de TI o de
+seguridad.</li>
+</ul></li>
+<li>Asegúrate de que el personal de TI y de seguridad está al día de las
+técnicas de phishing más recientes.</li>
+<li>Determine si ha fallado algún control al ser victima de un ataque y
+rectifíquelo. He aquí una <a
+href="https://www.proofpoint.com/us/security-awareness/post/14-things-do-after-phishing-attack">buena
+fuente</a> a tener en cuenta tras un ataque de phishing.</li>
+</ol>
+<h3 id="recursos-2">Recursos</h3>
+<h4
+id="referencia-acciones-del-usuario-ante-la-sospecha-de-un-ataque-de-phishing">Referencia:
+Acciones del usuario ante la sospecha de un ataque de phishing</h4>
+<ol type="1">
+<li>Mantenga la calma y respire profundamente.</li>
+<li>Haz fotos de tu pantalla con tu smartphone mostrando las cosas que
+has notado: el mensaje de phishing, el enlace si lo has abierto, la
+información del remitente.</li>
+<li>Toma notas sobre el problema o los problemas utilizando la
+aplicación de notas de voz de tu smartphone o con papel y boli. Todo por
+poco que sea, ayuda! Documenta lo siguiente:
+<ol type="1">
+<li>¿Qué has notado?</li>
+<li>¿Por qué pensaste que era un problema?</li>
+<li>¿Qué estabas haciendo en el momento en que lo detectaste?</li>
+<li>¿Cuándo se produjo por primera vez, y con qué frecuencia desde
+entonces?</li>
+<li>¿Dónde estaba cuando ocurrió y en qué red? (oficina/casa/tienda, con
+cable/inalámbrica, con/sin VPN, <em>etc.</em>)</li>
+<li>¿Qué sistemas está utilizando? (sistema operativo, nombre de host,
+<em>etc.</em>)</li>
+<li>¿Qué cuenta utilizas?</li>
+<li>¿A qué datos suele acceder?</li>
+<li>¿Con quién más te has puesto en contacto sobre este incidente y qué
+les has dicho?</li>
+</ol></li>
+<li>Ponte en contacto con el <a
+href="#TODO-enlace-a-actual-recurso">servicio de ayuda</a> utlizando la
+<a href="#TODO-enlace-a-actual-recurso">línea directa de phishing</a> o
+la <a href="#TODO-enlace-a-actual-recurso">barra de herramientas de
+informe de phishing</a> y sé lo más servicial posible.</li>
+<li>Ten paciencia: La respuesta puede ser perturbardora, pero estas
+protegiendo a tu equipo y a la organización!
+<strong>Gracias.</strong></li>
+</ol>
+<h4
+id="referencia-acciones-del-servicio-de-ayuda-ante-un-presunto-ataque-phishing">Referencia:
+Acciones del servicio de ayuda ante un presunto ataque phishing</h4>
+<ol type="1">
+<li>Mantenga la calma y respire profundamente.</li>
+<li>Abra un ticket para documentar el incidente, según el
+procedimiento.</li>
+<li>Pídale al usuario que tome fotos de su pantalla usando su smartphone
+mostrando las cosas que notó: el mensaje de phishing, el enlace si lo
+abrió, la información del remitente, <em>etc.</em> Si es algo que notó
+directamente, haga lo mismo usted.</li>
+<li>Toma notas sobre el problema o los problemas utilizando la
+aplicación de notas de voz de tu smartphone o con papel y boli. Si se
+trata de un informe de usurio, haz preguntas detalladas, incluyendo:
+<ol type="1">
+<li>¿Qué has notado?</li>
+<li>¿Por qué pensaste que era un problema?</li>
+<li>¿Qué estabas haciendo en el momento en que lo detectaste?</li>
+<li>¿Cuándo se produjo por primera vez, y con qué frecuencia desde
+entonces?</li>
+<li>¿De qué redes se trata? (oficina/casa/tienda, cableada/inalámbrica,
+con/sin VPN, <em>etc.</em>)</li>
+<li>¿De qué sistemas se trata? (sistema operativo, nombre de host,
+<em>etc.</em>)</li>
+<li>¿De qué datos se trata? (rutas, tipos de archivos, archivos
+compartidos, bases de datos, software, <em>etc.</em>)</li>
+<li>¿Qué usuarios y cuentas están implicados? (directorio activo, SaaS,
+SSO, cuentas de servicio, <em>etc.</em>)</li>
+<li>¿A qué datos suelen acceder los usuarios implicados?</li>
+<li>¿Con quién más te has puesto en contacto sobre este incidente y qué
+les has dicho?</li>
+</ol></li>
+<li>Haz las preguntas de seguimiento que sean necesarias. <strong>Usted
+es de respuesta ante Incidentes, Contamos contigo.</strong></li>
+<li>Obtenga información de contacto detallada del usuario (domicilio,
+oficina, móvil), si procede.</li>
+<li>Registra toda la información en el ticket, incluyendo notas
+manuscritas y de voz.</li>
+<li>Poner en cuarentena a los usuarios y sistemas afectados.</li>
+<li>Póngase en contacto con el <a
+href="#TODO-enlace-a-actual-recurso">equipo de seguridad</a> y prepárase
+para participar en la respuesta según las indicaciones: investigación,
+remediación comunicación y recuperación.</li>
+</ol>
+<h4 id="información-adicional-2">Información adicional</h4>
+<ol type="1">
+<li><a name="phishing-playbook-ref-1"></a><a
+href="https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/top-16-anti-phishing-resources/#gref">Recurso
+Ataque Anti-Phishing</a></li>
+<li><a name="phisphing-playbook-ref-2"></a><a
+href="https://www.securitymetrics.com/blog/7-ways-recognize-phishing-email">Métodos
+de Identificación de Ataques Phishing</a></li>
+<li><a name="phishing-playbook-ref-3"></a><a
+href="https://www.phishing.org/phishing-examples">Ejemplos Correos
+electrónicos de Phishing</a></li>
+<li><a name="phishing-playbook-ref-4"></a><a
+href="https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/anti-phishing-best-practices/#gref">Mejores
+prácticas Anti-Phishing</a></li>
+</ol>
+<h2 id="playbook-ransomware">Playbook: Ransomware</h2>
+<p><strong>Investigar, remediar (contener, erradicar) y comunicar en
+paralelo. La contención es fundamental en los incidentes de ransomware,
+priorice en consecuencia.</strong></p>
+<p>Asigne pasos a individuos o equipos para que trabajen
+simultáneamente, cuando sea posible; este libro de jugadas no es
+puramente secuencial. Utilice su mejor criterio.</p>
+<h3 id="investigación">Investigación</h3>
+<ol type="1">
+<li><strong>Determinar el tipo</strong> de ransomware (<em>es decir,
+</em> ¿cuál es la familia, la variante o el tipo?)<a
+href="#ransomware-playbook-ref-1"><sup>[1]</sup></a>
+<ol type="1">
+<li>Encuentre cualquier mensaje relacionado. Compruebe:
+<ul>
+<li>las interfaces gráficas de usuario (GUI) del propio malware</li>
+<li>archivos de texto o html, que a veces se abren automáticamente tras
+el cifrado</li>
+<li>archivos de imange, a menudo, como fondos de pantalla del sistema
+infectado</li>
+<li>correos electrónicos de contacto en extensiones de archivo
+encriptadas</li>
+<li>ventanas emergentes después de intentar abrir un archivo
+encriptado</li>
+<li>mensajes de voz</li>
+</ul></li>
+<li>Analice los mensajes en busca de pistas sobre el tipo de ransomware:
+<ul>
+<li>nombre del ransomware</li>
+<li>lenguaje, estructura, frases, material gráfico</li>
+<li>correo electrónico de contacto</li>
+<li>formato de la identificación del usuario</li>
+<li>especificaciones de la demanda de rescate (<em>p.ej.</em>, moneda
+digital, tarjetas de regalo)</li>
+<li>dirección de pago en caso de moneda digital</li>
+<li>chat de soporte o página de soporte</li>
+</ul></li>
+<li>Analice los archivos afectados y/o nuevos. Compruebe:
+<ul>
+<li>el esquema de cambio de nombre de los archivos encriptados,
+incluyendo la extensión (<em>p.ej.</em>, <code>.cry</code>,
+<code>.cry</code>, <code>.locked</code>) y el nombre base</li>
+<li>corrupción de archivos frente a encriptación</li>
+<li>Tipos de archivos y ubicaciones objetivo</li>
+<li>usuario/grupo propietario de los archivos afectados</li>
+<li>Icono de los archivos encriptados</li>
+<li>marcadores de archivos</li>
+<li>existencia de listados de archivos, archivos clave u otros archivos
+de datos</li>
+</ul></li>
+<li>Analice los tipos de software o sistemas afectados. Algunas
+variantes de ransomware sólo afectan a determinadas herramientas
+(<em>p.ej.</em>, <a
+href="https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-professional-ransomware-group-gets-involved-infections-reach-28k-servers/">databases</a>)
+or platforms (<em>e.g.</em>, <a
+href="https://forum.synology.com/enu/viewtopic.php?f=3&amp;t=88716">NAS
+products</a>)</li>
+<li>Subir los indicadores a servicios de categorización automatizados
+como <a href="https://www.nomoreransom.org/crypto-sheriff.php">Crypto
+Sheriff</a>, <a href="https://id-ransomware.malwarehunterteam.com/">ID
+Ransomware</a>, o similar.</li>
+</ol></li>
+<li><strong>Determinar el alcance:</strong>
+<ol type="1">
+<li>¿Qué sistemas están afectados?
+<ul>
+<li>Busque indicadores de compromiso (IOC), como archivos/hashes,
+procesos, conexiones de red, etc. Utilice <a
+href="#TODO-link-to-actual-resource">endpoint protection/EDR</a>, <a
+href="#TODO-link-to-actual-resource">endpoint telemetry</a>, <a
+href="#TODO-link-to-actual-resource">system logs</a>, etc.</li>
+<li>Comprobar la infección de sistemas similares (_por ejemplo,
+usuarios, grupos, datos, herramientas, departamento, configuración,
+estado de los parches): comprobar <a
+href="#TODO-link-to-actual-resource">IAM tools</a>, <a
+href="#TODO-link-to-actual-resource">permissions management tools</a>,
+<a href="#TODO-link-to-actual-resource">directory services</a>,
+<em>etc.</em></li>
+<li>Find external command and control (C2), if present, and find other
+systems connecting to it: check <a
+href="#TODO-link-to-actual-resource">firewall or IDS logs</a>, <a
+href="#TODO-link-to-actual-resource">system logs/EDR</a>, <a
+href="#TODO-link-to-actual-resource">DNS logs</a>, <a
+href="#TODO-link-to-actual-resource">netflow or router logs</a>,
+<em>etc.</em></li>
+</ul></li>
+<li>¿Qué datos están afectados? (<em>e.g.</em>, tipos de archivo,
+departamento o grupo, software afectado).
+<ul>
+<li>Buscar cambios anómalos en los metadatos de los archivos, como
+cambios masivos en las horas de creación o modificación. Comprobar <a
+href="#TODO-link-to-actual-resource">herramientas de búsqueda de
+metadatos de archivos</a></li>
+<li>Buscar cambios en archivos de datos normalmente estables o críticos.
+Comprobar las herramientas de <a
+href="#TODO-link-to-actual-resource">supervisión de la integridad de los
+archivos</a></li>
+</ul></li>
+</ol></li>
+<li><strong>Evaluar el impacto</strong> para priorizar y motivar los
+recursos
+<ol type="1">
+<li>Evaluar el impacto funcional: impacto en la empresa o en la misión.
+<ul>
+<li>¿Cuánto dinero se pierde o está en riesgo?</li>
+<li>¿Cuántas (y cuáles) misiones se degradan o están en riesgo?</li>
+</ul></li>
+<li>Evaluar el impacto en la información: impacto en la
+confidencialidad, integridad y disponibilidad de los datos.
+<ul>
+<li>¿Qué importancia tienen los datos para la empresa/misión?</li>
+<li>¿Cuán sensibles son los datos? (<em>p.ej.</em>, secretos
+comerciales)</li>
+<li>¿Cuál es la situación reglamentaria de los datos (<em>p.ej.</em>,
+PII, PHI)?</li>
+</ul></li>
+</ol></li>
+<li><strong>Encuentra el vector de infección.</strong> Comprueba las
+tácticas capturadas en la <a
+href="https://attack.mitre.org/tactics/TA0001/">Initial Access
+tactic</a> of MITRE ATT&amp;CK<a
+href="#ransomware-playbook-ref-4"><sup>[4]</sup></a>. Los datos más
+comunes y las fuentes de datos son:
+<ul>
+<li>archivo adjunto de correo electrónico: comprobar <a
+href="#TODO-link-to-actual-resource">email logs</a>, <a
+href="#TODO-link-to-actual-resource">email security appliances and
+services</a>, <a href="#TODO-link-to-actual-resource">e-discovery
+tools</a>, <em>etc.</em></li>
+<li>insecure remote desktop protocol (RDP): check <a
+href="#TODO-link-to-actual-resource">vulnerability scanning results</a>,
+<a href="#TODO-link-to-actual-resource">firewall configurations</a>,
+<em>etc.</em></li>
+<li>auto-propagación (worm or virus) (check <a
+href="#TODO-link-to-actual-resource">host telemetry/EDR</a>, <a
+href="#TODO-link-to-actual-resource">system logs</a>, <a
+href="#TODO-link-to-actual-resource">forensic analysis</a>,
+<em>etc.</em>)</li>
+</ul></li>
+</ol>
+<h3 id="remediar-4">Remediar</h3>
+<p><strong>Planificar eventos de remediación</strong> en los que estos
+pasos se lancen juntos (o de forma coordinada), con los equipos
+apropiados listos para responder a cualquier interrupción.
+<strong>Considere el momento y las compensaciones</strong> de las
+acciones de reparación: su respuesta tiene consecuencias.</p>
+<h4 id="contención-3">Contención</h4>
+<p><strong>En situaciones de ransomware, la contención es fundamental.
+Informar de las medidas de contención con los datos de la investigación.
+Dé mayor prioridad a las cuarentenas y otras medidas de contención que
+durante una respuesta típica.</strong></p>
+<p>Las cuarentenas (lógicas, físicas o ambas) impiden la propagación
+<em>desde</em> los sistemas infectados y evitan la propagación
+<em>hacia</em> los sistemas y datos críticos. Las cuarentenas deben ser
+exhaustivas: incluir el acceso a la nube/SaaS, el inicio de sesión
+único, el acceso a sistemas como el ERP u otras herramientas
+empresariales, <em>etc.</em>.</p>
+<ul>
+<li>Poner en cuarentena los sistemas infectados</li>
+<li>Poner en cuarentena a los usuarios y grupos afectados.</li>
+<li>Ponga en cuarentena los archivos compartidos (no sólo los conocidos;
+proteja también los no infectados).</li>
+<li>Ponga en cuarentena las bases de datos compartidas (no sólo los
+servidores infectados conocidos; proteja también las bases de datos no
+infectadas)</li>
+<li>Ponga en cuarentena las copias de seguridad, si no están ya
+protegidas</li>
+<li>Bloquee los dominios y direcciones de comando y control</li>
+<li>Elimine los correos electrónicos vectoriales de las bandejas de
+entrada.</li>
+<li>Confirme que la protección de los puntos finales (AV, NGAV, EDR,
+etc.) está actualizada y activada en todos los sistemas.</li>
+<li>Confirmar que los parches se despliegan en todos los sistemas
+(priorizando los sistemas, SOs, software, <em>etc.</em>).</li>
+<li>Despliegue de firmas personalizadas en las herramientas de
+protección de puntos finales y de seguridad de la red, basándose en los
+COI descubiertos.</li>
+</ul>
+<h4 id="erradicar-2">Erradicar</h4>
+<ul>
+<li>Reconstruir los sistemas infectados a partir de soportes conocidos
+como buenos.</li>
+<li>Restaurar a partir de copias de seguridad conocidas y limpias.</li>
+<li>Confirmar que la protección de los puntos finales (AV, NGAV, EDR,
+etc.) está actualizada y activada en todos los sistemas.</li>
+<li>Confirmar que los parches se despliegan en todos los sistemas (dando
+prioridad a los sistemas, SO, software, etc.).</li>
+<li>Despliegue de firmas personalizadas en las herramientas de
+protección de puntos finales y de seguridad de la red, basándose en los
+IOC descubiertos.</li>
+<li><strong>Vigilar la reinfección:</strong> considerar el aumento de la
+prioridad de las alarmas/alertas relacionadas con este incidente.</li>
+</ul>
+<h3 id="comunicar-4">Comunicar</h3>
+<blockquote>
+<p><strong>No recomendamos pagar el rescate:</strong> no garantiza la
+solución del problema. Puede salir mal (<em>e.</em>, los errores podrían
+hacer que los datos sean irrecuperables incluso con la clave). Además,
+pagar demuestra que el ransomware funciona y podría aumentar los ataques
+contra ti o contra otros grupos.<a
+href="#ransomware-playbook-ref-2"><sup>[2, paraphrased]</sup></a></p>
+</blockquote>
+<ol type="1">
+<li>Poner en marcha un plan de continuidad de la actividad/recuperación
+de desastres: Por ejemplo, considerar la migración a ubicaciones
+operativas alternativas, sitios de conmutación por error, sistemas de
+respaldo.</li>
+<li>Recuperar los datos de las copias de seguridad ya limpias en
+sistemas ya limpios, parcheados y monitorizados (post-erradicación), de
+acuerdo con nuestra <a href="#TODO-link-to-actual-resource">well-tested
+backup strategy</a>. *Comprobar las copias de seguridad en busca de
+indicadores de peligro
+<ul>
+<li>Considerar la recuperación parcial y las pruebas de integridad de
+las copias de seguridad</li>
+</ul></li>
+<li>¡Encuentre y pruebe desencriptadores conocidos para la(s)
+variante(s) descubierta(s) utilizando recursos como el proyecto No More
+Ransom! Project’s <a
+href="https://www.nomoreransom.org/en/decryption-tools.html">Decryption
+Tools page</a>.</li>
+<li>Considerar el pago del rescate por los activos/datos críticos
+irrecuperables, de acuerdo con la política.
+<ul>
+<li>Considerar las ramificaciones con las partes interesadas
+apropiadas</li>
+<li>Comprender las implicaciones financieras y el presupuesto</li>
+<li>Comprender las implicaciones legales, reglamentarias y de
+seguros</li>
+<li>Comprender los mecanismos (por ejemplo, tecnologías, plataformas,
+proveedores intermedios/intermediarios)</li>
+</ul></li>
+</ol>
+<h3 id="recursos-3">Recursos</h3>
+<h4
+id="referencia-acciones-de-los-usuarios-ante-la-sospecha-de-ransomware">Referencia:
+Acciones de los usuarios ante la sospecha de ransomware</h4>
+<ol type="1">
+<li>Mantenga la calma y respire profundamente.</li>
+<li>Desconecte su sistema de la red.</li>
+<li>Haz fotos de tu pantalla con tu smartphone mostrando las cosas que
+has notado: mensajes de rescate, archivos encriptados, mensajes de error
+del sistema, <em>etc.</em>.</li>
+<li><ol start="2" type="1">
+<li>Toma notas sobre el problema o los problemas utilizando la
+aplicación de notas de voz de tu smartphone o con papel y lápiz. Todo
+ayuda. Documenta lo siguiente:</li>
+<li>¿Qué has notado?</li>
+<li>¿Por qué pensaste que era un problema?</li>
+<li>¿Qué estabas haciendo en el momento en que lo detectaste?</li>
+<li>¿Cuándo se produjo por primera vez, y con qué frecuencia desde
+entonces?</li>
+<li>¿Dónde estaba cuando ocurrió y en qué red? (oficina/casa/tienda, con
+cable/inalámbrica, con/sin VPN, <em>etc.</em>)</li>
+<li>¿Qué sistemas está utilizando? (sistema operativo, nombre de host,
+<em>etc.</em>)</li>
+<li>¿Qué cuenta utilizas?</li>
+<li>¿A qué datos suele acceder?</li>
+<li>¿Con quién más se ha puesto en contacto en relación con este
+incidente y qué le ha dicho?</li>
+</ol></li>
+<li>Contacta al <a href="#TODO-link-to-actual-resource">help desk</a> y
+ser lo más útil posible</li>
+<li>Tenga paciencia: la respuesta puede ser perturbadora, pero está
+protegiendo a su equipo y a la organización.
+<strong>Gracias.</strong></li>
+</ol>
+<h4
+id="referencia-acciones-del-servicio-de-asistencia-técnica-ante-la-sospecha-de-ransomware">Referencia:
+Acciones del servicio de asistencia técnica ante la sospecha de
+ransomware</h4>
+<ol type="1">
+<li>Mantenga la calma y respire profundamente.</li>
+<li>Abra un ticket para documentar el incidente, según el
+procedimiento.</li>
+<li><ol start="2" type="1">
+<li>Pida al usuario que tome fotos de su pantalla usando su smartphone
+mostrando las cosas que ha notado: mensajes de rescate, archivos
+encriptados, mensajes de error del sistema, <em>etc.</em> Si es algo que
+ha notado directamente, haga lo mismo usted.</li>
+</ol></li>
+<li>Toma notas sobre el problema o los problemas utilizando la
+aplicación de notas de voz de tu smartphone o con papel y lápiz. 2. Si
+se trata de un informe de usuario, haz preguntas detalladas, incluyendo
+<ol type="1">
+<li>¿Qué ha notado?</li>
+<li>¿Por qué pensaste que era un problema?</li>
+<li>¿Qué estabas haciendo en el momento en que lo detectaste?</li>
+<li>¿Cuándo se produjo por primera vez, y con qué frecuencia desde
+entonces?</li>
+<li>¿De qué redes se trata? (oficina/casa/tienda, cableada/inalámbrica,
+con/sin VPN, <em>etc.</em>)</li>
+<li><ol start="2" type="1">
+<li>¿De qué sistemas se trata? (sistema operativo, nombre de host,
+<em>etc.</em>)</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>¿De qué datos se trata? (rutas, tipos de archivos, archivos
+compartidos, bases de datos, software, <em>etc.</em>)</li>
+</ol></li>
+<li>¿Qué usuarios y cuentas están implicados? (directorio activo, SaaS,
+SSO, cuentas de servicio, <em>etc.</em>)</li>
+<li>¿A qué datos suelen acceder los usuarios implicados?</li>
+<li>¿Con quién más has contactado acerca de este incidente y qué les has
+dicho?</li>
+</ol></li>
+<li>Haz las preguntas de seguimiento que sean necesarias. <strong>Usted
+es el encargado de responder al incidente, contamos con
+usted.</strong></li>
+<li>Obtenga información de contacto detallada del usuario (domicilio,
+oficina, móvil), si procede</li>
+<li>Registre toda la información en el ticket, incluyendo notas
+manuscritas y de voz</li>
+<li>Poner en cuarentena a los usuarios y sistemas afectados.</li>
+<li>Póngase en contacto con el <a
+href="#TODO-link-to-actual-resource">equipo de seguridad</a> y estar
+preparados para participar en la respuesta según las indicaciones:
+investigación, reparación, comunicación y recuperación</li>
+</ol>
+<h4 id="información-adicional-3">Información adicional</h4>
+<ol type="1">
+<li><a name="ransomware-playbook-ref-1"></a><a
+href="https://www.gdatasoftware.com/blog/2019/06/31666-ransomware-identification-for-the-judicious-analyst">“Ransomware
+Identification for the Judicious Analyst”</a>, Hahn (12 Jun 2019)</li>
+<li><a name="ransomware-playbook-ref-2"></a><a
+href="https://www.nomoreransom.org">No More Ransom!</a> Project,
+including their <a
+href="https://www.nomoreransom.org/crypto-sheriff.php?lang=en">Crypto
+Sheriff</a> service and their <a
+href="https://www.nomoreransom.org/en/ransomware-qa.html">Q&amp;A</a></li>
+<li><a name="ransomware-playbook-ref-3"></a><a
+href="https://id-ransomware.malwarehunterteam.com/">ID Ransomware</a>
+service</li>
+<li><a name="ransomware-playbook-ref-4"></a><a
+href="https://attack.mitre.org">MITRE ATT&amp;CK Matrix</a>, including
+the <a href="https://attack.mitre.org/tactics/TA0001/">Initial
+Access</a> and <a
+href="https://attack.mitre.org/tactics/TA0040/">Impact</a> tactics</li>
+</ol>
+<h2 id="playbook-compromiso-de-la-cadena-de-suministro">Playbook:
+Compromiso de la cadena de suministro</h2>
+<p><strong>Investigar, remediar (contener, erradicar) y comunicar en
+paralelo!.</strong></p>
+<p>Asigne pasos a individuos o equipos para que trabajen
+simultáneamente, cuando sea posible; este libro de jugadas no es
+puramente secuencial. Utilice su mejor criterio.</p>
+<h3 id="investigar-4">Investigar</h3>
+<p><code>TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el compromiso de la cadena de suministro.</code></p>
+<ol type="1">
+<li>TODO</li>
+</ol>
+<h3 id="remediar-5">Remediar</h3>
+<ul>
+<li><strong>Planificar eventos de remediación</strong> en los que estos
+pasos se pongan en marcha juntos (o de forma coordinada), con los
+equipos adecuados listos para responder a cualquier interrupción.</li>
+<li><strong>Considere el momento y las compensaciones</strong> de las
+acciones de remediación: su respuesta tiene consecuencias.</li>
+</ul>
+<h4 id="contención-4">Contención</h4>
+<p><code>TODO: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la cadena de suministro.</code></p>
+<p><code>TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.</code></p>
+<p>*TODO</p>
+<p><code>TODO: Considerar la posibilidad de automatizar las medidas de contención mediante herramientas de orquestación.</code></p>
+<h4 id="erradicar-3">Erradicar</h4>
+<p><code>TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la cadena de suministro.</code></p>
+<p><code>TODO: Especificar las herramientas y los procedimientos para cada paso, a continuación.</code></p>
+<ul>
+<li>TODO</li>
+</ul>
+<h4 id="referencia-recursos-de-remediación-1">Referencia: Recursos de
+remediación</h4>
+<p><code>TODO: Especificar los recursos financieros, de personal y logísticos para llevar a cabo la remediación.</code></p>
+<h3 id="comunicar-5">Comunicar</h3>
+<p><code>TODO: Personalizar los pasos de la comunicación para el compromiso de la cadena de suministro</code></p>
+<p><code>TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o consulte el plan general.</code></p>
+<p>Además de los pasos y orientaciones generales del plan de respuesta a
+incidentes:</p>
+<ol type="1">
+<li>TODO</li>
+</ol>
+<h3 id="recuperación-3">Recuperación</h3>
+<p><code>TODO: Personalizar los pasos de recuperación para el compromiso de la cadena de suministro.</code></p>
+<p><code>TODO: Especifique las herramientas y procedimientos para cada paso, a continuación.</code></p>
+<p>Además de los pasos y orientaciones generales del plan de respuesta a
+incidentes:</p>
+<ol type="1">
+<li>TODO</li>
+</ol>
+<h3 id="recursos-4">Recursos</h3>
+<h4 id="información-adicional-4">Información adicional</h4>
+<ol type="1">
+<li><a name="supply-chain-playbook-ref-1"></a><a
+href="#TODO-url">“Title”</a>, Author Last Name (Date)</li>
+</ol>
+<h1 id="roles">Roles</h1>
+<p>A continuación se presentan las descripciones, los deberes y la
+formación para cada uno de los roles definidos en la respuesta a un
+incidente.</p>
+<p><code>TODO: Personalizar los roles, las descripciones, las funciones y la formación, si es necesario.</code></p>
+<h2 id="estructura-de-los-roles">Estructura de los roles</h2>
+<ul>
+<li>Equipo de Mando
+<ul>
+<li><a href="#rol-incident-commander">Incident Commander</a></li>
+<li><a href="#rol-delegado-del-incident-commander-subdelegado">Incident
+Commander-Adjunto</a></li>
+<li><a href="#rol-escriba">Escriba</a></li>
+</ul></li>
+<li>Equipo de enlace
+<ul>
+<li>Enlace Interno <a href="#rol-enlace">Enlace</a></li>
+<li>Enlace externo</li>
+</ul></li>
+<li>Equipo de Operaciones
+<ul>
+<li><a
+href="#rol-experto-en-la-materia-subject-matter-expert-sme">Expertos en
+la materia</a> (SMEs) para Sistemas</li>
+<li>SMEs para equipos/unidades de negocio</li>
+<li>SMEs para las funciones ejecutivas (<em>p.ej.</em>, Legal, RRHH,
+Finanzas) En el caso de incidentes complejos de mayor envergadura, la
+estructura de funciones puede ajustarse para tener en cuenta la creación
+de subequipos. Para más información, lea cómo gestionamos los <a
+href="/before/complex_incidents.md">Incidentes Complejos</a>.</li>
+</ul></li>
+</ul>
+<p>Esta es una <strong>estructura flexible</strong>: cada rol no será
+ocupado por una persona diferente para cada incidente. Por ejemplo, en
+un incidente pequeño, el adjunto podría actuar como escribiente y enlace
+interno. La estructura es flexible y se adapta al incidente.</p>
+<h2 id="tiempos-de-guerra-vs.-tiempos-de-paz">Tiempos de Guerra
+vs. Tiempos de Paz</h2>
+<p>En las llamadas de respuesta a Incidentes (“tiempos de guerra”), una
+estructura organizativa diferente anula las operaciones normales
+(“tiempos de paz”):</p>
+<ul>
+<li>El Comandante del incidente está al mando. Independientemente de su
+rango en tiempos de paz, ahora es la persona de mayor rango en la
+llamada, superior al director general o CEO.</li>
+<li>Los primeros intervinientes (las personas que actúan como primeros
+intervinientes de un equipo/servicio) son las personas de mayor rango de
+ese servicio.</li>
+<li>Las decisiones serán tomadas por el IC tras considerar la
+información presentada. Una vez tomada la decisión, es definitiva.</li>
+<li>El IC puede tomar decisiones más arriesgadas que las que normalmente
+se considerarían en tiempos de paz.</li>
+<li>El IC puede ir en contra de una decisión consensuada. Si se hace una
+encuesta, y 9/10 personas están de acuerdo pero 1 está en desacuerdo. El
+IC puede elegir la opción del desacuerdo a pesar del voto de la mayoría.
+Aunque no esté de acuerdo, la decisión del IC es definitiva. Durante la
+convocatoria no es el momento de discutir con ellos.</li>
+<li>El IC puede utilizar un lenguaje o comportarse de una manera que
+usted considere grosera. Esto es tiempo de guerra, y necesitan hacer lo
+que sea necesario para resolver la situación, por lo que a veces se
+producen groserías. Esto no es personal, y es algo que debes estar
+preparado para experimentar si nunca has estado en una situación de
+guerra.</li>
+<li>Es posible que el IC te pida que abandones la llamada, o incluso que
+te eche a la fuerza de una llamada. Esto queda a discreción del IC si
+considera que no estás aportando nada útil. De nuevo, esto no es
+personal y debes recordar que los tiempo de guerra son diferentes a los
+tiempo de paz.</li>
+</ul>
+<h2 id="roles-todos-los-participantes">Roles: Todos los
+participantes</h2>
+<h3 id="descripción">Descripción</h3>
+<p>Todos los participantes en la respuesta a un incidente tienen la
+responsabilidad de ayudar a resolver el incidente de acuerdo con el plan
+de respuesta a incidentes, bajo la autoridad del Incident Commander.</p>
+<h3 id="deberes">Deberes</h3>
+<h4 id="exhibir-la-etiqueta-de-la-llamada">Exhibir la etiqueta de la
+llamada</h4>
+<ul>
+<li>Participar tanto en la llamada como en el chat.</li>
+<li>Mantener el ruido de fondo al mínimo.</li>
+<li>Mantener el micrófono silenciado hasta que tenga algo que
+decir.</li>
+<li>Identifícarse cuando entre en la llamada; diga su nombre y su
+función (por ejemplo, “Soy el SME del equipo x”).</li>
+<li>Hablar con claridad.</li>
+<li>Ser directo y objetivo.</li>
+<li>Mantener las conversaciones/debates breves y al grano.</li>
+<li>Comunicar cualquier preocupación al Incident Commander (IC) en la
+llamada.</li>
+<li>Respetar las limitaciones de tiempo dadas por el Incident
+Commander.</li>
+<li>Si te unes a un solo canal (llamada o chat), no participar
+activamente, ya que provoca una comunicación inconexa.</li>
+<li><strong>Utilizar una terminología clara y evitar usar acrónimos o
+abreviaturas. La claridad y la precisión son más importantes que la
+brevedad.</strong></li>
+</ul>
+<h5 id="referencia-procedimiento-común-de-voz">Referencia: Procedimiento
+común de voz</h5>
+<p>El [procedimiento de voz] estándar de la radio
+(https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure)
+<strong>no es obligatorio</strong>, sin embargo, es posible que escuche
+ciertos términos (o que tenga que utilizarlos usted mismo). Las frases
+comunes incluyen:</p>
+<ul>
+<li><strong>Ack/Rog:</strong> “He recibido y entendido”</li>
+<li><strong>Say Again:</strong> “Repita su último mensaje”</li>
+<li><strong>Standby:</strong> “Por favor, espere un momento para la
+siguiente respuesta”</li>
+<li><strong>Wilco:</strong> “Cumpliré”</li>
+</ul>
+<p><strong>No</strong> invente nuevas abreviaturas; favorezca ser
+explícito sobre lo implícito.</p>
+<h4 id="seguir-al-incident-commander">Seguir al Incident Commander</h4>
+<p>El Incident Commander (IC) es el líder del proceso de respuesta al
+incidente.</p>
+<ul>
+<li>Siga las instrucciones del Incident Commander.</li>
+<li>No realice ninguna acción a menos que el Incident Commander se lo
+indique.</li>
+<li>El jefe normalmente sondeará si hay objeciones fuertes antes de
+asignar una acción importante. Plantee sus objeciones si las tiene.</li>
+<li>Una vez que el jefe haya tomado una decisión, sígala (incluso si no
+está de acuerdo).</li>
+<li>Responde a cualquier pregunta que te haga el jefe de forma clara y
+concisa. Responder “no sé” es aceptable. No adivine.</li>
+<li>El jefe puede pedirte que investigues algo y que le contestes en X
+minutos. Esté preparado con una respuesta dentro de ese tiempo. Pedir
+más tiempo es aceptable, pero proporcione al jefe una estimación.</li>
+</ul>
+<h3 id="capacitación">Capacitación</h3>
+<p>Lee y entiende el plan de respuesta a incidentes, incluyendo los
+roles y los libros de jugadas. ## Rol: Incident Commander</p>
+<h3 id="descripcion">Descripcion</h3>
+<p>El Incident Commander(IC) actua como la única fuente de lo que
+realmente está ocurriendo y va a ocurrir durante un incidente grave. El
+IC es el individuo con mayor rango en cualquier llamada de incidente,
+sin importar el rango en el dia a dia. Ellos son los que toman
+decisiones durante un incidente; delegan tareas y prestan atencion a
+expertos en la materia que están tratando para resolver el incidente.
+Las decisiones tomadas por el Incident commander las decisivas.</p>
+<p>Tu trabajo como Incident commander evaluar la situación, proveer un
+guiado claro y coordinado, contratar otros trabajadores para recolectar
+contexto/detalles.<strong>No realizar investigaciones o
+remedios</strong>, delega estos trabajos.</p>
+<h3 id="deberes-1">Deberes</h3>
+<p>Resuelve el incidente lo más rápido y seguro posible usando el plan
+de respuesta de incidentes como plantilla de trabajo: guia al equipo de
+investigacion, remedio, comunicación. Utiliza al adjunto para que te
+ayude, y delegue a relevantes enlaces y expertos a tu discreción.</p>
+<ol type="1">
+<li>Ayuda a prepararos para los incidentes,
+<ul>
+<li>Establecer canales de comunicación para incidentes.</li>
+<li>Redirige a las personas hacia estos canales de comunicación cuando
+acurra algún incidente grave.</li>
+<li>Entrena a miembros del equipo sobre como comunicarte durante
+incidentes y entrena a otros Incident Commanders.</li>
+</ul></li>
+<li>Dirige los incidentes hacia una solución,
+<ul>
+<li>Lleva a todos al mismo canal de comunicación.</li>
+<li>Recolecta información de los miembros del equipo por sus servicios
+de estatus.</li>
+<li>Recolecta propuestas de reparación de acciones, después recomienda
+acciones de reparación para que se lleven a cabo.</li>
+<li>Delega todas la acciones de reparación, el Incident Commander no es
+un resolvedor.</li>
+<li>Es la única fuente de autoridad en el estado del sistema.</li>
+</ul></li>
+<li>Facilita las llamadas y reuniones,
+<ul>
+<li>Gana consenso (Realiza encuestas durante las llamadas)</li>
+<li>Proporciona actualizaciones de estatus</li>
+<li>Reduce el alcance (despedir a los asistentes cuando sea
+posible)</li>
+<li>Spin off sub-equipos</li>
+<li>Transfiere el control cuando sea necesario</li>
+<li>Firmar las llamadas</li>
+<li>Mantener el orden</li>
+<li>Obtén respuestas directas</li>
+<li>Manejar las caídas de ejecutivos como
+<ul>
+<li>Anular al Incident Commander</li>
+<li>Desmotivación</li>
+<li>Petición de información</li>
+<li>Cuestionar la severidad</li>
+</ul></li>
+<li>Manejar respuestas perturbadoras o beligerantes</li>
+</ul></li>
+<li>Post Mortem,
+<ul>
+<li>Crear la plantilla inicial justo después del incidente para que las
+personas puedan escribir sus opiniones mientras están frescas.</li>
+<li>Asignar el post-mortem después de que el evento termine, esto puede
+darse después de terminar la llamada.</li>
+<li>Trabaja con los gerentes o jefes de equipo para organizar acciones
+preventivas.</li>
+</ul></li>
+</ol>
+<p>El Incident Commander utiliza métodos y lenguajes adicionales:</p>
+<ul>
+<li>Siempre anuncie cuando se una a la llamada si es el IC de
+guardia.</li>
+<li><strong>No</strong> permita que las discusiones se salgan de
+control. Mantenga las conversaciones cortas.</li>
+<li>Tenga en cuenta las objeciones de los demás, pero tu decision es la
+definitiva.</li>
+<li>Si alguien está interrumpiendo activamente tu decision,
+expúlsalo.</li>
+<li>Anuncia el final de la llamada.</li>
+<li>Después de un incidente, comuníquese con otros Incident Commander
+sobre cualquier acción que considere necesaria.</li>
+</ul>
+<p><strong>Utilice una terminología clara y evite las siglas o
+abreviaturas. La claridad y la precisión son más importantes que la
+brevedad.</strong></p>
+<h3 id="prácticas">Prácticas</h3>
+<ul>
+<li>Lea el plan de respuesta a incidentes, incluidos todos los roles y
+manuales.</li>
+<li>Participar en un ejercicio de respuesta a incidentes.</li>
+<li>Seguir a un Incident Commander actual sin participar activamente,
+manteniendo sus preguntas hasta el final.</li>
+<li>Tomar la iniciativa de un Incident Commander. Responda a incidentes
+con el IC actual allí para hacerse cargo si es necesario.</li>
+<li><em>OPCIONAL:</em> facilitar las prácticas</li>
+<li><em>OPCIONAL:</em> recurre a <a href="#FIX">Incident Responders as
+Facilitators (and Therapists)</a> y al <a
+href="https://response.pagerduty.com/training/incident_commander/">PagerDuty
+Incident Commander training</a> para mas ideas y discussiones.</li>
+</ul>
+<h4 id="pre-requisitos">pre-requisitos</h4>
+<p>No hay requisitos previos de antigüedad o unidad de negocios para
+convertirse en Incident Commander, es un rol abierto a cualquier persona
+con la capacitación y la capacidad. Antes de que pueda ser un Incident
+Commander, se espera que cumpla con los siguientes criterios:</p>
+<ul>
+<li>Excelentes <strong>habilidades de comunicación</strong> verbal y
+escrita.</li>
+<li><strong>Conocimiento de alto nivel</strong> de la infraestructura y
+las funciones comerciales.</li>
+<li>Excelente pensamiento crítico, juicio y toma de decisiones.</li>
+<li>Flexibilidad y capacidad para <strong>escuchar comentarios de
+expertos</strong>, modificando los planes según sea necesario.</li>
+<li><strong>Participó en al menos dos respuestas a
+incidentes</strong>.</li>
+<li>Capacidad para <strong>tomar el mando</strong> y <strong>disposición
+para expulsar a las personas de una llamada</strong> para eliminar las
+distracciones, incluso si se trata del director ejecutivo.</li>
+</ul>
+<p>¡No se requieren conocimientos técnicos profundos! Los Incident
+Commander no requieren un conocimiento técnico profundo de nuestros
+sistemas. Su trabajo como Incident Commander es coordinar la respuesta,
+no realizar cambios técnicos. No crea que no puede ser un Incident
+Commander solo porque no está en el departamento de ingeniería.</p>
+<h4 id="graduación">Graduación</h4>
+<p>Al finalizar el entrenamiento, agréguese a la lista de Incident
+Commander.</p>
+<h2 id="rol-adjunto-del-incident-commander-adjunto">Rol: adjunto del
+Incident Commander (adjunto)</h2>
+<h3 id="descripción-1">Descripción</h3>
+<p>Un adjunto del Incident Commander (adjunto) es un papel de apoyo
+directo al Incident Commander (IC). El adjunto permite que el IC se
+centre en el problema que tiene entre manos, en lugar de preocuparse por
+documentar los pasos o controlar los tiempos. El adjunto apoya al IC y
+lo mantiene centrado en el incidente. Como adjunto, se espera que asuma
+el mando del IC si éste lo solicita.</p>
+<h3 id="funciones">Funciones</h3>
+<ol type="1">
+<li><ol type="1">
+<li>Plantear al Incident Commander cuestiones que, de otro modo, no se
+abordarían (vigilar los temporizadores que se han puesto en marcha,
+retomar los elementos que se han perdido de una lista, etc.).</li>
+</ol></li>
+<li><ol type="1">
+<li>Ser un Incident Commander “de reserva”, en caso de que el jefe
+principal tenga que hacer la transición a un SME, o tenga que alejarse
+de la función de IC.</li>
+</ol></li>
+<li><ol type="1">
+<li>Gestionar la llamada del incidente y estar preparado para retirar a
+las personas de la llamada si así lo indica el Incident Commander.</li>
+</ol></li>
+<li>Supervisar el estado del incidente y notificar al IC si el nivel de
+gravedad del incidente aumenta.</li>
+<li>Supervise los temporizadores:
+<ul>
+<li>controlar el tiempo que ha durado el incidente</li>
+<li>Notificar al IC cada X minutos para que pueda tomar medidas (por
+ejemplo, “IC, el incidente está ahora en la marca de 10 minutos”).</li>
+</ul></li>
+<li>Supervisar los plazos de las tareas (<em>p.ej.</em>, “IC, avisa de
+que el temporizador de la investigación de [TEAM] se ha agotado”).</li>
+</ol>
+<h3 id="formación">Formación</h3>
+<ul>
+<li>Leer y comprender el plan de respuesta a incidentes, incluyendo los
+roles y los libros de jugadas.</li>
+</ul>
+<h4 id="requisitos-previos">Requisitos previos</h4>
+<ul>
+<li>Estar entrenado como <a href="#role-incident-commander-ic">Incident
+Commander</a>.</li>
+</ul>
+<p>Traducción realizada con la versión gratuita del traductor
+www.DeepL.com/Translator</p>
+<h2 id="rol-escriba">Rol: Escriba</h2>
+<h3 id="descripción-2">Descripción</h3>
+<p>Un escriba documenta la línea de tiempo de un incidente a medida que
+avanza, y se asegura de que todas las decisiones y datos importantes se
+capturen para su posterior revisión. El escriba debe centrarse en el
+archivo del incidente, así como en los elementos de seguimiento para una
+acción posterior.</p>
+<h3 id="funciones-1">Funciones</h3>
+<ol type="1">
+<li>Asegurarse de que la llamada del incidente se está grabando.</li>
+<li><ol start="2" type="1">
+<li>Anotar en el chat y en la línea de tiempo del expediente: los datos,
+eventos y acciones importantes, a medida que se producen.
+Específicamente:</li>
+</ol>
+<ul>
+<li>Acciones clave a medida que se llevan a cabo</li>
+<li>Informes de estado cuando el IC los proporcione</li>
+<li>Cualquier llamada clave durante la llamada o en la revisión
+final</li>
+</ul></li>
+<li>Actualice el chat indicando quién es el IC, quién es el adjunto y
+que usted es el escribiente (si no lo ha hecho ya).</li>
+</ol>
+<p>Escribir es más un arte que una ciencia. El objetivo es mantener un
+registro preciso de los eventos importantes que ocurrieron, Usa tu
+juicio y experiencia. Pero aquí hay algunas cosas generales que
+definitivamente querrás capturar como escribiente.</p>
+<ul>
+<li>El resultado de cualquier decisión de la votación. ### Cualquier
+elemento de seguimiento que se llame “Deberíamos hacer esto..”, “¿Por
+qué no se hizo esto?”, etc.</li>
+</ul>
+<h3 id="formación-1">Formación</h3>
+<p>Lea y comprenda el plan de respuesta a incidentes, incluyendo los
+roles y los libros de jugadas.</p>
+<h4 id="requisitos-previos-1">Requisitos previos</h4>
+<ul>
+<li>Excelentes habilidades de <strong>comunicación verbal y
+escrita</strong>.</li>
+<li>Cualquiera puede actuar como escribiente durante un incidente, y son
+elegidos por el Incident Commander al inicio de la llamada.</li>
+<li>Normalmente, el ayudante actuará como escribiente.</li>
+</ul>
+<h4 id="proceso-de-formación">Proceso de formación</h4>
+<ul>
+<li>Lea el plan de respuesta a incidentes, incluyendo todos los roles y
+libros de jugadas.</li>
+<li><em>OPCIONAL:</em> Paralizar las acciones de un escriba durante un
+incidente o ejercicio, y buscar la opinión del escriba real y del
+Incident Commander.</li>
+</ul>
+<h2 id="rol-experto-en-la-materia-subject-matter-expert-sme">Rol:
+Experto en la materia {Subject Matter Expert (SME)}</h2>
+<h3 id="descripción-3">Descripción</h3>
+<p>Un experto en la materia (SME) es un experto en el dominio o
+responsable designado de un equipo, componente o servicio (un “área”).
+Está ahí para apoyar al Incident Commander en la identificación de la
+causa del incidente, sugiriendo y evaluando las acciones de
+investigación, remediación y comunicación, y realizando el seguimiento
+de las mismas según se le encomiende.</p>
+<h3 id="funciones-2">Funciones</h3>
+<ol type="1">
+<li>Diagnosticar problemas comunes dentro de su área de
+experiencia.</li>
+<li>Solucionar rápidamente los problemas detectados durante un
+incidente.</li>
+<li>Comunicación concisa:
+<ul>
+<li>Estado: ¿Cuál es el estado actual de su área? ¿Está buen estado o
+no?</li>
+<li>Acciones: ¿Qué medidas hay que tomar si su zona no se encuentra en
+un buen estado?</li>
+<li>Necesidades: ¿Qué apoyo necesita para realizar una acción?</li>
+</ul></li>
+<li>Participar en las fases de investigación, remediación y/o
+comunicación de la respuesta.</li>
+<li>Anunciar todas las sugerencias al comandante del incidente, es su
+decisión cómo proceder, no siga ninguna acción a menos que se le
+indique.</li>
+</ol>
+<p>Si está de guardia para cualquier equipo, puede ser llamado para un
+incidente y se espera que responda como experto en la materia (SME) para
+su equipo, componente o servicio. Cualquiera que se considere un
+“experto en la materia” puede actuar como SME para un incidente. Por lo
+general, el principal de guardia del equipo actuará como SME para ese
+equipo.</p>
+<h4 id="prepárese-para-el-periodo-de-guardia">Prepárese para el periodo
+de guardia</h4>
+<ol type="1">
+<li>Esté preparado, habiéndose familiarizado ya con nuestras políticas y
+procedimientos de respuesta a incidentes.</li>
+<li>Asegúrese de que ha configurado sus métodos de alerta de acuerdo con
+nuestro procedimiento de guardia.</li>
+<li>Compruebe que puede unirse a la llamada de incidentes. Es posible
+que tenga que instalar un plugin para el navegador.</li>
+<li>Tenga en cuenta su próxima vez de guardia y organice los cambios en
+función de los viajes, las vacaciones, las citas, etc.</li>
+<li>Si usted es el Incident Commander, asegúrese de no estar de guardia
+con su equipo al mismo tiempo que está de guardia como Incident
+Commander.</li>
+</ol>
+<h4 id="durante-el-periodo-de-guardia">Durante el periodo de
+guardia</h4>
+<ol type="1">
+<li>Tenga su ordenador portátil e Internet con usted en todo momento
+durante su período de guardia (oficina, casa, un MiFi, un teléfono con
+un plan de conexión, etc).</li>
+<li>Si tiene citas importantes, debe conseguir que otra persona de su
+equipo cubra esa franja horaria con antelación.</li>
+<li>Cuando recibas una alerta de incidente, se espera que te unas a la
+llamada de incidente y chatees lo antes posible (en cuestión de
+minutos).</li>
+<li>El Incident Commander le hará preguntas o le dará acciones. Responde
+a las preguntas de forma concisa y sigue todas las acciones que se te
+den (incluso si no estás de acuerdo con ellas).</li>
+<li>Si no estás seguro de algo, haz venir a otros miembros de tu equipo
+que puedan ayudarte. <strong>Nunca dudes en escalar</strong>, si es
+necesario.<br />
+</li>
+<li>No culpes. Este proceso de respuesta a incidentes no tiene ninguna
+culpa: culpar es contraproducente y distrae del problema en cuestión. La
+revisión posterior a la acción identificará los puntos en los que todos
+podemos mejorar.</li>
+</ol>
+<h3 id="formación-2">Formación</h3>
+<ul>
+<li>Lea y comprenda el plan de respuesta a incidentes, incluidas las
+funciones y las guías de actuación.</li>
+</ul>
+<h2 id="rol-enlace">Rol: Enlace</h2>
+<h3 id="descripción-4">Descripción</h3>
+<p>Los enlaces interactuan con otros equipos o partes interesadas fuera
+del equipo de respuesta a incidentes. A menudo incluyen:</p>
+<ul>
+<li>Enlace externo: responsable de interactuar con clientes, ya sea
+directamente o por vía pública.</li>
+<li>Enlace interno: responsable de interactuar con las partes
+interesadas internas. Tanto si se trata de notificar un incidente al
+equipo interno como al movilizar respuestas adicionales dentro de la
+organización.</li>
+</ul>
+<h3 id="deberes-2">Deberes</h3>
+<h4 id="enlace-con-el-exterior-o-con-el-cliente">Enlace con el exterior
+o con el cliente</h4>
+<ol type="1">
+<li>Subir cualquier mensaje de cara al público con respecto al incidente
+(Twitter, etc).</li>
+<li>Notificar al IC de cualquier cliente o medios de comunicación que
+informen de los efectos del incidente.</li>
+<li>Proporcionar a los clientes el mensaje externo del post-mortem una
+vez que se haya completado.</li>
+<li>Contactar o interactuar con las partes interesadas externas, como
+proveedores, socios, fuerzas de seguridad, <em>etc.</em></li>
+<li><strong>No</strong> sentirse responsable de la creación de cada
+mensaje: trabajar con el Incident Commander y otras partes
+interesadas.</li>
+<li>Según proceda, mantener a los clientes informados durante un
+incidente.</li>
+<li>Actuar como voz de nuestros clientes ante el Incident Commander, ya
+que esto es útil para la toma de decisiones del IC.</li>
+<li>Obtener la aprobación del mensaje después de haber elaborado el
+mensaje público: copiar el mensaje en el chat y esperar la confirmación
+verbal/escrita del IC antes de continuar.</li>
+</ol>
+<h5 id="pistas-para-mensajes-públicos">Pistas para mensajes
+públicos</h5>
+<ul>
+<li>Preparar de antemano un mensaje por defecto que pueda utilizarse
+para la actualización inicial si se desconoce el alcance del
+problema.</li>
+<li>Sé honesto. No mientas o supongas.</li>
+<li>Describa nuestros progresos en la resolución del incidente.
+<ul>
+<li><em>“Somos conscientes de un incidente…”</em></li>
+<li><em>“Estamos investigando los retrasos en las
+notificaciones…”</em></li>
+<li><em>“Se ha aplicado una corrección y se está desplegando
+actualmente…”</em></li>
+<li><em>“El problema ha sido resuelto…”</em></li>
+</ul></li>
+<li>Explique claramente cómo afecta el incidente a los clientes. Esta es
+la principal información que les interesa a los clientes.</li>
+<li>Proporcionar soluciones que los clientes puedan utilizar hasta que
+se resuelva la incidencia.</li>
+<li>No calcule los tiempos de resolución.</li>
+<li>Proporcionar el nivel de detalle adecuado.</li>
+</ul>
+<h4 id="enlace-interno">Enlace interno</h4>
+<ol type="1">
+<li>Página de SMEs u otro personal de guardia según las instrucciones
+del Incident Commander.</li>
+<li>Notificar o movilizar a otros equipos de la organización (por
+ejemplo, Finanzas, Legal, Marketing), según las instrucciones del
+Incident Commander.</li>
+<li>Seguir y anticiparse a los SMEs en la convocatoria.</li>
+<li>Interactuar con las partes interesadas y proporcionar
+actualizaciones de estado cuando sea necesario.</li>
+<li>Interactuar con las partes interesadas internas para responder a sus
+preguntas, para mantener la llamada principal libre de
+distracciones.</li>
+<li>Proporcionar actualizaciones periódicas de la situación al equipo
+ejecutivo, ofreciendo un resumen ejecutivo de la situación actual.</li>
+</ol>
+<h3 id="formación-3">Formación</h3>
+<p>Leer y comprender el plan de respuesta a incidentes, incluyendo los
+roles y las guías.</p>
+<h4 id="prerequisitos">Prerequisitos</h4>
+<ul>
+<li>Excelentes <strong>habilidades de comunicación</strong> verbal y
+escrita.</li>
+<li><em>OPCIONAL:</em> Formación en atención al cliente.</li>
+<li><em>OPCIONAL:</em> Comunicación corporativa o formación en
+marketing.</li>
+</ul>
+<h1
+id="realizar-una-revisión-posterior-a-la-acción-conduct-an-after-action-review-aar">Realizar
+una revisión posterior a la acción (Conduct an After Action Review,
+AAR)</h1>
+<ol type="1">
+<li>Programe una reunión de revisión posterior a la acción (AAR) dentro
+de 5 días laborales e invite a los asistentes que figuran en
+ir.powerpuff.org/aar/asistentes. Incluya siempre a los siguientes:
+<ul>
+<li>El Incident Commander.</li>
+<li>Los propietarios de los servicios implicados en el incidente.</li>
+<li>Ingeniero(s)/responsable(s) clave(s) implicado(s) en el
+incidente.</li>
+</ul></li>
+<li>Designe a un propietario del AAR que investigue el incidente antes
+de la reunión para prepararlo, estudiando el proceso del incidente en
+sí, incluyendo la revisión de notas e informes.</li>
+</ol>
+<h2 id="realización-de-la-reunión-aar">Realización de la reunión
+AAR</h2>
+<p>Documente las respuestas a las siguientes preguntas clave:</p>
+<ol type="1">
+<li><strong>¿Qué ocurrió?</strong> Cree una línea de tiempo, apoyada con
+datos u otros artefactos. <strong>Evitar las culpas. Busca los
+hechos.</strong></li>
+<li><strong>¿Qué se suponía que iba a ocurrir?</strong>
+<ul>
+<li>Detallar las desviaciones del proceso, el procedimiento o las
+mejores prácticas, incluidas las evaluaciones de los SME.</li>
+<li>Identifique las formas en que el incidente podría haberse detectado
+antes o haberse respondido con mayor eficacia.</li>
+</ul></li>
+<li><strong>¿Cuáles fueron las causas fundamentales?</strong> Encuentre
+la raíz de lo que ocurrió y de lo que debería haber ocurrido.</li>
+<li><strong>¿Cómo podemos mejorar?</strong> Capture los elementos de
+acción con asignados y fechas de vencimiento. Considerar:
+<ul>
+<li>Detener: ¿Qué debemos dejar de hacer?</li>
+<li>Empezar: ¿Qué deberíamos empezar a hacer?</li>
+<li>Continuar: ¿Qué debemos seguir haciendo?</li>
+</ul></li>
+</ol>
+<h2 id="comunicar-el-estado-y-los-resultados-del-aar">Comunicar el
+estado y los resultados del AAR</h2>
+<p>El propietario del informe, en coordinación con el enlace interno,
+comunicará el estado del informe (véase más abajo).</p>
+<h3 id="descripciones-de-estado">Descripciones de estado</h3>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 94%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Estado</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Borrador</strong></td>
+<td>La investigación de la AAR sigue en curso</td>
+</tr>
+<tr class="even">
+<td><strong>En revisión</strong></td>
+<td>La investigación AAR se ha completado, y está lista para ser
+revisada durante la reunión AAR.</td>
+</tr>
+<tr class="odd">
+<td><strong>Revisado</strong></td>
+<td>La reunión de AAR ha terminado y el contenido ha sido revisado y
+acordado. <br/>Si hay “Mensajes externos” adicionales, el equipo de
+comunicación tomará medidas para prepararlos.</td>
+</tr>
+<tr class="even">
+<td><strong>Cerrado</strong></td>
+<td>No es necesario realizar más acciones en el AAR (los problemas
+pendientes se rastrean en los tickets).<br>Si no hay “Mensajes
+Externos”, pase directamente a esto una vez que la reunión haya
+terminado.<br/>Si hay “Mensajes Externos” adicionales, el equipo de
+comunicaciones actualizará el AAR Cerrado una vez enviado.</td>
+</tr>
+</tbody>
+</table>
+<p>Comunicar internamente los resultados del AAR y finalizar la
+documentación del AAR.</p>
+<h1 id="acerca-de">Acerca de</h1>
+<p>Esta plantilla ha sido creada por el equipo de <a
+href="https://www.counteractive.net">Counteractive Security</a>, para
+ayudar a todas las organizaciones a comenzar de forma concisa, directa,
+especifica, flexible y gratuita un plan de respuesta de incidentes. crea
+un plan <a
+href="https://www.counteractive.net/posts/an-ir-plan-you-will-use/">que
+utilizaras</a> para responder de manera eficiente, minimizando los
+costes e impactos, para volver a trabajar lo mas rapido posible.</p>
+<h2 id="licencia">Licencia</h2>
+<p>Esta plantilla esta proporcionado bajo la licencia de apache, version
+2.0. puedes ver el codigo fuente en
+https://github.com/counteractive.</p>
+<h2 id="instrucciones">Instrucciones</h2>
+<p>Personaliza esta plantilla para tu organizacion. Las instrucciones
+estan disponibles en el <a
+href="https://github.com/counteractive">README</a> del projecto. Para
+asistencia profesional con respuestas de incidentes, o con
+customizacion, implementacion, o testeo de tu plan, porfavor contacta
+con nosotros por <a href="mailto:support@counteractive.net">email</a> o
+<a href="tel:+18889255765">telefono</a>.</p>
+<h2 id="referencias-y-material-adicional">Referencias y material
+adicional</h2>
+<ul>
+<li><a
+href="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf">NIST
+Computer Security Incident Handling Guide</a> (NIST)</li>
+<li><a
+href="https://github.com/certsocietegenerale/IRM/tree/master/EN">CERT
+Societe Generale Incident Response Methodologies</a></li>
+<li><a href="https://www.nist.gov/cyberframework">NIST Cybersecurity
+Framework</a></li>
+<li><a
+href="https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901">Incident
+Handler’s Handbook</a> (SANS)</li>
+<li><a
+href="https://technet.microsoft.com/en-us/library/cc700825.aspx">Responding
+to IT Security Incidents</a> (Microsoft)</li>
+<li><a
+href="http://resources.sei.cmu.edu/library/asset-view.cfm?assetid=7153">Defining
+Incident Management Processes for CSIRTs: A Work in Progress</a>
+(CMU)</li>
+<li><a
+href="https://www.first.org/conference/2008/papers/killcrece-georgia-slides.pdf">Creating
+and Managing Computer Security Incident Handling Teams (CSIRTS)</a>
+(CERT)</li>
+<li><a href="http://shop.oreilly.com/product/0636920036159.do">Incident
+Management for Operations</a> (Rob Schnepp, Ron Vidal, Chris
+Hawley)</li>
+<li><a href="http://a.co/cUkFzMh"><em>Incident Response &amp; Computer
+Forensics, Third Edition</em></a> (Jason Luttgens. Matthew Pepe. Kevin
+Mandia)</li>
+<li><a
+href="http://shop.oreilly.com/product/9780596001308.do"><em>Incident
+Response</em></a> (Kenneth R. van Wyk, Richard Forno)</li>
+<li><a href="http://atulgawande.com/book/the-checklist-manifesto/">The
+Checklist Manifesto</a> (Atul Gawande)</li>
+<li><a
+href="https://www.amazon.com/Field-Guide-Understanding-Human-Error/dp/0754648265">The
+Field Guide to Understanding Human Error</a> (Sidney Dekker)</li>
+<li><a
+href="https://www.amazon.com/Normal-Accidents-Living-High-Risk-Technologies/dp/0691004129">Normal
+Accidents: Living with High-Risk Technologies</a> (Charles Perrow)</li>
+<li><a href="https://landing.google.com/sre/book.html">Site Reliability
+Engineering</a> (Google)</li>
+<li><a
+href="http://extfiles.etsy.com/DebriefingFacilitationGuide.pdf">Debriefing
+Facilitation Guide</a> (Etsy)</li>
+<li><a
+href="https://www.heavybit.com/library/video/every-minute-counts-coordinating-herokus-incident-response/">Every
+Minute Counts: Leading Heroku’s Incident Response</a> (Blake
+Gentry)</li>
+<li><a href="https://www.youtube.com/watch?v=TqaFT-0cY7U">Three
+Analytical Traps in Accident Investigation</a> (Dr. Johan
+Bergström)</li>
+<li><a
+href="https://www.fema.gov/national-incident-management-system">US
+National Incident Management System (NIMS)</a> (FEMA)</li>
+<li><a href="https://www.amazon.com/gp/product/1284038408">Informed’s
+NIMS Incident Command System Field Guide</a> (Michael J. Ward)</li>
+<li><a
+href="http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011">Advanced
+PostMortem Fu and Human Error 101 (Velocity 2011)</a></li>
+<li><a
+href="http://fractio.nl/2015/10/30/blame-language-sharing/">Blame.
+Language. Sharing.</a></li>
+</ul>
+</body>
+</html>
