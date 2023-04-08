@@ -21,7 +21,6 @@ Fase inicial en la que debe pereparar las medidas, para asegurarse que pueden re
 
 <<<<<<< Updated upstream
 =======
-<!--`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el incidente de escalada de privilegio.`-->
 >>>>>>> Stashed changes
 
 En esta fase debe esforzarse por detectar y validar los incidentes rápidamente, porque las infecciones pueden propagarse en cuestión de minutos. La detección temprana puede ayudarle a minimizar el número de sistemas infectados. Lo que reducirá la magnitud del esfuerzo de recuperación y la cantidad de daños que sufra como resultado del incidente.
@@ -71,9 +70,7 @@ aceptable para la organización.
 <<<<<<< Updated upstream
 
 =======
-<!--`TODO: Personalizar los pasos de contención, tácticos y estratégicos, en la escalada de privilegio.`
 
-`TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.`-->
 >>>>>>> Stashed changes
 
 1. Identifique los sistemas que han sido accedidos, mediante la escalada de privilegios o que estén en riesgo, de los ya analizados anteriormente.
@@ -105,7 +102,6 @@ aceptable para la organización.
 
 <<<<<<< Updated upstream
 =======
-<!--`TODO: Considerar la automatización de las medidas de contención utilizando herramientas de orquestación.`-->
 >>>>>>> Stashed changes
 
 * Deberá consultar con el proveedor/es de seguridad. Si dispone, alguna implantación de alguna herramienta de automatización, que permita realizar la contención en mejor forma y tiempo.
@@ -116,9 +112,7 @@ aceptable para la organización.
 <<<<<<< Updated upstream
 
 =======
-<!--`TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la identidad y acceso.`
 
-`TODO: Especificar herramientas y procedimientos para cada paso, a continuación.`-->
 >>>>>>> Stashed changes
 
 En esta fase el equipo de operaciones, deberá realizar el correspondiente triaje y junto al Escriba, la confirmación del informe del Incidente.
@@ -137,7 +131,6 @@ Y, realizando las siguientes acciones, entre los distintos roles del equipo:
 
 <<<<<<< Updated upstream
 =======
-<!--`TODO: Especificar los recursos financieros, de personal y logísticos para llevar a cabo la remediación.`-->
 >>>>>>> Stashed changes
 
 Para llevar a cabo todo el proceso descrito anteriormente. Se utilizarán los siguiente recursos tanto financieros, personal y logísticos:
@@ -153,10 +146,7 @@ Para llevar a cabo todo el proceso descrito anteriormente. Se utilizarán los si
 
 
 =======
-<!--
-`TODO: Personalizar los pasos de comunicación para el compromiso de la identidad y el acceso.`
 
-`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`-->
 >>>>>>> Stashed changes
 
 1. Durante la llamada del incidente. Debe realizar comunicaciones, entre los integrantes del equipo de operaciones:
@@ -179,10 +169,7 @@ Para llevar a cabo todo el proceso descrito anteriormente. Se utilizarán los si
 
 
 =======
-<!--
-`TODO: Personalizar los pasos de recuperación para el compromiso de la identidad y acceso.`
 
-`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`-->
 >>>>>>> Stashed changes
 
 Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
