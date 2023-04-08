@@ -513,15 +513,16 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 1. Poner en marcha un plan de continuidad de negocio/recuperación de desastres: Por ejemplo, considerar la migración a ubicaciones operativas alternativas, sitios de conmutación por error, sistemas de copia de seguridad.
 2. Integrar las acciones de seguridad con los esfuerzos de recuperación de la organización.
 
-# Playbook
+# Playbooks
 
 Los siguientes playbooks capturan los pasos comunes de [investigación](#investigate), [remediación](#remediate) y [comunicación](#communicate) para determinados tipos de incidentes.
-# Playbook: Ataque DDoS
+
+## Playbook: Ataque DDoS
 
 ### Identificar, informar, configurar y comunicar!
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es meramente secuencial. Utilice su mejor criterio.
 
-## Identificar el ataque
+### Identificar el ataque
 
 El primer paso es determinar si realmente se está produciendo un ataque DDoS. A menudo, los sistemas afectados pueden parecer lentos o inaccesibles, pero esto también puede ser causado por problemas de red o por el tráfico legítimo excesivo. Para determinar si realmente se trata de un ataque DDoS, debemos realizar las siguientes acciones:
 
@@ -531,37 +532,37 @@ El primer paso es determinar si realmente se está produciendo un ataque DDoS. A
 
 Si se confirma que estamos siendo objeto de un ataque DDoS, debemos pasar al siguiente paso.
 
-## Informar al proveedor de servicios de internet (ISP)
+### Informar al proveedor de servicios de internet (ISP)
 
 Es importante informar al proveedor de servicios de internet (ISP) para que puedan ayudarnos a mitigar el ataque. Muchos ISP tienen medidas de seguridad en su lugar para detectar y mitigar los ataques DDoS. 
 
 Al informarles, podemos obtener su asistencia para proteger nuestra red y reducir el impacto del ataque. Es importante tener disponible el número de teléfono o dirección de correo electrónico de contacto del proveedor de servicios de internet.
 
-## Configurar el cortafuegos para bloquear el tráfico no deseado
+### Configurar el cortafuegos para bloquear el tráfico no deseado
 
 Para reducir el impacto del ataque, podemos configurar el cortafuegos para bloquear el tráfico no deseado. Podemos hacer esto configurando las reglas del firewall para bloquear todo el tráfico excepto el tráfico de los puertos necesarios para el funcionamiento normal del sistema. 
 
 También podemos bloquear direcciones IP sospechosas o todo el tráfico entrante de un país en particular si detectamos que la mayor parte del tráfico malintencionado proviene de ese país.
 
-## Redirigir el tráfico legítimo a servidores alternativos
+### Redirigir el tráfico legítimo a servidores alternativos
 
 Otra estrategia para reducir el impacto del ataque es redirigir el tráfico legítimo a servidores alternativos. Podemos hacer esto mediante la configuración de DNS o mediante la redirección de tráfico a través de un balanceador de carga. 
 
 Si bien esto puede no detener completamente el ataque DDoS, puede reducir su impacto al asegurarnos de que el tráfico legítimo pueda llegar a nuestros servidores.
 
-## Monitorear el tráfico y ajustar las medidas de seguridad
+### Monitorear el tráfico y ajustar las medidas de seguridad
 
 Es importante monitorear continuamente el tráfico de red para asegurarnos de que las medidas de seguridad que hemos implementado estén funcionando correctamente. 
 
 Si detectamos nuevas fuentes de tráfico malicioso, debemos ajustar nuestras medidas de seguridad para bloquearlos.
 
-## Mantener informados a los usuarios
+### Mantener informados a los usuarios
 
 Durante un ataque DDoS, es importante mantener informados a los usuarios sobre el estado de nuestros sistemas y las medidas que estamos tomando para mitigar el ataque. 
 
 Podemos hacer esto mediante la publicación de actualizaciones en nuestro sitio web o a través de las redes sociales.
 
-## Lista de verificación
+### Lista de verificación
 
 Para finalizar, se tendrían que verificar que la siguiente lista de acciones se han realizado:
 
@@ -838,7 +839,8 @@ El compromiso de identidad y acceso es una de las amenazas más comunes en el mu
 
 #### Información adicional
     1. Compromiso de identidad y acceso, Sánchez (28/03/2023)
-# playbook-ingenieria-social
+
+## Playbook-ingenieria-social
 
 Es fundamental que los empleados de la organización puedan identificar y saber actuar ante una alerta de una posible amenaza de ingeniería social.
 
@@ -891,7 +893,6 @@ Para realizar dicho informe de manera adecuada podremos seguir los siguientes co
 
 - Registrar todos los detalles del incidente: incluyendo la fecha y hora, las personas involucradas, la descripción del incidente, las medidas tomadas y los resultados.
 - Documentar las lecciones aprendidas: esto te puede ayudar a mejorar las políticas y procedimientos de seguridad de la información de su organización.
-
 ## Playbook: Phishing
 
 **Investigar, remediar (contener, erradicar), y comunicar en paralelo!**
@@ -1196,72 +1197,6 @@ Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los
 1. <a name="ransomware-playbook-ref-2"></a>[No More Ransom!](https://www.nomoreransom.org) Project, including their [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php?lang=en) service and their [Q&A](https://www.nomoreransom.org/en/ransomware-qa.html)
 1. <a name="ransomware-playbook-ref-3"></a>[ID Ransomware](https://id-ransomware.malwarehunterteam.com/) service
 1. <a name="ransomware-playbook-ref-4"></a>[MITRE ATT&CK Matrix](https://attack.mitre.org), including the [Initial Access](https://attack.mitre.org/tactics/TA0001/) and [Impact](https://attack.mitre.org/tactics/TA0040/) tactics
-
-## Playbook: Compromiso de la cadena de suministro
-
-**Investigar, remediar (contener, erradicar) y comunicar en paralelo!.**
-
-Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
-
-### Investigar
-
-`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el compromiso de la cadena de suministro.`
-
-1. TODO
-
-### Remediar
-
-* **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
-* **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
-
-#### Contención
-
-`TODO: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la cadena de suministro.`
-
-`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`
-
-*TODO
-
-`TODO: Considerar la posibilidad de automatizar las medidas de contención mediante herramientas de orquestación.`
-
-#### Erradicar
-
-`TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la cadena de suministro.`
-
-`TODO: Especificar las herramientas y los procedimientos para cada paso, a continuación.`
-
-* TODO
-
-#### Referencia: Recursos de remediación
-
-`TODO: Especificar los recursos financieros, de personal y logísticos para llevar a cabo la remediación.`
-
-### Comunicar
-
-`TODO: Personalizar los pasos de la comunicación para el compromiso de la cadena de suministro`
-
-`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o consulte el plan general.`
-
-Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
-
-1. TODO
-
-### Recuperación
-
-`TODO: Personalizar los pasos de recuperación para el compromiso de la cadena de suministro.`
-
-`TODO: Especifique las herramientas y procedimientos para cada paso, a continuación.`
-
-Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
-
-1. TODO
-
-### Recursos
-
-#### Información adicional
-
-1. <a name="supply-chain-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
-
 # Roles
 
 A continuación se presentan las descripciones, los deberes y la formación para cada uno de los roles definidos en la respuesta a un incidente.

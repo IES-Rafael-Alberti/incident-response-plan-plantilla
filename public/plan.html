@@ -343,7 +343,11 @@ con el servicio de asistencia de respuesta externa</a></li>
 id="toc-compartir-inteligencia">Compartir Inteligencia</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#recuperación" id="toc-recuperación">Recuperación</a>
+<li><a href="#recuperación" id="toc-recuperación">Recuperación</a></li>
+<li><a href="#playbooks" id="toc-playbooks">Playbooks</a>
+<ul>
+<li><a href="#playbook-ataque-ddos"
+id="toc-playbook-ataque-ddos">Playbook: Ataque DDoS</a>
 <ul>
 <li><a href="#identificar-informar-configurar-y-comunicar"
 id="toc-identificar-informar-configurar-y-comunicar">Identificar,
@@ -368,6 +372,7 @@ id="toc-mantener-informados-a-los-usuarios">Mantener informados a los
 usuarios</a></li>
 <li><a href="#lista-de-verificación"
 id="toc-lista-de-verificación">Lista de verificación</a></li>
+</ul></li>
 <li><a href="#playbook-desaparición-de-sitios-web"
 id="toc-playbook-desaparición-de-sitios-web">Playbook: Desaparición de
 sitios web</a>
@@ -389,10 +394,8 @@ de identidad y acceso</a>
 id="toc-recuperación-1">Recuperación</a></li>
 <li><a href="#recursos-1" id="toc-recursos-1">Recursos</a></li>
 </ul></li>
-</ul></li>
 <li><a href="#playbook-ingenieria-social"
-id="toc-playbook-ingenieria-social">playbook-ingenieria-social</a>
-<ul>
+id="toc-playbook-ingenieria-social">Playbook-ingenieria-social</a></li>
 <li><a href="#identificación."
 id="toc-identificación.">Identificación.</a></li>
 <li><a href="#investigación."
@@ -417,20 +420,6 @@ id="toc-investigación">Investigación</a></li>
 <li><a href="#comunicar-4" id="toc-comunicar-4">Comunicar</a></li>
 <li><a href="#recursos-3" id="toc-recursos-3">Recursos</a></li>
 </ul></li>
-<li><a href="#playbook-compromiso-de-la-cadena-de-suministro"
-id="toc-playbook-compromiso-de-la-cadena-de-suministro">Playbook:
-Compromiso de la cadena de suministro</a>
-<ul>
-<li><a href="#investigar-4" id="toc-investigar-4">Investigar</a></li>
-<li><a href="#remediar-5" id="toc-remediar-5">Remediar</a></li>
-<li><a href="#comunicar-5" id="toc-comunicar-5">Comunicar</a></li>
-<li><a href="#recuperación-3"
-id="toc-recuperación-3">Recuperación</a></li>
-<li><a href="#recursos-4" id="toc-recursos-4">Recursos</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#roles" id="toc-roles">Roles</a>
-<ul>
 <li><a href="#estructura-de-los-roles"
 id="toc-estructura-de-los-roles">Estructura de los roles</a></li>
 <li><a href="#tiempos-de-guerra-vs.-tiempos-de-paz"
@@ -1533,19 +1522,21 @@ desastres: Por ejemplo, considerar la migración a ubicaciones operativas
 alternativas, sitios de conmutación por error, sistemas de copia de
 seguridad.</li>
 <li>Integrar las acciones de seguridad con los esfuerzos de recuperación
-de la organización. # Playbook</li>
+de la organización.</li>
 </ol>
+<h1 id="playbooks">Playbooks</h1>
 <p>Los siguientes playbooks capturan los pasos comunes de <a
 href="#investigate">investigación</a>, <a
 href="#remediate">remediación</a> y <a
 href="#communicate">comunicación</a> para determinados tipos de
-incidentes. # Playbook: Ataque DDoS</p>
+incidentes.</p>
+<h2 id="playbook-ataque-ddos">Playbook: Ataque DDoS</h2>
 <h3 id="identificar-informar-configurar-y-comunicar">Identificar,
 informar, configurar y comunicar!</h3>
 <p>Asigna pasos a individuos o equipos para que trabajen
 simultáneamente, cuando sea posible; este playbook no es meramente
 secuencial. Utilice su mejor criterio.</p>
-<h2 id="identificar-el-ataque">Identificar el ataque</h2>
+<h3 id="identificar-el-ataque">Identificar el ataque</h3>
 <p>El primer paso es determinar si realmente se está produciendo un
 ataque DDoS. A menudo, los sistemas afectados pueden parecer lentos o
 inaccesibles, pero esto también puede ser causado por problemas de red o
@@ -1561,8 +1552,8 @@ capturar y analizar el tráfico de red.</li>
 </ul>
 <p>Si se confirma que estamos siendo objeto de un ataque DDoS, debemos
 pasar al siguiente paso.</p>
-<h2 id="informar-al-proveedor-de-servicios-de-internet-isp">Informar al
-proveedor de servicios de internet (ISP)</h2>
+<h3 id="informar-al-proveedor-de-servicios-de-internet-isp">Informar al
+proveedor de servicios de internet (ISP)</h3>
 <p>Es importante informar al proveedor de servicios de internet (ISP)
 para que puedan ayudarnos a mitigar el ataque. Muchos ISP tienen medidas
 de seguridad en su lugar para detectar y mitigar los ataques DDoS.</p>
@@ -1570,9 +1561,9 @@ de seguridad en su lugar para detectar y mitigar los ataques DDoS.</p>
 red y reducir el impacto del ataque. Es importante tener disponible el
 número de teléfono o dirección de correo electrónico de contacto del
 proveedor de servicios de internet.</p>
-<h2
+<h3
 id="configurar-el-cortafuegos-para-bloquear-el-tráfico-no-deseado">Configurar
-el cortafuegos para bloquear el tráfico no deseado</h2>
+el cortafuegos para bloquear el tráfico no deseado</h3>
 <p>Para reducir el impacto del ataque, podemos configurar el cortafuegos
 para bloquear el tráfico no deseado. Podemos hacer esto configurando las
 reglas del firewall para bloquear todo el tráfico excepto el tráfico de
@@ -1580,9 +1571,9 @@ los puertos necesarios para el funcionamiento normal del sistema.</p>
 <p>También podemos bloquear direcciones IP sospechosas o todo el tráfico
 entrante de un país en particular si detectamos que la mayor parte del
 tráfico malintencionado proviene de ese país.</p>
-<h2
+<h3
 id="redirigir-el-tráfico-legítimo-a-servidores-alternativos">Redirigir
-el tráfico legítimo a servidores alternativos</h2>
+el tráfico legítimo a servidores alternativos</h3>
 <p>Otra estrategia para reducir el impacto del ataque es redirigir el
 tráfico legítimo a servidores alternativos. Podemos hacer esto mediante
 la configuración de DNS o mediante la redirección de tráfico a través de
@@ -1590,22 +1581,22 @@ un balanceador de carga.</p>
 <p>Si bien esto puede no detener completamente el ataque DDoS, puede
 reducir su impacto al asegurarnos de que el tráfico legítimo pueda
 llegar a nuestros servidores.</p>
-<h2
+<h3
 id="monitorear-el-tráfico-y-ajustar-las-medidas-de-seguridad">Monitorear
-el tráfico y ajustar las medidas de seguridad</h2>
+el tráfico y ajustar las medidas de seguridad</h3>
 <p>Es importante monitorear continuamente el tráfico de red para
 asegurarnos de que las medidas de seguridad que hemos implementado estén
 funcionando correctamente.</p>
 <p>Si detectamos nuevas fuentes de tráfico malicioso, debemos ajustar
 nuestras medidas de seguridad para bloquearlos.</p>
-<h2 id="mantener-informados-a-los-usuarios">Mantener informados a los
-usuarios</h2>
+<h3 id="mantener-informados-a-los-usuarios">Mantener informados a los
+usuarios</h3>
 <p>Durante un ataque DDoS, es importante mantener informados a los
 usuarios sobre el estado de nuestros sistemas y las medidas que estamos
 tomando para mitigar el ataque.</p>
 <p>Podemos hacer esto mediante la publicación de actualizaciones en
 nuestro sitio web o a través de las redes sociales.</p>
-<h2 id="lista-de-verificación">Lista de verificación</h2>
+<h3 id="lista-de-verificación">Lista de verificación</h3>
 <p>Para finalizar, se tendrían que verificar que la siguiente lista de
 acciones se han realizado:</p>
 <ul>
@@ -2117,7 +2108,7 @@ los sistemas y recursos restaurados son seguros para su uso.</p></li>
 <h3 id="recursos-1">Recursos</h3>
 <h4 id="información-adicional-1">Información adicional</h4>
 <pre><code>1. Compromiso de identidad y acceso, Sánchez (28/03/2023)</code></pre>
-<h1 id="playbook-ingenieria-social">playbook-ingenieria-social</h1>
+<h2 id="playbook-ingenieria-social">Playbook-ingenieria-social</h2>
 <p>Es fundamental que los empleados de la organización puedan
 identificar y saber actuar ante una alerta de una posible amenaza de
 ingeniería social.</p>
@@ -2212,7 +2203,7 @@ hora, las personas involucradas, la descripción del incidente, las
 medidas tomadas y los resultados.</li>
 <li>Documentar las lecciones aprendidas: esto te puede ayudar a mejorar
 las políticas y procedimientos de seguridad de la información de su
-organización.## Playbook: Phishing</li>
+organización. ## Playbook: Phishing</li>
 </ul>
 <p><strong>Investigar, remediar (contener, erradicar), y comunicar en
 paralelo!</strong></p>
@@ -2859,65 +2850,9 @@ service</li>
 href="https://attack.mitre.org">MITRE ATT&amp;CK Matrix</a>, including
 the <a href="https://attack.mitre.org/tactics/TA0001/">Initial
 Access</a> and <a
-href="https://attack.mitre.org/tactics/TA0040/">Impact</a> tactics</li>
+href="https://attack.mitre.org/tactics/TA0040/">Impact</a> tactics #
+Roles</li>
 </ol>
-<h2 id="playbook-compromiso-de-la-cadena-de-suministro">Playbook:
-Compromiso de la cadena de suministro</h2>
-<p><strong>Investigar, remediar (contener, erradicar) y comunicar en
-paralelo!.</strong></p>
-<p>Asigne pasos a individuos o equipos para que trabajen
-simultáneamente, cuando sea posible; este libro de jugadas no es
-puramente secuencial. Utilice su mejor criterio.</p>
-<h3 id="investigar-4">Investigar</h3>
-<p><code>TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el compromiso de la cadena de suministro.</code></p>
-<ol type="1">
-<li>TODO</li>
-</ol>
-<h3 id="remediar-5">Remediar</h3>
-<ul>
-<li><strong>Planificar eventos de remediación</strong> en los que estos
-pasos se pongan en marcha juntos (o de forma coordinada), con los
-equipos adecuados listos para responder a cualquier interrupción.</li>
-<li><strong>Considere el momento y las compensaciones</strong> de las
-acciones de remediación: su respuesta tiene consecuencias.</li>
-</ul>
-<h4 id="contención-4">Contención</h4>
-<p><code>TODO: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la cadena de suministro.</code></p>
-<p><code>TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.</code></p>
-<p>*TODO</p>
-<p><code>TODO: Considerar la posibilidad de automatizar las medidas de contención mediante herramientas de orquestación.</code></p>
-<h4 id="erradicar-3">Erradicar</h4>
-<p><code>TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la cadena de suministro.</code></p>
-<p><code>TODO: Especificar las herramientas y los procedimientos para cada paso, a continuación.</code></p>
-<ul>
-<li>TODO</li>
-</ul>
-<h4 id="referencia-recursos-de-remediación-1">Referencia: Recursos de
-remediación</h4>
-<p><code>TODO: Especificar los recursos financieros, de personal y logísticos para llevar a cabo la remediación.</code></p>
-<h3 id="comunicar-5">Comunicar</h3>
-<p><code>TODO: Personalizar los pasos de la comunicación para el compromiso de la cadena de suministro</code></p>
-<p><code>TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o consulte el plan general.</code></p>
-<p>Además de los pasos y orientaciones generales del plan de respuesta a
-incidentes:</p>
-<ol type="1">
-<li>TODO</li>
-</ol>
-<h3 id="recuperación-3">Recuperación</h3>
-<p><code>TODO: Personalizar los pasos de recuperación para el compromiso de la cadena de suministro.</code></p>
-<p><code>TODO: Especifique las herramientas y procedimientos para cada paso, a continuación.</code></p>
-<p>Además de los pasos y orientaciones generales del plan de respuesta a
-incidentes:</p>
-<ol type="1">
-<li>TODO</li>
-</ol>
-<h3 id="recursos-4">Recursos</h3>
-<h4 id="información-adicional-4">Información adicional</h4>
-<ol type="1">
-<li><a name="supply-chain-playbook-ref-1"></a><a
-href="#TODO-url">“Title”</a>, Author Last Name (Date)</li>
-</ol>
-<h1 id="roles">Roles</h1>
 <p>A continuación se presentan las descripciones, los deberes y la
 formación para cada uno de los roles definidos en la respuesta a un
 incidente.</p>
