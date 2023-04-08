@@ -129,7 +129,7 @@ Contactar con los proveedores de seguros
   - ¿Cuándo ocurrió por primera vez, y con qué frecuencia desde entonces?
   - ¿A qué datos suele acceder?
   - ¿Con quién más se ha puesto en contacto en relación con este incidente y qué le ha dicho?
-- Ponte en contacto con el [servicio de asistencia](#TODO-enlace-al-recurso) y sé lo más servicial posible.
+- Ponte en contacto con el [servicio de asistencia](https://github.com/orgs/IES-Rafael-Alberti/teams/22-23-ciberseguridad-grupo-1) y sé lo más servicial posible.
 - Ten paciencia: deja que el personal informático lo controle, ¡puedes estar protegiendo a otros de un daño!  **Gracias.**
 
 #### Referencia: Acciones del Help Desk ante un presunto ataque de DDos
@@ -143,7 +143,7 @@ Contactar con los proveedores de seguros
   -  ¿Con quién más se ha puesto en contacto en relación con este incidente y qué le ha dicho?
 - Haga las preguntas de seguimiento que sean necesarias.  **Usted es una persona que responde al incidente, contamos con usted.**
 - Registre toda la información en el ticket, incluyendo notas manuscritas y de voz.
--  Póngase en contacto con el [equipo de seguridad](#TODO-link-to-actual-resource) y prepárese para participar en la respuesta según las indicaciones: investigación, reparación, comunicación y recuperación.
+-  Póngase en contacto con el [equipo de seguridad](https://github.com/orgs/IES-Rafael-Alberti/teams/22-23-ciberseguridad-grupo-1) y prepárese para participar en la respuesta según las indicaciones: investigación, reparación, comunicación y recuperación.
 
 ### 9. Información adicional
 
