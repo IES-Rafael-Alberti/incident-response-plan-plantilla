@@ -1,4 +1,4 @@
-# Playbook contra el Cryptojacking según MITRE&React
+# Playbook Cryptojacking
 
 ## Objetivo
 
