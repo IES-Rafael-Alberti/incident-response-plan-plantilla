@@ -1,13 +1,8 @@
 ## Playbook: Escalada de Privilegio
-
 **Investigar, remediar (contener, erradicar) y comunicar en paralelo!**
-
 ### Preparación
-
 Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utilice su mejor criterio.
-
 Fase inicial en la que debe pereparar las medidas, para asegurarse que pueden responder de manera efectiva:
-
 * Determinar y definir los Roles del equipo de Operaciones
     * Incident Commander (IC): Gerente del riesgo.
     * Incident Commander-Adjunto: Gerente de Amenaza.
@@ -16,15 +11,13 @@ Fase inicial en la que debe pereparar las medidas, para asegurarse que pueden re
 * Revise y mantenga la línea de tiempo.
 * Entrevístese con los usuarios, gerentes y seguridad física. Y tanto con los SME's internos o externos, si los hubiera y procede.
 * El Escriba debe ir documentando durante la resolución del incidente y servirá de apoyo.
-
 ### Investigar 
 
 <<<<<<< Updated upstream
 =======
+<!--`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el incidente de escalada de privilegio.`-->
 >>>>>>> Stashed changes
-
 En esta fase debe esforzarse por detectar y validar los incidentes rápidamente, porque las infecciones pueden propagarse en cuestión de minutos. La detección temprana puede ayudarle a minimizar el número de sistemas infectados. Lo que reducirá la magnitud del esfuerzo de recuperación y la cantidad de daños que sufra como resultado del incidente.
-
 1. Defina los indicadores de amenazas. Realice las siguientes preguntas y tomé notas si fuera necesario con papel y boli o utilice una herramienta de ticketing:
     * ¿Se han producido accesos a los sistemas o servidor web fuera del horario laboral?
     * ¿Se ha accedido a los sistemas o servidor web a través de puertos o protocolos que no suelen ser los conocidos?
@@ -35,7 +28,6 @@ En esta fase debe esforzarse por detectar y validar los incidentes rápidamente,
     * ¿Ha habido modificaciones inexplicables del sistema?
     * ¿Se han producido alertas desde los sistemas IDS/IPS y Firewalls del servicio externalizado?
     * ¿Se han producido notificaciones desde organizaciones del exterior, de socios comerciales o terceros?
-
 2. Categorice el incidente, del grupo "escalada de privilegios".
 3. Solicite peticiones de captura paquetes, de la red. Donde se hayan detectado o se infiere de los indicadores de amenazas.
 4. Realice escaneos de contenido.
@@ -54,25 +46,21 @@ En esta fase debe esforzarse por detectar y validar los incidentes rápidamente,
 9. Realice la recolección de evidencia, haga uso de herramientas como Velociraptor. Ganará en eficiencia y trazabilidad en las recolecciones de artefactos, de los diferentes sistemas y Enpoints(EDR).
 10. Capture datos de los distintos activos, ayudándose de herramientas de captura de tráfico de red, como WireShark. Como la captura de otros tipos de datos.
 11. Analízalos, con herramientas forenses, como la indicada anteriormente. Si tiene el servicio externalizado, que le informe de los avances el/los SME's.
-
 ### Remediar
-
 * **Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
 * **Considere el tiempo y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
-
 La contención, tiene dos componentes: detener la propagación del ataque y la prevención de que se produzcan más daños en los sistemas y servicios.
 Es importante, que un organización decida que métodos de contención va a emplear en una fase temprana de la respuesta.
 Las organizaciones deben de tener estrategias y procedimientos para tomar decisiones relacionadas con la contención. Reflejando, el nivel de riesgo
 aceptable para la organización.
-
 #### Contención
-
 <<<<<<< Updated upstream
 
 =======
+<!--`TODO: Personalizar los pasos de contención, tácticos y estratégicos, en la escalada de privilegio.`
 
+`TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.`-->
 >>>>>>> Stashed changes
-
 1. Identifique los sistemas que han sido accedidos, mediante la escalada de privilegios o que estén en riesgo, de los ya analizados anteriormente.
 2. Identifique los sistemas que estén fuera de línea debido a que fueron comprometidos.
 3. Identifique el/los sistema(s) bloqueados debido a intentos repetidos de inicio de sesión.
@@ -83,7 +71,6 @@ aceptable para la organización.
    * Dispositivos móviles (_Mismos Departamentos, que dispositivos de trabajo_):
    * Máquinas Virtuales, si el proveedor las esta utilizando para ofrecer sus servicios con la organización: 
    * Directorio Activo (_Del proveedor, con el que se tiene contratado el servicio_):
-
 5. Identifique las cuentas de usuario comprometidas o modificadas.
 6. Identifique los servicios TI que han sufrido impacto. 
 7. Identifique las herramientas no autorizadas utilizadas para acceder a sistemas o cuentas de usuario. Debera:
@@ -102,53 +89,49 @@ aceptable para la organización.
 
 <<<<<<< Updated upstream
 =======
+<!--`TODO: Considerar la automatización de las medidas de contención utilizando herramientas de orquestación.`-->
 >>>>>>> Stashed changes
-
 * Deberá consultar con el proveedor/es de seguridad. Si dispone, alguna implantación de alguna herramienta de automatización, que permita realizar la contención en mejor forma y tiempo.
 * También para seguir perfeccionando, el plan de respuesta a incidentes. Del tipo de respuesta a escalada de privilegios.
-
 #### Erradicar
-
 <<<<<<< Updated upstream
 
 =======
+<!--`TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la identidad y acceso.`
 
+`TODO: Especificar herramientas y procedimientos para cada paso, a continuación.`-->
 >>>>>>> Stashed changes
-
 En esta fase el equipo de operaciones, deberá realizar el correspondiente triaje y junto al Escriba, la confirmación del informe del Incidente.
 Por lo que debe realizar peticiones de parcheo de los sistemas.
 Y, realizando las siguientes acciones, entre los distintos roles del equipo:
-
 1. Debe erradicar los compromisos:
 * Añadir/Cambiar/Eliminar Sitio/Red/Sistema que haya sido afectado.
 * Realizar datos forenses.
 * Determinar el nivel de acceso identificado en los sistemas/aplicaciones o servicios.
-
 2. Deberá desplegar sensores para la recolección de captura de tráfico para un análisis aún mayor en la red.
    1. Determinar cualquier movimiento lateral entre los sistemas dentro de la red.
-
 #### Referencia: Recursos de Remediación
 
 <<<<<<< Updated upstream
 =======
+<!--`TODO: Especificar los recursos financieros, de personal y logísticos para llevar a cabo la remediación.`-->
 >>>>>>> Stashed changes
-
 Para llevar a cabo todo el proceso descrito anteriormente. Se utilizarán los siguiente recursos tanto financieros, personal y logísticos:
-
 * Dispone del equipo de operaciones, contratado de manera externalizada. Que ofrece servicio de respuesta ante incidentes.
 * Dispone a más alto nivel, ayuda técnica o _Help Desk_ de los diferentes servicios, utilizados dentro de la organización, por el departamento TI.
 * Dispone de un equipo legal, con un buen nivel de implementación, para remediar cuando se conozca el alcance real del incidente. Para tomar actuaciones en materia legal, (_RGPD_), de proveedores o clientes afectados.
 * Dispone de equipo de mantenimiento, por si hubiera que trasladar algún equipo de trabajo, o otros.
 * Dispone de servicios de protección y monitorización, contratados de manera externalizada.
-
 ### Comunicar
 <<<<<<< Updated upstream
 
 
 =======
+<!--
+`TODO: Personalizar los pasos de comunicación para el compromiso de la identidad y el acceso.`
 
+`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`-->
 >>>>>>> Stashed changes
-
 1. Durante la llamada del incidente. Debe realizar comunicaciones, entre los integrantes del equipo de operaciones:
 2. En el incidente, el IC será quien esté al mando y gestione a los demás del equipo. Se deben realizar alguno de los tipos de comunicación que se dictan, a continuación:
    1. Llamadas de conferencia, entre el IC y en ocasiones junto al IC-Adjunto y SME's. Para poner en contexto e ir informando de manera a alto nivel. A la ejecutiva de la organización.
@@ -163,19 +146,19 @@ Para llevar a cabo todo el proceso descrito anteriormente. Se utilizarán los si
       1. [Aplicación de la ley local](#TODO-link-to-actual-resource)
       2. [Aplicación de la ley local a nivel estatal o regional](#TODO-link-to-actual-resource)
       3. [Fuerzas de seguridad europeas o nacionales](#TODO-link-to-actual-resource)
-
 ### Recuperación
 <<<<<<< Updated upstream
 
 
 =======
+<!--
+`TODO: Personalizar los pasos de recuperación para el compromiso de la identidad y acceso.`
 
+`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`-->
 >>>>>>> Stashed changes
-
 Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
 Y de las medidas de remediación y salvaguardas que se tuvieran a disposición. El equipo de respuesta a incidentes, junto al departamento TI de la organización.
 Y con asesoramiento del o los SME's contratados. Debe realizar las siguientes funciones:
-
 1. Debe realizar la recuperación de los sistemas. La gerencia de gestión, amenaza y vulnerabilidades, junto a lo documentado por el Escriba deben ponerse en consenso, en una reunión de control.
 * Restaurar los sistemas o servicio que fueran afectados. Por escalada de privilegios.
 * Actualizar los sistemas IDS/IPS y sus reglas.
@@ -186,15 +169,12 @@ Y con asesoramiento del o los SME's contratados. Debe realizar las siguientes fu
 * Eliminar vulnerabilidades y actualizar los Routers y puntos de acceso.
 * Para los puntos anteriores debe utilizar las herramientas proporcionadas y utilizadas por el proveedor(es) de seguridad.
   * AlienVault USM
-
 ### Acciones Post-Incidente Best Practise & Lessons Learned
-
 En está última fase, a parte de que deba reunirse con todo el equipo de respuesta a incidentes. Y que se haya generado y dado un informe ejecutivo e informe técnico. A la gerencia de la organización.
 Es muy importante realizar también esta fase junto al personal con cargo y el equipo de operaciones.
 Vía conferencia o reunión en persona; recomendable. Ya que el manejo de malware puede ser muy costoso.
 Es particularmente importante que las organizaciones lleven a cabo una sólida evaluación de las lecciones aprendidas tras
 los principales incidentes; en este caso escalada de privilegio para evitar incidentes similares en el futuro.
-
 * Debe proceder en la reunión(es), siguiendo estos pasos, el Escriba deberá ir documentando o tomando notas de lo que se hablen o acuerden en estas reuniones, bajo supervisión del IC y asesoramiento del o los SME's:
   * Revisión del incidente. ¿Ha habido información personal electrónica comprometida (_ePHI_)?
   * ¿Información sensible gubernamental comprometida, clientes, proveedores?
@@ -209,13 +189,11 @@ los principales incidentes; en este caso escalada de privilegio para evitar inci
        * Cambios de procesos implementados.
        * Configuraciones aplicadas.
      * Actualización a la respueta del flujo de trabajo en la organización.
-
 **Debe y son importante, realizar pruebas, para aegurar el correcto funcionamiento del plan de respuesta. Yendo ligado, y poniendo a prueba, la respuesta de continuidad del negocio.
 Actualizando y mejorando el plan en un proceso circular de mejora continua. Proporcionando inteligencia tanto a la organización como para terceros.
 Y capacitando a los encargados de ponerlo en marcha, concienciar y difundir el plan.**
    
 ### Recursos
-
 #### Información adicional
 1. <a name="elevation-privilege-playbook-ref-1"></a>[LOLBAS Project](https://github.com/LOLBAS-Project/LOLBAS), @ConsciousHacker (2018)
 2. <a name="elevation-privilege-playbook-ref-2"></a>[Técnicas LOLBins más utilizadas por los ciberdelincuentes](https://www.kaspersky.es/blog/most-used-lolbins/26092/), Kaspersky daily (30/09/2021)
