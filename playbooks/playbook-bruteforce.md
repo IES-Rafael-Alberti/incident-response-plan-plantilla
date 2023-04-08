@@ -6,11 +6,12 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ## 0. Preataque
 
-**Antes de recibir un ataque** es importante formar y preparar a los trabajadores y usuarios de los sistemas. De este modo, se mitigará notablemente el impacto de cualquier ataque.
-    - **Saber acceder a los logs del sistema o manipilar el visor de eventos**.
-    - **Obtener la habilidad de saber bloquear los puertos** de los servicios que están siendo atacados.
-    - **Aprender a reportar la detección de patrones sospechosos** para una toma de decisiones más pronta frente a los ataques.
-    - **Conocer la manera de bloquear cuentas de usuario sospechosas**.
+**Antes de recibir un ataque** es importante formar y preparar a los trabajadores y usuarios de los sistemas. De este modo, se mitigará notablemente el impacto de cualquier ataque:
+
+- **Saber acceder a los logs del sistema o manipilar el visor de eventos**.
+- **Obtener la habilidad de saber bloquear los puertos** de los servicios que están siendo atacados.
+- **Aprender a reportar la detección de patrones sospechosos** para una toma de decisiones más pronta frente a los ataques.
+- **Conocer la manera de bloquear cuentas de usuario sospechosas**.
     
 ## 1. Investigar
 
