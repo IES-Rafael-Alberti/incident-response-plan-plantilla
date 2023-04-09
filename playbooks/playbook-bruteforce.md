@@ -1,10 +1,10 @@
-# Playbook: Ataque de Fuerza Bruta
+## Playbook: Ataque de Fuerza Bruta
 
-## Investigar, remediar (contener, erradicar), y comunicar en paralelo!
+**Investigar, remediar (contener, erradicar), y comunicar en paralelo!**
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es meramente secuencial. Utilice su mejor criterio.
 
-## 0. Preataque
+### 0. Preataque
 
 **Antes de recibir un ataque** es importante formar y preparar a los trabajadores y usuarios de los sistemas. De este modo, se mitigará notablemente el impacto de cualquier ataque:
 
@@ -12,8 +12,8 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 - **Obtener la habilidad de saber bloquear los puertos** de los servicios que están siendo atacados.
 - **Aprender a reportar la detección de patrones sospechosos** para una toma de decisiones más pronta frente a los ataques.
 - **Conocer la manera de bloquear cuentas de usuario sospechosas**.
-    
-## 1. Investigar
+  
+### 1. Investigar
 
 1. **Detectar el ataque:** generalmente se notificará que se está produciendo un posible ataque de fuerza bruta, ya sea por parte de un sistema de detección de intrusiones o de un usuario que ha notado múltiples intentos de inicio de sesión fallidos.
     - Determinar el **número total de intentos de inicio de sesión** que han ocurrido.
@@ -36,14 +36,14 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
     - Evaluar el impacto potencial en el negocio.
     - Comprobar la integridad de la información sensible del sistema o de las aplicaciones afectadas.
 
-## 2. Remediar
+### 2. Remediar
 
 - **Establecer prioridades:** Identificar los sistemas y servicios afectados que requieren atención inmediata y priorizar la respuesta en consecuencia.
 - **Reemplazar credenciales de acceso afectadas:** Identificar todas las credenciales de acceso comprometidas y reemplazarlas. Fortalecer las políticas de contraseñas para prevenir futuros ataques.
 - **Implementar medidas de seguridad adicionales:** Implementar medidas de seguridad adicionales para prevenir futuros ataques, por ejemplo, los sistemas SIEM, IDS e IPS; así como la implementación de autenticación multifactor y la segmentación de red.
 - **Planificar eventos de remediación** en los que se coordinen las acciones necesarias, con los equipos adecuados listos para responder a cualquier interrupción.
 
-## 3. Contención
+### 3. Contención
 
 - Implementar medidas de seguridad adicionales para prevenir la propagación del ataque.
 - Identificar y aislar los sistemas afectados para prevenir que el ataque se propague a otros sistemas en la red.
@@ -51,38 +51,38 @@ Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 - Implementar medidas de seguridad adicionales, tales como firewalls y sistemas de detección de intrusiones, para prevenir futuras intrusiones y ataques similares.
 - Bloquear, en caso de que lo hubiere, cualquier cuenta sospechosa o inicio de sesión exitoso con la IP de origen del atacante.
 
-## 4. Erradicar
+### 4. Erradicar
 
 - Instalación y puesta en marcha de sistemas SIEM, IPS e IDS.
 - Evitar que root pueda inicar sesión desde SSH.
 - Limitar el número de inicios de sesión en una IP específic
 
-## 5. Referencia: Recursos de remediación
+### 5. Referencia: Recursos de remediación
 
 - Proporcionar **información sobre herramientas y tecnologías de seguridad** que pueden ayudar en la prevención de futuros ataques.
 - **Proporcionar información sobre recursos adicionales** que podrían ayudar en la prevención de futuros incidentes, como capacitación en seguridad, software de seguridad y servicios de consultoría.
 - **Comunicar de manera efectiva con los interesados y partes afectadas**, incluyendo a los clientes y socios proporcionando detalles precisos del incidente, las acciones tomadas y cómo se está trabajando para prevenir incidentes similares en el futuro.
 
-## 6. Comunicar
+### 6. Comunicar
 
 - Proporcionar informes detallados sobre las acciones realizadas y los resultados obtenidos en la respuesta al incidente.
 - Notificar a los equipos de seguridad y a la alta dirección sobre el incidente y su impacto en los sistemas afectados y en la organización en general.
 - Proporcionar actualizaciones regulares sobre la respuesta al incidente y el progreso hacia la resolución del mismo.
 
-## 7. Recuperación
+### 7. Recuperación
 
 - Verificar que los sistemas estén operativos y funcionando correctamente.
 - Realizar pruebas adicionales para asegurarse de que los sistemas no hayan sido comprometidos de ninguna otra manera.
 - Identificar y remediar cualquier posible punto débil que pueda haber contribuido al incidente.
 - Revisar y mejorar los planes de respuesta a incidentes para estar mejor preparados en el futuro.
 
-## 8. Recursos
+### 8. Recursos
 
 - Proporcionar un listado de servicios de [asistencia, contactos de emergencia y proveedores de servicios de seguridad](#TODO-enlace-al-recurso) que puedan ayudar en la respuesta al incidente.
 - Proporcionar un listado de herramientas y tecnologías de seguridad que pueden ser útiles.
 - Proporcionar recursos adicionales, como sitios web de información de seguridad y foros de discusión.
 
-## 9. Información adicional
+### 9. Información adicional
 
 - [Acerca de los ataques de fuerza bruta](https://protecciondatos-lopd.com/empresas/ataques-fuerza-bruta/)
     - Al final de la página puede ser de ayuda la observación de los ejemplos de ataques de fuerza bruta reales que se llevaron a cabo con éxito.
