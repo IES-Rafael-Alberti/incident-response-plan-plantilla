@@ -10,28 +10,43 @@ Este plan de respuesta a incidentes está basado en el plan conciso, directivo, 
 Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en {{TEST_DATE}}.
 
 
-# Evaluar
+### Evaluar
 
-1. **Mantenga la calma y la profesionalidad.**
-2. Reúna la información pertinente, _por ejemplo_, alarmas, eventos, datos, suposiciones, intuiciones (**observar**).
-3. Considerar las categorías de impacto, a continuación (**orientar**), y determinar si hay un posible incidente (**decidir**):
-4. Iniciar una respuesta si hay un incidente (**actuar**).  En caso de duda, inicie una respuesta. El responsable de gestión de incidentes y el equipo de respuesta pueden ajustarse tras la investigación y la revisión.
+1. Mantenga la calma y la profesionalidad.
+2. Reúna la información pertinente, por ejemplo, alarmas, eventos, datos, suposiciones, intuiciones (observar).
+3. Considerar las categorías de impacto, a continuación (orientar), y determinar si hay un posible incidente (decidir):
+    * **Categoría 1: Bajo impacto**
+        * El incidente afecta solo a una persona o un grupo limitado de personas.
+        * No hay impacto en la operación del negocio.
+        * No se requiere notificación externa.
+    * **Categoría 2: Impacto medio**
+        * El incidente afecta a un grupo más amplio de personas.
+        * Hay un impacto limitado en la operación del negocio.
+        * Se puede requerir notificación externa.
+    * **Categoría 3: Alto impacto**
+        * El incidente afecta a una gran cantidad de personas.
+        * Hay un impacto significativo en la operación del negocio.
+        * Se requiere notificación externa.
+4. Inicie una respuesta si hay un incidente (actuar). En caso de duda, inicie una respuesta. El responsable de gestión de incidentes y el equipo de respuesta pueden ajustarse tras la investigación y la revisión.
+
 
 ## Evaluar el impacto funcional
 
-¿Cuál es el impacto directo o probable en su trabajo? (_por ejemplo_, operaciones comerciales, empleados, clientes, usuarios)
+Para evaluar el impacto funcional de un incidente, se recomienda incluir los siguientes elementos en este apartado:
 
-* Degradación o fracaso del trabajo/negocio: **incidente!**
-* Ninguno: evalúe el impacto de la información.
+1. Identificar los sistemas, aplicaciones o servicios afectados por el incidente y establecer su importancia en el contexto del negocio.
+2. Evaluar el impacto del incidente en la continuidad del negocio, en términos de operaciones comerciales, empleados, clientes y usuarios.
+3. Estimar el alcance del incidente en términos de tiempo y recursos necesarios para su resolución.
+4. Definir los criterios para medir la recuperación, la capacidad de recuperación y la mitigación del impacto.
+
 
 ## Evaluar el impacto de la información
 
-¿Cuál es el impacto directo o probable sobre sus datos/información, en particular los sensibles? (_por ejemplo_, información personal, datos de propiedad, financieros o sanitarios)
 
-* Información a la que se ha accedido, cogido, cambiado o borrado: **incidente!**
-* Ninguno: gestión a través de canales no relacionados con incidentes (por ejemplo, un ticket de soporte).
-
-**Cada miembro del equipo está facultado para comenzar este proceso.** Si ves algo, dilo.
+1. Identificar los tipos de datos e información que podrían estar afectados por el incidente.
+2. Evaluar el nivel de confidencialidad, integridad y disponibilidad de los datos e información afectados.
+3. Identificar las posibles consecuencias legales, financieras y reputacionales para la organización y los clientes afectados.
+4. Definir los procedimientos para la notificación y comunicación a las partes interesadas, incluyendo a los clientes, proveedores y autoridades competentes.
 
 
 
@@ -96,6 +111,7 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 5. **Mantenga la llamada y el chat activos durante todo el incidente para una comunicación basada en eventos.**
 6. Programe actualizaciones **cada {{UPDATE_FREQUENCY}}** sobre la comunicación activa.
 
+
 #### Referencia: Estructura de la llamada de respuesta inicial
 
 * Incident Commander (IC): Mi nombre es [NOMBRE], soy el Incident Commander.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como esccriba. ¿Quién está en la llamada?
@@ -122,6 +138,8 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 * Comunicar cualquier preocupación al Incident Commander (CI) en la llamada.
 * Respetar las limitaciones de tiempo impuestas por el Incident Commander.
 * **Utilizar una terminología clara y evitar acrónimos o abreviaturas. La claridad y la precisión son más importantes que la brevedad.
+* Si necesita abandonar la llamada antes de que finalice, notifíquelo al Incident Commander o al equipo antes de desconectarse.
+* Si necesita hablar con alguien específicamente durante la llamada, use su nombre para dirigirse a ellos.
 
 ### Realizar la actualización de la respuesta
 
@@ -155,6 +173,12 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 * Supervisar el alcance de la respuesta para asegurarse de que no excede el ámbito de control del Incident Commander.
 * Si un incidente es lo suficientemente complejo y hay suficientes intervinientes, considere la posibilidad de crear subequipos.
+* Establezca límites claros para el alcance del incidente para evitar que la respuesta se vuelva demasiado amplia o se desvíe del objetivo principal.
+* Supervise constantemente el progreso de la respuesta y asegúrese de que todos los equipos y miembros estén trabajando juntos de manera efectiva.
+* Si es necesario, divida el incidente en subequipos para abordar áreas específicas de manera más eficiente.
+* Asegúrese de que los subequipos se comuniquen y coordinen entre sí, y que informen regularmente al Incident Commander principal sobre su progreso.
+* Reevalúe el alcance de la respuesta según sea necesario y ajuste el plan de respuesta en consecuencia.
+* Si el incidente parece estar fuera del alcance del equipo o de la organización, considere la posibilidad de solicitar ayuda externa, como un proveedor de servicios de seguridad o una agencia gubernamental especializada.
 
 ### Crear Sub-Equipos
 
