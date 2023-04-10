@@ -9,7 +9,7 @@ El objetivo de este playbook es proporcionar una serie de pasos para poder prepa
 	- Identifique los puntos que no puedan ser reemplazados o que una interrupción corta pueda ser gravemente perjudicial para la empresa.
 2. Desarrollo e implementación de planes de contingencia
 	- Desarrolle e implemente planes que ideen servicios o activos alternativos o redundantes para todos los puntos posibles de la cadena
-3.Actualización de software:
+3. Actualización de software:
 	- Mantener actualizado el software con actualizaciones compatibles con la infraestructura de la empresa.
 
 ### Fase de Detección
