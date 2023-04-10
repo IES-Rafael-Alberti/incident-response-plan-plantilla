@@ -1,11 +1,20 @@
 
 ## Playbook: Compromiso de la cadena de suministro
 
-**Investigar, remediar (contener, erradicar) y comunicar en paralelo!.**
+## Objetivo
+---
+El objetivo de este playbook es proporcionar una serie de pasos para poder prepararse, detectar, responder y recuperarse de un compromiso de la cadena de suministro
+### Fase de Preparación
+---
+1. Identificación de puntos críticos en la cadena:
+	- Identifique los puntos que no puedan ser remplazados o que una interrupcion corta pueda ser grabevente perdidujicial.
+2. Desarrollo e implementacion de planes de contingencia
+	- Desarolle e implemente planes que ideen servicos o activos alternativos o redundantes para todos los puntos posibles de la cadena
+3.Actualización de software:
+	- Mantener actualizado el software con actualizaciones compatibles con la infractuctura de la empresa.
 
-Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
-
-### Investigar
+### Fase de Detección
+---
 1. **Determinar** qué punto de la cadena está comprometido
 	* Esto es realmente importante, ya que dependiendo qué punto de la cadena de suministro esté comprometida, la ruta de actuación cambia
 	1. **Comprobar** la página web
@@ -59,12 +68,8 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
     * Número de puntos en la cadena afectados( La página web, los equipos de oficina, servidores, etc..)
     * El impacto preliminar en el negocio
     * Si afectan puntos críticos de la cadena
-### Remediar
-
-* **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
-* **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
-
-#### Contención
+#### Fase de Respuesta
+---
 * **En situaciones de compromiso de la cadena de suministro, lo esencial es la investigación de la causa del compromiso y erradicación del problema para que la cadena vuelva a la normalidad o esté operativa. Ya que en algunos supuestos como un corte de suministro eléctrico, no existen medidas de resiliencia debido a la relación coste-rendimiento de ellas, por lo que es imposible contenerla o no es imposible de contener debido al tiempo que tomaría en realizarse una medida.**
 * **Si el compromiso de la cadena está basado en ataques externos, como ransomware, phishing, defacement, etc, en estos casos seguir el playbook correspondiente a tal ataque o situación.**
 
@@ -101,8 +106,8 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 	* Utilización de Software alternativo instalado
 
 
-#### Erradicar y Recuperar
-
+#### Fase de Recuperación 
+---
 1. Página Web
 	1. Seguridad:
 	* Investigar y buscar errores o vulnerabilidades en la web
@@ -139,7 +144,7 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 	* Desactivación de red secundaria en caso de recuperación de la principal, o contratación de un proveedor diferente en caso de un problema prolongado(3 días hábiles)
 	4. Licencia de Software
 	* Actualización o compra de licencias necesarias
-### Comunicar
+### Lecciones Aprendidas
 
 1. Documentar el incidente desde el inicio, intentando responder a las siguientes preguntas
 	* ¿Causa del incidente?
@@ -147,8 +152,8 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 	* ¿Es un punto crítico de la cadena o no?
 	* ¿Impacto objetivo en la empresa?
 	* ¿Tiempo estimado de recuperación?
-2. Activar plan de continuidad de la actividad/recuperación de desastres
-3. Informe sobre lecciones aprendidas del incidente y medias a tomar 
+2. Informe sobre lecciones aprendidas del incidente 
+3. Idee medias a tomar en situaciones similares
 
 ### Recursos
 
