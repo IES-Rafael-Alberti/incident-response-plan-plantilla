@@ -11,26 +11,15 @@ Fue revisado por última vez el 23 Mar 2023. Fue probado por última vez en 28 M
 
 # Evaluar
 
-1. **Mantenga la calma y la profesionalidad.**
-2. Reúna la información pertinente, _por ejemplo_, alarmas, eventos, datos, suposiciones, intuiciones (**observar**).
-3. Considerar las categorías de impacto, a continuación (**orientar**), y determinar si hay un posible incidente (**decidir**):
-4. Iniciar una respuesta si hay un incidente (**actuar**).  En caso de duda, inicie una respuesta. El responsable de gestión de incidentes y el equipo de respuesta pueden ajustarse tras la investigación y la revisión.
-
-## Evaluar el impacto funcional
-
-¿Cuál es el impacto directo o probable en su trabajo? (_por ejemplo_, operaciones comerciales, empleados, clientes, usuarios)
-
-* Degradación o fracaso del trabajo/negocio: **incidente!**
-* Ninguno: evalúe el impacto de la información.
-
-## Evaluar el impacto de la información
-
-¿Cuál es el impacto directo o probable sobre sus datos/información, en particular los sensibles? (_por ejemplo_, información personal, datos de propiedad, financieros o sanitarios)
-
-* Información a la que se ha accedido, cogido, cambiado o borrado: **incidente!**
-* Ninguno: gestión a través de canales no relacionados con incidentes (por ejemplo, un ticket de soporte).
-
-**Cada miembro del equipo está facultado para comenzar este proceso.** Si ves algo, dilo.
+Para poder evaluar la situación es necesario mantener la calma y profesionalidad además de seguir los siguientes pasos:
+- Observar: reunir toda la información que se crea importante.
+- Orientar: comprender como puede afectar.
+- Decidir: determinar si es un posible ataque o una falsa alarma.
+- Actuar: responder si es un incidente, en caso de dudar siempre es conveniente iniciar la respuesta.
+Para empezar, se debe evaluar tanto el impacto funcional como el impacto en la información, para ello nos haremos estas preguntas:
+- ¿Existe un impacto hacia mi trabajo?
+- ¿Se ha accedido/modificado/extraído algo de información?
+Si la respuesta es “Si” estamos ante un incidente, deberemos iniciar la respuesta
 
 # Iniciar la respuesta
 
@@ -315,13 +304,47 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 
 ## Analizar las pruebas
 
-* Priorizar basándose en el plan de investigación
-* Analizar y clasificar los datos de la respuesta en vivo
-* Analizar la memoria y las imágenes de disco (es decir, realizar análisis forenses)
-* Analizar el malware
-* _OPCIONAL:_ Enriquecer con investigación e inteligencia
-* Documentar nuevos indicadores de compromiso (IOCs)
-* Actualizar el archivo del caso
+* Priorización basada en el plan de investigación:
+
+    - Priorizar las pruebas a analizar basándose en el plan de investigación para enfocarse en los aspectos más críticos del caso.
+    - Asegurarse de que los recursos estén adecuadamente distribuidos y se estén usando de manera eficiente.
+    - Si se encuentra nueva información durante el análisis, actualizar el plan de investigación para refinar la priorización de las pruebas.
+
+* Análisis y clasificación de datos de respuesta en vivo:
+
+    - Analizar y clasificar los datos de la respuesta en vivo para identificar patrones y comportamientos anómalos que puedan indicar una posible amenaza.
+    - Tomar medidas preventivas inmediatas para mitigar cualquier amenaza identificada.
+    - Documentar todas las observaciones y acciones realizadas durante el análisis para facilitar la revisión y el seguimiento por parte de otros miembros del equipo.
+
+* Análisis forense de memoria y disco:
+
+    - Realizar análisis forenses de la memoria y las imágenes de disco para obtener una visión más profunda de las actividades del sistema y detectar cualquier actividad sospechosa.
+    - Identificar posibles rastros de la amenaza y determinar el alcance de la misma.
+    - Asegurarse de seguir las mejores prácticas de análisis forense para garantizar la integridad de los datos y la privacidad de los usuarios.
+
+* Análisis de malware:
+
+    - Analizar el malware para identificar su comportamiento y detectar cualquier otro sistema comprometido.
+    - Tomar medidas preventivas inmediatas para mitigar cualquier amenaza adicional identificada.
+    - Documentar toda la información relevante sobre el malware, incluyendo su comportamiento, las herramientas que utiliza y cualquier otra información útil para futuras investigaciones.
+
+* Enriquecimiento con investigación e inteligencia (opcional):
+
+    - En caso de ser necesario, enriquecer los datos de las pruebas con investigación e inteligencia para tener una visión más completa del panorama de la amenaza.
+    - Identificar cualquier patrón o comportamiento relacionado con la amenaza.
+    - Compartir la información de inteligencia con otros equipos de seguridad relevantes para mejorar la detección en toda la organización.
+
+* Documentación de nuevos indicadores de compromiso (IOCs):
+
+    - Documentar cualquier nuevo indicador de compromiso (IOCs) descubierto durante el análisis para poder utilizarlos en futuras investigaciones y detecciones.
+    - Asegurarse de que los IOCs se compartan con otros equipos de seguridad relevantes para mejorar la detección en toda la organización.
+    - Mantener actualizados los IOCs para garantizar que sean efectivos y relevantes a medida que evoluciona la amenaza.
+
+* Actualización del archivo del caso:
+
+    - Actualizar el archivo del caso con toda la información relevante y documentación necesaria para que otros miembros del equipo puedan consultarla en el futuro si fuera necesario.
+    - Asegurarse de que el archivo del caso esté completo y se mantenga organizado.
+    - Utilizar una herramienta de gestión de casos para facilitar el seguimiento y la revisión de los casos en el futuro.
 
 ### Ejemplo de indicadores útiles
 
@@ -378,10 +401,25 @@ Utilice lo siguiente como punto de partida para la corrección de la protección
 
 Utilice lo siguiente como punto de partida para la corrección de detecciones:
 
-* Mejorar el registro y la retención de los registros del sistema, en particular de los sistemas críticos.
-* Mejorar el registro de las aplicaciones, incluidas las aplicaciones SaaS.
-* Mejorar la agregación de registros.
-* Actualizar las firmas de IDS de la red y del host utilizando IOC.
+* Mejora del registro y la retención de registros del sistema:
+
+    - Implementar mejores prácticas para el registro y retención de registros del sistema, especialmente de los sistemas críticos.
+    - Tener un registro completo y preciso de las actividades y eventos del sistema para identificar posibles amenazas y responder rápidamente a ellas.
+
+* Mejora del registro de las aplicaciones:
+
+    - Registrar las actividades de las aplicaciones, incluyendo las aplicaciones SaaS, para tener una visibilidad completa de las mismas.
+    - Detectar cualquier actividad sospechosa que pueda indicar una posible amenaza.
+
+* Mejora de la agregación de registros:
+
+    - Agregar los registros del sistema para tener una visión global y completa de los eventos del sistema.
+    - Detectar patrones y comportamientos anómalos que puedan indicar una posible amenaza y tomar medidas preventivas.
+
+* Actualización de firmas de IDS utilizando IOC:
+
+    - Utilizar Indicators of Compromise (IOC) para actualizar periódicamente las firmas de IDS de la red y del host.
+    - Identificar patrones de actividad sospechosa y compararlos con los IOC conocidos para detectar posibles amenazas.
 
 ### Contención
 
