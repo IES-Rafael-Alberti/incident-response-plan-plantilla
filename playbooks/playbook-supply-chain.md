@@ -140,7 +140,7 @@ El objetivo de este playbook es proporcionar una serie de pasos para poder prepa
 	4. Licencia de Software
 	* Actualización o compra de licencias necesarias
 ### Lecciones Aprendidas
-
+---
 1. Documentar el incidente desde el inicio, intentando responder a las siguientes preguntas
 	* ¿Causa del incidente?
 	* ¿Punto de la cadena afectado?
