@@ -13,10 +13,7 @@ Fase inicial en la que debe pereparar las medidas, para asegurarse que pueden re
 * El Escriba debe ir documentando durante la resolución del incidente y servirá de apoyo.
 ### Investigar 
 
-<<<<<<< Updated upstream
-=======
-<!--`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el incidente de escalada de privilegio.`-->
->>>>>>> Stashed changes
+
 En esta fase debe esforzarse por detectar y validar los incidentes rápidamente, porque las infecciones pueden propagarse en cuestión de minutos. La detección temprana puede ayudarle a minimizar el número de sistemas infectados. Lo que reducirá la magnitud del esfuerzo de recuperación y la cantidad de daños que sufra como resultado del incidente.
 1. Defina los indicadores de amenazas. Realice las siguientes preguntas y tomé notas si fuera necesario con papel y boli o utilice una herramienta de ticketing:
     * ¿Se han producido accesos a los sistemas o servidor web fuera del horario laboral?
@@ -54,13 +51,7 @@ Es importante, que un organización decida que métodos de contención va a empl
 Las organizaciones deben de tener estrategias y procedimientos para tomar decisiones relacionadas con la contención. Reflejando, el nivel de riesgo
 aceptable para la organización.
 #### Contención
-<<<<<<< Updated upstream
 
-=======
-<!--`TODO: Personalizar los pasos de contención, tácticos y estratégicos, en la escalada de privilegio.`
-
-`TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.`-->
->>>>>>> Stashed changes
 1. Identifique los sistemas que han sido accedidos, mediante la escalada de privilegios o que estén en riesgo, de los ya analizados anteriormente.
 2. Identifique los sistemas que estén fuera de línea debido a que fueron comprometidos.
 3. Identifique el/los sistema(s) bloqueados debido a intentos repetidos de inicio de sesión.
@@ -87,20 +78,11 @@ aceptable para la organización.
 * Antivirus: _En los equipos de trabajo Windows Defender_ y _dispositivos móviles ESET mobile_.
 * Herramientas de monitorización de red: _Herramienta básica, propia de la organización_.
 
-<<<<<<< Updated upstream
-=======
-<!--`TODO: Considerar la automatización de las medidas de contención utilizando herramientas de orquestación.`-->
->>>>>>> Stashed changes
+
 * Deberá consultar con el proveedor/es de seguridad. Si dispone, alguna implantación de alguna herramienta de automatización, que permita realizar la contención en mejor forma y tiempo.
 * También para seguir perfeccionando, el plan de respuesta a incidentes. Del tipo de respuesta a escalada de privilegios.
 #### Erradicar
-<<<<<<< Updated upstream
 
-=======
-<!--`TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la identidad y acceso.`
-
-`TODO: Especificar herramientas y procedimientos para cada paso, a continuación.`-->
->>>>>>> Stashed changes
 En esta fase el equipo de operaciones, deberá realizar el correspondiente triaje y junto al Escriba, la confirmación del informe del Incidente.
 Por lo que debe realizar peticiones de parcheo de los sistemas.
 Y, realizando las siguientes acciones, entre los distintos roles del equipo:
@@ -112,10 +94,7 @@ Y, realizando las siguientes acciones, entre los distintos roles del equipo:
    1. Determinar cualquier movimiento lateral entre los sistemas dentro de la red.
 #### Referencia: Recursos de Remediación
 
-<<<<<<< Updated upstream
-=======
-<!--`TODO: Especificar los recursos financieros, de personal y logísticos para llevar a cabo la remediación.`-->
->>>>>>> Stashed changes
+
 Para llevar a cabo todo el proceso descrito anteriormente. Se utilizarán los siguiente recursos tanto financieros, personal y logísticos:
 * Dispone del equipo de operaciones, contratado de manera externalizada. Que ofrece servicio de respuesta ante incidentes.
 * Dispone a más alto nivel, ayuda técnica o _Help Desk_ de los diferentes servicios, utilizados dentro de la organización, por el departamento TI.
@@ -123,15 +102,7 @@ Para llevar a cabo todo el proceso descrito anteriormente. Se utilizarán los si
 * Dispone de equipo de mantenimiento, por si hubiera que trasladar algún equipo de trabajo, o otros.
 * Dispone de servicios de protección y monitorización, contratados de manera externalizada.
 ### Comunicar
-<<<<<<< Updated upstream
 
-
-=======
-<!--
-`TODO: Personalizar los pasos de comunicación para el compromiso de la identidad y el acceso.`
-
-`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`-->
->>>>>>> Stashed changes
 1. Durante la llamada del incidente. Debe realizar comunicaciones, entre los integrantes del equipo de operaciones:
 2. En el incidente, el IC será quien esté al mando y gestione a los demás del equipo. Se deben realizar alguno de los tipos de comunicación que se dictan, a continuación:
    1. Llamadas de conferencia, entre el IC y en ocasiones junto al IC-Adjunto y SME's. Para poner en contexto e ir informando de manera a alto nivel. A la ejecutiva de la organización.
@@ -147,15 +118,7 @@ Para llevar a cabo todo el proceso descrito anteriormente. Se utilizarán los si
       2. [Aplicación de la ley local a nivel estatal o regional](#TODO-link-to-actual-resource)
       3. [Fuerzas de seguridad europeas o nacionales](#TODO-link-to-actual-resource)
 ### Recuperación
-<<<<<<< Updated upstream
 
-
-=======
-<!--
-`TODO: Personalizar los pasos de recuperación para el compromiso de la identidad y acceso.`
-
-`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`-->
->>>>>>> Stashed changes
 Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
 Y de las medidas de remediación y salvaguardas que se tuvieran a disposición. El equipo de respuesta a incidentes, junto al departamento TI de la organización.
 Y con asesoramiento del o los SME's contratados. Debe realizar las siguientes funciones:
