@@ -77,3 +77,7 @@ El objetivo de este playbook es proporcionar una serie de pasos para poder prepa
     - Documente el incidente y presente un informe a la alta dirección y al equipo de seguridad para su revisión y análisis.
 3. Seguimiento:
     - Realice un seguimiento regular después del incidente para garantizar que se hayan tomado medidas adecuadas para prevenir futuros incidentes de cryptojacking.
+
+
+
+

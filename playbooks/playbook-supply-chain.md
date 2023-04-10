@@ -157,3 +157,7 @@ El objetivo de este playbook es proporcionar una serie de pasos para poder prepa
 1. <a name="supply-chain-playbook-ref-1"></a>["¿Que es una supply chain?"](https://www.postgradounab.cl/noticias/supply-chain-que-es-y-por-que-es-importante-para-empresas/#:~:text=%C2%BFQu%C3%A9%20es%20Supply%20Chain%20o,o%20servicio%20ha%20sido%20entregado.)
 2. <a name="supply-chain-playbook-ref-1"></a>["¿Que es el bug bounty?"](https://keepcoding.io/blog/que-es-bug-bounty-programa/)
 
+
+
+
+

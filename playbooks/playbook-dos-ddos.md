@@ -46,3 +46,5 @@ La denegación de servicio es un ataque en el que se intenta interrumpir el serv
 
 La denegación de servicio es un ataque grave que puede interrumpir el servicio normal de un sistema o red. Es importante tener un plan de respuesta a incidentes bien definido y estar preparado para detectar, responder y recuperar de un ataque de denegación de servicio. La prevención es la mejor estrategia, y se deben implementar medidas de seguridad para mitigar los riesgos de un ataque, incluyendo el uso de servicios de protección DDoS, la actualización de los sistemas y aplicaciones con los últimos parches de seguridad y la capacitación del personal.
 
+
+

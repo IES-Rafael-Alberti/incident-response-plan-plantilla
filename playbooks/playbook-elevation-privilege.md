@@ -153,3 +153,6 @@ Y capacitando a los encargados de ponerlo en marcha, concienciar y difundir el p
 1. <a name="elevation-privilege-playbook-ref-1"></a>[LOLBAS Project](https://github.com/LOLBAS-Project/LOLBAS), @ConsciousHacker (2018)
 2. <a name="elevation-privilege-playbook-ref-2"></a>[Técnicas LOLBins más utilizadas por los ciberdelincuentes](https://www.kaspersky.es/blog/most-used-lolbins/26092/), Kaspersky daily (30/09/2021)
 3. <a name="elevation-privilege-playbook-ref-3"></a>[Ataques, técnicas de prevención y herramientas de escalada de privilegios](https://geekflare.com/es/privilege-escalation-attacks/#:~:text=Los%20ataques%20de%20escalada%20de,permiten%20acceder%20a%20activos%20protegidos.), GEEKFLARE (09/03/2022)
+
+
+

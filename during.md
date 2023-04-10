@@ -197,6 +197,26 @@ Si un incidente resulta ser dos o más incidentes distintos:
 * Considere la posibilidad de establecer subequipos para cada incidente.
 * **Mantener un Incident Commander de alto nivel**, para coordinar los activos de baja densidad y alta demanda y mantener la unidad de mando.
 
+
+
+# Preparación
+
+Definir los objetivos del plan: Es importante que se establezcan objetivos claros para el plan de respuesta e incidente, como la reducción del tiempo de inactividad, la protección de la propiedad intelectual o la salvaguarda de la reputación de la empresa.
+
+Identificar el equipo de respuesta: Se debe designar a un equipo de respuesta de incidentes con responsabilidades claramente definidas, que incluya miembros de diferentes áreas de la organización, como TI, seguridad, recursos humanos y comunicaciones.
+
+Definir los procedimientos de notificación: Se deben establecer procedimientos claros de notificación de incidentes, incluyendo a quién se debe informar, cuándo y cómo. Esto incluye tanto la notificación interna como la externa, como a las autoridades relevantes y a los clientes o proveedores afectados.
+
+Evaluar los riesgos y vulnerabilidades: Se deben identificar los riesgos y vulnerabilidades potenciales de la organización y se deben establecer medidas de seguridad adecuadas para minimizarlos.
+
+Establecer medidas de seguridad: Se deben establecer medidas de seguridad adecuadas para proteger los sistemas y datos críticos de la organización, como la implementación de firewalls, la encriptación de datos y el monitoreo continuo.
+
+Identificar y clasificar los incidentes: Se deben identificar y clasificar los incidentes según su nivel de gravedad, impacto y probabilidad de ocurrencia.
+
+Establecer procedimientos de respuesta: Se deben establecer procedimientos de respuesta claros y detallados para cada tipo de incidente, que incluyan la identificación del incidente, la contención, la erradicación, la recuperación y la revisión post-incidente.
+
+
+
 # Investigar
 
 **[Investigar](#investigar), [Remediar](#remediar) y [comunicar](#communicate) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades.  Notifique al Incident Commander si hay pasos que el equipo debe considerar.
