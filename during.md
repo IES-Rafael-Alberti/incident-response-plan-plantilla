@@ -14,18 +14,18 @@ Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en 
 1. **Mantenga la calma y la profesionalidad.**
 2. Reúna la información pertinente, _por ejemplo_, alarmas, eventos, datos, suposiciones, intuiciones (**observar**).
 3. Considerar las categorías de impacto, a continuación (**orientar**), y determinar si hay un posible incidente (**decidir**):
-4. Iniciar una respuesta si hay un incidente (**actuar**).  En caso de duda, inicie una respuesta. El responsable de gestión de incidentes y el equipo de respuesta pueden ajustarse tras la investigación y la revisión.
+4. Iniciar una respuesta si hay un incidente (**actuar**).  En caso de duda, inicie una respuesta.
 
 ## Evaluar el impacto funcional
 
-¿Cuál es el impacto directo o probable en su trabajo? (_por ejemplo_, operaciones comerciales, empleados, clientes, usuarios)
+¿Cuál es el impacto directo o probable en su trabajo? (_por ejemplo_, servicios, empleados, clientes)
 
 * Degradación o fracaso del trabajo/negocio: **incidente!**
-* Ninguno: evalúe el impacto de la información.
+* Ninguno: evaluar si se ha producido un impacto en la información.
 
 ## Evaluar el impacto de la información
 
-¿Cuál es el impacto directo o probable sobre sus datos/información, en particular los sensibles? (_por ejemplo_, información personal, datos de propiedad, financieros o sanitarios)
+¿Cuál es el impacto directo o probable sobre sus datos/información, en particular los sensibles? (_por ejemplo_, información personal, datos de propiedad, financieros)
 
 * Información a la que se ha accedido, cogido, cambiado o borrado: **incidente!**
 * Ninguno: gestión a través de canales no relacionados con incidentes (por ejemplo, un ticket de soporte).
@@ -40,18 +40,14 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
 
 ## Reunir el equipo de respuesta
 
-1. Llame al Incident Commander de turno/de guardia.
-2. **No** discuta el incidente fuera del equipo de respuesta a menos que el Incident Commander lo autorice
+2. **No** discuta el incidente fuera del equipo de respuesta.
 3. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}.
 4. Iniciar y/o unirse a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}.
 5. Preferible usar la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
-6. **No** utilizar el correo electrónico principal si es posible.  Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}.  Encripte los correos electrónicos cuando cualquier participante esté fuera del dominio {{ORGANIZATION_DOMAIN}}.
-7. **No** usar SMS/texto para comunicar el incidente, a menos que sea para decirle a alguien que se mueva a un canal más seguro.
+6. **No** utilizar el correo electrónico principal si es posible.  Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}. Encripte los correos electrónicos cuando cualquier participante esté fuera del dominio {{ORGANIZATION_DOMAIN}}.
+7. **No usar SMS/texto para comunicar el incidente**.
 8. Invite al personal de turno/guardia a la llamada y al chat de respuesta.
-    * Invite al equipo de seguridad.  
-    * Invitar al SME de los equipos y sistemas afectados.
-    * Invitar a las partes interesadas ejecutivas y a los asesores jurídicos lo antes posible, pero dar prioridad a los responsables operativos.`
-9. OPCIONAL:_ Establecer una sala de colaboración en persona ("sala de guerra") para incidentes complejos o graves.
+    * Invitar a la dirección y a los asesores jurídicos lo antes posible.
 
 ### Referencia: Estructura del equipo de respuesta
 
@@ -114,7 +110,6 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 * Mantenga conversaciones/discusiones cortas y al grano.
 * Comunicar cualquier preocupación al Incident Commander (CI) en la llamada.
 * Respetar las limitaciones de tiempo impuestas por el Incident Commander.
-* **Utilizar una terminología clara y evitar acrónimos o abreviaturas. La claridad y la precisión son más importantes que la brevedad.
 
 ### Realizar la actualización de la respuesta
 
@@ -268,7 +263,6 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
 * Considerar todos los tipos de IOC:
   * IOC basados en la red, como direcciones IP o MAC, puertos, direcciones de correo electrónico, contenido o metadatos del correo electrónico, URLs, dominios o patrones PCAP.
   * IOC basados en el host, como rutas, hashes de archivos, contenido o metadatos de archivos, claves de registro, MUTEXes, autoejecuciones o artefactos y permisos de usuarios.
-  * IOCs basados en la nube, como patrones de registro para despliegues [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) o [IaaS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service)
   * IOCs de comportamiento (a.ka., patrones, TTPs) tales como patrones de árbol de procesos, heurística, desviación de la línea base y patrones de inicio de sesión.
 * Correlacionar varios tipos de IOC, como indicadores basados en la red y en el host en los mismos sistemas.
 
@@ -325,7 +319,7 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 
 ### Ejemplo de indicadores útiles
 
-* Comportamiento inusual de autenticación (_e._, frecuencia, sistemas, hora del día, ubicación remota)
+* Comportamiento inusual de autenticación (_e.j._, frecuencia, sistemas, hora del día, ubicación remota)
 * Nombres de usuario con formato no estándar
 * Binarios no firmados que se conectan a la red
 * Balizamiento o transferencias de datos significativas
