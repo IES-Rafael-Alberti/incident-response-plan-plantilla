@@ -34,7 +34,7 @@ La denegación de servicio es un ataque en el que se intenta interrumpir el serv
 - Identificar las debilidades en el sistema o la red que permitieron el ataque y tomar medidas para corregirlas.
 - Realizar pruebas de seguridad adicionales para garantizar que el sistema o la red sean resistentes a futuros ataques.
 
-## Fase de Post-Incidente (continuación)
+## Fase de Post-Incidente
 
 - Realizar un informe detallado del incidente, incluyendo las medidas tomadas para prevenir, detectar, responder y recuperar del ataque.
 - Revisar y actualizar regularmente el plan de respuesta a incidentes para asegurarse de que esté actualizado y sea efectivo.
