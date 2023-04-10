@@ -40,13 +40,13 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
 
 ## Reunir el equipo de respuesta
 
-2. **No** discuta el incidente fuera del equipo de respuesta.
-3. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}.
-4. Iniciar y/o unirse a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}.
-5. Preferible usar la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
-6. **No** utilizar el correo electrónico principal si es posible.  Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}. Encripte los correos electrónicos cuando cualquier participante esté fuera del dominio {{ORGANIZATION_DOMAIN}}.
-7. **No usar SMS/texto para comunicar el incidente**.
-8. Invite al personal de turno/guardia a la llamada y al chat de respuesta.
+1. **No** discuta el incidente fuera del equipo de respuesta.
+2. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}.
+3. Iniciar y/o unirse a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}.
+4. Preferible usar la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
+5. **No** utilizar el correo electrónico principal si es posible.  Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}. Encripte los correos electrónicos cuando cualquier participante esté fuera del dominio {{ORGANIZATION_DOMAIN}}.
+6. **No usar SMS/texto para comunicar el incidente**.
+7. Invite al personal de turno/guardia a la llamada y al chat de respuesta.
     * Invitar a la dirección y a los asesores jurídicos lo antes posible.
 
 ### Referencia: Estructura del equipo de respuesta
@@ -87,7 +87,7 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 #### Referencia: Estructura de la llamada de respuesta inicial
 
-* Incident Commander (IC): Mi nombre es [NOMBRE], soy el Incident Commander.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como esccriba. ¿Quién está en la llamada?
+* Incident Commander (IC): Mi nombre es [NOMBRE], soy el Incident Commander.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como escriba. ¿Quién está en la llamada?
 * ESCRIBA: [Toma asistencia]
 * IC: [Si falta personal clave] Adjunto, por favor llame a [PERSONAL FALTANTE].
 * IC: [Hace preguntas para comprender la situación, los síntomas, el alcance, el vector, el impacto y el calendario del reportador del incidente, los SME aplicables para los sistemas y las unidades de negocio].
@@ -160,6 +160,20 @@ Si un incidente resulta ser dos o más incidentes distintos:
 * Haga un seguimiento y coordine la investigación, la reparación y la comunicación en el archivo correspondiente.
 * Considere la posibilidad de establecer subequipos para cada incidente.
 * **Mantener un Incident Commander de alto nivel**, para coordinar los activos de baja densidad y alta demanda y mantener la unidad de mando.
+
+# Preparación
+
+Antes de llevar a cabo las fases que preceden, el personal de la empresa deberá de ser formado por especialistas en ciberseguridad sobre la detección de patrones, análisis de registros y logs, bloqueo de cuentas de usuario, etc. A continuación, mostraremos buenas prácticas que se pueden llevar a cabo para preparar a los empleados:
+
+- Saber acceder a los logs del sistema o manipilar el visor de eventos.
+- Obtener la habilidad de saber bloquear los puertos de los servicios que están siendo atacados.
+- Aprender a reportar la detección de patrones sospechosos para una toma de decisiones más pronta frente a los ataques.
+- Conocer la manera de bloquear cuentas de usuario sospechosas.
+- Es fundamental que los empleados estén informados sobre los tipos de ataque que pueden existir y las consecuencias que podrían tener para la empresa.
+- Los empleados deben estar capacitados para detectar señales de alerta que indiquen la presencia de un ataque, como cambios en el rendimiento de los sistemas o dispositivos o mensajes de error inesperados.
+- Los empleados deben ser instruidos en las mejores prácticas de seguridad, como la implementación de contraseñas seguras, la actualización regular de software y la conexión a redes de confianza.
+- Es importante que los empleados comprendan la importancia de proteger la información de la empresa y estén al tanto de las medidas de seguridad necesarias para hacerlo.
+- Realizar simulaciones de ataques para preparar a los empleados y que sepan responder adecuadamente ante la situación.
 
 # Investigar
 
@@ -373,7 +387,7 @@ Utilice lo siguiente como punto de partida para la corrección de la protección
 Utilice lo siguiente como punto de partida para la corrección de detecciones:
 
 * Mejorar el registro y la retención de los registros del sistema, en particular de los sistemas críticos.
-* Mejorar el registro de las aplicaciones, incluidas las aplicaciones SaaS.
+* Mejorar el registro de las aplicaciones.
 * Mejorar la agregación de registros.
 * Actualizar las firmas de IDS de la red y del host utilizando IOC.
 
