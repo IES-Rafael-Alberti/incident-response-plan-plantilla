@@ -182,11 +182,11 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 ### Crear Sub-Equipos
 
-* En la preparación de incidentes complejos, se predefinen tres subequipos: Investigación, Remediación y Comunicación, generalmente responsables de esas funciones de respuesta. 
-* Crear un puente de llamadas y un chat para cada subequipo.
-* El Incident Commander designará a los líderes de los equipos, que dependen del IC, y a los miembros de los equipos, que dependen de su líder.  _Los líderes de equipo no tienen que estar formados como Incident Commanders, pero es preferible que tengan alguna experiencia de liderazgo._
-* El Incident Commander puede ajustar el propósito o el nombre de los subequipos según sea necesario.
-* Si desea cambiar de equipo, pregunte a su **líder de equipo actual**.  **No** pregunte al Incident Commander, o al líder del otro(s) equipo(s).  Utilice la cadena de mando.
+* Proporcionar una breve descripción de las funciones y responsabilidades de cada uno de los subequipos (Investigación, Remediación, Comunicación), para que todos los miembros del equipo tengan una comprensión clara de su propósito y objetivos.
+* Establecer una forma clara de comunicación y colaboración entre los diferentes subequipos, para evitar la duplicación de esfuerzos o la falta de coordinación.
+* Asegurarse de que los líderes de los equipos tengan acceso a la información relevante y actualizada sobre el incidente y estén en contacto constante con el Incident Commander para informarle sobre el progreso de su equipo.
+* Designar a un miembro del equipo para mantener un registro de todas las decisiones tomadas y las acciones realizadas por cada subequipo, para facilitar la gestión y la coordinación del incidente.
+* Establecer un protocolo claro para la transferencia de miembros del equipo entre los subequipos, para garantizar que se mantenga la continuidad de la respuesta.
 
 ### Incidente dividido
 
@@ -291,11 +291,8 @@ Mando y control         | ... herramientas y sistemas de control | ¿Cómo? ¿D�
 Exfiltración            | ... tomar datos                        | ¿Qué datos? ¿Cómo? ¿Cuándo? ¿Dónde?
 Impacto                 | ... romper cosas.                      | ¿Qué sistemas o datos? ¿Cómo? ¿Cuándo? ¿Dónde? ¿Cómo de malo?
 
-Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más información e ideas.
 
 ## Crear y desplegar indicadores de compromiso (IOC)
-
-> Haga hincapié en los indicadores **dinámicos y de comportamiento** junto con las huellas digitales estáticas.
 
 * Crear IOCs basados en [pistas iniciales](#recoger-las-pistas-iniciales) y [análisis](#analyze-evidence).
 * Cree IOCs usando un formato abierto soportado por sus herramientas (_por ejemplo_, [STIX 2.0](https://oasis-open.github.io/cti-documentation/stix/intro)), si es posible. 
@@ -310,9 +307,13 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
 
 ## Identificar los sistemas de interés
 
-1. Validar si son relevantes.
-2. Categorizar la(s) razón(es) por la(s) que son "de interés": tiene malware, acceso por cuenta comprometida, tiene datos sensibles, etc.  Trátelas como "etiquetas", puede haber más de una categoría por sistema.
-3. Prioriza la recogida, el análisis y la reparación en función de las necesidades de la investigación, el impacto en el negocio, _etc_.
+* Proporcionar una lista de sistemas que se deben verificar en busca de actividad sospechosa o anómala. Esta lista podría incluir sistemas críticos, como controladores de dominio, servidores de correo electrónico, bases de datos, sistemas de punto de venta, entre otros.
+
+* Definir criterios para evaluar si un sistema es relevante para la respuesta a incidentes. Estos criterios podrían basarse en la función que cumple el sistema en la organización, la cantidad y tipo de datos que almacena, la cantidad de usuarios que lo utilizan, etc.
+
+* Establecer un proceso para la categorización de los sistemas de interés. Por ejemplo, se podría crear una tabla con columnas para las etiquetas (razones por las que el sistema es de interés), el sistema afectado, el impacto potencial en el negocio, la prioridad asignada, y cualquier otra información relevante.
+
+* Establecer un proceso para la priorización de la recopilación, el análisis y la reparación de los sistemas de interés. Por ejemplo, se podría establecer un nivel de prioridad para cada sistema, según la gravedad de la etiqueta (por ejemplo, si se identifica una actividad maliciosa), la importancia del sistema para el negocio, y la capacidad de los equipos para trabajar en paralelo en varios sistemas.
 
 ## Recogida de pruebas
 
@@ -396,9 +397,6 @@ Utilice [marcos de seguridad de la información (infosec)](https://www.nist.gov/
 
 ### Protección
 
-> "¿Cómo podemos evitar que la táctica X se repita o reducir el riesgo?  ¿Cómo podemos mejorar la protección futura?"
-
-Utilice lo siguiente como punto de partida para la corrección de la protección:
 
 * Parchear las aplicaciones.
 * Parchee los sistemas operativos.
@@ -410,23 +408,25 @@ Utilice lo siguiente como punto de partida para la corrección de la protección
 * Reforzar los requisitos de las contraseñas.
 * Bloquear los puertos y protocolos no utilizados en los límites del segmento y de la red, tanto entrantes como salientes.
 * Poner en lista blanca las conexiones de red para los servidores y servicios críticos.
+* Configuración de firewalls y reglas de filtrado de paquetes para bloquear tráfico malintencionado.
+Segmentación de la red para limitar la propagación del ataque en caso de que un sistema sea comprometido.
+* Implementación de sistemas de detección de intrusiones y monitoreo de seguridad para detectar actividad maliciosa.
+* Realización de pruebas de penetración regulares para identificar posibles vulnerabilidades.
+* Capacitación y concienciación de los usuarios sobre las mejores prácticas de seguridad y la identificación de posibles amenazas.
 
 ### Detección
-
-> "¿Cómo podemos detectar esto en los nuevos sistemas o en el futuro?  ¿Cómo podemos mejorar la detección y la investigación en el futuro?"
-
-Utilice lo siguiente como punto de partida para la corrección de detecciones:
 
 * Mejorar el registro y la retención de los registros del sistema, en particular de los sistemas críticos.
 * Mejorar el registro de las aplicaciones, incluidas las aplicaciones SaaS.
 * Mejorar la agregación de registros.
 * Actualizar las firmas de IDS de la red y del host utilizando IOC.
+* Implementar monitoreo de seguridad para detectar comportamientos y actividades anómalas en la red y en los sistemas críticos.
+* Configurar alertas automatizadas para notificar a los equipos de respuesta de seguridad sobre eventos críticos.
+* Utilizar soluciones de análisis de seguridad para correlacionar eventos y detectar patrones de ataque.
+* Implementar análisis de amenazas para monitorear y detectar amenazas conocidas y emergentes.
+* Realizar pruebas regulares de detección y respuesta a incidentes para garantizar que los sistemas estén funcionando correctamente.
 
 ### Contención
-
-> "¿Cómo podemos evitar que esto se extienda o se agrave? ¿Cómo podemos mejorar la contención en el futuro?"
-
-Utilice lo siguiente como punto de partida para la corrección de la contención:
 
 * Implementar listas de acceso (ACL) en los límites de los segmentos de la red.
 * Implementar bloqueos en el límite de la empresa, en múltiples capas del [modelo OSI](https://en.wikipedia.org/wiki/OSI_model).
@@ -442,8 +442,6 @@ Utilice lo siguiente como punto de partida para la corrección de la contención
 
 ### Erradicar
 
-> "¿Cómo podemos eliminar esto de nuestros activos?  ¿Cómo podemos mejorar la erradicación en el futuro?"
-
 Utilice lo siguiente como punto de partida para la remediación de la erradicación:
 
 * Reconstruir o restaurar los sistemas y datos comprometidos a partir de un estado bueno conocido.
@@ -452,6 +450,9 @@ Utilice lo siguiente como punto de partida para la remediación de la erradicaci
 * Borrar o eliminar malware específico (¡difícil!).
 * Implementar proveedores alternativos.
 * Activar y migrar a ubicaciones, servicios o servidores alternativos.
+* Realizar una revisión de los sistemas y la red para garantizar que se hayan eliminado todas las vulnerabilidades conocidas que puedan haber sido explotadas por el atacante.
+* Realizar un análisis forense para determinar la causa raíz del incidente y garantizar que no se haya comprometido ningún otro sistema o dato.
+* Implementar controles adicionales de seguridad, como monitoreo continuo de la red y análisis de tráfico, para detectar y prevenir futuros ataques.
 
 ## Elegir el momento de la reparación
 
