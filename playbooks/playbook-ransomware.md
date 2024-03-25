@@ -69,6 +69,8 @@ Para continuar con los pasos para contener y mitigar el incidente:
 
 ### Fase de Recuperación
 
+No se recomienda pagar el rescate, nada garantiza que los ciberdelincuentes vayan a acceder y proporcionarnos la llave para desencriptar los archivos/sistemas infectados. Además, pagar demuestra que el ransomware funciona y podría aumentar el número de ataques que sufriríamos nosotros y otras organizaciones.
+
 - Volver a conectar los sistemas y restaurar los datos de copias de seguridad cifradas sin conexión en función de una priorización de los servicios críticos.
 - Tener cuidado de no volver a infectar los sistemas limpios durante la recuperación. Por ejemplo, si se ha creado una nueva red VLAN con fines de recuperación, asegurarse de que solo se agreguen sistemas limpios.
 - Documentar las lecciones aprendidas del incidente y las actividades de respuesta asociadas para informar las actualizaciones y refinar las políticas, planes y procedimientos de la organización y guiar los ejercicios futuros de los mismos.
@@ -78,3 +80,44 @@ Para continuar con los pasos para contener y mitigar el incidente:
 - Reunión informativa: Analizar lo que ha salido bien, los desafíos enfrentados y las mejoras potenciales.
 - Documentación: Realizar un informe detallado del incidente, incluidos los cronogramas, sistemas afectados, acciones de respuesta y hallazgos para la referencia futura.
 - Actualización del plan: Según lo aprendido, actualiza el plan de respuesta incidentes, protocolos y herramientas.
+
+### Recursos
+
+**Acciones de los usuarios ante un incidente de ransomware:**
+
+- Mantenga la calma y respire profundamente.
+1. Desconecte su sistema de la red.
+2. Haz fotos de tu pantalla con tu smartphone mostrando las cosas que has notado: mensajes de rescate, archivos encriptados, mensajes de error del sistema, *etc.*.
+3. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz. Todo ayuda.  Documenta lo siguiente:
+    1. ¿Qué has notado?
+    2. ¿Por qué pensaste que era un problema?
+    3. ¿Qué estabas haciendo en el momento en que lo detectaste?
+    4. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
+    5. ¿Dónde estaba cuando ocurrió y en qué red? (oficina/casa/tienda, con cable/inalámbrica, con/sin VPN, *etc.*)
+    6. ¿Qué sistemas está utilizando? (sistema operativo, nombre de host, *etc.*)¿Qué cuenta utilizas?
+    7. ¿A qué datos suele acceder?
+    8. ¿Con quién más se ha puesto en contacto en relación con este incidente y qué le ha dicho?
+4. Contacta al servicio de asistencia técnica y ser lo más útil posible
+5. Tenga paciencia: la respuesta puede ser perturbadora, pero está protegiendo a su equipo y a la organización. **Gracias.**
+
+**Acciones del servicio de asistencia técnica ante un incidente de ransomware:**
+
+1. Mantenga la calma y respire profundamente.
+2. Abra un ticket para documentar el incidente, según el procedimiento.
+3. Pida al usuario que tome fotos de su pantalla usando su smartphone mostrando las cosas que ha notado: mensajes de rescate, archivos encriptados, mensajes de error del sistema, *etc.* Si es algo que ha notado directamente, haga lo mismo usted.
+4. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz. 2. Si se trata de un informe de usuario, haz preguntas detalladas, incluyendo:
+    1. ¿Qué ha notado?
+    2. ¿Por qué pensaste que era un problema?
+    3. ¿Qué estabas haciendo en el momento en que lo detectaste?
+    4. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
+    5. ¿De qué redes se trata? (oficina/casa/tienda, cableada/inalámbrica, con/sin VPN, *etc.*)
+    6. ¿De qué sistemas se trata? (sistema operativo, nombre de host, *etc.*)
+    7. ¿De qué datos se trata? (rutas, tipos de archivos, archivos compartidos, bases de datos, software, *etc.*)
+    8. ¿Qué usuarios y cuentas están implicados? (directorio activo, SaaS, SSO, cuentas de servicio, *etc.*)
+    9. ¿A qué datos suelen acceder los usuarios implicados?
+    10. ¿Con quién más has contactado acerca de este incidente y qué les has dicho?
+5. Haz las preguntas de seguimiento que sean necesarias. **Usted es el encargado de responder al incidente, contamos con usted.**
+6. Obtenga información de contacto detallada del usuario (domicilio, oficina, móvil), si procede.
+7. Registre toda la información en el ticket, incluyendo notas manuscritas y de voz.
+8. Poner en cuarentena a los usuarios y sistemas afectados.
+9. Póngase en contacto con el equipo de seguridad y estar preparados para participar en la respuesta según las indicaciones: investigación, reparación, comunicación y recuperación.
