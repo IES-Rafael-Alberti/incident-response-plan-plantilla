@@ -3,16 +3,16 @@
 ## Preparación del AAR
 
 1. Miembros implicados
-   Indentificamos a los participantes clave que estuvieron involucrados en la respuesta al incidente. Esto incluye al equipo de seguridad de TI, al equipo de respuesta a incidentes, a los administradores de los sistemasy a cualquier parte interesada relevante al evento.
+   Identificamos a los participantes clave que estuvieron involucrados en la respuesta al incidente. Esto incluye al equipo de seguridad de TI, al equipo de respuesta a incidentes, a los administradores de los sistemas y a cualquier parte interesada relevante al evento.
 2. Agenda
    Estableceremos una agenda para la AAR, esto incluye una revisión de los hechos, una discusión de lo que salió bien y lo que se puede mejorar, y la identificación de lecciones aprendidas.
 3. Documentación
-   Recopilaremos toda l adocumentación relevante. Esto incluye registros de incidentes, playbooks utilizados, comunicaciones internas y externas, y cualquier otra información relevante.
+   Recopilaremos toda la documentación relevante. Esto incluye registros de incidentes, playbooks utilizados, comunicaciones internas y externas, y cualquier otra información relevante.
 
 ## Realización del AAR
 
 1. Reuniones
-   Se organizaran reuniones para llevar a caba el AAR. Nos aseguraremos de que todos los participantes clave estuvieran presentes y de que se dispusiera de suficiente tiempo para una discusión detallada.
+   Se organizarán reuniones para llevar a cabo el AAR. Nos aseguraremos de que todos los participantes clave estuvieran presentes y de que se dispusiera de suficiente tiempo para una discusión detallada.
 2. Comunicación del Estado
    Se comenzará con una descripción general del incidente y de las acciones tomadas en respuesta. Esto incluye cuando ocurrió, como se descubrió, sistemas afectados, datos afectados y que acciones se llevaron a cabo en respuesta al incidente.
 3. Discusión
@@ -21,14 +21,14 @@
 ## Identificación de lecciones aprendidas
 
 1. Lecciones aprendidas
-   Basandonos en la discución, indentificaremos las lecciones clave aprendidas. Esto incluye las áreas de mejor fortaleza, así como las áreas que debemos mejorar.
+   Basándonos en la discusión, identificaremos las lecciones clave aprendidas. Esto incluye las áreas de mejor fortaleza, así como las áreas que debemos mejorar.
 2. Plan de acción
-   Para cad lección aprendida, desarrollaremos un plan de acción correspondiente. Esto incluye cambios en los playbooks, formación del personal, actualizaciones de las políticas, etc.
+   Para cada lección aprendida, desarrollaremos un plan de acción correspondiente. Esto incluye cambios en los playbooks, formación del personal, actualizaciones de las políticas, etc.
 
 ## Comunicación de los Resultados
 
 1. Informe AAR
    Se redactará un informe de la AAR que documentará los hallazgos y las lecciones aprendidas. Este informe será compartido con todas las partes interesadas relevantes.
 2. Seguimiento
-   Se realizará un seguimiento regular de los planes de acción para asegurarnos de que se estaban implementando. Consideramos la posibiliadd de realizar una AAR de seguimiento después de un periodo de tiempo para revisar los progresos y las lecciones aprendidas adicionales.
+   Se realizará un seguimiento regular de los planes de acción para asegurarnos de que se estaban implementando. Consideramos la posibilidad de realizar una AAR de seguimiento después de un periodo de tiempo para revisar los progresos y las lecciones aprendidas adicionales.
 
