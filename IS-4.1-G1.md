@@ -160,4 +160,9 @@ Durante la fase de recuperación se han de restaurar los sistemas al estado ante
 Además, se deben llevar a cabo una serie de medidas preventivas para detectar y corregir otras posibles vulnerabilidades dentro de los sistemas de la organización.  
 
 Por último, dentro de las medidas de seguimiento y mejora continua del Plan de Respuesta, éste ha de ser revisado para corregir posibles fallos detectados durante el incidente o puntos débiles.  
-  
+
+## 3. PlayBooks
+
+## 4. Respuesta a las preguntas
+
+## 5. Conclusiones
