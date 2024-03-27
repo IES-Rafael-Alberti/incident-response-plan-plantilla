@@ -1,36 +1,37 @@
-# Realizar una revisión posterior a la acción (Conduct an After Action Review, AAR)
+# Informe de Revisión Posterior a la Acción (AAR)
 
-1. Programe una reunión de revisión posterior a la acción (AAR) dentro de {{AAR_SLA}} e invite a los asistentes que figuran en {{AAR_ATTENDEES}}. Incluya siempre a los siguientes:
-    * El Incident Commander.
-    * Los propietarios de los servicios implicados en el incidente.
-    * Ingeniero(s)/responsable(s) clave(s) implicado(s) en el incidente.
-1. Designe a un propietario del AAR que investigue el incidente antes de la reunión para prepararlo, estudiando el proceso del incidente en sí, incluyendo la revisión de notas e informes.
+## Preparación del AAR
 
-## Realización de la reunión AAR
+1. Miembros implicados
+   Indentificamos a los participantes clave que estuvieron involucrados en la respuesta al incidente. Esto incluye al equipo de seguridad de TI, al equipo de respuesta a incidentes, a los administradores de los sistemasy a cualquier parte interesada relevante al evento.
+2. Agenda
+   Estableceremos una agenda para la AAR, esto incluye una revisión de los hechos, una discusión de lo que salió bien y lo que se puede mejorar, y la identificación de lecciones aprendidas.
+3. Documentación
+   Recopilaremos toda l adocumentación relevante. Esto incluye registros de incidentes, playbooks utilizados, comunicaciones internas y externas, y cualquier otra información relevante.
 
-Documente las respuestas a las siguientes preguntas clave:
+## Realización del AAR
 
-1. **¿Qué ocurrió?** Cree una línea de tiempo, apoyada con datos u otros artefactos. **Evitar las culpas. Busca los hechos.**
-1. **¿Qué se suponía que iba a ocurrir?**
-    * Detallar las desviaciones del proceso, el procedimiento o las mejores prácticas, incluidas las evaluaciones de los SME.
-    * Identifique las formas en que el incidente podría haberse detectado antes o haberse respondido con mayor eficacia.
-1. **¿Cuáles fueron las causas fundamentales?** Encuentre la raíz de lo que ocurrió y de lo que debería haber ocurrido.
-1. **¿Cómo podemos mejorar?**  Capture los elementos de acción con asignados y fechas de vencimiento. Considerar:
-    * Detener: ¿Qué debemos dejar de hacer?
-    * Empezar: ¿Qué deberíamos empezar a hacer?
-    * Continuar: ¿Qué debemos seguir haciendo?
+1. Reuniones
+   Se organizaran reuniones para llevar a caba el AAR. Nos aseguraremos de que todos los participantes clave estuvieran presentes y de que se dispusiera de suficiente tiempo para una discusión detallada.
+2. Comunicación del Estado
+   Se comenzará con una descripción general del incidente y de las acciones tomadas en respuesta. Esto incluye cuando ocurrió, como se descubrió, sistemas afectados, datos afectados y que acciones se llevaron a cabo en respuesta al incidente.
+3. Discusión
+   Se realizará una discusión abierta y honesta. Se pedirá a cada participante que comparta su perspectiva sobre el incidente y su respuesta. Incluyendo lo que salió bien, lo que se podría haber hecho mejor y cualquier lección aprendida en el proceso.
 
-## Comunicar el estado y los resultados del AAR
+## Identificación de lecciones aprendidas
 
-El propietario del informe, en coordinación con el enlace interno, comunicará el estado del informe (véase más abajo).
+1. Lecciones aprendidas
+   Basandonos en la discución, indentificaremos las lecciones clave aprendidas. Esto incluye las áreas de mejor fortaleza, así como las áreas que debemos mejorar.
+2. Plan de acción
+   Para cad lección aprendida, desarrollaremos un plan de acción correspondiente. Esto incluye cambios en los playbooks, formación del personal, actualizaciones de las políticas, etc.
 
-### Descripciones de estado
+## Comunicación de los Resultados
 
-| Estado          | Descripción                                                                                                                                                                                                                                                                                                              |
-|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Borrador**    | La investigación de la AAR sigue en curso                                                                                                                                                                                                                                                                                |
-| **En revisión** | La investigación AAR se ha completado, y está lista para ser revisada durante la reunión AAR.                                                                                                                                                                                                                            |
-| **Revisado**    | La reunión de AAR ha terminado y el contenido ha sido revisado y acordado. <br/>Si hay "Mensajes externos" adicionales, el equipo de comunicación tomará medidas para prepararlos.                                                                                                                                            |
-| **Cerrado**     | No es necesario realizar más acciones en el AAR (los problemas pendientes se rastrean en los tickets).<br>Si no hay "Mensajes Externos", pase directamente a esto una vez que la reunión haya terminado.<br/>Si hay "Mensajes Externos" adicionales, el equipo de comunicaciones actualizará el AAR Cerrado una vez enviado. |
+1. Informe AAR
+   Se redactará un informe de la AAR que documentará los hallazgos y las lecciones aprendidas. Este informe será compartido con todas las partes interesadas relevantes.
+2. Seguimiento
+   Se realizará un seguimiento regular de los planes de acción para asegurarnos de que se estaban implementando. Consideramos la posibiliadd de realizar una AAR de seguimiento después de un periodo de tiempo para revisar los progresos y las lecciones aprendidas adicionales.
 
-Comunicar internamente los resultados del AAR y finalizar la documentación del AAR.
+   
+4. 
+
