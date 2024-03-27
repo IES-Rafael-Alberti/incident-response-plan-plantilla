@@ -1,11 +1,22 @@
 # Plan de Respuesta a Incidentes
-## Índice
-
-## ¿Qué es un plan de respuesta a incidentes?
+## Indice
+1. [Introducción](#introducción)  
+    1.1. [Identificación de activos](#identificación-de-activos)  
+    1.2. [Análisis de amenazas](#análisis-de-amenazas)  
+    1.3. [Establecimiento de vulnerabilidades](#establecimiento-de-vulnerabilidades)  
+    1.4. [Evaluación y cálculo de riesgo](#evaluación-y-cálculo-de-riesgo)  
+    1.5. [Clasificación y priorización de proyectos](#clasificación-y-priorización-de-proyectos)  
+    1.6. [Definición de proyectos](#definicion-de-proyectos)  
+3. [Plan de respuesta](#plan-de-respuesta)
+4. [Playbooks](#playbooks)
+5. [Respuesta a las preguntas](#respuesta-a-las-preguntas)
+6. [Conclusiones](#conclusiones)  
+## 1. Introducción
+¿Qué es un plan de respuesta a incidentes?  
 Un plan de respuesta a incidentes es un conjunto de procedimientos y políticas diseñadas para ayudar a una organización a detectar, responder y recuperarse de eventos que puedan comprometer la seguridad de sus activos de información.  
 Vamos a realizar este proyecto basandonos en los estudios realizados anteriormente para esta empresa.
 
-## Identificación de activos
+## 1.1 Identificación de activos
 
 Comenzaremos con identificar los activos que pueden ser vulnerados y a los cuales iran orientados este plan de respuesta:  
 
@@ -37,7 +48,7 @@ adicionales para su acceso.
 vulnerabilidad a corto plazo, pero si se quieren renovar a teléfonos IP, habrá que
 ajustarlos.
 
-## Análisis de las amenazas
+## 1.2 Análisis de las amenazas
 Las amenazas que pueden afectar a nuestros activos son varias:
 * Amenazas internas:
    - Averías de hardware
@@ -54,7 +65,7 @@ Las amenazas que pueden afectar a nuestros activos son varias:
   - Ataque de Ingeniería social
   - Suplantación de página web
   - Desastres naturales
-## Establecimiento de las vulnerabilidades
+## 1.3 Establecimiento de las vulnerabilidades
 Para establecer las vulnerabilidades, vamos a seguir los siguientes pasos:  
 
 1. Identificación de Activos y Elementos Clave: En primer lugar, se identifican los
@@ -80,12 +91,12 @@ vulnerabilidades, se desarrollan planes de mitigación para abordarlas.
 correctivas necesarias para abordar las vulnerabilidades identificadas y reducir el
 riesgo.
 
-## Evaluación y cálculo de riesgo
+## 1.4 Evaluación y cálculo de riesgo
 Por lo tanto, una vez tenido en cuenta estos puntos, hemos decidido que cualquier riesgo
 bajo la nota de 6 no será considerado como prioritario y se asumirá:
 ![Evaluación de riesgos](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/Images/riesgos.png)
 
-## Clasificación y priorización de los proyectos
+## 1.5 Clasificación y priorización de los proyectos
 Tenemos que organizar y dar importancia a las tareas o acciones que deben llevarse a
 cabo. Después de identificar las acciones específicas que se deben realizar, es útil
 agruparlas en diferentes criterios para tomar decisiones informadas sobre cuáles son las
@@ -109,12 +120,12 @@ implementar y que tienen un impacto significativo en la seguridad de la empresa.
 garantiza que los recursos se utilicen de manera más eficiente para abordar las áreas más
 críticas o vulnerables en términos de seguridad.  
 
-## Definición de proyectos
+## 1.6 Definición de proyectos
 Teniendo en cuenta los objetivos e iniciativas de la tabla exterior se le añade la fecha de
 inicio y de finalización para dichos proyectos:  
 ![Proyectos](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/Images/proyectos.png)
 
-## Plan de respuesta a incidentes
+## 2. Plan de respuesta a incidentes
 Una vez detallado todo lo anterior comenzamos a realizar nuestro plan para responder en el caso de que se de un incidente que no podemos tolerar en uno de nuestros activos.
 
 Este plan consta de los siguientes puntos:
