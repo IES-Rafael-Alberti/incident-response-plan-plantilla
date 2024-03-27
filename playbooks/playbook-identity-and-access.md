@@ -1,65 +1,61 @@
 
 ## Playbook: Compromiso de identidad y acceso
 
-**Investigar, remediar (contener, erradicar) y comunicar en paralelo!.**
+**¡Investiga, remedia (contención, erradicación), y comunicación en paralelo!**
 
-Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
+### Investigación
 
-### Investigar
+1. Lo primero es revisar las credenciales del usuario que se cree que ha sido vulnerado, para comprobar hasta que punto puede acceder en el sistema.
+2. Revisar si no ha sido una falsa alarma, contactando con la persona dueña de las credenciales.
+3. Una vez descubierto que las credenciales han sido comprometidas, preguntar al usuario sobre puntos posibles que haya podido comprometerse la seguridad, desde si ha abierto correos extraños, a si ha descargado nuevo software. También se debe revisar el puesto de trabajo por si hay anomalías.
+4. Una vez descubierto el método que se usó para comprometer las credenciales, revisar si hay posibilidad de otras víctimas.
+5. Revisar si los afectados tenían información sensible en sus cuentas asociadas o en el equipo, y usar los logs para determinar su último acceso.
 
-`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el compromiso de la identidad y el acceso.`
+### Remedio
 
-1. TODO
-
-### Remediar
-
-* **Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
-* **Considere el tiempo y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
 
 #### Contención
 
-`TODO: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la identidad y el acceso.`
+* Despojar al usuario comprometido de todo permiso y desactivarlo.
+* Pasar a resetear todas las contraseñas asociadas al usuario.
+* Activar el multi-factor donde sea posible.
+* Desactivar login remoto del usuario.
+* Revocar todo token de autenticación de los usuarios afectados.
+* Si una organización externa ha sido detectada en la investigación, avisar a dicha organización del compromiso de seguridad.
+* Siguiendo el paso anterior, bloquear el dominio para evitar recibir más notificaciones o emails de dicha organización.
+* Si se ha detectado malware, se debe preservar una muestra de ese malware y analizarla.
+* Aislar todos los sistemas infectados, sin apagar a menos que sea absolutamente necesario. Preservar los sistemas para investigaciones forenses posteriores.
+* Bloquear todos los Indicadores de Compromiso asociado al sistema de email, firewall y otros sistemas de seguridad.
 
-`TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.`
+#### Erradicación
 
-* TODO
+* Preservar artefactos, sistemas y copias de seguridad relevantes acordado a la sensibilidad y escala del incidente, dado que puede ser importante para análisis forenses futuros.
+* Preservar cualquier dato volatil que pueda ser recogido durante las fases anteriores.
+* Una vez preservado todo lo anterior, reemplaza o reconstruye los sistemas.
 
-`TODO: Considerar la automatización de las medidas de contención utilizando herramientas de orquestación.`
+#### Recuperación
 
-#### Erradicar
+* Restaurar los sistemas afectados con una copia de seguridad limpia, de antes de la infección si es posible.
+* Para aquellos que no puedan ser restaurados con una copia de seguridad, reconstruye las máquinas con una imagen limpia o desde el inicio.
+* Remediar toda vulnerabilidad y debilidades identificadas en la investigación.
+* Resetear contraseñas de todas las cuentas afectadas o crear cuentas de reemplazo y dejar las cuentas afectadas desactivadas de manera permanente.
+* Continuar la monitorización de actividad maliciosa a este incidente por un periodo de tiempo prolongado.
 
-`TODO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el compromiso de la identidad y el acceso.`
+#### Referencias: Recursos de recuperación
 
-`TODO: Especificar herramientas y procedimientos para cada paso, a continuación.`
 
-* TODO
+### Comunicación
 
-#### Referencia: Recursos de remediación
+Adicionalmente a todo lo anterior, se debe tener esto en cuenta:
 
-`TODO: Especificar los recursos financieros, de personal y logísticos para llevar a cabo la remediación.`
-
-### Comunicar
-
-`TODO: Personalizar los pasos de comunicación para el compromiso de la identidad y el acceso.`
-
-`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`
-
-Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
-
-1. TODO
-
-### Recuperación
-
-`TODO: Personalizar los pasos de recuperación para el compromiso de la identidad y el acceso.`
-
-`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`
-
-Además de los pasos y orientaciones generales del plan de respuesta a incidentes:
-
-1. TODO
+1. Mantener una comunicación constante entre los equipos.
+2. Mantener actualizados a los usuarios afectados de la evolución de la investigación.
+3. Al final de la investigación, hacer una reunión para resumir todo lo acontecido y cómo mejorar la seguridad.
 
 ### Recursos
 
-#### Información adicional
+1. <a name="identity-and-access-playbook-ref-1"></a>["Plantilla"](#https://github.com/counteractive/incident-response-plan-template/tree/master)
+2. <a name="Compromised Credentials"></a>["Informacion sobre Credenciales Comprometidas en un Playbook"](#https://frsecure.com/compromised-credentials-response-playbook/)
 
-1. <a name="identity-and-access-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
+#### Información Adicional
+
