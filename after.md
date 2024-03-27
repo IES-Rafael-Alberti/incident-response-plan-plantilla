@@ -32,6 +32,3 @@
 2. Seguimiento
    Se realizará un seguimiento regular de los planes de acción para asegurarnos de que se estaban implementando. Consideramos la posibiliadd de realizar una AAR de seguimiento después de un periodo de tiempo para revisar los progresos y las lecciones aprendidas adicionales.
 
-   
-4. 
-
