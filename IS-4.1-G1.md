@@ -1,6 +1,6 @@
 # Plan de Respuesta a Incidentes
 ## Indice
-1. [Introducción](#id1)  
+1. [Introducción](#iintroduccion)  
     1.1. [Identificación de activos](#identificación-de-activos)  
     1.2. [Análisis de amenazas](#análisis-de-amenazas)  
     1.3. [Establecimiento de vulnerabilidades](#establecimiento-de-vulnerabilidades)  
@@ -11,7 +11,7 @@
 4. [Playbooks](#playbooks)
 5. [Respuesta a las preguntas](#respuesta-a-las-preguntas)
 6. [Conclusiones](#conclusiones)  
-## 1. Introducción <div id='id1' />
+## 1. Introducción <div id='introduccion' />
 ¿Qué es un plan de respuesta a incidentes?  
 Un plan de respuesta a incidentes es un conjunto de procedimientos y políticas diseñadas para ayudar a una organización a detectar, responder y recuperarse de eventos que puedan comprometer la seguridad de sus activos de información.  
 Vamos a realizar este proyecto basandonos en los estudios realizados anteriormente para esta empresa.
@@ -48,7 +48,7 @@ adicionales para su acceso.
 vulnerabilidad a corto plazo, pero si se quieren renovar a teléfonos IP, habrá que
 ajustarlos.
 
-## 1.2 Análisis de las amenazas
+## 1.2 Análisis de las amenazas <div id='analisis-de-las-amenazas' />
 Las amenazas que pueden afectar a nuestros activos son varias:
 * Amenazas internas:
    - Averías de hardware
@@ -65,7 +65,7 @@ Las amenazas que pueden afectar a nuestros activos son varias:
   - Ataque de Ingeniería social
   - Suplantación de página web
   - Desastres naturales
-## 1.3 Establecimiento de las vulnerabilidades
+## 1.3 Establecimiento de las vulnerabilidades <div id='establecimiento-de-las-vulnerabilidades' />
 Para establecer las vulnerabilidades, vamos a seguir los siguientes pasos:  
 
 1. Identificación de Activos y Elementos Clave: En primer lugar, se identifican los
@@ -91,12 +91,12 @@ vulnerabilidades, se desarrollan planes de mitigación para abordarlas.
 correctivas necesarias para abordar las vulnerabilidades identificadas y reducir el
 riesgo.
 
-## 1.4 Evaluación y cálculo de riesgo
+## 1.4 Evaluación y cálculo de riesgo <div id='evaluacion-y-calculo-de-riesgo' />
 Por lo tanto, una vez tenido en cuenta estos puntos, hemos decidido que cualquier riesgo
 bajo la nota de 6 no será considerado como prioritario y se asumirá:
 ![Evaluación de riesgos](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/Images/riesgos.png)
 
-## 1.5 Clasificación y priorización de los proyectos
+## 1.5 Clasificación y priorización de los proyectos <div id='clasificacion-y-priorizacion-de-los-proyectos' />
 Tenemos que organizar y dar importancia a las tareas o acciones que deben llevarse a
 cabo. Después de identificar las acciones específicas que se deben realizar, es útil
 agruparlas en diferentes criterios para tomar decisiones informadas sobre cuáles son las
@@ -120,12 +120,12 @@ implementar y que tienen un impacto significativo en la seguridad de la empresa.
 garantiza que los recursos se utilicen de manera más eficiente para abordar las áreas más
 críticas o vulnerables en términos de seguridad.  
 
-## 1.6 Definición de proyectos
+## 1.6 Definición de proyectos <div id='definicion-de-proyectos' />
 Teniendo en cuenta los objetivos e iniciativas de la tabla exterior se le añade la fecha de
 inicio y de finalización para dichos proyectos:  
 ![Proyectos](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/Images/proyectos.png)
 
-## 2. Plan de respuesta a incidentes
+## 2. Plan de respuesta a incidentes <div id='plan-de-respuesta-a-incidentes' />
 Una vez detallado todo lo anterior comenzamos a realizar nuestro plan para responder en el caso de que se de un incidente que no podemos tolerar en uno de nuestros activos.
 
 Este plan consta de los siguientes puntos:
@@ -161,7 +161,7 @@ Además, se deben llevar a cabo una serie de medidas preventivas para detectar y
 
 Por último, dentro de las medidas de seguimiento y mejora continua del Plan de Respuesta, éste ha de ser revisado para corregir posibles fallos detectados durante el incidente o puntos débiles.  
 
-## 3. PlayBooks
+## 3. PlayBooks <div id='playbooks' />
 
 En este apartado, nos centraremos en el desarrollo de playbooks de respuesta a incidentes, que son guías detalladas que proporcionan procedimientos paso a paso para manejar incidentes de seguridad. Estos documentos son esenciales para garantizar una respuesta rápida, eficaz y organizada ante cualquier amenaza de seguridad.
 
@@ -192,7 +192,7 @@ Aquí están los playbooks que hemos creado y las técnicas correspondientes de 
     - Acquire Access (T1588): Se centra sobre cómo manejar los incidentes donde los atacantes adquieren acceso a las cuentas, sistemas o datos.
     - Compromise Accounts (T1586): Se centra en los incidentes donde los atacantes comprometen las cuentas de los usuarios.
 
-## 4. Respuesta a las preguntas
+## 4. Respuesta a las preguntas <div id='respuesta-a-las-preguntas' />
 
 1.a   ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.  
 
@@ -239,4 +239,4 @@ Mi plan de respuesta a incidentes se centra en promover la resiliencia en todas 
 
 Esto se logra mediante la implementación de medidas preventivas, la detección temprana, la respuesta rápida y coordinada, y la revisión y mejora continua del plan.
 
-## 5. Conclusiones
+## 5. Conclusiones <div id='conclusiones' />
