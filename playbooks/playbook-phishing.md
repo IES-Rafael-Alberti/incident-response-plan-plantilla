@@ -6,7 +6,7 @@ Phishing: Estafa cibernética en la cual el atacante intenta conseguir toda info
 
 El phishing es una forma de fraude, que se va haciendo más frecuente y a la larga, puede tener consecuencias graves, como, por ejemplo, robo de identidad, pérdida financiera, entre otros...
 
-### Identificación
+### Paso 1: Identificación
 
 1. Identificar a que persona o personas han sufrido el phishing.
 1. Comprobar las direcciones de correo y el de correo para verficar la procedencia.
@@ -14,7 +14,7 @@ El phishing es una forma de fraude, que se va haciendo más frecuente y a la lar
 1. Recopaliar toda la información sobre el incidente, como se ha producido el ataque, como las consecuencias que ha tenido el ataque.
 1. Notificar tanto al equipo de seguridad como a los usuarios afectados, para realizar los remedios necesarios para que no se vuelva a repetir este tipo de ataque.
 
-### Fase de Contención
+### Paso 2: Fase de Contención
 
 #### Evaluación de la situación
 
@@ -32,7 +32,7 @@ El phishing es una forma de fraude, que se va haciendo más frecuente y a la lar
 * No descargar ni ejecuar ningún archivo adjunto.
 * Tratar de contactar con el que envió el mensaje con un medio alternativo conocido, empleando datos de contacto confiables
 
-### Fase de Mitigación
+### Paso 3: Fase de Mitigación
 
 * Una vez recopilada y analizada la información obtenida, deben de tomarse las medidas para gestionar el incidente.
 * Alertar a la organización sobre la existencia de una posible campaña de un phishing predemitado, para avisar a todos los trabajadores y usar las pautas a seguir ante este ataque.
@@ -43,17 +43,17 @@ El phishing es una forma de fraude, que se va haciendo más frecuente y a la lar
   * Filtrar la dirección de correo o IP de origen del servidor de donde provienen    los emails sospechosos.
   * En caso de que un usuario de la organización haya ejecutado o abierto un          archivo adjunto, aislar el dispositivo y notificar al equipo para que se          realice labores de investigación y desinfección.
 
-### Fase de Recuperación
+### Paso 4: Fase de Recuperación
 
 * Si se dispone de un equipo legal, coordinarse con el para tener en cuenta sobre las posibles conseguencias legales y de la reputación de la empresa.
 * Determinar las posibles consecuencias económicas.
 * Realizar una revisión exhaustiva de las medidas de seguridad existentes.
 
-### Fase Post-Incidente
+### Paso 5: Fase Post-Incidente
 
 Una vez que el ciber incidente está controlado y la actividad ha vuelto a la normalidad, es necesario reflexionar sobre lo sucedido, analizando el motivo de porque ha pasado, como se ha desarrollado el control de la gestión sobre el ciber incidente y todos los problemas asociados a la misma. Se trata de este paso, aprender de lo sucedido, para que no vuelva a pasar.
 
-### Lecciones aprendidas
+### Paso 6: Lecciones aprendidas
 
 * Realizar una revisión post-incidente para identificar las lecciones aprendidas y las áreas de mejora en las políticas.
 * Porporcionar charlas de concienciación sobre la seguridad a los empleados para aumentar la conciencia sobre los riegsos asociados, además de brindar pautas para identificar y evitar dichos mensajes.
