@@ -166,15 +166,19 @@ Por último, dentro de las medidas de seguimiento y mejora continua del Plan de 
 ## 4. Respuesta a las preguntas
 
 1.a   ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.  
+
 Estos dos enfoques son fundamentales para entender y responder de manera efectiva a los ataques cibernéticos. Utilizando sus matrices y modelos respectivamente garantiza una respuesta integral y coordinada que aborda todas las etapas del incidente y ayuda a minimizar el impacto en la organización afectada.
 
 1.b   ¿Qué playbooks has identificado como necesarios en este plan de respuesta y en que te has basado para identificar esos playbooks y saber que son los necesarios? Deja algún diagrama que describa el flujo de un playbook.  
+
 Hemos identificado que los playbooks de incidentes de seguridad cibernética abordan los pasos a seguir en caso de un ataque cibernético, como una violación de datos, un ransomware, o un ataque de denegación de servicio (DDoS). Se basa en las mejores prácticas de seguridad cibernética, incluidas las pautas de organizaciones como el NIST o el CERT, que es la especialización que estamos estudiando.
 
 1.c   ¿Como te has asegurado que has cubierto todas las fases del plan de respuesta? ¿Qué fase consideras que está más floja en un plan? ¿Cuál de ellas consideras que está mejor trabajada en tu plan? Asegúrate de hablar de todas las fases y como las cubres.  
 
 Para asegurarme de cubrir todas las fases del plan de respuesta, he seguido una estructura clara y detallada que abarca desde la preparación hasta la recuperación y seguimiento. Cada fase se ha diseñado para garantizar una respuesta integral y efectiva ante incidentes de seguridad.  
+
 En cuanto a la fase que considero más floja en un plan de respuesta, podría ser la fase de preparación si no se realiza de manera adecuada. Una preparación insuficiente puede dejar lagunas en la identificación de activos críticos, en la evaluación de riesgos o en la implementación de medidas de seguridad adecuadas.  
+
 Por otro lado, considero que la fase de respuesta está mejor trabajada en mi plan. Esto se debe a que se establecen claramente los pasos a seguir para contener el incidente, evaluar el riesgo, eliminar las amenazas y coordinar con los equipos internos y externos necesarios para manejar la situación de manera efectiva.  
 
 2.a   ¿En que consiste el Flujo de Toma de Decisiones y Escalado de tu plan de respuesta? ¿Existe un plan de comunicación, protocolos, etc? Si la respuesta es correcta, haz un resumen del plan y protocolos. Deja evidencias del flujo, mediante un diagrama. 
