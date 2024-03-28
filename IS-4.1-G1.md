@@ -163,6 +163,35 @@ Por último, dentro de las medidas de seguimiento y mejora continua del Plan de 
 
 ## 3. PlayBooks
 
+En este apartado, nos centraremos en el desarrollo de playbooks de respuesta a incidentes, que son guías detalladas que proporcionan procedimientos paso a paso para manejar incidentes de seguridad. Estos documentos son esenciales para garantizar una respuesta rápida, eficaz y organizada ante cualquier amenaza de seguridad.
+
+El desarrollo de un playbook de ciberseguridad implica una comprensión profunda de la infraestructura de TI de la organización, las amenazas potenciales y las mejores prácticas de seguridad. Cada playbook debe ser único y adaptado a las necesidades específicas de la organización.
+
+Un aspecto crucial en el desarrollo de un playbook es el procedimiento de toma de decisiones y el escalado de incidentes. 
+
+La toma de decisiones suele tomarse a nivel de equipo. En el caso de un incidente de ciberseguridad, el equipo de TI y de respuesta a incidentes debería reunirse para discutir la situación y decidir el mejor curso de acción. 
+
+Respecto al escalado de incidentes: Si el incidente es grave, puede ser necesario involucrar a la alta dirección. Sin embargo, en la mayoría de los casos, el equipo de TI y de respuesta a incidentes debería ser capaz de manejar el incidente por sí mismo. Si el caso es demasiado grave para que lo maneje el equipo de respuesta a incidentes, este puede ser externalizado a otra empresa.
+
+Los playbooks se han diseñado con un enfoque en la ciberresiliencia. Esto significa que no sólo deben centrarse en cómo responder a un incidente de seguridad, sino también en cómo la organización puede recuperarse y aprender de estos incidentes. 
+
+La ciberresiliencia no sólo se trata de prevenir incidentes de ciberseguridad, sino también de manejarlos de manera efectiva cuando ocurren.
+
+Según una investigación sobre los tipos de técnicas recopiladas en la MITRE ATT&CK, se ha desarrollado unos playbooks de respuesta a los ataques más significativos y dañinos para nuestra empresa. Cada playbook está diseñado para responder a una técnica específica de ataque cibernético. 
+
+Aquí están los playbooks que hemos creado y las técnicas correspondientes de MITRE ATT&CK:
+- Explotación de Aplicaciones de Cara al Público (T1190): Este playbook se centra en cómo responder a los incidentes donde los atacantes explotan las vulnerabilidades en las aplicaciones que son accesibles al público.
+- Phishing (T1566): Este playbook proporciona una guía sobre cómo manejar los incidentes de phishing, donde los atacantes intentan engañar a los usuarios para que revelen información sensible.
+- Trusted Relationship (T1199): Este playbook se centra en los incidentes donde los atacantes explotan las relaciones de confianza dentro de las redes y sistemas.
+- Data Encrypted for Impact (T1486): Este playbook es para incidentes de ransomware, donde los atacantes cifran los datos y exigen un rescate para su descifrado.
+- Data Manipulation (T1565): Este playbook proporciona una guía sobre cómo manejar los incidentes donde los atacantes manipulan o alteran los datos para causar impacto.
+- Disk Wipe (T1561): Este playbook se centra en los incidentes donde los atacantes borran los datos o los sistemas operativos de los discos duros.
+- Network Denial of Service (T1498): Este playbook proporciona una guía sobre cómo manejar los incidentes de denegación de servicio.
+- Identity and Access Attacks: Este playbook engloba tres técnica diferentes.
+    - Gather Victim Identity Information (T1589): Se centra en los incidentes donde los atacantes recopilan información de identificación de las víctimas.
+    - Acquire Access (T1588): Se centra sobre cómo manejar los incidentes donde los atacantes adquieren acceso a las cuentas, sistemas o datos.
+    - Compromise Accounts (T1586): Se centra en los incidentes donde los atacantes comprometen las cuentas de los usuarios.
+
 ## 4. Respuesta a las preguntas
 
 1.a   ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.  
