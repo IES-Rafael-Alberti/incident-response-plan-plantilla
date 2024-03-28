@@ -205,7 +205,9 @@ Sí, dentro del plan de respuesta a incidentes, es fundamental contar con un pla
 * Evaluación y revisión: Programar evaluaciones periódicas del plan de comunicación para identificar áreas de mejora y realizar ajustes según sea necesario. Esto garantiza que el plan esté actualizado y sea efectivo en la gestión de futuros incidentes.
 
 3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?
+
 Mi plan de respuesta a incidentes se centra en promover la resiliencia en todas las fases, desde la preparación hasta la recuperación y el seguimiento.
+
 Esto se logra mediante la implementación de medidas preventivas, la detección temprana, la respuesta rápida y coordinada, y la revisión y mejora continua del plan.
 
 ## 5. Conclusiones
