@@ -181,9 +181,31 @@ En cuanto a la fase que considero más floja en un plan de respuesta, podría se
 
 Por otro lado, considero que la fase de respuesta está mejor trabajada en mi plan. Esto se debe a que se establecen claramente los pasos a seguir para contener el incidente, evaluar el riesgo, eliminar las amenazas y coordinar con los equipos internos y externos necesarios para manejar la situación de manera efectiva.  
 
-2.a   ¿En que consiste el Flujo de Toma de Decisiones y Escalado de tu plan de respuesta? ¿Existe un plan de comunicación, protocolos, etc? Si la respuesta es correcta, haz un resumen del plan y protocolos. Deja evidencias del flujo, mediante un diagrama. 
+2.a   ¿En que consiste el Flujo de Toma de Decisiones y Escalado de tu plan de respuesta? ¿Existe un plan de comunicación, protocolos, etc? Si la respuesta es correcta, haz un resumen del plan y protocolos. Deja evidencias del flujo, mediante un diagrama.  
+
+Consiste en un proceso estructurado que determina cómo se toman las decisiones y cómo se escalan los problemas a medida que se desarrolla el incidente.  
+
+
+Sí, dentro del plan de respuesta a incidentes, es fundamental contar con un plan de comunicación.
+### Resumen Plan de comunicación
+* Objetivos de comunicación: Establecer los objetivos generales de comunicación durante un incidente, como mantener a todas las partes interesadas informadas, minimizar la confusión y mitigar el impacto en la reputación de la organización.
+
+* Equipo de comunicación: Designar un equipo de comunicación responsable de coordinar y gestionar la comunicación durante el incidente. Este equipo puede incluir representantes de relaciones públicas, comunicaciones internas, equipos técnicos y líderes de gestión.
+
+* Canales de comunicación: Identificar los canales de comunicación a utilizar para transmitir información durante el incidente. Esto puede incluir correo electrónico, mensajería instantánea, reuniones en línea, líneas telefónicas dedicadas y redes sociales, según la naturaleza y la gravedad del incidente.
+
+* Protocolos de comunicación interna: Establecer protocolos claros para la comunicación interna entre los diferentes equipos y niveles jerárquicos de la organización. Esto puede incluir procedimientos para reportar incidentes, compartir actualizaciones y coordinar acciones de respuesta.
+
+* Protocolos de comunicación externa: Definir protocolos para la comunicación externa con partes interesadas clave, como clientes, socios comerciales, reguladores, medios de comunicación y el público en general. Estos protocolos pueden incluir la designación de portavoces autorizados y la preparación de mensajes específicos para cada audiencia.
+
+* Mensajes clave: Desarrollar mensajes clave que comuniquen de manera clara y concisa la naturaleza del incidente, las acciones tomadas para abordarlo y las medidas de mitigación implementadas. Estos mensajes deben ser consistentes en todos los canales de comunicación y adaptados a la audiencia correspondiente.
+
+* Procedimientos de aprobación: Establecer procedimientos claros para la aprobación de mensajes y la divulgación de información durante el incidente. Esto puede incluir la revisión y aprobación previa de comunicaciones por parte de líderes clave de la organización.
+
+* Evaluación y revisión: Programar evaluaciones periódicas del plan de comunicación para identificar áreas de mejora y realizar ajustes según sea necesario. Esto garantiza que el plan esté actualizado y sea efectivo en la gestión de futuros incidentes.
 
 3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?
-
+Mi plan de respuesta a incidentes se centra en promover la resiliencia en todas las fases, desde la preparación hasta la recuperación y el seguimiento.
+Esto se logra mediante la implementación de medidas preventivas, la detección temprana, la respuesta rápida y coordinada, y la revisión y mejora continua del plan.
 
 ## 5. Conclusiones
