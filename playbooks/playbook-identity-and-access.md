@@ -1,6 +1,17 @@
 
 ## Playbook: Compromiso de identidad y acceso
 
+**Relación con el MITRE**
+
+### Matriz de MITRE
+
+Uno de los peligros que se ha podido detectar, es la vulnerabilidad de la identidad y acceso de los usuarios de la empresa, específicamente las credenciales de acceso para poder alcanzar información privilegiada entre otro tipo de actividades nocivas. 
+
+La vulnerabilidad de credenciales puede llevar a multitud de problemas, obteniendo acceso a niveles críticos de la empresa, a información privilegiada, e incluso si los permisos lo permiten, instalar malware dentro de los ordenadores a los que tenga acceso de manera remota. 
+
+La manera en la que se puede llegar a acceder a estas cuentas, lo más habitual es el phishing, siendo ejecutado por el mismo usuario a través de un correo malicioso o link malicioso cuando navegan por las redes, pudiendo hacer que se instale en el ordenador o máquina, además de poder intentar hacer que otros usuarios puedan ser afectados por ese mismo.
+
+
 **¡Investiga, remedia (contención, erradicación), y comunicación en paralelo!**
 
 ### Investigación
