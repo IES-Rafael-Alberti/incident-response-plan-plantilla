@@ -48,7 +48,7 @@ adicionales para su acceso.
 vulnerabilidad a corto plazo, pero si se quieren renovar a teléfonos IP, habrá que
 ajustarlos.
 
-## 1.2 Análisis de las amenazas <div id='analisis-de-las-amenazas' />
+## 1.2 Análisis de las amenazas <div id='análisis-de-amenazas' />
 Las amenazas que pueden afectar a nuestros activos son varias:
 * Amenazas internas:
    - Averías de hardware
@@ -65,7 +65,7 @@ Las amenazas que pueden afectar a nuestros activos son varias:
   - Ataque de Ingeniería social
   - Suplantación de página web
   - Desastres naturales
-## 1.3 Establecimiento de las vulnerabilidades <div id='establecimiento-de-las-vulnerabilidades' />
+## 1.3 Establecimiento de las vulnerabilidades <div id='establecimiento-de-vulnerabilidades' />
 Para establecer las vulnerabilidades, vamos a seguir los siguientes pasos:  
 
 1. Identificación de Activos y Elementos Clave: En primer lugar, se identifican los
@@ -91,12 +91,12 @@ vulnerabilidades, se desarrollan planes de mitigación para abordarlas.
 correctivas necesarias para abordar las vulnerabilidades identificadas y reducir el
 riesgo.
 
-## 1.4 Evaluación y cálculo de riesgo <div id='evaluacion-y-calculo-de-riesgo' />
+## 1.4 Evaluación y cálculo de riesgo <div id='evaluación-y-cálculo-de-riesgo' />
 Por lo tanto, una vez tenido en cuenta estos puntos, hemos decidido que cualquier riesgo
 bajo la nota de 6 no será considerado como prioritario y se asumirá:
 ![Evaluación de riesgos](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/Images/riesgos.png)
 
-## 1.5 Clasificación y priorización de los proyectos <div id='clasificacion-y-priorizacion-de-los-proyectos' />
+## 1.5 Clasificación y priorización de los proyectos <div id='clasificación-y-priorización-de-proyectos' />
 Tenemos que organizar y dar importancia a las tareas o acciones que deben llevarse a
 cabo. Después de identificar las acciones específicas que se deben realizar, es útil
 agruparlas en diferentes criterios para tomar decisiones informadas sobre cuáles son las
