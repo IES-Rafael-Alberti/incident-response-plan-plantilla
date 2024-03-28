@@ -142,17 +142,17 @@ Este plan consta de los siguientes puntos:
    - Informar: Notificar el incidente de seguridad a los equipos de respuesta ante incidentes para que se inicien los procedimientos de contención.  
      
 3. Respuesta. Este punto va enlazado con el anterior, ya que se basa en la información sacada de la detección y del análisis. Consta de los siguientes puntos:
-- Contener inmediatamente sistemas, redes, almacenes de datos y dispositivos para minimizar la amplitud del incidente y aislarlo.  
-  
-- Determinar si datos sensibles han sido robados o corrompidos y valorar el riesgo potencial.  
-  
-- Eliminar ficheros maliciosos.  
-  
-- Preservar todos los dispositivos y sistemas asociados al incidente para análisis posteriores de impacto, origen e intenciones.  
-  
-- Involucración del equipo legal para examinar el cumplimiento y determinar si el incidente impacta alguna norma vigente.  
-  
-- Ponerse en contacto con los cuerpos de seguridad si corresponde ante posibles hechos que pudieran ser constitutivos de delito.  
+    - Contener inmediatamente sistemas, redes, almacenes de datos y dispositivos para minimizar la amplitud del incidente y aislarlo.  
+      
+    - Determinar si datos sensibles han sido robados o corrompidos y valorar el riesgo potencial.  
+      
+    - Eliminar ficheros maliciosos.  
+      
+    - Preservar todos los dispositivos y sistemas asociados al incidente para análisis posteriores de impacto, origen e intenciones.  
+      
+    - Involucración del equipo legal para examinar el cumplimiento y determinar si el incidente impacta alguna norma vigente.  
+      
+    - Ponerse en contacto con los cuerpos de seguridad si corresponde ante posibles hechos que pudieran ser constitutivos de delito.  
 
 4. Recuperación y seguimiento.
 Durante la fase de recuperación se han de restaurar los sistemas al estado anterior al incidente asegurando que se recuperan la integridad, disponibilidad y confidencialidad de los sistemas y datos.  
