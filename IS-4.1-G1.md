@@ -16,7 +16,7 @@
 Un plan de respuesta a incidentes es un conjunto de procedimientos y políticas diseñadas para ayudar a una organización a detectar, responder y recuperarse de eventos que puedan comprometer la seguridad de sus activos de información.  
 Vamos a realizar este proyecto basandonos en los estudios realizados anteriormente para esta empresa.
 
-## 1.1 Identificación de activos
+## 1.1 Identificación de activos <div id='identificación-de-activos' />
 
 Comenzaremos con identificar los activos que pueden ser vulnerados y a los cuales iran orientados este plan de respuesta:  
 
