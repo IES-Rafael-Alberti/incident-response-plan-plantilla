@@ -1,4 +1,4 @@
-## Rol: Enlace (Liaison)
+## Rol: Enlace
 
 ### Descripción
 
