@@ -7,9 +7,9 @@ A continuación se presentan las descripciones, deberes y entrenamiento para cad
 ## Estructura de Roles
 
 * Equipo de Comando
-  * [Comandante de Incidentes](#rol-comandante-de-incidentes-ci)
-  * [Subcomandante de Incidentes](#rol-subcomandante-de-incidentes-subcomandante)
-  * [Escribiente](#rol-escribiente)
+  * [Jefe de Incidentes](#rol-jefe-de-incidentes-ci)
+  * [Subjefe de Incidentes](#rol-subjefe-de-incidentes-subjefe)
+  * [Escriba](#rol-escriba)
 * Equipo de Enlace
   * Enlace Interno
   * Enlace Externo
@@ -19,7 +19,7 @@ A continuación se presentan las descripciones, deberes y entrenamiento para cad
   * EM para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
 Durante incidentes más grandes y complejos, la estructura de roles puede ajustarse para tener en cuenta la creación de subequipos. Lee sobre cómo manejamos [incidentes complejos](/antes/incidentes_complejos.md) para obtener más información.
 
-Esta es una estructura **flexible**: no todos los roles serán ocupados por una persona diferente para cada incidente. Por ejemplo, en un incidente pequeño, el Subcomandante podría actuar como Escribiente y Enlace Interno. La estructura es flexible y se adapta en función del incidente.
+Esta es una estructura **flexible**: no todos los roles serán ocupados por una persona diferente para cada incidente. Por ejemplo, en un incidente pequeño, el Subjefe podría actuar como Escriba y Enlace Interno. La estructura es flexible y se adapta en función del incidente.
 
 ## Tiempo de Guerra vs. Tiempo de Paz
 
