@@ -1,35 +1,34 @@
 # Roles
 
-The following are the descriptions, duties, and training for each of the defined roles in an incident response.
+A continuación se presentan las descripciones, deberes y entrenamiento para cada uno de los roles definidos en una respuesta a incidentes.
 
-`TODO: Customize roles, descriptions, duties, and training, if necessary.`
+`TODO: Personaliza roles, descripciones, deberes y entrenamiento, si es necesario.`
 
-## Structure of Roles
+## Estructura de Roles
 
-* Command Team
-  * [Incident Commander](#role-incident-commander-ic)
-  * [Deputy Incident Commander](#role-deputy-incident-commander-deputy)
-  * [Scribe](#role-scribe)
-* Liaison Team
-  * Internal [Liaison](#role-liaison)
-  * External Liaison
-* Operations Team
-  * [Subject Matter Experts](#role-subject-matter-expert-sme) (SMEs) for Systems
-  * SMEs for Teams/Business Units
-  * SMEs for Executive Functions (_e.g._, Legal, HR, Finance)
-During larger complex incidents, the role structure may be adjusted to account for the creation of sub-teams. Read about how we handle [complex incidents](/before/complex_incidents.md) for more information.
+* Equipo de Comando
+  * [Comandante de Incidentes](#rol-comandante-de-incidentes-ci)
+  * [Subcomandante de Incidentes](#rol-subcomandante-de-incidentes-subcomandante)
+  * [Escribiente](#rol-escribiente)
+* Equipo de Enlace
+  * Enlace Interno
+  * Enlace Externo
+* Equipo de Operaciones
+  * [Expertos en la Materia](#rol-experto-en-la-materia-em) (EM) para Sistemas
+  * EM para Equipos/Unidades de Negocio
+  * EM para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
+Durante incidentes más grandes y complejos, la estructura de roles puede ajustarse para tener en cuenta la creación de subequipos. Lee sobre cómo manejamos [incidentes complejos](/antes/incidentes_complejos.md) para obtener más información.
 
-This is a **flexible structure**: every role will not be filled by a different person for every incident. For example, in a small incident the Deputy might act as the Scribe and Internal Liaison. The structure is flexible and scales based on the incident.
+Esta es una estructura **flexible**: no todos los roles serán ocupados por una persona diferente para cada incidente. Por ejemplo, en un incidente pequeño, el Subcomandante podría actuar como Escribiente y Enlace Interno. La estructura es flexible y se adapta en función del incidente.
 
-## Wartime vs. Peacetime
+## Tiempo de Guerra vs. Tiempo de Paz
 
-On incident response calls ("wartime"), a different organizational structure overrides normal operations ("peacetime"):
+Durante las llamadas de respuesta a incidentes ("tiempo de guerra"), una estructura organizativa diferente anula las operaciones normales ("tiempo de paz"):
 
-* The Incident Commander is in charge. No matter their rank during peacetime, they are now the highest ranked individual on the call, higher than the CEO.
-* Primary responders (folks acting as primary on-call for a team/service) are the highest ranked individuals for that service.
-* Decisions will be made by the IC after consideration of the information presented. Once that decision is made, it is final.
-* Riskier decisions can be made by the IC than would normally be considered during peacetime.
-* The IC may go against a consensus decision. If a poll is done, and 9/10 people agree but 1 disagrees. The IC may choose the disagreement option despite a majority vote.  Even if you disagree, the IC's decision is final. During the call is not the time to argue with them.
-* The IC may use language or behave in a way you find rude. This is wartime, and they need to do whatever it takes to resolve the situation, so sometimes rudeness occurs. This is not personal, and something you should be prepared to experience if you've never been in a wartime situation before.
-* You may be asked to leave the call by the IC, or you may even be forcibly kicked off a call. It is at the IC's discretion to do this if they feel you are not providing useful input. Again, this is not personal and you should remember that wartime is different than peacetime.
-
+* El Comandante de Incidentes está a cargo. No importa su rango durante el tiempo de paz, ahora son la persona de mayor rango en la llamada, superior incluso al CEO.
+* Los respondedores primarios (personas que actúan como primarias en la llamada para un equipo/servicio) son las personas de mayor rango para ese servicio.
+* Las decisiones serán tomadas por el CI después de considerar la información presentada. Una vez que se toma esa decisión, es final.
+* El CI puede tomar decisiones más arriesgadas de las que normalmente se considerarían durante el tiempo de paz.
+* El CI puede ir en contra de una decisión de consenso. Si se realiza una encuesta y 9/10 personas están de acuerdo pero 1 está en desacuerdo, el CI puede elegir la opción de desacuerdo a pesar de una votación mayoritaria. Incluso si estás en desacuerdo, la decisión del CI es final. Durante la llamada no es el momento de discutir con ellos.
+* El CI puede usar un lenguaje o comportarse de manera que consideres grosero. Esto es tiempo de guerra, y necesitan hacer lo que sea necesario para resolver la situación, así que a veces ocurre la grosería. Esto no es personal, y algo con lo que debes estar preparado para enfrentar si nunca has estado en una situación de guerra antes.
+* Se te puede pedir que abandones la llamada por parte del CI, o incluso puedes ser expulsado de una llamada por la fuerza. Está a discreción del CI hacer esto si siente que no estás proporcionando información útil. Nuevamente, esto no es personal y debes recordar que el tiempo de guerra es diferente al tiempo de paz.
