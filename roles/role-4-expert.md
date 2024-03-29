@@ -1,40 +1,39 @@
-## Role: Subject Matter Expert (SME)
+## Rol: Experto en la materia (SME)
 
-### Description
+### Descripción
 
-A Subject Matter Expert (SME) is a domain expert or designated owner of a team, component, or service (an "area").  You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluation investigation, remediation, and communication actions, and following through on them as tasked.
+Un Experto en la materia (SME) es un experto en un dominio o el propietario designado de un equipo, componente o servicio (un "área"). Estás ahí para apoyar al comandante de incidentes en la identificación de la causa del incidente, sugerir y evaluar acciones de investigación, remediación y comunicación, y seguir adelante con ellas según lo indicado.
 
-### Duties
+### Deberes
 
-1. Diagnose common problems within your area of expertise.
-1. Rapidly fix issues found during an incident.
-1. Concise communication:
-    * Condition: What is the current state of your area? Is it healthy or not?
-    * Actions: What actions need to be taken if your area is not in a healthy state?
-    * Needs: What support do you need need to perform an action?
-1. Participate in the investigation, remediation, and/or communication phases of the response.
-1. Announce all suggestions to the incident commander, it is their decision on how to proceed, do not follow any actions unless told to do so.
+1. Diagnosticar problemas comunes dentro de tu área de experiencia.
+2. Solucionar rápidamente problemas encontrados durante un incidente.
+3. Comunicación concisa:
+   * Condición: ¿Cuál es el estado actual de tu área? ¿Está saludable o no?
+   * Acciones: ¿Qué acciones deben tomarse si tu área no está en un estado saludable?
+   * Necesidades: ¿Qué apoyo necesitas para realizar una acción?
+4. Participar en las fases de investigación, remediación y/o comunicación de la respuesta.
+5. Anunciar todas las sugerencias al comandante de incidentes, es su decisión cómo proceder, no sigas ninguna acción a menos que se te indique hacerlo.
 
-If you are on-call for any team, you may be paged for an incident and will be expected to respond as a subject matter expert (SME) for your team, component, or service.  Anyone who is considered a "domain expert" can act as a SME for an incident. Typically the team's primary on-call will act as the SME for that team.
+Si estás de guardia para algún equipo, es posible que te llamen para un incidente y se espera que respondas como un experto en la materia (SME) para tu equipo, componente o servicio. Cualquiera que sea considerado un "experto en el dominio" puede actuar como SME para un incidente. Típicamente, el principal de guardia del equipo actuará como el SME para ese equipo.
 
-#### Prepare for On-Call Period
+#### Preparación para el Periodo de Guardia
 
-1. Be prepared, by having already familiarized yourself with our incident response policies and procedures.
-1. Make sure you have set up your alerting methods in accordance with our on-call procedure.
-1. Check you can join the incident call. You may need to install a browser plugin.
-1. Be aware of your upcoming on-call time and arrange swaps around travel, vacations, appointments, etc.
-1. If you are an Incident Commander, make sure you are not on-call for your team at the same time as being on-call as Incident Commander.
+1. Estar preparado, habiéndote familiarizado previamente con nuestras políticas y procedimientos de respuesta a incidentes.
+2. Asegúrate de haber configurado tus métodos de alerta de acuerdo con nuestro procedimiento de guardia.
+3. Verifica si puedes unirte a la llamada de incidentes. Es posible que necesites instalar un complemento del navegador.
+4. Estar consciente de tu próximo tiempo de guardia y organizar intercambios en caso de viajes, vacaciones, citas, etc.
+5. Si eres un Comandante de Incidentes, asegúrate de no estar de guardia para tu equipo al mismo tiempo que estás de guardia como Comandante de Incidentes.
 
-#### During On-Call Period
+#### Durante el Periodo de Guardia
 
-1. Have your laptop and Internet with you at all times during your on-call period (office, home, a MiFi, a phone with a tethering plan, etc).
-1. If you have important appointments, you need to get someone else on your team to cover that time slot in advance.
-1. When you receive an alert for an incident, you are expected to join the incident call and chat as quickly as possible (within minutes).
-1. You will be asked questions or given actions by the Incident Commander. Answer questions concisely, and follow all actions given (even if you disagree with them).
-1. If you're not sure about something, bring in other SMEs from your team that can help.  **Never hesitate to escalate**, if necessary.
-1. Do not blame.  This incident response process is completely blameless: blaming is counter productive and distracts from the problem at hand.  After-action review will identify places we can all improve.
+1. Ten tu computadora portátil e Internet contigo en todo momento durante tu período de guardia (en la oficina, en casa, un MiFi, un teléfono con un plan de tethering, etc.).
+2. Si tienes citas importantes, necesitas que alguien más de tu equipo cubra ese intervalo de tiempo con anticipación.
+3. Cuando recibas una alerta por un incidente, se espera que te unas a la llamada de incidentes y al chat lo más rápido posible (dentro de minutos).
+4. El Comandante de Incidentes te hará preguntas o te asignará acciones. Responde de manera concisa y sigue todas las acciones dadas (incluso si no estás de acuerdo con ellas).
+5. Si no estás seguro de algo, trae a otros SMEs de tu equipo que puedan ayudar. **Nunca dudes en escalar**, si es necesario.
+6. No culpes. Este proceso de respuesta a incidentes es completamente sin culpa: culpar es contraproducente y distrae del problema en cuestión. La revisión después de la acción identificará áreas en las que todos podemos mejorar.
 
-### Training
+### Entrenamiento
 
-* Read and understand the incident response plan, including the roles and playbooks.
-
+* Leer y entender el plan de respuesta a incidentes, incluidos los roles y los libros de jugadas.
