@@ -180,10 +180,9 @@ El flujo de toma de decisiones y el escalado de privilegios es el siguiente:
 1. Decisión de nivel 1: Si el incidente es de bajo riesgo, el equipo de respuesta a incidentes puede manejarlo directamente.
 1. Escalado de nivel 1 a nivel 2: Si el incidente es de riesgo moderado, se escala al gerente del equipo de respuesta a incidentes.
 1. Decisión de nivel 2: El gerente del equipo de respuesta a incidentes puede decidir tomar medidas adicionales, como aumentar los recursos asignados al incidente o implementar medidas de contención adicionales.
-1. Escalado de nivel 2 a nivel 3: Si el incidente es de alto riesgo, se escala a la alta dirección (por ejemplo, el CISO o el CIO).
+1. Escalado de nivel 2 a nivel 3: Si el incidente es de alto riesgo, se escala a la alta dirección.
 1. Decisión de nivel 3: La alta dirección puede decidir tomar medidas estratégicas, como informar a las partes interesadas externas, contratar a consultores externos, o, en casos extremos, cerrar operaciones hasta que el incidente sea resuelto.
 1. Revisión post-incidente: Una vez resuelto el incidente, se realiza una revisión post-incidente para aprender de la experiencia y mejorar los futuros procesos de toma de decisiones y escalado de incidentes.
-
 
 
 Los playbooks se han diseñado con un enfoque en la ciberresiliencia. Esto significa que no sólo deben centrarse en cómo responder a un incidente de seguridad, sino también en cómo la organización puede recuperarse y aprender de estos incidentes. 
