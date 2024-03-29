@@ -1,4 +1,4 @@
-## Rol: Escriba (Scribe)
+## Rol: Escriba
 
 ### Descripción
 
