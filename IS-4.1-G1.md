@@ -180,14 +180,14 @@ La ciberresiliencia no sólo se trata de prevenir incidentes de ciberseguridad, 
 Según una investigación sobre los tipos de técnicas recopiladas en la MITRE ATT&CK, se ha desarrollado unos playbooks de respuesta a los ataques más significativos y dañinos para nuestra empresa. Cada playbook está diseñado para responder a una técnica específica de ataque cibernético. 
 
 Aquí están los playbooks que hemos creado y las técnicas correspondientes de MITRE ATT&CK:
-- Explotación de Aplicaciones de Cara al Público (T1190): Este playbook se centra en cómo responder a los incidentes donde los atacantes explotan las vulnerabilidades en las aplicaciones que son accesibles al público.
-- Phishing (T1566): Este playbook proporciona una guía sobre cómo manejar los incidentes de phishing, donde los atacantes intentan engañar a los usuarios para que revelen información sensible.
-- Trusted Relationship (T1199): Este playbook se centra en los incidentes donde los atacantes explotan las relaciones de confianza dentro de las redes y sistemas.
-- Data Encrypted for Impact (T1486): Este playbook es para incidentes de ransomware, donde los atacantes cifran los datos y exigen un rescate para su descifrado.
-- Data Manipulation (T1565): Este playbook proporciona una guía sobre cómo manejar los incidentes donde los atacantes manipulan o alteran los datos para causar impacto.
-- Disk Wipe (T1561): Este playbook se centra en los incidentes donde los atacantes borran los datos o los sistemas operativos de los discos duros.
-- Network Denial of Service (T1498): Este playbook proporciona una guía sobre cómo manejar los incidentes de denegación de servicio.
-- Identity and Access Attacks: Este playbook engloba tres técnica diferentes.
+- [Explotación de Aplicaciones de Cara al Público (T1190)](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/playbooks/playbook-Exploit-Public-Facing-Application.md): Este playbook se centra en cómo responder a los incidentes donde los atacantes explotan las vulnerabilidades en las aplicaciones que son accesibles al público.
+- [Phishing (T1566)](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/playbooks/playbook-phishing.md): Este playbook proporciona una guía sobre cómo manejar los incidentes de phishing, donde los atacantes intentan engañar a los usuarios para que revelen información sensible.
+- [Trusted Relationship (T1199)](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/playbooks/playbook%20Insider%20Threats.md): Este playbook se centra en los incidentes donde los atacantes explotan las relaciones de confianza dentro de las redes y sistemas.
+- [Data Encrypted for Impact (T1486)](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/playbooks/playbook-ransomware.md): Este playbook es para incidentes de ransomware, donde los atacantes cifran los datos y exigen un rescate para su descifrado.
+- [Data Manipulation (T1565)](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/playbooks/playbook-Manipulacion-de-Datos.md): Este playbook proporciona una guía sobre cómo manejar los incidentes donde los atacantes manipulan o alteran los datos para causar impacto.
+- [Disk Wipe (T1561)](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/playbooks/playbook-diskwipe.md): Este playbook se centra en los incidentes donde los atacantes borran los datos o los sistemas operativos de los discos duros.
+- [Network Denial of Service (T1498)](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/playbooks/playbook-DDOS-Atack.md): Este playbook proporciona una guía sobre cómo manejar los incidentes de denegación de servicio.
+- [Identity and Access Attacks](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/playbooks/playbook-identity-and-access.md): Este playbook engloba tres técnica diferentes.
     - Gather Victim Identity Information (T1589): Se centra en los incidentes donde los atacantes recopilan información de identificación de las víctimas.
     - Acquire Access (T1588): Se centra sobre cómo manejar los incidentes donde los atacantes adquieren acceso a las cuentas, sistemas o datos.
     - Compromise Accounts (T1586): Se centra en los incidentes donde los atacantes comprometen las cuentas de los usuarios.
