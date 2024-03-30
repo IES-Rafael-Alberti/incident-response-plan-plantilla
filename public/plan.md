@@ -9,6 +9,249 @@ Este plan de respuesta a incidentes está basado en el plan conciso, directivo, 
 
 Fue revisado por última vez el 27/03/2024. Fue probado por última vez en 27/03/2024.
 
+# Contexto de este plan
+
+Posterior a la creación de este plan de respuesta se han realizado varios pasos que quedan detallados a continuación:
+
+## Identificación de activos
+
+Tras obtener una breve descripción de la empresa se realizón un inventariado de activos con los que trabajaremos más adelante, quedando una hoja de cálculo como la siguiente:
+
+![Resultados 1](img/activos.png)
+
+## Nivel de madurez y proyectos
+
+También hemos realizado una evaluación de madurez de la empresa y obtuvimos los siguientes resultados:
+
+![Resultados 1](img/madurez2.png)
+
+![Resultados 2](img/madurez.png)
+
+Entre las tareas propuestas para aumentar el nivel de madurez tenemos:
+
+1. Análisis de riesgo y amenazas:
+- Responsable: Departamento de seguridad
+- Tarea: Identificar y evaluar los riesgos y amenazas que
+puedan afectar a la organización.
+2. Definicion de politicas de seguridad:
+- Responsable: Director de seguridad
+- Tarea: Establecer políticas y directrices de seguridad
+que la organización debe seguir.
+3. Elaboración de procedimientos y normativas:
+- Responsable: Departamento de seguridad
+- Tarea: Desarrollar procedimientos y normativas
+específicas para implementar las políticas de seguridad.
+4. Gestión de accesos y autorizaciones:
+- Responsable: Departamento de seguridad
+- Tarea: Administrar los permisos de acceso a sistemas,
+instalaciones y datos de la organización.
+5. Formación y concienciación de en seguridad:
+- Responsable: Departamento de recursos humanos
+- Tarea: Hacer saber a los empleados sobre la
+concienciación en seguridad
+6. Seguridad física:
+- Responsable: Departamento de seguridad
+- Tarea:Garantizar la protección de las instalaciones,
+activos y personal de forma activa y pasiva.
+7. Seguridad de la información:
+- Responsable: Equipo de TI
+- Tarea: Proteger la integridad, confidencialidad y
+disponibilidad de los datos y sistemas de la
+organización.
+8. Gestión de incidentes de seguridad:
+- Responsable: Equipo de respuesta a incidentes de
+seguridad
+- Tarea:Investigar, gestionar y mitigar incidentes de
+seguridad como brechas de información.
+9. Evaluación y auditoría de seguridad:
+- Responsable: Auditores internos o externos
+- Tarea: Evaluar y auditar de forma regular las medidas de
+seguridad implementadas en la empresa.
+10. Actualización y mejora continua:
+- Responsable: Departamento de seguridad
+- Tarea: Revisar y actualizar regularmente el plan de
+seguridad para adaptarse a cambios en amenazas.
+11. Monitoreo de la seguridad y de la página web:
+- Responsable: Equipo de operaciones de seguridad
+- Tarea: Establecer sistemas de monitoreo continuo para
+detectar y responder a las amenazas de la página web.Es
+necesario tanto la realización de una documentación como
+la aprobación de dicho trámite.
+12. Configuración y mantenimiento del firewall:
+- Responsable: Administradores de sistemas
+- Tarea:Configurar y mantener el firewall para controlar
+el tráfico de red y prevenir o detectar intrusiones no
+autorizadas. Es necesario tanto la realización de una
+documentación como la aprobación de dicho trámite.
+13. Implementación y actualización del software antivirus:
+- Responsable: Departamento de TI o personal de seguridad
+- Tarea:Garantizar la instalación y actualización regular
+de software antivirus en los sistemas para detectar y
+eliminar malware. Es necesaria la aprobación del
+sistema.
+14. Ejecucion y supervision de copias de seguridad:
+- Responsable: Administradores de sistemas o personal de
+seguridad.
+- Tarea:Garantizar que se realicen copias de seguridad
+periódicas y que se supervisen para asegurarse de que
+sean efectivas. Es necesaria la aprobación del sistema.
+
+## Posibles amenazas
+
+En el apartado de análisis ed amenzas que usaremos para posteriormente calcular riesgos hemos tenido en cuenta las usadas por INCIBE.
+
+![Calculo risgo](img/amen.png)
+
+## Cálculo del riesgo
+
+Teniendo un inventario de activos y las posibles amenazas a las que nos enfrentamos tenemos una hoja en la que existe el calculo del risgo(impacto*probabilidad) de todas las posibilidades consideradas.
+
+![Calculo risgo](img/calculo.png)
+
+## Taxonomía de incidentes
+
+Se realizó una taxonomía de varios incidentes posibles que podrían afectar a nuestra empresa objetivo, siendo estos:
+
+1. **Escaneo de Redes (Scanning)**
+    - **Descripción:** Identificación de dispositivos en una red, utilizado tanto para mantenimiento como para ataques.
+    - **Funcionamiento:** Atacantes utilizan herramientas y protocolos comunes de escaneo de red.
+    - **Identificación:** Detección mediante monitoreo de umbrales y modelos probabilísticos.
+    - **Protección:** Uso de sistemas de detección de intrusiones y firewalls.
+    - **Caso Real:** Violación de la confidencialidad de usuarios del software MOVEit por el grupo "Cl0p".
+2. **Ingeniería Social**
+    - **Descripción:** Manipulación de personas para obtener información confidencial.
+    - **Funcionamiento:** Engañar a las víctimas para realizar acciones comprometedoras.
+    - **Identificación:** Señales como solicitudes inusuales y análisis crítico de comunicaciones.
+    - **Protección:** Educación, verificación de fuentes y políticas de seguridad.
+    - **Caso Real:** Campaña de phishing afectando a usuarios de Office 365.
+3. **Explotación de Vulnerabilidades Conocidas**
+    - **Descripción:** Aprovechamiento de debilidades en sistemas informáticos.
+    - **Funcionamiento:** Atacantes desarrollan herramientas para explotar vulnerabilidades.
+    - **Identificación:** Uso de herramientas de diagnóstico y monitoreo de seguridad.
+    - **Protección:** Mantenimiento actualizado del software.
+    - **Caso Real:** Compromiso del videojuego CS2 mediante vulnerabilidades.
+4. **Ataque Desconocido**
+    - **Descripción:** Ataque con métodos no totalmente comprendidos por las soluciones de seguridad.
+    - **Funcionamiento:** Diseñado para evitar la detección y robar datos.
+    - **Identificación:** Monitoreo constante y análisis de comportamientos inusuales.
+    - **Protección:** Mantenimiento actualizado, educación en ciberseguridad.
+    - **Caso Real:** Inserción de virus en instalaciones de una planta nuclear.
+5. **Intento de Acceso con Vulneración de Credenciales**
+    - **Descripción:** Acceso a sistemas utilizando credenciales comprometidas.
+    - **Funcionamiento:** Prueba de múltiples combinaciones de credenciales.
+    - **Identificación:** Señales como fallos de inicio de sesión y alertas de seguridad.
+    - **Protección:** Uso de contraseñas fuertes y autenticación de múltiples factores.
+    - **Caso Real:** Acceso ilegal en la computadora de un antiguo trabajador de Ticketmaster.
+6. **Compromiso de Cuenta con Privilegios**
+    - **Descripción:** Acceso no autorizado a cuentas con derechos elevados.
+    - **Funcionamiento:** Obtención de acceso a través de phishing o explotación de vulnerabilidades.
+    - **Identificación:** Actividades inusuales en cuentas de alto nivel y alertas de seguridad.
+    - **Protección:** Uso de contraseñas fuertes y monitoreo constante.
+    - **Caso Real:** Compromiso de cuenta privilegiada de un empleado de Cisco.
+7. **Compromiso de Cuentas sin Privilegios**
+    - **Descripción:** Acceso no autorizado a cuentas con permisos limitados.
+    - **Funcionamiento:** Uso de fuerza bruta o explotación de vulnerabilidades.
+    - **Identificación:** Monitoreo del comportamiento de cuentas de usuario.
+    - **Protección:** Autenticación de múltiples factores y concienciación de usuarios.
+    - **Caso Real:** Intrusión en sistemas Docker para minar criptomonedas.
+
+## Respuestas a las preguntas
+
+**1.a ¿Qué relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De qué manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre el navegador de las matrices, para obtener la información.**
+
+La relación entre estas y el plan de respuesta se basa en utilizar el conocimiento obtenido de estas matrices para diseñar estrategias de detección, respuesta y recuperación, etc. ante posibles amenazas. El trabajo previo con estas matrices ha sido fundamental para comprender los diferentes tipos de ataques, sus técnicas y procedimientos, lo que nos ha permitido identificar posibles puntos de vulnerabilidad en nuestro entorno y desarrollar respuestas adecuadas.
+
+Para evidenciar el trabajo realizado, podemos proporcionar capturas de pantalla o registros de actividad del navegador mientras investigabamos y explorabamos las matrices MITRE ATT&CK y RE&CT para identificar tácticas, técnicas y procedimientos de ataque relevantes para nuestra organización.
+
+![2024-03-30_17-58.png](img/2024-03-30_17-58.png)
+
+![2024-03-30_17-59.png](img/2024-03-30_17-59.png)
+
+![2024-03-30_17-59_1.png](img/2024-03-30_17-59_1.png)
+
+![2024-03-30_17-59_2.png](img/2024-03-30_17-59_2.png)
+
+----------------------
+**1.b ¿Qué playbooks has identificado como necesarios en este plan de respuesta y en que te has basado para identificar esos playbooks y saber que son los necesarios? Deja algún diagrama que describa el flujo de un playbook.**
+En este plan de respuesta, se han identificado varios playbooks necesarios para abordar diferentes escenarios de amenazas (Los más típicos en una empresa como la nuestra). Para determinar los playbooks necesarios, nos basamos en la evaluación de riesgos específicos de nuestra organización, así como en las tácticas y técnicas de ataque identificadas a través de las matrices MITRE ATT&CK y RE&CT. Por ejemplo, para un compromiso en la cadena de proveedores, se ha identificado un playbook específico que incluye pasos detallados para su adecuada respuesta:
+
+----------------------
+
+![2024-03-30_17-59_3.png](img/2024-03-30_17-59_3.png)
+
+---
+**1.c¿Cómo te has asegurado que has cubierto todas las fases del plan de respuesta? ¿Qué fase consideras que está más floja en un plan? ¿Cuál de ellas consideras que está mejor trabajada en tu plan? Asegúrate de hablar de todas las fases y como las cubres.**
+
+En un plan de respuesta a incidentes, es fundamental asegurarse de que todas las fases estén cubiertas para garantizar una gestión efectiva y completa de cualquier incidente que ocurra. Aquí está cómo se abordan cada una de las fases en un plan típico y cómo nos aseguramos de que estén completamente cubiertas:
+
+- Investigar: Esta fase implica recopilar información sobre el incidente, determinar su alcance y comprender cómo ocurrió. Para cubrir esta fase, se establecen procedimientos para la recolección de datos relevantes, como registros de actividad, registros de seguridad y análisis forense digital. Además, se designan responsables para llevar a cabo estas investigaciones de manera efectiva.
+- Remediar: Una vez que se comprende el incidente, es necesario tomar medidas inmediatas para mitigar el daño y detener cualquier actividad maliciosa. Esto puede incluir la aplicación de parches, la eliminación de malware o la reconfiguración de sistemas comprometidos. En eli plan, se especifican claramente los pasos a seguir para abordar cada tipo de incidente de manera rápida y eficiente.
+- Contener: La fase de contención implica aislar el incidente para evitar que se propague y cause más daño. Esto puede implicar la desconexión de sistemas comprometidos de la red o la implementación de medidas de seguridad adicionales para limitar el acceso no autorizado. En el plan, se detallan los procedimientos para establecer perímetros de seguridad y garantizar que el incidente no afecte a otros sistemas o datos.
+- Erradicar: Una vez que el incidente está contenido, es importante eliminar completamente cualquier rastro del sistema comprometido y abordar cualquier vulnerabilidad que haya sido explotada. Esto puede requerir una limpieza profunda de sistemas, cambios en la configuración de seguridad y la implementación de medidas de protección adicionales. En el plan, se establecen procedimientos para garantizar que se eliminen todas las amenazas y se fortalecen las defensas para evitar futuros incidentes similares.
+- Comunicar: La comunicación efectiva es esencial durante un incidente para informar a las partes interesadas pertinentes, incluidos el equipo de gestión de incidentes, el personal afectado y las autoridades reguladoras si es necesario. En el plan, se detallan los canales de comunicación, las responsabilidades de cada parte interesada y los mensajes clave que deben transmitirse durante cada etapa del incidente.
+- Recuperar: Finalmente, la fase de recuperación implica restaurar los sistemas afectados a un estado operativo normal y revisar los procedimientos y controles de seguridad para prevenir futuros incidentes. En el plan, se establecen procedimientos para restaurar sistemas y datos desde copias de seguridad, evaluar el impacto del incidente y realizar mejoras en las políticas y procedimientos de seguridad según sea necesario.
+
+En cuanto a qué fase consideramos que puede ser más floja en un plan de respuesta a incidentes, depende de la organización y de sus recursos disponibles. Sin embargo, la fase de comunicación a menudo se subestima y puede ser descuidada, lo que puede llevar a confusiones y retrasos en la gestión del incidente. Es crucial asegurarse de tener un plan de comunicación claro y efectivo en su lugar.
+
+En el plan, consideramos que la fase mejor trabajada es la fase de investigar. Esto se debe a que una comprensión completa del incidente es fundamental para tomar decisiones informadas sobre cómo remediar y contener la situación. Además, una investigación exhaustiva puede proporcionar información valiosa para prevenir incidentes similares en el futuro. Por lo tanto, se dedica una atención especial a la recopilación y análisis de datos durante esta fase.
+
+**2.a ¿En qué consiste el Flujo de Toma de Decisiones y Escalado de tu plan de respuesta? ¿Existe un plan de comunicación, protocolos, etc? Si la respuesta es correcta, haz un resumen del plan y protocolos. Deja evidencias del flujo, mediante un diagrama.**
+
+Plan de Comunicación y Protocolos:
+
+Flujo de Toma de Decisiones y Escalado
+
+- 1. Jerarquía de Toma de Decisiones:
+
+Coordinador Principal: Líder del equipo de respuesta a incidentes con la autoridad final en la toma de decisiones.
+
+Equipo de Respuesta a Incidentes: Compuesto por miembros designados para áreas específicas, como investigación, remediación y comunicación.
+
+- 2. Protocolos de Comunicación:
+
+Canales Claros y Definidos: Establecimiento de canales de comunicación para informar sobre incidentes y compartir actualizaciones.
+
+Comunicación Interna y Externa: Procedimientos definidos para la comunicación dentro del equipo de respuesta a incidentes y con partes interesadas externas.
+
+- 3. Etapas de Escalado:
+
+Niveles de Escalado: Definición de niveles de escalado para incidentes según su gravedad y alcance.
+
+Escalado Progresivo: Los incidentes se escalan desde el equipo de respuesta a incidentes local hasta niveles superiores de gestión según sea necesario.
+
+Diagrama del Flujo de Toma de Decisiones y Escalado:
+
+![2024-03-30_18-00.png](img/2024-03-30_18-00.png)
+
+Este diagrama visualiza el flujo de toma de decisiones y escalado en el equipo de respuesta a incidentes, desde la identificación inicial hasta la recuperación posterior al incidente. Cada etapa está claramente definida con sus responsabilidades y protocolos correspondientes.
+
+**3.a ¿Cómo te has asegurado de que tu plan tiene respuestas resilientes? ¿Por qué son resilientes y en qué fases se centran?**
+
+Para asegurarnos de que el plan de respuesta a incidentes tiene respuestas resilientes, hemos implementado varias estrategias y prácticas que se centran en diferentes fases del proceso de gestión de incidentes:
+
+- Flexibilidad en el Proceso:
+
+Mi plan está diseñado para ser flexible y adaptable a diferentes tipos de incidentes y situaciones imprevistas. Esto significa que puedo ajustar y modificar los procedimientos según sea necesario para abordar nuevas amenazas o desafíos que puedan surgir.
+
+- Capacidades de Recuperación Rápida:
+
+Se han implementado medidas para una recuperación rápida de los sistemas y datos afectados. Esto incluye la disponibilidad de copias de seguridad actualizadas, procedimientos de restauración eficientes y la capacidad de restaurar sistemas críticos en un tiempo mínimo.
+
+- Enfoque en el Aprendizaje y Mejora Continua:
+
+Después de cada incidente, se realiza una revisión exhaustiva para identificar áreas de mejora y lecciones aprendidas. Esta retroalimentación se incorpora al plan para fortalecer aún más la capacidad de respuesta ante incidentes en el futuro.
+
+- Planificación para Escenarios de Crisis:
+
+El plan incluye la planificación para escenarios de crisis potenciales, como interrupciones graves en la infraestructura, ataques cibernéticos masivos o desastres naturales. Se han establecido protocolos específicos para abordar estas situaciones de manera efectiva.
+
+- Colaboración y Coordinación:
+
+Se fomenta la colaboración y coordinación entre diferentes equipos y partes interesadas tanto internas como externas durante la gestión de incidentes. Esto asegura una respuesta rápida y eficiente, incluso en situaciones de crisis.
+
+Las fases en las que se centran estas prácticas resilientes son principalmente la fase de contención, la fase de recuperación y la fase de aprendizaje posterior al incidente.
+
+Durante la fase de contención, la flexibilidad en el proceso y la capacidad de recuperación rápida son críticas para limitar el impacto del incidente y evitar su propagación. La fase de recuperación se centra en restaurar los sistemas y datos afectados de manera rápida y efectiva para minimizar el tiempo de inactividad. Y la fase de aprendizaje posterior al incidente permite identificar áreas de mejora y fortalecer la capacidad de respuesta para futuros eventos. Estas prácticas resilientes aseguran que el plan esté preparado para enfrentar desafíos y mantener la continuidad del negocio incluso en las circunstancias más adversas.
 
 # Evaluar
 
@@ -518,9 +761,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 2. Integrar las acciones de seguridad con los esfuerzos de recuperación de la organización.
 # Playbooks
 
-The following playbooks capture common [investigation](#investigate), [remediation](#remediate), and [communication](#communicate) steps for particular types of incident.
-
-`TODO: Create additional playbooks for highly likely or highly damaging incident types.`
+Los siguientes playbooks determiann las fases de investigación, remediación y comunicación para incidentes particuales que podrían afectar a la empresa objetivo, dando instrucciones clara que seguir en cda incidente.
 
 
 ## Playbook: Ataques de Fuerza Bruta
@@ -864,7 +1105,7 @@ Entre algunas técinas para protejernos para estos ataques tenemos:
 
 - Realizar inspecciones rutinarias.
 
-- Aegurar que sistemas como el IDS/IPS, SIEM o firewall se encuentran actualizados.
+- Asegurar que sistemas como el IDS/IPS, SIEM o firewall se encuentran actualizados.
 
 - Revisar las reglas del firewall y del IDS/IPS rutinalmente basadas en las necesidades del entorno.
 
@@ -1418,6 +1659,7 @@ El Comandante de Incidentes (CI) es el líder del proceso de respuesta a inciden
 ### Entrenamiento
 
 Lee y comprende el plan de respuesta a incidentes, incluidos los roles y los libros de jugadas.
+
 ## Rol: Jefe de Incidentes (CI)
 
 ### Descripción
@@ -1497,6 +1739,7 @@ No hay requisitos de antigüedad o unidad de negocio para convertirse en jefe de
 
 Al completar el entrenamiento, agrégate al listado de jefe de Incidentes.
 
+
 ## Rol: Subjefe de Incidentes (Subjefe)
 
 ### Descripción
@@ -1521,6 +1764,7 @@ Un Subjefe de Incidentes (Subjefe) es un rol de apoyo directo para el jefe de In
 #### Requisitos Previos
 
 * Estar entrenado como un [jefe de Incidentes](#rol-jefe-de-incidentes-ci).
+
 ## Rol: Escriba
 
 ### Descripción
@@ -1555,6 +1799,7 @@ Leer y entender el plan de respuesta a incidentes, incluidos los roles y los lib
 
 * Leer el plan de respuesta a incidentes, incluidos todos los roles y libros de jugadas.
 * _OPCIONAL:_ Paralelizar las acciones de un escriba durante un incidente o ejercicio, y buscar retroalimentación del escriba real y el Comandante de Incidentes.
+
 ## Rol: Experto en la materia (SME)
 
 ### Descripción
@@ -1594,6 +1839,7 @@ Si estás de guardia para algún equipo, es posible que te llamen para un incide
 ### Entrenamiento
 
 * Leer y entender el plan de respuesta a incidentes, incluidos los roles y los libros de jugadas.
+
 ## Rol: Enlace
 
 ### Descripción
@@ -1685,14 +1931,12 @@ El propietario del informe, en coordinación con el enlace interno, comunicará 
 
 Comunicar internamente los resultados del AAR y finalizar la documentación del AAR.
 
-| Status | Description |
+| Estado | Descripción |
 |-|-|
-| **Draft** | AAR investigation is still ongoing |
-| **In Review** | AAR investigation has been completed, and is ready to be reviewed during the AAR meeting. |
-| **Reviewed** | AAR meeting is over and the content has been reviewed and agreed upon.<br>If there are additional "External Messages", the communications team will take action to prepare. |
-| **Closed** | No further actions are needed on the AAR (outstanding issues are tracked in tickets).<br>If no "External Messages", skip straight to this once the meeting is over.<br>If there are additional "External Messages", communications team will update AAR Closed once sent. |
-
-Communicate the results of the AAR internally and finalize the AAR documentation.
+| **Draft** | La investigación AAR sigue en proceso |
+| **In Review** | Completada y a espera de revisión en una reunión |
+| **Reviewed** | Revisión completada y es posible algún cambio |
+| **Closed** | Cerrado, con posibilidad de actualización |
 
 # Acerca de
 

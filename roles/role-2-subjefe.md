@@ -1,3 +1,4 @@
+
 ## Rol: Subjefe de Incidentes (Subjefe)
 
 ### Descripción

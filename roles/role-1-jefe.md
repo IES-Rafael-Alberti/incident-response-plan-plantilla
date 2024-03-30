@@ -1,3 +1,4 @@
+
 ## Rol: Jefe de Incidentes (CI)
 
 ### Descripción
