@@ -15,21 +15,145 @@ Posterior a la creación de este plan de respuesta se han realizado varios pasos
 
 ## Identificación de activos
 
-![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/146707433/14be54f8-3249-4850-84e8-4df1756d0774)
+Tras obtener una breve descripción de la empresa se realizón un inventariado de activos con los que trabajaremos más adelante, quedando una hoja de cálculo como la siguiente:
 
-## Análisis de amenazas
+![Resultados 1](img/activos.png)
 
+## Nivel de madurez y proyectos
 
+También hemos realizado una evaluación de madurez de la empresa y obtuvimos los siguientes resultados:
+
+![Resultados 1](img/madurez2.png)
+
+![Resultados 2](img/madurez.png)
+
+Entre las tareas propuestas para aumentar el nivel de madurez tenemos:
+
+1. Análisis de riesgo y amenazas:
+- Responsable: Departamento de seguridad
+- Tarea: Identificar y evaluar los riesgos y amenazas que
+puedan afectar a la organización.
+2. Definicion de politicas de seguridad:
+- Responsable: Director de seguridad
+- Tarea: Establecer políticas y directrices de seguridad
+que la organización debe seguir.
+3. Elaboración de procedimientos y normativas:
+- Responsable: Departamento de seguridad
+- Tarea: Desarrollar procedimientos y normativas
+específicas para implementar las políticas de seguridad.
+4. Gestión de accesos y autorizaciones:
+- Responsable: Departamento de seguridad
+- Tarea: Administrar los permisos de acceso a sistemas,
+instalaciones y datos de la organización.
+5. Formación y concienciación de en seguridad:
+- Responsable: Departamento de recursos humanos
+- Tarea: Hacer saber a los empleados sobre la
+concienciación en seguridad
+6. Seguridad física:
+- Responsable: Departamento de seguridad
+- Tarea:Garantizar la protección de las instalaciones,
+activos y personal de forma activa y pasiva.
+7. Seguridad de la información:
+- Responsable: Equipo de TI
+- Tarea: Proteger la integridad, confidencialidad y
+disponibilidad de los datos y sistemas de la
+organización.
+8. Gestión de incidentes de seguridad:
+- Responsable: Equipo de respuesta a incidentes de
+seguridad
+- Tarea:Investigar, gestionar y mitigar incidentes de
+seguridad como brechas de información.
+9. Evaluación y auditoría de seguridad:
+- Responsable: Auditores internos o externos
+- Tarea: Evaluar y auditar de forma regular las medidas de
+seguridad implementadas en la empresa.
+10. Actualización y mejora continua:
+- Responsable: Departamento de seguridad
+- Tarea: Revisar y actualizar regularmente el plan de
+seguridad para adaptarse a cambios en amenazas.
+11. Monitoreo de la seguridad y de la página web:
+- Responsable: Equipo de operaciones de seguridad
+- Tarea: Establecer sistemas de monitoreo continuo para
+detectar y responder a las amenazas de la página web.Es
+necesario tanto la realización de una documentación como
+la aprobación de dicho trámite.
+12. Configuración y mantenimiento del firewall:
+- Responsable: Administradores de sistemas
+- Tarea:Configurar y mantener el firewall para controlar
+el tráfico de red y prevenir o detectar intrusiones no
+autorizadas. Es necesario tanto la realización de una
+documentación como la aprobación de dicho trámite.
+13. Implementación y actualización del software antivirus:
+- Responsable: Departamento de TI o personal de seguridad
+- Tarea:Garantizar la instalación y actualización regular
+de software antivirus en los sistemas para detectar y
+eliminar malware. Es necesaria la aprobación del
+sistema.
+14. Ejecucion y supervision de copias de seguridad:
+- Responsable: Administradores de sistemas o personal de
+seguridad.
+- Tarea:Garantizar que se realicen copias de seguridad
+periódicas y que se supervisen para asegurarse de que
+sean efectivas. Es necesaria la aprobación del sistema.
+
+## Posibles amenazas
+
+En el apartado de análisis ed amenzas que usaremos para posteriormente calcular riesgos hemos tenido en cuenta las usadas por INCIBE.
+
+![Calculo risgo](img/amen.png)
 
 ## Cálculo del riesgo
 
+Teniendo un inventario de activos y las posibles amenazas a las que nos enfrentamos tenemos una hoja en la que existe el calculo del risgo(impacto*probabilidad) de todas las posibilidades consideradas.
 
+![Calculo risgo](img/calculo.png)
 
 ## Taxonomía de incidentes
 
+Se realizó una taxonomía de varios incidentes posibles que podrían afectar a nuestra empresa objetivo, siendo estos:
 
-
-## Proyectos
+1. **Escaneo de Redes (Scanning)**
+    - **Descripción:** Identificación de dispositivos en una red, utilizado tanto para mantenimiento como para ataques.
+    - **Funcionamiento:** Atacantes utilizan herramientas y protocolos comunes de escaneo de red.
+    - **Identificación:** Detección mediante monitoreo de umbrales y modelos probabilísticos.
+    - **Protección:** Uso de sistemas de detección de intrusiones y firewalls.
+    - **Caso Real:** Violación de la confidencialidad de usuarios del software MOVEit por el grupo "Cl0p".
+2. **Ingeniería Social**
+    - **Descripción:** Manipulación de personas para obtener información confidencial.
+    - **Funcionamiento:** Engañar a las víctimas para realizar acciones comprometedoras.
+    - **Identificación:** Señales como solicitudes inusuales y análisis crítico de comunicaciones.
+    - **Protección:** Educación, verificación de fuentes y políticas de seguridad.
+    - **Caso Real:** Campaña de phishing afectando a usuarios de Office 365.
+3. **Explotación de Vulnerabilidades Conocidas**
+    - **Descripción:** Aprovechamiento de debilidades en sistemas informáticos.
+    - **Funcionamiento:** Atacantes desarrollan herramientas para explotar vulnerabilidades.
+    - **Identificación:** Uso de herramientas de diagnóstico y monitoreo de seguridad.
+    - **Protección:** Mantenimiento actualizado del software.
+    - **Caso Real:** Compromiso del videojuego CS2 mediante vulnerabilidades.
+4. **Ataque Desconocido**
+    - **Descripción:** Ataque con métodos no totalmente comprendidos por las soluciones de seguridad.
+    - **Funcionamiento:** Diseñado para evitar la detección y robar datos.
+    - **Identificación:** Monitoreo constante y análisis de comportamientos inusuales.
+    - **Protección:** Mantenimiento actualizado, educación en ciberseguridad.
+    - **Caso Real:** Inserción de virus en instalaciones de una planta nuclear.
+5. **Intento de Acceso con Vulneración de Credenciales**
+    - **Descripción:** Acceso a sistemas utilizando credenciales comprometidas.
+    - **Funcionamiento:** Prueba de múltiples combinaciones de credenciales.
+    - **Identificación:** Señales como fallos de inicio de sesión y alertas de seguridad.
+    - **Protección:** Uso de contraseñas fuertes y autenticación de múltiples factores.
+    - **Caso Real:** Acceso ilegal en la computadora de un antiguo trabajador de Ticketmaster.
+6. **Compromiso de Cuenta con Privilegios**
+    - **Descripción:** Acceso no autorizado a cuentas con derechos elevados.
+    - **Funcionamiento:** Obtención de acceso a través de phishing o explotación de vulnerabilidades.
+    - **Identificación:** Actividades inusuales en cuentas de alto nivel y alertas de seguridad.
+    - **Protección:** Uso de contraseñas fuertes y monitoreo constante.
+    - **Caso Real:** Compromiso de cuenta privilegiada de un empleado de Cisco.
+7. **Compromiso de Cuentas sin Privilegios**
+    - **Descripción:** Acceso no autorizado a cuentas con permisos limitados.
+    - **Funcionamiento:** Uso de fuerza bruta o explotación de vulnerabilidades.
+    - **Identificación:** Monitoreo del comportamiento de cuentas de usuario.
+    - **Protección:** Autenticación de múltiples factores y concienciación de usuarios.
+    - **Caso Real:** Intrusión en sistemas Docker para minar criptomonedas.
 
 # Evaluar
 
