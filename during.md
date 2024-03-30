@@ -15,7 +15,20 @@ Posterior a la creación de este plan de respuesta se han realizado varios pasos
 
 ## Identificación de activos
 
-## Análisis de amenzas
+Se tiene en cuenta que los activos incluidos en el análisis serán:
+* Puestos de trabajo (PC, impresoras, teléfonos).
+* Dispositivos móviles (portátiles, móviles, tabletas).
+* Sistemas de almacenamiento externo (discos duros, pendrives).
+* Servidores de correo electrónico.
+* Servidores de archivos y aplicaciones.
+* Conexión a Internet, routers, redes WiFi.
+* Procesos internos en aplicaciones CRM, ERP, etc.
+* Sitio web y tienda en línea.
+* Servicios en la nube (almacenamiento).
+
+## Análisis de amenazas
+
+
 
 ## Cálculo del riesgo
 
