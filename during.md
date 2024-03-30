@@ -15,32 +15,7 @@ Posterior a la creación de este plan de respuesta se han realizado varios pasos
 
 ## Identificación de activos
 
-ID_0001	Servidor 01 (Contabilidad)	Servidor de contabilidad.	Director Financiero.	Servidor (físico)	Sala de CPD1 Sede 1	Sí
-ID_0002	Servidor de correo electrónico 01	Servidor de correo interno	Administradores de sistemas	Servidor (físico)	Sala de CPD1 Sede 1	No
-ID_0003	Servidor de correo electrónico 02	Servidor de correo interno	Administradores de sistemas	Servidor (físico)	Sala de CPD1 Sede 2	No
-ID_0003	Servidor 02 (Web)	Servidor para la página web corporativa.	Dpto. Informática.	Servidor (Externalizado)	CPD Externo	Sí
-ID_0004-0105	PC	Sistemas dedicados a los trabajadores	Administradores de sistemas	Dispositivo(Físico)	Sede 1 y 2	No
-ID_0106-0124	Dispositivos impresoras	Sistemas de impresión	Administradores de sistemas	Dispositivo(Físico)	Sede 1	No
-ID_0125-0145	Teléfonos	Dispositivos móviles de uso empresarial	Departamento de TI	Dispositivo(Físico)	Trabajadores	No
-ID_0146-0150	Ordenadores portátiles	Laptops personales	Departamento de TI	Dispositivo(Físico)	Trabajadores	No
-ID_0150-0160	Tabletas	Tabletas iPad.	Departamento de TI	Dispositivo(Físico)	Trabajadores	No
-ID_0161-0180	Sistemas de almacenamiento	USB, discos duros y SSD	Departamento de seguridad	Dispositivo de almacenamiento(Físico)	Dpto. de seguridad	Sí
-ID_0181	Router Wifi (Corporativo) 01	Router que permite acceso a internet en las sedes.	Administradores de sistemas	Dispositivo de red	Sede 1	Sí
-ID_0182	Router Wifi (Corporativo) 02	Router que permite acceso a internet en las sedes.	Administradores de sistemas	Dispositivo de red	Sede 1	Sí
-ID_0183	Router Wifi (Corporativo) 03	Router que permite acceso a internet en las sedes.	Administradores de sistemas	Dispositivo de red	Sede 2	Sí
 ![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/146707433/14be54f8-3249-4850-84e8-4df1756d0774)
-
-
-Se tiene en cuenta que los activos incluidos en el análisis serán:
-* Puestos de trabajo (PC, impresoras, teléfonos).
-* Dispositivos móviles (portátiles, móviles, tabletas).
-* Sistemas de almacenamiento externo (discos duros, pendrives).
-* Servidores de correo electrónico.
-* Servidores de archivos y aplicaciones.
-* Conexión a Internet, routers, redes WiFi.
-* Procesos internos en aplicaciones CRM, ERP, etc.
-* Sitio web y tienda en línea.
-* Servicios en la nube (almacenamiento).
 
 ## Análisis de amenazas
 
