@@ -1,18 +1,12 @@
 /* TEAM */
-Creator: Chris Hendricks
-Site: https://www.counteractive.net
-Twitter: @counteract_ive
-Location: San Antonio, Texas, USA
+Creator: Pablo Painceiras Martínez
+Location: San Fernando, Cádiz, España
 
-Contributor: Katherine Henry
-Twitter: @kathenry11
-Location: Oklahoma City, Oklahoma, USA
+Creator: Carlos Montesino Fernando
+Location: San Fernando, Cádiz, España
 
-Contributor: William Rowe
-Location: Fredericksburg, Virginia, USA
-
-/* THANKS */
-Inspirations: Everyone involved in the prior art listed in the README
+Creator: David Vila Díaz
+Location: Cádiz, Cádiz, España
 
 /* SITE */
 Standards: markdown
