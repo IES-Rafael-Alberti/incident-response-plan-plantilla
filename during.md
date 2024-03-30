@@ -1,4 +1,4 @@
-# Plan de respuesta a incidentes para {{COMPANY_NAME}}
+# Plan de respuesta a incidentes para ANPIPADA S.L.
 
 Autor: Anpipada
 
