@@ -1,8 +1,8 @@
 # Plan de respuesta a incidentes para {{COMPANY_NAME}}
 
-Autor: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}
+Autor: Anpipada
 
-Revisión {{REVISION_NUMBER}}, Publicado {{RELEASE_DATE}}
+Revisión 1, Publicado 31/03/2024
 
 Este plan de respuesta a incidentes está basado en el plan conciso, directivo, específico, flexible y gratuito disponible en [Github](https://github.com/counteractive/incident-response-plan-template) de Counteractive Security y discutido en [www.counteractive.net](https://www.counteractive.net/blog/an-ir-plan-you-will-use/)
 
