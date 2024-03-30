@@ -1,3 +1,4 @@
+
 ## Playbook: Escaneo activo
 
 ### Investigar
@@ -29,7 +30,7 @@ Entre algunas técinas para protejernos para estos ataques tenemos:
 
 - Realizar inspecciones rutinarias.
 
-- Aegurar que sistemas como el IDS/IPS, SIEM o firewall se encuentran actualizados.
+- Asegurar que sistemas como el IDS/IPS, SIEM o firewall se encuentran actualizados.
 
 - Revisar las reglas del firewall y del IDS/IPS rutinalmente basadas en las necesidades del entorno.
 

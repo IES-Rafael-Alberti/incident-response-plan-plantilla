@@ -1,6 +1,7 @@
-# Playbook: Denegación de Servicio en Internet (DDoS)
 
-## Investigar
+## Playbook: Denegación de Servicio en Internet (DDoS)
+
+### Investigar
 
 El procedimiento de respuesta a un ataque de denegación de servicio (DDoS) comienza con el monitoreo constante del tráfico de red. Este monitoreo tiene como objetivo identificar cualquier anomalía que pueda surgir. Algunos ejemplos de estas anomalías podrían ser picos inusuales en la cantidad de tráfico, la presencia de paquetes maliciosos o patrones de actividad que resulten sospechosos. Todos estos pueden ser indicativos de un intento de ataque a la red.
 
@@ -10,7 +11,7 @@ La última etapa involucra el seguimiento de las alertas de seguridad. Estas ale
 
 En resumen, la respuesta a un ataque de denegación de servicio es un proceso que requiere vigilancia constante, análisis detallado y reacción rápida para garantizar la seguridad y la continuidad del servicio.
 
-## Remediar
+### Remediar
 
 - **Implementación de Filtros de Tráfico:**
 
@@ -24,17 +25,7 @@ Mantener actualizadas las firmas de IDS/IPS para detectar y bloquear nuevos tipo
 
 Utilizar técnicas de redirección de tráfico para desviar el tráfico malicioso lejos de los sistemas críticos y mantener la disponibilidad de los servicios.
 
-## Recuperar
-
-- **Restauración de Servicios:**
-
-Restaurar los servicios afectados por el ataque de denegación de servicio tan pronto como sea posible para minimizar el impacto en la operación del negocio.
-
-- **Análisis Post-Mortem:**
-
-Realizar un análisis exhaustivo después del ataque para identificar las vulnerabilidades explotadas y tomar medidas para fortalecer la infraestructura de seguridad y prevenir futuros ataques similares.
-
-## Contener
+#### Contener
 
 - **Bloqueo de IPs Maliciosas:**
 
@@ -44,7 +35,7 @@ Bloquear las direcciones IP identificadas como origen del ataque de denegación 
 
 Segmentar la red para limitar el impacto de los ataques de denegación de servicio y aislar los sistemas críticos del resto de la infraestructura.
 
-## Erradicar
+#### Erradicar
 
 - **Identificar Origen del Ataque:**
 
@@ -54,7 +45,17 @@ Investigar y identificar el origen del ataque de denegación de servicio, ya sea
 
 Actualizar las políticas de seguridad para incluir medidas específicas para prevenir y mitigar ataques de denegación de servicio en el futuro.
 
-## Comunicar
+### Recuperar
+
+- **Restauración de Servicios:**
+
+Restaurar los servicios afectados por el ataque de denegación de servicio tan pronto como sea posible para minimizar el impacto en la operación del negocio.
+
+- **Análisis Post-Mortem:**
+
+Realizar un análisis exhaustivo después del ataque para identificar las vulnerabilidades explotadas y tomar medidas para fortalecer la infraestructura de seguridad y prevenir futuros ataques similares.
+
+### Comunicar
 
 - **Notificar a las Partes Interesadas:**
 
@@ -68,7 +69,7 @@ Comunicar a la dirección sobre el incidente de denegación de servicio, resalta
 
 Colaborar con proveedores de servicios de Internet y otros proveedores externos para compartir información sobre el ataque y coordinar esfuerzos para defenderse contra futuros ataques de denegación de servicio.
 
-## Recursos
+### Recursos
 
 - Referencia: Guía de Buenas Prácticas de Seguridad de DDoS del National Institute of Standards and Technology (NIST)
 - Referencia: Herramientas de Monitoreo de Red y Seguridad

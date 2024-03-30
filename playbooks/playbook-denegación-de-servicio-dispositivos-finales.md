@@ -1,6 +1,7 @@
-# Playbook: Denegación de Servicio de Dispositivos Finales
 
-## Investigar
+## Playbook: Denegación de Servicio de Dispositivos Finales
+
+### Investigar
 
 La investigación en respuesta a un ataque de denegación de servicio es un procedimiento multifacético que comienza con la supervisión del rendimiento de los dispositivos finales, como los servidores. Este monitoreo es una tarea crucial que se debe realizar con regularidad para identificar cualquier anomalía que pueda surgir. Las anomalías podrían incluir una disminución repentina en el rendimiento del dispositivo o un aumento inusual en el uso de recursos. Estos podrían ser signos tempranos de un ataque en curso y el reconocimiento temprano de estos signos puede ser esencial para mitigar el impacto del ataque.
 
@@ -10,7 +11,7 @@ Finalmente, la etapa de investigación también implica el seguimiento de las al
 
 En resumen, la investigación en respuesta a un ataque de denegación de servicio es un proceso que requiere vigilancia constante, análisis detallado y una reacción rápida. Al combinar estos pasos, se puede garantizar la seguridad y la continuidad del servicio.
 
-## Remediar
+### Remediar
 
 - **Optimización de Configuraciones:**
 
@@ -24,17 +25,7 @@ Configurar y activar cortafuegos en los dispositivos finales para filtrar el tr�
 
 Mantener actualizado el software y los sistemas operativos de los dispositivos finales para corregir vulnerabilidades conocidas y mejorar la resistencia a los ataques de denegación de servicio.
 
-## Recuperar
-
-- **Restauración de Servicios:**
-
-Restaurar los servicios afectados por el ataque de denegación de servicio tan pronto como sea posible para minimizar el impacto en la operación del negocio.
-
-- **Análisis Post-Mortem:**
-
-Realizar un análisis detallado después del ataque para identificar las causas subyacentes y tomar medidas para fortalecer la seguridad y prevenir futuros ataques similares.
-
-## Contener
+#### Contener
 
 - **Bloqueo de IPs Maliciosas:**
 
@@ -44,7 +35,7 @@ Bloquear las direcciones IP identificadas como origen del ataque de denegación 
 
 Segmentar la red para limitar el impacto de los ataques de denegación de servicio y aislar los dispositivos finales críticos del resto de la infraestructura.
 
-## Erradicar
+#### Erradicar
 
 - **Identificar Origen del Ataque:**
 
@@ -52,9 +43,19 @@ Investigar y identificar el origen del ataque de denegación de servicio en los 
 
 - **Mejora de Políticas de Seguridad:**
 
-Actualizar las políticas de seguridad para incluir medidas específicas para prevenir y mitigar ataques de denegación de servicio en dispositivos finales.
+Actualizar las políticas de seguridad para incluir medidas específicas para prevenir y mitigar ataques de denegación de servicio en dispositivos finales.s
 
-## Comunicar
+### Recuperar
+
+- **Restauración de Servicios:**
+
+Restaurar los servicios afectados por el ataque de denegación de servicio tan pronto como sea posible para minimizar el impacto en la operación del negocio.
+
+- **Análisis Post-Mortem:**
+
+Realizar un análisis detallado después del ataque para identificar las causas subyacentes y tomar medidas para fortalecer la seguridad y prevenir futuros ataques similares.
+
+### Comunicar
 
 - **Notificar a las Partes Interesadas:**
 
@@ -68,7 +69,7 @@ Comunicar a la dirección sobre el incidente de denegación de servicio, resalta
 
 Colaborar con proveedores de servicios de Internet y otros proveedores externos para compartir información sobre el ataque y coordinar esfuerzos para defenderse contra futuros ataques de denegación de servicio.
 
-## Recursos
+### Recursos
 
 - Referencia: Guía de Buenas Prácticas de Seguridad del Centro Nacional de Ciberseguridad (NCSC) sobre Protección de Dispositivos Finales
 - Referencia: Herramientas de Monitoreo de Rendimiento del Sistema

@@ -1,6 +1,7 @@
-# Playbook: Ataques de Fuerza Bruta
 
-## Investigar
+## Playbook: Ataques de Fuerza Bruta
+
+### Investigar
 
 - **Análisis de Logs de Autenticación:**
 
@@ -14,7 +15,7 @@ Analizar los registros de eventos del sistema en busca de actividad anormal, com
 
 Realizar un escaneo de vulnerabilidades en los sistemas afectados para identificar posibles puntos de entrada para ataques de fuerza bruta, como servicios mal configurados o contraseñas débiles. También, considerar un análisis geográfico de las direcciones IP para identificar posibles ubicaciones de los atacantes.
 
-## Remediar
+### Remediar
 
 - **Bloqueo de IP:**
 
@@ -28,7 +29,7 @@ Configurar sistemas de prevención de intrusos (IPS) o sistemas de detección de
 
 Reforzar la política de contraseñas de la organización, exigiendo contraseñas complejas y que se cambien periódicamente para evitar la adivinación de contraseñas. También, implementar la autenticación multifactor (MFA) para agregar una capa adicional de seguridad.
 
-## Contener
+#### Contener
 
 - **Aislamiento de Cuentas Comprometidas:**
 
@@ -38,7 +39,7 @@ Aislar las cuentas comprometidas y limitar su acceso a recursos sensibles hasta 
 
 Implementar sistemas de monitorización continua para detectar y responder rápidamente a cualquier intento adicional de fuerza bruta o actividad maliciosa. Además, configurar sistemas de respuesta automatizada que puedan tomar medidas inmediatas para mitigar los ataques.
 
-## Erradicar
+#### Erradicar
 
 - **Identificación de Origen del Ataque:**
 
@@ -48,7 +49,7 @@ Identificar la fuente del ataque de fuerza bruta y tomar medidas para mitigar cu
 
 Revisar y actualizar las políticas de seguridad para incluir medidas específicas para prevenir la fuerza bruta y promover prácticas seguras de autenticación. Además, colaborar con la comunidad de seguridad para compartir información sobre el incidente y ayudar a otras organizaciones a protegerse contra ataques similares.
 
-## Recuperar
+### Recuperar
 
 - **Restablecimiento de contraseñas:**
 
@@ -58,7 +59,7 @@ Restablecer las contraseñas de las cuentas comprometidas y de cualquier otra cu
 
 Implementar una monitorización continua de la actividad de inicio de sesión para detectar y responder rápidamente a cualquier intento futuro de fuerza bruta. También, actualizar el plan de continuidad del negocio (BCP) para incluir procedimientos específicos para manejar ataques de fuerza bruta y otros incidentes de seguridad cibernética.
 
-## Comunicar
+### Comunicar
 
 - **Notificar a las Partes Interesadas:**
 
@@ -68,7 +69,7 @@ Informar a las partes interesadas sobre la detección y respuesta al ataque de f
 
 Comunicar a la dirección sobre el incidente de fuerza bruta, resaltando los riesgos para la organización y las medidas tomadas para mitigar el impacto. Además, colaborar con los proveedores de servicios de Internet (ISP) para bloquear o filtrar el tráfico malicioso en la red antes de que alcance la infraestructura de la organización.
 
-## Recursos
+### Recursos
 
 - Guía de Buenas Prácticas de Seguridad en Gestión de Contraseñas.
 - Soluciones de Prevención de Intrusos (IPS).

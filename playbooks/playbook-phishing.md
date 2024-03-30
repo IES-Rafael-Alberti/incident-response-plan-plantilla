@@ -1,6 +1,7 @@
-# Playbook: Phishing
 
-## Investigar
+## Playbook: Phishing
+
+### Investigar
 
 - **Determinar el Alcance del Ataque:**
 
@@ -18,7 +19,7 @@ Utilizar herramientas como nslookup, whois, VirusTotal y sandboxes de malware pa
 
 Clasificar el tipo de ataque de phishing y evaluar la gravedad considerando el riesgo para la seguridad pública o personal, la exposición de datos sensibles, el impacto en el negocio y la capacidad para controlar o registrar sistemas críticos.
 
-## Remediar
+### Remediar
 
 - **Bloqueo de URLs Maliciosas:**
 
@@ -40,17 +41,7 @@ Establecer un proceso para que los usuarios reporten correos electrónicos de ph
 
 Cambiar las credenciales de acceso para cuentas comprometidas y reforzar la autenticación multifactor (MFA) cuando sea posible.
 
-## Recuperar
-
-- **Restauración de Datos:**
-
-En caso de que se hayan comprometido cuentas o información confidencial, restaurar los datos desde copias de seguridad limpias y verificadas para asegurar la integridad y la disponibilidad de la información.
-
-- **Revisión de Políticas de Seguridad:**
-
-Revisar y actualizar las políticas de seguridad para incluir medidas específicas para prevenir el phishing y promover prácticas seguras de uso del correo electrónico.
-
-## Contener
+#### Contener
 
 - **Bloqueo de Cuentas Comprometidas:**
 
@@ -68,7 +59,7 @@ Bloquear el acceso a dominios maliciosos identificados utilizando DNS, firewalls
 
 Implementar retención forense de mensajes y purgar mensajes relacionados de otras bandejas de entrada de usuario.
 
-## Erradicar
+#### Erradicar
 
 - **Identificar Origen del Phishing:**
 
@@ -78,7 +69,17 @@ Identificar el origen del correo electrónico de phishing y tomar medidas para m
 
 Revisar y actualizar las políticas de seguridad para incluir medidas específicas para prevenir el phishing y promover prácticas seguras de uso del correo electrónico.
 
-## Comunicar
+### Recuperar
+
+- **Restauración de Datos:**
+
+En caso de que se hayan comprometido cuentas o información confidencial, restaurar los datos desde copias de seguridad limpias y verificadas para asegurar la integridad y la disponibilidad de la información.
+
+- **Revisión de Políticas de Seguridad:**
+
+Revisar y actualizar las políticas de seguridad para incluir medidas específicas para prevenir el phishing y promover prácticas seguras de uso del correo electrónico.
+
+### Comunicar
 
 - **Notificar a las Partes Interesadas:**
 
@@ -92,7 +93,7 @@ Comunicar a la dirección sobre el incidente de phishing, resaltando los riesgos
 
 Colaborar con equipos de seguridad internos y externos para compartir información sobre el incidente y desarrollar estrategias de defensa contra el phishing en el futuro.
 
-## Recursos
+### Recursos
 
 - Guía de Buenas Prácticas de Seguridad de Phishing de la FTC
 - Herramientas de Análisis de Correo Electrónico

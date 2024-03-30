@@ -1,6 +1,7 @@
-# Playbook: Exfiltración de Datos
 
-## Investigar
+## Playbook: Exfiltración de Datos
+
+### Investigar
 
 - **Análisis de Logs de Seguridad:**
 
@@ -18,7 +19,7 @@ Investigar los accesos a recursos sensibles o bases de datos que podrían indica
 
 Realizar un escaneo completo de malware en sistemas comprometidos para identificar y eliminar posibles amenazas que podrían facilitar la exfiltración de datos.
 
-## Remediar
+### Remediar
 
 - **Restricción de Acceso:**
 
@@ -32,7 +33,7 @@ Revisar y actualizar las políticas de seguridad para incluir medidas específic
 
 Desplegar soluciones de prevención de pérdida de datos (DLP) para monitorear y prevenir la transferencia no autorizada de información sensible fuera de la red corporativa.
 
-## Contener
+#### Contener
 
 - **Aislamiento de Sistemas Comprometidos:**
 
@@ -42,7 +43,7 @@ Aislar los sistemas comprometidos de la red principal para prevenir la propagaci
 
 Implementar sistemas de monitorización continua para detectar y responder rápidamente a cualquier intento adicional de exfiltración de datos.
 
-## Erradicar
+#### Erradicar
 
 - **Método de Exfiltración:**
 
@@ -52,7 +53,7 @@ Identificar el método utilizado para la exfiltración de datos, como correo ele
 
 Revisar y actualizar las políticas de seguridad para incluir medidas específicas para prevenir la exfiltración de datos y promover prácticas seguras de gestión de información.
 
-## Recuperar
+### Recuperar
 
 - **Restauración de Datos:**
 
@@ -62,7 +63,7 @@ Restaurar los datos exfiltrados desde copias de seguridad limpias y verificadas 
 
 Realizar una auditoría exhaustiva post-incidente para identificar las causas subyacentes del incidente de exfiltración de datos y recomendar medidas preventivas adicionales.
 
-## Comunicar
+### Comunicar
 
 - **Notificar a las Partes Interesadas:**
 
@@ -92,7 +93,7 @@ Coordinar con el equipo de relaciones públicas o gestión de crisis para desarr
 
 Establecer un canal de comunicación seguro y confidencial para discutir el incidente con los interesados internos y externos, garantizando la confidencialidad de la información sensible relacionada con el incidente.
 
-## Recursos
+### Recursos
 
 - Guía de Buenas Prácticas de Seguridad en Gestión de Datos Sensibles
 - Soluciones de Prevención de Pérdida de Datos (DLP)

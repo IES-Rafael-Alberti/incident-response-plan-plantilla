@@ -1,3 +1,4 @@
+
 ## Playbook: Compromiso en la cadena de proveedores
 
 ### Investigar
@@ -44,8 +45,11 @@ Los ataques a la cadena de suministro amplían aún más el alcance. Además de 
 * **Actualizar sistemas y software:** Aplicar parches de seguridad y actualizaciones de software para cerrar posibles brechas de seguridad en la cadena de proveedores.
 
 #### Referencia: Recursos de Remediación
+
 [Reglas YARA](https://keepcoding.io/blog/que-son-las-reglas-yara/)
+
 [Reglas Sigma](https://www.securityartwork.es/2020/05/05/sigmashooter-ii-generando-nuestra-primera-firma-sigma/)
+
 ### Comunicar
 
 1. **Notificar a las partes interesadas:** Comunicar de manera proactiva el compromiso a las partes interesadas internas y externas, proporcionando información relevante sobre el impacto y las acciones tomadas.
@@ -68,6 +72,7 @@ Debe incluir:
 Cronograma detallado de las acciones tomadas por el equipo de respuesta a incidentes
 - Análisis de causa raíz y recomendaciones de mejora en función de su conclusión.
 - Lista de especialistas involucrados en Respuesta a Incidentes con sus roles
+
 #### Información adicional
 
 1. <a name="https://www.paloaltonetworks.com/blog/security-operations/playbook-of-the-week-automated-rapid-response-to-3cxdesktopapp-supply-chain-attack/"></a>["Playbook of the Week: Automated Rapid Response to 3CXDesktopApp Supply Chain Attack"](#TODO-url), Jane Goh (Apr 06, 2023)

@@ -2,8 +2,6 @@
 
 A continuación se presentan las descripciones, deberes y entrenamiento para cada uno de los roles definidos en una respuesta a incidentes.
 
-`TODO: Personaliza roles, descripciones, deberes y entrenamiento, si es necesario.`
-
 ## Estructura de Roles
 
 * Equipo de Comando

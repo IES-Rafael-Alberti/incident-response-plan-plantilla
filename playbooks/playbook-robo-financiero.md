@@ -1,6 +1,7 @@
-# Playbook: Robo Financiero
 
-## Investigar
+## Playbook: Robo Financiero
+
+### Investigar
 
 - **Monitoreo de Transacciones:**
 
@@ -14,7 +15,7 @@ Revisar los logs de acceso a sistemas financieros para detectar intentos de acce
 
 Estar atento a las alertas generadas por sistemas de detección de fraude que puedan indicar actividades fraudulentas en curso, como intentos de acceso desde ubicaciones inusuales o cambios en la información de la cuenta.
 
-## Remediar
+### Remediar
 
 - **Bloqueo de Transacciones Fraudulentas:**
 
@@ -28,17 +29,7 @@ Restablecer las credenciales de acceso comprometidas o sospechosas para evitar f
 
 Fortalecer los controles de acceso a sistemas financieros mediante la implementación de autenticación multifactorial y la revisión periódica de los privilegios de usuario.
 
-## Recuperar
-
-- **Reembolso de Fondos Robados:**
-
-Trabajar con instituciones financieras y autoridades pertinentes para recuperar los fondos robados y restablecer el equilibrio financiero de la organización.
-
-- **Revisión de Políticas de Seguridad:**
-
-Realizar una revisión exhaustiva de las políticas de seguridad financiera y actualizarlas según sea necesario para prevenir futuros robos financieros y proteger los activos de la organización.
-
-## Contener
+#### Contener
 
 - **Bloqueo de Cuentas Comprometidas:**
 
@@ -48,7 +39,7 @@ Bloquear las cuentas comprometidas utilizadas para llevar a cabo actividades fra
 
 Establecer sistemas de monitoreo continuo para detectar y responder rápidamente a actividades sospechosas o no autorizadas en los sistemas financieros.
 
-## Erradicar
+#### Erradicar
 
 - **Identificar Origen del Fraude:**
 
@@ -58,7 +49,17 @@ Investigar y determinar el origen del robo financiero, identificando posibles pu
 
 Proporcionar capacitación adicional en seguridad financiera a empleados y usuarios autorizados para aumentar la conciencia sobre las amenazas de robo financiero y promover prácticas seguras.
 
-## Comunicar
+### Recuperar
+
+- **Reembolso de Fondos Robados:**
+
+Trabajar con instituciones financieras y autoridades pertinentes para recuperar los fondos robados y restablecer el equilibrio financiero de la organización.
+
+- **Revisión de Políticas de Seguridad:**
+
+Realizar una revisión exhaustiva de las políticas de seguridad financiera y actualizarlas según sea necesario para prevenir futuros robos financieros y proteger los activos de la organización.
+
+### Comunicar
 
 - **Notificar a las Partes Interesadas:**
 
@@ -72,7 +73,7 @@ Comunicar a la dirección sobre el incidente de robo financiero, resaltando los 
 
 Colaborar con las autoridades pertinentes, como fuerzas del orden y reguladores financieros, para investigar el robo financiero y tomar medidas legales apropiadas contra los perpetradores.
 
-## Recursos
+### Recursos
 
 - Referencia: Guía de Buenas Prácticas de Seguridad Financiera del Institute of Internal Auditors (IIA)
 - Referencia: Herramientas de Monitoreo de Transacciones Financieras
