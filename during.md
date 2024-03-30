@@ -9,6 +9,19 @@ Este plan de respuesta a incidentes está basado en el plan conciso, directivo, 
 
 Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en {{TEST_DATE}}.
 
+# Contexto de este plan
+
+Posterior a la creación de este plan de respuesta se han realizado varios pasos que quedan detallados a continuación:
+
+## Identificación de activos
+
+## Análisis de amenzas
+
+## Cálculo del riesgo
+
+## Taxonomía de incidentes
+
+## Proyectos
 
 # Evaluar
 
