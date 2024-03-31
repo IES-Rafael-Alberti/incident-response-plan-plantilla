@@ -214,6 +214,10 @@ Estos dos enfoques son fundamentales para entender y responder de manera efectiv
 
 Hemos identificado que los playbooks de incidentes de seguridad cibernética abordan los pasos a seguir en caso de un ataque cibernético, como una violación de datos, un ransomware, o un ataque de denegación de servicio (DDoS). Se basa en las mejores prácticas de seguridad cibernética, incluidas las pautas de organizaciones como el NIST o el CERT, que es la especialización que estamos estudiando.
 
+A raíz del estudio del marco de MITRE ATT&CK, hemos identificado una serie de técnicas específicas que afectarían al sistema crítico de nuestra empresa, en la siguiente imagen podemos observar la tabla MITRE ATT&CK con las técnicas seleccionadas:
+
+![MITRE](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/Images/mitreatt.png)
+
 1.c   ¿Como te has asegurado que has cubierto todas las fases del plan de respuesta? ¿Qué fase consideras que está más floja en un plan? ¿Cuál de ellas consideras que está mejor trabajada en tu plan? Asegúrate de hablar de todas las fases y como las cubres.  
 
 Para asegurarme de cubrir todas las fases del plan de respuesta, he seguido una estructura clara y detallada que abarca desde la preparación hasta la recuperación y seguimiento. Cada fase se ha diseñado para garantizar una respuesta integral y efectiva ante incidentes de seguridad.  
