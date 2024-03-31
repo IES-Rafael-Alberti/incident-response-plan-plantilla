@@ -206,7 +206,7 @@ Aquí están los playbooks que hemos creado y las técnicas correspondientes de 
 
 ## 4. Respuesta a las preguntas <div id='respuesta-a-las-preguntas' />
 
-1.a   ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.  
+1.a  ** ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.  **
 
 Estos dos enfoques son fundamentales para entender y responder de manera efectiva a los ataques cibernéticos. Utilizando sus matrices y modelos respectivamente garantiza una respuesta integral y coordinada que aborda todas las etapas del incidente y ayuda a minimizar el impacto en la organización afectada.
 
