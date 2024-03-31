@@ -6,7 +6,7 @@ A continuación se presentan las descripciones, los deberes y la formación para
 
 * Equipo de Mando
   * [Jefe de Departamento](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/roles/role-1-Jefe-de-Departamento.md)
-  * [Subjefe de Departamento](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/roles/role-2-deputy.md)
+  * [Subjefe de Departamento](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/roles/role-2-subjefe.md)
   * [Escriba](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/roles/role-3-scribe.md)
 * Equipo de enlace
   * Enlace Interno [Enlace](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/roles/role-5-liaison.md)
