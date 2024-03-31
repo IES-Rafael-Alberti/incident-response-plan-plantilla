@@ -125,7 +125,7 @@ Teniendo en cuenta los objetivos e iniciativas de la tabla exterior se le añade
 inicio y de finalización para dichos proyectos:  
 ![Proyectos](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/Images/proyectos.png)
 
-## 2. Plan de respuesta a incidentes <div id='plan-de-respuesta-a-incidentes' />
+## 2. Plan de respuesta a incidentes <div id='plan-de-respuesta' />
 Una vez detallado todo lo anterior comenzamos a realizar nuestro plan para responder en el caso de que se de un incidente que no podemos tolerar en uno de nuestros activos.
 
 Este plan consta de los siguientes puntos:
