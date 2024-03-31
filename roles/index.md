@@ -12,7 +12,7 @@ A continuación se presentan las descripciones, los deberes y la formación para
   * Enlace Interno [Enlace](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/roles/role-5-liaison.md)
   * Enlace externo
 * Equipo de Operaciones
-  * [Expertos en la materia](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/roles/role-4-expert.md) (SMEs) para Sistemas
+  * [Expertos en la materia](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/roles/role-4-experto.md) (SMEs) para Sistemas
   * SMEs para equipos/unidades de negocio
   * SMEs para las funciones ejecutivas (_p.ej._, Legal, RRHH, Finanzas)
 En el caso de incidentes complejos de mayor envergadura, la estructura de funciones puede ajustarse para tener en cuenta la creación de subequipos.
