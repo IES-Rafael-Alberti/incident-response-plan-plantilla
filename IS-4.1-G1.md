@@ -255,3 +255,13 @@ Mi plan de respuesta a incidentes se centra en promover la resiliencia en todas 
 Esto se logra mediante la implementación de medidas preventivas, la detección temprana, la respuesta rápida y coordinada, y la revisión y mejora continua del plan.
 
 ## 5. Conclusiones <div id='conclusiones' />
+
+Tras analizar, todo el trabajo realizado, hemos podido sacar las siguientes conclusiones:
+
+1. Importancia de la preparación: Un plan bien diseñado puede marcar una gran diferencia entre otra empresa debdio a la manera que se pueden enfrentar a incidentes.
+2. Reconocimiento de la diversidad de amenazas: Al reconocer la diversidad de amenzas a las que nos podemos enfrentar, refuerza la necesidad de tener una estrategia dependiendo del incidente al que nos enfrentemos.
+3. Enfoque de detección: Uno de los aspectos más importantes, es la hora de detectar un incidente, debido a que si lo encontramos de manera temprana, podremos minimizar su impacto e incluso facilitar una respuesta rápida y efectiva.
+4. Coordinación y colaboración: Se necesita una coordinación efectiva entre todos los miembros del equipo.
+5. Asignación de roles y responsabilidades: El plan se define por los roles que ejerce cada miembro del equipo, lo que facilita las acciones más rápidas y coordinadas durante una crisis.
+6. Continuidad del negocio: El plan debe incluir medidas para garantizar la continuidad del negocio y la recuperación rápida de las operaciones tras un incidente.
+7. Aprendizaje continuo: Después del incidente, se lleva a cabo una evaluación para identificar las áreas que hace falta mejorar, lo que garantiza, un aprendizaje continuo y la capacidad de mejora constante por la incidente resuelto.
