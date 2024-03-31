@@ -63,8 +63,8 @@ Para continuar con los pasos para contener y mitigar el incidente:
 
 - Revisar las propiedades de archivos cifrados o notas de rescate para identificar usuarios específicos.
 - Revisar los registros de eventos RDP, para comprobar las conexiones de red se han realizado correctamente.
-- Revisar el registro de seguridad de Windows, los eventros SMB y los registros relacionados que puedan identificar eventos de autenticación o acceso.
-- Ejecutar un software de captura de paquetes como Wireshark en el serivodr afectado para identificar direcciones IPs involucradas en la escritura activo o cambio de nombre de los archivos.
+- Revisar el registro de seguridad de Windows, los eventos SMB y los registros relacionados que puedan identificar eventos de autenticación o acceso.
+- Ejecutar un software de captura de paquetes como Wireshark en el servidor afectado para identificar direcciones IPs involucradas en la escritura activo o cambio de nombre de los archivos.
 - Realizar análisis extensos para identificar mecanismos de persistencia de afuera hacia adentro y viceversa.
 
 ### Fase de Recuperación
