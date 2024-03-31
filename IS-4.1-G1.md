@@ -206,11 +206,11 @@ Aquí están los playbooks que hemos creado y las técnicas correspondientes de 
 
 ## 4. Respuesta a las preguntas <div id='respuesta-a-las-preguntas' />
 
-1.a  ** ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.  **
+**1.a  ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.**
 
 Estos dos enfoques son fundamentales para entender y responder de manera efectiva a los ataques cibernéticos. Utilizando sus matrices y modelos respectivamente garantiza una respuesta integral y coordinada que aborda todas las etapas del incidente y ayuda a minimizar el impacto en la organización afectada.
 
-1.b   ¿Qué playbooks has identificado como necesarios en este plan de respuesta y en que te has basado para identificar esos playbooks y saber que son los necesarios? Deja algún diagrama que describa el flujo de un playbook.  
+**1.b  ¿Qué playbooks has identificado como necesarios en este plan de respuesta y en que te has basado para identificar esos playbooks y saber que son los necesarios? Deja algún diagrama que describa el flujo de un playbook.**
 
 Hemos identificado que los playbooks de incidentes de seguridad cibernética abordan los pasos a seguir en caso de un ataque cibernético, como una violación de datos, un ransomware, o un ataque de denegación de servicio (DDoS). Se basa en las mejores prácticas de seguridad cibernética, incluidas las pautas de organizaciones como el NIST o el CERT, que es la especialización que estamos estudiando.
 
@@ -218,7 +218,7 @@ A raíz del estudio del marco de MITRE ATT&CK, hemos identificado una serie de t
 
 ![MITRE](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/Images/mitreatt.png)
 
-1.c   ¿Como te has asegurado que has cubierto todas las fases del plan de respuesta? ¿Qué fase consideras que está más floja en un plan? ¿Cuál de ellas consideras que está mejor trabajada en tu plan? Asegúrate de hablar de todas las fases y como las cubres.  
+**1.c  ¿Como te has asegurado que has cubierto todas las fases del plan de respuesta? ¿Qué fase consideras que está más floja en un plan? ¿Cuál de ellas consideras que está mejor trabajada en tu plan? Asegúrate de hablar de todas las fases y como las cubres.**
 
 Para asegurarme de cubrir todas las fases del plan de respuesta, he seguido una estructura clara y detallada que abarca desde la preparación hasta la recuperación y seguimiento. Cada fase se ha diseñado para garantizar una respuesta integral y efectiva ante incidentes de seguridad.  
 
@@ -226,10 +226,9 @@ En cuanto a la fase que considero más floja en un plan de respuesta, podría se
 
 Por otro lado, considero que la fase de respuesta está mejor trabajada en mi plan. Esto se debe a que se establecen claramente los pasos a seguir para contener el incidente, evaluar el riesgo, eliminar las amenazas y coordinar con los equipos internos y externos necesarios para manejar la situación de manera efectiva.  
 
-2.a   ¿En que consiste el Flujo de Toma de Decisiones y Escalado de tu plan de respuesta? ¿Existe un plan de comunicación, protocolos, etc? Si la respuesta es correcta, haz un resumen del plan y protocolos. Deja evidencias del flujo, mediante un diagrama.  
+**2.a   ¿En que consiste el Flujo de Toma de Decisiones y Escalado de tu plan de respuesta? ¿Existe un plan de comunicación, protocolos, etc? Si la respuesta es correcta, haz un resumen del plan y protocolos. Deja evidencias del flujo, mediante un diagrama.**  
 
 Consiste en un proceso estructurado que determina cómo se toman las decisiones y cómo se escalan los problemas a medida que se desarrolla el incidente.  
-
 
 Sí, dentro del plan de respuesta a incidentes, es fundamental contar con un plan de comunicación.
 ### Resumen Plan de comunicación
@@ -249,7 +248,7 @@ Sí, dentro del plan de respuesta a incidentes, es fundamental contar con un pla
 
 * Evaluación y revisión: Programar evaluaciones periódicas del plan de comunicación para identificar áreas de mejora y realizar ajustes según sea necesario. Esto garantiza que el plan esté actualizado y sea efectivo en la gestión de futuros incidentes.
 
-3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?
+**3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?**
 
 Mi plan de respuesta a incidentes se centra en promover la resiliencia en todas las fases, desde la preparación hasta la recuperación y el seguimiento.
 
