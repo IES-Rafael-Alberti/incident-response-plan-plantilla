@@ -1,11 +1,11 @@
 
-## Rol: Jefe de Incidentes (CI)
+## Rol: Jefe de Incidentes (JI)
 
 ### Descripción
 
-El jefe de Incidentes (CI) actúa como la única fuente de verdad sobre lo que está sucediendo actualmente y lo que va a suceder durante un incidente importante. El CI es la persona de mayor rango en cualquier llamada de incidente, independientemente de su rango diario. Son los tomadores de decisiones durante un incidente; delegan tareas y escuchan a expertos en la materia para resolver el incidente. Sus decisiones como jefe son finales.
+El jefe de Incidentes (JI) actúa como la única fuente de verdad sobre lo que está sucediendo actualmente y lo que va a suceder durante un incidente importante. El JI es la persona de mayor rango en cualquier llamada de incidente, independientemente de su rango diario. Son los tomadores de decisiones durante un incidente; delegan tareas y escuchan a expertos en la materia para resolver el incidente. Sus decisiones como jefe son finales.
 
-Tu trabajo como CI es evaluar la situación, proporcionar orientación clara y coordinación, reclutar a otros para recopilar contexto/detalles. **No realices ninguna investigación o remedio:** delega estas tareas.
+Tu trabajo como JI es evaluar la situación, proporcionar orientación clara y coordinación, reclutar a otros para recopilar contexto/detalles. **No realices ninguna investigación o remedio:** delega estas tareas.
 
 ### Deberes
 
@@ -43,7 +43,7 @@ Resolver el incidente lo más rápido y seguro posible utilizando el plan de res
 
 El jefe de Incidentes utiliza algunos procedimientos y jerga de llamadas adicionales:
 
-* Anuncia siempre cuando te unas a la llamada si eres el CI de guardia.
+* Anuncia siempre cuando te unas a la llamada si eres el JI de guardia.
 * **No** permitas que las discusiones se salgan de control. Mantén las conversaciones cortas.
 * Toma nota de las objeciones de los demás, pero tu decisión es final.
 * Si alguien está siendo activamente disruptivo en tu llamada, expúlsalo.
@@ -57,7 +57,7 @@ El jefe de Incidentes utiliza algunos procedimientos y jerga de llamadas adicion
 * Lee el plan de respuesta a incidentes, incluidos todos los roles y libros de jugadas.
 * Participa en un ejercicio de respuesta a incidentes.
 * Observa a un jefe de Incidentes actual sin participar activamente, guarda tus preguntas hasta el final.
-* Invierte la observación con un jefe de Incidentes actual. Responde a incidentes con el CI actual allí para tomar el mando si es necesario.
+* Invierte la observación con un jefe de Incidentes actual. Responde a incidentes con el JI actual allí para tomar el mando si es necesario.
 * _OPCIONAL:_ entrenamiento en facilitación.
 * _OPCIONAL:_ Consulta [Respondedores de Incidentes como Facilitadores (y Terapeutas)](#FIX) y el [entrenamiento del jefe de Incidentes de PagerDuty](https://response.pagerduty.com/training/incident_commander/) para obtener más ideas y discusiones.
 
