@@ -16,7 +16,7 @@ En la fase de identificación y detección se ha de clasificar el incidente para
 
 Esta identificación puede ser pasiva o activa, si está ocurriendo en el momento (activa) o si estamos observando ciertos comportamientos extraños (pasiva). En cualquiera de los dos casos, identificar los activos afectados es crucial para el problema.
 
-Durante esta fase es fundamental la comunicación con del equipo con las personas involucradas, recopilando y documentando con la mayor claridad posible la información aportada, para así determinar con mayor precisión los activos involucrados.
+Durante esta fase es fundamental la comunicación del equipo con las personas involucradas, recopilando y documentando con la mayor claridad posible la información aportada, para así determinar con mayor precisión los activos involucrados.
 
 Métodos de ataque más comunes según MITRE ATT&CK:
 
