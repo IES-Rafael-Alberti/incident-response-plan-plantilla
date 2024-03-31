@@ -18,7 +18,7 @@ Los enlaces interactuan con otros equipos o partes interesadas fuera del equipo 
 1. Contactar o interactuar con las partes interesadas externas, como proveedores, socios, fuerzas de seguridad, _etc._
 1. **No** sentirse responsable de la creación de cada mensaje: trabajar con el Jefe de Departamento y otras partes interesadas.
 1. Según proceda, mantener a los clientes informados durante un incidente.
-1. Actuar como voz de nuestros clientes ante el Jefe de Departamento, ya que esto es útil para la toma de decisiones del IC.
+1. Actuar como voz de nuestros clientes ante el Jefe de Departamento, ya que esto es útil para la toma de decisiones del Jefe de Departamento.
 1. Obtener la aprobación del mensaje después de haber elaborado el mensaje público: copiar el mensaje en el chat y esperar la confirmación verbal/escrita del Jefe de Departamento antes de continuar.
 2. No sentirse responsable por las decisiones que se toman. Solo, sigues ordenes de el Jefe de Departamento, aunque te sientas culpable de una acción, no es culpa tuya.
 
