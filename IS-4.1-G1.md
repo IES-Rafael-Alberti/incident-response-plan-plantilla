@@ -258,7 +258,7 @@ Esto se logra mediante la implementación de medidas preventivas, la detección 
 
 Tras analizar, todo el trabajo realizado, hemos podido sacar las siguientes conclusiones:
 
-1. Importancia de la preparación: Un plan bien diseñado puede marcar una gran diferencia entre otra empresa debdio a la manera que se pueden enfrentar a incidentes.
+1. Importancia de la preparación: Un plan bien diseñado puede marcar una gran diferencia entre otra empresa debido a la manera que se pueden enfrentar a incidentes.
 2. Reconocimiento de la diversidad de amenazas: Al reconocer la diversidad de amenzas a las que nos podemos enfrentar, refuerza la necesidad de tener una estrategia dependiendo del incidente al que nos enfrentemos.
 3. Enfoque de detección: Uno de los aspectos más importantes, es la hora de detectar un incidente, debido a que si lo encontramos de manera temprana, podremos minimizar su impacto e incluso facilitar una respuesta rápida y efectiva.
 4. Coordinación y colaboración: Se necesita una coordinación efectiva entre todos los miembros del equipo.
