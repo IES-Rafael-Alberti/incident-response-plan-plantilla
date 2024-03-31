@@ -3,9 +3,13 @@
 
 ### Descripción
 
-Todos los participantes en la respuesta a un incidente tienen la responsabilidad de ayudar a resolver el incidente de acuerdo con el plan de respuesta a incidentes, bajo la autoridad del Incident Commander.
+Todos los participantes en la respuesta a un incidente tienen la responsabilidad de ayudar a resolver el incidente de acuerdo con el plan de respuesta a incidentes, bajo la autoridad del Jefe de Departamento.
 
 ### Deberes
+
+#### Herramienta de llamada
+
+La herramienta para la coordinación de los equipos para enfrentarse a las incidencias será el Google Meet, debido a sus funcionalidades de organización dentro de la llamada y su gestión.
 
 #### Exhibir la etiqueta de la llamada
 
@@ -16,8 +20,8 @@ Todos los participantes en la respuesta a un incidente tienen la responsabilidad
 * Hablar con claridad.
 * Ser directo y objetivo.
 * Mantener las conversaciones/debates breves y al grano.
-* Comunicar cualquier preocupación al Incident Commander (IC) en la llamada.
-* Respetar las limitaciones de tiempo dadas por el Incident Commander.
+* Comunicar cualquier preocupación al Jefe de Departamento en la llamada.
+* Respetar las limitaciones de tiempo dadas por el Jefe de Departamento.
 * Si te unes a un solo canal (llamada o chat), no participar activamente, ya que provoca una comunicación inconexa.
 * **Utilizar una terminología clara y evitar usar acrónimos o abreviaturas. La claridad y la precisión son más importantes que la brevedad.**
 
@@ -32,12 +36,12 @@ El [procedimiento de voz] estándar de la radio (https://en.wikipedia.org/wiki/V
 
 **No** invente nuevas abreviaturas; favorezca ser explícito sobre lo implícito.
 
-#### Seguir al Incident Commander
+#### Seguir al Jefe de Departamento
 
-El Incident Commander (IC) es el líder del proceso de respuesta al incidente.
+El Jefe de Departamento es el líder del proceso de respuesta al incidente.
 
-* Siga las instrucciones del Incident Commander.
-* No realice ninguna acción a menos que el Incident Commander se lo indique.
+* Siga las instrucciones del Jefe de Departamento.
+* No realice ninguna acción a menos que el Jefe de Departamento se lo indique.
 * El jefe normalmente sondeará si hay objeciones fuertes antes de asignar una acción importante. Plantee sus objeciones si las tiene.
 * Una vez que el jefe haya tomado una decisión, sígala (incluso si no está de acuerdo).
 * Responde a cualquier pregunta que te haga el jefe de forma clara y concisa. Responder "no sé" es aceptable. No adivine.
