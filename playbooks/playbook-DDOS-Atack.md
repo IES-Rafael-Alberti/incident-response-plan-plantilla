@@ -22,10 +22,10 @@ o Obtener más detalles sobre los paquetes maliciosos (capa OSI, Número de Puer
 
 ## Paso 2: Contener el Ataque
 • Identificar si el ataque de DDoS explota un servicio particular (es decir, ICMP) o está atacando un puerto específico.  
-Deshabilitar ese servicio o cerrar el puerto si no son esenciales para la operación del sistema atacado.
-• Obtener las direcciones IP de los paquetes entrantes de DDoS e implementar control de acceso para bloquear esas direcciones IP.  
-• Implementar limitación de velocidad para restringir el número de paquetes que pueden ser enviados desde una sola dirección IP.  
-• Verificar si los proveedores de servicios de Internet o Cloud pueden proporcionar a la organización algún tipo de defensa contra DDoS:  
+* Deshabilitar ese servicio o cerrar el puerto si no son esenciales para la operación del sistema atacado.
+* Obtener las direcciones IP de los paquetes entrantes de DDoS e implementar control de acceso para bloquear esas direcciones IP.  
+* Implementar limitación de velocidad para restringir el número de paquetes que pueden ser enviados desde una sola dirección IP.  
+* Verificar si los proveedores de servicios de Internet o Cloud pueden proporcionar a la organización algún tipo de defensa contra DDoS:  
 o Limpieza de tráfico / Canal Limpio  
 o Sinkholing (Bloqueo de direcciones IP maliciosas conocidas)  
 o Enrutamiento nulo (Implementar como último recurso)  
