@@ -5,7 +5,7 @@ A continuación se presentan las descripciones, los deberes y la formación para
 ## Estructura de los roles
 
 * Equipo de Mando
-  * [Jefe de Departamento](#rol-incident-commander)
+  * [Jefe de Departamento](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/roles/role-1-commander.md)
   * [Subjefe de Departamento](#rol-delegado-del-incident-commander-subdelegado)
   * [Escriba](#rol-escriba)
 * Equipo de enlace
