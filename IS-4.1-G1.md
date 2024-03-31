@@ -178,8 +178,8 @@ El flujo de toma de decisiones y el escalado de privilegios es el siguiente:
 1. Detección del incidente: Los sistemas de monitoreo y el personal de TI detectan y reportan posibles incidentes de seguridad.
 1. Evaluación inicial: El equipo de respuesta a incidentes realiza una evaluación inicial para determinar la gravedad del incidente.
 1. Decisión de nivel 1: Si el incidente es de bajo riesgo, el equipo de respuesta a incidentes puede manejarlo directamente.
-1. Escalado de nivel 1 a nivel 2: Si el incidente es de riesgo moderado, se escala al gerente del equipo de respuesta a incidentes.
-1. Decisión de nivel 2: El gerente del equipo de respuesta a incidentes puede decidir tomar medidas adicionales, como aumentar los recursos asignados al incidente o implementar medidas de contención adicionales.
+1. Escalado de nivel 1 a nivel 2: Si el incidente es de riesgo moderado, se escala al jefe de departamento de respuesta a incidentes.
+1. Decisión de nivel 2: El jefe de departamento del equipo de respuesta a incidentes puede decidir tomar medidas adicionales, como aumentar los recursos asignados al incidente o implementar medidas de contención adicionales.
 1. Escalado de nivel 2 a nivel 3: Si el incidente es de alto riesgo, se escala a la alta dirección.
 1. Decisión de nivel 3: La alta dirección puede decidir tomar medidas estratégicas, como informar a las partes interesadas externas, contratar a consultores externos, o, en casos extremos, cerrar operaciones hasta que el incidente sea resuelto.
 1. Revisión post-incidente: Una vez resuelto el incidente, se realiza una revisión post-incidente para aprender de la experiencia y mejorar los futuros procesos de toma de decisiones y escalado de incidentes.
