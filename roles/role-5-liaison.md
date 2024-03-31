@@ -53,6 +53,4 @@ Leer y comprender el plan de respuesta a incidentes, incluyendo los roles y las 
 #### Prerequisitos
 
 * Excelentes **habilidades de comunicación** verbal y escrita.
-* _OPCIONAL:_ Formación en atención al cliente.
-* _OPCIONAL:_ Comunicación corporativa o formación en marketing.
 
