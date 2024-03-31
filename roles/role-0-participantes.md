@@ -32,9 +32,9 @@ El [procedimiento de voz](https://es.wikipedia.org/wiki/Procedimiento_de_voz) es
 
 **No** inventes nuevas abreviaturas; favorece ser explícito sobre ser implícito.
 
-#### Seguir al Comandante de Incidentes
+#### Seguir al Jefe de Incidentes
 
-El Comandante de Incidentes (CI) es el líder del proceso de respuesta a incidentes.
+El Jefe de Incidentes (JI) es el líder del proceso de respuesta a incidentes.
 
 * Seguir instrucciones del comandante de incidentes.
 * No realizar ninguna acción a menos que el comandante de incidentes te lo haya indicado.
