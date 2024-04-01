@@ -11,11 +11,11 @@
 
 ## Realización del AAR
 
-1. Reuniones
+1. Reuniones  
    Se organizarán reuniones para llevar a cabo el AAR. Nos aseguraremos de que todos los participantes clave estuvieran presentes y de que se dispusiera de suficiente tiempo para una discusión detallada.
-2. Comunicación del Estado
+2. Comunicación del Estado  
    Se comenzará con una descripción general del incidente y de las acciones tomadas en respuesta. Esto incluye cuando ocurrió, como se descubrió, sistemas afectados, datos afectados y que acciones se llevaron a cabo en respuesta al incidente.
-3. Discusión
+3. Discusión  
    Se realizará una discusión abierta y honesta. Se pedirá a cada participante que comparta su perspectiva sobre el incidente y su respuesta. Incluyendo lo que salió bien, lo que se podría haber hecho mejor y cualquier lección aprendida en el proceso.
 
 ## Identificación de lecciones aprendidas
