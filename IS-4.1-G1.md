@@ -1,6 +1,6 @@
 # Plan de Respuesta a Incidentes
 ## Indice
-1. [Introducción](#iintroduccion)  
+1. [Introducción](#introduccion)  
     1.1. [Identificación de activos](#identificación-de-activos)  
     1.2. [Análisis de amenazas](#análisis-de-amenazas)  
     1.3. [Establecimiento de vulnerabilidades](#establecimiento-de-vulnerabilidades)  
