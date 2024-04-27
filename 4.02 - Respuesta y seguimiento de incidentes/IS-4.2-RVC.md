@@ -1,6 +1,18 @@
 # 4.02 - Respuesta y seguimiento de incidentes (RA4.def)
 
-## SOC210- Possible Brute Force Detected on VPN
+## **Índice**
+1. [SOC210- Possible Brute Force Detected on VPN](#soc210)  
+2. [SOC 176- RDP Brute Force Detected](#soc176)  
+3. [SOC170 - Passwd Found in Requested URL - Possible LFI Attack](#soc170)  
+4. [SOC202 - FakeGPT Malicious Chrome Extension](#soc202)  
+5. [SOC239 - Remote Code Execution Detected in Splunk Enterprise](#soc239)  
+6. [SOC227 - Microsoft SharePoint Server Elevation of Privilege - Possible CVE-2023-29357 Exploitation](#soc227)  
+7. [SOC235 — Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515](#soc235)  
+8. [SOC175 - PowerShell Found in Requested URL - Possible CVE-2022-41082 Exploitation](#soc175)  
+9. [HyperScrape Data Exfiltration Tool Detected](#data)  
+10. [QR Code Phishing](#qr)  
+
+## SOC210- Possible Brute Force Detected on VPN <div id='soc210' />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
     - Taxonomía: Brute Force
@@ -68,7 +80,7 @@
 
 Mejorar la seguridad de la cuentas, estabelcer firewalls, para que solo se puedan conectar IP conocidas, Cambiar la contraseña de las cuentas cada cierto tiempo…
 
-## SOC 176- RDP Brute Force Detected
+## SOC 176- RDP Brute Force Detected <div id='soc176' />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
     - Taxonomía: Brute Force
@@ -136,7 +148,7 @@ Mejorar la seguridad de la cuentas, estabelcer firewalls, para que solo se pueda
 
 Mejorar la seguridad de la cuentas, estabelcer firewalls, para que solo se puedan conectar IP conocidas, Cambiar la contraseña de las cuentas cada cierto tiempo…
 
-## SOC170 - Passwd Found in Requested URL - Possible LFI Attack
+## SOC170 - Passwd Found in Requested URL - Possible LFI Attack <div id='soc170' />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
     - Taxonomía: Web Attack
@@ -204,7 +216,7 @@ Mejorar la seguridad de la cuentas, estabelcer firewalls, para que solo se pueda
 
 Mejorar la segurdad, evitar que exita estso tipos de enlaces en nuestra página web…
 
-## SOC202 - FakeGPT Malicious Chrome Extension
+## SOC202 - FakeGPT Malicious Chrome Extension <div id='soc202' />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
 
@@ -284,7 +296,7 @@ Y con ello, terminamos el Playbook.
 
 Incitar a los empleados, vigilancias constantes de los equipos,  poner antivirus, cortafuegos…
 
-## SOC239 - Remote Code Execution Detected in Splunk Enterprise
+## SOC239 - Remote Code Execution Detected in Splunk Enterprise <div id='soc239' />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
     - Taxonomía: Unauthorized Access
@@ -351,7 +363,7 @@ Incitar a los empleados, vigilancias constantes de los equipos,  poner antivirus
 
 Asegurarse la aplicación este actualizada, restricción de permisos, auditoría de actividad, configurar reglas de firewall, pruebas de seguridad…
 
-## SOC227 - Microsoft SharePoint Server Elevation of Privilege - Possible CVE-2023-29357 Exploitation
+## SOC227 - Microsoft SharePoint Server Elevation of Privilege - Possible CVE-2023-29357 Exploitation <div id='soc227' />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
 
@@ -419,7 +431,7 @@ Entonces la siguiente pregunta es si el ataque trinfuó, y como vimos anteriorme
 
 Aplicar parches, Configurar permisos, monitoreo constante, Seguimiento de la vulnerabilidad…
 
-## **SOC235 — Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515**
+## **SOC235 — Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515** <div id='soc235' />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
 
@@ -485,7 +497,7 @@ Y ya por último, nos pone si hace falta poner el equipo, en Tier 2, es decir, a
 
 Mejorar la seguridad del equipo, actualizar la versiones de software más pronto posible, restringir usuarios autorizados, aplicar parches de seguridad…
 
-## **[SOC175 - PowerShell Found in Requested URL - Possible CVE-2022-41082 Exploitation]**
+## **[SOC175 - PowerShell Found in Requested URL - Possible CVE-2022-41082 Exploitation]** <div id='soc175' />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
 
@@ -553,7 +565,7 @@ Y con ello, terminamos el Playbook.
 
 Mejorar la seguridad del equipo, establecer IP dinámica….
 
-## HyperScrape Data Exfiltration Tool Detected
+## HyperScrape Data Exfiltration Tool Detected <div id='data' />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
 
@@ -629,7 +641,7 @@ Y con esto, ya terminamos nuestro playbook.
 
 Mejorar al firewall, tomar medidas en el firewall, para que no vuelva a ocurrir este tipo de situaciones…
 
-## QR Code Phishing
+## QR Code Phishing <div id='qr' />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
 
