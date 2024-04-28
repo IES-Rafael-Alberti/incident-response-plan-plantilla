@@ -2,7 +2,7 @@
 
 ## **SOC251 — Quishing Detected (QR Code Phishing)**
 
-![Untitled](imgpablo/Untitled 0.png)
+![Untitled](imgpablo/0.png)
 
 ## **Datos de la alerta:**
 
