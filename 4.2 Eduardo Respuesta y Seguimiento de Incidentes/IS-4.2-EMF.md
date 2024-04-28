@@ -10,12 +10,7 @@
 7. [SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515](#7)
 8. [SOC168 - Whoami Command Detected in Request Body](#8)
 9. [SOC164 - Suspicious Mshta Behavior](#9)
-10. [SOC210 - Possible Brute Force Detected on VPN](#10)
-11. [SOC251 - Quishing Detected (QR Code Phishing)](#11)
-12. [SOC176 - RDP Brute Force Detected](#12)
-13. [SOC163 - Suspicious Certutil.exe Usage](#13)
-14. [SOC173 - Follina 0-Day Detected](#14)
-15. [SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected](#15)
+10. [SOC251 - Quishing Detected (QR Code Phishing)](#10)
 
 ## SOC274 - Palo Alto Networks PAN-OS Command Injection Vulnerability Exploitation (CVE-2024-3400) <div id="1" />
 
@@ -83,251 +78,363 @@ Se tuvo que aislar el dispositivo para tratar de evitar que se pudiera extender 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
 
 - Taxonomia:
-- Criticidad:
-- Descripción:
+- Criticidad: Crítica
+- Descripción: La vulnerabilidad CVE-2023-29357 es una vulnerabilidad de escalado de privilegios crítica que, cuando combinada con otras vulnerabilidades, puede llevar a ejecución de código remoto.
 
+Podemos ver ya el [CVE-2023-29357](https://nvd.nist.gov/vuln/detail/CVE-2023-29357), donde podremos documentarnos de este ataque, junto con esta información:
 
+- IP del atacante: 39.91.166.222
+- User-Agent: python-requests/2.28.1, que indica que un script de python se ha usado para el ataque en cuestión.
+
+![Untitled](imagenes/Incidente2-1.PNG)
+![Untitled](imagenes/Incidente2-2.PNG)
+![Untitled](imagenes/Incidente2-3.PNG)
+
+Al revisarlo en Virus Total y los logs, podemos verificar que es malicioso. Además, ante la carencia de emails indicando posibles pruebas de seguridad, garantiza que no es de nuestra compañía, y por tanto, que tiene malas intenciones. Aparte, podemos ver que ha podido acceder a siteusers y currentusers, obteniendo información de usuario, y por tanto, obliga a hacer una contención y escalarlo.
 
 2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+Se ha tenido que contener la máquina afectada para evitar que se pueda expandir a otros usuarios y máquinas de la red.
+
 3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
+
+Aislar la máquina afectada y aplicar una actualización inmediata para poder retirar la vulnerabilidad.
 
 4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
 
+- Verificar los IoC para tener un punto claro de actuación.
+- Garantizar que todos los equipos estén actualizados para evitar que puedan aplicarse vulnerabilidades antiguas, y comprobar las nuevas que puedan ir surgiendo.
+
 5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+- Actualizar los sistemas de manera sistemática y automática para que se pueda garantizar la mayor protección posible.
 
 
 ## SOC170 - Passwd Found in Requested URL - Possible LFI Attack <div id="3" />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
 
-- Taxonomia:
-- Criticidad:
-- Descripción:
+- Taxonomia: Ataque Web
+- Criticidad: Alta
+- Descripción: Se encontró passwd en la petición URL, un posible ataque LFI.
 
+Al revisar la descripción de la propia incidencia, podemos comprobar que intentan acceder al passwd mediante un acceso directo en la URL, además de tener la IP de inicio, 172.16.17.13; la cual podemos comprobar en los logs para ver sus acciones.
 
+![Untitled](imagenes/Incidente3-1.PNG)
+
+![Untitled](imagenes/Incidente3-2.PNG)
+
+Definitivamente intentó algo, pero en este caso, a pesar de haber sido aceptada por el sistema, ha dado la respuesta 500, indicando que no ha podido acceder al final al archivo. Eso significa que aunque ha habido un intento, no ha sido exitoso.
+
+![Untitled](imagenes/Incidente3-3.PNG)
+
+También podemos verlo en el firewall. Ha sido un ataque web que por suerte, no ha podido realizarse con éxito, haciendo que no sea necesaria ninguna acción de contención, ni requiera un escalado al siguiente nivel.
 
 2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+Debido a que fue un intento fallido, no ha sido necesaria ninguna acción.
+
 3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
+
+No ha habido que realizar acciones destacadas más allá de revisar los logs y el tipo de ataque, debido a que ha sido un ataque fallido.
 
 4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
 
+- Mejorar la seguridad en el servidor web para garantizar que no vuelvan a intentar este tipo de ataques.
+- Comprobar los IoC para asegurar que siguen actualizados con los parametros actuales, y añadir análisis profundos.
+- Actualizar el servidor a la última versión posible.
+
 5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
 
+- Actualizar el servidor a la última versión posible.
+- Revisar la configuración de seguridad del Servidor Web para poder garantizar su seguridad.
 
 ## SOC202 - FakeGPT Malicious Chrome Extension <div id="4" />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
 
-- Taxonomia:
-- Criticidad:
-- Descripción:
+- Taxonomia: Extensión maligna de Chrome
+- Criticidad: Alta
+- Descripción: Fake GPT Extensión maliciosa de Chrome.
 
+Se ha detectado un archivo sospechoso en el equipo de Samuel, con IP 172.16.17.173, bajo una instalación de una extensión de FakeGPT (que consiste en el ChatGPT basado en malware).
+
+![Untitled](imagenes/Incidente4-1.PNG)
+
+Por lo que se vé, está intentando abrir o manipular una extensión de Chrome, y está en permitido, haciendo que no se haya tomado ninguna acción para detenerlo, haciendo que sea necesario una investigación profunda, iniciando por el historial de navegación de Samuel, donde se le ve buscando precisamente esa extensión.
+
+![Untitled](imagenes/Incidente4-2.PNG)
+
+Esto hace que haya posiblemente sido el propio usuario quien lo haya instalado, haciendo que sea necesaria una contención, dado que en la verificación anterior, no se ha hecho esfuerzos para hacer una cuarentena. Al investigar la propia extensión, podemos comprobar que ha sido eliminada del Chrome Store debido a que fue categorizada como malware.
+
+Al revisar los logs, podemos comprobar que ya ha sido accedido, provocando que sea necesaria una contención inmediata del sistema para evitar que sigan pudiendo acceder.
+
+![Untitled](imagenes/Incidente4-3.PNG)
+![Untitled](imagenes/Incidente4-4.PNG)
 
 2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
-3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
+Se ha tenido que aislar el equipo de la red.
 
-4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
+4. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
 
-5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
+Retirar la extensión y hacer un escaneo en búsqueda de persistencia. Además, interrogar al usuario Samuel para verificar el motivo de la instalación de la extensión.
 
+5. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
+
+- Hacer lecciones sobre medidas de seguridad básica en el ámbito de navegadores web y sus peligros.
+- Mantener actualizados los equipos.
+- Investigar y reportar instalaciones sospechosas.
+
+6. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+- Hacer unas lecciones sobre medidas de seguridad básica en el ámbito de navegadores web y sus peligros, para garantizar que estén bien formados los usuarios.
 
 ## SOC239 - Remote Code Execution Detected in Splunk Enterprise <div id="5" />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
 
-- Taxonomia:
-- Criticidad:
-- Descripción:
+- Taxonomia: Ejecución de código remoto
+- Criticidad: Alta
+- Descripción: Detección de ejecución de código remoto en Splunk Enterprise
 
+Pasamos a revisar la información inicial proporcionada por el incidente:
+
+![Untitled](Incidente5-1.PNG)
+
+De esto, podemos obtener el host Splunk Enterprise y la IP 172.16.20.13; junto la dirección desde donde ha sido inyectado dicha IP, que es 180.101.88.240. Además, podemos verificar que no se tomó ninguna acción para contrarrestarlo, al estar en Allowed.
+
+Revisamos la IP de origen del ataque en Virus Total, pudiendo verificar que es maligna:
+
+![Untitled](Incidente5-2.PNG)
+
+Esto hace que revisemos el tráfico HTTP en busca de la IP y sus acciones, haciendo que podamos verificar sus intenciones, que es intentar obtener una reverse shell con la manipulación del XML del /opt/splunk/var/run/splunk/dispatch/1700556926.3/shell.xsl.
+
+Una vez verificado esto, se hace la contención del equipo de Splunk Enterprise para garantizar que no puedan acceder y poder llegar a tomar acciones para remediación, necesitando escalarlo al L2 para su posible solución.
 
 2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+Realizar una contención del equipo afectado para garantizar que no afecte a más equipos.
+
 3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
+
+Hacer la contención del equipo, previniendo la posible propagación.
 
 4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
 
+- Mejorar la seguridad XML ante este tipo de ataques.
+- Mantener los equipos actualizados.
+- Revisar los indicadores de IoC para garantizar una monitorización continua.
+
 5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
 
+- Revisar periodicamente la seguridad XML para garantizar que no pueda volver a ocurrir.
+- Mantener actualizado constantemente los equipos.
 
 ## SOC175 - PowerShell Found in Requested URL - Possible CVE-2022-41082 Exploitation <div id="6" />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
 
-- Taxonomia:
-- Criticidad:
-- Descripción:
+- Taxonomia: SSRF
+- Criticidad: Alta
+- Descripción: PowerShell encontrado en la petición de URL, posible explotación del CVE-2022-41082
 
+Al revisar de inicio la incidencia y sus datos iniciales, podemos comprobar que nos da ya de antemano el [CVE-2022-41082](https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/cve-2022-41082), lo cual nos da pistas de lo que podemos encontrarnos, incluyendo un Server-Side Request Forgery (SSRF), que se basa en convencer al servidor para que haga peticiones a localizaciones internas a usuarios que normalmente no deberían tener acceso.
+
+![Untitled](imagenes/Incidente6-1.PNG)
+
+Por suerte, el ataque fue bloqueado por lo que nos dice los datos iniciales, así que suponemos que no ha habido efectos de los cuales tengamos que hacer una contención inmediata, aunque se debe revisar para garantizarlo. Revisando los logs, podemos ver cómo ha ido atacando intentando hacer que se genere el ataque:
+
+![Untitled](imagenes/Incidente6-2.PNG)
+
+Y revisando el Raw Log, podemos comprobar el método que están empleando, junto con verificación de que ha sido bloqueado, ya quedando demostrado que es un intento fallido:
+
+![Untitled](imagenes/Incidente6-3.PNG)
+
+Con esto, podemos confiar en que ha sido bloqueado el intento, y que no hace falta más actuación.
 
 2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+Aparte de revisar los logs, no fue necesario realizar ningún tipo de actuación.
+
 3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
+
+No se tuvo que realizar ninguna actuación para solucionar el incidente. 
 
 4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
 
+- Revisar las configuraciones de seguridad para garantizar que estén actualizados.
+- Mantener todos los equipos actualizados a la última versión posible.
+
 5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
 
+- Mantener todos los equipos actualizados de manera periodica.
 
 ## SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515 <div id="7" />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
 
-- Taxonomia:
-- Criticidad:
-- Descripción:
+- Taxonomia: Otro
+- Criticidad: Alta
+- Descripción: CVE-2023-22515 afecta ciertas versiones de Atlassian Confluence Data Center and Server, permitiendo cyber-actores de amenaza maliciosos para obtener acceso inicial a instancias de Confluence mediante la creación sin autorizar.
 
+Revisando la información inicial, podemos obtener el [CVE-2023-22515](https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/cve-2023-22515), lo cual ya nos da información detallada de lo que nos podemos enfrentar. Además, la información que nos provee el incidente nos otorga ciertos puntos de partida, tales como la Ip del host afectado (172.16.17.234) y el Ip del atacante (43.130.1.222).
+
+![Untitled](imagenes/Incidente7-1.PNG)
+
+A primera vista, parece una explotación del CVE anteriormente proporcionado, necesitando más información al respecto. Revisando la IP en la aplicación de Let's Defend, podemos verificar que es maliciosa:
+
+![Untitled](imagenes/Incidente7-2.PNG)
+
+También podemos ver que aparece en el host, garantizando que ha sido comprometida. Acto seguido, analizamos el tráfico, en el Raw Log, para verificar como ha sido realizado el ataque:
+
+![Untitled](imagenes/incidente7-3.PNG)
+
+Se ve que ha sido exitoso con una petición GET, a una URL especifica del servidor. Una acción posterior le dio mayores accesos como administrador, haciendo que se confunda y esté en un estado que piense que no ha terminado la configuración inicial. Además, no ha sido un testeo planeado ante la ausencia de correos, junto con que la dirección IP proviene desde fuera de la empresa. Todo esto determina que el ataque ha sido exitoso, y se necesitan medidas de contención y aislamiento para poder remediar, subiendo a un escalado de L2.
 
 2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+Se ha tenido que realizar la contención y aislamiento de la máquina para poder proteger al resto de equipos.
+
 3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
+
+Se tuvo que actualizar la máquina a una versión soportada que no se vea afectada por la vulnerabilidad y determinar hasta que nivel ha sido afectado.
 
 4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
 
+- Mantener actualizado los sistemas para garantizar una reducción de las vulnerabilidades que pueda afectar a los sistemas.
+- Mantener una monitorización constante de los IoC.
+
 5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
 
+- Realizar actualizaciones periódicas e intentar subir siempre a la versión más actualizada que pueda soportar el hardware. 
 
 ## SOC168 - Whoami Command Detected in Request Body <div id="8" />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
 
-- Taxonomia:
-- Criticidad:
-- Descripción:
+- Taxonomia: Command Injection Web Attack
+- Criticidad: Alta
+- Descripción: Comando whoami detectado en la petición Body
 
+Con la revisión de la información inicial, podemos suponer que el ataque ha sido exitoso, debido a que el estado de Allowed significa que no se ha hecho ninguna medida para prevenir que siga ocurriendo:
+
+![Untitled](imagenes/Incidente8-1.PNG)
+
+Al revisar el firewall, podemos comprobar que ha sido detectado desde la IP 172.16.17.16 varios intentos que intentan insertar comandos de shell para intentar obtener la información del equipo entre otros:
+
+![Untitled](imagenes/Incidente8-2.PNG)
+
+![Untitled](imagenes/Incidente8-3.PNG)
+
+Revisando la IP en Virus Total, surgen varias alarmas, indicando que la IP es maliciosa de por si. 
+
+![Untitled](imagenes/Incidente8-4.PNG)
+
+Esto hace que sea necesario realizar una contención del sistema, para garantizar que pueda hacerse la remediación y el escalado al L2.
 
 2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+Ha sido necesario realizar la contención del equipo para aislarlo de la red.
+
 3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
+
+Se ha tenido que revisar la configuración de seguridad para poder establecer una mejor política de prevención de este tipo de ataques, para evitar que puedan intentar insertar comandos de nuevo.
 
 4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
 
+- Revisar las configuraciones de seguridad de manera periodica para poder actualizarlas y mejorarlas.
+- Revisar los CVE de manera periodica para poder verificar que no haya nuevas vulnerabilidades y, si las hay, poder tomar medidas para prevenirlas.
+- Mantener actualizados los equipos de manera periodica para garantizar que la seguridad esté actualizada.
+
 5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
 
+- Revisar las configuraciones de seguridad de los sitios web de manera periodica para poder mejorarla.
 
 ## SOC164 - Suspicious Mshta Behavior <div id="9" />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
 
-- Taxonomia:
-- Criticidad:
+- Taxonomia: 
+- Criticidad: Alta
 - Descripción:
 
+Revisamos la información inicial del incidente, en el cual podemos ver un archivo con extensión hta extraño:
+
+![Untitled](imagenes/Incidente9-1.PNG)
+
+Se realiza una comprobación en Virus Total del archivo, pudiendo obtener resultados de que es malicioso:
+
+![Untitled](imagenes/Incidente9-2.PNG)
+
+Debido a la presencia del mshta.exe, podemos hacer la suposición de que el archivo hta se ejecuta a través del exe, que al verificar el proceso padre, es explorer.exe. 
+
+![Untitled](imagenes/Incidente9-3.PNG)
+
+Además, revisando el historial de su CMD, se puede ver las acciones que tomó, además de su ejecución:
+
+![Untitled](imagenes/Incidentes9-5.PNG)
+
+![Untitled](imagenes/Incidentes9-4.PNG)
+
+Ahora que estamos seguros de que ha sido comprometido, se procede a hacer una contención y erradicar la presencia de ese archivo y todo lo que pueda haber infectado.
 
 2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+Contener y aislar el equipo del usuario para evitar que pueda afectar a otros y que pueda seguir escarbando información.
+
 3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
+
+Eliminar el archivo y programa del sistema y escanearlo en busca de posible persistencia.
 
 4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
 
+- Es necesario mantener una seguridad sobre los Binaries de Windows, dado que mshta es un archivo que puede ser explotado.
+- Monitorizar la actividad de los archivos, y verificar que hagan lo que deban hacer.
+
 5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
 
+Mantener una vigilancia constante para poder detectarlo cuanto antes.
 
-## SOC210 - Possible Brute Force Detected on VPN <div id="10" />
+## SOC251 - Quishing Detected (QR Code Phishing) <div id="10" />
 
 1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
 
-- Taxonomia:
-- Criticidad:
-- Descripción:
+- Taxonomia: Quishing
+- Criticidad: Media
+- Descripción: Un ataque de Quishing detectado en un email.
 
+Pasamos a revisar la información inicial, pudiendo ver que se envió un correo a Claire, y que además, fue una acción permitida, indicando que es posible que haya tenido éxito el ataque:
 
-2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+![Untitled](imagenes/Incidente10-1.PNG)
 
-3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
+Podemos ver el título del email, que es ""New Year's Mandatory Security Update: Implementing Multi-Factor Authentication (MFA)"; un mensaje que posiblemente sea una forma para poder obtener acceso mediante el phishing. Vamos al correo en cuestión, pudiendo ver el grueso y el código QR:
 
-4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
+![Untitled](imagenes/Incidente10-2.PNG)
 
-5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
+Revisando el propio código QR, podemos ver que tenía una URL bastante sospechosa (https://ipfs.io/ipfs/Qmbr8wmr41C35c3K2GfiP2F8YGzLhYpKpb4K66KU6mLmL4#), que procedemos a analizar en Virus Total
 
+![Untitled](imagenes/Incidente10-3.PNG)
 
-## SOC251 - Quishing Detected (QR Code Phishing) <div id="11" />
-
-1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
-
-- Taxonomia:
-- Criticidad:
-- Descripción:
-
+Y analizando el propio código fuente de la página a la que redirige, podemos comprobar que pide el emails y contraseñas, necesitando hacer una contención del sistema de las cuentas de correo y las contraseñas, dado que han sido vulneradas.
 
 2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
-3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
-
-4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
-
-5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
-
-
-## SOC176 - RDP Brute Force Detected <div id="12" />
-
-1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
-
-- Taxonomia:
-- Criticidad:
-- Descripción:
-
-
-2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+Hacer la contención de los correos y contraseñas del usuario, y verificar que otros usuarios no hayan sido infectados por el mismo correo y código QR
 
 3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
 
-4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
-
-5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
-
-
-## SOC163 - Suspicious Certutil.exe Usage <div id="13" />
-
-1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
-
-- Taxonomia:
-- Criticidad:
-- Descripción:
-
-
-2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
-
-3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
+Restaurar todas las cuentas de correo con nuevas contraseñas, además de terminar de revisar que ningún otro usuario haya sido afectado.
 
 4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
 
-5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
-
-
-## SOC173 - Follina 0-Day Detected <div id="14" />
-
-1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
-
-- Taxonomia:
-- Criticidad:
-- Descripción:
-
-
-2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
-
-3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
-
-4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
+- Enseñar métodos para detectar posibles correos maliciosos a los usuarios.
+- Verificar siempre que el correo proviene de la empresa que indica.
+- Emplear filtros de correo
 
 5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
 
-
-## SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected <div id="15" />
-
-1. Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
-
-- Taxonomia:
-- Criticidad:
-- Descripción:
-
-
-2. Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
-
-3. Tras trabajar en la resolución del incidente ¿Qué acciones/actuaciones destacadas se han realizado para solucionar el incidente?
-
-4. Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior
-
-5. Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
-
+- Educar a todos los empleados de los métodos de detección de phishing y cómo reportarlos.
+- Resetear y actualizar las contraseñas de manera periódica.
+- Emplear filtros de correos.
+- Implementar un producto que pueda analizar códigos QR
