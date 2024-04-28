@@ -160,7 +160,8 @@ No se dispone de este tipo de playbook  en nuestra empresa, así que la mayor me
 
 - ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
 
-Implementar una herramienta IDS que nos realice una alerta cuando se intente realizar múltiples intentos de inicio de sesión en un corto periodo de tiempo, al igual que el bloqueo de la dirección ip del cuál se esta realizando. Reforzamiento de las reglas de seguridad a los múltiples intentos de logins.
+Implementar una herramienta IDS que nos realice un bloqueo de la dirección ip del cuál se esta realizando el ataque recogido en los logs del IDS.  
+Reforzamiento de las reglas de seguridad a los múltiples intentos de logins.
 
 ## SOC210 - Possible Brute Force Detected on VPN <div id='03' />
 
