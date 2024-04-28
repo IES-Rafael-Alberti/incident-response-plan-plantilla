@@ -1,4 +1,4 @@
-# LETS DEFEND
+# LET'S DEFEND
 
 ## **SOC251 — Quishing Detected (QR Code Phishing)**
 
