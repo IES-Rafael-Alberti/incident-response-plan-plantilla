@@ -156,11 +156,11 @@ El análisis de los logs generados y el conocimiento de los eventos del sistema,
 
 - Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
-La necesidad de una respuesta rápida a este tipo de ataques para bloquear o contener al usuario/host y evitar que pueda propagarse en la red.
+No se dispone de este tipo de playbook  en nuestra empresa, así que la mayor mejora posible sería realizar uno tal como este.
 
 - ¿Qué actuaciones has decidido para evitar que se pueda dar una situación similar?
 
-Implementar una herramienta IDS que nos realice una alerta cuando se intente realizar múltiples intentos de inicio de sesión en un corto periodo de tiempo, al igual que el bloqueo de la dirección ip del cuál se esta realizando.
+Implementar una herramienta IDS que nos realice una alerta cuando se intente realizar múltiples intentos de inicio de sesión en un corto periodo de tiempo, al igual que el bloqueo de la dirección ip del cuál se esta realizando. Reforzamiento de las reglas de seguridad a los múltiples intentos de logins.
 
 ## SOC210 - Possible Brute Force Detected on VPN <div id='03' />
 
