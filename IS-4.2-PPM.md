@@ -4,6 +4,23 @@
 
 [SOC251 — Quishing Detected (QR Code Phishing)](#1)
 
+[SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected](#2)
+
+[SOC239 - Remote Code Execution Detected in Splunk Enterprise](#3)
+
+[SOC227 - Microsoft SharePoint Server Elevation of Privilege - Possible CVE-2023-29357 Exploitation](#4)
+
+[SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515](#5)
+
+[SOC210 - Possible Brute Force Detected on VPN](#6)
+
+[SOC202 - FakeGPT Malicious Chrome Extension](#7)
+
+[SOC175 - PowerShell Found in Requested URL - Possible CVE-2022-41082 Exploitation](#8)
+
+[SOC164 - Suspicious Mshta Behavior](#9)
+
+[SOC163 - Suspicious Certutil.exe Usage](#10)
 
 ## **SOC251 — Quishing Detected (QR Code Phishing)** <a name="1"></a>
 
@@ -159,7 +176,7 @@ Seguro que en el proceso de análisis para obtener un registro de lecciones apre
 - Colaboración con proveedores de servicios de seguridad: Trabajar con proveedores de servicios de seguridad externos para obtener información sobre las últimas amenazas y tácticas utilizadas por los atacantes, lo que puede ayudar a fortalecer las defensas de la organización.
 
 
-## SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected
+## SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected <a name="2"></a>
 
 Tipo según taxonomía: Exfiltración de datos (APTX35 HyperScrape Data Exfiltration Tool Detected)
 
@@ -279,7 +296,7 @@ Para remediar este ataque de exfiltración de datos detectado, se pueden impleme
 
 
 
-## SOC239 - Remote Code Execution Detected in Splunk Enterprise
+## SOC239 - Remote Code Execution Detected in Splunk Enterprise <a name="3"></a>
 
 Tipo según taxonomía: Ejecución remota de código (Remote Code Execution)
 
@@ -398,7 +415,7 @@ Seguro que en el proceso de análisis para obtener un registro de lecciones apre
 
 
 
-## SOC227 - Microsoft SharePoint Server Elevation of Privilege - Possible CVE-2023-29357 Exploitation
+## SOC227 - Microsoft SharePoint Server Elevation of Privilege - Possible CVE-2023-29357 Exploitation <a name="4"></a>
 
 ![Untitled](imgpablo/53.png)
 
@@ -503,7 +520,7 @@ Seguro que en el proceso de análisis para obtener un registro de lecciones apre
 
 
 
-## SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515
+## SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515 <a name="5"></a>
 
 ![Untitled](imgpablo/68.png)
 
@@ -614,7 +631,7 @@ Aplicación de parches y actualizaciones: Instala de inmediato los parches de se
 
 
 
-## SOC210 - Possible Brute Force Detected on VPN
+## SOC210 - Possible Brute Force Detected on VPN <a name="6"></a>
 
 ![Untitled](imgpablo/85.png)
 
@@ -715,7 +732,7 @@ Seguro que en el proceso de análisis para obtener un registro de lecciones apre
 
 
 
-## SOC202 - FakeGPT Malicious Chrome Extension
+## SOC202 - FakeGPT Malicious Chrome Extension <a name="7"></a>
 
 Tipo según taxonomía: Instalación de extensión maliciosa (Malicious Chrome Extension)
 
@@ -801,7 +818,7 @@ Seguro que en el proceso de análisis para obtener un registro de lecciones apre
 - Auditorías de seguridad: Realiza auditorías de seguridad regulares para evaluar la eficacia de las medidas de seguridad implementadas y para identificar posibles áreas de mejora en la postura de seguridad de la organización.
 
 
-## SOC175 - PowerShell Found in Requested URL - Possible CVE-2022-41082 Exploitation
+## SOC175 - PowerShell Found in Requested URL - Possible CVE-2022-41082 Exploitation <a name="8"></a>
 
 Tipo según taxonomía: Intento de explotación (Exploitation)
 
@@ -899,7 +916,7 @@ Seguro que en el proceso de análisis para obtener un registro de lecciones apre
 
 
 
-## SOC164 - Suspicious Mshta Behavior
+## SOC164 - Suspicious Mshta Behavior <a name="9"></a>
 
 Tipo según taxonomía: Comportamiento sospechoso de Mshta (Suspicious Mshta Behavior)
 
@@ -1070,7 +1087,7 @@ Seguro que en el proceso de análisis para obtener un registro de lecciones apre
 
 
 
-## SOC163 - Suspicious Certutil.exe Usage
+## SOC163 - Suspicious Certutil.exe Usage <a name="10"></a>
 
 Tipo según taxonomía: Uso sospechoso de Certutil.exe (Suspicious Certutil.exe Usage)
 
