@@ -2,7 +2,21 @@
 
 # **Atención y Seguimiento de Incidentes Usando Let's Defend**
 
-## SOC170 - Passwd Found in Requested URL - Possible LFI Attack
+# Índice
+1. [SOC170 - Passwd Found in Requested URL - Possible LFI Attack](#01)  
+2. [SOC176 - RDP Brute Force Detected](#02)
+3. [SOC210 - Possible Brute Force Detected on VPN](#03)
+4. [SOC251 - Quishing Detected (QR Code Phishing)](#04)
+5. [SOC175 - PowerShell Found in Requested URL](#05)
+6. [SOC202 - FakeGPT Malicious Chrome Extension](#06)
+7. [SOC239 - Remote Code Execution Detected in Splunk Enterprise](#07)
+8. [SOC173 - Follina 0-Day Detected](#08)
+9. [SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected](#09)
+10. [SOC169 - Possible IDOR Attack Detected](#10)
+ 
+
+
+## SOC170 - Passwd Found in Requested URL - Possible LFI Attack <div id='01' />
 
 ![Untitled](img_Adrian/Untitled.png)
 
@@ -80,7 +94,7 @@ La importancia del conocimiento de los logs generados para un fácil reconocimie
 
 Verificación del código para la implementación de seguridad de aplicaciones webs, así como implementar medidas adicional como reglas en el firewall para protegernos de este tipos de ataques.
 
-## SOC176 - RDP Brute Force Detected
+## SOC176 - RDP Brute Force Detected <div id='02' />
 
 ![Untitled](img_Adrian/Untitled%202.png)
 
@@ -148,7 +162,7 @@ La necesidad de una respuesta rápida a este tipo de ataques para bloquear o con
 
 Implementar una herramienta IDS que nos realice una alerta cuando se intente realizar múltiples intentos de inicio de sesión en un corto periodo de tiempo, al igual que el bloqueo de la dirección ip del cuál se esta realizando.
 
-## SOC210 - Possible Brute Force Detected on VPN
+## SOC210 - Possible Brute Force Detected on VPN <div id='03' />
 
 ![Untitled](img_Adrian/Untitled%2014.png)
 
@@ -216,7 +230,7 @@ El paso del playbook el cual te pregunta si el ataque ha sido al servicio SSH/RD
 
 Crear una regla para que cuando se hacen múltiples intentos de inicio de sesión fallidos, bloquear la cuenta o poner en cuarentena directamente, para así vigilar las acciones del sospechoso si ha sido exitoso el ataque.
 
-## SOC251 - Quishing Detected (QR Code Phishing)
+## SOC251 - Quishing Detected (QR Code Phishing) <div id='04' />
 
 ![2024-04-13 15_27_05-Window.png](img_Adrian/2024-04-13_15_27_05-Window.png)
 
@@ -274,7 +288,7 @@ El saber si el usuario final afectado ha abierto o no para no tener que aislar u
 
 Formación de la concienciación de los usuarios respecto a este tipo de ataques, creación de filtros en los mails para detectar y bloquear correos maliciosos.
 
-## SOC175 - PowerShell Found in Requested URL
+## SOC175 - PowerShell Found in Requested URL <div id='05' />
 
 ![incidente.png](img_Adrian/incidente.png)
 
@@ -344,7 +358,7 @@ La necesidad de los Logs del sistema para verificar si los ataques han sido exit
 
 Se debería de actualizar las políticas de seguridad para restringir o filtrar el trafico y así evitar algunas acciones maliciosas.
 
-## SOC202 - FakeGPT Malicious Chrome Extension
+## SOC202 - FakeGPT Malicious Chrome Extension <div id='06' />
 
 ![Untitled](img_Adrian/Untitled%2044.png)
 
@@ -426,7 +440,7 @@ Mejorar la detección temprana de las amenazas para identificar y bloquear exten
 
 Actualizar las políticas de seguridad para que incluir la prohibición de instalación de extensiones de navegador.
 
-## SOC239 - Remote Code Execution Detected in Splunk Enterprise
+## SOC239 - Remote Code Execution Detected in Splunk Enterprise <div id='07' />
 
 ![incidente.png](img_Adrian/incidente%201.png)
 
@@ -492,7 +506,7 @@ Reforzar la formación del personal para la identificación y gestión de la ame
 
 Se debería de mejorar las reglas de SSH, siendo estas más restrictivas a los múltiples inicios de sesión.
 
-## SOC173 - Follina 0-Day Detected
+## SOC173 - Follina 0-Day Detected <div id='08' />
 
 ![Untitled](img_Adrian/Untitled%2055.png)
 
@@ -562,7 +576,7 @@ Puesto que no dispongo playbook para este tipo de ataques, la mejor mejora posib
 
 Establecer un sistema de monitorización continua para detectar cualquier intento de explotación de la vulnerabilidad. Desarrollar e implementar medidas temporales de mitigación para reducir el riesgo de explotación de la vulnerabilidad, como la configuración de reglas de firewall.
 
-## SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected
+## SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected <div id='09' />
 
 ![Untitled](img_Adrian/Untitled%2068.png)
 
@@ -636,7 +650,7 @@ Creo que este playbook esta bien guiado para la resolución de este tipo de inci
 
 Mejorar la configuración del firewall añadiendo reglas para evitar este tipo de ataques a nuestra empresa.
 
-## SOC169 - Possible IDOR Attack Detected
+## SOC169 - Possible IDOR Attack Detected <div id='10' />
 
 ![Untitled](img_Adrian/Untitled%2083.png)
 
