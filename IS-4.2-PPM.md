@@ -125,8 +125,11 @@ No, solo contener el equipo
 Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
 Comprobación de artifacts para saber si son maliciosos en Virustotal
+
 Busqueda de correos sospechosos y su posterior eliminación
+
 Decodificación de un Qr
+
 Contención del dispositivo
 
 No implementaria ninguna mejora ya que el mio es más completo.
@@ -154,7 +157,9 @@ Seguro que en el proceso de análisis para obtener un registro de lecciones apre
 ## SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected
 
 Tipo según taxonomía: Exfiltración de datos (APTX35 HyperScrape Data Exfiltration Tool Detected)
-Criticidad: Alta
+
+Criticidad: Media
+
 Descripción del incidente: El incidente ocurrió el 27 de diciembre de 2023 a las 11:22 AM. Fue detectado por la regla SOC250 que identifica la actividad de una herramienta de exfiltración de datos conocida como APTX35 HyperScrape. El evento involucra el proceso "EmailDownloader.exe" ejecutándose en el sistema host "Arthur" con la dirección IP 172.16.17.72. El proceso se inició desde la ruta "C:\Users\LetsDefend\Downloads\EmailDownloader.exe" y su proceso padre fue "C:\Windows\Explorer.EXE". A pesar de que el dispositivo permitió la acción, se identificaron patrones de comportamiento inusual o sospechoso vinculados al hash del archivo, lo que indica un posible intento de exfiltración de datos.
 
 ![Untitled](imgpablo/19.png)
@@ -230,16 +235,52 @@ Con esto daríamos por concluido el playbook.
 ![Untitled](imgpablo/37.png)
 
 
+Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+No
 
+Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
+Comprobación de artifacts para saber si son maliciosos en Virustotal
 
+Busqueda de registros con la direeción IP del equipo
 
+Contención del dispositivo
 
+No implementaria ninguna mejora ya que el mio es más completo.
 
+Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+Para remediar este ataque de exfiltración de datos detectado, se pueden implementar una serie de medidas técnicas y organizativas:
+
+- Remoción del archivo malicioso: Eliminar el archivo "EmailDownloader.exe" y cualquier otro archivo relacionado con la herramienta de exfiltración de datos identificada (APTX35 HyperScrape) de todos los sistemas comprometidos.
+
+- Investigación forense: Realizar una investigación forense exhaustiva para determinar la extensión del compromiso, identificar los datos exfiltrados y comprender cómo el atacante logró infiltrarse en el sistema.
+
+- Parches y actualizaciones: Aplicar todas las actualizaciones de seguridad y parches disponibles para el sistema operativo, aplicaciones y software relacionado para cerrar posibles vulnerabilidades que podrían haber sido explotadas por el atacante.
+
+- Análisis de vulnerabilidades: Realizar un análisis de vulnerabilidades en la red y sistemas afectados para identificar y remediar cualquier brecha de seguridad que haya permitido al atacante acceder al sistema.
+
+- Fortalecimiento de políticas de seguridad: Revisar y fortalecer las políticas de seguridad de la organización, incluyendo políticas de acceso, autenticación, cifrado de datos y monitoreo de la red, para prevenir futuros incidentes de exfiltración de datos.
+  
+- Implementación de monitoreo continuo: Establecer sistemas de monitoreo de seguridad continuo que puedan detectar actividades sospechosas o anómalas en tiempo real, lo que permite una respuesta rápida ante posibles amenazas.
+  
+- Capacitación del personal: Proporcionar capacitación regular en concienciación en seguridad a todos los empleados para que estén al tanto de las tácticas de ataque comunes, incluyendo la ingeniería social y la exfiltración de datos, y sepan cómo responder adecuadamente.
+  
+- Colaboración con proveedores de seguridad: Trabajar con proveedores de servicios de seguridad externos para obtener asesoramiento y asistencia en la mejora de la postura de seguridad cibernética de la organización.
+  
+- Implementación de controles de acceso: Reforzar los controles de acceso para restringir el acceso a datos sensibles y críticos solo a usuarios autorizados, utilizando técnicas como el principio de menor privilegio y la autenticación multifactor.
+  
+- Auditoría y revisión continua: Realizar auditorías regulares de seguridad y revisiones de incidentes para identificar áreas de mejora y garantizar que las medidas de seguridad implementadas sean efectivas y estén actualizadas.
 
 
 
 ## SOC239 - Remote Code Execution Detected in Splunk Enterprise
+
+Tipo según taxonomía: Ejecución remota de código (Remote Code Execution)
+
+Criticidad: Alta
+
+Descripción del incidente: El incidente ocurrió el 21 de noviembre de 2023 a las 12:24 PM. Fue detectado por la regla SOC239 que identifica la ejecución remota de código en Splunk Enterprise. La actividad sospechosa implicó una solicitud HTTP POST desde la dirección IP de origen 180.101.88.240 hacia el servidor Splunk Enterprise ubicado en la dirección IP de destino 172.16.20.13. La solicitud tenía como objetivo cargar un archivo XSLT malicioso denominado "shell.xsl" a través de la URL http://18.219.80.54:8000/en-US/splunkd/__upload/indexing/preview?output_mode=json&props.NO_BINARY_CHECK=1&input.path=shell.xsl. A pesar de que el dispositivo permitió la acción, se detectó que el archivo tenía el potencial de desencadenar la ejecución remota de código en Splunk Enterprise.
 
 ![Untitled](imgpablo/38.png)
 
@@ -319,10 +360,34 @@ No
 
 Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
+Comprobación de artifacts para saber si son maliciosos en Virustotal
 
-No implementaria ninguna mejora ya que el mio es más completo.
+Analisis de archivos malicioso
+
+Contención del dispositivo
+
+Busqueda de registros
+
+
+No tengo ningun playbook de una ejecucion de código remoto.
 
 Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+- Actualización y parcheo del sistema: Asegúrate de que Splunk Enterprise esté actualizado con los últimos parches de seguridad y actualizaciones proporcionadas por el proveedor. Esto ayudará a cerrar las vulnerabilidades conocidas que podrían ser explotadas por los atacantes.
+
+- Restricción de acceso: Limita el acceso al servidor Splunk Enterprise solo a usuarios autorizados y establece políticas de acceso basadas en el principio de menor privilegio. Esto reduce la superficie de ataque y evita que usuarios no autorizados ejecuten código malicioso en el sistema.
+
+- Seguridad de red: Implementa medidas de seguridad de red, como firewalls, para filtrar y bloquear el tráfico no autorizado hacia y desde el servidor Splunk Enterprise. Esto puede ayudar a prevenir que los atacantes exploren y exploten vulnerabilidades en el sistema.
+
+- Monitoreo de seguridad: Establece un sistema de monitoreo continuo de la actividad del servidor Splunk Enterprise para detectar y responder rápidamente a cualquier actividad sospechosa o intentos de intrusión.
+
+- Filtrado de archivos: Configura Splunk Enterprise para filtrar y bloquear la carga de archivos con extensiones potencialmente peligrosas, como archivos XSLT, que puedan ser utilizados para la ejecución remota de código.
+
+- Auditoría y registro: Implementa un sistema de auditoría y registro robusto para registrar todas las actividades en el servidor Splunk Enterprise, lo que facilita la detección de comportamientos anómalos y la investigación de incidentes.
+
+- Capacitación del personal: Proporciona capacitación regular en concienciación en seguridad a todo el personal que interactúe con el servidor Splunk Enterprise para que estén al tanto de las últimas amenazas y sepan cómo evitar caer en trampas como la ejecución remota de código.
+
+- Análisis forense: Desarrolla un plan de respuesta a incidentes que incluya procedimientos para realizar análisis forenses en caso de una violación de seguridad, lo que facilitará la identificación de la causa raíz del incidente y la implementación de medidas correctivas.
 
 
 
@@ -331,6 +396,12 @@ Seguro que en el proceso de análisis para obtener un registro de lecciones apre
 ## SOC227 - Microsoft SharePoint Server Elevation of Privilege - Possible CVE-2023-29357 Exploitation
 
 ![Untitled](imgpablo/53.png)
+
+Tipo según taxonomía: Elevación de privilegios (Elevation of Privilege)
+
+Criticidad: Alta
+
+Descripción del incidente: El incidente ocurrió el 6 de octubre de 2023 a las 08:05 PM. Fue detectado por la regla SOC227 que identifica intentos de explotar la vulnerabilidad CVE-2023-29357 en Microsoft SharePoint Server. La actividad sospechosa implicó una solicitud HTTP GET desde la dirección IP de origen 39.91.166.222 hacia el servidor SharePoint ubicado en la dirección IP de destino 172.16.17.233. La solicitud tenía como objetivo acceder a la API "_api/web/siteusers" del servidor SharePoint. A pesar de que el dispositivo permitió la acción, se detectó el posible intento de explotar la vulnerabilidad CVE-2023-29357, lo que podría conducir a acceso no autorizado y elevación de privilegios dentro del servidor SharePoint.
 
 La vulnerabilidad CVE-2023–29357 es una vulnerabilidad crítica de escalada de privilegios que, cuando se combina con otras vulnerabilidades, podría conducir a la ejecución remota de código. Una puntuación CVSS de 9,8 (crítico) an.
 
@@ -394,9 +465,48 @@ Con esto concluimos el playbook.
 
 ![Untitled](imgpablo/67.png)
 
+
+Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+No
+
+Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+Comprobación de artifacts para saber si son maliciosos en Virustotal
+Contención del dispositivo
+Busqueda de registros y logs
+Escalado a lvl 2.
+
+No tengo ningun playbook de elevación de privilegios.
+
+Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+- Aplicación de parches y actualizaciones de seguridad: Instala de inmediato los parches de seguridad proporcionados por Microsoft para corregir la vulnerabilidad CVE-2023-29357. Mantén el servidor SharePoint y todos los componentes relacionados actualizados con las últimas actualizaciones de seguridad para mitigar el riesgo de explotación de vulnerabilidades conocidas.
+
+- Análisis de vulnerabilidades: Realiza análisis de vulnerabilidades periódicos en el servidor SharePoint para identificar y remediar cualquier vulnerabilidad conocida que pueda ser aprovechada por los atacantes. Utiliza herramientas de escaneo de vulnerabilidades para detectar posibles debilidades en la configuración y el software del servidor.
+
+- Control de acceso y privilegios: Revisa y actualiza los permisos de acceso en SharePoint para asegurarte de que solo los usuarios autorizados tengan acceso a recursos y datos sensibles. Aplica el principio de menor privilegio para limitar los privilegios de los usuarios y reducir el impacto de posibles brechas de seguridad.
+
+- Monitoreo de la actividad del servidor: Implementa sistemas de monitoreo de seguridad que puedan detectar y alertar sobre actividades sospechosas en el servidor SharePoint, como intentos de acceso no autorizado o cambios en la configuración del sistema. Utiliza registros de eventos y herramientas de análisis de seguridad para investigar y responder rápidamente a incidentes.
+
+- Capacitación del personal: Proporciona capacitación regular en seguridad informática a los administradores de sistemas y usuarios finales que interactúan con el servidor SharePoint. Educa a los usuarios sobre las prácticas recomendadas de seguridad, como la creación de contraseñas seguras y la identificación de correos electrónicos de phishing.
+
+- Auditoría de seguridad: Realiza auditorías periódicas de seguridad en el servidor SharePoint para evaluar el cumplimiento de las políticas de seguridad y identificar posibles áreas de mejora. Revisa los registros de auditoría y los informes de seguridad para identificar actividades sospechosas o anómalas.
+
+ -Implementación de firewalls y filtrado de tráfico: Configura firewalls y sistemas de filtrado de tráfico para bloquear el tráfico no autorizado hacia el servidor SharePoint. Utiliza listas blancas para permitir únicamente el acceso desde direcciones IP y rangos de IP confiables.
+
+- Plan de respuesta a incidentes: Desarrolla y prueba un plan de respuesta a incidentes que incluya procedimientos detallados para la detección, investigación y mitigación de posibles ataques contra el servidor SharePoint. Capacita al personal sobre cómo responder adecuadamente a incidentes de seguridad y minimizar el impacto en la organización.
+
+
+
 ## SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515
 
 ![Untitled](imgpablo/68.png)
+
+Tipo según taxonomía: Control de acceso roto (Broken Access Control)
+
+Criticidad: Crítica
+
+Descripción del incidente: El incidente ocurrió el 8 de noviembre de 2023 a las 09:47 AM. Fue detectado por la regla SOC235 que identifica intentos de explotar la vulnerabilidad 0-Day CVE-2023-22515 en Atlassian Confluence. La actividad sospechosa implicó una solicitud HTTP GET desde la dirección IP de origen 43.130.1.222 hacia el servidor Confluence Data Center ubicado en la dirección IP de destino 172.16.17.234. La solicitud tenía como objetivo acceder a la URL "/server-info.action?bootstrapStatusProvider.applicationConfig.setupComplete=false", lo que podría potencialmente permitir la creación de un nuevo usuario administrador en el sistema. A pesar de que el dispositivo permitió la acción, se detectó el intento de explotación de la vulnerabilidad CVE-2023-22515.
 
 CVE-2023–22515 representa una amenaza de seguridad crítica para las instancias de Atlassian Confluence, ya que permite que atacantes maliciosos obtengan acceso no autorizado. Esta vulnerabilidad permite a los atacantes crear cuentas de administrador de Confluence sin la autorización adecuada, lo que puede comprometer los sistemas de las víctimas.
 
@@ -466,11 +576,48 @@ Con esto concluimos el playbook.
 
 ![Untitled](imgpablo/84.png)
 
+
+Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+No
+
+Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+Comprobación de artifacts para saber si son maliciosos en Virustotal
+Contención del dispositivo
+Busqueda de registros y logs
+Escalada a lvl 2
+
+No tengo ningun playbook de control de acceso roto
+
+Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+Aplicación de parches y actualizaciones: Instala de inmediato los parches de seguridad proporcionados por Atlassian para corregir la vulnerabilidad CVE-2023-22515. Asegúrate de mantener Confluence actualizado con las últimas actualizaciones de seguridad para mitigar el riesgo de explotación de vulnerabilidades conocidas.
+
+- Restricción de acceso: Limita el acceso a las funciones y URL sensibles de Confluence solo a usuarios autorizados. Revisa y actualiza las políticas de acceso y los permisos de usuario para asegurarte de que solo los usuarios necesarios tengan privilegios para crear o modificar usuarios administradores.
+
+- Monitoreo de la actividad del servidor: Implementa sistemas de monitoreo de seguridad que puedan detectar y alertar sobre actividades sospechosas en Confluence, como intentos de acceso no autorizado o cambios en los permisos de usuario. Monitorea los registros de auditoría y los registros del sistema para identificar posibles indicadores de compromiso.
+
+- Capacitación del personal: Proporciona capacitación regular en seguridad informática a los administradores de sistemas y usuarios finales que interactúan con Confluence. Educa a los usuarios sobre las prácticas recomendadas de seguridad, como el manejo seguro de contraseñas y la identificación de posibles ataques de phishing.
+
+- Revisión de configuraciones de seguridad: Revisa y actualiza las configuraciones de seguridad de Confluence para asegurarte de que estén alineadas con las mejores prácticas de seguridad. Considera la implementación de medidas adicionales, como la autenticación de dos factores, para agregar una capa adicional de seguridad.
+
+- Auditoría de seguridad: Realiza auditorías periódicas de seguridad en Confluence para evaluar el cumplimiento de las políticas de seguridad y identificar posibles áreas de mejora. Revisa los registros de auditoría y los informes de seguridad para identificar actividades sospechosas o cambios no autorizados en la configuración del sistema.
+
+- Actualización de herramientas de seguridad: Asegúrate de que todas las herramientas de seguridad utilizadas para proteger Confluence estén actualizadas y configuradas correctamente. Esto incluye firewalls, sistemas de detección de intrusiones y soluciones antivirus.
+
+- Plan de respuesta a incidentes: Desarrolla y prueba un plan de respuesta a incidentes que incluya procedimientos detallados para la detección, investigación y mitigación de posibles ataques contra Confluence. Capacita al personal sobre cómo responder adecuadamente a incidentes de seguridad y minimizar el impacto en la organización.
+
+
+
 ## SOC210 - Possible Brute Force Detected on VPN
 
-[https://medium.com/@suhani.patel.1701/soc210-possible-brute-force-detected-on-vpn-a3a7be0d29f8](https://medium.com/@suhani.patel.1701/soc210-possible-brute-force-detected-on-vpn-a3a7be0d29f8)
-
 ![Untitled](imgpablo/85.png)
+
+Tipo según taxonomía: Intento de fuerza bruta (Brute Force)
+
+Criticidad: Alta
+
+Descripción del incidente: El incidente ocurrió el 21 de junio de 2023 a las 01:51 PM. Fue detectado por la regla SOC210, que identifica posibles intentos de fuerza bruta en la autenticación VPN. La actividad sospechosa involucró múltiples intentos de inicio de sesión fallidos desde la dirección IP de origen 37.19.221.229 en el servidor VPN con destino al host denominado "Mane". El nombre de usuario "mane@letsdefend.io" fue uno de los objetivos de estos intentos de inicio de sesión. Después de varios intentos fallidos, se registró un inicio de sesión exitoso desde la misma dirección IP, lo que aumentó la sospecha de un intento de fuerza bruta exitoso.
 
 Comencemos con un análisis inicial:
 
@@ -532,7 +679,44 @@ Con esto concluimos el playbook
 
 ![Untitled](imgpablo/100.png)
 
+Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+No
+
+Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+Comprobación de artifacts para saber si son maliciosos en Virustotal
+Contención del dispositivo
+Busqueda de registros y logs
+
+No implementaria nada porque mi playbook contiene la resolución de este
+
+Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+- Bloqueo de direcciones IP: Bloquea la dirección IP específica desde la cual se originaron los intentos de fuerza bruta en el servidor VPN. Esto evitará que el atacante continúe intentando acceder al sistema desde esa dirección IP.
+
+- Implementación de medidas de seguridad adicionales: Refuerza la seguridad del servidor VPN mediante la implementación de medidas adicionales, como la autenticación multifactor (MFA) o el uso de listas blancas de direcciones IP permitidas para acceder al sistema.
+
+- Actualización de políticas de contraseñas: Revisa y actualiza las políticas de contraseñas para garantizar que sean lo suficientemente fuertes y resistentes a los ataques de fuerza bruta. Esto puede incluir requerir contraseñas de longitud adecuada, combinaciones de caracteres especiales, números y letras mayúsculas y minúsculas.
+
+- Monitoreo de actividad de inicio de sesión: Implementa un sistema de monitoreo de actividad de inicio de sesión en el servidor VPN para detectar y alertar sobre intentos de inicio de sesión fallidos y exitosos. Esto te permitirá identificar y responder rápidamente a posibles intentos de ataque.
+
+- Capacitación del usuario: Proporciona capacitación regular a los usuarios sobre las mejores prácticas de seguridad, incluida la importancia de utilizar contraseñas seguras y no compartir credenciales de inicio de sesión. Los usuarios también deben ser educados sobre cómo reconocer y reportar actividad sospechosa.
+
+- Implementación de bloqueo automático: Configura el servidor VPN para bloquear automáticamente las cuentas de usuario después de un cierto número de intentos de inicio de sesión fallidos. Esto dificultará aún más los intentos de fuerza bruta al limitar el número de intentos que un atacante puede realizar.
+
+- Actualización del software VPN: Asegúrate de que el software utilizado para proporcionar el servicio VPN esté actualizado con las últimas correcciones de seguridad y parches. Esto ayudará a cerrar posibles vulnerabilidades que podrían ser explotadas por los atacantes.
+
+- Auditoría de seguridad regular: Realiza auditorías de seguridad regulares en el servidor VPN para identificar posibles debilidades en la configuración y la seguridad del sistema. Esto te permitirá tomar medidas preventivas proactivas para proteger el sistema contra futuros ataques.
+
+
+
 ## SOC202 - FakeGPT Malicious Chrome Extension
+
+Tipo según taxonomía: Instalación de extensión maliciosa (Malicious Chrome Extension)
+
+Criticidad: Alta
+
+Descripción del incidente: El incidente ocurrió el 29 de mayo de 2023 a las 01:01 PM. Fue detectado por la regla SOC202 que identifica la instalación de extensiones maliciosas en el navegador Chrome. La actividad sospechosa implicó la instalación de la extensión "hacfaophiklaeolhnmckojjjjbnappen.crx" en el navegador Chrome del host denominado "Samuel". La extensión fue descargada desde la ubicación de archivo "C:\Users\LetsDefend\Download\hacfaophiklaeolhnmckojjjjbnappen.crx". Se identificó el hash del archivo como "7421f9abe5e618a0d517861f4709df53292a5f137053a227bfb4eb8e152a4669".
 
 ![Untitled](imgpablo/101.png)
 
@@ -582,7 +766,43 @@ Con esto concluimos el playbook.
 
 ![Untitled](imgpablo/113.png)
 
+Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+No
+
+Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+Comprobación de artifacts para saber si son maliciosos en Virustotal
+Contención del dispositivo
+Busqueda de registros, logs e historial de navegación
+
+No tengo un playbook sobre instalación de extensión maliciosa
+
+Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+- Eliminación de la extensión maliciosa: Elimina la extensión maliciosa del navegador Chrome en todos los sistemas afectados. Esto puede hacerse manualmente a través de la configuración de extensiones del navegador.
+
+- Escaneo antivirus y antimalware: Realiza un escaneo completo de todos los sistemas afectados utilizando software antivirus y antimalware actualizado. Esto ayudará a detectar y eliminar cualquier otro malware presente en los sistemas.
+
+- Restablecimiento del navegador: Restablece la configuración del navegador Chrome en todos los sistemas afectados para eliminar cualquier configuración o modificación maliciosa realizada por la extensión maliciosa. Esto puede hacerse a través de la configuración del navegador.
+
+- Educación del usuario: Proporciona educación al usuario sobre las prácticas seguras de navegación web y la importancia de no instalar extensiones desconocidas o sospechosas en los navegadores. Los usuarios deben ser instruidos para que solo instalen extensiones de fuentes confiables y verificadas.
+
+- Implementación de políticas de seguridad: Implementa políticas de seguridad que restrinjan la instalación de extensiones en los navegadores a solo aquellas aprobadas por el departamento de TI. Esto puede hacerse utilizando soluciones de administración de endpoints o políticas de grupo en entornos corporativos.
+
+- Monitoreo continuo: Establece un monitoreo continuo de la actividad del navegador y del tráfico de red para detectar y responder rápidamente a cualquier actividad maliciosa adicional que pueda surgir como resultado de la instalación de la extensión maliciosa.
+
+- Actualizaciones de seguridad: Asegúrate de que todos los sistemas estén actualizados con las últimas actualizaciones de seguridad y parches de software. Esto ayudará a cerrar posibles vulnerabilidades que podrían ser explotadas por los atacantes.
+
+- Auditorías de seguridad: Realiza auditorías de seguridad regulares para evaluar la eficacia de las medidas de seguridad implementadas y para identificar posibles áreas de mejora en la postura de seguridad de la organización.
+
+
 ## SOC175 - PowerShell Found in Requested URL - Possible CVE-2022-41082 Exploitation
+
+Tipo según taxonomía: Intento de explotación (Exploitation)
+
+Criticidad: Alta
+
+Descripción del incidente: El incidente ocurrió el 30 de septiembre de 2022 a las 07:19 AM y fue detectado por la regla SOC175 que identifica la presencia de comandos de PowerShell en una URL solicitada, lo que podría indicar un intento de explotación de la vulnerabilidad CVE-2022-41082. La actividad sospechosa implicó una solicitud HTTP GET desde la dirección IP de origen 58.237.200.6 al servidor Exchange Server 2 ubicado en la dirección IP de destino 172.16.20.8. La URL solicitada fue "/autodiscover/autodiscover.json?@evil.com/owa/&Email=autodiscover/autodiscover.json%3f@evil.com&Protocol=XYZ&FooProtocol=Powershell". El agente de usuario utilizado fue "Mozilla/5.0 zgrab/0.x".
 
 ![Untitled](imgpablo/114.png)
 
@@ -640,7 +860,47 @@ Con esto concluiríamos el playbook.
 
 ![Untitled](imgpablo/126.png)
 
+
+Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+No
+
+Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+Comprobación de artifacts para saber si son maliciosos en Virustotal
+Busqueda de registros y logs
+
+
+No tengo ningun playbook sobre intento de explotación
+
+Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+- Actualización del software y parches de seguridad: Asegúrate de que el software del servidor Exchange esté actualizado con las últimas correcciones de seguridad y parches proporcionados por el proveedor. Esto incluye no solo el software base, sino también los complementos y componentes relacionados.
+
+- Bloqueo de comandos de PowerShell en URLs: Implementa filtros o reglas de seguridad en el servidor web para bloquear solicitudes que contengan comandos de PowerShell u otras cadenas sospechosas en las URLs. Esto puede ayudar a prevenir intentos de explotación conocidos.
+
+- Configuración de firewall y listas de control de acceso: Configura el firewall de red y las listas de control de acceso (ACL) para restringir el tráfico de red entrante y saliente, bloqueando el acceso desde direcciones IP no autorizadas o conocidas por actividades maliciosas.
+
+- Auditorías de seguridad regulares: Realiza auditorías de seguridad periódicas en el servidor Exchange y otros sistemas críticos para identificar posibles vulnerabilidades y áreas de mejora en la postura de seguridad de la infraestructura.
+
+- Monitoreo de actividad sospechosa: Implementa un sistema de monitoreo de seguridad que pueda detectar y alertar sobre actividades sospechosas, como solicitudes inusuales o intentos de explotación de vulnerabilidades conocidas. Esto te permitirá responder rápidamente a posibles amenazas.
+
+- Capacitación del personal: Proporciona capacitación regular sobre seguridad informática al personal que administra y utiliza el servidor Exchange. Educa a los usuarios sobre las últimas amenazas de seguridad, las mejores prácticas de seguridad y cómo reconocer y reportar actividad sospechosa.
+
+- Segregación de redes: Considera la implementación de una arquitectura de red que segmente el tráfico de Internet y el tráfico interno, limitando así la exposición del servidor Exchange a posibles amenazas externas.
+
+- Gestión de vulnerabilidades: Implementa un programa de gestión de vulnerabilidades que incluya escaneos regulares de vulnerabilidades, evaluación de riesgos y acciones correctivas para abordar las vulnerabilidades identificadas de manera proactiva.
+
+
+
+
+
 ## SOC164 - Suspicious Mshta Behavior
+
+Tipo según taxonomía: Comportamiento sospechoso de Mshta (Suspicious Mshta Behavior)
+
+Criticidad: Alta
+
+Descripción del incidente: El incidente ocurrió el 5 de marzo de 2022 a las 10:29 AM y fue detectado por la regla SOC164 que identifica comportamientos sospechosos relacionados con el proceso Mshta. La actividad sospechosa implicó la ejecución de un archivo HTA de baja reputación a través del proceso Mshta en el host denominado "Roberto". El archivo HTA "Ps1.hta" se ejecutó desde la ubicación "C:/Users/Roberto/Desktop/" utilizando el ejecutable "mshta.exe" ubicado en "C:/Windows/System32/mshta.exe". El MD5 del archivo HTA fue registrado como "6685c433705f558c5535789234db0e5a".
 
 ![Untitled](imgpablo/127.png)
 
@@ -773,7 +1033,45 @@ Con esto concluiríamos el playbook.
 
 ![Untitled](imgpablo/139.png)
 
+
+Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+No
+
+Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+Comprobación de artifacts para saber si son maliciosos en Virustotal
+Contención del dispositivo
+Busqueda de registros y logs
+Registro del historial del terminal del dispositivo.
+Desenfuscado de codigo
+
+No tengo ningun playbook sobre comportamiento sospechoso de Mshta (Suspicious Mshta Behavior)
+
+Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+- Bloqueo del archivo HTA: Si se determina que el archivo HTA "Ps1.hta" es malicioso o de baja reputación, se debe bloquear su ejecución y eliminarlo de todos los sistemas afectados. Esto se puede lograr mediante el uso de soluciones de seguridad que detecten y bloqueen archivos maliciosos, así como mediante la configuración de políticas de seguridad para evitar la ejecución de archivos HTA no confiables.
+
+- Educación del usuario: Proporciona capacitación y concientización en seguridad a los usuarios, especialmente a aquellos que tienen permisos para ejecutar archivos o programas en los sistemas. Enséñales a no abrir ni ejecutar archivos adjuntos de correo electrónico o descargas de Internet que provengan de fuentes desconocidas o no confiables.
+
+- Implementación de soluciones de seguridad avanzadas: Utiliza soluciones de seguridad avanzadas, como sistemas de prevención de intrusiones (IPS), sistemas de detección y prevención de malware (MDP), y soluciones de análisis de comportamiento de endpoint (EBA), que puedan detectar y bloquear comportamientos sospechosos, incluyendo la ejecución de archivos HTA maliciosos.
+
+- Monitoreo continuo: Establece un sistema de monitoreo continuo de la actividad del sistema y del tráfico de red para detectar cualquier actividad sospechosa, como la ejecución de archivos HTA maliciosos. Implementa alertas automáticas para notificar al personal de seguridad cuando se detecten comportamientos sospechosos.
+
+- Actualizaciones y parches de seguridad: Mantén actualizados todos los sistemas y aplicaciones con los últimos parches de seguridad y actualizaciones. Esto ayudará a cerrar posibles vulnerabilidades que podrían ser explotadas por los atacantes para ejecutar archivos maliciosos.
+
+- Políticas de ejecución de scripts: Configura políticas de ejecución de scripts en los sistemas para restringir la ejecución de scripts, incluyendo archivos HTA, a ubicaciones específicas o a scripts firmados digitalmente por fuentes confiables.
+
+- Auditorías de seguridad: Realiza auditorías de seguridad regulares para evaluar la postura de seguridad de los sistemas y detectar posibles vulnerabilidades o puntos débiles que podrían ser explotados por los atacantes.
+
+
+
 ## SOC163 - Suspicious Certutil.exe Usage
+
+Tipo según taxonomía: Uso sospechoso de Certutil.exe (Suspicious Certutil.exe Usage)
+
+Criticidad: Media
+
+Descripción del incidente: El incidente ocurrió el 1 de marzo de 2022 a las 11:06 AM y fue detectado por la regla SOC163, que identifica el uso sospechoso del comando Certutil.exe. La actividad sospechosa implicó la ejecución del comando Certutil.exe en el host "EricProd" con la dirección IP 172.16.17.22. El comando Certutil.exe se utilizó para descargar un archivo desde la URL "https://nmap.org/dist/nmap-7.92-win32.zip" y guardarlo como "nmap.zip" en el sistema.
 
 ![Untitled](imgpablo/140.png)
 
@@ -874,3 +1172,32 @@ La actividad la realiza un **usuario** , no un malware. Todas las herramientas
 Con esto concluiría el playbook.
 
 ![Untitled](imgpablo/153.png)
+
+Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+No
+
+Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+Contención del dispositivo
+Busqueda de registros y logs
+Busqueda en el historial de comandos.
+
+No no tengo ningun playbook sobre el uso sospechoso de Certutil.exe
+
+Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+- Bloqueo del acceso a la URL: Bloquea el acceso a la URL "https://nmap.org/dist/nmap-7.92-win32.zip" desde la red para evitar que el archivo malicioso sea descargado nuevamente en el futuro. Esto se puede lograr mediante la configuración de listas de control de acceso (ACL) en el firewall o utilizando soluciones de seguridad web que bloqueen el acceso a sitios web maliciosos.
+
+- Eliminación del archivo descargado: Elimina el archivo descargado "nmap.zip" del sistema afectado y de cualquier otro sistema donde haya sido distribuido. Realiza un análisis exhaustivo del archivo para identificar cualquier actividad maliciosa y asegúrate de que no queden artefactos o archivos residuales en el sistema.
+
+- Análisis forense del sistema: Realiza un análisis forense del sistema afectado para determinar el alcance del incidente y si se produjo alguna actividad maliciosa adicional. Identifica la fuente del ataque y cualquier punto débil en la seguridad que haya permitido la descarga y ejecución del archivo malicioso.
+
+- Educación del usuario: Proporciona educación y concientización en seguridad a los usuarios sobre los riesgos asociados con la descarga y ejecución de archivos desde fuentes desconocidas o no confiables. Enseña a los usuarios a verificar la autenticidad y seguridad de los archivos antes de abrirlos o ejecutarlos.
+
+- Restricción de privilegios: Limita los privilegios de ejecución de comandos como Certutil.exe y otros programas potencialmente peligrosos en los sistemas, especialmente en entornos sensibles o críticos. Utiliza políticas de seguridad y permisos de usuario para restringir el acceso solo a aquellos usuarios que necesitan ejecutar estos comandos para realizar sus tareas.
+
+- Monitoreo continuo de la actividad del sistema: Implementa un sistema de monitoreo continuo de la actividad del sistema para detectar y responder rápidamente a cualquier comportamiento sospechoso o intentos de descarga de archivos maliciosos en el futuro.
+
+- Actualizaciones de seguridad: Asegúrate de que el sistema operativo y todos los programas estén actualizados con los últimos parches de seguridad y actualizaciones. Esto ayudará a cerrar posibles vulnerabilidades que podrían ser explotadas por los atacantes para descargar y ejecutar archivos maliciosos.
+
+
