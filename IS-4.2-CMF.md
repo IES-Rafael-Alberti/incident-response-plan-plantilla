@@ -1,3 +1,6 @@
+# 4.02 - Respuesta y seguimiento de incidentes (RA4.def)
+
+La actividad consiste en la gestión y resolución de incidentes de ciberseguridad utilizando la plataforma Let's Defend. Se enfoca en aplicar las habilidades y conocimientos adquiridos en la detección, análisis, y respuesta a incidentes, mediante el uso de playbooks específicos.
 
 # SOC176 - RDP Brute Force Detected
 ## Taxonomía
