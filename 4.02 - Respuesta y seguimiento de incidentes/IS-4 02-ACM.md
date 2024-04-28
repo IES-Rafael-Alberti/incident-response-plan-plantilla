@@ -4,7 +4,7 @@
 
 ## SOC170 - Passwd Found in Requested URL - Possible LFI Attack
 
-![Untitled](IS-4%2002-ACM%20md%2018b01ff5eb3a4b2fab8995aa6deff3cb/Untitled.png)
+![Untitled](img_Adrian/Untitled.png)
 
 Criticidad: Alta
 
@@ -12,15 +12,15 @@ Taxonomía: Ataque Web
 
 Detalles del caso: El servidor web con IP 172.16.17.13, parece haber sido atacado mediante un “Attack File Inclusion” el cual su objetivo es leer archivos del sistema a través del servidor web.
 
-![Untitled](IS-4%2002-ACM%20md%2018b01ff5eb3a4b2fab8995aa6deff3cb/Untitled%201.png)
+![Untitled](img_Adrian/Untitled%201.png)
 
 Lo primero que debemos hacer es recabar información sobre el incidente, esto lo vamos a visualizar en los logs, hacemos la búsqueda por la dirección IP origen del ataque y vemos los resultados obtenidos.
 
-![LogEvent0.png](IS-4%2002-ACM%20md%2018b01ff5eb3a4b2fab8995aa6deff3cb/LogEvent0.png)
+![LogEvent0.png](img_Adrian/LogEvent0.png)
 
 En este log podemos ver las ips tanto de origen como de destino, y la petición que hizo a la URL la máquina atacante.
 
-![LogEvent1.png](IS-4%2002-ACM%20md%2018b01ff5eb3a4b2fab8995aa6deff3cb/LogEvent1.png)
+![LogEvent1.png](img_Adrian/LogEvent1.png)
 
 Una vez visto esto, podemos determinar si el trafico indicado es malicioso o no.
 
