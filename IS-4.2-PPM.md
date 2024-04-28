@@ -24,6 +24,12 @@
 
 **Device Action :** Allowed
 
+Tipo según taxonomía: Phishing (Quishing Detected)
+
+Criticidad: Media
+
+Descripción del incidente: El incidente ocurrió el 1 de enero de 2024 a las 12:37 PM. Fue detectado por la regla SOC251 que identifica actividades sospechosas relacionadas con el phishing de códigos QR. El evento involucra un correo electrónico con el asunto "New Year’s Mandatory Security Update: Implementing Multi-Factor Authentication (MFA)" enviado desde la dirección de correo electrónico security@microsecmfa.com hacia Claire@letsdefend.io. A pesar de que el dispositivo permitió la acción, se identificó un potencial riesgo de phishing.
+
 En primer lugar, verificaremos el contenido del correo electrónico anterior para ver e investigar el código QR que se detectó como malicioso.
 
 Comprobamos la dirección IP de la dirección SMTP 158.69.201.47
@@ -112,7 +118,44 @@ Con esto terminaríamos
 
 ![Untitled](imgpablo/18.png)
 
+
+Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+No, solo contener el equipo
+
+Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+Comprobación de artifacts para saber si son maliciosos en Virustotal
+Busqueda de correos sospechosos y su posterior eliminación
+Decodificación de un Qr
+Contención del dispositivo
+
+No implementaria ninguna mejora ya que el mio es más completo.
+
+
+Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+- Bloqueo de la dirección IP: Se puede bloquear la dirección IP de origen (158.69.201.47) en los sistemas de firewall y filtrado de correo electrónico para evitar futuros intentos de phishing desde esa dirección.
+
+- Capacitación del personal: Proporcionar capacitación continua sobre concienciación en seguridad a todos los empleados, especialmente en lo que respecta a la identificación de correos electrónicos de phishing y cómo manejarlos adecuadamente.
+
+- Implementación de filtros de correo electrónico avanzados: Configurar y mejorar los filtros de correo electrónico para identificar y bloquear automáticamente mensajes sospechosos que contengan enlaces o archivos adjuntos maliciosos.
+
+- Actualización de software y sistemas: Mantener actualizados todos los sistemas y software con las últimas parches de seguridad y actualizaciones, lo que puede ayudar a mitigar las vulnerabilidades que los atacantes podrían explotar.
+
+- Implementación de autenticación multifactor (MFA): Implementar MFA en todos los sistemas y servicios críticos para agregar una capa adicional de seguridad que dificulte a los atacantes acceder a las cuentas incluso si obtienen credenciales de inicio de sesión.
+  
+- Monitoreo continuo de la red: Establecer un sistema de monitoreo de seguridad que pueda detectar actividades sospechosas o anómalas en tiempo real, lo que permite una respuesta rápida ante posibles amenazas.
+
+- Auditoría y revisión de políticas de seguridad: Realizar auditorías periódicas de las políticas de seguridad de la organización para identificar áreas de mejora y garantizar que estén alineadas con las mejores prácticas de seguridad cibernética.
+
+- Colaboración con proveedores de servicios de seguridad: Trabajar con proveedores de servicios de seguridad externos para obtener información sobre las últimas amenazas y tácticas utilizadas por los atacantes, lo que puede ayudar a fortalecer las defensas de la organización.
+
+
 ## SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected
+
+Tipo según taxonomía: Exfiltración de datos (APTX35 HyperScrape Data Exfiltration Tool Detected)
+Criticidad: Alta
+Descripción del incidente: El incidente ocurrió el 27 de diciembre de 2023 a las 11:22 AM. Fue detectado por la regla SOC250 que identifica la actividad de una herramienta de exfiltración de datos conocida como APTX35 HyperScrape. El evento involucra el proceso "EmailDownloader.exe" ejecutándose en el sistema host "Arthur" con la dirección IP 172.16.17.72. El proceso se inició desde la ruta "C:\Users\LetsDefend\Downloads\EmailDownloader.exe" y su proceso padre fue "C:\Windows\Explorer.EXE". A pesar de que el dispositivo permitió la acción, se identificaron patrones de comportamiento inusual o sospechoso vinculados al hash del archivo, lo que indica un posible intento de exfiltración de datos.
 
 ![Untitled](imgpablo/19.png)
 
@@ -185,6 +228,16 @@ Como el ataque fue exitoso, aislamos el dispositivo
 Con esto daríamos por concluido el playbook.
 
 ![Untitled](imgpablo/37.png)
+
+
+
+
+
+
+
+
+
+
 
 ## SOC239 - Remote Code Execution Detected in Splunk Enterprise
 
@@ -259,6 +312,21 @@ Como descubrimos que el ataque fue exitoso, un analista más experimentado **n
 Con esto concluimos el playbook.
 
 ![Untitled](imgpablo/52.png)
+
+
+Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+No
+
+Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+
+No implementaria ninguna mejora ya que el mio es más completo.
+
+Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+
+
+
 
 ## SOC227 - Microsoft SharePoint Server Elevation of Privilege - Possible CVE-2023-29357 Exploitation
 
