@@ -710,7 +710,7 @@ Comprobación de artifacts para saber si son maliciosos en Virustotal
 Contención del dispositivo
 Busqueda de registros y logs
 
-No implementaria nada porque mi playbook contiene la resolución de este
+Implementación virus total.
 
 Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
