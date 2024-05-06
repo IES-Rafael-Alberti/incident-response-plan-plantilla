@@ -40,7 +40,32 @@ Cerramos la alerta como positivo:
 
 ![Untitled](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G1/4.02%20-%20Respuesta%20y%20seguimiento%20de%20incidentes/Imagenes%20IS-4%2002-PLBV/Untitled%205.png)
 
-Pasemos al siguiente caso.
+1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo.
+
+| Taxonomía | Inyección de comandos |
+| --- | --- |
+| Criticidad | Critica |
+| Descripción | Vulnerabilidad de seguridad web que permite a un atacante ejecutar comandos arbitrarios del sistema operativo |
+
+1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente?
+
+- Ver logs y verificar los comandos ejectuados en el endpoint del equipo.
+
+2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+
+- Solo tuve que añadir la IP del atacante como artefacto para realizar un bloqueo.
+
+3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente?
+
+- Tendremos que poner en cuarentena al equipo.
+
+3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+- No realice ningun playbook para un incidente de ejecución de comandos, pero con la ayuda de la investigación de este incidente, se que puntos abordar directamente para que cualquier persona sea capaz de solucionarlo sin tener la capacidad técnica.
+
+4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+- Pues tendriamos que arreglar el problema con las cookies de sesión, que no fuesen capaces de robarnoslas, actualizar las contraseñas con unas mas robustas.
 
 ## QR Code Phishing
 
