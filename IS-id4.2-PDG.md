@@ -21,11 +21,11 @@ La alerta SOC239 se refiere a la detección de una Ejecución Remota de Código 
 2. **Comprobar IP externa**
    - Se ha analizado la IP fuente 180.101.88.240, se ha identificado como maliciosa.
 
-![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/1dc29963-b964-44d1-afa1-4cdaf8c2cde5)
+![imagen](img/1.png)
 
    - Se encontro la subida del archivo shell
 
-![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/5d7c9722-d59f-414d-ae01-def72c2d88cd)
+![imagen](img/2.png)
 
 3. **Determinar tipo de ataque**
    - Tras analizar el archivo ``shell.xls`` se ha determinado que es una inyección XML que no estaba planeada.
@@ -81,12 +81,12 @@ El alerta SOC176 se refiere a la detección de un ataque de fuerza bruta contra 
 2. **Comprobar IP externa**
    - Comprobamos la reputación en virus total.
 
-![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/53f96fe7-8c5b-4abf-84dc-29bd17e9a926)
+![imagen](img/3.png)
 
 3. **Análisis de trafico**
    - Se encuentran solicitudes al puerto 3389 del RDP.
 
-![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/8ac99386-28ac-4941-8788-eb1a69b0e1c8)
+![imagen](img/4.png)
 
 
 4. **Determinar el Alcance**
@@ -95,7 +95,7 @@ El alerta SOC176 se refiere a la detección de un ataque de fuerza bruta contra 
 5. **¿Fue exitoso el ataque de fuerza bruta?**
    - Miramos los registros y vemos que el ataque fue exitoso.
 
-![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/572b8516-87d1-4085-90db-c59517173af8)
+![imagen](img/5.png)
 
 
 ### Análisis
@@ -106,7 +106,7 @@ Se consultaron fuentes como VirusTotal, AbuseIPDB y Letsdefend TI, confirmando q
 
 Dado que el ataque fue exitoso, se procede a aislar el host Matthew para limitar el acceso del atacante.
 
-![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/eb25ac82-6203-40f6-aed2-44806080916f)
+![imagen](img/6.png)
 
 ### Acciones Destacadas y Lecciones Aprendidas
 
@@ -144,24 +144,25 @@ La alerta SOC251 se refiere a la detección de un ataque de quishing, también c
 2. **Comprobamos servidor SMTP**
    - Introducimos la ip en virus total, la dirección es maliciosa.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/eadef34c-0f16-4a43-8a92-398bc992b137)
+![imagen](img/7.png)
+
 
 3. **Investigación Correos**
    - Comprobamos si se han mandado más correos con esa dirección, es el único.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/7d4a7f55-339d-4874-aa56-d6195f4e71f2)
+![imagen](img/8.png)
 
    - Comprobamos el contenido del correo
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/4f6e56ba-8f30-426e-83df-c1cf4c156f20)
+![imagen](img/9.png)
 
    - Introducimos el QR en CyberChef para ver contenido.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/96b6c202-eeb1-4b74-ab04-c7a8e47a394e)
+![imagen](img/10.png)
 
    - Comprobamos el enlace en Virus Total y confirmamos que es malicioso.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/ee3a777b-e06f-43db-a34f-a0292f38f6d8)
+![imagen](img/11.png)
 
 4. Una vez analizado borramos el correo
 
@@ -221,17 +222,17 @@ Se procede a verificar la página de Gestión de Logs para buscar registros rela
 2. **Determinar técnica de ataque**
    - Se ha detectado una recogida de datos de manera externa de la víctima mediante EmailDownloader.exe. 
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/c7397241-2c25-4693-9f8c-9c9b8c612aa6)
+![imagen](img/12.png)
 
 3. **Comprobar reputación**
    - Se ha analizado la IP de destino 136.243.108.14, se ha identificado como maliciosa.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/7d59615c-f0f0-493b-9b0b-3d0f7f9547e5)
+![imagen](img/13.png)
 
 4. **Comprobar alcance**
    - No se han encontrado más acciones del atacante, no ha sido infetado ningún equipo más.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/227438d0-f580-4912-9bcf-e849a4da7d26)
+![imagen](img/14.png)
 
 
 ### Análisis
@@ -240,11 +241,11 @@ Se procede a verificar la página de Gestión de Logs para buscar registros rela
 
 Se observan registros relacionados con la dirección IP del host Arthur en la página de Gestión de Logs.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/0ca589bd-1846-4161-b84f-efaa8f40bff0)
+![imagen](img/15.png)
 
 Investigamos el End Point para obtener más información sobre el incidente, encontramos el .exe en los procesos.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/cf28437a-1a81-47af-b585-dad850d09b47)
+![imagen](img/16.png)
 
 No se ha encontrado ningún correo
 
@@ -289,13 +290,13 @@ La alerta SOC235 se refiere a la detección de una vulnerabilidad de control de 
 2. **Comprobar IP externa**
    - Investigamos en Virustotal
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/4da89722-3136-4efa-8f75-5773ad411406)
+![imagen](img/17.png)
 
    - Comprobamos su actividad en los logs y en Threat Intelligence
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/34606672-6df6-431d-ad68-f27ec15233fc)
+![imagen](img/18.png)
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/d97c8a78-6432-453a-a972-f19bcc7cbfcb)
+![imagen](img/19.png)
 
 3. **Determinar tipo de ataque**
    - Elegimos “Otro”, porque el tipo de ataque que estamos investigando no pertenece a ninguno de los anteriores. Hemos determinado que el ataque se llevó acabo desde Internet a la compañía.
@@ -350,9 +351,9 @@ El alerta SOC227 involucra una vulnerabilidad crítica de elevación de privileg
 2. **Comprobar reputación**
    - Se ha analizado la IP fuente 39.91.166.222, se ha identificado como maliciosa.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/38cfbd04-0506-4523-855c-744963d10db3)
+![imagen](img/20.png)
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/000a5ce7-3623-4ad0-923d-bfca11609a98)
+![imagen](img/21.png)
 
 3. **Comprobar si es planeado**
    - Busqué datos asociados de la alerta en el correo electrónico, como la IP de origen, la IP de destino o el nombre del servidor, pero no parece haber nada conectado, por lo que esto no estaba planeado.
@@ -360,9 +361,9 @@ El alerta SOC227 involucra una vulnerabilidad crítica de elevación de privileg
 4. **¿Fué exitoso?**
    - El ataque fue exitoso, se descubrió que el atacante accedió a las URL /currentuser y /siteusers del sitio.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/68fd318a-1282-4a45-a3d6-919a7aa68ec7)
+![imagen](img/22.png)
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/12c9539c-4c52-47b1-bfc1-f6dd7a186ff2)
+![imagen](img/23.png)
 
 
 ### Análisis
@@ -412,11 +413,11 @@ El alerta SOC163 se refiere al uso sospechoso de `certutil.exe` en un entorno Wi
 2. **Determinar actividad sospechosa**
    - Usando el panel de administración de registros, se confirmó que el host 172.16.17.22 haya accedido a las URL sospechosas. Se ha detectado actividad sospechosa en el equipo de EricProd.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/4126b48b-3a0b-4b7e-8867-2225f3dfd136)
+![imagen](img/24.png)
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/b87f53f7-35b1-4feb-b61f-db18a6654dd5)
+![imagen](img/25.png)
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/75d7c126-0cba-47af-9832-860454feb10f)
+![imagen](img/26.png)
 
 
 3. **Determinar tipo de ataque**
@@ -470,11 +471,11 @@ El alerta SOC164 fue generado por un comportamiento sospechoso asociado al uso d
 2. **Determinar actividad sospechosa**
    - Se ha detectado una actividad inusual en la terminal de Roberto, el script intentaba ejecutar un comando malicioso desde Internet.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/4e0ede8b-d341-49ec-9d75-e2b0adef87d8)
+![imagen](img/27.png)
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/fa6ee531-64cf-44bd-81bc-ec3bd30de673)
+![imagen](img/28.png)
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/62414a37-5136-4d6f-8502-d636bda2dfc0)
+![imagen](img/29.png)
 
 
 ### Análisis
@@ -522,18 +523,18 @@ Se detectó una vulnerabilidad crítica, denominada Follina 0-Day, en un archivo
 2. **Determinar actividad sospechosa**
    - En los detalles de la alerta se nos adjunta el hash el fichero. Lo cargamos en VirusTotal para comprobar si es malicioso.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/f1ff533b-6198-4be7-acfa-31d4e62c5fa2)
+![imagen](img/30.png)
 
    - Se encontraron comandos sospechosos en el equipo infectado
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/69c83754-efc5-4996-924b-35d104d3d94a)
+![imagen](img/31.png)
 
 3. **Comprobar si el malware está en cuarentena/limpiado**
    - Encontramos accesos desde la ip del equipo a un dominio malicioso y encontramos actividad en el equipo.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/992ab12c-ae37-4a89-86ed-9f3e54d486e1)
+![imagen](img/32.png)
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/8898c83e-ebf0-42e3-98cc-cdb007ddb36b)
+![imagen](img/33.png)
 
 ### Análisis del Incidente
 
@@ -583,12 +584,12 @@ La alerta SOC202 se refiere a la detección de una extensión maliciosa de Chrom
 2. **Comprobar actividad**
    - Buscamos actividad en los logs.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/11110c9e-a8c6-484a-9ca8-1a5175915ff7)
+![imagen](img/34.png)
 
 
    - Encontramos actividad inusual en el historial.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/b48cbf2d-f776-4f11-93d0-8b343abe772c)
+![imagen](img/35.png)
 
 
 3. **Determinar tipo de ataque**
@@ -597,11 +598,11 @@ La alerta SOC202 se refiere a la detección de una extensión maliciosa de Chrom
 4. **Analizar malware**
    - Tenemos el hash en la alerta, lo buscamos en Virustotal.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/e54a2754-3566-4aa9-8944-597948827678)
+![imagen](img/36.png)
 
 5. **Comprobar si hubo C2**
    
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/2decb398-9d62-4cbe-97e9-44a44632e99f)
+![imagen](img/37.png)
 
 
 ### Investigación
