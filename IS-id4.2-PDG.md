@@ -21,11 +21,11 @@ La alerta SOC239 se refiere a la detección de una Ejecución Remota de Código 
 2. **Comprobar IP externa**
    - Se ha analizado la IP fuente 180.101.88.240, se ha identificado como maliciosa.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/491d59e3-9ea3-42ae-913c-55b7ab989540)
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/1dc29963-b964-44d1-afa1-4cdaf8c2cde5)
 
    - Se encontro la subida del archivo shell
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/8868be76-2570-41a5-8d67-29107cc29cd4)
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/5d7c9722-d59f-414d-ae01-def72c2d88cd)
 
 3. **Determinar tipo de ataque**
    - Tras analizar el archivo ``shell.xls`` se ha determinado que es una inyección XML que no estaba planeada.
@@ -81,12 +81,13 @@ El alerta SOC176 se refiere a la detección de un ataque de fuerza bruta contra 
 2. **Comprobar IP externa**
    - Comprobamos la reputación en virus total.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/49bc41e6-525c-4f6c-8c90-22aa7f2afc83)
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/53f96fe7-8c5b-4abf-84dc-29bd17e9a926)
 
 3. **Análisis de trafico**
    - Se encuentran solicitudes al puerto 3389 del RDP.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/e395adc7-ab61-4b15-8abc-bbc9a8cecf23)
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/8ac99386-28ac-4941-8788-eb1a69b0e1c8)
+
 
 4. **Determinar el Alcance**
    - El atacante no ha sido a múltiples clientes/servidores porque si miramos los registros, veremos que todos los registros de la IP del atacante van solo al host de Matthew.
@@ -94,7 +95,7 @@ El alerta SOC176 se refiere a la detección de un ataque de fuerza bruta contra 
 5. **¿Fue exitoso el ataque de fuerza bruta?**
    - Miramos los registros y vemos que el ataque fue exitoso.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/3c36a99b-aa59-4793-851d-0573077582b6)
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/572b8516-87d1-4085-90db-c59517173af8)
 
 
 ### Análisis
@@ -105,7 +106,7 @@ Se consultaron fuentes como VirusTotal, AbuseIPDB y Letsdefend TI, confirmando q
 
 Dado que el ataque fue exitoso, se procede a aislar el host Matthew para limitar el acceso del atacante.
 
-![image](https://github.com/PlacidoDiaz/Notas-PT/assets/86500067/7c6c3d23-9c92-4490-a6ca-327528c6f74d)
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/eb25ac82-6203-40f6-aed2-44806080916f)
 
 ### Acciones Destacadas y Lecciones Aprendidas
 
