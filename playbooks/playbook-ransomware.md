@@ -2,7 +2,7 @@
 
 **¡Investigar, remediar (contener, erradicar) y comunicarse en paralelo! La contención es fundamental en incidentes de ransomware; priorice según corresponda.**
 
-Asigne pasos a personas o equipos para que trabajen simultáneamente, siempre que sea posible; este manual no es puramente secuencial. Use su mejor criterio.
+Asigne pasos a personas o equipos para que trabajen simultáneamente, siempre que sea posible.
 
 ### Investigar
 

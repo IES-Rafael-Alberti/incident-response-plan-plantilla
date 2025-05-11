@@ -122,7 +122,6 @@ Asignar pasos a personas o equipos para que trabajen simultáneamente, siempre q
 
 ## Información adicional
 
-1. [FinCEN: Informar incidentes de fraude financiero](https://www.fincen.gov/)
-2. [Guía NIST para la prevención de fraude financiero](https://nvlpubs.nist.gov/nistpubs/)
-3. [ENISA: Good practices for Financial Sector](https://www.enisa.europa.eu/)
-4. [Interpol Cybercrime and Financial Fraud](https://www.interpol.int/en/Crimes/Financial-crime)
+* [FinCEN: Informar incidentes de fraude financiero](https://www.fincen.gov/)
+* [ENISA: Good practices for Financial Sector](https://www.enisa.europa.eu/)
+* [Interpol Cybercrime and Financial Fraud](https://www.interpol.int/en/Crimes/Financial-crime)

@@ -110,8 +110,6 @@ Asignar pasos a individuos o equipos para que trabajen simultáneamente, siempre
 
 ## Información adicional
 
-1. [OWASP: Injection](https://owasp.org/www-community/attacks/Injection) — Tipos de ataques de inyección y mitigaciones.
-2. [OWASP SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
-3. [Acunetix – SQL Injection Overview](https://www.acunetix.com/websitesecurity/sql-injection/)
-4. [PortSwigger - Types of Injection Attacks](https://portswigger.net/web-security/injection)
-5. [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
+* [OWASP SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
+* [Acunetix – SQL Injection Overview](https://www.acunetix.com/websitesecurity/sql-injection/)
+* [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
