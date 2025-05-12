@@ -34,6 +34,22 @@ Los playbooks disponibles en los siguientes enlaces establecen los pasos a segui
 
 ### 1.a   ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información
 
+El plan de respuesta se ha desarrollado tomando como referencia las matrices MITRE ATT&CK y RE&CT, lo que permitió alinear las fases del plan con tácticas y técnicas reales utilizadas por atacantes, y definir acciones de respuesta eficaces.
+
+Contribuciones clave de las matrices:
+
+* Identificación de amenazas relevantes: ATT&CK facilitó el mapeo de TTPs comunes a nuestro entorno (por ejemplo, T1078 – Valid Accounts, T1190 – Exploit Public-Facing Application), lo que ayudó a priorizar escenarios y ajustar medidas preventivas.
+
+* Diseño de playbooks: Se estructuraron playbooks por tipo de incidente, considerando técnicas reales y su detección, facilitando respuestas rápidas y contextualizadas.
+
+* Mitigaciones y contención (RE&CT): La matriz RE&CT orientó la definición de acciones en contención, erradicación y recuperación, reforzando la eficacia de las respuestas en fases críticas.
+
+* Detección basada en fuentes de datos: ATT&CK orientó la configuración del SIEM y EDR con fuentes clave como logs de autenticación, actividad de red y uso de comandos.
+
+Evidencias: Se trabajó con el navegador de ATT&CK para crear capas personalizadas, priorizando técnicas según activos críticos y evaluando la cobertura actual de controles de seguridad.
+
+![alt text](Img/image-1.png) ![alt text](Img/image-2.png) ![alt text](Img/image.png)
+
 ### 1.b   ¿Qué playbooks has identificado como necesarios en este plan de respuesta y en que te has basado para identificar esos playbooks y saber que son los necesarios? Deja algún diagrama que describa el flujo de un playbook
 
 A partir del análisis de riesgos y considerando los activos críticos del Grupo3 (incluyendo el SSP, los datos de vulnerabilidades de clientes, la plataforma de intercambio de informes y la infraestructura de pentesting tanto en Azure como on-premise), se han identificado ocho playbooks prioritarios en función de las amenazas más relevantes para la organización.
@@ -168,7 +184,84 @@ La estructura operativa centrada en playbooks bien definidos refuerza la respues
 
 ### 2.a   ¿En que consiste el Flujo de Toma de Decisiones y Escalado de tu plan de respuesta? ¿Existe un plan de comunicación, protocolos, etc? Si la respuesta es correcta, haz un resumen del plan y protocolos. Deja evidencias del flujo, mediante un diagrama
 
+#### Resumen Flujo de toma de decisiones y escalado
+
+Nuestro plan sigue una estructura que empieza con un análisis del impacto y lo seguimos con un árbol de decisiones basado en lo siguiente:
+
+1. ¿Existe riesgo inmediato a vida o continuidad crítica?
+
+1. ¿El impacto económico o regulatorio supera ciertos umbrales?
+
+1. ¿Se requiere apoyo externo?
+
+Esto activa decisiones como:
+
+* Contención agresiva inmediata.
+
+* Escalado al comité ejecutivo.
+
+* Activación del plan de continuidad BC-IM.
+
+* Contratación rápida de especialistas externos (forense, legal, comunicación).
+
+Criterios de escalado incluyen:
+
+* Número de usuarios afectados.
+
+* Volumen de datos sensibles exfiltrados.
+
+* Riesgo regulatorio/legal.
+
+* Exposición mediática.
+
+#### Resumen Flujo del plan de comunicación y protocolos
+
+Esto lo tenemos definido con roles como pueden ser comandante de incidentes, enlace, escriba, etc. Después tenemos canlaes seguros con una notificación cifrada, almacenamiento de evidencias cifradas y un control de acceso. Y seguimos los siguientes protocolos:
+
+* Comunicación inmediata a stakeholders por canal cifrado.
+
+* Información clara a reguladores, clientes y medios, solo si se confirma afectación.
+
+* Participación del área legal y relaciones públicas.
+
+Una vez hecho esto hacemos unas reuniones post-incidentes para documentar, aprender y mejorar continuamente.
+
+#### Diagrama de Flujo para Manejo de Incidente
+
+![alt text](<Img/Diagrama en blanco.png>)
+
 ### 3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?
+
+Perfecto. Para responder adecuadamente a la pregunta **"3.a ¿Cómo te has asegurado de que tu plan tiene respuestas resilientes? ¿Por qué son resilientes y en qué fases se centran?"**, puedes combinar lo que ya contiene tu archivo `plan-de-respuesta.md` con el estilo y enfoque de la respuesta de ejemplo. Aquí tienes una versión adaptada y alineada con ambos:
+
+---
+
+### 3.a ¿Cómo te has asegurado de que tu plan tiene respuestas resilientes? ¿Por qué son resilientes y en qué fases se centran?
+
+Nuestro plan de respuesta incorpora múltiples prácticas diseñadas para asegurar la resiliencia. Estas prácticas permiten anticipar, resistir, recuperarse y adaptarse frente a incidentes de seguridad, garantizando la continuidad operativa y la protección de activos críticos.
+
+**¿Cómo nos aseguramos de que el plan es resiliente?**
+
+* **Preparación estructurada:** Hemos definido roles críticos (comandante de incidentes, scribe, enlaces de negocio y externos) con responsabilidades claras para garantizar coordinación, comunicación y trazabilidad durante toda la respuesta.
+* **Playbooks validados:** Disponemos de procedimientos estandarizados para distintos tipos de incidentes (ransomware, phishing, defacement, etc.), que han sido probados en ejercicios periódicos y simulacros realistas.
+* **Infraestructura segura y visibilidad continua:** Contamos con herramientas SIEM y EDR configuradas con alertas avanzadas, dashboards y flujos automáticos de respuesta.
+* **Ciclo de mejora continua:** Se realizan ejercicios de tabletop trimestrales, red teaming semestral y revisiones periódicas de políticas y umbrales, integrando cada aprendizaje en los playbooks y configuraciones técnicas.
+
+**¿Por qué son resilientes estas respuestas?**
+
+* **No asumimos invulnerabilidad:** Partimos del principio de que los incidentes ocurrirán; el objetivo es minimizar su impacto, especialmente sobre servicios críticos y datos sensibles.
+* **Contención y recuperación rápida:** Nuestro plan prioriza la contención inmediata (aislamiento, bloqueo de accesos, desconexión forense) y la restauración controlada desde imágenes “gold” y backups verificados.
+* **Protección de evidencia y trazabilidad legal:** El uso de repositorios cifrados, cadena de custodia y registro detallado asegura integridad de evidencia y cumplimiento normativo.
+* **Aprendizaje sistemático post-incidente:** Tras cada evento, realizamos una revisión exhaustiva (AAR) con todas las áreas involucradas, definiendo acciones concretas de mejora con responsables y métricas de seguimiento.
+
+**¿En qué fases se centran estas prácticas resilientes?**
+
+* **Preparación:** Definición de roles, simulacros, inventario clasificado, herramientas de detección y respuesta temprana.
+* **Identificación y Contención:** Monitorización continua, correlación avanzada, aislamiento rápido y control proactivo de amenazas mediante distribución de IOCs y activación de honeypots.
+* **Recuperación:** Restauración priorizada por criticidad, verificación de integridad de datos, supervisión post-incidente y revalidación de accesos.
+* **After-action review y mejora continua:** Incorporación de nuevas detecciones basadas en comportamiento, simulaciones ofensivas periódicas y actualización de tácticas de respuesta.
+
+En conjunto, estas acciones garantizan que la resiliencia esté integrada en todo el ciclo de vida del incidente, no solo en la recuperación, sino también en la preparación, respuesta y adaptación posterior.
 
 ## 5. Conclusiones
 
