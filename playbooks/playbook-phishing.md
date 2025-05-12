@@ -27,7 +27,7 @@ Asigna pasos a individuos o equipos para trabajar en paralelo siempre que sea po
     - ¿El phishing suplanta a alguien interno, un proveedor, un banco, etc.?
     - ¿Qué tipo de datos solicita?
     - ¿El idioma, diseño y formato coinciden con campañas conocidas?
-    - [Guía para analizar phishing](https://www.incibe.es/protege-tu-empresa/blog/claves-reconocer-phishing)
+    - Guía para analizar phishing
 
 5. **Herramientas de apoyo al análisis**
     - Herramientas de análisis de cabeceras (MxToolbox)

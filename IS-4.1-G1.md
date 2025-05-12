@@ -132,8 +132,6 @@ La integración de las matrices MITRE ATT&CK y RE&CT ha sido fundamental para di
 
 ---
 
-<br>
-
 ## 1.b   ¿Qué playbooks has identificado como necesarios en este plan de respuesta y en que te has basado para identificar esos playbooks y saber que son los necesarios? Deja algún diagrama que describa el flujo de un playbook.
 
 **Playbooks desarrollados para el plan de respuesta**
