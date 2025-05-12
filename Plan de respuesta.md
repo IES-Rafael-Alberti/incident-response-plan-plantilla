@@ -164,56 +164,20 @@ Para aumentar el nivel de madurez en **Grupo 1 S.L.**, se proponen las siguiente
 
 ### Posibles amenazas
 
-**Confidencialidad de Datos y PI**
+El análisis de amenazas, utilizado para calcular riesgos, consideró las clasificaciones de INCIBE.
 
-- Fuga de bases de datos de clientes o credenciales
 
-- Acceso no autorizado a información sensible (legal, RRHH, I+D)
+![Posibles amenazas](./img/Posibles%20amenazas.png)
 
-- Exfiltración de datos por malware en dispositivos o servidores
-
-- Compromiso de cuentas de usuario privilegiadas
-
-- Phishing/Spear-phishing a empleados de áreas críticas
-
-**Integridad de Sistemas y Datos**
-
-- Manipulación o alteración de registros y bases de datos
-
-- Modificación no autorizada de configuraciones en servidores y red
-
-- Malware/Ransomware en endpoints o servidores
-
-- Errores de configuración en sistemas críticos
-
-- Despliegue de software inseguro o sin validar
-
-**Disponibilidad de Servicios**
-
-- Ataques de denegación de servicio (DoS/DDoS) a la web o infraestructura
-
-- Fallos eléctricos o de hardware en servidores/SAI
-
-- Caída de servicios cloud o internos por sobrecarga o mantenimiento incorrecto
-
-- Interrupción de operaciones por incidentes en la red
-
-**Amenazas Transversales**
-
-- Abuso de privilegios de acceso (interno/externo)
-
-- Acceso no autorizado por suplantación de identidad
-
-- Errores de usuarios/administradores
-
-- Indisponibilidad de personal clave ante incidentes críticos
-
+---
 
 ### Cálculo de riesgo
 
 Considerando el inventario de activos y las posibles amenazas, se presenta la siguiente tabla para el cálculo de riesgos en Grupo 1 S.L.:
 
 ![Cálculo de riesgo](./img/Calculo%20del%20riesgo.png)
+
+---
 
 ### Taxonomía de incidentes
 
