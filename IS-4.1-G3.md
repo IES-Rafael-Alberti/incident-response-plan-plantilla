@@ -11,6 +11,10 @@
 
 ## 1. Introducción
 
+El presente documento recoge el Plan de Respuesta a Incidentes desarrollado por el Grupo3, con el objetivo de establecer un marco sólido y operativo para la detección, análisis, contención, erradicación y recuperación frente a incidentes de ciberseguridad. Este plan se adapta a la naturaleza técnica del entorno de la organización, el valor crítico de sus activos —incluyendo datos de clientes, plataformas cloud y sistemas on-premise— y la necesidad de garantizar la continuidad operativa y la confianza de las partes interesadas.
+
+Para su elaboración se ha seguido un enfoque basado en inteligencia de amenazas, apoyado en marcos de referencia reconocidos como MITRE ATT&CK y NIST SP 800-61r2, y se han definido procedimientos estructurados mediante playbooks específicos para distintos vectores de ataque. El documento no solo detalla la estrategia de respuesta, sino también los protocolos de escalado, comunicación y revisión post-incidente, asegurando una gestión integral de la seguridad operativa del Grupo3.
+
 ## 2. Plan de respuesta
 
 El siguiente enlace da acceso al Plan de Respuesta a Incidentes desarrollado para Grupo3. Este documento describe los procedimientos y recursos necesarios para gestionar diversos tipos de incidentes de seguridad que puedan afectar a los sistemas, los servicios en la nube o los datos críticos compartidos con los clientes. Su finalidad es asegurar una respuesta rápida, coordinada y debidamente documentada por parte del personal involucrado.
@@ -259,4 +263,24 @@ En conjunto, estas acciones garantizan que la resiliencia esté integrada en tod
 
 ## 5. Conclusiones
 
+El desarrollo e implementación del Plan de Respuesta a Incidentes del Grupo3 representa un paso significativo hacia la mejora de su postura de ciberseguridad. Al integrar marcos como MITRE ATT&CK y RE&CT, y seguir las recomendaciones del NIST SP 800-61r2, se establece una base sólida para la identificación, contención, erradicación y recuperación ante incidentes de seguridad.
+
+La adopción de playbooks específicos permite una respuesta rápida y eficaz a diversos escenarios de amenaza, mientras que la definición de roles y protocolos de comunicación asegura una coordinación efectiva entre los equipos involucrados.
+
+Sin embargo, la resiliencia en ciberseguridad no es un estado estático, sino un proceso continuo de mejora. Es esencial mantener actualizados los procedimientos, realizar simulacros periódicos y fomentar una cultura organizacional orientada a la seguridad para adaptarse a un panorama de amenazas en constante evolución.
+
 ## 6. Bibliografía
+
+[MITRE ATT&CK® Framework – Enterprise Matrix](https://attack.mitre.org/techniques/)
+
+[RE&CT Framework – ATC Project](https://atc-project.github.io/atc-react/)
+
+[NIST SP 800-61 Revision 2: Computer Security Incident Handling Guide](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf)
+
+[NIST SP 800-61 Revision 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management](https://doi.org/10.6028/NIST.SP.800-61r3)
+
+Cybersecurity Incident Response: How to Contain, Eradicate, and Recover from Incidents ISBN-13: 978-1484238691
+
+Cybersecurity Blue Team Strategies: Uncover the Secrets of Blue Teams to Combat Cyber Threats in Your Organization ISBN-13: 978-1801072472
+
+Cyber Resilience in Critical Infrastructure ISBN-13: 978-1032583051
