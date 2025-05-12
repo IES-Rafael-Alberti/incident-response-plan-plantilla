@@ -19,7 +19,7 @@ Document answers to the following key questions:
     * Stop: what should we stop doing?
     * Start: what should we start doing?
     * Continue: what should we keep doing?
-
+ 
 ## Communicate AAR Status and Results
 
 The AAR owner, in coordination with the Internal Liaison, will  communicate the status of the AAR (see below)
