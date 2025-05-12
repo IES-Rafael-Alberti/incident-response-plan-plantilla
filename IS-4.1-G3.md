@@ -230,12 +230,6 @@ Una vez hecho esto hacemos unas reuniones post-incidentes para documentar, apren
 
 ![alt text](<Img/Diagrama en blanco.png>)
 
-### 3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?
-
-Perfecto. Para responder adecuadamente a la pregunta **"3.a ¿Cómo te has asegurado de que tu plan tiene respuestas resilientes? ¿Por qué son resilientes y en qué fases se centran?"**, puedes combinar lo que ya contiene tu archivo `plan-de-respuesta.md` con el estilo y enfoque de la respuesta de ejemplo. Aquí tienes una versión adaptada y alineada con ambos:
-
----
-
 ### 3.a ¿Cómo te has asegurado de que tu plan tiene respuestas resilientes? ¿Por qué son resilientes y en qué fases se centran?
 
 Nuestro plan de respuesta incorpora múltiples prácticas diseñadas para asegurar la resiliencia. Estas prácticas permiten anticipar, resistir, recuperarse y adaptarse frente a incidentes de seguridad, garantizando la continuidad operativa y la protección de activos críticos.
