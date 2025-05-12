@@ -181,6 +181,7 @@ Cada playbook aborda de manera detallada las fases de investigación, contenció
 - El trabajo previo con las matrices ha permitido identificar los TTPs más aplicables a la realidad de la empresa y seleccionar los escenarios que requieren una respuesta específica y detallada.
 
 **Ejemplo de diagrama de flujo de un playbook: Playbook de Phishing**
+```mermaid
 flowchart TD
     %% Leyenda
     subgraph Legend [Leyenda]
@@ -200,6 +201,7 @@ flowchart TD
     H --> I[Comunicación a usuarios y departamentos]
     I --> J[Documentación y cierre]
     C -- No --> K[Comunicación de falso positivo y cierre]
+```
 
 **Características clave de los playbooks**
 
