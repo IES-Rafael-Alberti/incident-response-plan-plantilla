@@ -1,10 +1,6 @@
 # Plan de Respuesta a Incidentes – Secure Shield Pentesting S.L.
 
-**Fecha de publicación:** 13/05/2025
-
-**Revisión 1:** 13/05/2025
-
-**Autor:** Grupo 2
+**Autores:** Félix Sánchez González, Fco Javier Rodriguez Acosta ,Santiago Domínguez Gómez
 
 **Contacto de revisión:** grupo2@secureshield.es
 
