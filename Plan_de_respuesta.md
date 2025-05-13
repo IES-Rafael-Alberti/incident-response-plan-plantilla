@@ -4,14 +4,13 @@
 
 ### Roles y responsabilidades
 
-* Comandante de incidentes: coordina y toma decisiones críticas. Este rol lidera la estrategia de respuesta, evaluando riesgos en tiempo real, priorizando acciones según impacto y asegurando que cada fase del plan se ejecute conforme a los objetivos de continuidad y resiliencia, manteniendo comunicación fluida con la alta dirección.
-* Scribe: documenta pasos, tiempos y evidencias. Este rol gestiona la recopilación detallada de cada acción realizada durante el incidente, anotando marcas temporales precisas, resultados de análisis y las evidencias recolectadas. Su labor garantiza la integridad y disponibilidad del expediente técnico, facilitando posteriores auditorías y análisis forenses.
+* Comandante
+* Subjefe
+* Escriba
+* Experto
+* Enlace
 
-* Enlace de negocio: comunica impacto a las áreas afectadas. Actuando como nexo entre el equipo técnico y las unidades de negocio, este rol traduce la terminología técnica en métricas operativas y estratégicas. Informa sobre la disponibilidad de servicios, posibles desviaciones en los SLAs, y coordina recursos para mitigar el impacto en procesos críticos.
-
-* Enlace externo: contacto con forenses, legales y prensa. Responsable de la interacción con proveedores externos de servicios forenses, equipos legales y departamentos de comunicación, este vínculo asegura el cumplimiento normativo, la correcta elaboración de comunicados y la transparencia ante reguladores y stakeholders. Gestiona acuerdos de confidencialidad y vela por la reputación corporativa durante toda la respuesta.
-
-* Herramientas y recursos:
+ ### Herramientas y recursos:
 
   * Inventario de activos clasificado por criticidad y tipo de dato:
     Contar con un inventario detallado permite identificar rápidamente qué sistemas y datos requieren atención prioritaria en caso de incidente. Cada activo debe estar etiquetado con su nivel de criticidad, tipo de información que maneja y responsable asignado, así como fecha de última revisión, para que el equipo de respuesta sepa dónde enfocar sus esfuerzos.
@@ -93,9 +92,9 @@
 
 * Árbol de decisión
 
-  1. ¿Existe riesgo inmediato a vida o continuidad crítica?: Contención agresiva y notificación inmediata
-  2. ¿Impacto económico/regulatorio supera umbrales definidos?: Escalar a comité ejecutivo y activar plan BC-IM
-  3. ¿Necesidad de apoyo externo (forense, legal, PR, aseguradoras)?: Contratación rápida de vendors según playbook
+  * ¿Existe riesgo inmediato a vida o continuidad crítica?: Contención agresiva y notificación inmediata
+  * ¿Impacto económico/regulatorio supera umbrales definidos?: Escalar a comité ejecutivo y activar plan BC-IM
+  * ¿Necesidad de apoyo externo (forense, legal, PR, aseguradoras)?: Contratación rápida de vendors según playbook
 
 * Criterios de escalado
 
