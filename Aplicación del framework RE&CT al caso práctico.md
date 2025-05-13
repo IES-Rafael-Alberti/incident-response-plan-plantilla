@@ -1,0 +1,12 @@
+# Aplicación del framework RE\&CT al caso práctico
+
+* Ransomware: Un ataque de ransomware a menudo implica la ejecución de procesos maliciosos y la modificación/cifrado de archivos. Las acciones de respuesta relevantes incluyen la capacidad de encontrar y bloquear procesos maliciosos (RA1401 a RA1409, y RA3401 a RA3405), encontrar, recolectar, poner en cuarentena o eliminar archivos afectados (RA1306 a RA1316 y RA4301), y en la etapa de recuperación, restauración de datos desde copias de seguridad (RA5002) y reinstalación de hosts (RA5001).
+
+
+* Phishing: Los ataques de phishing involucran correos electrónicos maliciosos. Las acciones de respuesta relevantes se centran en el correo electrónico, como listar usuarios que abrieron el mensaje (RA1201 y RA2201) , listar receptores (RA1202 y RA2203), bloquear remitentes o dominios (RA1203 a RA1204, y RA3201 a RA3202), poner en cuarentena o eliminar el mensaje (RA1205 a RA1206, RA3203 y RA4201), recolectar el mensaje (RA1207 y RA2202) , analizar la dirección de correo (RA1208 y RA2206), extraer observables del mensaje (RA2205), y verificar si un mensaje es phishing (RA2204).
+
+* Acceso no autorizado: Este escenario puede involucrar el compromiso de cuentas de usuario. Las acciones de respuesta relevantes de las fuentes en la gestión de identidades incluyen la capacidad de gestionar el sistema de gestión de identidades (RA1601), bloquear o eliminar cuentas de usuario (RA1602, RA1605, RA3601 y RA4602), revocar credenciales de autenticación (RA1604 y RA4601) , y listar usuarios autenticados o cuentas de usuario (RA1603, RA1606, RA2601 y RA2602). Podrían ser relevantes también acciones para listar o analizar claves de registro o servicios (RA1502 a RA1511, y RA2501 a RA2508) y eliminar claves o servicios si el atacante modificó el sistema (RA1509 a RA1511, y RA4501 a RA4502).
+
+* Ataque DDoS: Un ataque de denegación de servicio distribuido generalmente implica una gran cantidad de tráfico de red. Las acciones de respuesta relevantes de las fuentes en el área de red se centran en la contención del tráfico, como la capacidad de bloquear direcciones IP externas e internas (RA1111 a RA1112, y RA3101 a RA3102), y bloquear puertos de comunicación externa e interna (RA1117 a RA1118, y RA3107 a RA3108).
+
+Por último, serían aplicables a todos los casos anteriores las acciones de respuesta relacionadas con el desarrollo del reporte del incidente y de lecciones aprendidas (RA6001 y RA6002).
