@@ -74,6 +74,21 @@ Asigna pasos a individuos o equipos para trabajar en paralelo siempre que sea po
 
 ---
 
+## Comunicar
+
+1. **Escala el incidente** y comunica con la dirección, equipo de crisis y responsable de respuesta a incidentes según el procedimiento interno.
+2. **Documenta** todas las acciones, hallazgos y decisiones tomadas durante el incidente.
+3. **Consulta con el área legal** sobre cuestiones regulatorias, notificación obligatoria, protección de datos y gestión de riesgos.
+4. **Informa a los usuarios internos** afectados sobre el estado, acciones tomadas y recomendaciones específicas (por ejemplo, cambio de contraseñas, uso de alternativas temporales, etc.).
+5. **Notifica a clientes/external partners** si sus datos han podido verse afectados o existe obligación legal.
+6. **Contacta con el proveedor de seguros** para activar apoyo y recursos, e inicia el proceso de reclamación si aplica.
+7. **Considera la notificación a las autoridades** (por ejemplo [INCIBE-CERT](https://www.incibe.es/), [Guardia Civil](https://www.gdt.guardiacivil.es/)).
+8. **Coordina la comunicación con proveedores y consultores tecnológicos** para soporte adicional en remediación.
+9. **Prepara mensajes claros** para evitar rumores y desinformación, tanto internos como externos.
+10. **Asegura el cumplimiento documental y de lecciones aprendidas** para futuras mejoras.
+
+---
+
 ## Recuperar
 
 1. **Restaura los datos y sistemas desde backups limpios y verificados**
@@ -111,21 +126,6 @@ Asigna pasos a individuos o equipos para trabajar en paralelo siempre que sea po
 - Proveedores de soluciones de backup y recuperación
 - Contactos legales y aseguradoras de ciberseguridad
 - Contacto con servicios de respuesta a incidentes externos (CERT, INCIBE)
-
----
-
-## Comunicar
-
-1. **Escala el incidente** y comunica con la dirección, equipo de crisis y responsable de respuesta a incidentes según el procedimiento interno.
-2. **Documenta** todas las acciones, hallazgos y decisiones tomadas durante el incidente.
-3. **Consulta con el área legal** sobre cuestiones regulatorias, notificación obligatoria, protección de datos y gestión de riesgos.
-4. **Informa a los usuarios internos** afectados sobre el estado, acciones tomadas y recomendaciones específicas (por ejemplo, cambio de contraseñas, uso de alternativas temporales, etc.).
-5. **Notifica a clientes/external partners** si sus datos han podido verse afectados o existe obligación legal.
-6. **Contacta con el proveedor de seguros** para activar apoyo y recursos, e inicia el proceso de reclamación si aplica.
-7. **Considera la notificación a las autoridades** (por ejemplo [INCIBE-CERT](https://www.incibe.es/), [Guardia Civil](https://www.gdt.guardiacivil.es/)).
-8. **Coordina la comunicación con proveedores y consultores tecnológicos** para soporte adicional en remediación.
-9. **Prepara mensajes claros** para evitar rumores y desinformación, tanto internos como externos.
-10. **Asegura el cumplimiento documental y de lecciones aprendidas** para futuras mejoras.
 
 ---
 

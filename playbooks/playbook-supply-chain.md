@@ -75,6 +75,18 @@ Asigna pasos a individuos o equipos para avanzar en paralelo siempre que sea pos
 
 ---
 
+## Comunicación
+
+1. **Escala el incidente y comunica con dirección, responsables de seguridad, legal y compliance según el plan interno.**
+2. **Contacta con el proveedor afectado** para obtener información oficial, actualizaciones y coordinación de la respuesta.
+3. **Notifica a usuarios internos y departamentos afectados** sobre la situación, medidas tomadas y restricciones temporales.
+4. **Consulta con el área legal sobre obligaciones regulatorias** (por ejemplo, RGPD, contratos con clientes).
+5. **Prepara mensajes claros y coordinados para clientes, socios o reguladores si hay impacto externo.**
+6. **Considera la notificación a autoridades** si el incidente implica fuga de datos sensibles o riesgo para clientes.
+7. **Registra toda la comunicación y asegúrate de que puede auditarse y usarse para aprendizaje futuro.**
+
+---
+
 ## Recuperar
 
 1. **Restaura servicios y sistemas afectados desde copias limpias y verificadas**
@@ -87,18 +99,6 @@ Asigna pasos a individuos o equipos para avanzar en paralelo siempre que sea pos
    - Mantén vigilancia reforzada durante días/semanas para detectar actividad anómala.
 5. **Actualiza procedimientos y controles en base a las lecciones aprendidas**
    - Refuerza políticas de gestión de proveedores y revisa acuerdos contractuales de seguridad.
-
----
-
-## Comunicación
-
-1. **Escala el incidente y comunica con dirección, responsables de seguridad, legal y compliance según el plan interno.**
-2. **Contacta con el proveedor afectado** para obtener información oficial, actualizaciones y coordinación de la respuesta.
-3. **Notifica a usuarios internos y departamentos afectados** sobre la situación, medidas tomadas y restricciones temporales.
-4. **Consulta con el área legal sobre obligaciones regulatorias** (por ejemplo, RGPD, contratos con clientes).
-5. **Prepara mensajes claros y coordinados para clientes, socios o reguladores si hay impacto externo.**
-6. **Considera la notificación a autoridades** si el incidente implica fuga de datos sensibles o riesgo para clientes.
-7. **Registra toda la comunicación y asegúrate de que puede auditarse y usarse para aprendizaje futuro.**
 
 ---
 

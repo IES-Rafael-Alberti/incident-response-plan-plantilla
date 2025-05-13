@@ -70,6 +70,22 @@ Asigna pasos a individuos o equipos para que trabajen en paralelo siempre que se
 
 ---
 
+
+## Comunicar
+
+1. **Escala el incidente y comunica con dirección, responsables de seguridad, legal y compliance según el plan interno.**
+2. **Documenta exhaustivamente el incidente, incluyendo evidencias, cronología, usuarios implicados y posibles impactos.**
+3. **Consulta con el área legal sobre obligaciones regulatorias (RGPD, LOPDGDD, sectoriales) y procede con la notificación o reporte según corresponda.**
+4. **Notifica a usuarios, clientes o partners afectados sobre la naturaleza y alcance de la fuga, ofreciendo transparencia y canales para consultas.**
+5. **Prepara y envía notificaciones a autoridades de protección de datos y reguladores si la información exfiltrada contiene datos personales sensibles o información protegida legalmente.**
+6. **Contacta con la aseguradora si se dispone de póliza de ciberseguridad y activa el protocolo de apoyo.**
+7. **Considera notificar a Fuerzas y Cuerpos de Seguridad (INCIBE, AEPD, Guardia Civil, Policía Nacional) para investigaciones judiciales o si hay riesgo de delito grave.**
+8. **Colabora con proveedores tecnológicos si la fuga impactó a servicios de terceros.**
+9. **Redacta comunicaciones claras y no alarmistas para empleados, clientes y otros públicos, informando de acciones realizadas y compromisos de mejora.**
+10. **Asegura el registro de todo el proceso de comunicación para su posterior análisis y cumplimiento normativo.**
+
+---
+
 ## Recuperar
 
 1. **Recupera los servicios y datos asegurando que la brecha está cerrada y monitoriza la integridad de los sistemas.**
@@ -102,21 +118,6 @@ Asigna pasos a individuos o equipos para que trabajen en paralelo siempre que se
 - Consolas DLP, SIEM, EDR y soluciones de backup
 - Soporte de proveedores cloud y consultoría forense si es necesario
 - Documentación de protocolos internos, políticas de gestión de datos y acceso
-
----
-
-## Comunicar
-
-1. **Escala el incidente y comunica con dirección, responsables de seguridad, legal y compliance según el plan interno.**
-2. **Documenta exhaustivamente el incidente, incluyendo evidencias, cronología, usuarios implicados y posibles impactos.**
-3. **Consulta con el área legal sobre obligaciones regulatorias (RGPD, LOPDGDD, sectoriales) y procede con la notificación o reporte según corresponda.**
-4. **Notifica a usuarios, clientes o partners afectados sobre la naturaleza y alcance de la fuga, ofreciendo transparencia y canales para consultas.**
-5. **Prepara y envía notificaciones a autoridades de protección de datos y reguladores si la información exfiltrada contiene datos personales sensibles o información protegida legalmente.**
-6. **Contacta con la aseguradora si se dispone de póliza de ciberseguridad y activa el protocolo de apoyo.**
-7. **Considera notificar a Fuerzas y Cuerpos de Seguridad (INCIBE, AEPD, Guardia Civil, Policía Nacional) para investigaciones judiciales o si hay riesgo de delito grave.**
-8. **Colabora con proveedores tecnológicos si la fuga impactó a servicios de terceros.**
-9. **Redacta comunicaciones claras y no alarmistas para empleados, clientes y otros públicos, informando de acciones realizadas y compromisos de mejora.**
-10. **Asegura el registro de todo el proceso de comunicación para su posterior análisis y cumplimiento normativo.**
 
 ---
 

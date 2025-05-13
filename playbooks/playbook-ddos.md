@@ -70,6 +70,20 @@ Asigna pasos a individuos o equipos para que avancen en paralelo cuando sea posi
 
 ---
 
+## Comunicar
+
+1. **Escala el incidente y comunica con dirección, responsables de IT y seguridad, y proveedores según el plan de crisis.**
+2. **Documenta detalladamente el incidente, acciones tomadas y enlaces a logs, informes y comunicaciones con proveedores.**
+3. **Consulta con legal/compliance sobre obligaciones (por ejemplo, si la caída de un servicio afecta a compromisos contractuales).**
+4. **Informa a los usuarios internos y a departamentos críticos sobre la situación, restricciones y plazos estimados de recuperación.**
+5. **Prepara mensajes claros y no alarmistas para clientes o proveedores externos si el ataque ha afectado su servicio.**
+6. **Contacta la aseguradora si existe y si el evento es reclamable.**
+7. **Informa a autoridades si el ataque ha supuesto daños graves o extorsión (INCIBE, Guardia Civil, Policía Nacional, según el país).**
+8. **Coordina notificaciones y comunicación con vendors de infraestructura y servicios (cloud, red, seguridad).**
+9. **Registra toda la comunicación y asegúrate de que puede auditarse y usarse para aprendizaje futuro.**
+
+---
+
 ## Recuperar
 
 1. **Verifica la restauración completa de los servicios afectados y monitoriza su estabilidad durante al menos 48-72h tras el ataque.**
@@ -103,20 +117,6 @@ Asigna pasos a individuos o equipos para que avancen en paralelo cuando sea posi
 - Soporte técnico urgente del ISP y de servicios anti-DDoS cloud.
 - Manuales y guías de fabricantes de hardware/software de red.
 - Contacto con aseguradora y equipos de respuesta a incidentes.
-
----
-
-## Comunicar
-
-1. **Escala el incidente y comunica con dirección, responsables de IT y seguridad, y proveedores según el plan de crisis.**
-2. **Documenta detalladamente el incidente, acciones tomadas y enlaces a logs, informes y comunicaciones con proveedores.**
-3. **Consulta con legal/compliance sobre obligaciones (por ejemplo, si la caída de un servicio afecta a compromisos contractuales).**
-4. **Informa a los usuarios internos y a departamentos críticos sobre la situación, restricciones y plazos estimados de recuperación.**
-5. **Prepara mensajes claros y no alarmistas para clientes o proveedores externos si el ataque ha afectado su servicio.**
-6. **Contacta la aseguradora si existe y si el evento es reclamable.**
-7. **Informa a autoridades si el ataque ha supuesto daños graves o extorsión (INCIBE, Guardia Civil, Policía Nacional, según el país).**
-8. **Coordina notificaciones y comunicación con vendors de infraestructura y servicios (cloud, red, seguridad).**
-9. **Registra toda la comunicación y asegúrate de que puede auditarse y usarse para aprendizaje futuro.**
 
 ---
 

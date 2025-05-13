@@ -56,6 +56,19 @@ Asigna pasos a individuos o equipos para trabajar en paralelo siempre que sea po
 
 ---
 
+## Comunicación
+
+1. **Escala y comunica el incidente a dirección y responsables de seguridad.**
+2. Documenta el incidente y la respuesta, siguiendo el procedimiento interno.
+3. Comunica si es necesario al DPO o responsable legal si hay riesgo de fuga o GDPR.
+4. Informa a todos los usuarios y departamentos sobre el incidente y las acciones preventivas.
+5. Si el phishing afectó a clientes/proveedores y hubo fuga real, prepara la notificación oficial.
+6. Contacta con el proveedor de seguros de ciber, si aplica.
+7. Valora la notificación a INCIBE/CERT y, en casos graves, a las Fuerzas y Cuerpos de Seguridad del Estado.
+8. Coordina con los equipos de RRHH para informar y apoyar a trabajadores afectados.
+
+---
+
 ## Recuperar
 
 1. **Restaura servicios de correo si ha habido bloqueo de cuentas.**
@@ -85,19 +98,6 @@ Asigna pasos a individuos o equipos para trabajar en paralelo siempre que sea po
 - Relación de usuarios y equipos críticos
 - Contacto con empresas de threat intelligence (opcional)
 - Herramientas de sandbox y análisis de malware
-
----
-
-## Comunicación
-
-1. **Escala y comunica el incidente a dirección y responsables de seguridad.**
-2. Documenta el incidente y la respuesta, siguiendo el procedimiento interno.
-3. Comunica si es necesario al DPO o responsable legal si hay riesgo de fuga o GDPR.
-4. Informa a todos los usuarios y departamentos sobre el incidente y las acciones preventivas.
-5. Si el phishing afectó a clientes/proveedores y hubo fuga real, prepara la notificación oficial.
-6. Contacta con el proveedor de seguros de ciber, si aplica.
-7. Valora la notificación a INCIBE/CERT y, en casos graves, a las Fuerzas y Cuerpos de Seguridad del Estado.
-8. Coordina con los equipos de RRHH para informar y apoyar a trabajadores afectados.
 
 ---
 

@@ -76,6 +76,20 @@ Asigna pasos a individuos o equipos para avanzar en paralelo cuando sea posible;
 
 ---
 
+## Comunicar
+
+1. **Escala el incidente y comunica con la dirección y responsables según el procedimiento interno.**
+2. **Documenta el incidente** (logs, cronología, decisiones, evidencias) siguiendo el plan de respuesta.
+3. **Informa a Legal/Compliance** si aplica, para evaluar exposición regulatoria y requisitos de notificación por brecha.
+4. **Notifica a usuarios y departamentos afectados:**
+   - Explica lo sucedido, qué vigilar, cómo cambiar la contraseña, y pasos para activar MFA.
+5. **Notifica a clientes o socios si sus datos o integraciones se han visto afectados.**
+6. **Contacta con el proveedor de ciberseguros** según corresponda.
+7. **Colabora con las fuerzas de seguridad** si hay indicios de delito grave.
+8. **Colabora con proveedores externos (gestores de identidad, MSP, consultores IR)** si fuera necesario.
+
+---
+
 ## Recuperar
 
 1. **Restaura el acceso para los usuarios afectados de forma segura y controlada.**
@@ -108,21 +122,7 @@ Asigna pasos a individuos o equipos para avanzar en paralelo cuando sea posible;
 
 ---
 
-## Comunicar
 
-1. **Escala el incidente y comunica con la dirección y responsables según el procedimiento interno.**
-2. **Documenta el incidente** (logs, cronología, decisiones, evidencias) siguiendo el plan de respuesta.
-3. **Informa a Legal/Compliance** si aplica, para evaluar exposición regulatoria y requisitos de notificación por brecha.
-4. **Notifica a usuarios y departamentos afectados:**
-   - Explica lo sucedido, qué vigilar, cómo cambiar la contraseña, y pasos para activar MFA.
-5. **Notifica a clientes o socios si sus datos o integraciones se han visto afectados.**
-6. **Contacta con el proveedor de ciberseguros** según corresponda.
-7. **Colabora con las fuerzas de seguridad** si hay indicios de delito grave (enlaces a recursos nacionales/locales).
-8. **Colabora con proveedores externos (gestores de identidad, MSP, consultores IR)** si fuera necesario.
-
-*Especifica herramientas y procedimientos para cada paso de comunicación, o haz referencia al plan general de respuesta a incidentes.*
-
----
 
 ## Recursos
 

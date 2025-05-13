@@ -65,30 +65,7 @@ Identificar el alcance, origen y naturaleza del defacement; recopilar informaci�
 4. Realiza escaneo intensivo para buscar otros posibles compromisos.
 
 ---
-
-## 3. Recuperación
-
-1. **Restaura el contenido legítimo desde una copia limpia** (previa al incidente).
-   - Asegúrate de que los backups no están infectados.
-2. **Solicita a usuarios cambiar credenciales** si el sistema web tiene autenticación.
-3. **Rehabilita el servidor** tras verificar la eliminación del compromiso y la aplicación de medidas de seguridad.
-4. **Comunica a los usuarios/visitantes** la restauración y las medidas tomadas.
-
----
-
-## 4. Prevención y Reducción de Riesgos
-
-1. Usa solo los plugins estrictamente necesarios y mantenlos actualizados.
-2. Limita los accesos administrativos al mínimo indispensable; revisa permisos regularmente.
-3. Realiza escaneos periódicos de código y URLs sospechosas.
-4. Utiliza herramientas automáticas de análisis de vulnerabilidades y defacement ([ejemplos aquí](https://resources.infosecinstitute.com/14-popular-web-application-vulnerability-scanners/#gref)).
-5. Refuerza controles frente a SQLi, XSS y otras amenazas web ([mejores prácticas](https://www.banffcyber.com/knowledge-base/articles/best-practices-address-issue-web-defacement/)).
-6. Instala sistemas de detección de defacement ([artículo sobre soluciones](https://www.techradar.com/news/best-website-defacement-monitoring-service)).
-7. Capacita al personal en ciberseguridad y respuesta a incidentes.
-
----
-
-## 5. Comunicación
+## 3. Comunicación
 
 1. Escala el incidente a la dirección y responsable de seguridad.
 2. Documenta todo el proceso según el procedimiento interno.
@@ -98,6 +75,28 @@ Identificar el alcance, origen y naturaleza del defacement; recopilar informaci�
 6. Contacta con proveedores de seguros y terceros críticos según estricta política interna.
 7. Considera la notificación a la policía o autoridades competentes (según gravedad y legislación).
 8. Coordina la comunicación oficial: prepara mensajes claros y sin alarmismo.
+
+---
+
+## 4. Recuperación
+
+1. **Restaura el contenido legítimo desde una copia limpia** (previa al incidente).
+   - Asegúrate de que los backups no están infectados.
+2. **Solicita a usuarios cambiar credenciales** si el sistema web tiene autenticación.
+3. **Rehabilita el servidor** tras verificar la eliminación del compromiso y la aplicación de medidas de seguridad.
+4. **Comunica a los usuarios/visitantes** la restauración y las medidas tomadas.
+
+---
+
+## 5. Prevención y Reducción de Riesgos
+
+1. Usa solo los plugins estrictamente necesarios y mantenlos actualizados.
+2. Limita los accesos administrativos al mínimo indispensable; revisa permisos regularmente.
+3. Realiza escaneos periódicos de código y URLs sospechosas.
+4. Utiliza herramientas automáticas de análisis de vulnerabilidades y defacement ([ejemplos aquí](https://resources.infosecinstitute.com/14-popular-web-application-vulnerability-scanners/#gref)).
+5. Refuerza controles frente a SQLi, XSS y otras amenazas web ([mejores prácticas](https://www.banffcyber.com/knowledge-base/articles/best-practices-address-issue-web-defacement/)).
+6. Instala sistemas de detección de defacement ([artículo sobre soluciones](https://www.techradar.com/news/best-website-defacement-monitoring-service)).
+7. Capacita al personal en ciberseguridad y respuesta a incidentes.
 
 ---
 

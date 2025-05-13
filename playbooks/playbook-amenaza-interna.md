@@ -71,6 +71,22 @@ Asigna pasos a individuos o equipos para que trabajen en paralelo siempre que se
 
 ---
 
+
+## Comunicar
+
+1. **Escala y comunica el incidente** a dirección, RRHH, CISO, responsables jurídicos y compliance, siguiendo el plan interno.
+2. **Documenta el incidente y todas las acciones**, conservando evidencias para procedimientos legales o disciplinarios.
+3. **Consulta con el área legal** sobre obligaciones regulatorias y sanciones aplicables.
+4. **Informa a los departamentos afectados** sobre la situación, impactos y acciones tomadas.
+5. **Notifica a usuarios, clientes o partners** si sus datos pudieran haberse visto comprometidos (cumple RGPD y normativas sectoriales).
+6. **Contacta con aseguradoras** si la póliza de ciberseguridad cubre incidentes de amenaza interna.
+7. **Considera notificar a las autoridades policiales o judiciales** si hay perjuicio económico, robo de datos personales, sabotaje o delito probado.
+8. **Colabora con proveedores externos** si los accesos alcanzaron infraestructuras de terceros.
+9. **Prepara mensajes claros y ajustados a la realidad**, tanto para comunicación interna como externa, evitando alarmismo y protegiendo la reputación.
+10. **Registra el incidente para análisis posterior y actualización del plan de respuesta**.
+
+---
+
 ## Recuperar
 
 1. **Restablece la integridad de los datos y sistemas afectados:**
@@ -101,21 +117,6 @@ Asigna pasos a individuos o equipos para que trabajen en paralelo siempre que se
 - Equipos de IT, seguridad, recursos humanos y legal/compliance.
 - Herramientas de auditoría, análisis forense y monitorización en tiempo real.
 - Soporte de gabinetes legales o consultoras externas para despidos y acciones disciplinarias.
-
----
-
-## Comunicar
-
-1. **Escala y comunica el incidente** a dirección, RRHH, CISO, responsables jurídicos y compliance, siguiendo el plan interno.
-2. **Documenta el incidente y todas las acciones**, conservando evidencias para procedimientos legales o disciplinarios.
-3. **Consulta con el área legal** sobre obligaciones regulatorias y sanciones aplicables.
-4. **Informa a los departamentos afectados** sobre la situación, impactos y acciones tomadas.
-5. **Notifica a usuarios, clientes o partners** si sus datos pudieran haberse visto comprometidos (cumple RGPD y normativas sectoriales).
-6. **Contacta con aseguradoras** si la póliza de ciberseguridad cubre incidentes de amenaza interna.
-7. **Considera notificar a las autoridades policiales o judiciales** si hay perjuicio económico, robo de datos personales, sabotaje o delito probado.
-8. **Colabora con proveedores externos** si los accesos alcanzaron infraestructuras de terceros.
-9. **Prepara mensajes claros y ajustados a la realidad**, tanto para comunicación interna como externa, evitando alarmismo y protegiendo la reputación.
-10. **Registra el incidente para análisis posterior y actualización del plan de respuesta**.
 
 ---
 
