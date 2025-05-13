@@ -523,9 +523,6 @@ Determine la estrategia (inmediata, retrasada, combinada) con el IC, SMEs de **S
 *   Ejecute en lotes coordinados.
 *   Documente estado y tiempo en archivo de incidentes.
 
-#### Iterar la remediación
-
-[Actualice el plan de remediación](#actualizacion-del-plan-de-remediacion) y repita hasta el cierre.
 
 ### Comunicar
 
