@@ -9,6 +9,9 @@
 5. [Conclusiones](#5-conclusiones)
 6. [Bibliografía](#6-bibliografía)
 
+> [!NOTE]  
+> Enlace a la presentación: [Presentación](https://www.canva.com/design/DAGnV42WnDc/txZ9gsQfaSZq5wX4jzCILw/edit?utm_content=DAGnV42WnDc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## 1. Introducción
 
 El presente documento recoge el Plan de Respuesta a Incidentes desarrollado por el Grupo3, con el objetivo de establecer un marco sólido y operativo para la detección, análisis, contención, erradicación y recuperación frente a incidentes de ciberseguridad. Este plan se adapta a la naturaleza técnica del entorno de la organización, el valor crítico de sus activos —incluyendo datos de clientes, plataformas cloud y sistemas on-premise— y la necesidad de garantizar la continuidad operativa y la confianza de las partes interesadas.
