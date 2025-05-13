@@ -278,9 +278,3 @@ Sin embargo, la resiliencia en ciberseguridad no es un estado estático, sino un
 [NIST SP 800-61 Revision 2: Computer Security Incident Handling Guide](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf)
 
 [NIST SP 800-61 Revision 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management](https://doi.org/10.6028/NIST.SP.800-61r3)
-
-Cybersecurity Incident Response: How to Contain, Eradicate, and Recover from Incidents ISBN-13: 978-1484238691
-
-Cybersecurity Blue Team Strategies: Uncover the Secrets of Blue Teams to Combat Cyber Threats in Your Organization ISBN-13: 978-1801072472
-
-Cyber Resilience in Critical Infrastructure ISBN-13: 978-1032583051
