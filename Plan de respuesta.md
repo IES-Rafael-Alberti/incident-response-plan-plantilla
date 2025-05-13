@@ -242,9 +242,6 @@ Se han identificado los siguientes incidentes prioritarios que pueden afectar a 
 
 <br>
 
-
-Por supuesto, aquí tienes el apartado **Evaluar** adaptado a Grupo 1 S.L., siguiendo la estructura y tono del documento original pero con el contexto y ejemplos propios de tu empresa:
-
 ---
 
 ## Evaluar
@@ -299,6 +296,8 @@ Crea una frase simple de dos palabras como nombre en clave para identificar el i
   - Dirección, CISO y Asesoría Legal lo antes posible, priorizando responsables operativos.
 - **OPCIONAL:** Establece una sala de crisis física o virtual para incidentes complejos.
 
+---
+
 #### Referencia: Estructura del equipo de respuesta
 
 **Equipo de Mando**
@@ -314,6 +313,8 @@ Crea una frase simple de dos palabras como nombre en clave para identificar el i
 - SME para Infraestructura TIC, Web, Bases de Datos, Seguridad de Endpoints, etc.
 - SME de áreas de negocio afectadas (ejemplo: Jefe de RRHH, Responsable de I+D)
 - SME para Funciones Ejecutivas (Legal, Dirección, Comunicación)
+
+---
 
 #### Referencia: Información de contacto del equipo de respuesta
 
@@ -722,8 +723,6 @@ _¿Cómo eliminamos la presencia del atacante y restauramos la seguridad?_
 ---
 
 ### **Roles en la respuesta a incidentes**
-
-A continuación se describen los principales roles, deberes y requisitos de formación para la respuesta a incidentes en **Grupo 1 S.L.**:
 
 #### **Equipo de Comando**
 - **Incident Commander (IC):** Lidera la respuesta, toma decisiones críticas, coordina equipos y mantiene la visión global.
