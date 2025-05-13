@@ -60,7 +60,6 @@ Se evaluó la postura actual de ciberseguridad de Grupo 1 S.L., con los siguient
 | Continuidad de Negocio                  | 70%            | 90%              | Backups periódicos. Falta documentación del BCP actualizado.              |
 
 
-![Modelo de madurez](./img/Modelo%20de%20madurez.png)
 
 Para aumentar el nivel de madurez en **Grupo 1 S.L.**, se proponen las siguientes tareas:
 
