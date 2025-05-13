@@ -5,10 +5,31 @@
 ### Roles y responsabilidades
 
 * Comandante
+  
+El comandante de incidentes es la fuente de información durante un incidente grave y la máxima autoridad que toma decisiones.
+Analiza la situación, dirije al equipo y delega las tareas de investigación y remediación según el plan de respuesta.
+
 * Subjefe
+
+El subjefe de incidentes apoya directamente al comandante documentando los pasos, supervisando cronómetros y vigilando puntos clave para mantener el enfoque en la resolución de ese incidente.
+Asume el mando si el comandante lo pide y gestiona la llamada, retirando participantes cuando sea necesario.
+
 * Escriba
+
+El escriba registra en tiempo real la cronología del incidente, asegurando la grabación de la llamada y anotando decisiones, datos y acciones clave.
+Actualiza el chat con los roles asignados (IC, delegado y escriba) y recoge informes de resultados de votaciones para el archivo
+ 
 * Experto
+
+El experto en la materia es el referente de un área concreta, que aporta conocimiento técnico para diagnosticar causas y proponer acciones de remediación.
+Comunica el estado de su área, las acciones necesarias y los recursos que requiere, siempre informa al comandante y actúa solo bajo sus órdenes.
+Tiene que estár preparado y accesible en todo momento, y ser conocedor de las políticas y procedimientos.
+
 * Enlace
+
+El enlace dirije la comunicación entre el equipo de respuesta a incidentes y las partes externas o internas.
+También, publica mensajes, notifica al comandante sobre informes de clientes o medios.
+Ofrece actualizaciones periódicas y actúa como portavoz para asegurar claridad y alineación en la gestión del incidente.
 
  ### Herramientas y recursos:
 
