@@ -1,4 +1,4 @@
-# Rol: Jefe de Incidentes (CI)
+# Rol: Jefe de Incidentes (IC)
 
 <br>
 
