@@ -11,7 +11,7 @@
 Este Plan de Respuesta a Incidentes se basa en la plantilla de Counteractive Security disponible en GitHub. Dicha plantilla es concisa, directiva, específica, flexible y de libre acceso. Este documento la adapta para Secure Shield Pentesting S.L., una empresa dedicada a auditorías de seguridad y pruebas de penetración, considerando su entorno técnico y operativo.
 
 El plan fue revisado y probado por última vez el 13/05/2025.
-![alt text](image.png)
+<br> ![alt text](image.png) <br>
 ### Contexto de este plan
 
 Para crear este plan de respuesta, se completaron los siguientes pasos:
