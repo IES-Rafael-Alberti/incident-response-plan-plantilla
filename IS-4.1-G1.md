@@ -1,6 +1,6 @@
 # Documentación del plan
 
-<br>
+## [Enlace a la presentación](https://www.canva.com/design/DAGnVUHr2Yw/WVzRgv2Ze9n0djMn1O9dVA/edit?utm_content=DAGnVUHr2Yw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## Índice
 
