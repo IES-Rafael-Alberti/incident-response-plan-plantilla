@@ -1,4 +1,4 @@
-# Plantilla para el plan de respuesta a incidentes
+# Plantilla para el plan de respuesta a incidentes.
 
 ## Acerca de
 
