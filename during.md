@@ -540,11 +540,26 @@ Determine la estrategia de plazos -cuando se llevarán a cabo las acciones de re
 
 ## Ejecutar la remediación
 
-* Evaluar y explicar los riesgos de las acciones de remediación a las partes interesadas.  `TODO: Personalizar el procedimiento de aprobación de los riesgos de la remediación, si es necesario.`
-* Implementar inmediatamente aquellas acciones de remediación que afecten poco o nada al atacante (a veces llamadas "acciones de postura"). Por ejemplo, muchas de las acciones de [protección](#protección) y [detección](#detección) anteriores son buenas candidatas.
-* Programar y asignar acciones de remediación de acuerdo con la estrategia de tiempo.
-* Ejecute las acciones de corrección en lotes, como eventos, para lograr la máxima eficacia y el mínimo riesgo.
-* Documentar el estado de ejecución y el tiempo en el archivo de incidentes, especialmente para las medidas temporales.
+- Evaluar y explicar previamente a las partes interesadas los riesgos, beneficios y posibles efectos adversos de cada acción de remediación antes de su ejecución.
+
+- Implantar de forma inmediata aquellas medidas de bajo impacto y alta utilidad defensiva que no comprometan significativamente la investigación, como refuerzo del registro, incremento de monitorización, endurecimiento de reglas de detección, actualización de firmas del antivirus o bloqueo de indicadores ya validados.
+
+- Programar y asignar las acciones de remediación conforme a la estrategia temporal elegida, identificando responsable, activo afectado, momento de ejecución, dependencias y plan de reversión si fuera necesario.
+
+- Ejecutar las medidas correctivas en bloques coordinados cuando la eficacia operativa y la reducción del riesgo así lo aconsejen, por ejemplo reseteo conjunto de credenciales, revocación masiva de sesiones, despliegue simultáneo de IOCs o aislamiento coordinado de varios equipos.
+
+- Documentar en el expediente del incidente el estado de cada acción, la fecha y hora de inicio y fin, el responsable que la ejecuta, el resultado observado, el impacto sobre el servicio y si la medida es temporal o definitiva.
+
+## Procedimiento de aprobación de riesgos
+
+- Las medidas de bajo impacto podrán ser aprobadas por TIC/seguridad.
+
+- Las medidas de impacto medio requerirán validación del Incident Commander y del responsable del sistema afectado.
+
+- Las medidas de alto impacto requerirán aprobación conjunta de Incident Commander, responsable de seguridad, dirección y legal/compliance cuando proceda.
+
+- Toda aprobación deberá quedar registrada en el expediente del incidente junto con su justificación, riesgos aceptados y resultado esperado.
+
 
 ## Iterar la remediación
 
