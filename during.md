@@ -653,9 +653,47 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 # Recuperación
 
-`TODO: Personalizar los pasos de recuperación.`
+La recuperación se realizará de forma coordinada entre Incident Commander, responsable de seguridad, TIC, propietarios de sistemas y responsables de negocio. Se priorizará la restauración segura de correo, servidor de archivos, aplicaciones internas, CRM/ERP, conectividad entre sedes, web/tienda online y servicios cloud, teniendo en cuenta su impacto sobre la operativa, los clientes y los datos personales. 
 
-`TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.`
+Antes de restaurar cualquier servicio, deberá confirmarse que la contención y la erradicación han sido efectivas, que las credenciales afectadas han sido renovadas, que los sistemas están parcheados y que las copias de seguridad o estados de referencia son íntegros y confiables. La restauración se hará de forma escalonada, con valdiación técnica y funcional de cada servicio, monitorización reforzada posterior y documentación completa en el expediente del incidente. 
+
+## Pasos de recuperación
+
+1. Confirmar contención y erradicación que sean razonables.
+
+2. Priorizar los servicios a restaurar según el impacto del negocio.
+
+3. Revisar las credenciales, privilegios y los accesos remotos.
+
+4. Verificar parches, el endurecimiento básico y el estado del sistema.
+
+5. Validar copias o los estados de restauración.
+
+6. Restaurar los servicios y datos de forma escalonada.
+
+7. Comprobar el funcionamiento técnico y funcional.
+
+8. Mantener una monitorización reforzada.
+
+9. Coordinar la recuperación con los proveedores externos.
+
+10. Documentar acciones, tiempos y resultados.
+
+11. Declarar el retorno a operación de forma controlada.
+
+12. Incorporar lecciones aprendidas y las mejoras posteriores.
+
+## Herramientas y procedimientos
+
+- Consolas de administración de servidores, correo, cloud y red.
+
+- Procedimientos y herramientas de backup gestionados por TIC.
+
+- Consola del antivirus o EDR disponible.
+
+- Soporte del proveedor web/hosting y servicios cloud.
+
+- Repositorio seguro del expediente del incidente.
 
 **La recuperación suele estar dirigida por las unidades de negocio y los propietarios de los sistemas.  Tome medidas de recuperación sólo en colaboración con las partes interesadas pertinentes.**
 
