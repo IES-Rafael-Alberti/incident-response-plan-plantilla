@@ -296,7 +296,7 @@ Cada IOC deberá incluir como mínimo:
 
 ### Procedimiento de despliegue y revocación de IOC
 
-Los IOCs serán validados por el equipo TIC/seguridad antes de su despliegue para evitar falsos positivos y fatiga operativa. Una vez validados, se desplegarán de forma proporcional al incidente en los crontroles disponibles, incluyendo firewall, antivirus o EDR gestionado por la subcontrata, filtros de correo, listas de bloqueo DNS/proxy si existieran y reglas de búsqueda en logs de servidores, cloud o web.
+Los IOCs serán validados por el equipo TIC/seguridad antes de su despliegue para evitar falsos positivos y fatiga operativa. Una vez validados, se desplegarán de forma proporcional al incidente en los controles disponibles, incluyendo firewall, antivirus o EDR gestionado por la subcontrata, filtros de correo, listas de bloqueo DNS/proxy si existieran y reglas de búsqueda en logs de servidores, cloud o web.
 
 El procedimiento a seguir será el siguiente: 
 
@@ -304,7 +304,7 @@ El procedimiento a seguir será el siguiente:
 
 2. Valorar impacto operativo y riesgo de falsos positivos sobre correo, web, aplicaciones internas y servicios de negocio.
 
-3. Aprobar su despliegue por el responsable TIC o el Incident Commandes, según su criticidad. 
+3. Aprobar su despliegue por el responsable TIC o el Incident Commander, según su criticidad. 
 
 4. Aplicar el IOC en los controles disponibles y documentar fecha, hora, herramienta y responsable. 
 
@@ -369,19 +369,21 @@ Las etiquetas de clasificación de sistemas de interés incluirán, según el ca
 
 La recogida, el análisis y la remediación se priorizarán primero sobre los sistemas con mayor impacto potencial en clientes, operativa, cumplimiento RGPD y continuidad del canal digital.
 
+Cuando existan recursos limitados, se dará prioridad a los sistemas que combinen exposición a Internet, acceso a datos personales y papel crítico en la continuidad del negocio.
+
 ## Recogida de pruebas
 
 - Priorizar la recogida de evidencias en función del plan de investigación, la criticidad del activo afectado, la posible afectación a datos personales y el impacto sobre la continuidad del negocio. 
 
-- Recoger datos de respuesta en vivo utilizando herramientas de administración y análisis disponibles en la otganización incluyendo utilidades nativas de Windows y Linux, consola del antivirus corporativo gestionado por la subcontrata y herramientas de administración segura autorizadas por el equipo TIC. La respuesta en vivo se realizará únicamente sobre sistemas encendidos en los que sea necesario preservar procesos activos, conexiones de red, sesiones de usuario, mecanismos de persistencia, tareas programadas o actividad sospechosa en memoria. Antes de iniciar la recogida se documentará el sistema afectado, usuario, fecha, hora y motivo de la adquisición; tras ello, la evidencia será exportada y almacenada en el expediente seguro del incidente. 
+- Recoger datos de respuesta en vivo utilizando herramientas de administración y análisis disponibles en la organización incluyendo utilidades nativas de Windows y Linux, consola del antivirus corporativo gestionado por la subcontrata y herramientas de administración segura autorizadas por el equipo TIC. La respuesta en vivo se realizará únicamente sobre sistemas encendidos en los que sea necesario preservar procesos activos, conexiones de red, sesiones de usuario, mecanismos de persistencia, tareas programadas o actividad sospechosa en memoria. Antes de iniciar la recogida se documentará el sistema afectado, usuario, fecha, hora y motivo de la adquisición; tras ello, la evidencia será exportada y almacenada en el expediente seguro del incidente. 
 
-- Recoger los registros relevantes de los sistemas, agregadores y consolas disponibles en la organización, priorizando los logs de correo corporativo, sevidores de archivos y aplicaciones, firewall, router, WiFi, accesos remotos, antivirus, almacenamiento cloud y, cuando proceda, registros facilitados por el proveedor de la web y tienda online. La recopilación de logs deberá conservar el formato original siempre que sea posible, incluir rango temporal suficiente desde antes del primer indicio del incidente y quedar documentada con origen, responsable, fecha y limitaciones detectadas, como ausencia de retención o falta de visibilidad. 
+- Recoger los registros relevantes de los sistemas, agregadores y consolas disponibles en la organización, priorizando los logs de correo corporativo, servidores de archivos y aplicaciones, firewall, router, WiFi, accesos remotos, antivirus, almacenamiento cloud y, cuando proceda, registros facilitados por el proveedor de la web y tienda online. La recopilación de logs deberá conservar el formato original siempre que sea posible, incluir rango temporal suficiente desde antes del primer indicio del incidente y quedar documentada con origen, responsable, fecha y limitaciones detectadas, como ausencia de retención o falta de visibilidad. 
 
-- Recoger la imagen de memoria cuando el incidente requiera analizar malware residente en memoria, robo de credenciales, ejecución de herramientas sin rastro en disco, conexiones activas sospechosas o persistencia avanzada. La captura se realizará únicamente con autorización del Incident Commander o del responsable TIC, utilizando una herramienta forense aprobada por la organización o por el proveedor especialmente designado. La imagen obtenida se almacenará en el repositorio seguro del incidente, acompañada de su hash, datos de adquisición, versión de la herramienta utilizada y registro de cadena de custodia. 
+- Recoger la imagen de memoria cuando el incidente requiera analizar malware residente en memoria, robo de credenciales, ejecución de herramientas sin rastro en disco, conexiones activas sospechosas o persistencia avanzada. La captura se realizará únicamente con autorización del Incident Commander o del responsable TIC, utilizando una herramienta forense aprobada por la organización o por el proveedor especializado designado. La imagen obtenida se almacenará en el repositorio seguro del incidente, acompañada de su hash, datos de adquisición, versión de la herramienta utilizada y registro de cadena de custodia. 
 
 - Recoger la imagen de disco cuando exista sospecha de manipulación grave, malware persistente, necesidad de análisis forense profundo, requerimiento legal o disciplinario, o imposibilidad de esclarecer el incidente mediante recogida lógica. La adquisición deberá coordinarse con el Incident Commander, el responsable TIC y el propietario del sistema para minimizar el impacto operativo. La imagen se realizará con herramienta forense reconocida, soporte de almacenamiento dedicado, verificación de integridad mediante hash y registro completo del proceso de obtención, traslado y custodia. 
 
-- Recoger y almacenar todas las pruebas de acuerdo con la política interna de gestión de evidencias y con cadena de custodia documentada. Cada evidencia deberá identificarse de forma única e incluir descripción, sistema de origen, fecha y hora de recogida, perosna responsable, método de obtención, hash cuando proceda, ubicación de almacenamiento y relación de incidente. Las evidencias digitales se custodiarán en un repositorio restringido gestionado por TIC/seguridad y los soportes físicos permanecerán bajo control del custodio designadi hasta el cierre del caso. 
+- Recoger y almacenar todas las pruebas de acuerdo con la política interna de gestión de evidencias y con cadena de custodia documentada. Cada evidencia deberá identificarse de forma única e incluir descripción, sistema de origen, fecha y hora de recogida, persona responsable, método de obtención, hash cuando proceda, ubicación de almacenamiento y relación con el incidente. Las evidencias digitales se custodiarán en un repositorio restringido gestionado por TIC/seguridad y los soportes físicos permanecerán bajo control del custodio designado hasta el cierre del caso. 
 
 ###  Ejemplo de artefactos útiles
 
@@ -423,13 +425,13 @@ En esta empresa, los artefactos a recopilar se priorizarán según su utilidad p
 
 ## Analizar las pruebas
 
-* Priorizar basándose en el plan de investigación
-* Analizar y clasificar los datos de la respuesta en vivo
-* Analizar la memoria y las imágenes de disco (es decir, realizar análisis forenses)
-* Analizar el malware
-* _OPCIONAL:_ Enriquecer con investigación e inteligencia
-* Documentar nuevos indicadores de compromiso (IOCs)
-* Actualizar el archivo del caso
+El análisis de las evidencias se realizará conforme al plan de investigación, priorizando los activos más críticos, la posible afectación a datos personales, la continuidad del negocio y la probabilidad de propagación a otros sistemas. Los datos obtenidos en la respuesta en vivo, los registros recopilados, las imágenes de memoria y disco y cualquier artefacto adicional se clasificarán por sistema afectado, usuario implicado, fecha y hora, tipo de evidencia y posible táctica del atacante según MITRE ATT&CK.
+
+Se analizarán de forma prioritaria los eventos relacionados con autenticación, ejecución de procesos, mecanismos de persistencia, accesos remotos, cambios en privilegios, actividad sobre archivos compartidos, conexiones de red inusuales, uso de correo corporativo, accesos a CRM/ERP, almacenamiento cloud y actividad administrativa sobre la web o la tienda online. Cuando se disponga de imágenes de memoria o disco, se realizará análisis forense orientado a detectar malware, robo de credenciales, persistencia, movimiento lateral, exfiltración y cualquier manipulación relevante de evidencias o configuraciones.
+
+El análisis de malware se centrará en determinar su vector de entrada, comportamiento, persistencia, comunicaciones de red, impacto sobre sistemas y datos, y relación con campañas de phishing, ransomware o compromisos de credenciales. De forma complementaria, y solo cuando aporte valor real al caso, se podrá enriquecer la investigación con inteligencia contrastada sobre dominios, IPs, hashes o tácticas observadas, evitando información no verificada o ajena al incidente.
+
+Todo hallazgo relevante deberá reflejarse en el expediente del incidente, incluyendo nuevos indicadores de compromiso, sistemas adicionales de interés, hipótesis confirmadas o descartadas, cambios en la valoración del impacto y decisiones derivadas para contención, erradicación y recuperación.
 
 ### Ejemplo de indicadores útiles
 
@@ -655,7 +657,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 La recuperación se realizará de forma coordinada entre Incident Commander, responsable de seguridad, TIC, propietarios de sistemas y responsables de negocio. Se priorizará la restauración segura de correo, servidor de archivos, aplicaciones internas, CRM/ERP, conectividad entre sedes, web/tienda online y servicios cloud, teniendo en cuenta su impacto sobre la operativa, los clientes y los datos personales. 
 
-Antes de restaurar cualquier servicio, deberá confirmarse que la contención y la erradicación han sido efectivas, que las credenciales afectadas han sido renovadas, que los sistemas están parcheados y que las copias de seguridad o estados de referencia son íntegros y confiables. La restauración se hará de forma escalonada, con valdiación técnica y funcional de cada servicio, monitorización reforzada posterior y documentación completa en el expediente del incidente. 
+Antes de restaurar cualquier servicio, deberá confirmarse que la contención y la erradicación han sido efectivas, que las credenciales afectadas han sido renovadas, que los sistemas están parcheados y que las copias de seguridad o estados de referencia son íntegros y confiables. La restauración se hará de forma escalonada, con validación técnica y funcional de cada servicio, monitorización reforzada posterior y documentación completa en el expediente del incidente. 
 
 ## Pasos de recuperación
 
