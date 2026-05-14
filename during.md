@@ -589,7 +589,20 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 * Tras el cierre del incidente, capture la información en el [archivo del incidente](#crear-archivo-del-incidente) para su distribución utilizando el formato en {{INCIDENT_REPORT_TEMPLATE}}.  **Si los informes de vector, impacto, resumen, línea de tiempo y actividad están completos, esto puede ser totalmente automatizado.**
 * Distribuir el informe de incidentes a lo siguiente: {{INCIDENT_REPORT_RECIPIENTS}}.
-* `TODO: Personalizar la creación y distribución del informe de incidentes, si es necesario`.
+
+## Procedimiento de creación y distribución del informe
+
+1. El Incident Commander o el responsable designado a tal fin validará que el expediente del incidente está completo y contiene cronología, impacto, evidencias, acciones ejecutadas y estado final.
+
+2. El responsable de seguridad, con el apoyo de TIC y de las áreas afectadas, redactará el informe final utilizando la plantilla corporativa de incidentes.
+
+3. El área legal o de cumplimiento revisará el informe cuando exista afectación a datos personales, obligaciones contractuales, riesgo reputacional o posible comunicación externa.
+
+4. La dirección revisará y aprobará el informe en incidentes de criticidad alta o con impacto relevante sobre el negocio.
+
+5. El informe aprobado se distribuirá únicamente a los destinatarios autorizados y se archivará en el repositorio seguro del expediente del incidente.
+
+6. Las lecciones aprendidas y acciones de mejora derivadas del informe deberán trasladarse al plan de respuesta, al plan director de seguridad y, cuando corresponda, a los procedimientos de copias, accesos, formación, monitorización y gestión de terceros.
 
 ## Comunicar al exterior
 
