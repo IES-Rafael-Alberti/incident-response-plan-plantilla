@@ -333,9 +333,41 @@ Se priorizarán los siguientes tipos de IOC basándonos en su adecuación al ent
 
 ## Identificar los sistemas de interés
 
-1. Validar si son relevantes.
-2. Categorizar la(s) razón(es) por la(s) que son "de interés": tiene malware, acceso por cuenta comprometida, tiene datos sensibles, etc.  Trátelas como "etiquetas", puede haber más de una categoría por sistema.
-3. Prioriza la recogida, el análisis y la reparación en función de las necesidades de la investigación, el impacto en el negocio, _etc_.
+Se considerarán sistemas de interés aquellos que presenten señales directas o indirectas de compromiso, alberguen datos personales o soporten procesos críticos del negocio. Debemos tener en cuenta que la identificación y priorización se basará en el impacto sobre confidencialidad, integridad, disponibilidad, continuidad operativa, obligaciones legales y dependencias de terceros. 
+
+En este caso, se considerarán prioritarios: 
+
+- Servidor de correo corporativo y buzones de usuarios clave.
+
+- Servidor de archivos y carpetas compartidas de negocio.
+
+- Servidor de aplicaciones, CRM y ERP.
+
+- Equipos del personal TIC, RRHH, facturación/ventas y dirección, por su acceso a datos y privilegios.
+
+- Almacenamiento cloud y cuentas asociadas.
+
+- Infraestructura de red, firewall, router, WiFi y accesos remotos.
+
+- Activos y credenciales relacionados con la web y tienda online externalizadas.
+
+Las etiquetas de clasificación de sistemas de interés incluirán, según el caso:
+
+- Malware detectado o sospechado.
+
+- Cuenta comprometida o uso indebido de credenciales.
+
+- Acceso a datos personales o información sensible.
+
+- Sistema con funciones críticas de negocio.
+
+- Evidencia de persistencia o ejecución sospechosa.
+
+- Posible exfiltración o modificación de datos.
+
+- Relación con proveedor o tercero externo.
+
+La recogida, el análisis y la remediación se priorizarán primero sobre los sistemas con mayor impacto potencial en clientes, operativa, cumplimiento RGPD y continuidad del canal digital.
 
 ## Recogida de pruebas
 
