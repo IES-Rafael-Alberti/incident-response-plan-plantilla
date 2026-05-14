@@ -371,40 +371,55 @@ La recogida, el análisis y la remediación se priorizarán primero sobre los si
 
 ## Recogida de pruebas
 
-* Priorizar en base al plan de investigación
-* Recoger datos de respuesta en vivo utilizando {{LIVE_RESPONSE_TOOL}}.  `TODO: Personalizar las herramientas y el procedimiento de respuesta en vivo.`
-* Recoger los registros relevantes de los sistemas (si no forman parte de la respuesta en vivo), agregadores, SIEM o consolas de dispositivos.  `TODO: Personalizar las herramientas y el procedimiento de recopilación de registros.`
-* Recoger la imagen de la memoria, si es necesario y si no forma parte de la respuesta en vivo, utilizando {{MEMORY_COLLECTION_TOOL}}.  `TODO: Personalizar las herramientas y el procedimiento de recogida de memoria.`
-* Recoger la imagen del disco, si es necesario, utilizando {{DISK_IMAGE_TOOL}}.  `TODO: Personalizar la herramienta y el procedimiento de recogida de imágenes de disco.`
-* Recoger y almacenar las pruebas de acuerdo con la política, y con la cadena de custodia adecuada. `TODO: Personalizar la política de recogida de pruebas y cadena de custodia.`
+- Priorizar la recogida de evidencias en función del plan de investigación, la criticidad del activo afectado, la posible afectación a datos personales y el impacto sobre la continuidad del negocio. 
 
-Considere la posibilidad de recopilar los siguientes artefactos como evidencia, ya sea en tiempo real (_por ejemplo_, a través de EDR o un SIEM) o bajo demanda:
+- Recoger datos de respuesta en vivo utilizando herramientas de administración y análisis disponibles en la otganización incluyendo utilidades nativas de Windows y Linux, consola del antivirus corporativo gestionado por la subcontrata y herramientas de administración segura autorizadas por el equipo TIC. La respuesta en vivo se realizará únicamente sobre sistemas encendidos en los que sea necesario preservar procesos activos, conexiones de red, sesiones de usuario, mecanismos de persistencia, tareas programadas o actividad sospechosa en memoria. Antes de iniciar la recogida se documentará el sistema afectado, usuario, fecha, hora y motivo de la adquisición; tras ello, la evidencia será exportada y almacenada en el expediente seguro del incidente. 
+
+- Recoger los registros relevantes de los sistemas, agregadores y consolas disponibles en la organización, priorizando los logs de correo corporativo, sevidores de archivos y aplicaciones, firewall, router, WiFi, accesos remotos, antivirus, almacenamiento cloud y, cuando proceda, registros facilitados por el proveedor de la web y tienda online. La recopilación de logs deberá conservar el formato original siempre que sea posible, incluir rango temporal suficiente desde antes del primer indicio del incidente y quedar documentada con origen, responsable, fecha y limitaciones detectadas, como ausencia de retención o falta de visibilidad. 
+
+- Recoger la imagen de memoria cuando el incidente requiera analizar malware residente en memoria, robo de credenciales, ejecución de herramientas sin rastro en disco, conexiones activas sospechosas o persistencia avanzada. La captura se realizará únicamente con autorización del Incident Commander o del responsable TIC, utilizando una herramienta forense aprobada por la organización o por el proveedor especialmente designado. La imagen obtenida se almacenará en el repositorio seguro del incidente, acompañada de su hash, datos de adquisición, versión de la herramienta utilizada y registro de cadena de custodia. 
+
+- Recoger la imagen de disco cuando exista sospecha de manipulación grave, malware persistente, necesidad de análisis forense profundo, requerimiento legal o disciplinario, o imposibilidad de esclarecer el incidente mediante recogida lógica. La adquisición deberá coordinarse con el Incident Commander, el responsable TIC y el propietario del sistema para minimizar el impacto operativo. La imagen se realizará con herramienta forense reconocida, soporte de almacenamiento dedicado, verificación de integridad mediante hash y registro completo del proceso de obtención, traslado y custodia. 
+
+- Recoger y almacenar todas las pruebas de acuerdo con la política interna de gestión de evidencias y con cadena de custodia documentada. Cada evidencia deberá identificarse de forma única e incluir descripción, sistema de origen, fecha y hora de recogida, perosna responsable, método de obtención, hash cuando proceda, ubicación de almacenamiento y relación de incidente. Las evidencias digitales se custodiarán en un repositorio restringido gestionado por TIC/seguridad y los soportes físicos permanecerán bajo control del custodio designadi hasta el cierre del caso. 
 
 ###  Ejemplo de artefactos útiles
 
-`TODO: Personalizar y priorizar los artefactos útiles.`
+En esta empresa, los artefactos a recopilar se priorizarán según su utilidad para investigar incidentes de phishing, robo de credenciales, ransomware, fuga de datos, compromiso de servicios cloud y afectación de la web o tienda online. Se establece el siguiente orden orientativo de prioridad:
 
-* Procesos en ejecución
-* Servicios en ejecución
-* Hashes ejecutables
-* Aplicaciones instaladas
-* Usuarios locales y de dominio
-* Puertos de escucha y servicios asociados
-* Configuración de resolución del sistema de nombres de dominio (DNS) y rutas estáticas
-* Conexiones de red establecidas y recientes
-* Clave de ejecución y otra persistencia de la ejecución automática
-* Tareas programadas y trabajos cron
-* Artefactos de ejecución pasada (por ejemplo, Prefetch y Shimcache)
-* Registros de eventos
-* Política de grupo y artefactos WMI
-* Detecciones antivirus
-* Binarios en ubicaciones de almacenamiento temporal
-* Credenciales de acceso remoto
-* Telemetría de conexiones de red (por ejemplo, netflow, permisos de cortafuegos)
-* Tráfico y actividad de DNS
-* Actividad de acceso remoto, incluido el Protocolo de Escritorio Remoto (RDP), la red privada virtual (VPN), SSH, la informática de red virtual (VNC) y otras herramientas de acceso remoto
-* Cadenas de identificadores de recursos uniformes (URI), cadenas de agentes de usuario y acciones de aplicación del proxy
-* Tráfico web (HTTP/HTTPS)
+- Registros de autenticación de correo corporativo, almacenamiento cloud, CRM/ERP, VPN, accesos remotos y paneles de administración.
+
+- Cabeceras de correo, reglas de reenvío, adjuntos, enlaces, mensajes reportados por usuarios y actividad anómala en buzones.
+
+- Procesos en ejecución y servicios activos en servidores, PCs y portátiles potencialmente afectados.
+
+- Hashes de ejecutables sospechosos, binarios en rutas temporales y archivos descargados recientemente.
+
+- Aplicaciones instaladas y herramientas de administración remota presentes en equipos afectados.
+
+- Usuarios locales, cuentas de dominio, cuentas privilegiadas y cambios recientes en grupos o permisos.
+
+- Puertos de escucha, servicios asociados y conexiones de red establecidas o recientes.
+
+- Configuración DNS, rutas estáticas y cambios de resolución que puedan indicar redirecciones o mando y control.
+
+- Claves de autoarranque, tareas programadas, servicios persistentes, artefactos WMI y otros mecanismos de persistencia.
+
+- Artefactos de ejecución pasada, como Prefetch, Shimcache u otros equivalentes disponibles según sistema operativo.
+
+- Registros de eventos de Windows, syslog o journal en Linux y registros de aplicaciones críticas.
+
+- Detecciones del antivirus corporativo o de la solución EDR disponible.
+
+- Actividad de acceso a carpetas compartidas, borrado, cifrado, compresión o modificación masiva de documentos.
+
+- Credenciales de acceso remoto, sesiones activas y evidencias de uso no autorizado de RDP, VPN, SSH, VNC u otras herramientas equivalentes.
+
+- Telemetría de red procedente de firewall, router, DNS, proxy, tráfico web, netflow o controles perimetrales disponibles.
+
+- Registros y actividad del proveedor de la página web y tienda online, incluyendo accesos administrativos, cambios en contenidos y eventos de disponibilidad.
+
+- Evidencias de uso de dispositivos móviles, portátiles y soportes extraíbles cuando exista sospecha de fuga, pérdida o extracción no autorizada de información.
 
 ## Analizar las pruebas
 
