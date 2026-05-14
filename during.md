@@ -433,17 +433,23 @@ En esta empresa, los artefactos a recopilar se priorizarán según su utilidad p
 
 ### Ejemplo de indicadores útiles
 
-`TODO: Personalizar y priorizar los indicadores útiles.`
+- Autenticaciones anómalas en correo, cloud, CRM/ERP, VPN y paneles administrativos.
 
-* Comportamiento inusual de autenticación (_e._, frecuencia, sistemas, hora del día, ubicación remota)
-* Nombres de usuario con formato no estándar
-* Binarios no firmados que se conectan a la red
-* Balizamiento o transferencias de datos significativas
-* Solicitudes de línea de comandos PowerShell con comandos codificados en Base64
-* Actividad excesiva de RAR, 7zip o WinZip, especialmente con nombres de archivo sospechosos
-* Conexiones en puertos no utilizados previamente.
-* Patrones de tráfico relacionados con el tiempo, la frecuencia y el recuento de bytes
-* Cambios en las tablas de enrutamiento, como la ponderación, las entradas estáticas, las pasarelas y las relaciones entre pares.
+- Creación de cuentas, elevación de privilegios y cambios no autorizados en credenciales.
+
+- Reglas de reenvío y actividad sospechosa en buzones.
+
+- Binarios no firmados con conexiones externas.
+
+- PowerShell codificado, scripts descargados y ejecución desde rutas temporales.
+
+- Compresión, cifrado o modificación masiva de archivos compartidos.
+
+- Balizamiento, exfiltración y conexiones a IPs o dominios no habituales.
+
+- Cambios en DNS, rutas, pasarelas o configuraciones de red.
+
+- Alteraciones no autorizadas en web, tienda online o servicios cloud.
 
 ## Iterar la investigación
 
