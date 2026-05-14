@@ -272,6 +272,8 @@ Impacto                 | ... romper cosas.                      | ¿Qué sistem
 
 Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más información e ideas.
 
+La matriz ATT&CK se emplea en esta fase como marco de apoyo para formular hipótesis, priorizar preguntas, clasificar evidencias y asociar acciones de contención y erradicación a tácticas concretas observadas durante la investigación.
+
 ## Crear y desplegar indicadores de compromiso (IOC)
 
 Los indicadores de compromiso se van a crear a partir de las pistas iniciales recopiladas, los artefactos recopilados y los resultados del análisis, priorizando indicadores dinámicos y de comportamiento sobre indicadores estáticos aislados. El objetivo será mejorar la detección, acelerar la contención y permitir la correlación entre correo, red, endpoints, servicios cloud y proveedores externos. 
@@ -658,6 +660,8 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 La recuperación se realizará de forma coordinada entre Incident Commander, responsable de seguridad, TIC, propietarios de sistemas y responsables de negocio. Se priorizará la restauración segura de correo, servidor de archivos, aplicaciones internas, CRM/ERP, conectividad entre sedes, web/tienda online y servicios cloud, teniendo en cuenta su impacto sobre la operativa, los clientes y los datos personales. 
 
 Antes de restaurar cualquier servicio, deberá confirmarse que la contención y la erradicación han sido efectivas, que las credenciales afectadas han sido renovadas, que los sistemas están parcheados y que las copias de seguridad o estados de referencia son íntegros y confiables. La restauración se hará de forma escalonada, con validación técnica y funcional de cada servicio, monitorización reforzada posterior y documentación completa en el expediente del incidente. 
+
+Este enfoque permite que la recuperación sea ciberresiliente, ya que prioriza la continuidad de los servicios esenciales, la restauración controlada, la verificación de integridad y la detección temprana de reinfección antes del retorno completo a operación.
 
 ## Pasos de recuperación
 
