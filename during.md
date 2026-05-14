@@ -274,18 +274,62 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
 
 ## Crear y desplegar indicadores de compromiso (IOC)
 
-> Haga hincapié en los indicadores **dinámicos y de comportamiento** junto con las huellas digitales estáticas.
+Los indicadores de compromiso se van a crear a partir de las pistas iniciales recopiladas, los artefactos recopilados y los resultados del análisis, priorizando indicadores dinámicos y de comportamiento sobre indicadores estáticos aislados. El objetivo será mejorar la detección, acelerar la contención y permitir la correlación entre correo, red, endpoints, servicios cloud y proveedores externos. 
 
-* Crear IOCs basados en [pistas iniciales](#recoger-las-pistas-iniciales) y [análisis](#analyze-evidence).
-* Cree IOCs usando un formato abierto soportado por sus herramientas (_por ejemplo_, [STIX 2.0](https://oasis-open.github.io/cti-documentation/stix/intro)), si es posible. `TODO: Personalizar el formato de los COIs según sea necesario.`
-* Utilice la automatización, si es posible. `TODO: Añadir un procedimiento de despliegue/revocación de COIs.`
-* **No** desplegar "feeds" de IOCs no relacionados y no curados, ya que pueden causar confusión y fatiga.
-* Considerar todos los tipos de IOC:
-  * IOC basados en la red, como direcciones IP o MAC, puertos, direcciones de correo electrónico, contenido o metadatos del correo electrónico, URLs, dominios o patrones PCAP.
-  * IOC basados en el host, como rutas, hashes de archivos, contenido o metadatos de archivos, claves de registro, MUTEXes, autoejecuciones o artefactos y permisos de usuarios.
-  * IOCs basados en la nube, como patrones de registro para despliegues [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) o [IaaS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service)
-  * IOCs de comportamiento (a.ka., patrones, TTPs) tales como patrones de árbol de procesos, heurística, desviación de la línea base y patrones de inicio de sesión.
-* Correlacionar varios tipos de IOC, como indicadores basados en la red y en el host en los mismos sistemas.
+### Formato de los IOC
+
+Los IOCs se documentarán en un formato estructurado y reutilizable compatible con las herramientas disponibles en la empresa. Mientras no se implante una plataforma específica de intercambio de inteligencia, se utilizará un registro interno en formato tabla estructurada dentro del expediente del incidente. Esta tabla será completada cuando sea posible por ficheros CSV o JSON para su importación en firewall, antivirus/EDR, filtros de correo y herramientas de monitorización.
+
+Cada IOC deberá incluir como mínimo:
+
+- Identificador único
+- Fecha y hora del alta
+- Incidente al que ha sido asociado
+- Tipo de indicador, red, host, cloud, correo o comportamiento
+- Valor del indicador
+- Fuente de obtención
+- Nivel de confianza
+- Activos relacionados
+- Responsable de validación
+- Estado, activo, en revisión o revocado
+- Fecha de revisión o retirada
+
+### Procedimiento de despliegue y revocación de IOC
+
+Los IOCs serán validados por el equipo TIC/seguridad antes de su despliegue para evitar falsos positivos y fatiga operativa. Una vez validados, se desplegarán de forma proporcional al incidente en los crontroles disponibles, incluyendo firewall, antivirus o EDR gestionado por la subcontrata, filtros de correo, listas de bloqueo DNS/proxy si existieran y reglas de búsqueda en logs de servidores, cloud o web.
+
+El procedimiento a seguir será el siguiente: 
+
+1. Registrar el IOC en el expediente del incidente con su contexto y evidencia asociada. 
+
+2. Valorar impacto operativo y riesgo de falsos positivos sobre correo, web, aplicaciones internas y servicios de negocio.
+
+3. Aprobar su despliegue por el responsable TIC o el Incident Commandes, según su criticidad. 
+
+4. Aplicar el IOC en los controles disponibles y documentar fecha, hora, herramienta y responsable. 
+
+5. Revisar su efectividad y posibles falsos positivos en cada actualización del incidente. 
+
+6. Revocar a ajustar el IOC cuando deje de ser útil, se confirme como erróneo o afecte de forma desproporcionada al negocio. 
+
+Se evitará con esto el despliegue de feeds masivos de IOCs no curados o no relacionados con el caso, ya que aumentan el ruido y reducen la capacidad de análisis efectivo.
+
+### IOC prioritarios
+
+Se priorizarán los siguientes tipos de IOC basándonos en su adecuación al entorno de la organización:
+
+- Correo: remitentes, dominios, URLs, adjuntos, reglas de reenvío, encabezados y patrones de phishing.
+
+- Identidad: cuentas afectadas, horarios anómalos, ubicaciones remotas inusuales, fallos repetidos y cambios de privilegios.
+
+- Red: IPs, dominios, puertos, destinos inusuales, actividad DNS y conexiones a servicios externos no habituales.
+
+- Host: hashes, rutas, claves de persistencia, tareas programadas, procesos, servicios y binarios no firmados.
+
+- Cloud y SaaS: accesos anómalos, comparticiones, exportaciones, descargas masivas y creación de tokens o sesiones inusuales.
+
+- Comportamiento: PowerShell codificado, compresión masiva de archivos, balizamiento, cifrado masivo, movimiento lateral y cambios súbitos en permisos o configuraciones.
+
 
 ## Identificar los sistemas de interés
 
