@@ -41,6 +41,17 @@ Si cualquiera de estas situaciones ocurre, deberá considerarse un incidente de 
 
 Cualquier afectación sobre confidencialidad, integridad o disponibilidad de la información deberá tratarse como incidente.
 
+## Categorías de severidad
+
+| Severidad | Descripción |
+| --- | --- |
+| Baja | Incidentes sin impacto operativo relevante y sin afectación de datos sensibles. |
+| Media | Incidentes con impacto limitado o posible afectación parcial de sistemas o usuarios. |
+| Alta | Interrupción relevante de servicios críticos, compromiso de cuentas privilegiadas o exposición de datos personales. |
+| Crítica | Paralización del negocio, ransomware, fuga masiva de datos o afectación legal/regulatoria grave. |
+
+**Cada miembro del equipo está facultado para comenzar este proceso.** Si ves algo, notifícalo inmediatamente.
+
 # Iniciar la respuesta
 
 ## Nombrar el incidente
