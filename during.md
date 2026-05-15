@@ -241,6 +241,15 @@ Si un incidente resulta ser dos o más incidentes distintos:
     * **Indicadores de compromiso basados en el host**, como nombres de archivos, hashes y claves de registro.
     * **Cuentas comprometidas**, con el alcance del acceso y la hora del compromiso.
 
+### Procedimiento de documentación del incidente
+
+La documentación del incidente se realizará mediante:
+
+* Expediente digital seguro almacenado en servidor interno.
+* Hojas de seguimiento compartidas únicamente con el equipo autorizado.
+* Registro cronológico de acciones realizadas.
+* Almacenamiento estructurado de evidencias.
+* Registro de cadena de custodia cuando proceda.
 
 ## Recoger las pistas iniciales
 
