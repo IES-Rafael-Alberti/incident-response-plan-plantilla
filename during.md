@@ -150,29 +150,35 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 ### Realizar la actualización de la respuesta
 
-* Llevar a cabo actualizaciones programadas utilizando la [estructura de llamada de actualización](#referencia-estructura-de-la-llamada-de-actualización-de-la-respuesta) cada {{UPDATE_FREQUENCY}} en el puente activo. `TODO: Personalizar la frecuencia de actualización y los scripts; se recomienda no más de dos veces al día.`
+* Llevar a cabo actualizaciones programadas utilizando la [estructura de llamada de actualización](#referencia-estructura-de-la-llamada-de-actualización-de-la-respuesta) cada {{UPDATE_FREQUENCY}} en el puente activo.
 * Ajustar la frecuencia según sea necesario.
 * Coordinar las actualizaciones independientes (_por ejemplo_, ejecutivas, legales) según sea necesario, pero con la menor frecuencia posible.
 
 #### Referencia: Estructura de la llamada de actualización de la respuesta
 
 * Incident Commander (IC): Desde la última actualización programada, el resumen del incidente es el siguiente:
+  * Estado actual del incidente. 
   * [Impacto]
   * [Vector]
+  * Sistemas afectados.
+  * Cambios relevantes desde la última actualización.
   * [Actualización del resumen]
   * [Actualización de la línea de tiempo]
 * IC: Equipo de investigación, por favor proporcione una breve actualización
-  * LÍDER DE LA INVESTIGACIÓN: [Actividades de investigación o "nada que informar"]
+  * LÍDER DE LA INVESTIGACIÓN: [Actividades de investigación realizadas o "nada que informar"]
   * ¿Cuál es su plan de investigación recomendado?
   * ¿Qué acciones de investigación necesitan ser asignadas o aprobadas?  [escuchar, obtener consenso, encargar/aprobar]
 * IC: Equipo de remediación, por favor proporcione una breve actualización
-  * Líder de remediación: [Actividades de remediación o "nada que informar"]
+  * Líder de remediación: [Acciones de remediación aplicadas o "nada que informar"]
   * ¿Cuál es su estrategia de corrección recomendada?  ¿Objeciones fuertes? [escuchar, obtener el consenso, asignar/aprobar]
   * ¿Qué acciones de corrección necesitan ser asignadas o aprobadas?
 * IC: Equipo de comunicación, por favor, proporcione una breve actualización:
-  * COMMUNICATIONS LEAD: [Actividades de comunicación o "nada que informar"]
+  * COMMUNICATIONS LEAD: [Actividades de comunicación realizadas o "nada que informar"]
   * ¿Cuál es su estrategia de comunicación recomendada?  ¿Objeciones fuertes? [escuchar, obtener consenso, encargar/aprobar]
   * ¿Qué acciones de comunicación necesitan ser asignadas o aprobadas?
+* IC: Por último hablaremos de
+  * Riesgos pendientes.
+  * Próximas acciones y responsables.
 * IC: Esta llamada y el chat permanecerán activos y disponibles hasta el cierre del incidente, por favor, utilícelos para todas las comunicaciones relacionadas con el incidente.  Si es posible, proporcione actualizaciones del estado en tiempo real en el chat.  ¿Hay alguna pregunta o aportación restante? [responde a las preguntas]
 * IC: Líderes de equipo, por favor procedan.  Nos reuniremos de nuevo en [{{UPDATE_TIME}}] para discutir el estado. Gracias.
 
