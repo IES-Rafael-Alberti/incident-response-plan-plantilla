@@ -184,16 +184,24 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 ## Supervisar el alcance
 
-* Supervisar el alcance de la respuesta para asegurarse de que no excede el ámbito de control del Incident Commander.
-* Si un incidente es lo suficientemente complejo y hay suficientes intervinientes, considere la posibilidad de crear subequipos.
+* El Incident Commander deberá supervisar continuamente el alcance del incidente.
+* Si el incidente crece o afecta múltiples áreas, podrán crearse subequipos especializados.
+* Se priorizarán los activos críticos relacionados con:
+  * Correo corporativo.
+  * CRM y ERP.
+  * Almacenamiento cloud.
+  * Página web y tienda online.
+  * Infraestructura de red.
 
 ### Crear Sub-Equipos
 
-* En la preparación de incidentes complejos, se predefinen tres subequipos: Investigación, Remediación y Comunicación, generalmente responsables de esas funciones de respuesta. `TODO: Personalizar la estructura de los subequipos si es necesario.`
-* Crear un puente de llamadas y un chat para cada subequipo.
+* Los subequipos definidos inicialmente serán:
+  * Investigación.
+  * Remediación.
+  * Comunicación.
+* Cada subequipo tendrá un líder responsable de coordinar acciones y reportar al Incident Commander.
 * El Incident Commander designará a los líderes de los equipos, que dependen del IC, y a los miembros de los equipos, que dependen de su líder.  _Los líderes de equipo no tienen que estar formados como Incident Commanders, pero es preferible que tengan alguna experiencia de liderazgo._
 * El Incident Commander puede ajustar el propósito o el nombre de los subequipos según sea necesario.
-* Si desea cambiar de equipo, pregunte a su **líder de equipo actual**.  **No** pregunte al Incident Commander, o al líder del otro(s) equipo(s).  Utilice la cadena de mando.
 
 ### Incidente dividido
 
