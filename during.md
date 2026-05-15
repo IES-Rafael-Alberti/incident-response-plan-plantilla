@@ -253,10 +253,10 @@ La documentación del incidente se realizará mediante:
 
 ## Recoger las pistas iniciales
 
-1. Entrevistar a los reportadores del incidente.
-2. Recoger los datos de apoyo iniciales (_e._, alarmas, eventos, datos, suposiciones, intuiciones) en el archivo del incidente.
-3. Entrevistar a lo(s) SME con experiencia en el dominio o el sistema, para comprender los detalles técnicos, el contexto y el riesgo.
-4. Entrevistar a lo(s) SME de la unidad de negocio afectada, para comprender el impacto de la misión/negocio, el contexto y el riesgo.
+1. Entrevistar a los reportadores del incidente y usuarios afectados.
+2. Recoger los datos de apoyo iniciales (_e._, alarmas, eventos, datos, suposiciones, intuiciones, logs, correos sospechosos) en el archivo del incidente.
+3. Consultar al personal TIC y responsables de sistemas con experiencia en el dominio o el sistema, para comprender los detalles técnicos, el contexto y el riesgo.
+4. Validar el impacto operativo con los departamentos afectados, para comprender el impacto el negocio, el contexto y el riesgo.
 5. Asegúrese de que las pistas son relevantes, detalladas y procesables.
 
 ### Referencia: Lista de recursos de respuesta
@@ -270,9 +270,6 @@ Mapa de red                         | {{NETWORK_MAP_LOCATION}}
 Consola SIEM                        | {{SIEM_CONSOLE_LOCATION}}
 Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
 
-`TODO: Completar la información crítica y las listas de activos ("joyas de la corona"). Esto es increíblemente importante para una respuesta eficaz.`
-
-`TODO: Personalizar la lista de recursos de respuesta`.
 
 ## Actualizar el plan de investigación y el archivo del incidente
 
@@ -292,10 +289,10 @@ Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
         * **¿Cómo?**: compromiso (explotación), persistencia, acceso, exfiltración, movimiento lateral, etc.?
         * **¿Por qué?**: objetivo, momento, acceso a x datos, acceso a y sistema, etc.
         * **¿Quién?**: atacante, usuarios afectados, clientes afectados, etc.?
-1. **Identificar y priorizar los dispositivos y estrategias testigo** para responder a las preguntas clave.
+7. **Identificar y priorizar los dispositivos y estrategias testigo** para responder a las preguntas clave.
     * Consultar los diagramas de la red, los sistemas de gestión de activos y la experiencia de las SME
-    * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta))
-1. Consulte los [playbook de incidentes](#playbooks) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
+    * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta)
+8. Consulte los [playbook de incidentes](#playbooks) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
 
 **El plan de investigación es fundamental para una respuesta eficaz; impulsa todas las acciones de investigación.  Utilice el pensamiento crítico, la creatividad y el buen juicio.**
 
