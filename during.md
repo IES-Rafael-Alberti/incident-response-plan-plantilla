@@ -207,10 +207,11 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 Si un incidente resulta ser dos o más incidentes distintos:
 
-* Establezca un nuevo [archivo de incidentes](#crear-el-archivo-del-incidente).
+* Establezca un [archivo de incidentes](#crear-el-archivo-del-incidente) independiente para cada incidente.
 * Haga un seguimiento y coordine la investigación, la reparación y la comunicación en el archivo correspondiente.
 * Considere la posibilidad de establecer subequipos para cada incidente.
-* **Mantener un Incident Commander de alto nivel**, para coordinar los activos de baja densidad y alta demanda y mantener la unidad de mando.
+* Se coordinarán recursos comunes desde el equipo de mando.
+* **Mantener un Incident Commander de alto nivel** como coordinación global.
 
 # Investigar
 
@@ -223,23 +224,23 @@ Si un incidente resulta ser dos o más incidentes distintos:
     * Proporcionar un intercambio de archivos seguro.
     * Obtener almacenamiento físico.
     * Compartir la ubicación del archivo del incidente en la llamada y el chat.
-    * `TODO: Personalizar y automatizar la ubicación del archivo y el procedimiento`.
-1. Documente el impacto funcional y de la información, si se conoce (véase [Evaluar](#evaluar)). `TODO: Personalizar las categorías de impacto, si es necesario.`
-2. Documentar el vector, si se conoce (_por ejemplo_ web, correo electrónico, medios extraíbles). `TODO: Personalizar la lista de vectores, si es necesario.`
+    * El acceso estará restringido al personal autorizado.
+    * Las evidencias físicas se custodiarán en la sede principal al finalizar el incidente.
+1. Documente el impacto funcional y de la información, si se conoce (véase [Evaluar](#evaluar)). 
+2. Documentar el vector, si se conoce (_por ejemplo_ web, correo electrónico, medios extraíbles). 
 3. Documente el resumen del incidente: un breve resumen del vector, el impacto, la investigación y la situación de la reparación, si se conoce.
-4. Documente la línea de tiempo del incidente, incluyendo la actividad del atacante y la actividad de la respuesta. `TODO: Añadir líneas de tiempo con diferentes detalles, según sea necesario.`
+4. Documente la línea de tiempo del incidente, incluyendo la actividad del atacante y la actividad de la respuesta. 
 5. Documente los pasos de investigación, reparación y comunicación.  Documente las actividades de forma independiente para que puedan combinarse y reutilizarse, si es posible.
 6. Registre la información significativa, como:
-    **Pruebas**, con la hora de recogida, la fuente, la cadena de custodia, _etc._.
+    **Evidencias**, con la hora de recogida, la fuente, la cadena de custodia, _etc._.
     * **Sistemas afectados**, con el modo y el momento en que se identificó el sistema, y el resumen del efecto (_por ejemplo, tiene malware, datos a los que se ha accedido).
     * **Archivos de interés**, como el malware o los archivos de datos, con el sistema y los metadatos.
     * **Datos accedidos y tomados**, con nombres de archivos, metadatos y hora de presunta exposición.
     * **Actividad significativa del atacante**, como inicios de sesión y ejecución de malware, con la hora del evento.
     * **Indicadores de compromiso (IOC)** basados en la red, como direcciones IP y dominios.
     * **Indicadores de compromiso basados en el host**, como nombres de archivos, hashes y claves de registro.
- * **Cuentas comprometidas**, con el alcance del acceso y la hora del compromiso.
+    * **Cuentas comprometidas**, con el alcance del acceso y la hora del compromiso.
 
-`TODO: Personalizar el procedimiento de documentación del incidente, incluyendo hojas de cálculo, bases de datos, formularios, sistemas y plantillas, si es necesario.`
 
 ## Recoger las pistas iniciales
 
