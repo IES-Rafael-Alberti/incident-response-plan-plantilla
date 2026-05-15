@@ -56,7 +56,17 @@ Cualquier afectación sobre confidencialidad, integridad o disponibilidad de la 
 
 ## Nombrar el incidente
 
-Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.html) para referirse al incidente -un nombre en clave- que se utilizará para el archivo y el canal del incidente. `Todo: Personalizar el procedimiento de nomenclatura de incidentes.`
+El incidente deberá nombrarse mediante una estructura simple y fácilmente identificable:
+
+**[TIPO]-[FECHA]-[PALABRA_CLAVE]**
+
+Ejemplos:
+
+* PHISHING-2026-CORREO
+* RANSOMWARE-2026-FACTURACION
+* CLOUD-2026-EXFILTRACION
+
+El nombre será utilizado para el expediente del incidente, canales de comunicación y almacenamiento de evidencias.
 
 ## Reunir el equipo de respuesta
 
