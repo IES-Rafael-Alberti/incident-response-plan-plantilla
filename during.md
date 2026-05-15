@@ -30,14 +30,16 @@ Si cualquiera de estas situaciones ocurre, deberá considerarse un incidente de 
 
 ## Evaluar el impacto de la información
 
-¿Cuál es el impacto directo o probable sobre sus datos/información, en particular los sensibles? (_por ejemplo_, información personal, datos de propiedad, financieros o sanitarios)
+¿Cuál es el impacto directo o probable sobre los datos de la organización?
 
-* Información a la que se ha accedido, cogido, cambiado o borrado: **incidente!**
-* Ninguno: gestión a través de canales no relacionados con incidentes (por ejemplo, un ticket de soporte).
+* Acceso no autorizado a datos personales de clientes, empleados o proveedores.
+* Modificación o borrado de documentos corporativos.
+* Fuga de información financiera, legal o contractual.
+* Acceso indebido a propiedad intelectual o información estratégica.
+* Compromiso de credenciales de acceso.
+* Exposición de datos almacenados en la nube.
 
-**Cada miembro del equipo está facultado para comenzar este proceso.** Si ves algo, dilo.
-
-`TODO: Personalizar las categorías/severidades según sea necesario.  Este sencillo ejemplo (incidente vs. no incidente) se basa en las categorías de impacto del NIST SP 800-61r2.`
+Cualquier afectación sobre confidencialidad, integridad o disponibilidad de la información deberá tratarse como incidente.
 
 # Iniciar la respuesta
 
