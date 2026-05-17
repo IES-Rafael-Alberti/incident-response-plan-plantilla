@@ -6,10 +6,10 @@
 COMPANY_NAME: 'Consultoría Digital PYMES S.L.' #poner asi
 
 # Name and email of plan author (e.g., Chris)
-AUTHOR_NAME: 'Nerea Candón Ramos,Adrián Sánchez,Inca Vico y Asier Gónzalez'
+AUTHOR_NAME: 'Nerea Candón Ramos,Adrián Sánchez,Inca Vico y Asier González'
 
 # Email of plan author (e.g., contact@counteractive.net)
-AUTHOR_EMAIL: 'Kiwiincidentes@kiwi.com'
+AUTHOR_EMAIL: 'Kiwiincidentes@kiwiincidentes.es'
 
 # Document control metadata (e.g., 1)
 REVISION_NUMBER: '1'
@@ -24,16 +24,16 @@ REVIEW_DATE: '14 May 2027'
 TEST_DATE: '14 Nov 2026'
 
 # URL or reference to IR chat program like Teams, Slack, or Discord (e.g., chat.acme.tld/codename)
-RESPONSE_CHAT: 'chat.kiwiincidente.es/incident-response'
+RESPONSE_CHAT: 'https://chat.kiwiincidentes.es/incident-response'
 
 # Phone number for response teleconference (e.g., 123-456-7890)
 RESPONSE_PHONE: '900-123-456'
 
 # URL for response video teleconference (VTC) like Zoom or WebEx (e.g., zoom.acme.tld/codename)
-RESPONSE_VTC: 'https://meet.kiwiincidente.es/incident'
+RESPONSE_VTC: 'https://meet.kiwiincidentes.es/incident'
 
 # Description/URL for alternate email (e.g., alt 365 tenant at ir.acme.tld/othermail)
-ALTERNATE_EMAIL: 'incidentes@kiwiincidente.es}'
+ALTERNATE_EMAIL: 'incidentes@kiwiincidentes.es'
 
 # Domain name for your organization (e.g., acme.tld)
 ORGANIZATION_DOMAIN: 'kiwiincidentes.es'
@@ -45,7 +45,7 @@ INCIDENT_COMMANDER_PAGER_NUMBER: '555-IC-150'
 INCIDENT_COMMANDER_PAGER_URL: 'https://ir.kiwiincidentes.es/ic-page'
 
 # URL/path to Commander roster/list (e.g., ir.acme.tld/ic-roster)
-INCIDENT_COMMANDER_ROSTER: 'https://ir.kiwincidentes.es/ic-roster'
+INCIDENT_COMMANDER_ROSTER: 'https://ir.kiwiincidentes.es/ic-roster'
 
 # As above, for security team (e.g., ir.acme.tld/sec-roster)
 SECURITY_TEAM_ROSTER: 'https://ir.kiwiincidentes.es/security-roster'
@@ -114,10 +114,10 @@ LEGAL_TEAM: 'Departamento Legal (legal@kiwiincidentes.es)'
 LOCAL_LE_CONTACT: 'Policía Nacional - Unidad de Ciberdelincuencia (091)'
 
 # FBI contact info (e.g., 1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us)
-FBI_CONTACT: INCIBE 017 (España)'
+FBI_CONTACT: 'INCIBE 017 (España)'
 
 # Vendor for IR and infosec support (e.g., [Counteractive Security](https://www.counteractive.net))
-INCIDENT_RESPONSE_VENDOR: 'Proveedor externo de ciberseguridad gestionada'
+INCIDENT_RESPONSE_VENDOR: 'Proveedor MSSP de ciberseguridad gestionada'
 
 # Vendor for PR support (e.g., public relations llc, pr.firm.tld)
 PUBLIC_RELATIONS_VENDOR: 'Agencia de comunicación corporativa externa'
