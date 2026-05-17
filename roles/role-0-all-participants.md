@@ -2,54 +2,53 @@
 
 ### Descripción
 
-Todos los participantes en la respuesta a un incidente tienen la responsabilidad de colaborar en la resolución del mismo siguiendo el plan de respuesta a incidentes, bajo la dirección del Incident Commander.
+Todos los participantes involucrados en la gestión de un incidente deben colaborar activamente en su resolución, siguiendo en todo momento el Plan de Respuesta a Incidentes y bajo la coordinación del Incident Commander (IC).
 
 ---
 
-### Responsabilidades
+## Responsabilidades
 
-#### Buenas prácticas en la comunicación
+### Buenas prácticas de comunicación
 
-- Participar tanto en la llamada como en el chat.
-- Mantener el ruido de fondo al mínimo.
-- Mantener el micrófono silenciado hasta que sea necesario intervenir.
-- Identificarse al incorporarse a la llamada (nombre y rol, por ejemplo: “Soy el SME del equipo X”).
-- Hablar de forma clara y comprensible.
-- Ser directo y conciso.
-- Mantener las intervenciones breves y centradas en el tema.
-- Comunicar cualquier incidencia o preocupación al Incident Commander (IC).
-- Respetar los tiempos asignados por el Incident Commander.
-- Evitar participar solo en uno de los canales (voz o chat), ya que puede generar falta de coordinación.
-- Usar un lenguaje claro, evitando acrónimos o abreviaturas innecesarias. La precisión es prioritaria frente a la brevedad.
-
----
-
-#### Referencia: Procedimiento de voz habitual
-
-El procedimiento estándar de comunicación por radio no es obligatorio, pero pueden utilizarse algunas expresiones comunes:
-
-- Ack / Rog: “Recibido y entendido”
-- Say again: “Repita el último mensaje”
-- Standby: “Espere un momento”
-- Wilco: “Entendido y en ejecución”
-
-No se deben crear nuevas abreviaturas; es preferible ser siempre explícito.
+- Participar tanto en la llamada como en el canal de chat habilitado.
+- Mantener el ruido de fondo al mínimo durante la comunicación.
+- Mantener el micrófono silenciado mientras no se esté interviniendo.
+- Identificarse al incorporarse a la llamada indicando nombre y función (por ejemplo: “Soy el SME del equipo X”).
+- Comunicarse de forma clara, precisa y comprensible.
+- Realizar intervenciones directas, breves y centradas en el incidente.
+- Informar al Incident Commander de cualquier incidencia, bloqueo o preocupación relevante.
+- Respetar los turnos y tiempos establecidos por el Incident Commander.
+- Evitar participar únicamente por voz o únicamente por chat, ya que puede afectar a la coordinación del equipo.
+- Utilizar un lenguaje claro y evitar acrónimos o abreviaturas innecesarias. La precisión debe prevalecer sobre la brevedad.
 
 ---
 
-#### Seguimiento del Incident Commander
+### Referencia: Procedimiento habitual de comunicación por voz
 
-El Incident Commander (IC) es la persona responsable de coordinar la respuesta al incidente.
+Aunque el protocolo estándar de comunicación por radio no es obligatorio, pueden utilizarse algunas expresiones habituales para agilizar la coordinación:
 
-- Seguir las instrucciones del Incident Commander en todo momento.
-- No ejecutar acciones sin autorización previa.
-- El IC consultará posibles objeciones antes de asignar tareas importantes; deben expresarse si existen.
-- Una vez tomada una decisión, debe ejecutarse incluso si no se está de acuerdo.
-- Responder de forma clara y directa a las preguntas del IC. Si no se conoce la respuesta, se debe indicar.
-- Si el IC asigna una tarea con un plazo, debe cumplirse o solicitar una estimación alternativa si no es posible.
+- **Ack / Rog:** “Recibido y entendido”.
+- **Say again:** “Repita el último mensaje”.
+- **Standby:** “Espere un momento”.
+- **Wilco:** “Entendido y en ejecución”.
+
+No deben crearse nuevas abreviaturas o códigos. Siempre es preferible mantener una comunicación explícita y clara.
 
 ---
 
-### Formación
+### Coordinación con el Incident Commander
 
-Todos los participantes deben leer y comprender el plan de respuesta a incidentes, incluyendo los roles definidos y los procedimientos establecidos.
+El Incident Commander (IC) es la persona responsable de dirigir y coordinar la respuesta al incidente.
+
+- Seguir en todo momento las instrucciones del Incident Commander.
+- No ejecutar acciones sin autorización previa del IC.
+- Expresar cualquier objeción o riesgo antes de la asignación o ejecución de tareas relevantes.
+- Una vez tomada una decisión, esta deberá ejecutarse aunque existan desacuerdos personales.
+- Responder de forma clara y directa a las preguntas del IC. En caso de no disponer de la información solicitada, deberá indicarse expresamente.
+- Cumplir los plazos establecidos por el IC o, si no fuese posible, comunicar una estimación alternativa razonable.
+
+---
+
+## Formación
+
+Todos los participantes deben conocer y comprender el Plan de Respuesta a Incidentes, incluyendo los roles definidos, las responsabilidades asignadas y los procedimientos establecidos para la gestión de incidentes de seguridad.
