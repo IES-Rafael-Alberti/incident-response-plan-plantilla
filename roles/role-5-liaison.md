@@ -1,56 +1,57 @@
-
 ## Rol: Enlace
 
 ### Descripción
 
-Los enlaces interactuan con otros equipos o partes interesadas fuera del equipo de respuesta a incidentes. A menudo incluyen:
+Los Enlace interactúan con equipos o partes interesadas fuera del equipo de respuesta a incidentes. En Nexo Lebrija existen dos tipos:
 
-* Enlace externo: responsable de interactuar con clientes, ya sea directamente o por vía pública.
-* Enlace interno: responsable de interactuar con las partes interesadas internas. Tanto si se trata de notificar un incidente al equipo interno como al movilizar respuestas adicionales dentro de la organización.
+- **Enlace externo:** interactúa con clientes, medios, reguladores, fuerzas del orden y proveedores externos.
+- **Enlace interno:** interactúa con las partes interesadas internas de la organización (departamentos no convocados, Dirección General, RRHH, Legal).
+
+En incidentes S3/S4, el Adjunto puede asumir también el rol de Enlace interno.
 
 ### Deberes
 
-#### Enlace con el exterior o con el cliente
+#### Enlace externo
 
-1. Subir cualquier mensaje de cara al público con respecto al incidente (Twitter, etc).
-1. Notificar al IC de cualquier cliente o medios de comunicación que informen de los efectos del incidente.
-1. Proporcionar a los clientes el mensaje externo del post-mortem una vez que se haya completado.
-1. Contactar o interactuar con las partes interesadas externas, como proveedores, socios, fuerzas de seguridad, _etc._
-1. **No** sentirse responsable de la creación de cada mensaje: trabajar con el Incident Commander y otras partes interesadas.
-1. Según proceda, mantener a los clientes informados durante un incidente.
-1. Actuar como voz de nuestros clientes ante el Incident Commander, ya que esto es útil para la toma de decisiones del IC.
-1. Obtener la aprobación del mensaje después de haber elaborado el mensaje público: copiar el mensaje en el chat y esperar la confirmación verbal/escrita del IC antes de continuar.
+1. Publicar cualquier comunicación pública sobre el incidente (web corporativa, RRSS — coordinar con `marketing@nexo-lebrija.es`).
+2. Notificar al IC sobre clientes o medios que reporten efectos del incidente.
+3. Proporcionar a los clientes el comunicado externo del post-mortem una vez completado.
+4. Contactar con partes interesadas externas: proveedores, socios, INCIBE-CERT, GDT, AEPD según proceda.
+5. **No** crear mensajes sin trabajarlo con el IC y el equipo de comunicación.
+6. Mantener a los clientes informados durante el incidente con la frecuencia y nivel de detalle que el IC apruebe.
+7. Actuar como voz de los clientes ante el IC: transmitir su impacto y preocupaciones para la toma de decisiones.
+8. **Obtener aprobación del IC antes de publicar cualquier mensaje externo:** copiar el texto en el chat del incidente y esperar confirmación verbal o escrita.
 
-##### Pistas para mensajes públicos
+##### Guía para mensajes públicos de Nexo Lebrija
 
-* Preparar de antemano un mensaje por defecto que pueda utilizarse para la actualización inicial si se desconoce el alcance del problema.
-* Sé honesto. No mientas o supongas.
-* Describa nuestros progresos en la resolución del incidente.
-  * _"Somos conscientes de un incidente..."_
-  * _"Estamos investigando los retrasos en las notificaciones..."_
-  * _"Se ha aplicado una corrección y se está desplegando actualmente..."_
-  * _"El problema ha sido resuelto..."_
-* Explique claramente cómo afecta el incidente a los clientes. Esta es la principal información que les interesa a los clientes.
-* Proporcionar soluciones que los clientes puedan utilizar hasta que se resuelva la incidencia.
-* No calcule los tiempos de resolución.
-* Proporcionar el nivel de detalle adecuado.
+- Preparar un mensaje por defecto para el inicio si el alcance es desconocido.
+- Ser honesto. No mentir ni especular.
+- Describir el progreso de resolución:
+    - *"Nexo Lebrija es consciente de un incidente y está investigando activamente."*
+    - *"Estamos trabajando para restablecer el servicio. Actualizaremos en [TIEMPO]."*
+    - *"Se ha aplicado una solución y se está desplegando."*
+    - *"El servicio ha sido restablecido. Les informaremos de los detalles en breve."*
+- Explicar claramente cómo afecta el incidente a los clientes. Es la información que más les importa.
+- Proporcionar alternativas mientras se resuelve (contacto telefónico, email alternativo, etc.).
+- **No** dar tiempos estimados de resolución.
+- Nivel de detalle adecuado: ni alarmista ni evasivo.
+- Incluir siempre la fecha y hora en cualquier comunicado.
 
 #### Enlace interno
 
-1. Página de SMEs u otro personal de guardia según las instrucciones del Incident Commander.
-1. Notificar o movilizar a otros equipos de la organización (por ejemplo, Finanzas, Legal, Marketing), según las instrucciones del Incident Commander.
-1. Seguir y anticiparse a los SMEs en la convocatoria.
-1. Interactuar con las partes interesadas y proporcionar actualizaciones de estado cuando sea necesario.
-1. Interactuar con las partes interesadas internas para responder a sus preguntas, para mantener la llamada principal libre de distracciones.
-1. Proporcionar actualizaciones periódicas de la situación al equipo ejecutivo, ofreciendo un resumen ejecutivo de la situación actual.
+1. Contactar a SMEs u otro personal de guardia según instrucciones del IC.
+2. Notificar o movilizar a otros equipos de Nexo Lebrija (Facturación, Legal, RRHH, Comunicación, Dirección) según el IC indique.
+3. Hacer seguimiento de los SMEs convocados y anticipar cuáles pueden ser necesarios.
+4. Interactuar con las partes interesadas internas y proporcionar actualizaciones de estado según sea necesario.
+5. Absorber las preguntas de las partes interesadas internas para mantener la llamada principal libre de distracciones.
+6. Proporcionar actualizaciones periódicas a la Dirección General con resumen ejecutivo del estado actual del incidente.
 
 ### Formación
 
-Leer y comprender el plan de respuesta a incidentes, incluyendo los roles y las guías.
+Leer y comprender este plan de respuesta, incluyendo todos los roles y playbooks.
 
-#### Prerequisitos
+#### Requisitos previos
 
-* Excelentes **habilidades de comunicación** verbal y escrita.
-* _OPCIONAL:_ Formación en atención al cliente.
-* _OPCIONAL:_ Comunicación corporativa o formación en marketing.
-
+- Excelentes habilidades de **comunicación verbal y escrita**.
+- *OPCIONAL:* Formación en atención al cliente o comunicación de crisis.
+- *OPCIONAL:* Conocimiento de las obligaciones de comunicación RGPD (notificación AEPD en ≤72h).

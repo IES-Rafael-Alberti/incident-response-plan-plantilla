@@ -3,39 +3,52 @@
 
 ### Descripción
 
-Un experto en la materia (SME) es un experto en el dominio o responsable designado de un equipo, componente o servicio (un "área"). Está ahí para apoyar al Incident Commander en la identificación de la causa del incidente, sugiriendo y evaluando las acciones de investigación, remediación y comunicación, y realizando el seguimiento de las mismas según se le encomiende.
+Un SME es un experto en un dominio concreto o responsable designado de un equipo, componente o servicio. Apoya al IC identificando la causa del incidente, sugiriendo y evaluando acciones de investigación, remediación y comunicación, y ejecutándolas cuando se le encomienden.
+
+En Nexo Lebrija los SMEs principales son:
+
+| Área | SME responsable |
+|------|----------------|
+| Servidores, red, CRM/ERP | Responsable TIC / Administrador de sistemas |
+| Correo corporativo | Responsable TIC |
+| Página web / tienda online | Responsable TIC + proveedor externo |
+| Copias de seguridad | Responsable TIC |
+| Datos personales / RGPD | Asesoría Legal / DPO |
+| Facturación y operaciones | Responsable de Facturación y Ventas |
+| Recursos Humanos | Responsable de RRHH |
+| Comunicación externa | Responsable de Comunicación y RRSS |
+| Dirección / decisiones ejecutivas | Consejo de Administración |
 
 ### Funciones
 
 1. Diagnosticar problemas comunes dentro de su área de experiencia.
-1. Solucionar rápidamente los problemas detectados durante un incidente.
-1. Comunicación concisa:
-    * Estado: ¿Cuál es el estado actual de su área? ¿Está buen estado o no?
-    * Acciones: ¿Qué medidas hay que tomar si su zona no se encuentra en un buen estado?
-    * Necesidades: ¿Qué apoyo necesita para realizar una acción?
-1. Participar en las fases de investigación, remediación y/o comunicación de la respuesta.
-1. Anunciar todas las sugerencias al comandante del incidente, es su decisión cómo proceder, no siga ninguna acción a menos que se le indique.
+2. Solucionar rápidamente los problemas detectados durante el incidente.
+3. Comunicación concisa al IC con el formato:
+    - **Estado:** ¿Cuál es el estado actual de su área? ¿Sano o afectado?
+    - **Acciones:** ¿Qué medidas hay que tomar si su área no está en buen estado?
+    - **Necesidades:** ¿Qué apoyo necesita para ejecutar una acción?
+4. Participar en las fases de investigación, remediación y/o comunicación según se le asigne.
+5. **Anunciar todas las sugerencias al IC.** Es decisión del IC cómo proceder. No ejecute ninguna acción salvo que se le indique.
 
-Si está de guardia para cualquier equipo, puede ser llamado para un incidente y se espera que responda como experto en la materia (SME) para su equipo, componente o servicio. Cualquiera que se considere un "experto en la materia" puede actuar como SME para un incidente. Por lo general, el principal de guardia del equipo actuará como SME para ese equipo.
+Si está de guardia para su equipo, puede ser convocado a un incidente y se espera que responda como SME de su área en cuestión de minutos.
 
+#### Preparación para el período de guardia
 
-#### Prepárese para el periodo de guardia
+1. Familiarícese previamente con este plan y los playbooks aplicables a su área.
+2. Asegúrese de tener configuradas las alertas (Discord notificaciones, teléfono 664011121).
+3. Compruebe que puede unirse a la llamada Zoom (`https://zoom.us/j/nexolebrija-ir`).
+4. Conozca su próxima guardia y organice cambios con antelación.
+5. Si es IC, no coincida como SME de su equipo en el mismo turno.
 
-1. Esté preparado, habiéndose familiarizado ya con nuestras políticas y procedimientos de respuesta a incidentes.
-1. Asegúrese de que ha configurado sus métodos de alerta de acuerdo con nuestro procedimiento de guardia.
-1. Compruebe que puede unirse a la llamada de incidentes. Es posible que tenga que instalar un plugin para el navegador.
-1. Tenga en cuenta su próxima vez de guardia y organice los cambios en función de los viajes, las vacaciones, las citas, etc.
-1. Si usted es el Incident Commander, asegúrese de no estar de guardia con su equipo al mismo tiempo que está de guardia como Incident Commander.
+#### Durante el período de guardia
 
-#### Durante el periodo de guardia
-
-1. Tenga su ordenador portátil e Internet con usted en todo momento durante su período de guardia (oficina, casa, un MiFi, un teléfono con un plan de conexión, etc).
-1. Si tiene citas importantes, debe conseguir que otra persona de su equipo cubra esa franja horaria con antelación.
-1. Cuando recibas una alerta de incidente, se espera que te unas a la llamada de incidente y chatees lo antes posible (en cuestión de minutos).
-1. El Incident Commander le hará preguntas o le dará acciones. Responde a las preguntas de forma concisa y sigue todas las acciones que se te den (incluso si no estás de acuerdo con ellas).
-1. Si no estás seguro de algo, haz venir a otros miembros de tu equipo que puedan ayudarte. **Nunca dudes en escalar**, si es necesario.  
-1. No culpes. Este proceso de respuesta a incidentes no tiene ninguna culpa: culpar es contraproducente y distrae del problema en cuestión. La revisión posterior a la acción identificará los puntos en los que todos podemos mejorar.
+1. Tenga su portátil e Internet disponibles en todo momento (oficina, casa, móvil con datos).
+2. Si tiene cita importante, busque cobertura en su equipo con antelación.
+3. Al recibir alerta de incidente, únase a llamada y chat en cuestión de minutos.
+4. Responda preguntas del IC de forma concisa. Siga todas las acciones asignadas aunque no esté de acuerdo.
+5. Si no está seguro de algo, llame a otro SME de su equipo. **Nunca dude en escalar.**
+6. **No culpe.** Este proceso es completamente sin culpa. La revisión post-acción (AAR) identificará mejoras para todos.
 
 ### Formación
 
-* Lea y comprenda el plan de respuesta a incidentes, incluidas las funciones y las guías de actuación.
+Leer y comprender este plan de respuesta a incidentes, incluyendo todos los roles y playbooks. Participar en el simulacro anual del proyecto P13 del PDS.

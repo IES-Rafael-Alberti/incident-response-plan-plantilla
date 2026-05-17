@@ -1,34 +1,32 @@
 # Roles
 
-A continuación se presentan las descripciones, los deberes y la formación para cada uno de los roles definidos en la respuesta a un incidente.
-
-`TODO: Personalizar los roles, las descripciones, las funciones y la formación, si es necesario.`
+A continuación se presentan las descripciones, deberes y formación para cada uno de los roles definidos en la respuesta a incidentes de Nexo Lebrija.
 
 ## Estructura de los roles
 
-* Equipo de Mando
-  * [Incident Commander](#rol-incident-commander)
-  * [Incident Commander-Adjunto](#rol-delegado-del-incident-commander-subdelegado)
-  * [Escriba](#rol-escriba)
-* Equipo de enlace
-  * Enlace Interno [Enlace](#rol-enlace)
-  * Enlace externo
-* Equipo de Operaciones
-  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (SMEs) para Sistemas
-  * SMEs para equipos/unidades de negocio
-  * SMEs para las funciones ejecutivas (_p.ej._, Legal, RRHH, Finanzas)
-En el caso de incidentes complejos de mayor envergadura, la estructura de funciones puede ajustarse para tener en cuenta la creación de subequipos. Para más información, lea cómo gestionamos los [Incidentes Complejos](/before/complex_incidents.md).
+- **Equipo de Mando**
+  - [Incident Commander](role-1-commander.md)
+  - [Adjunto del Incident Commander](role-2-deputy.md)
+  - [Escriba](role-3-scribe.md)
+- **Equipo de Enlace**
+  - [Enlace interno y externo](role-5-liaison.md)
+- **Equipo de Operaciones**
+  - [Expertos en la Materia (SMEs)](role-4-expert.md) para sistemas
+  - SMEs para unidades de negocio
+  - SMEs para funciones ejecutivas (Legal, RRHH, Dirección)
 
-Esta es una **estructura flexible**: cada rol no será ocupado por una persona diferente para cada incidente. Por ejemplo, en un incidente pequeño, el adjunto podría actuar como escribiente y enlace interno. La estructura es flexible y se adapta al incidente.
+En incidentes complejos (S1), la estructura puede ajustarse creando subequipos de Investigación, Remediación y Comunicación. Ver sección [Crear subequipos](../during.md#crear-subequipos) del plan.
+
+Esta es una **estructura flexible**: en incidentes pequeños (S3/S4) el Adjunto puede actuar también como Escriba y Enlace interno.
 
 ## Tiempos de Guerra vs. Tiempos de Paz
 
-En las llamadas de respuesta a Incidentes ("tiempos de guerra"), una estructura organizativa diferente anula las operaciones normales ("tiempos de paz"):
+En las llamadas de respuesta a incidentes ("tiempos de guerra"), una estructura organizativa diferente anula las operaciones normales ("tiempos de paz"):
 
-* El Comandante del incidente está al mando. Independientemente de su rango en tiempos de paz, ahora es la persona de mayor rango en la llamada, superior al director general o CEO.
-* Los primeros intervinientes (las personas que actúan como primeros intervinientes de un equipo/servicio) son las personas de mayor rango de ese servicio.
-* Las decisiones serán tomadas por el IC tras considerar la información presentada. Una vez tomada la decisión, es definitiva.
-* El IC puede tomar decisiones más arriesgadas que las que normalmente se considerarían en tiempos de paz.
-* El IC puede ir en contra de una decisión consensuada. Si se hace una encuesta, y 9/10 personas están de acuerdo pero 1 está en desacuerdo. El IC puede elegir la opción del desacuerdo a pesar del voto de la mayoría. Aunque no esté de acuerdo, la decisión del IC es definitiva. Durante la convocatoria no es el momento de discutir con ellos.
-* El IC puede utilizar un lenguaje o comportarse de una manera que usted considere grosera. Esto es tiempo de guerra, y necesitan hacer lo que sea necesario para resolver la situación, por lo que a veces se producen groserías. Esto no es personal, y es algo que debes estar preparado para experimentar si nunca has estado en una situación de guerra.
-* Es posible que el IC te pida que abandones la llamada, o incluso que te eche a la fuerza de una llamada. Esto queda a discreción del IC si considera que no estás aportando nada útil. De nuevo, esto no es personal y debes recordar que los tiempo de guerra son diferentes a los tiempo de paz.
+- El IC está al mando. Independientemente de su rango habitual, es la persona de mayor rango en la llamada — por encima del CEO/Dirección General.
+- Los primeros respondedores de cada equipo/servicio son los de mayor rango para ese servicio.
+- Las decisiones las toma el IC tras considerar la información. Una vez tomada, es definitiva.
+- El IC puede tomar decisiones más arriesgadas de lo habitual en tiempos de paz.
+- El IC puede ir contra el consenso. Si 9/10 están de acuerdo y 1 no, el IC puede elegir la opción minoritaria. La decisión del IC es final. La llamada no es el momento de discutir.
+- El IC puede comportarse con brusquedad. Es tiempo de guerra. No es personal.
+- El IC puede pedirte que abandones la llamada. Es a su discreción si considera que no estás aportando valor.
