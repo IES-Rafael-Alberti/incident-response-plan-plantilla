@@ -1,40 +1,78 @@
+# Acerca de este plan
 
-# Acerca de
+Este Plan de Respuesta a Incidentes ha sido adaptado para {{COMPANY_NAME}} por {{AUTHOR_NAME}} como parte de la actividad 4.01, centrada en la creacion de un plan de respuesta y playbooks sectoriales. El documento parte de una plantilla general de respuesta a incidentes y la adapta al contexto de una asesoria que presta servicios a autonomos y PYMES, con especial atencion a la continuidad del negocio, la proteccion de datos personales y la coordinacion con proveedores externos.
 
-Esta plantilla ha sido creada por el equipo de [Counteractive Security](https://www.counteractive.net), para ayudar a todas las organizaciones a comenzar de forma concisa, directa, especifica, flexible y gratuita un plan de respuesta de incidentes. crea un plan [que utilizaras](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) para responder de manera eficiente, minimizando los costes e impactos, para volver a trabajar lo mas rapido posible.
+El plan no debe entenderse como un documento teorico aislado. Su utilidad depende de que se mantenga actualizado, se pruebe periodicamente y se use como guia operativa durante incidentes reales o simulados. La version actual corresponde a la revision {{REVISION_NUMBER}}, publicada el {{RELEASE_DATE}}, revisada el {{REVIEW_DATE}} y probada el {{TEST_DATE}}.
 
+## Alcance
 
-## Licencia
+El alcance del plan cubre los activos y procesos criticos identificados en el Plan Director de Seguridad de {{COMPANY_NAME}}:
 
-Esta plantilla esta proporcionado bajo la licencia de apache, version 2.0. puedes ver el codigo fuente en https://github.com/counteractive.
+* CRM/ERP y aplicaciones de gestion.
+* Servidores de archivos y aplicaciones.
+* Datos personales de clientes, proveedores y trabajadores.
+* Correo corporativo.
+* Pagina web y tienda online externalizada.
+* Copias de seguridad.
+* Puestos de trabajo.
+* Servicios cloud, integraciones y proveedores externos.
+* Procesos necesarios para mantener la continuidad del servicio.
 
+Los playbooks incluidos se han priorizado por probabilidad e impacto, teniendo en cuenta el analisis de riesgos, la taxonomia de incidentes y la trazabilidad con MITRE ATT&CK y RE&CT. El objetivo es que cada respuesta permita contener el incidente, recuperar el servicio y reforzar las capacidades de prevencion, deteccion, cooperacion y mejora continua.
 
-## Instrucciones
+## Base documental
 
-Personaliza esta plantilla para tu organizacion. Las instrucciones estan disponibles en el [README](https://github.com/counteractive) del projecto. Para asistencia profesional con respuestas de incidentes, o con customizacion, implementacion, o testeo de tu plan, porfavor contacta con nosotros por [email](mailto:support@counteractive.net) o [telefono](tel:+18889255765).
+La adaptacion del plan se apoya en los siguientes documentos y evidencias internas del repositorio:
 
+* `PlanDirectorSeguridad.md`, usado como referencia principal para activos criticos, riesgos y prioridades de seguridad.
+* `1.b - Politica de seguridad del puesto de trabajo (3).md`, usada para alinear las respuestas con las normas de uso seguro del puesto de trabajo.
+* `evidencias-mitre/matriz-trazabilidad-mitre-react.md`, que relaciona riesgos del PDS, activos, incidentes priorizados, tecnicas ATT&CK y acciones RE&CT.
+* Capas JSON de ATT&CK Navigator en `evidencias-mitre/`, usadas como evidencia del trabajo de seleccion de tecnicas.
+* Capa JSON de RE&CT en `evidencias-mitre/react-response-layer.json`, usada como evidencia del trabajo de seleccion de acciones de respuesta.
+* `playbooks/diagramas-flujo-playbooks.md`, que resume el flujo operativo de cada playbook.
+* `reference/glossary.md`, que define los terminos tecnicos necesarios para interpretar el plan.
 
-## Referencias y material adicional
+## Uso de MITRE ATT&CK y RE&CT
 
-* [NIST Computer Security Incident Handling Guide](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) (NIST)
-* [CERT Societe Generale Incident Response Methodologies](https://github.com/certsocietegenerale/IRM/tree/master/EN)
-* [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
-* [Incident Handler's Handbook](https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901) (SANS)
-* [Responding to IT Security Incidents](https://technet.microsoft.com/en-us/library/cc700825.aspx) (Microsoft)
-* [Defining Incident Management Processes for CSIRTs: A Work in Progress](http://resources.sei.cmu.edu/library/asset-view.cfm?assetid=7153) (CMU)
-* [Creating and Managing Computer Security Incident Handling Teams (CSIRTS)](https://www.first.org/conference/2008/papers/killcrece-georgia-slides.pdf) (CERT)
-* [Incident Management for Operations](http://shop.oreilly.com/product/0636920036159.do) (Rob Schnepp, Ron Vidal, Chris Hawley)
-* [_Incident Response & Computer Forensics, Third Edition_](http://a.co/cUkFzMh) (Jason Luttgens. Matthew Pepe. Kevin Mandia)
-* [_Incident Response_](http://shop.oreilly.com/product/9780596001308.do) (Kenneth R. van Wyk, Richard Forno)
-* [The Checklist Manifesto](http://atulgawande.com/book/the-checklist-manifesto/) (Atul Gawande)
-* [The Field Guide to Understanding Human Error](https://www.amazon.com/Field-Guide-Understanding-Human-Error/dp/0754648265) (Sidney Dekker)
-* [Normal Accidents: Living with High-Risk Technologies](https://www.amazon.com/Normal-Accidents-Living-High-Risk-Technologies/dp/0691004129) (Charles Perrow)
-* [Site Reliability Engineering](https://landing.google.com/sre/book.html) (Google)
-* [Debriefing Facilitation Guide](http://extfiles.etsy.com/DebriefingFacilitationGuide.pdf) (Etsy)
-* [Every Minute Counts: Leading Heroku's Incident Response](https://www.heavybit.com/library/video/every-minute-counts-coordinating-herokus-incident-response/) (Blake Gentry)
-* [Three Analytical Traps in Accident Investigation](https://www.youtube.com/watch?v=TqaFT-0cY7U) (Dr. Johan Bergström)
-* [US National Incident Management System (NIMS)](https://www.fema.gov/national-incident-management-system) (FEMA)
-* [Informed's NIMS Incident Command System Field Guide](https://www.amazon.com/gp/product/1284038408) (Michael J. Ward)
-* [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
-* [Blame. Language. Sharing.](http://fractio.nl/2015/10/30/blame-language-sharing/)
+MITRE ATT&CK se ha usado para razonar como podria actuar un atacante en cada escenario: acceso inicial, ejecucion, persistencia, movimiento lateral, acceso a credenciales, exfiltracion, impacto y evasion de defensas. Esta informacion permite que la investigacion no se limite al sintoma visible del incidente, sino que busque vector de entrada, alcance, persistencia, cuentas afectadas, datos comprometidos e indicadores de compromiso.
 
+RE&CT se ha usado para convertir ese analisis en acciones de respuesta: preparar evidencias, identificar alcance, contener sistemas, erradicar persistencia, recuperar servicios y extraer lecciones aprendidas. La relacion entre ambas matrices queda reflejada en los playbooks, en la fase de investigacion de `during.md` y en la revision posterior de `after.md`.
+
+## Uso de MISP e intercambio de informacion
+
+El plan incorpora MISP como plataforma de intercambio estructurado de informacion sobre incidentes. Su uso esta previsto cuando existan indicadores de compromiso relevantes, incidentes S1/S2, afectacion a terceros, campanas de phishing, malware, ransomware, compromiso de proveedores o necesidad de cooperacion con equipos externos.
+
+La informacion compartida en MISP debe respetar el principio de minimizacion de datos y la clasificacion TLP. No se compartiran datos personales, informacion contractual sensible ni evidencias forenses completas salvo que exista autorizacion expresa del Incident Commander y validacion legal. El objetivo de MISP es facilitar la deteccion y cooperacion mediante IOCs, TTPs, hashes, dominios, IPs, URLs, patrones de ataque y contexto tecnico suficiente.
+
+## Mantenimiento y mejora continua
+
+El plan debe revisarse como minimo una vez por curso o despues de cualquier incidente relevante, simulacro, cambio importante de infraestructura, cambio de proveedor critico o modificacion normativa. Tras cada incidente se realizara una revision posterior a la accion segun `after.md`, documentando metricas, decisiones, aciertos, fallos y acciones correctivas.
+
+Las actualizaciones deberan reflejarse en:
+
+* `during.md`, si cambia el flujo general de respuesta.
+* `after.md`, si cambian las metricas, el proceso de revision o las acciones de mejora.
+* `roles/`, si cambian responsabilidades o contactos.
+* `playbooks/`, si se identifican nuevos escenarios o mejoras operativas.
+* `evidencias-mitre/`, si se actualizan tecnicas ATT&CK o acciones RE&CT.
+* `info.yml`, si cambian contactos, canales, herramientas, SLA o proveedores.
+
+## Referencias
+
+* Counteractive Security, Incident Response Plan Template: https://github.com/counteractive/incident-response-plan-template
+* NIST SP 800-61 Rev. 2, Computer Security Incident Handling Guide: https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final
+* MITRE ATT&CK: https://attack.mitre.org/
+* MITRE ATT&CK Navigator: https://mitre-attack.github.io/attack-navigator/
+* RE&CT Framework: https://atc-project.github.io/atc-react/
+* MISP Project: https://www.misp-project.org/
+* INCIBE-CERT: https://www.incibe.es/incibe-cert
+* Agencia Espanola de Proteccion de Datos: https://www.aepd.es/
+* Reglamento General de Proteccion de Datos (RGPD): https://eur-lex.europa.eu/eli/reg/2016/679/oj
+* Esquema Nacional de Seguridad, Real Decreto 311/2022: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+* CCN-CERT: https://www.ccn-cert.cni.es/
+
+## Licencia y procedencia de la plantilla
+
+Este trabajo se basa en la plantilla publica `incident-response-plan-template` de Counteractive Security, distribuida bajo licencia Apache 2.0. La adaptacion, contenido sectorial, playbooks, trazabilidad con MITRE ATT&CK y RE&CT, uso de MISP y referencias al Plan Director de Seguridad han sido desarrollados para el caso de {{COMPANY_NAME}}.
+
+La plantilla original se conserva como referencia metodologica, pero el contenido operativo del plan debe interpretarse segun la organizacion, activos, riesgos, contactos y procedimientos definidos en esta entrega.
