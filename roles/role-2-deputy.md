@@ -2,32 +2,46 @@
 
 ### Descripción
 
-El adjunto del Incident Commander (IC) es un rol de apoyo directo al Incident Commander. Su función principal es permitir que el IC se concentre en la resolución del incidente, evitando que tenga que ocuparse de tareas administrativas, de seguimiento o de control de tiempos.
+El adjunto del Incident Commander (IC) es un rol de apoyo directo encargado de asistir al Incident Commander durante la gestión de un incidente. Su principal objetivo es facilitar que el IC pueda centrarse en la coordinación y resolución del incidente sin distraerse con tareas administrativas, seguimiento de tiempos o control operativo.
 
-El adjunto ayuda a mantener el orden, el seguimiento de las tareas y la comunicación dentro del incidente. Además, debe estar preparado para asumir el rol de Incident Commander si este lo solicita.
-
----
-
-### Funciones
-
-- Formular al Incident Commander preguntas o recordatorios que podrían pasar desapercibidos (por ejemplo, control de temporizadores o seguimiento de elementos pendientes).
-- Actuar como reemplazo del Incident Commander si este necesita abandonar el rol o ceder el mando.
-- Gestionar la dinámica de la llamada y, si se le indica, retirar participantes que estén interfiriendo en la coordinación del incidente.
-- Supervisar el estado general del incidente y alertar al Incident Commander si la severidad cambia.
-- Controlar los temporizadores del incidente:
-  - Vigilar la duración total del incidente.
-  - Informar periódicamente al IC del tiempo transcurrido (por ejemplo: “El incidente lleva 10 minutos activo”).
-- Supervisar los plazos de las tareas asignadas:
-  - Notificar cuando los tiempos acordados se hayan cumplido o estén a punto de expirar (por ejemplo: “El temporizador de la investigación del equipo X ha finalizado”).
+Este rol contribuye al mantenimiento del orden, la supervisión de tareas y la coordinación de la comunicación durante todo el incidente. Asimismo, debe estar preparado para asumir temporalmente las funciones del Incident Commander cuando sea necesario.
 
 ---
 
-### Formación
+## Funciones
 
-- Leer y comprender completamente el plan de respuesta a incidentes, incluyendo roles y procedimientos.
+- Proporcionar al Incident Commander recordatorios, avisos o preguntas relevantes que puedan pasar desapercibidos durante la gestión del incidente.
+- Sustituir al Incident Commander en caso de que este necesite abandonar temporalmente el rol o delegar la coordinación.
+- Ayudar en la gestión de la llamada y de los canales de comunicación asociados al incidente.
+- Retirar participantes de la llamada o del canal de comunicación cuando así lo indique el Incident Commander y estén dificultando la coordinación.
+- Supervisar el estado general del incidente y notificar al Incident Commander cualquier cambio relevante en la severidad o el impacto.
 
 ---
 
-### Requisitos previos
+### Supervisión de temporizadores y tiempos
+
+- Controlar la duración total del incidente desde su apertura.
+- Informar periódicamente al Incident Commander sobre el tiempo transcurrido desde el inicio del incidente.
+- Supervisar los plazos establecidos para las tareas asignadas.
+- Notificar cuando los tiempos acordados estén próximos a finalizar o hayan expirado.
+- Recordar seguimientos pendientes o tareas sin actualizar.
+
+Ejemplos de comunicación:
+
+- “El incidente lleva 10 minutos activo”.
+- “El temporizador asignado al equipo X ha finalizado”.
+- “Quedan 5 minutos para la actualización comprometida”.
+
+---
+
+## Formación
+
+- Leer y comprender completamente el Plan de Respuesta a Incidentes, incluyendo los roles, responsabilidades y procedimientos establecidos.
+
+---
+
+## Requisitos previos
 
 - Haber recibido formación previa como Incident Commander.
+- Disponer de buenas habilidades de comunicación y coordinación.
+- Ser capaz de mantener el seguimiento de tareas, tiempos y participantes durante situaciones de presión.
