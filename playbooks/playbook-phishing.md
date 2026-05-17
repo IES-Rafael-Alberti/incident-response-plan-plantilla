@@ -1,183 +1,234 @@
-
 ## Playbook: Phishing
 
-**Investigar, remediar (contener, erradicar), y comunicar en paralelo!**
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo.**
 
-Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es meramente secuencial. Utilice su mejor criterio.
+Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es meramente secuencial. Utiliza tu mejor criterio.
+
+### Finalidad y activación
+
+Este playbook define la respuesta específica ante incidentes de phishing que afecten, o puedan afectar, al correo corporativo, a las credenciales, a los usuarios o a la información de la empresa. Su finalidad es detectar con rapidez el alcance del engaño, contener el posible compromiso de cuentas o equipos y coordinar una respuesta clara con TIC, Dirección y las áreas afectadas.
+
+Se activará ante cualquiera de estas señales:
+
+1. Recepción de un correo sospechoso con suplantación, enlace o adjunto malicioso;
+2. Aviso de usuario sobre posible robo de credenciales, pago fraudulento o archivo descargado;
+3. Alertas del servidor de correo, antivirus o servicios cloud relacionadas con campañas de phishing;
+4. Detección de reglas de reenvío, accesos anómalos o cambios sospechosos en buzones.
+
+### Roles mínimos implicados
+
+Como mínimo, en este playbook deben intervenir estas funciones:
+
+* Responsable del incidente o responsable de seguridad, para coordinar decisiones y escalado;
+* Equipo TIC, para análisis técnico, bloqueo de cuentas, correo y equipos;
+* Help desk, para recepción de avisos y soporte a usuarios;
+* Responsables de departamento afectados, especialmente si intervienen pagos o datos sensibles;
+* Asesoría jurídica o apoyo RGPD, si existe riesgo para datos personales o fraude.
 
 ### Investigar
 
-`TODO: Ampliar los pasos de las investigaciones, incluyendo preguntas y estrategias claves, para el phishing.`
-
-1. **Ámbito del ataque** Normalmente se le notificará que se está produciendo un posible ataque de phishing, ya sea por parte de un usuario, cliente o socio.
-    * Determinar el **número total de usuarios afectados**.
-    * Comprender **las acciones de los usuarios** en la respuesta al phishing de un correo electrónico (_e.j._, ¿Descargarón el archivo adjunto?, ¿Visitarón el sitio suplantado?, ¿O, dieron alguna información personal o comercial como credenciales?)
-    * Encontrar la actividad potencialmente relacionada. Comprueba:
-        * Redes Sociales
-        * Cualquier correo electrónico sospechoso posible.
-        * Correos electrónicos con enlaces a URL's externas y desconocidas.
-        * Correos electrónicos de no-retorno o no-entregables.
-        * Cualquier tipo de notificación de actividad sospechosa.
-1. **Analizar el mensaje** utilizando un dispositivo seguro (es decir, **no** abrir los mensajes en un dispositivo con acceso a datos sensibles o credenciales ya que el mensaje puede contener malware), determinar:
-`TODO: Especificar las herramientas y el procedimiento`.
-    * Quién ha recibido el mensaje
-    * Quién era el objetivo del mensaje (puede ser diferente de los destinatarios a los que iba realmente dirigido el mensaje)
-    * Dirección de correo electrónico del remitente
-    * línea de asunto
-    * Cuerpo del mensaje
-    * Adjuntos (**no abra los archivos adjuntos** salvo según los procedimientos establecidos)
-    * Enlaces, dominios, y nombres de host (**no siga los enlaces**, excepto según los procedimientos establecidos)
-    * Metadatos del correo electrónico inluidas las cabeceras de los mensajes (véase más adelante)
-        * Información del remitente en el campo "de" y en la cabecera del usuario autenticado-X
-        * Todas las direcciones IP del cliente y del servidor de correo
-    * Anotar las "peculiaridades" o características sospechosas
-1. **Analizar los enlaces y los archivos adjuntos**
-`TODO: Especificar las herramientas y el procedimiento`
-    * Utilizar la recopilación pasiva como nslookup y whois para encontrar direcciones IP e información de registro
-    * Encontrar dominios relacionados utilizando OSINT (_e.j._, [reverse whois](https://www.whoxy.com/reverse-whois/)) en direcciones de correo electrónico y otros datos de registro.
-    * Enviar enlaces, archivos adjuntos y/o hashes a [VirusTotal](https://www.virustotal.com/gui/)
-    * Enviar enlaces, adjuntos y/o hashes a un sandbox de malware como [Cuckoo](https://cuckoosandbox.org/), [Hybrid Analysis](https://www.hybrid-analysis.com/), [Joe Sandbox](https://www.joesecurity.org/), o [VMray](https://www.vmray.com/).
-1. Categorice el tipo de ataque.
-`TODO: Personalizar las categorías y crear playbooks adicionales para tipos de phishing comunes o de alto impacto`
-1. **Determine la gravedad.** Considerar:
-    * Si la seguridad pública o personal está en riesgo
-    * Si los datos personales (u otros datos sensibles) están en riesgo
-    * Si hay pruebas de quién está detrás del ataque
-    * Número de activos afectados
-    * El impacto preliminar en el negocio
-    * Si los servicios se ven afectados
-    * Si se pueden controlar/registrar los sistemas críticos
- 
-`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el phishing.`
+1. **Ámbito del ataque.** Normalmente el incidente será reportado por un usuario, cliente, proveedor o por el equipo TIC al detectar un correo sospechoso.
+    * Determinar el **número total de usuarios afectados** y si pertenecen a departamentos sensibles como Facturación, RR. HH., TIC, Dirección o Comunicación.
+    * Comprender **las acciones de los usuarios** tras recibir el mensaje: si abrieron el correo, pulsaron enlaces, descargaron adjuntos, introdujeron credenciales, autorizaron MFA o realizaron pagos.
+    * Buscar actividad potencialmente relacionada en:
+        * Buzones de correo corporativo;
+        * Redes sociales o mensajería, si el intento continuó por otros canales;
+        * Avisos del antivirus gestionado por la subcontrata;
+        * Logs del servidor de correo;
+        * Notificaciones de inicio de sesión anómalo en servicios cloud;
+        * Correos no entregados, respuestas automáticas sospechosas o reglas anómalas;
+        * Consultas al help desk o incidencias similares en las dos sedes.
+2. **Analizar el mensaje** utilizando un dispositivo seguro y, si es posible, un entorno aislado de análisis. Determinar:
+    * Quién ha recibido el mensaje y si hubo reenvíos internos;
+    * Quién era realmente el objetivo del ataque;
+    * Dirección de correo del remitente y discrepancias con el nombre mostrado;
+    * Asunto, cuerpo, tono, urgencia y peticiones realizadas;
+    * Adjuntos, sin abrirlos en equipos de producción;
+    * Enlaces, dominios y nombres de host, sin hacer clic directamente;
+    * Metadatos y cabeceras del correo:
+        * Ruta seguida por el mensaje;
+        * IP de origen;
+        * Resultados SPF, DKIM y DMARC, si están disponibles;
+        * Campo `Reply-To`, remitente autenticado y posibles dominios similares;
+        * Diferencias entre el campo `From` y la identidad autenticada.
+    * Cualquier peculiaridad: faltas ortográficas, peticiones urgentes, cambio de cuenta bancaria, enlaces acortados, etiqueta de correo externo o imitación de proveedores.
+3. **Analizar los enlaces y los archivos adjuntos.**
+    * Consultar de forma pasiva el dominio y la reputación del remitente con `nslookup`, `whois`, reputación DNS y fuentes OSINT.
+    * Buscar dominios relacionados, registros recientes o campañas semejantes por OSINT y reverse whois cuando sea útil.
+    * Enviar preferentemente hashes, URL ya desactivadas o muestras anonimizadas a servicios de reputación o sandbox aprobados por la empresa, como VirusTotal, Hybrid Analysis o el servicio equivalente disponible.
+    * No subir a servicios públicos adjuntos completos o contenido sensible si contienen datos personales, documentación interna o información de clientes, salvo autorización expresa del procedimiento interno.
+    * Revisar si el dominio suplantado se parece al de la propia empresa, al proveedor de hosting, a bancos, a la asesoría legal o a proveedores habituales.
+    * Comprobar si el adjunto intenta instalar malware, robar credenciales o habilitar macros.
+4. **Categorizar el tipo de ataque.**
+    * Phishing genérico orientado al robo de credenciales;
+    * Spear phishing dirigido a personal de Facturación, Compras o Dirección;
+    * Business email compromise para fraude económico;
+    * Smishing o vishing, si el ataque continúa por móvil o llamada;
+    * Phishing con malware adjunto o enlace de descarga.
+5. **Determinar la gravedad.** Considerar:
+    * Si hay credenciales corporativas comprometidas;
+    * Si se accedió a datos personales de clientes o proveedores;
+    * Si se afectaron buzones con información financiera, laboral o legal;
+    * Si hubo pagos, cambios de cuentas bancarias o instrucciones falsas;
+    * Número de activos y usuarios afectados;
+    * Posible impacto reputacional y operativo;
+    * Posible afectación a servicios cloud o a la tienda online.
+    * Criterio orientativo de severidad:
+        * **baja**, si el correo se detecta antes de la interacción y no hay indicios de compromiso;
+        * **media**, si hubo clic, descarga o exposición limitada sin evidencia de acceso efectivo;
+        * **alta**, si se comprometieron credenciales, se afectó a varios usuarios o hubo impacto operativo;
+        * **crítica**, si hay fraude económico, acceso a datos personales, compromiso de cuentas privilegiadas o afectación a servicios esenciales.
+6. **Delimitar el alcance técnico del compromiso.**
+    * Revisar inicios de sesión recientes en correo, VPN, paneles cloud y aplicaciones empresariales.
+    * Verificar si existen reglas de reenvío automático, delegaciones de buzón o cambios no autorizados en firmas y bandejas.
+    * Revisar si los equipos desde los que se abrió el correo muestran alertas del antivirus o comportamientos anómalos.
 
 ### Remediar
 
-* **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
-* **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
+* **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos, o de forma coordinada, con los equipos adecuados listos para responder a cualquier interrupción.
+* **Considerar el momento y las compensaciones** de las acciones de remediación: la respuesta tiene consecuencias.
 
-#### Contener
+#### Contención
 
-`TODO: Personalizar los pasos de contención, tácticos y estrátegicos, para el phishing.`
+* Contener las cuentas afectadas.
+    * Forzar el cambio inmediato de contraseña de las cuentas afectadas o potencialmente afectadas.
+    * Cerrar sesiones activas en correo, aplicaciones cloud, VPN y paneles administrativos.
+    * Reforzar o forzar MFA donde esté disponible.
+    * Deshabilitar temporalmente cuentas si existen evidencias de uso indebido.
+* Bloquear la actividad en función de los indicadores de compromiso descubiertos.
+    * Bloquear dominios maliciosos en DNS, firewall, proxy o filtros de correo.
+    * Bloquear remitentes, asuntos, hashes de adjuntos y URL detectadas.
+    * Purgar los mensajes equivalentes del resto de bandejas de entrada.
+* Implementar retención forense de los mensajes y conservar exportaciones del correo, cabeceras y evidencias de acceso.
+* Aislar los equipos que hayan descargado ficheros o ejecutado contenido sospechoso.
+* Contener el compromiso más amplio de acuerdo con el plan general de respuesta si el phishing ha desembocado en malware, fraude o acceso no autorizado.
+* Aumentar el nivel de alerta de monitorización durante al menos varios días sobre:
+    * Buzones comprometidos;
+    * IP de acceso sospechosas;
+    * Reglas de reenvío;
+    * Movimientos en servicios cloud y paneles de proveedores.
+* Confirmar con la subcontrata de antivirus que las firmas, políticas y telemetría están actualizadas en los activos afectados.
 
-`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación.`
+#### Erradicar
 
-* Contener las cuentas afectadas
-    * Cambiar las credenciales de acceso
-    * Reducir el acceso a los servicios, sistemas o datos críticos hasta que se complete la investigación
-    * Reforzar la autenticación multifactor (MFA)
-* Bloquear la actividad en función de los indicadores de compromiso descubiertos, _e.j._:
-    * Bloquear dominios maliciosos mediante DNS, cortafuegos o proxies
-    * Bloquear los mensajes con remitentes, cuerpos de mensajes, asuntos, enlaces, archivos adjuntos similares, etc., utilizando la puerta de enlace predeterminada o el servicio de correo electrónico.
-* Implementar la retención forense o conservar copias forenses de los mensajes
-* Purgar los mensajes relacionados de las bandejas de entrada de otros usuarios, o hacerlos inaccesibles de otro modo.
-* Contener el compromiso más amplio de acuerdo con el plan general de IR
-* Considerar medidas de contención de los dispositivos móviles, como el borrado a través de la gestión de dispositivos móviles (MDM). Equilibrio con el impacto de la investigación/forense.
-* Aumentar el "nivel de alerta" de la detección, con una mayor supervisión, en particular de las cuentas, dominios o direcciones IP relacionadas.
-* Considerar la posibilidad de contar con asistencia externa en materia de seguridad para apoyar la investigación y la correción.
-* Confirmar las actualizaciones de software y antimalware pertinenestes en los activos.
+* Eliminar reglas de correo, delegaciones, reenvíos y aplicaciones OAuth no autorizadas.
+* Revocar tokens de sesión, cookies persistentes y accesos de dispositivos no reconocidos.
+* Eliminar adjuntos maliciosos y ficheros descargados en los equipos afectados tras el análisis correspondiente.
+* Ejecutar análisis antimalware completos y, si procede, reconstruir el equipo si se confirma infección.
+* Corregir la causa raíz: falta de MFA, ausencia de filtro, debilidad en el proceso de validación de pagos o carencia de concienciación.
 
-#### Referencia: Recursos de Reparación
+#### Referencia: Recursos de remediación
 
-`TODO: Especifique los recursos financieros, de personal y logísticos para llevar a cabo la reparación.`
+* Personal: equipo TIC, responsable de seguridad, help desk, responsables de departamento afectados, subcontrata del antivirus y asesoría RGPD.
+* Técnicos: acceso a consola de correo, logs de autenticación, herramientas de filtrado, inventario de equipos, sandbox o reputación y sistema de tickets.
+* Logísticos: teléfono de guardia TIC, canal interno de aviso urgente, equipo de sustitución si se aísla un puesto crítico y coordinación con proveedor cloud.
+* Financieros: horas extraordinarias del equipo TIC, soporte externo especializado y posibles costes de restauración o asesoramiento legal.
 
 ### Comunicar
 
-`TODO: Personalizar los pasos de comunicación para el phishing`
-
-`TODO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`
-
-1. Elevar el incidente y comunicarlo a la dirección según el procedimiento
-1. Documente el incidente según el procedimiento (y [informe](https://us-cert.cisa.gov/report-phishing))
-1. Comunicarse con los asesores jurídicos internos y externos según el procedimiento, incluyendo discusiones sobre el cumplimiento, la exposición al riesgo, la responsabilidad, el contacto con las fuerzas del orden, _etc._
-1. Comnunicación con los usuarios (interna)
-    1. Comunicar las actualizaciones de la respuesta a incidentes según el procedimiento
-    1. Comunicar el impacto del incidente **y** las acciones de respuesta al mismo (e.j., contención: "¿Por qué está caído el archivo compartido?")
-    1. Comunicar los requisitos: "¿Qué deben hacer y no hacer los usuarios?"
-1. Comunicar a los clientes
-    1. Centrarse especialmente en aquellos cuyos datos se vieron afectados
-    1. Genere las notificaciones requeridas en base a las regulaciones aplicables (particularmente aquellas que puedan considerar el phishing como una violación de datos o que requieren notificaciones de otro tipo)
-   `TODO: Ampliar los requisitos y procedimientos de notificación para las regulaciones aplicables`
-1. Contactar con el/los proveedor/es de seguros
-    1. Discutir qué recursos pueden poner a disposición, qué herramientas y proveedores apoyan y pagarán, _etc._
-    1. Cumplir con los requisitos de presentación de informes y reclamaciones para proteger la elegibilidad.
-1. Considere la posibilidad de notificar e implicar a [las fuerzas del orden](https://www.policia.es/_es/tupolicia_conocenos_estructura_dao_cgpoliciajudicial_bcit.php)
-   `TODO: Vincule los siguiente puntos con los recursos reales de su organización`
-    1. [Aplicación de la ley local](#TODO-enlace-a-actual-recurso)
-    1. [Aplicación de la ley a nivel estatal o regional](#TODO-enlace-a-actual-recurso)
-    1. [Fuerzas de seguridad nacionales o europeas](#TODO-enlace-a-actual-recurso)
-1. Comuníquese con los proveedores de seguridad y de TI
-   `TODO: Vincule las siguientes viñetas con los recursos reales de su organización`
-    1. Notifique y colabore con [proveedores gestionados](#TODO-enlace-a-actual-recurso) para el procedimiento
-    1. Notifique y colabore con [consultores de respuesta ante incidentes](#TODO-enlace-a-actual-recurso) para el procedimiento
+1. Elevar el incidente y comunicarlo a Dirección y al responsable de seguridad según el procedimiento interno.
+    1. Escalado inmediato si la severidad es alta o crítica.
+    2. Escalado al responsable del departamento afectado si el incidente alcanza a Facturación, RR. HH., TIC, Dirección o proveedores clave.
+2. Documentar el incidente en el sistema de tickets o registro de incidentes, dejando cronología, usuarios afectados, IOC y decisiones.
+3. Comunicarse con asesoría jurídica y con la consultoría de RGPD cuando exista riesgo para datos personales o fraude económico.
+4. Comunicación con los usuarios, de forma interna.
+    1. Informar rápidamente a los potenciales afectados para que no interactúen con el mensaje.
+    2. Explicar el impacto operativo de las medidas de contención, como bloqueo de cuenta o aislamiento de equipo.
+    3. Indicar claramente qué deben hacer: no borrar el correo, no reenviarlo, no seguir enlaces y avisar de cualquier mensaje similar.
+5. Comunicar a clientes o proveedores si sus datos, cuentas o transacciones pueden haberse visto afectados.
+    1. Priorizar los casos en los que exista acceso no autorizado a información personal o fraude de suplantación.
+    2. Preparar, si aplica, las notificaciones exigidas por RGPD y por contratos con terceros.
+6. Contactar con el proveedor de seguros, si la empresa dispone de cobertura de ciberincidentes.
+7. Considerar la posibilidad de notificar e implicar a las fuerzas y organismos competentes.
+    1. INCIBE-CERT para apoyo y reporte.
+    2. AEPD, si se confirma una brecha de datos personales notificable.
+    3. Policía Nacional o Guardia Civil si existe fraude, suplantación relevante o perjuicio económico.
+8. Comunicarse con proveedores de seguridad y de TI.
+    1. Coordinarse con la subcontrata del antivirus para ampliar detección y revisar telemetría.
+    2. Coordinarse con el proveedor de correo, cloud o hosting si el incidente afecta a sus servicios.
+    3. Si el incidente afecta a pagos o a la tienda online, coordinarse también con el proveedor externo correspondiente antes de reabrir la operativa.
 
 ### Recuperación
 
-`TODO: Personalizar los pasos de recuperación para el phishing`
+1. Orden recomendado de recuperación:
+    1. Cuentas corporativas afectadas y accesos críticos a correo y servicios cloud;
+    2. Buzones, reglas y delegaciones alteradas;
+    3. Equipos impactados por descargas o malware;
+    4. Operativa asociada a pagos, proveedores o atención al cliente, si se vio afectada.
+2. Restablecer el acceso normal de las cuentas tras verificar el cambio de credenciales, la revocación de sesiones y la ausencia de actividad anómala.
+3. Revisar si es necesario restaurar configuraciones de correo, reglas, buzones o archivos modificados durante el incidente.
+4. Reforzar los programas de formación frente a phishing, especialmente para departamentos de mayor riesgo.
+    * Verificar remitentes y dominios.
+    * Desconfiar de mensajes urgentes sobre pagos, credenciales o documentos compartidos.
+    * Confirmar por un canal alternativo cualquier cambio de cuenta bancaria o instrucción económica.
+    * Reportar de inmediato correos sospechosos al help desk.
+5. Confirmar si fallaron controles técnicos o procedimentales y establecer acciones correctoras:
+    * Mejorar filtros de correo;
+    * Desplegar MFA;
+    * Formalizar un procedimiento de verificación de pagos;
+    * Revisar accesos desde dispositivos móviles y nube.
+6. Mantener una vigilancia reforzada de las cuentas afectadas durante los días posteriores para detectar nuevos accesos o intentos de fraude.
 
-`TODO: Especifique las herramientas y los procedimientos para cada paso, a continuación`
+### Guía operativa rápida
 
-1. Poner en marcha un plan de continuidad de negocio/recuperación de desastres si el compromiso implica interrupciones de negocio: _e.j._, considerar la migración a ubicaciones operativas alternativas, clústers de conmutación por error, sistemas de copias de seguridad.
-1. Reforzar los programas de formación sobre los ataques de phishing sospechosos. Los principales indicadores de sospecha pueden ser:
-    * Errores ortográficos en el mensaje o en el asunto
-    * Nombres de remitentes que parezcan de telélefono, incluida la falta de coincidencia entre el nombre y la dirección de correo electrónico.
-    * Direcciones de correo electrónico personales para asuntos oficiales (e.j., correos electrónicos de gmail o yahoo de colegas de trabajo)
-    * Líneas de asunto marcadas con "[EXTERNO]" en correos electrónicos que parecen internos.
-    * [enlaces maliciosos o sospechosos](https://www.pcworld.com/article/248963/how-to-tell-if-a-link-is-safe-without-clicking-on-it.html)
-    * Recibir un correo electrónico o un archivo adjunto que no se esperaba, pero que proviene de alguien conocido (contactar con el remitente antes de abrirlo).
-    * Informar de actividades sospechosas al departamento de TI o de seguridad.
-1. Asegúrate de que el personal de TI y de seguridad está al día de las técnicas de phishing más recientes.
-1. Determine si ha fallado algún control al ser victima de un ataque y rectifíquelo. He aquí una [buena fuente](https://www.proofpoint.com/us/security-awareness/post/14-things-do-after-phishing-attack) a tener en cuenta tras un ataque de phishing.
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar el aviso y abrir el incidente. |
+| 2 | Clasificar la severidad inicial. |
+| 3 | Identificar si hubo clic, descarga, entrega de credenciales o fraude. |
+| 4 | Bloquear cuentas, sesiones, dominios o correos relacionados. |
+| 5 | Aislar equipos si hubo descarga o ejecución. |
+| 6 | Conservar evidencias básicas. |
+| 7 | Escalar a Dirección, Seguridad, departamento afectado y apoyo legal si procede. |
 
 ### Recursos
 
 #### Referencia: Acciones del usuario ante la sospecha de un ataque de phishing
 
-`TODO: Personalizar los pasos para los usuarios ante una sospecha de phishing`
+1. Mantener la calma y no interactuar más con el correo sospechoso.
+2. No pulsar enlaces, no descargar adjuntos adicionales y no responder al remitente.
+3. Hacer capturas de pantalla del correo, del remitente y, si ya se hizo clic, de la página mostrada.
+4. Tomar nota de:
+    1. Qué se ha notado;
+    2. Por qué se ha considerado sospechoso;
+    3. Qué se estaba haciendo en el momento de detectarlo;
+    4. Si se hizo clic, se descargó algo o se introdujeron datos;
+    5. La hora aproximada;
+    6. La red y ubicación desde la que se accedió, por ejemplo sede, casa, wifi, cable o VPN;
+    7. El sistema y la cuenta utilizados;
+    8. Si alguien más recibió el mismo mensaje.
+5. Contactar con el servicio de ayuda o con TIC por el canal interno habilitado y remitir el mensaje como adjunto si se indica.
+6. Cambiar la contraseña inmediatamente si se introdujeron credenciales en una web sospechosa.
 
-1. Mantenga la calma y respire profundamente.
-1. Haz fotos de tu pantalla con tu smartphone mostrando las cosas que has notado: el mensaje de phishing, el enlace si lo has abierto, la información del remitente.
-1. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y boli.  Todo por poco que sea, ayuda! Documenta lo siguiente:
-    1. ¿Qué has notado?
-    1. ¿Por qué pensaste que era un problema?
-    1. ¿Qué estabas haciendo en el momento en que lo detectaste?
-    1. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
-    1. ¿Dónde estaba cuando ocurrió y en qué red? (oficina/casa/tienda, con cable/inalámbrica, con/sin VPN, _etc._)
-    1. ¿Qué sistemas está utilizando? (sistema operativo, nombre de host, _etc._)
-    1. ¿Qué cuenta utilizas?
-    1. ¿A qué datos suele acceder?
-    1. ¿Con quién más te has puesto en contacto sobre este incidente y qué les has dicho?
-1. Ponte en contacto con el [servicio de ayuda](#TODO-enlace-a-actual-recurso) utlizando la [línea directa de phishing](#TODO-enlace-a-actual-recurso) o la [barra de herramientas de informe de phishing](#TODO-enlace-a-actual-recurso) y sé lo más servicial posible.
-1. Ten paciencia: La respuesta puede ser perturbardora, pero estas protegiendo a tu equipo y a la organización! **Gracias.**
+#### Referencia: Acciones del servicio de ayuda ante un presunto ataque de phishing
 
-#### Referencia: Acciones del servicio de ayuda ante un presunto ataque phishing
-
-`TODO: Personalizar los pasos para el personal del servicio de asistencia ante una sospecha de phishing`
-
-1. Mantenga la calma y respire profundamente.
-1. Abra un ticket para documentar el incidente, según el procedimiento.
-   `TODO: Personalizar la plantilla con las preguntas clave (véase más abajo) y el flujo de trabajo posterior`
-3. Pídale al usuario que tome fotos de su pantalla usando su smartphone mostrando las cosas que notó: el mensaje de phishing, el enlace si lo abrió, la información del remitente, _etc._  Si es algo que notó directamente, haga lo mismo usted.
-4. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y boli. Si se trata de un informe de usurio, haz preguntas detalladas, incluyendo:
-    1. ¿Qué has notado?
-    1. ¿Por qué pensaste que era un problema?
-    1. ¿Qué estabas haciendo en el momento en que lo detectaste?
-    1. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
-    1. ¿De qué redes se trata? (oficina/casa/tienda, cableada/inalámbrica, con/sin VPN, _etc._)
-    1. ¿De qué sistemas se trata? (sistema operativo, nombre de host, _etc._)
-    1. ¿De qué datos se trata? (rutas, tipos de archivos, archivos compartidos, bases de datos, software, _etc._)
-    1. ¿Qué usuarios y cuentas están implicados? (directorio activo, SaaS, SSO, cuentas de servicio, _etc._)
-    1. ¿A qué datos suelen acceder los usuarios implicados?
-    1. ¿Con quién más te has puesto en contacto sobre este incidente y qué les has dicho?
-5. Haz las preguntas de seguimiento que sean necesarias. **Usted es de respuesta ante Incidentes, Contamos contigo.**
-6. Obtenga información de contacto detallada del usuario (domicilio, oficina, móvil), si procede.
-7. Registra toda la información en el ticket, incluyendo notas manuscritas y de voz.
-8. Poner en cuarentena a los usuarios y sistemas afectados.
-   `TODO: Personalizar el contenido de los pasos, automatizar tanto como sea posible.`
-10. Póngase en contacto con el [equipo de seguridad](#TODO-enlace-a-actual-recurso) y prepárase para participar en la respuesta según las indicaciones: investigación, remediación comunicación y recuperación.
+1. Mantener la calma y abrir un ticket con prioridad adecuada.
+2. Pedir al usuario capturas, hora aproximada, acciones realizadas y el mensaje original.
+3. Formular preguntas de triage detalladas:
+    1. Qué ha observado exactamente;
+    2. Por qué le pareció sospechoso;
+    3. Qué estaba haciendo en el momento de detectarlo;
+    4. Cuándo ocurrió por primera vez y si se ha repetido;
+    5. En qué red y ubicación estaba trabajando;
+    6. Qué sistema, cuenta y buzón estaban implicados;
+    7. A qué datos o aplicaciones accede habitualmente;
+    8. Con quién más ha compartido el mensaje o el incidente.
+4. Determinar rápidamente si hubo solo recepción del correo o también clic, descarga, ejecución o entrega de credenciales.
+5. Si hubo credenciales comprometidas, forzar cambio de contraseña o escalar a TIC para bloqueo inmediato.
+6. Si hubo descarga o ejecución, ordenar el aislamiento del equipo y escalar a Seguridad o TIC.
+7. Registrar toda la información relevante:
+    1. Usuario, departamento y sede;
+    2. Dirección del remitente y asunto;
+    3. Acciones realizadas;
+    4. Sistemas, cuentas y datos potencialmente afectados.
+8. Ponerse en contacto con el equipo TIC, el responsable de seguridad y, si procede, la subcontrata del antivirus para la respuesta coordinada.
 
 #### Información adicional
 
-1. <a name="phishing-playbook-ref-1"></a>[Recurso Ataque Anti-Phishing](https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/top-16-anti-phishing-resources/#gref)
-1. <a name="phisphing-playbook-ref-2"></a>[Métodos de Identificación de Ataques Phishing](https://www.securitymetrics.com/blog/7-ways-recognize-phishing-email) 
-1. <a name="phishing-playbook-ref-3"></a>[Ejemplos Correos electrónicos de Phishing](https://www.phishing.org/phishing-examples) 
-1. <a name="phishing-playbook-ref-4"></a>[Mejores prácticas Anti-Phishing](https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/anti-phishing-best-practices/#gref)
+1. [CISA - Avoiding Social Engineering and Phishing Attacks](https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks)
+2. [CISA - Recognize and Report Phishing](https://www.cisa.gov/secure-our-world/recognize-and-report-phishing)
+3. [MITRE ATT&CK - Phishing (T1566)](https://attack.mitre.org/techniques/T1566/)
+4. [MITRE ATT&CK - Valid Accounts (T1078)](https://attack.mitre.org/techniques/T1078/)
+5. [NIST SP 800-61 Rev. 2 - Computer Security Incident Handling Guide](https://csrc.nist.gov/pubs/sp/800/61/r2/final)
