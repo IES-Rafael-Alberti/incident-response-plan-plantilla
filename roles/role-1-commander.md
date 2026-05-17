@@ -2,95 +2,106 @@
 
 ### Descripción
 
-El Incident Commander (IC) actúa como la única fuente de verdad sobre lo que está ocurriendo y lo que se espera que ocurra durante un incidente grave. Es la figura de mayor autoridad durante la gestión del incidente, independientemente del rango habitual de la persona en la organización.
+El Incident Commander (IC) es la máxima autoridad durante la gestión de un incidente grave y actúa como la fuente principal de información fiable sobre el estado del incidente y las acciones que deben realizarse. Este rol prevalece sobre cualquier jerarquía habitual dentro de la organización mientras el incidente permanezca activo.
 
-El IC toma las decisiones principales, delega tareas y coordina con expertos técnicos para la resolución del incidente. Las decisiones del Incident Commander son finales dentro del contexto del incidente.
+El Incident Commander es responsable de coordinar la respuesta al incidente, tomar las decisiones principales, asignar tareas y apoyarse en expertos técnicos para la investigación y resolución. Todas las decisiones finales relacionadas con la gestión del incidente corresponden al IC.
 
-Su función es evaluar la situación, proporcionar una dirección clara y coordinada, y delegar el trabajo de investigación y resolución a otros miembros del equipo. El IC no debe realizar tareas de investigación ni de remediación directamente.
-
----
-
-### Deberes
-
-El objetivo es resolver el incidente de forma rápida y segura utilizando el plan de respuesta a incidentes como guía. El IC coordina investigación, remediación y comunicación, apoyándose en el equipo y delegando en expertos cuando sea necesario.
-
-#### Preparación para incidentes
-
-- Establecer los canales de comunicación para la gestión de incidentes.
-- Redirigir a las personas a estos canales cuando ocurra un incidente grave.
-- Formar a los miembros del equipo en comunicación durante incidentes.
-- Formar a otros Incident Commanders.
-
-#### Gestión de incidentes
-
-- Centralizar la comunicación en un único canal.
-- Recopilar información a través de los responsables de estado de los sistemas.
-- Solicitar propuestas de solución y decidir qué acciones se ejecutarán.
-- Delegar todas las acciones técnicas; el IC no ejecuta la resolución directamente.
-- Ser la única fuente de información fiable sobre el estado del sistema.
-
-#### Coordinación de llamadas y reuniones
-
-- Asegurar consenso mediante preguntas o votaciones cuando sea necesario.
-- Proporcionar actualizaciones periódicas del estado.
-- Reducir el alcance del incidente cuando sea posible.
-- Crear subequipos si es necesario.
-- Transferir el control del incidente cuando proceda.
-- Cerrar y finalizar las llamadas de forma ordenada.
-- Mantener el orden y la disciplina en la comunicación.
-- Solicitar respuestas claras y directas.
-- Gestionar situaciones como:
-  - Intervenciones ejecutivas o jerárquicas que intenten influir en la decisión.
-  - Solicitudes de información no prioritaria.
-  - Dudas sobre la gravedad del incidente.
-- Gestionar comportamientos disruptivos o conflictivos durante la llamada.
-
-#### Post-mortem
-
-- Crear una plantilla inicial inmediatamente después del incidente para recopilar información mientras está fresca.
-- Programar la revisión post-mortem una vez finalizado el incidente.
-- Coordinar con responsables de equipo la definición de acciones preventivas.
+Su función principal es evaluar continuamente la situación, mantener una dirección clara y coordinada, y delegar las actividades técnicas necesarias para la investigación, contención y recuperación. El IC no debe ejecutar directamente tareas técnicas de investigación o remediación.
 
 ---
 
-### Buenas prácticas del Incident Commander
+## Deberes
 
-- Anunciar su rol al unirse a la llamada si está de guardia.
-- Evitar que las discusiones se desvíen del objetivo.
-- Mantener intervenciones breves y enfocadas.
-- Escuchar objeciones, pero mantener la autoridad final en la decisión.
-- Expulsar de la llamada a participantes que bloqueen activamente la toma de decisiones.
-- Anunciar el cierre de la llamada.
-- Compartir aprendizajes o acciones necesarias con otros Incident Commanders tras el incidente.
+El objetivo principal del Incident Commander es garantizar una resolución rápida, segura y coordinada del incidente, siguiendo el Plan de Respuesta a Incidentes como referencia principal.
 
----
+### Preparación ante incidentes
 
-### Formación
-
-- Leer y comprender el plan de respuesta a incidentes completo, incluyendo roles y procedimientos.
-- Participar en simulacros de respuesta a incidentes.
-- Observar a un Incident Commander en activo antes de asumir el rol.
-- Asumir el rol de forma supervisada en situaciones reales cuando sea posible.
-- Opcional: facilitar sesiones de práctica.
-- Opcional: consultar materiales adicionales de formación en gestión de incidentes.
+- Establecer y mantener los canales de comunicación para la gestión de incidentes.
+- Redirigir a los participantes hacia los canales oficiales cuando se declare un incidente grave.
+- Formar a los miembros del equipo en procedimientos y comunicación durante incidentes.
+- Participar en la formación de nuevos Incident Commanders.
 
 ---
 
-### Requisitos previos
+### Gestión del incidente
 
-No existen requisitos formales de antigüedad. El rol está abierto a cualquier persona con la formación adecuada y la capacidad necesaria. Antes de asumir el rol, se espera:
+- Centralizar toda la comunicación relacionada con el incidente en un único canal oficial.
+- Recopilar información a través de los responsables de estado y expertos técnicos.
+- Solicitar propuestas de solución y decidir qué acciones serán ejecutadas.
+- Delegar todas las acciones técnicas necesarias para la resolución.
+- Actuar como la única fuente de información oficial sobre el estado del incidente y de los sistemas afectados.
+
+---
+
+### Coordinación de llamadas y reuniones
+
+- Garantizar el consenso cuando sea necesario mediante preguntas directas o votaciones.
+- Proporcionar actualizaciones periódicas sobre el estado del incidente.
+- Reducir el impacto y alcance del incidente siempre que sea posible.
+- Crear subequipos de trabajo cuando la situación lo requiera.
+- Transferir la coordinación del incidente cuando proceda.
+- Finalizar las reuniones y llamadas de manera ordenada.
+- Mantener el orden y la disciplina durante las comunicaciones.
+- Solicitar respuestas claras, concretas y orientadas a la resolución.
+
+Gestionar adecuadamente situaciones como:
+
+- Intervenciones ejecutivas o jerárquicas que intenten alterar la toma de decisiones.
+- Solicitudes de información no prioritarias durante el incidente.
+- Cuestionamientos sobre la gravedad o prioridad del incidente.
+- Comportamientos disruptivos o conflictivos dentro de la llamada o canales de comunicación.
+
+---
+
+### Post-mortem
+
+- Crear una plantilla inicial de análisis post-mortem inmediatamente después del incidente para recopilar información relevante mientras aún está reciente.
+- Programar y coordinar la revisión post-mortem una vez finalizado el incidente.
+- Coordinar con responsables de equipo la definición de acciones correctivas y preventivas.
+
+---
+
+## Buenas prácticas del Incident Commander
+
+- Anunciar claramente su rol al incorporarse a la llamada o asumir la coordinación.
+- Evitar desviaciones innecesarias en las discusiones.
+- Mantener las intervenciones breves, claras y enfocadas en la resolución.
+- Escuchar objeciones y recomendaciones antes de tomar decisiones.
+- Mantener la autoridad final sobre las decisiones tomadas durante el incidente.
+- Retirar de la llamada a participantes que dificulten activamente la coordinación o la toma de decisiones.
+- Comunicar explícitamente el cierre del incidente y de la llamada.
+- Compartir aprendizajes y mejoras identificadas con otros Incident Commanders.
+
+---
+
+## Formación
+
+Para desempeñar el rol de Incident Commander se recomienda:
+
+- Leer y comprender completamente el Plan de Respuesta a Incidentes, incluyendo roles y procedimientos.
+- Participar en simulacros y ejercicios de respuesta a incidentes.
+- Observar a un Incident Commander con experiencia durante incidentes reales.
+- Asumir el rol de forma supervisada cuando sea posible.
+- Participar en sesiones prácticas de coordinación y comunicación.
+- Consultar materiales adicionales relacionados con gestión y coordinación de incidentes.
+
+---
+
+## Requisitos previos
+
+No existen requisitos formales de antigüedad para asumir el rol. Cualquier persona con la preparación adecuada puede desempeñarlo. Antes de asumir la función, se espera contar con:
 
 - Excelentes habilidades de comunicación oral y escrita.
-- Conocimiento general de la infraestructura y el negocio.
-- Buen criterio, pensamiento crítico y capacidad de decisión.
-- Capacidad para escuchar a expertos y ajustar decisiones cuando sea necesario.
-- Haber participado en al menos dos incidentes.
-- Capacidad de liderazgo y de mantener el orden en una llamada, incluso si es necesario retirar participantes de la misma.
+- Conocimiento general de la infraestructura tecnológica y del negocio.
+- Capacidad de análisis, pensamiento crítico y toma de decisiones.
+- Capacidad para escuchar a expertos técnicos y adaptar decisiones cuando sea necesario.
+- Participación previa en al menos dos incidentes.
+- Habilidades de liderazgo y capacidad para mantener el orden durante reuniones críticas.
 
-No se requiere conocimiento técnico profundo. El Incident Commander coordina la respuesta, no ejecuta cambios técnicos.
+No es obligatorio disponer de conocimientos técnicos avanzados, ya que el Incident Commander coordina la respuesta, pero no ejecuta directamente cambios técnicos.
 
 ---
 
-### Incorporación
+## Incorporación
 
-Tras completar la formación, la persona puede ser añadida a la lista de Incident Commanders.
+Una vez completada la formación y demostradas las capacidades necesarias, la persona podrá ser incorporada oficialmente a la lista de Incident Commanders de la organización.
