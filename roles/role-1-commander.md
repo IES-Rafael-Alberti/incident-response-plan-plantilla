@@ -1,78 +1,75 @@
+## Rol: Incident Commander (IC)
 
-## Rol: Incident Commander
+### Descripción
 
-### Descripcion
-El Incident Commander(IC) actua como la única fuente de lo que realmente está ocurriendo y va a ocurrir durante un incidente grave. El IC es el individuo con mayor rango en cualquier llamada de incidente, sin importar el rango en el dia a dia. Ellos son los que toman decisiones durante un incidente; delegan tareas y prestan atencion a expertos en la materia que están tratando para resolver el incidente. Las decisiones tomadas por el Incident commander las decisivas.
+El Incident Commander actúa como única fuente de verdad sobre qué está ocurriendo y qué va a ocurrir durante un incidente en Nexo Lebrija. Es el individuo con mayor rango durante cualquier llamada de incidente, independientemente de su posición en el organigrama habitual — incluso por encima de la Dirección General durante la gestión activa.
 
-Tu trabajo como Incident commander evaluar la situación, proveer un guiado claro y coordinado, contratar otros trabajadores para recolectar contexto/detalles.**No realizar investigaciones o remedios**, delega estos trabajos.
+Toma decisiones, delega tareas y escucha a los expertos para resolver el incidente. **No investiga ni ejecuta remedios directamente: delega.**
+
+En Nexo Lebrija, el IC es preferiblemente el CISO (cuando esté nombrado según proyecto P12 del PDS) o, en su ausencia, el responsable de TIC o cualquier persona capacitada con las condiciones requeridas.
 
 ### Deberes
 
-Resuelve el incidente lo más rápido y seguro posible usando el plan de respuesta de incidentes como plantilla de trabajo: guia al equipo de investigacion, remedio, comunicación. Utiliza al adjunto para que te ayude, y delegue a relevantes enlaces y expertos a tu discreción.
+Resuelve el incidente lo más rápido y seguro posible usando este plan como marco. Lidera al equipo en investigación, remediación y comunicación. Usa al Adjunto como soporte y delega en SMEs y Enlace a tu discreción.
 
-1. Ayuda a prepararos para los incidentes,
-    * Establecer canales de comunicación para incidentes.
-    * Redirige a las personas hacia estos canales de comunicación cuando acurra algún incidente grave.
-    * Entrena a miembros del equipo sobre como comunicarte durante incidentes y entrena a otros Incident Commanders.
-1. Dirige los incidentes hacia una solución,
-    * Lleva a todos al mismo canal de comunicación.
-    * Recolecta información de los miembros del equipo por sus servicios de estatus.
-    * Recolecta propuestas de reparación de acciones, después recomienda acciones de reparación para que se lleven a cabo.
-    * Delega todas la acciones de reparación, el Incident Commander no es un resolvedor.
-    * Es la única fuente de autoridad en el estado del sistema.
-1. Facilita las llamadas y reuniones,
-    * Gana consenso (Realiza encuestas durante las llamadas)
-    * Proporciona actualizaciones de estatus
-    * Reduce el alcance (despedir a los asistentes cuando sea posible)
-    * Spin off sub-equipos
-    * Transfiere el control cuando sea necesario
-    * Firmar las llamadas
-    * Mantener el orden
-    * Obtén respuestas directas
-    * Manejar las caídas de ejecutivos como
-        * Anular al Incident Commander
-        * Desmotivación
-        * Petición de información
-        * Cuestionar la severidad
-    * Manejar respuestas perturbadoras o beligerantes
-1. Post Mortem,
-    * Crear la plantilla inicial justo después del incidente para que las personas puedan escribir sus opiniones mientras están frescas.
-    * Asignar el post-mortem después de que el evento termine, esto puede darse después de terminar la llamada.
-    * Trabaja con los gerentes o jefes de equipo para organizar acciones preventivas.
+1. **Preparación para incidentes (tiempo de paz):**
+    - Establecer y mantener los canales de comunicación de incidentes (Discord `#incidentes`, Zoom, teléfono 664011121).
+    - Redirigir a las personas a estos canales cuando ocurra un incidente.
+    - Formar a miembros del equipo en cómo comunicarse durante incidentes.
+    - Organizar el simulacro anual (proyecto P13 del PDS).
 
-El Incident Commander utiliza métodos y lenguajes adicionales:
+2. **Dirección del incidente hacia resolución:**
+    - Llevar a todos al mismo canal de comunicación.
+    - Recoger información de los SMEs sobre el estado de sus sistemas/áreas.
+    - Recoger propuestas de acciones de reparación y recomendar las que se llevarán a cabo.
+    - Delegar todas las acciones de reparación. **El IC no es un resolver.**
+    - Ser la única autoridad sobre el estado del sistema durante el incidente.
 
-* Siempre anuncie cuando se una a la llamada si es el IC de guardia.
-* **No** permita que las discusiones se salgan de control. Mantenga las conversaciones cortas.
-* Tenga en cuenta las objeciones de los demás, pero tu decision es la definitiva.
-* Si alguien está interrumpiendo activamente tu decision, expúlsalo.
-* Anuncia el final de la llamada.
-* Después de un incidente, comuníquese con otros Incident Commander sobre cualquier acción que considere necesaria.
+3. **Facilitar llamadas y reuniones:**
+    - Obtener consenso mediante sondeos.
+    - Proporcionar actualizaciones de estado.
+    - Reducir el alcance (despedir asistentes cuando sea posible).
+    - Crear subequipos si el incidente escala.
+    - Transferir el mando cuando sea necesario.
+    - Cerrar las llamadas formalmente.
+    - Mantener el orden; gestionar intervenciones de Dirección que intenten anular al IC, desmotivar, pedir información o cuestionar la severidad.
+    - Expulsar de la llamada a quienes interrumpan de forma activa.
 
-**Utilice una terminología clara y evite las siglas o abreviaturas. La claridad y la precisión son más importantes que la brevedad.**
+4. **Post-incidente:**
+    - Crear la plantilla inicial de revisión post-acción (AAR) inmediatamente tras el cierre.
+    - Asignar el AAR después de la llamada.
+    - Coordinar con responsables de área las acciones preventivas derivadas.
 
-### Prácticas
+#### Procedimientos adicionales del IC
 
-* Lea el plan de respuesta a incidentes, incluidos todos los roles y manuales.
-* Participar en un ejercicio de respuesta a incidentes.
-* Seguir a un Incident Commander actual sin participar activamente, manteniendo sus preguntas hasta el final.
-* Tomar la iniciativa de un Incident Commander. Responda a incidentes con el IC actual allí para hacerse cargo si es necesario.
-* _OPCIONAL:_ facilitar las prácticas
-* _OPCIONAL:_ recurre a [Incident Responders as Facilitators (and Therapists)](#FIX) y al [PagerDuty Incident Commander training](https://response.pagerduty.com/training/incident_commander/) para mas ideas y discussiones.
+- Anúnciate siempre al unirte a la llamada si eres el IC de guardia.
+- No dejes que las discusiones se salgan de control. Conversaciones cortas.
+- Registra las objeciones, pero tu decisión es definitiva.
+- Si alguien interrumpe activamente, expúlsalo de la llamada.
+- Anuncia el cierre formal de la llamada.
+- Comunica a otros ICs capacitados cualquier lección aprendida tras el incidente.
 
-#### pre-requisitos
+**Use terminología clara. Evite acrónimos y abreviaturas. La claridad es más importante que la brevedad.**
 
-No hay requisitos previos de antigüedad o unidad de negocios para convertirse en Incident Commander, es un rol abierto a cualquier persona con la capacitación y la capacidad. Antes de que pueda ser un Incident Commander, se espera que cumpla con los siguientes criterios:
+### Formación
 
-* Excelentes **habilidades de comunicación** verbal y escrita.
-* **Conocimiento de alto nivel** de la infraestructura y las funciones comerciales.
-* Excelente pensamiento crítico, juicio y toma de decisiones.
-* Flexibilidad y capacidad para **escuchar comentarios de expertos**, modificando los planes según sea necesario.
-* **Participó en al menos dos respuestas a incidentes**.
-* Capacidad para **tomar el mando** y **disposición para expulsar a las personas de una llamada** para eliminar las distracciones, incluso si se trata del director ejecutivo.
+- Leer y comprender este plan completo, incluyendo todos los roles y playbooks.
+- Participar en un ejercicio de respuesta a incidentes (simulacro P13 del PDS).
+- Observar a un IC activo sin participar, reservando preguntas para después.
+- Actuar como IC con supervisión hasta demostrar competencia.
+- *OPCIONAL:* Formación en facilitación de equipos bajo presión.
 
-¡No se requieren conocimientos técnicos profundos! Los Incident Commander no requieren un conocimiento técnico profundo de nuestros sistemas. Su trabajo como Incident Commander es coordinar la respuesta, no realizar cambios técnicos. No crea que no puede ser un Incident Commander solo porque no está en el departamento de ingeniería.
+#### Requisitos previos
+
+- Excelentes habilidades de **comunicación verbal y escrita**.
+- Conocimiento de alto nivel de la infraestructura y negocio de Nexo Lebrija (sistemas, departamentos, activos críticos del PDS).
+- Pensamiento crítico, juicio y toma de decisiones bajo presión.
+- Flexibilidad para escuchar a expertos y modificar planes en tiempo real.
+- Haber participado en al menos dos respuestas a incidentes o simulacros.
+- Capacidad para **tomar el mando** y **expulsar personas de una llamada** si es necesario — incluyendo a la Dirección General.
+
+**No se requiere conocimiento técnico profundo.** El trabajo del IC es coordinar, no teclear. Cualquier departamento puede tener un IC.
 
 #### Graduación
 
-Al finalizar el entrenamiento, agréguese a la lista de Incident Commander.
+Al completar la formación, añadirse a la lista de ICs: `ir.nexo-lebrija.tld/ic-roster`.

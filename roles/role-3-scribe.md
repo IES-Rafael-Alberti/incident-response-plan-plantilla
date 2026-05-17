@@ -1,36 +1,36 @@
-
 ## Rol: Escriba
 
 ### Descripción
 
-Un escriba documenta la línea de tiempo de un incidente a medida que avanza, y se asegura de que todas las decisiones y datos importantes se capturen para su posterior revisión.  El escriba debe centrarse en el archivo del incidente, así como en los elementos de seguimiento para una acción posterior.
+El Escriba documenta la línea de tiempo del incidente a medida que avanza, asegurando que todas las decisiones y datos importantes queden registrados para revisión posterior. Se centra en el archivo del incidente en `ir.nexo-lebrija.tld/files/responses` y en los elementos de seguimiento para acción posterior.
 
 ### Funciones
 
-1. Asegurarse de que la llamada del incidente se está grabando.
-1. 2. Anotar en el chat y en la línea de tiempo del expediente: los datos, eventos y acciones importantes, a medida que se producen. Específicamente:
-    * Acciones clave a medida que se llevan a cabo
-    * Informes de estado cuando el IC los proporcione
-    * Cualquier llamada clave durante la llamada o en la revisión final
-1. Actualice el chat indicando quién es el IC, quién es el adjunto y que usted es el escribiente (si no lo ha hecho ya).
+1. Asegurarse de que la llamada del incidente se está grabando (Zoom, Discord, o acta escrita si no hay grabación).
+2. Anotar en el chat y en el archivo del incidente los datos, eventos y acciones importantes en tiempo real:
+    - Acciones clave conforme se toman, con timestamp.
+    - Informes de estado cuando el IC los proporcione.
+    - Decisiones relevantes y cualquier llamada clave durante la llamada o en la revisión final.
+3. Actualizar el canal `#[CODENAME-INCIDENTE]` en Discord con quién es el IC, quién es el Adjunto y que usted es el Escriba.
+4. Capturar específicamente:
+    - Resultado de cualquier decisión por sondeo.
+    - Elementos de seguimiento tipo "deberíamos hacer esto", "¿por qué no se hizo esto?", etc.
+    - IOCs nuevos identificados durante la llamada.
+    - Sistemas afectados confirmados y sus estados.
 
-Escribir es más un arte que una ciencia. El objetivo es mantener un registro preciso de los eventos importantes que ocurrieron, Usa tu juicio y experiencia. Pero aquí hay algunas cosas generales que definitivamente querrás capturar como escribiente.
-
-* El resultado de cualquier decisión de la votación.
-### Cualquier elemento de seguimiento que se llame "Deberíamos hacer esto..", "¿Por qué no se hizo esto?", etc.
+Escribir es más arte que ciencia. El objetivo es mantener un registro preciso de los eventos importantes. Use su juicio.
 
 ### Formación
 
-Lea y comprenda el plan de respuesta a incidentes, incluyendo los roles y los libros de jugadas.
+Leer y comprender este plan, incluyendo todos los roles y playbooks.
 
 #### Requisitos previos
 
-* Excelentes habilidades de **comunicación verbal y escrita**.
-* Cualquiera puede actuar como escribiente durante un incidente, y son elegidos por el Incident Commander al inicio de la llamada.
-* Normalmente, el ayudante actuará como escribiente.
+- Excelentes habilidades de **comunicación verbal y escrita**.
+- Cualquiera puede actuar como Escriba; el IC lo designa al inicio de la llamada.
+- Habitualmente el Adjunto actúa como Escriba.
 
 #### Proceso de formación
 
-* Lea el plan de respuesta a incidentes, incluyendo todos los roles y libros de jugadas.
-* _OPCIONAL:_ Paralizar las acciones de un escriba durante un incidente o ejercicio, y buscar la opinión del escriba real y del Incident Commander.
-
+- Leer el plan completo incluyendo todos los roles y playbooks.
+- *OPCIONAL:* Paralelizar las acciones de un Escriba real durante un incidente o simulacro y pedir feedback al Escriba y al IC.
