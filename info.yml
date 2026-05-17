@@ -62,6 +62,9 @@ INCIDENT_COMMANDER_RESPONSE_SLA: '15 minutos'
 # Time between scheduled updates (e.g., 4 hours)
 UPDATE_FREQUENCY: '2 horas'
 
+# Hora de la próxima actualización del incidente
+UPDATE_TIME: 'Próxima actualización cada 2 horas desde la activación del incidente'
+
 # URL/path to incident file (e.g., ir.acme.tld/files/codename)
 INCIDENT_FILE_LOCATION: 'https://ir.kiwiincidentes.es/incidents'
 
