@@ -1,0 +1,24 @@
+{
+  "versions": { "attack": "18", "navigator": "5.2.0", "layer": "4.5" },
+  "name": "Nexo Lebrija - Servicios cloud",
+  "domain": "enterprise-attack",
+  "description": "Tecnicas ATT&CK priorizadas para compromiso de servicios cloud segun riesgos R11, R03, R01 y R04.",
+  "filters": { "platforms": ["SaaS", "IaaS", "Office Suite"] },
+  "sorting": 0,
+  "layout": { "layout": "side", "aggregateFunction": "average", "showID": true, "showName": true },
+  "gradient": { "colors": ["#e0ecf4", "#9ebcda", "#8856a7"], "minValue": 1, "maxValue": 3 },
+  "legendItems": [
+    { "label": "Probable", "color": "#9ebcda" },
+    { "label": "Critico para el playbook", "color": "#8856a7" }
+  ],
+  "techniques": [
+    { "techniqueID": "T1078.004", "score": 3, "comment": "Uso de cuentas cloud validas." },
+    { "techniqueID": "T1538", "score": 2, "comment": "Uso de panel cloud para descubrir servicios." },
+    { "techniqueID": "T1098", "score": 3, "comment": "Manipulacion de cuentas, roles o permisos cloud." },
+    { "techniqueID": "T1528", "score": 3, "comment": "Robo o abuso de token de aplicacion." },
+    { "techniqueID": "T1530", "score": 3, "comment": "Acceso a datos desde almacenamiento cloud." },
+    { "techniqueID": "T1567", "score": 2, "comment": "Exfiltracion por servicio web/cloud." },
+    { "techniqueID": "T1531", "score": 2, "comment": "Bloqueo o eliminacion de acceso a cuentas." },
+    { "techniqueID": "T1489", "score": 2, "comment": "Parada o degradacion de servicio cloud." }
+  ]
+}

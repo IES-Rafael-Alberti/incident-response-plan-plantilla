@@ -1,0 +1,79 @@
+{
+  "name": "Nexo Lebrija - RE&CT acciones de respuesta",
+  "framework": "RE&CT",
+  "description": "Acciones RE&CT priorizadas para los playbooks de respuesta a incidentes de Nexo Lebrija.",
+  "stages": [
+    {
+      "id": "RS0001",
+      "name": "Preparation",
+      "actions": [
+        "Practice",
+        "Take trainings",
+        "Raise personnel awareness",
+        "Set up relevant data collection",
+        "Access VPN logs",
+        "Get ability to delete email message"
+      ]
+    },
+    {
+      "id": "RS0002",
+      "name": "Identification",
+      "actions": [
+        "Collect logs",
+        "List victims of security alert",
+        "Collect email message",
+        "List email message receivers",
+        "List users authenticated",
+        "Identify transferred data",
+        "List processes executed",
+        "Collect evidence"
+      ]
+    },
+    {
+      "id": "RS0003",
+      "name": "Containment",
+      "actions": [
+        "Lock user account",
+        "Block external IP address",
+        "Block internal IP address",
+        "Block external domain",
+        "Quarantine email message",
+        "Quarantine file by path",
+        "Block process by executable hash"
+      ]
+    },
+    {
+      "id": "RS0004",
+      "name": "Eradication",
+      "actions": [
+        "Delete email message",
+        "Remove file",
+        "Remove user account",
+        "Remove malicious changes",
+        "Patch vulnerability",
+        "Restore permissions"
+      ]
+    },
+    {
+      "id": "RS0005",
+      "name": "Recovery",
+      "actions": [
+        "Reinstall host from golden image",
+        "Restore data from backup",
+        "Unlock locked user account",
+        "Restore service",
+        "Validate restored data"
+      ]
+    },
+    {
+      "id": "RS0006",
+      "name": "Lessons Learned",
+      "actions": [
+        "Develop incident report",
+        "Conduct lessons learned exercise",
+        "Improve detections",
+        "Update playbook"
+      ]
+    }
+  ]
+}

@@ -91,7 +91,7 @@ MEMORY_COLLECTION_TOOL: 'ir.nexo-lebrija.tld/winpmem'
 DISK_IMAGE_TOOL: 'ir.nexo-lebrija.tld/sumuri'
 
 # URL/path to IR report template (e.g., ir.acme.tld/report/template)
-INCIDENT_REPORT_TEMPLATE: '{{INCIDENT_REPORT_TEMPLATE}}'
+INCIDENT_REPORT_TEMPLATE: 'ir.nexo-lebrija.tld/report/template'
 
 # URL/path to report recipient list (e.g., ir.acme.tld/report/recipients)
 INCIDENT_REPORT_RECIPIENTS: 'ir.nexo-lebrija.tld/report/recipients'
