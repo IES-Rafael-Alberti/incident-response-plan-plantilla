@@ -38,11 +38,11 @@ El Incident Commander (IC) es el líder del proceso de respuesta al incidente.
 
 * Siga las instrucciones del Incident Commander.
 * No realice ninguna acción a menos que el Incident Commander se lo indique.
-* El Incident Commander normalmente sondeará si hay objeciones fuertes antes de asignar una acción importante. Plantee sus objeciones si las tiene.
-* Una vez que el Incident Commander haya tomado una decisión, sígala (incluso si no está de acuerdo).
-* Responde a cualquier pregunta que te haga el Incident Commander de forma clara y concisa. Responder "no sé" es aceptable. No adivine.
-* El Incident Commander puede pedirte que investigues algo y que le contestes en X minutos. Esté preparado con una respuesta dentro de ese tiempo. Pedir más tiempo es aceptable, pero proporcione una estimación.
+* El jefe normalmente sondeará si hay objeciones fuertes antes de asignar una acción importante. Plantee sus objeciones si las tiene.
+* Una vez que el jefe haya tomado una decisión, sígala (incluso si no está de acuerdo).
+* Responde a cualquier pregunta que te haga el jefe de forma clara y concisa. Responder "no sé" es aceptable. No adivine.
+* El jefe puede pedirte que investigues algo y que le contestes en X minutos. Esté preparado con una respuesta dentro de ese tiempo. Pedir más tiempo es aceptable, pero proporcione al jefe una estimación.
 
 ### Capacitación
 
-Lee y entiende el plan de respuesta a incidentes, incluyendo los roles y los playbooks.
+Lee y entiende el plan de respuesta a incidentes, incluyendo los roles y los libros de jugadas.
