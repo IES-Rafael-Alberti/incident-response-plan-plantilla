@@ -1,0 +1,23 @@
+{
+  "versions": { "attack": "18", "navigator": "5.2.0", "layer": "4.5" },
+  "name": "Nexo Lebrija - Identidad y accesos",
+  "domain": "enterprise-attack",
+  "description": "Tecnicas ATT&CK priorizadas para compromiso de identidad y accesos segun riesgos R01, R03, R05 y R08.",
+  "filters": { "platforms": ["Windows", "SaaS", "IaaS", "Office Suite"] },
+  "sorting": 0,
+  "layout": { "layout": "side", "aggregateFunction": "average", "showID": true, "showName": true },
+  "gradient": { "colors": ["#edf8e9", "#a1d99b", "#31a354"], "minValue": 1, "maxValue": 3 },
+  "legendItems": [
+    { "label": "Probable", "color": "#a1d99b" },
+    { "label": "Critico para el playbook", "color": "#31a354" }
+  ],
+  "techniques": [
+    { "techniqueID": "T1078", "score": 3, "comment": "Uso de cuentas validas en correo, VPN, CRM/ERP o cloud." },
+    { "techniqueID": "T1110", "score": 2, "comment": "Intentos de fuerza bruta o password spraying." },
+    { "techniqueID": "T1098", "score": 3, "comment": "Manipulacion de cuentas, permisos o reglas." },
+    { "techniqueID": "T1136", "score": 2, "comment": "Creacion de cuentas no autorizadas." },
+    { "techniqueID": "T1548", "score": 2, "comment": "Abuso de mecanismos de elevacion de privilegios." },
+    { "techniqueID": "T1087", "score": 2, "comment": "Descubrimiento de cuentas y usuarios." },
+    { "techniqueID": "T1538", "score": 2, "comment": "Uso de paneles cloud para descubrir servicios y permisos." }
+  ]
+}

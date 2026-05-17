@@ -1,0 +1,22 @@
+{
+  "versions": { "attack": "18", "navigator": "5.2.0", "layer": "4.5" },
+  "name": "Nexo Lebrija - Web y proveedor",
+  "domain": "enterprise-attack",
+  "description": "Tecnicas ATT&CK priorizadas para desfiguracion o compromiso web segun riesgos R04, R11 y R03.",
+  "filters": { "platforms": ["Linux", "Windows", "SaaS", "IaaS"] },
+  "sorting": 0,
+  "layout": { "layout": "side", "aggregateFunction": "average", "showID": true, "showName": true },
+  "gradient": { "colors": ["#ffffcc", "#fd8d3c", "#bd0026"], "minValue": 1, "maxValue": 3 },
+  "legendItems": [
+    { "label": "Probable", "color": "#fd8d3c" },
+    { "label": "Critico para el playbook", "color": "#bd0026" }
+  ],
+  "techniques": [
+    { "techniqueID": "T1190", "score": 3, "comment": "Explotacion de aplicacion publica, CMS o tienda." },
+    { "techniqueID": "T1505.003", "score": 3, "comment": "Web shell o componente persistente en servidor web." },
+    { "techniqueID": "T1505", "score": 2, "comment": "Componente de servidor manipulado." },
+    { "techniqueID": "T1491", "score": 3, "comment": "Defacement o alteracion visible del sitio." },
+    { "techniqueID": "T1489", "score": 2, "comment": "Parada o degradacion del servicio web." },
+    { "techniqueID": "T1567", "score": 2, "comment": "Exfiltracion mediante formularios o servicios web." }
+  ]
+}

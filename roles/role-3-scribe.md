@@ -8,29 +8,29 @@ Un escriba documenta la línea de tiempo de un incidente a medida que avanza, y 
 ### Funciones
 
 1. Asegurarse de que la llamada del incidente se está grabando.
-1. 2. Anotar en el chat y en la línea de tiempo del expediente: los datos, eventos y acciones importantes, a medida que se producen. Específicamente:
+1. Anotar en el chat y en la línea de tiempo del expediente los datos, eventos y acciones importantes a medida que se producen. Específicamente:
     * Acciones clave a medida que se llevan a cabo
     * Informes de estado cuando el IC los proporcione
     * Cualquier llamada clave durante la llamada o en la revisión final
-1. Actualice el chat indicando quién es el IC, quién es el adjunto y que usted es el escribiente (si no lo ha hecho ya).
+1. Actualice el chat indicando quién es el IC, quién es el adjunto y que usted es el escriba (si no lo ha hecho ya).
 
-Escribir es más un arte que una ciencia. El objetivo es mantener un registro preciso de los eventos importantes que ocurrieron, Usa tu juicio y experiencia. Pero aquí hay algunas cosas generales que definitivamente querrás capturar como escribiente.
+Escribir es más un arte que una ciencia. El objetivo es mantener un registro preciso de los eventos importantes que ocurrieron. Use su juicio y experiencia. Como mínimo, debe capturar:
 
 * El resultado de cualquier decisión de la votación.
-### Cualquier elemento de seguimiento que se llame "Deberíamos hacer esto..", "¿Por qué no se hizo esto?", etc.
+* Cualquier elemento de seguimiento que se plantee durante la llamada, como "deberíamos hacer esto" o "por qué no se hizo esto".
 
 ### Formación
 
-Lea y comprenda el plan de respuesta a incidentes, incluyendo los roles y los libros de jugadas.
+Lea y comprenda el plan de respuesta a incidentes, incluyendo los roles y los playbooks.
 
 #### Requisitos previos
 
 * Excelentes habilidades de **comunicación verbal y escrita**.
-* Cualquiera puede actuar como escribiente durante un incidente, y son elegidos por el Incident Commander al inicio de la llamada.
-* Normalmente, el ayudante actuará como escribiente.
+* Cualquiera puede actuar como escriba durante un incidente, y será elegido por el Incident Commander al inicio de la llamada.
+* Normalmente, el adjunto actuará como escriba si no se designa otra persona.
 
 #### Proceso de formación
 
-* Lea el plan de respuesta a incidentes, incluyendo todos los roles y libros de jugadas.
-* _OPCIONAL:_ Paralizar las acciones de un escriba durante un incidente o ejercicio, y buscar la opinión del escriba real y del Incident Commander.
+* Lea el plan de respuesta a incidentes, incluyendo todos los roles y playbooks.
+* _OPCIONAL:_ Practicar como escriba durante un incidente simulado y solicitar opinión del escriba real y del Incident Commander.
 

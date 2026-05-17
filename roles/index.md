@@ -2,33 +2,33 @@
 
 A continuación se presentan las descripciones, los deberes y la formación para cada uno de los roles definidos en la respuesta a un incidente.
 
-`TODO: Personalizar los roles, las descripciones, las funciones y la formación, si es necesario.`
+Estos roles se aplican a Nexo Lebrija durante incidentes que afecten a CRM/ERP, servidores, datos personales, correo, copias de seguridad, puestos de trabajo, web/tienda, servicios cloud o proveedores. La estructura es flexible: en incidentes pequeños una persona puede cubrir varios roles, mientras que en S1/S2 se activarán subequipos de Investigación, Remediación y Comunicación.
 
 ## Estructura de los roles
 
 * Equipo de Mando
   * [Incident Commander](#rol-incident-commander)
-  * [Incident Commander-Adjunto](#rol-delegado-del-incident-commander-subdelegado)
+  * [Incident Commander-Adjunto](#rol-incident-commander-adjunto)
   * [Escriba](#rol-escriba)
 * Equipo de enlace
-  * Enlace Interno [Enlace](#rol-enlace)
-  * Enlace externo
+  * [Enlace interno](#rol-enlace), para Dirección, TIC/CISO, Legal, Comunicación, RRHH, Finanzas y unidades de negocio.
+  * [Enlace externo](#rol-enlace), para clientes, proveedores, soporte externo, reguladores y fuerzas de seguridad.
 * Equipo de Operaciones
-  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (SMEs) para Sistemas
-  * SMEs para equipos/unidades de negocio
-  * SMEs para las funciones ejecutivas (_p.ej._, Legal, RRHH, Finanzas)
-En el caso de incidentes complejos de mayor envergadura, la estructura de funciones puede ajustarse para tener en cuenta la creación de subequipos. Para más información, lea cómo gestionamos los [Incidentes Complejos](/before/complex_incidents.md).
+  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (SME) de sistemas: CRM/ERP, servidores, correo, backups, puestos, web/tienda, cloud, red, identidad y proveedores.
+  * SME de equipos o unidades de negocio afectadas.
+  * SME de funciones ejecutivas: Legal/Cumplimiento, Comunicación, RRHH, Finanzas, Compras y Dirección.
 
-Esta es una **estructura flexible**: cada rol no será ocupado por una persona diferente para cada incidente. Por ejemplo, en un incidente pequeño, el adjunto podría actuar como escribiente y enlace interno. La estructura es flexible y se adapta al incidente.
+En incidentes complejos o de mayor severidad, el Incident Commander puede crear subequipos de Investigación, Remediación y Comunicación, tal como se define en [Crear Sub-Equipos](#crear-sub-equipos).
 
-## Tiempos de Guerra vs. Tiempos de Paz
+Esta es una **estructura flexible**: cada rol no será ocupado por una persona diferente para cada incidente. Por ejemplo, en un incidente pequeño, el adjunto podría actuar como escriba y enlace interno. La estructura es flexible y se adapta al incidente.
 
-En las llamadas de respuesta a Incidentes ("tiempos de guerra"), una estructura organizativa diferente anula las operaciones normales ("tiempos de paz"):
+## Operación Normal vs. Respuesta a Incidentes
 
-* El Comandante del incidente está al mando. Independientemente de su rango en tiempos de paz, ahora es la persona de mayor rango en la llamada, superior al director general o CEO.
-* Los primeros intervinientes (las personas que actúan como primeros intervinientes de un equipo/servicio) son las personas de mayor rango de ese servicio.
-* Las decisiones serán tomadas por el IC tras considerar la información presentada. Una vez tomada la decisión, es definitiva.
-* El IC puede tomar decisiones más arriesgadas que las que normalmente se considerarían en tiempos de paz.
-* El IC puede ir en contra de una decisión consensuada. Si se hace una encuesta, y 9/10 personas están de acuerdo pero 1 está en desacuerdo. El IC puede elegir la opción del desacuerdo a pesar del voto de la mayoría. Aunque no esté de acuerdo, la decisión del IC es definitiva. Durante la convocatoria no es el momento de discutir con ellos.
-* El IC puede utilizar un lenguaje o comportarse de una manera que usted considere grosera. Esto es tiempo de guerra, y necesitan hacer lo que sea necesario para resolver la situación, por lo que a veces se producen groserías. Esto no es personal, y es algo que debes estar preparado para experimentar si nunca has estado en una situación de guerra.
-* Es posible que el IC te pida que abandones la llamada, o incluso que te eche a la fuerza de una llamada. Esto queda a discreción del IC si considera que no estás aportando nada útil. De nuevo, esto no es personal y debes recordar que los tiempo de guerra son diferentes a los tiempo de paz.
+En las llamadas de respuesta a incidentes, una estructura organizativa temporal sustituye a la operación normal para acelerar decisiones y reducir ambigüedad:
+
+* El Incident Commander está al mando de la respuesta. Su autoridad aplica a las decisiones del incidente, aunque la jerarquía habitual sea distinta.
+* Los SME son la autoridad técnica o funcional de su área, pero las acciones se coordinan a través del Incident Commander.
+* Las decisiones se toman con la mejor información disponible, documentando riesgos, aprobadores y justificación.
+* El IC puede priorizar contención, continuidad o preservación de evidencias según severidad e impacto.
+* Las objeciones deben plantearse de forma breve y objetiva antes de ejecutar una decisión relevante.
+* Una vez tomada una decisión, los participantes la ejecutarán o escalarán impedimentos por la cadena de mando del incidente.

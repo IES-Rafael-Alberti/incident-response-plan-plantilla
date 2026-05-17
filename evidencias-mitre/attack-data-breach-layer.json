@@ -1,0 +1,22 @@
+{
+  "versions": { "attack": "18", "navigator": "5.2.0", "layer": "4.5" },
+  "name": "Nexo Lebrija - Fuga de datos personales",
+  "domain": "enterprise-attack",
+  "description": "Tecnicas ATT&CK priorizadas para fuga de datos personales y brecha RGPD segun riesgos R03, R01, R02 y R11.",
+  "filters": { "platforms": ["Windows", "Linux", "SaaS", "IaaS"] },
+  "sorting": 0,
+  "layout": { "layout": "side", "aggregateFunction": "average", "showID": true, "showName": true },
+  "gradient": { "colors": ["#f2f0f7", "#bcbddc", "#756bb1"], "minValue": 1, "maxValue": 3 },
+  "legendItems": [
+    { "label": "Probable", "color": "#bcbddc" },
+    { "label": "Critico para el playbook", "color": "#756bb1" }
+  ],
+  "techniques": [
+    { "techniqueID": "T1213", "score": 3, "comment": "Acceso a repositorios de informacion y datos personales." },
+    { "techniqueID": "T1567", "score": 3, "comment": "Exfiltracion mediante servicios web o cloud." },
+    { "techniqueID": "T1041", "score": 2, "comment": "Exfiltracion por canal C2." },
+    { "techniqueID": "T1070.001", "score": 2, "comment": "Borrado de logs para ocultar acceso a datos." },
+    { "techniqueID": "T1222", "score": 2, "comment": "Modificacion de permisos en ficheros o directorios." },
+    { "techniqueID": "T1565", "score": 3, "comment": "Manipulacion, borrado o alteracion de datos." }
+  ]
+}
