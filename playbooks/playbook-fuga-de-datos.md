@@ -76,16 +76,17 @@ Como mínimo, en este playbook deben intervenir estas funciones:
         * **media**, si afecta a información interna limitada y sin datos personales;
         * **alta**, si afecta a información sensible o a varios usuarios o departamentos;
         * **crítica**, si incluye datos personales, información financiera, contractual o gran volumen de datos.
-5. **Formular preguntas clave.**
-    * Cuándo empezó la exfiltración y cuánto duró.
-    * Si fue un hecho único o una extracción continuada.
-    * Si existió escalado de privilegios, movimiento lateral o borrado de rastros.
-    * Si la información puede haberse publicado o transferido a terceros.
-    * Qué datos exactos salieron, en qué formato y con qué nivel de sensibilidad o protección regulatoria.
-    * Si el destino de la información es controlado por un atacante, por un tercero legítimo o por un servicio cloud mal configurado.
-    * Si la fuga sigue activa o puede reanudarse con las mismas credenciales, reglas o integraciones.
-    * Qué usuarios, departamentos o clientes concretos pueden verse afectados por la exposición.
-    * Qué plazos regulatorios o contractuales empiezan a correr desde la detección o confirmación.
+#### Preguntas clave de investigación
+
+* Cuándo empezó la exfiltración y cuánto duró.
+* Si fue un hecho único o una extracción continuada.
+* Si existió escalado de privilegios, movimiento lateral o borrado de rastros.
+* Si la información puede haberse publicado o transferido a terceros.
+* Qué datos exactos salieron, en qué formato y con qué nivel de sensibilidad o protección regulatoria.
+* Si el destino de la información es controlado por un atacante, por un tercero legítimo o por un servicio cloud mal configurado.
+* Si la fuga sigue activa o puede reanudarse con las mismas credenciales, reglas o integraciones.
+* Qué usuarios, departamentos o clientes concretos pueden verse afectados por la exposición.
+* Qué plazos regulatorios o contractuales empiezan a correr desde la detección o confirmación.
 
 ### Remediar
 
