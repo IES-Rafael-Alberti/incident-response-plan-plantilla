@@ -15,15 +15,17 @@ A continuación se presentan las descripciones, deberes y formación para cada u
   - SMEs para unidades de negocio
   - SMEs para funciones ejecutivas (Legal, RRHH, Dirección)
 
-En incidentes complejos (S1), la estructura puede ajustarse creando subequipos de Investigación, Remediación y Comunicación. Ver sección [Crear subequipos](../during.md#crear-subequipos) del plan.
+En incidentes complejos (S1), la estructura puede ajustarse creando subequipos de Investigación, Remediación y Comunicación. 
 
-Esta es una **estructura flexible**: en incidentes pequeños (S3/S4) el Adjunto puede actuar también como Escriba y Enlace interno.
+Ver sección [Crear subequipos](../during.md#crear-subequipos) del plan.
+
+Es una **estructura flexible**: en incidentes pequeños (S3/S4) el Adjunto puede actuar también como Escriba y Enlace interno.
 
 ## Tiempos de Guerra vs. Tiempos de Paz
 
 En las llamadas de respuesta a incidentes ("tiempos de guerra"), una estructura organizativa diferente anula las operaciones normales ("tiempos de paz"):
 
-- El IC está al mando. Independientemente de su rango habitual, es la persona de mayor rango en la llamada — por encima del CEO/Dirección General.
+- El IC está al mando. Independientemente de su rango habitual, es la persona de mayor rango en la llamada, por encima del CEO/Dirección General.
 - Los primeros respondedores de cada equipo/servicio son los de mayor rango para ese servicio.
 - Las decisiones las toma el IC tras considerar la información. Una vez tomada, es definitiva.
 - El IC puede tomar decisiones más arriesgadas de lo habitual en tiempos de paz.

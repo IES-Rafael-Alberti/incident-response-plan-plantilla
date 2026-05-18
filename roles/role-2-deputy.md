@@ -9,13 +9,13 @@ En Nexo Lebrija, en incidentes S3/S4, el Adjunto puede actuar también como Escr
 ### Funciones
 
 1. Plantear al IC cuestiones que de otro modo no se abordarían: temporizadores activos, elementos perdidos en el turno de lista, etc.
-2. Ser IC "de reserva" si el principal debe transicionar a rol de SME o abandonar la llamada.
+2. Ser IC "de reserva" si el principal debe cambiar de rol de SME o abandonar la llamada.
 3. Gestionar la llamada del incidente; estar preparado para retirar personas si el IC lo indica.
 4. Supervisar el estado del incidente y notificar al IC si la severidad escala.
 5. Controlar temporizadores:
     - Cuánto tiempo lleva activo el incidente.
-    - Notificar al IC cada 4 horas (o con la frecuencia acordada): "IC, el incidente lleva X horas activo."
-6. Supervisar plazos de tareas: "IC, el temporizador de investigación del equipo TIC ha vencido."
+    - Notificar al IC cada 4 horas (o con la frecuencia acordada).
+6. Supervisar plazos de tareas.
 
 ### Formación
 

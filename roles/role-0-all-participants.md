@@ -6,9 +6,9 @@ Todos los participantes en la respuesta a un incidente de Nexo Lebrija tienen la
 
 Esto incluye: personal de TIC, responsables de departamento (Facturación, RRHH, Legal, Compras, Comunicación, Delivery), Dirección General y cualquier SME convocado.
 
-### Deberes
+### Que se espera de ti
 
-#### Etiqueta de la llamada
+#### En la llamada
 
 - Únase tanto a la llamada (**664011121** / **https://zoom.us/j/nexolebrija-ir**) como al chat (**Discord `#[CODENAME-INCIDENTE]`**).
 - Mantenga el ruido de fondo al mínimo.
@@ -22,24 +22,18 @@ Esto incluye: personal de TIC, responsables de departamento (Facturación, RRHH,
 - Si se une solo a un canal (llamada o chat), no participe activamente: causa comunicación inconexa.
 - **Use terminología clara. Evite acrónimos y abreviaturas. La claridad es más importante que la brevedad.**
 
-##### Referencia: Frases comunes de coordinación
+##### Frases útiles de coordinación
 
-- **Ack/Rog:** "He recibido y entendido"
-- **Repita:** "Repita su último mensaje"
-- **En espera:** "Por favor, espere un momento"
-- **Wilco:** "Cumpliré"
+- **Recibido:** "He recibido y entendido."
+- **Repite:** "No he entendido, repite."
+- **En espera:** "Dame un momento."
+- **Confirmo:** "Lo haré."
 
-No invente abreviaturas nuevas. Sea explícito.
+No invente abreviaturas nuevas. Sea explícito. Con esto se espera maxima claridad y entendimiento de manera rápida y sencilla.
 
 #### Seguir al Incident Commander
 
-- Siga las instrucciones del IC.
-- No realice ninguna acción salvo que el IC lo indique.
-- El IC sondeará objeciones fuertes antes de asignar acciones importantes. Plantee sus objeciones si las tiene.
-- Una vez que el IC tome una decisión, sígala, aunque no esté de acuerdo.
-- Responda preguntas del IC de forma clara y concisa. "No lo sé" es aceptable. No adivine.
-- Si el IC le pide que investigue algo en X minutos, esté listo. Pedir más tiempo es aceptable, pero dé una estimación.
-
-### Formación
-
-Lea y comprenda este plan de respuesta a incidentes, incluyendo todos los roles y playbooks. Participe en el simulacro anual definido en el proyecto P13 del Plan Director de Seguridad.
+- Sigue sus instrucciones. No actúes por iniciativa propia salvo que el IC te lo haya encomendado expresamente.
+- Si el IC te pregunta algo, responde con lo que sabes. Decir "no lo sé" es perfectamente válido. Adivinar no lo es.
+- Si el IC te pide que investigues algo en 15 minutos, prepara una respuesta en ese tiempo. Si necesitas más, dilo y dale una estimación.
+- Si el IC toma una decisión con la que no estás de acuerdo, la llamada no es el lugar para discutirlo.

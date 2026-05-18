@@ -2,7 +2,7 @@
 
 ### Descripción
 
-El Escriba documenta la línea de tiempo del incidente a medida que avanza, asegurando que todas las decisiones y datos importantes queden registrados para revisión posterior. Se centra en el archivo del incidente en `ir.nexo-lebrija.tld/files/responses` y en los elementos de seguimiento para acción posterior.
+El Escriba documenta la línea de tiempo del incidente a medida que avanza, asegurando que todas las decisiones y datos importantes queden registrados para su revisión posterior. Se centra en el archivo del incidente en `ir.nexo-lebrija.tld/files/responses` y en los elementos de seguimiento para la acción posterior.
 
 ### Funciones
 
@@ -18,7 +18,7 @@ El Escriba documenta la línea de tiempo del incidente a medida que avanza, aseg
     - IOCs nuevos identificados durante la llamada.
     - Sistemas afectados confirmados y sus estados.
 
-Escribir es más arte que ciencia. El objetivo es mantener un registro preciso de los eventos importantes. Use su juicio.
+El objetivo es mantener un registro preciso de los eventos importantes.
 
 ### Formación
 
@@ -29,8 +29,3 @@ Leer y comprender este plan, incluyendo todos los roles y playbooks.
 - Excelentes habilidades de **comunicación verbal y escrita**.
 - Cualquiera puede actuar como Escriba; el IC lo designa al inicio de la llamada.
 - Habitualmente el Adjunto actúa como Escriba.
-
-#### Proceso de formación
-
-- Leer el plan completo incluyendo todos los roles y playbooks.
-- *OPCIONAL:* Paralelizar las acciones de un Escriba real durante un incidente o simulacro y pedir feedback al Escriba y al IC.

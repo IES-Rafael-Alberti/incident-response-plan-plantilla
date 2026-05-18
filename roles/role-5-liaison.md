@@ -2,7 +2,7 @@
 
 ### Descripción
 
-Los Enlace interactúan con equipos o partes interesadas fuera del equipo de respuesta a incidentes. En Nexo Lebrija existen dos tipos:
+El Enlace es quien gestiona todo lo que ocurre fuera del equipo de respuesta activo. Mientras el IC y los SMEs están resolviendo el problema técnico, el Enlace se asegura de que las personas correctas estén informadas, de que los mensajes externos sean precisos y estén aprobados, y de que la llamada principal no se llene de ruido ajeno al incidente.
 
 - **Enlace externo:** interactúa con clientes, medios, reguladores, fuerzas del orden y proveedores externos.
 - **Enlace interno:** interactúa con las partes interesadas internas de la organización (departamentos no convocados, Dirección General, RRHH, Legal).
@@ -53,5 +53,3 @@ Leer y comprender este plan de respuesta, incluyendo todos los roles y playbooks
 #### Requisitos previos
 
 - Excelentes habilidades de **comunicación verbal y escrita**.
-- *OPCIONAL:* Formación en atención al cliente o comunicación de crisis.
-- *OPCIONAL:* Conocimiento de las obligaciones de comunicación RGPD (notificación AEPD en ≤72h).
