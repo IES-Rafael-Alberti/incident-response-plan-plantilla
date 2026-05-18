@@ -4,7 +4,7 @@ La fase posterior al incidente convierte la respuesta en aprendizaje operativo. 
 
 La revisión posterior a la acción (After Action Review, AAR) debe programarse dentro de {{AAR_SLA}} tras declarar el cierre operativo del incidente. El Incident Commander puede adelantarla si el incidente fue S1/S2, afectó a datos personales, implicó a proveedores críticos, generó comunicación pública o dejó riesgos residuales relevantes.
 
-## Preparar el AAR
+## Preparar el AAR (After Action Review)
 
 1. Nombrar un propietario del AAR. Por defecto será el Escriba, salvo que el Incident Commander designe a otra persona.
 2. Invitar a los asistentes definidos en {{AAR_ATTENDEES}} e incluir, como mínimo:
@@ -12,8 +12,8 @@ La revisión posterior a la acción (After Action Review, AAR) debe programarse 
    * Escriba.
    * Líderes de Investigación, Remediación y Comunicación.
    * Propietarios de los activos o servicios afectados.
-   * CISO o dpto TIC que participaron en la respuesta.
-   * Legal/Cumplimiento si hubo datos personales, evidencias legales, proveedores, contratos o comunicación regulatoria.
+   * CISO o dpto. TIC que participaron en la respuesta.
+   * Legal/Cumplimiento si hubo datos personales, evidencias legales, proveedores o contratos.
    * Dirección para incidentes S1/S2 o cuando existan decisiones de continuidad de negocio.
    * Proveedores implicados: SOC/CERT externo, proveedor cloud, proveedor web/tienda, EDR, backup, seguro o comunicación externa, cuando hayan participado en la respuesta.
 3. Revisar antes de la reunión:
@@ -44,7 +44,7 @@ Documentar respuestas claras, verificables y sin atribución personal de culpa. 
 3. **Qué impacto tuvo.**
    * Indicar servicios afectados y duración de la indisponibilidad.
    * Registrar impacto sobre clientes, proveedores, empleados y obligaciones contractuales.
-   * Evaluar si afectó a datos personales y si se cumplieron requisitos RGPD/LOPDGDD.
+   * Evaluar si afectó a datos personales y si se cumplieron requisitos RGPD.
    * Comparar RTO/RPO esperados con RTO/RPO reales (RTO: Objetivo de Tiempo de Recuperación, RPO: Objetivo de Punto de Recuperación)
 4. **Cuáles fueron las causas raíz.**
    * Diferenciar causa técnica, causa organizativa y causa de proceso.
@@ -90,8 +90,8 @@ El AAR debe comprobar si la respuesta permitió mantener o recuperar los servici
 | Prevención | ¿Qué control habría evitado o reducido el incidente? |
 | Contención | ¿La propagación, exfiltración o exposición se cortó a tiempo? |
 | Erradicación | ¿Se eliminó la causa raíz o solo se mitigaron síntomas? |
-| Recuperación | ¿Los servicios críticos volvieron con datos íntegros, credenciales rotadas y monitorización? |
-| Cooperación | ¿Legal, Dirección, proveedores, INCIBE-CERT, SOC/CERT o comunidades MISP participaron cuando procedía? |
+| Recuperación | ¿Los servicios críticos volvieron con datos íntegros, cambio de credenciales y monitorización? |
+| Cooperación | ¿Legal, Dirección, proveedores, INCIBE-CERT, SOC/CERT o comunidades MISP participaron cuando hacía falta? |
 
 ## Acciones correctivas
 
@@ -132,10 +132,10 @@ Después de cada incidente real o simulacro, el propietario del AAR debe propone
 
 ## Validar la recuperación
 
-Antes de cerrar el AAR, el Incident Commander debe confirmar que la organización opera con un nivel de riesgo aceptado:
+Antes de cerrar el AAR, el Incident Commander debe confirmar que la organización trabaja con un nivel de riesgo aceptado:
 
 1. Los servicios críticos recuperados han sido validados por propietarios de negocio.
-2. Los accesos reabiertos usan credenciales rotadas, MFA y permisos mínimos cuando aplique.
+2. Los accesos reabiertos usan credenciales cambiadas, MFA y permisos mínimos cuando aplique.
 3. Los sistemas recuperados están parcheados, monitorizados y sin IOCs conocidos.
 4. Las copias de seguridad relevantes han sido verificadas o se ha creado una acción correctiva.
 5. Los proveedores implicados han entregado evidencias suficientes de contención, erradicación o recuperación.
