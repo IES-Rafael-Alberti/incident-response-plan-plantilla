@@ -44,8 +44,8 @@ Documentar respuestas claras, verificables y sin atribución personal de culpa. 
 3. **Qué impacto tuvo.**
    * Indicar servicios afectados y duración de la indisponibilidad.
    * Registrar impacto sobre clientes, proveedores, empleados y obligaciones contractuales.
-   * Evaluar si hubo afectación a datos personales y si se cumplieron requisitos RGPD/LOPDGDD.
-   * Comparar RTO/RPO esperados con RTO/RPO reales.
+   * Evaluar si afectó a datos personales y si se cumplieron requisitos RGPD/LOPDGDD.
+   * Comparar RTO/RPO esperados con RTO/RPO reales (RTO: Objetivo de Tiempo de Recuperación, RPO: Objetivo de Punto de Recuperación)
 4. **Cuáles fueron las causas raíz.**
    * Diferenciar causa técnica, causa organizativa y causa de proceso.
    * Relacionar la causa con riesgos del PDS, controles pendientes o controles insuficientes.
@@ -114,14 +114,13 @@ Las acciones correctivas habituales para {{COMPANY_NAME}} deben considerar:
 * Endurecimiento de MFA, contraseñas, permisos, cuentas privilegiadas y revisiones de acceso.
 * Segmentación, parcheado, reducción de exposición pública y bloqueo de servicios innecesarios.
 * Validación de copias de seguridad 3-2-1, restauraciones de prueba y protección frente a borrado o cifrado.
-* Mejoras en contratos, SLA, evidencias exigibles y canales de escalado con proveedores.
-* Formación específica para usuarios si el incidente estuvo relacionado con phishing, credenciales, uso de datos o puesto de trabajo.
+* Formación específica para trabajadores si el incidente estuvo relacionado con phishing, credenciales, uso de datos o puesto de trabajo.
 * Ajustes en comunicación interna, comunicación a clientes/proveedores y criterios de notificación a la AEPD.
-* Actualización de eventos MISP, reglas Sigma/YARA o feeds internos si hubo inteligencia útil.
+* Actualización de eventos MISP o feeds internos si hubo inteligencia útil.
 
 ## Actualizar plan, playbooks y matrices
 
-Después de cada incidente real, simulacro o ejercicio de mesa, el propietario del AAR debe proponer cambios documentales cuando proceda:
+Después de cada incidente real o simulacro, el propietario del AAR debe proponer cambios documentales cuando proceda:
 
 1. Actualizar `during.md` si cambian criterios de severidad, escalado, comunicación, evidencias o recuperación.
 2. Actualizar el playbook usado si hubo pasos ambiguos, ausentes o poco realistas.
