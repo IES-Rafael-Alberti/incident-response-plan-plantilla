@@ -2,39 +2,38 @@
 
 ### Description
 
-A Subject Matter Expert (SME) is a domain expert or designated owner of a team, component, or service (an "area").  You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluation investigation, remediation, and communication actions, and following through on them as tasked.
+Un Subject Matter Expert (SME) es una persona experta en un dominio o responsable designada de un equipo, componente o servicio. Su función es apoyar al Incident Commander para identificar la causa del incidente, proponer y evaluar acciones de investigación, remediación y comunicación, y ejecutar las tareas asignadas.
 
 ### Duties
 
-1. Diagnose common problems within your area of expertise.
-1. Rapidly fix issues found during an incident.
-1. Concise communication:
-    * Condition: What is the current state of your area? Is it healthy or not?
-    * Actions: What actions need to be taken if your area is not in a healthy state?
-    * Needs: What support do you need need to perform an action?
-1. Participate in the investigation, remediation, and/or communication phases of the response.
-1. Announce all suggestions to the incident commander, it is their decision on how to proceed, do not follow any actions unless told to do so.
+1. Diagnostica problemas comunes dentro de tu área de conocimiento.
+1. Corrige con rapidez los problemas identificados durante el incidente cuando el IC lo autorice.
+1. Comunica de forma concisa:
+    * Estado: ¿cuál es la situación actual de tu área? ¿Está funcionando correctamente?
+    * Acciones: ¿qué debe hacerse si tu área no está en estado saludable?
+    * Necesidades: ¿qué apoyo necesitas para ejecutar la acción?
+1. Participa en las fases de investigación, remediación y comunicación cuando corresponda.
+1. Presenta tus recomendaciones al Incident Commander. La decisión final sobre cómo proceder es suya; no ejecutes acciones sin autorización.
 
-If you are on-call for any team, you may be paged for an incident and will be expected to respond as a subject matter expert (SME) for your team, component, or service.  Anyone who is considered a "domain expert" can act as a SME for an incident. Typically the team's primary on-call will act as the SME for that team.
+Si estás de guardia para un equipo, puedes ser avisado durante un incidente y se espera que respondas como SME de tu equipo, componente o servicio. Cualquier persona considerada experta de dominio puede actuar como SME. Normalmente lo hará la persona principal de guardia del equipo.
 
 #### Prepare for On-Call Period
 
-1. Be prepared, by having already familiarized yourself with our incident response policies and procedures.
-1. Make sure you have set up your alerting methods in accordance with our on-call procedure.
-1. Check you can join the incident call. You may need to install a browser plugin.
-1. Be aware of your upcoming on-call time and arrange swaps around travel, vacations, appointments, etc.
-1. If you are an Incident Commander, make sure you are not on-call for your team at the same time as being on-call as Incident Commander.
+1. Prepárate con antelación leyendo las políticas y procedimientos de respuesta a incidentes.
+1. Asegura que tus métodos de aviso están configurados según el procedimiento de guardia.
+1. Comprueba que puedes unirte a la llamada de incidentes. Puede que necesites instalar un complemento o aplicación.
+1. Ten presente tu turno de guardia y organiza cambios ante viajes, vacaciones o citas.
+1. Si eres Incident Commander, evita estar de guardia simultáneamente como SME de tu equipo.
 
 #### During On-Call Period
 
-1. Have your laptop and Internet with you at all times during your on-call period (office, home, a MiFi, a phone with a tethering plan, etc).
-1. If you have important appointments, you need to get someone else on your team to cover that time slot in advance.
-1. When you receive an alert for an incident, you are expected to join the incident call and chat as quickly as possible (within minutes).
-1. You will be asked questions or given actions by the Incident Commander. Answer questions concisely, and follow all actions given (even if you disagree with them).
-1. If you're not sure about something, bring in other SMEs from your team that can help.  **Never hesitate to escalate**, if necessary.
-1. Do not blame.  This incident response process is completely blameless: blaming is counter productive and distracts from the problem at hand.  After-action review will identify places we can all improve.
+1. Ten portátil y conexión a Internet disponibles durante tu guardia.
+1. Si tienes compromisos importantes, busca cobertura en tu equipo con antelación.
+1. Cuando recibas una alerta de incidente, únete a la llamada y al chat lo antes posible.
+1. El Incident Commander te hará preguntas o te asignará acciones. Responde con concisión y ejecuta las acciones indicadas, aunque no estés de acuerdo.
+1. Si no estás seguro de algo, incorpora a otros SMEs de tu equipo. **No dudes en escalar** cuando sea necesario.
+1. No busques culpables. La respuesta a incidentes debe ser sin culpa: culpar distrae del problema. La revisión posterior identificará mejoras de proceso y control.
 
 ### Training
 
-* Read and understand the incident response plan, including the roles and playbooks.
-
+* Lee y comprende el plan de respuesta a incidentes, incluidos roles y playbooks.

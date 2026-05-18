@@ -3,47 +3,46 @@
 
 ### Description
 
-All participants in an incident response have the responsibility to help resolve the incident according to the incident response plan, under the authority of the Incident Commander.
+Todas las personas que participan en la respuesta tienen la responsabilidad de contribuir a resolver el incidente conforme al plan y bajo la autoridad del Incident Commander.
 
 ### Duties
 
 #### Exhibit Call Etiquette
 
-* Join both the call and chat.
-* Keep background noise to a minimum.
-* Keep your microphone muted until you have something to say.
-* Identify yourself when you join the call; State your name and role (_e.g._, "I am the SME for team x").
-* Speak up and speak clearly.
-* Be direct and factual.
-* Keep conversations/discussions short and to the point.
-* Bring any concerns to the Incident Commander (IC) on the call.
-* Respect time constraints given by the Incident Commander.
-* If you join only one channel (call or chat), do not actively participate, as it causes disjoined communication.
-* **Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.**
+* Únete tanto a la llamada como al chat.
+* Reduce al mínimo el ruido de fondo.
+* Mantén el micrófono silenciado hasta que tengas algo que aportar.
+* Identifícate al entrar en la llamada: indica tu nombre y rol (_e.g._, "soy SME del equipo X").
+* Habla con claridad y volumen suficiente.
+* Sé directo y factual.
+* Mantén las conversaciones breves y centradas en la decisión o acción necesaria.
+* Traslada cualquier preocupación al Incident Commander (IC) durante la llamada.
+* Respeta los tiempos marcados por el Incident Commander.
+* Si solo estás en un canal (llamada o chat), no participes activamente: genera comunicación fragmentada.
+* **Usa terminología clara y evita siglas o abreviaturas innecesarias. La claridad y la precisión son más importantes que la brevedad.**
 
 ##### Reference: Common Voice Procedure
 
-Standard radio [voice procedure](https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure) **is not required**, however you may hear certain terms (or need to use them yourself). Common phrases include:
+No es obligatorio usar el [procedimiento radiofónico estándar](https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure), pero puedes escuchar o necesitar algunas expresiones habituales:
 
-* **Ack/Rog:** "I have received and understood"
-* **Say Again:** "Repeat your last message"
-* **Standby:** "Please wait a moment for the next response"
-* **Wilco:** "Will comply"
+* **Ack/Rog:** "recibido y entendido".
+* **Say Again:** "repite el último mensaje".
+* **Standby:** "espera un momento para la siguiente respuesta".
+* **Wilco:** "recibido, se ejecutará".
 
-**Do not** invent new abbreviations; favor being explicit over implicit.
+**No** inventes nuevas abreviaturas; es preferible ser explícito a dar información por supuesta.
 
 #### Follow the Incident Commander
 
-The Incident Commander (IC) is the leader of the incident response process.
+El Incident Commander (IC) dirige el proceso de respuesta al incidente.
 
-* Follow instructions from the incident commander.
-* Do not perform any actions unless the incident commander has told you to do so.
-* The commander will typically poll for strong objections before tasking a large action. Raise objections if you have them.
-* Once the commander has made a decision, follow that decision (even if you disagreed).
-* Answer any questions the commander asks you in a clear and concise way.  Answering "I don't know" is acceptable. Do not guess.
-* The commander may ask you to investigate something and get back to them in X minutes. Be ready with an answer within that time.  Asking for more time is acceptable, but provide the commander an estimate.
+* Sigue las instrucciones del Incident Commander.
+* No ejecutes acciones si el Incident Commander no las ha autorizado.
+* Antes de ordenar una acción importante, el IC suele preguntar si existen objeciones fuertes. Plantea las tuyas si las tienes.
+* Una vez que el IC tome una decisión, ejecútala aunque no estés de acuerdo.
+* Responde a sus preguntas de forma clara y concisa. Decir "no lo sé" es aceptable; adivinar, no.
+* El IC puede pedirte que investigues algo y vuelvas con una respuesta en un plazo concreto. Prepárate para responder dentro de ese plazo. Si necesitas más tiempo, pídelo y da una estimación.
 
 ### Training
 
-Read and understand the incident response plan, including the roles and playbooks.
-
+Lee y comprende el plan de respuesta a incidentes, incluidos los roles y playbooks.

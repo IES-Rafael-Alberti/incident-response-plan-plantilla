@@ -2,24 +2,23 @@
 
 ### Description
 
-A Deputy Incident Commander (Deputy) is a direct support role for the Incident Commander (IC). The Deputy enables the IC to focus on the problem at hand, rather than worrying about documenting steps or monitoring timers. The deputy supports the IC and keeps them focused on the incident.  As a Deputy, you will be expected to take over command from the IC if they request it.
+El Deputy Incident Commander (Deputy) apoya directamente al Incident Commander (IC). Permite que el IC se concentre en el problema principal mientras controla tiempos, tareas pendientes y puntos que puedan quedar sin atender. Como Deputy, debes estar preparado para asumir el mando si el IC lo solicita.
 
 ### Duties
 
-1. Bring up issues to the Incident Commander that may otherwise not be addressed (keeping an eye on timers that have been started, circling back around to missed items from a roll call, etc).
-1. Be a "hot standby" Incident Commander, should the primary need to either transition to a SME, or otherwise have to step away from the IC role.
-1. Manage the incident call, and be prepared to remove people from the call if instructed by the Incident Commander.
-1. Monitor the status of the incident, and notify the IC if/when the incident escalates in severity level.
-1. Monitor timers:
-    * track how long the incident has been running
-    * notify the IC every X minutes so they can take actions (_e.g._, "IC, be advised the incident is now at the 10 minute mark.")
-1. Monitor task deadlines (e.g., "IC, be advised the timer for [TEAM]'s investigation is up.")
+1. Eleva al Incident Commander asuntos que podrían quedar sin tratar: temporizadores abiertos, puntos omitidos en el pase de lista o tareas sin responsable.
+1. Mantente como IC de respaldo por si el titular debe pasar a actuar como SME o abandonar temporalmente el rol.
+1. Ayuda a gestionar la llamada y prepárate para retirar participantes si el IC lo indica.
+1. Monitoriza el estado del incidente y avisa al IC si aumenta la severidad.
+1. Controla temporizadores:
+    * registra cuánto tiempo lleva activo el incidente;
+    * avisa al IC en los intervalos definidos para que pueda tomar decisiones.
+1. Controla vencimientos de tareas, por ejemplo: "IC, ha vencido el tiempo asignado a la investigación de [EQUIPO]".
 
 ### Training
 
-* Read and understand the incident response plan, including the roles and playbooks.
+* Lee y comprende el plan de respuesta a incidentes, incluidos roles y playbooks.
 
 #### Prerequisites
 
-* Be trained as an [Incident Commander](#role-incident-commander-ic).
-
+* Estar formado como [Incident Commander](#role-incident-commander-ic).

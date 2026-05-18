@@ -2,54 +2,53 @@
 
 ### Description
 
-Liaisons interact with other teams or stakeholders, outside the incident response team.  These often include:
+Los enlaces interactúan con equipos o partes interesadas fuera del equipo directo de respuesta. Normalmente incluyen:
 
-* External Liaison: responsible for interacting with customers, either directly, or via public communication.
-* Internal Liaison: responsible for interacting with internal stakeholders. Whether it's notifying an internal team of the incident, or mobilizing additional responders within the organization.
+* Enlace externo: responsable de interactuar con clientes, directamente o mediante comunicación pública.
+* Enlace interno: responsable de interactuar con partes interesadas internas, notificar a equipos afectados o movilizar respondedores adicionales.
 
 ### Duties
 
 #### External or Customer Liaison
 
-1. Post any publicly facing messages regarding the incident (Twitter, etc).
-1. Notify the IC of any customers or media coverage reporting affects of the incident.
-1. Provide customers with the external message from the post-mortem once it is completed.
-1. Contact or interact with external stakeholders such as vendors, partners, law enforcement, _etc._
-1. **Do not** feel responsible for creating every message: work with the Incident Commander and other stakeholders.
-1. As appropriate, keep customers informed during an incident.
-1. Act as a voice for our customers to the Incident Commander, as this is useful for IC decision making.
-1. Gaining message approval after you have crafted the public message: copy the message into chat and wait for verbal/written confirmation from the IC before proceeding.
+1. Publica mensajes externos sobre el incidente cuando estén aprobados.
+1. Informa al IC si clientes, medios u otras fuentes externas reportan efectos del incidente.
+1. Proporciona a los clientes el mensaje externo derivado del post-mortem cuando esté finalizado.
+1. Contacta o interactúa con partes externas como proveedores, socios o fuerzas y cuerpos de seguridad.
+1. **No** asumas que debes redactar todos los mensajes: trabaja con el Incident Commander y las partes implicadas.
+1. Mantén informados a los clientes durante el incidente cuando proceda.
+1. Traslada al Incident Commander la perspectiva de los clientes para apoyar la toma de decisiones.
+1. Antes de publicar, copia el mensaje en el chat y espera aprobación verbal o escrita del IC.
 
 ##### Tips for Public Messages
 
-* Prepare a default message in advance that can be used for the initial update if the scope of the issue is unknown.
-* Be honest. Do not lie or guess.
-* Describe our progress in resolving the incident.
+* Prepara con antelación un mensaje inicial para situaciones en las que el alcance aún no esté claro.
+* Sé honesto. No mientas ni especules.
+* Describe el progreso en la resolución del incidente.
   * _"We are aware of an incident..."_
   * _"We are investigating delayed notifications..."_
   * _"A fix has been applied and is currently being deployed..."_
   * _"The issue has been resolved..."_
-* Be clear about how the incident is affecting customers. This is the primary piece of information customers will care about.
-* Provide workarounds customers can use until the incident is resolved.
-* Don't estimate resolution times.
-* Provide the appropriate level of detail.
+* Explica con claridad cómo afecta el incidente a los clientes. Es la información que más les importa.
+* Proporciona alternativas temporales que puedan usar hasta resolver el incidente.
+* No estimes tiempos de resolución si no hay base suficiente.
+* Da el nivel de detalle adecuado.
 
 #### Internal Liaison
 
-1. Page SME's or other on-call personnel as instructed by the Incident Commander.
-1. Notify or mobilize other teams within the organization (e.g. Finance, Legal, Marketing), as instructed by the Incident Commander.
-1. Track and anticipate SMEs on the call.
-1. Interact with stakeholders and provide status updates as necessary.
-1. Interact with internal stakeholders to answer their questions, to keep the primary call distraction free.
-1. Provide regular status updates to the executive team, giving an executive summary of the current status.
+1. Avisa a SMEs u otro personal de guardia según indique el Incident Commander.
+1. Notifica o moviliza a otros equipos de la organización, como Finanzas, Legal o Comunicación, cuando lo indique el IC.
+1. Controla qué SMEs están en la llamada y anticipa necesidades de participación.
+1. Interactúa con partes interesadas y proporciona actualizaciones de estado cuando sea necesario.
+1. Responde preguntas internas para mantener libre de ruido la llamada principal.
+1. Proporciona actualizaciones periódicas al equipo ejecutivo con un resumen claro del estado.
 
 ### Training
 
-Read and understand the incident response plan, including the roles and playbooks.
+Lee y comprende el plan de respuesta a incidentes, incluidos roles y playbooks.
 
 #### Prerequisites
 
-* Excellent verbal and written **communication skills**.
-* _OPTIONAL:_ Customer support training.
-* _OPTIONAL:_ Corporate communication or marketing training.
-
+* Excelentes **habilidades de comunicación** verbal y escrita.
+* _OPCIONAL:_ formación en atención al cliente.
+* _OPCIONAL:_ formación en comunicación corporativa o marketing.

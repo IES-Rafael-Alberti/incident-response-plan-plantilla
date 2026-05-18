@@ -1,14 +1,14 @@
 # About
 
-This template was developed by the team at [Counteractive Security](https://www.counteractive.net), to help all organizations get a good start on a concise, directive, specific, flexible, and free incident response plan.  Build a [plan you will actually use](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) to respond effectively, minimize cost and impact, and get back to business as soon as possible.
+Esta plantilla fue desarrollada por el equipo de [Counteractive Security](https://www.counteractive.net) para ayudar a las organizaciones a partir de un plan de respuesta a incidentes conciso, directivo, específico, flexible y gratuito. El objetivo es construir un [plan que realmente se use](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) para responder con eficacia, reducir costes e impacto, y recuperar la actividad lo antes posible.
 
 ## License
 
-This template is provided under the Apache License, version 2.0.  You can view the source code for this plan at https://github.com/counteractive.
+Esta plantilla se distribuye bajo la licencia Apache, versión 2.0. Puedes consultar el código fuente del plan en https://github.com/counteractive.
 
 ## Instructions
 
-Customize this plan template for your own organization.  Instructions are available in the project's [README](https://github.com/counteractive).  For professional assistance with incident response, or with customizing, implementing, or testing your plan, please contact us by [email](mailto:support@counteractive.net) or [phone](tel:+18889255765).
+Adapta esta plantilla a tu organización. Las instrucciones están disponibles en el [README](https://github.com/counteractive) del proyecto. Para asistencia profesional en respuesta a incidentes, personalización, implantación o prueba del plan, contacta por [email](mailto:support@counteractive.net) o [teléfono](tel:+18889255765).
 
 ## References and Additional Reading
 
@@ -33,4 +33,3 @@ Customize this plan template for your own organization.  Instructions are availa
 * [Informed's NIMS Incident Command System Field Guide](https://www.amazon.com/gp/product/1284038408) (Michael J. Ward)
 * [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
 * [Blame. Language. Sharing.](http://fractio.nl/2015/10/30/blame-language-sharing/)
-

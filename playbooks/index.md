@@ -1,6 +1,5 @@
 # Playbooks
 
-The following playbooks capture common [investigation](#investigate), [remediation](#remediate), and [communication](#communicate) steps for particular types of incident.
+Los siguientes playbooks recogen pasos habituales de [investigación](#investigate), [remediación](#remediate) y [comunicación](#communicate) para tipos concretos de incidente.
 
-`TODO: Create additional playbooks for highly likely or highly damaging incident types.`
-
+`TODO: Crear playbooks adicionales para tipos de incidente muy probables o de alto impacto, justificándolos con el análisis de riesgos, la taxonomía de incidentes y las matrices MITRE ATT&CK / RE&CT cuando corresponda.`
