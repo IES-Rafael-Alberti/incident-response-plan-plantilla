@@ -32,6 +32,20 @@ Evidencias asociadas: `evidencias-mitre/attack-cloud-services-layer.json` y `evi
 5. Verificar dependencias: web/tienda, CRM/ERP, backups, correo o proveedor externo.
 6. Clasificar severidad según datos, continuidad, privilegios y extensión.
 
+#### Preguntas clave de la investigación
+
+* ¿Qué servicio cloud está afectado: correo, almacenamiento, CRM/ERP SaaS, backup, colaboración, panel web o integración?
+* ¿Qué cuenta, rol, grupo, token, API key, aplicación OAuth o dispositivo inició la actividad sospechosa?
+* ¿Qué cambios se realizaron en permisos, comparticiones, configuraciones, usuarios, roles o integraciones?
+* ¿Hay enlaces públicos, buckets/carpetas expuestas, descargas masivas o borrados anómalos?
+* ¿Desde qué IPs, países, dispositivos o clientes se accedió al servicio?
+* ¿El origen probable es credencial robada, error de configuración, token filtrado, proveedor cloud o endpoint comprometido?
+* ¿Qué datos personales, fiscales, contables o de clientes/proveedores pudieron exponerse?
+* ¿Qué procesos de negocio dependen del servicio afectado y qué impacto tendría revocar accesos o pausar integraciones?
+* ¿Qué visibilidad ofrece el proveedor cloud y cuándo caducan los logs necesarios?
+* ¿Qué IOCs, cuentas o patrones deben bloquearse, monitorizarse o compartirse en MISP si procede?
+* ¿Es necesario activar también los playbooks de identidad, fuga de datos, phishing o cadena de suministro?
+
 ### Remediar
 
 * **Planificar eventos de remediación** con TIC/CISO, propietarios del servicio, Legal y proveedor cloud.

@@ -21,8 +21,9 @@ build/_plan.md: *.md playbooks/*.md reference/*.md roles/*.md
 	mkdir -p build
 	cat during.md \
 	    playbooks/index.md playbooks/playbook-*.md \
+	    playbooks/diagramas-flujo-playbooks.md \
 	    roles/index.md roles/role-*.md \
-	    after.md about.md > build/_plan.md
+	    after.md reference/glossary.md about.md > build/_plan.md
 
 todo:
 	grep --color --recursive \

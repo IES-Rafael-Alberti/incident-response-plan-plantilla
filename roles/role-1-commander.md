@@ -13,7 +13,7 @@ En Nexo Lebrija, el IC es preferiblemente el CISO (cuando esté nombrado 'según
 Resuelve el incidente lo más rápido y seguro posible usando este plan como marco. Lidera al equipo en investigación, remediación y comunicación. Usa al Adjunto como soporte.
 
 1. **Preparación para incidentes:**
-    - Establecer y mantener los canales de comunicación de incidentes (Discord `#incidentes`, Zoom, teléfono 664011121).
+    - Establecer y mantener los canales de comunicación de incidentes en Discord (`#incidentes`, `#[CODENAME-INCIDENTE]` y canal de voz **Incidentes**).
     - Redirigir a las personas a estos canales cuando ocurra un incidente.
     - Formar a miembros del equipo en cómo comunicarse durante incidentes.
     - Organizar el simulacro anual ('proyecto P13 del PDS').

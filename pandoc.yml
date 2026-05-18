@@ -1,10 +1,12 @@
 ---
 title: 'Plan de respuesta a incidentes para {{COMPANY_NAME}}'
-author: 'Autor: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}'
-date: 'Revisión {{REVISION_NUMBER}}, Publicado {{RELEASE_DATE}}'
+author: '{{AUTHOR_NAME}} - {{AUTHOR_EMAIL}}'
+date: 'Revisión {{REVISION_NUMBER}}, publicado {{RELEASE_DATE}}'
 abstract: |
-  Este plan de respuesta a incidentes está basado en el plan conciso, directivo, específico, flexible y gratuito disponible [Github](https://github.com/counteractive/incident-response-plan-template) de Counteractive Security's y discutido en [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
+  Este documento define el Plan de Respuesta a Incidentes de {{COMPANY_NAME}}, adaptado al Plan Director de Seguridad, a los activos críticos de la organización y a los incidentes más probables para una asesoría que presta servicios a autónomos y PYMES.
 
-  Fue revisado por última vez el {{REVIEW_DATE}}.  Fue probado por última vez en {{TEST_DATE}}.
+  El plan incorpora playbooks sectoriales, flujo de toma de decisiones y escalado, criterios de ciberresiliencia, uso de MITRE ATT&CK y RE&CT, evidencias de Navigator y uso controlado de MISP para intercambio de inteligencia.
+
+  Última revisión: {{REVIEW_DATE}}. Última prueba: {{TEST_DATE}}.
 # geometry: margin=1.5in
 ---

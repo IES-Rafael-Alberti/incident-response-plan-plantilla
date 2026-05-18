@@ -39,6 +39,19 @@ Evidencias asociadas: `evidencias-mitre/attack-ransomware-layer.json` y `evidenc
    * Logs de EDR, SIEM, correo, VPN, firewall, DNS y servidores.
    * Muestras de malware si se pueden recoger sin aumentar el riesgo.
 
+#### Preguntas clave de la investigación
+
+* ¿Cuál fue el primer equipo, usuario o servidor con síntomas de cifrado?
+* ¿Qué vector inicial encaja mejor con las evidencias: phishing, credenciales válidas, VPN/RDP, vulnerabilidad expuesta, proveedor o software no autorizado?
+* ¿El cifrado sigue activo o la propagación está detenida?
+* ¿Qué activos críticos están afectados: CRM/ERP, servidores de archivos, aplicaciones, puestos o backups?
+* ¿Hay indicios de movimiento lateral mediante SMB, RDP, VPN, cuentas privilegiadas o herramientas administrativas?
+* ¿Se han borrado, cifrado o manipulado copias de seguridad?
+* ¿Existen evidencias de exfiltración previa al cifrado?
+* ¿Qué datos personales, fiscales, contables o contractuales pueden estar afectados?
+* ¿Qué IOCs deben bloquearse o compartirse en MISP con la clasificación TLP adecuada?
+* ¿Es necesario activar también los playbooks de phishing, identidad, fuga de datos, cloud o cadena de suministro?
+
 ### Remediar
 
 * **Planificar eventos de remediación** con equipos preparados para cortes de red, restauración y comunicación.

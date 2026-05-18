@@ -17,13 +17,14 @@ Evidencias MITRE/RE&CT: `evidencias-mitre/attack-cloud-services-layer.json` y `e
 ```mermaid
 flowchart TD
     A["Deteccion: Acceso cloud anomalo, token/API key expuesta o almacenamiento publico"] --> B["Abrir expediente y nombrar incidente"]
-    B --> C["Clasificar severidad S1-S4"]
-    C --> D{"S1/S2, datos personales o activo critico?"}
-    D -- "Si" --> E["Escalar a Incident Commander, DirecciÃ³n, Legal y ComunicaciÃ³n"]
-    D -- "No" --> F["Gestionar por TIC/CISO con seguimiento del IC"]
-    E --> G["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
-    F --> G
-    G --> H{"Compromiso confirmado?"}
+    B --> C["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
+    C --> Q["Responder preguntas clave de investigacion del playbook"]
+    Q --> D["Clasificar severidad S1-S4"]
+    D --> E{"S1/S2, datos personales o activo critico?"}
+    E -- "Si" --> F["Escalar a Incident Commander, Direccion, Legal y Comunicacion"]
+    E -- "No" --> G["Gestionar por TIC/CISO con seguimiento del IC"]
+    F --> H{"Compromiso confirmado?"}
+    G --> H
     H -- "No" --> I["Cerrar como evento, documentar y monitorizar"]
     H -- "Si" --> J["Contener con RE&CT: Revocar tokens, bloquear cuentas y cerrar comparticiones"]
     J --> K["Erradicar causa raiz, persistencia y configuraciones debiles"]
@@ -42,13 +43,14 @@ Evidencias MITRE/RE&CT: `evidencias-mitre/attack-data-breach-layer.json` y `evid
 ```mermaid
 flowchart TD
     A["Deteccion: Acceso, perdida, exposicion o exfiltracion de datos personales"] --> B["Abrir expediente y nombrar incidente"]
-    B --> C["Clasificar severidad S1-S4"]
-    C --> D{"S1/S2, datos personales o activo critico?"}
-    D -- "Si" --> E["Escalar a Incident Commander, DirecciÃ³n, Legal y ComunicaciÃ³n"]
-    D -- "No" --> F["Gestionar por TIC/CISO con seguimiento del IC"]
-    E --> G["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
-    F --> G
-    G --> H{"Compromiso confirmado?"}
+    B --> C["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
+    C --> Q["Responder preguntas clave de investigacion del playbook"]
+    Q --> D["Clasificar severidad S1-S4"]
+    D --> E{"S1/S2, datos personales o activo critico?"}
+    E -- "Si" --> F["Escalar a Incident Commander, Direccion, Legal y Comunicacion"]
+    E -- "No" --> G["Gestionar por TIC/CISO con seguimiento del IC"]
+    F --> H{"Compromiso confirmado?"}
+    G --> H
     H -- "No" --> I["Cerrar como evento, documentar y monitorizar"]
     H -- "Si" --> J["Contener con RE&CT: Cerrar exposicion, bloquear salida y preservar evidencias"]
     J --> K["Erradicar causa raiz, persistencia y configuraciones debiles"]
@@ -67,13 +69,14 @@ Evidencias MITRE/RE&CT: `evidencias-mitre/attack-web-provider-layer.json` y `evi
 ```mermaid
 flowchart TD
     A["Deteccion: Contenido web no autorizado, web shell o caida de web/tienda"] --> B["Abrir expediente y nombrar incidente"]
-    B --> C["Clasificar severidad S1-S4"]
-    C --> D{"S1/S2, datos personales o activo critico?"}
-    D -- "Si" --> E["Escalar a Incident Commander, DirecciÃ³n, Legal y ComunicaciÃ³n"]
-    D -- "No" --> F["Gestionar por TIC/CISO con seguimiento del IC"]
-    E --> G["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
-    F --> G
-    G --> H{"Compromiso confirmado?"}
+    B --> C["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
+    C --> Q["Responder preguntas clave de investigacion del playbook"]
+    Q --> D["Clasificar severidad S1-S4"]
+    D --> E{"S1/S2, datos personales o activo critico?"}
+    E -- "Si" --> F["Escalar a Incident Commander, Direccion, Legal y Comunicacion"]
+    E -- "No" --> G["Gestionar por TIC/CISO con seguimiento del IC"]
+    F --> H{"Compromiso confirmado?"}
+    G --> H
     H -- "No" --> I["Cerrar como evento, documentar y monitorizar"]
     H -- "Si" --> J["Contener con RE&CT: Activar mantenimiento, aislar web y bloquear origen malicioso"]
     J --> K["Erradicar causa raiz, persistencia y configuraciones debiles"]
@@ -92,13 +95,14 @@ Evidencias MITRE/RE&CT: `evidencias-mitre/attack-identity-layer.json` y `evidenc
 ```mermaid
 flowchart TD
     A["Deteccion: Inicio de sesion anomalo, cuenta abusada o permisos sospechosos"] --> B["Abrir expediente y nombrar incidente"]
-    B --> C["Clasificar severidad S1-S4"]
-    C --> D{"S1/S2, datos personales o activo critico?"}
-    D -- "Si" --> E["Escalar a Incident Commander, DirecciÃ³n, Legal y ComunicaciÃ³n"]
-    D -- "No" --> F["Gestionar por TIC/CISO con seguimiento del IC"]
-    E --> G["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
-    F --> G
-    G --> H{"Compromiso confirmado?"}
+    B --> C["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
+    C --> Q["Responder preguntas clave de investigacion del playbook"]
+    Q --> D["Clasificar severidad S1-S4"]
+    D --> E{"S1/S2, datos personales o activo critico?"}
+    E -- "Si" --> F["Escalar a Incident Commander, Direccion, Legal y Comunicacion"]
+    E -- "No" --> G["Gestionar por TIC/CISO con seguimiento del IC"]
+    F --> H{"Compromiso confirmado?"}
+    G --> H
     H -- "No" --> I["Cerrar como evento, documentar y monitorizar"]
     H -- "Si" --> J["Contener con RE&CT: Bloquear cuentas, revocar sesiones y retirar permisos"]
     J --> K["Erradicar causa raiz, persistencia y configuraciones debiles"]
@@ -117,13 +121,14 @@ Evidencias MITRE/RE&CT: `evidencias-mitre/attack-phishing-layer.json` y `evidenc
 ```mermaid
 flowchart TD
     A["Deteccion: Correo sospechoso, enlace malicioso o adjunto peligroso"] --> B["Abrir expediente y nombrar incidente"]
-    B --> C["Clasificar severidad S1-S4"]
-    C --> D{"S1/S2, datos personales o activo critico?"}
-    D -- "Si" --> E["Escalar a Incident Commander, DirecciÃ³n, Legal y ComunicaciÃ³n"]
-    D -- "No" --> F["Gestionar por TIC/CISO con seguimiento del IC"]
-    E --> G["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
-    F --> G
-    G --> H{"Compromiso confirmado?"}
+    B --> C["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
+    C --> Q["Responder preguntas clave de investigacion del playbook"]
+    Q --> D["Clasificar severidad S1-S4"]
+    D --> E{"S1/S2, datos personales o activo critico?"}
+    E -- "Si" --> F["Escalar a Incident Commander, Direccion, Legal y Comunicacion"]
+    E -- "No" --> G["Gestionar por TIC/CISO con seguimiento del IC"]
+    F --> H{"Compromiso confirmado?"}
+    G --> H
     H -- "No" --> I["Cerrar como evento, documentar y monitorizar"]
     H -- "Si" --> J["Contener con RE&CT: Purgar mensajes, bloquear URL/dominios y aislar equipos afectados"]
     J --> K["Erradicar causa raiz, persistencia y configuraciones debiles"]
@@ -142,13 +147,14 @@ Evidencias MITRE/RE&CT: `evidencias-mitre/attack-ransomware-layer.json` y `evide
 ```mermaid
 flowchart TD
     A["Deteccion: Cifrado, nota de rescate o actividad masiva anomala"] --> B["Abrir expediente y nombrar incidente"]
-    B --> C["Clasificar severidad S1-S4"]
-    C --> D{"S1/S2, datos personales o activo critico?"}
-    D -- "Si" --> E["Escalar a Incident Commander, DirecciÃ³n, Legal y ComunicaciÃ³n"]
-    D -- "No" --> F["Gestionar por TIC/CISO con seguimiento del IC"]
-    E --> G["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
-    F --> G
-    G --> H{"Compromiso confirmado?"}
+    B --> C["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
+    C --> Q["Responder preguntas clave de investigacion del playbook"]
+    Q --> D["Clasificar severidad S1-S4"]
+    D --> E{"S1/S2, datos personales o activo critico?"}
+    E -- "Si" --> F["Escalar a Incident Commander, Direccion, Legal y Comunicacion"]
+    E -- "No" --> G["Gestionar por TIC/CISO con seguimiento del IC"]
+    F --> H{"Compromiso confirmado?"}
+    G --> H
     H -- "No" --> I["Cerrar como evento, documentar y monitorizar"]
     H -- "Si" --> J["Contener con RE&CT: Aislar equipos, proteger backups y cortar SMB/RDP/VPN no imprescindible"]
     J --> K["Erradicar causa raiz, persistencia y configuraciones debiles"]
@@ -167,13 +173,14 @@ Evidencias MITRE/RE&CT: `evidencias-mitre/attack-supply-chain-layer.json` y `evi
 ```mermaid
 flowchart TD
     A["Deteccion: Proveedor, integracion o actualizacion sospechosa"] --> B["Abrir expediente y nombrar incidente"]
-    B --> C["Clasificar severidad S1-S4"]
-    C --> D{"S1/S2, datos personales o activo critico?"}
-    D -- "Si" --> E["Escalar a Incident Commander, DirecciÃ³n, Legal y ComunicaciÃ³n"]
-    D -- "No" --> F["Gestionar por TIC/CISO con seguimiento del IC"]
-    E --> G["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
-    F --> G
-    G --> H{"Compromiso confirmado?"}
+    B --> C["Investigar con ATT&CK: vector, alcance, evidencias e IOCs"]
+    C --> Q["Responder preguntas clave de investigacion del playbook"]
+    Q --> D["Clasificar severidad S1-S4"]
+    D --> E{"S1/S2, datos personales o activo critico?"}
+    E -- "Si" --> F["Escalar a Incident Commander, Direccion, Legal y Comunicacion"]
+    E -- "No" --> G["Gestionar por TIC/CISO con seguimiento del IC"]
+    F --> H{"Compromiso confirmado?"}
+    G --> H
     H -- "No" --> I["Cerrar como evento, documentar y monitorizar"]
     H -- "Si" --> J["Contener con RE&CT: Suspender accesos de proveedor y pausar integraciones"]
     J --> K["Erradicar causa raiz, persistencia y configuraciones debiles"]

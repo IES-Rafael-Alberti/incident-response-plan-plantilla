@@ -38,6 +38,20 @@ Evidencias asociadas: `evidencias-mitre/attack-phishing-layer.json` y `evidencia
    * Campaña masiva sin interacción confirmada.
 7. Clasificar severidad según usuarios afectados, credenciales comprometidas, datos personales y propagación.
 
+#### Preguntas clave de la investigación
+
+* ¿Cuál fue el primer buzón que recibió o reportó el mensaje?
+* ¿Cuántos usuarios recibieron el correo y cuántos interactuaron con enlaces, adjuntos o formularios?
+* ¿Alguien introdujo credenciales, descargó archivos, habilitó macros o ejecutó contenido?
+* ¿El mensaje suplanta a un cliente, proveedor, entidad pública, banco, Dirección o personal interno?
+* ¿Qué cabeceras, dominios, URLs, IPs, hashes o asuntos pueden usarse como IOCs?
+* ¿Hay inicios de sesión posteriores desde ubicaciones, dispositivos o IPs anómalas?
+* ¿Se crearon reglas de reenvío, delegaciones, aplicaciones OAuth o sesiones persistentes?
+* ¿Se accedió a CRM/ERP, correo, cloud, servidores de archivos o datos personales tras la interacción?
+* ¿La campaña sigue activa o ha llegado a clientes/proveedores?
+* ¿Qué IOCs deben bloquearse y, si procede, compartirse en MISP con la clasificación TLP adecuada?
+* ¿Es necesario activar también los playbooks de identidad, ransomware o fuga de datos?
+
 ### Remediar
 
 * **Planificar eventos de remediación** con correo, EDR, directorio, soporte y comunicaciones internas.

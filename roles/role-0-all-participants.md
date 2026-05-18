@@ -10,7 +10,7 @@ Esto incluye: personal de TIC, responsables de departamento (Facturación, RRHH,
 
 #### En la llamada
 
-- Únase tanto a la llamada (**664011121** / **https://zoom.us/j/nexolebrija-ir**) como al chat (**Discord `#[CODENAME-INCIDENTE]`**).
+- Únase al canal de voz de Discord **Incidentes** y al canal privado de chat **Discord `#[CODENAME-INCIDENTE]`**.
 - Mantenga el ruido de fondo al mínimo.
 - Mantenga el micrófono silenciado hasta tener algo que decir.
 - Identifíquese al unirse: nombre y rol (ejemplo: "Soy el SME de TIC, responsable de servidores").

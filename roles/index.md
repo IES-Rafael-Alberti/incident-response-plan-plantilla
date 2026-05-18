@@ -17,7 +17,7 @@ A continuación se presentan las descripciones, deberes y formación para cada u
 
 En incidentes complejos (S1), la estructura puede ajustarse creando subequipos de Investigación, Remediación y Comunicación. 
 
-Ver sección [Crear subequipos](../during.md#crear-subequipos) del plan.
+Ver sección [Subequipos](../during.md#subequipos) del plan.
 
 Es una **estructura flexible**: en incidentes pequeños (S3/S4) el Adjunto puede actuar también como Escriba y Enlace interno.
 

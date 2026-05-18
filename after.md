@@ -12,9 +12,9 @@ La revisión posterior a la acción (After Action Review, AAR) debe programarse 
    * Escriba.
    * Líderes de Investigación, Remediación y Comunicación.
    * Propietarios de los activos o servicios afectados.
-   * CISO o dpto. TIC que participaron en la respuesta.
+   * CISO o Departamento TIC que participaron en la respuesta.
    * Legal/Cumplimiento si hubo datos personales, evidencias legales, proveedores o contratos.
-   * Dirección para incidentes S1/S2 o cuando hayan decisiones de continuidad de negocio.
+   * Dirección para incidentes S1/S2 o cuando haya decisiones de continuidad de negocio.
    * Proveedores implicados: SOC/CERT externo, proveedor cloud, proveedor web/tienda, EDR, backup, seguro o comunicación externa, cuando hayan participado en la respuesta.
 3. Revisar antes de la reunión:
    * Expediente del incidente.
@@ -42,7 +42,7 @@ Todo lo que se documente aquí debe ser claro, verificable y sin atribución per
    * Señalar decisiones de escalado, contención, comunicación y recuperación.
    * Registrar qué controles de prevención, detección, contención y recuperación funcionaron.
 3. **Qué impacto tuvo.**
-   * Indicar servicios afectados y cuanto tiempo no estuvieron disponibles.
+   * Indicar servicios afectados y cuánto tiempo no estuvieron disponibles.
    * Registrar impacto sobre clientes, proveedores, empleados y obligaciones contractuales.
    * Evaluar si afectó a datos personales y si se cumplieron requisitos RGPD.
    * Comparar RTO/RPO esperados con RTO/RPO reales (RTO: Objetivo de Tiempo de Recuperación, RPO: Objetivo de Punto de Recuperación)
@@ -54,7 +54,7 @@ Todo lo que se documente aquí debe ser claro, verificable y sin atribución per
    * Revisar si se creó un evento en MISP cuando existían IOCs o TTPs útiles para terceros de confianza.
    * Confirmar que el TLP aplicado fue correcto.
    * Confirmar que no se compartieron datos personales, credenciales, secretos, contratos ni evidencias forenses sensibles.
-   * Registrar identificador del evento MISP, destinatarios/comunidades, fecha de publicación y quien autorizó el intercambio.
+   * Registrar identificador del evento MISP, destinatarios/comunidades, fecha de publicación y quién autorizó el intercambio.
 6. **Cómo se debe mejorar.**
    * Definir acciones correctivas con propietario, prioridad, fecha límite y evidencia esperada.
    * Clasificar cada acción como prevención, identificación, detección, contención, erradicación, recuperación o cooperación con terceros.
@@ -139,7 +139,7 @@ Antes de cerrar el AAR, el Incident Commander debe confirmar que la organizació
 3. Los sistemas recuperados están parcheados, monitorizados y sin IOCs conocidos.
 4. Las copias de seguridad relevantes han sido verificadas o se ha creado una acción correctiva al respecto.
 5. Los proveedores implicados han entregado evidencias suficientes de contención, erradicación o recuperación.
-6. Legal/Cumplimiento han evaluado la obligaciones de comunicación interna, externa, contractual o regulatoria.
+6. Legal/Cumplimiento ha evaluado las obligaciones de comunicación interna, externa, contractual o regulatoria.
 7. Se mantiene monitorización reforzada durante el periodo definido en `during.md` o por el Incident Commander.
 8. Los riesgos residuales han sido aceptados formalmente por Dirección cuando proceda.
 

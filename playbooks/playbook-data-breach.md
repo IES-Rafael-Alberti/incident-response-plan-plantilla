@@ -37,6 +37,21 @@ Evidencias asociadas: `evidencias-mitre/attack-data-breach-layer.json` y `eviden
 5. Determinar si hay exfiltración confirmada o solo exposición potencial.
 6. Notificar inmediatamente a Legal/Cumplimiento para evaluar obligaciones RGPD/LOPDGDD.
 
+#### Preguntas clave de la investigación
+
+* ¿Qué tipo de brecha se ha producido: acceso no autorizado, exfiltración, envío erróneo, pérdida, publicación accidental, modificación o borrado?
+* ¿Qué datos personales están afectados: identificación, contacto, fiscales, contables, laborales, contratos, nóminas o datos de proveedores?
+* ¿Dónde estaban los datos: CRM/ERP, correo, servidor de archivos, cloud, web/tienda, backup o proveedor?
+* ¿Cuántas personas están afectadas o potencialmente afectadas?
+* ¿Desde cuándo estuvieron accesibles, expuestos o manipulados los datos?
+* ¿Quién accedió, descargó, envió, modificó o borró la información?
+* ¿La exfiltración está confirmada o solo existe exposición potencial?
+* ¿Qué logs, mensajes, enlaces, transferencias o capturas prueban el alcance?
+* ¿Hay riesgo alto para derechos y libertades de las personas afectadas?
+* ¿Debe notificarse a la AEPD dentro del plazo aplicable o comunicarse a personas afectadas?
+* ¿Qué IOCs o patrones pueden compartirse en MISP sin incluir datos personales ni información sensible?
+* ¿Es necesario activar también los playbooks de phishing, identidad, cloud, web o cadena de suministro?
+
 ### Remediar
 
 * **Planificar eventos de remediación** con TIC/CISO, Legal, Comunicación y propietarios de datos.
