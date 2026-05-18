@@ -325,4 +325,4 @@ Después de resolver el incidente, el equipo se reúne:
 
 **Documento**: Playbook de Ingeniería Social
 **Grupo G5**: Iván Paúl Alba, Sergio González Noria, Manuel Pérez Romero, Javier Calvillo Acebedo
-**Fecha**: Mayo 2026
+**Fecha**: 18 de Mayo de 2026
