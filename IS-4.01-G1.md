@@ -1,5 +1,14 @@
 ## Indice
 ## Introducción
+
+En la actualidad, la seguridad de la información se ha convertido en un aspecto fundamental para cualquier organización que dependa de sistemas digitales para desarrollar su actividad diaria. En empresas como la analizada en este trabajo, donde buena parte de la operativa se apoya en el correo corporativo, el almacenamiento en la nube, la web, la tienda online y distintas aplicaciones de gestión, cualquier incidente de seguridad puede afectar de forma directa a la continuidad del negocio, a la protección de los datos y a la confianza de clientes y proveedores.
+
+A partir de esta realidad, el presente trabajo se plantea como una propuesta integral orientada a mejorar la seguridad de la empresa desde una perspectiva práctica y organizada. No se trata solo de identificar riesgos o enumerar amenazas, sino de analizar la situación actual de la organización, estudiar sus activos más importantes, valorar las principales debilidades existentes y, a partir de ello, definir medidas concretas que permitan reforzar su nivel de protección y su capacidad de respuesta ante incidentes.
+
+Uno de los aspectos más relevantes del trabajo es que no se limita a un enfoque teórico. A lo largo del desarrollo se adaptan metodologías, referencias y buenas prácticas al contexto real de la empresa objeto de estudio, teniendo en cuenta su tamaño, su dependencia de terceros, su nivel de madurez y los riesgos ya identificados. De este modo, se busca que las medidas propuestas no solo sean correctas desde el punto de vista técnico o metodológico, sino también razonables, aplicables y útiles dentro de un entorno empresarial real.
+
+En conjunto, este trabajo pretende mostrar la importancia de abordar la ciberseguridad de forma estructurada, conectando la prevención, la gestión del riesgo y la respuesta a incidentes dentro de una misma línea de trabajo. El propósito final es contribuir a que la organización esté mejor preparada para proteger sus activos críticos, responder con mayor eficacia ante situaciones adversas y mantener la continuidad de su actividad en un entorno cada vez más expuesto a amenazas de seguridad.
+
 ## Plan de respuesta
 ## Playbooks
 ## Respuesta a las preguntas
