@@ -1,10 +1,10 @@
-# Playbook: Ingeniería Social y Phishing
+# Playbook: Ingeniería Social
 
 ## Resumen
 
-Este playbook cubre la respuesta a incidentes de ingeniería social y phishing. Estos ataques buscan engañar a empleados para obtener información sensible, credenciales, o acceso a sistemas. La ingeniería social puede ocurrir por correo, teléfono, redes sociales, o en persona.
+Este playbook cubre la respuesta a incidentes de ingeniería social. Estos ataques buscan engañar a empleados para obtener información sensible, credenciales, o acceso a sistemas. La ingeniería social puede ocurrir por teléfono, redes sociales, o en persona con excusas falsas para ganar confianza.
 
-Para nuestra empresa IT con empleados en varias ubicaciones y acceso a datos de clientes, este es uno de los ataques más probables. Muchos empleados son nuevos o no tienen entrenamiento en seguridad. Los atacantes saben esto.
+Para nuestra empresa IT con empleados en varias ubicaciones y acceso a datos de clientes, este es un riesgo significativo. Muchos empleados son nuevos o no tienen entrenamiento en reconocer intentos de manipulación. Los atacantes saben esto.
 
 ---
 
@@ -12,42 +12,44 @@ Para nuestra empresa IT con empleados en varias ubicaciones y acceso a datos de 
 
 **Importante**: Los siguientes pasos no son puramente secuenciales. Asigna tareas a diferentes personas o equipos para que trabajen simultáneamente.
 
-Mientras el equipo técnico investiga en los sistemas, el equipo de comunicación puede estar preparando mensajes, y el equipo de contención puede estar bloqueando correos similares. No esperes a que termine una fase para empezar la siguiente.
+Mientras el equipo técnico investiga en los sistemas, el equipo de comunicación puede estar preparando mensajes de alerta, y el equipo de contención puede estar protegiendo credenciales o accesos. No esperes a que termine una fase para empezar la siguiente.
 
 ---
 
 ## Investigar
 
-Cuando se reporta un correo sospechoso, el equipo de respuesta reúne información rápidamente.
+Cuando se reporta un posible ataque de ingeniería social, el equipo de respuesta reúne información rápidamente.
 
-### Paso 1: Recolectar Información Inicial
+### Paso 1: Recolectar Información del Incidente
 
-**Quién**: Investigador de seguridad o administrador de correo
+**Quién**: Investigador de seguridad o administrador
 **Tiempo**: Primeros 5-10 minutos
 **Acciones**:
 
-- Contacta inmediatamente al usuario que reportó el correo. Pregunta:
-  - ¿Cuándo recibió el correo? (hora exacta)
-  - ¿De quién dice que vino? ¿La dirección de correo se ve correcta?
-  - ¿Qué decía el asunto?
-  - ¿Qué pasó? ¿Descargó un archivo? ¿Hizo clic en un enlace? ¿Introdujo contraseña en algún sitio?
-  - ¿Otros compañeros recibieron correos similares?
+- Contacta inmediatamente al usuario que reportó el incidente. Pregunta:
+  - ¿Cuándo ocurrió? (hora exacta)
+  - ¿Quién contactó al empleado? ¿Nombre o información que proporcionó?
+  - ¿Cómo fue el contacto? (teléfono, redes sociales, en persona, ...)
+  - ¿Qué información buscaban?
+  - ¿Qué hizo el empleado? ¿Dio información? ¿Credenciales? ¿Acceso físico?
+  - ¿Otros compañeros recibieron contactos similares?
 
-- No dejes que el usuario borre el correo. Necesitas mantenerlo como prueba.
-- Si es urgente (el usuario hizo clic), avisa al Incident Commander de inmediato.
+- Si el usuario entregó credenciales, notifica de inmediato al equipo de sistemas.
+- Si involucró acceso físico o ubicación, documenta detalles exactos.
+- Si es urgente (el usuario dio credenciales), avisa al Incident Commander de inmediato.
 
-### Paso 2: Buscar Otros Correos Similares
+### Paso 2: Buscar Otros Incidentes Similares
 
-**Quién**: Administrador de correo, en paralelo con Paso 1
+**Quién**: Investigador de seguridad, en paralelo con Paso 1
 **Tiempo**: 10-15 minutos
 **Acciones**:
 
-- En el servidor de correo, busca correos del mismo remitente o con asuntos similares.
-- Busca palabras clave del asunto en otros correos (a menudo los atacantes envían múltiples variantes).
-- Identifica a cuántas personas llegó este correo.
-- Usa reglas de búsqueda como: "asunto contiene: 'Verifica tu cuenta'" o "remitente es: sender@domain.com"
+- Revisa reportes recientes: ¿hay otros empleados reportando contactos similares?
+- Busca patrones: ¿mismo número de teléfono? ¿Mismo nombre falso? ¿Misma excusa o historia?
+- Revisa redes sociales: ¿perfiles falsos que finjan ser empleados de la empresa?
+- Busca en logs de acceso: ¿hay intentos de acceso sospechosos recientes?
 
-**Resultado esperado**: Lista de todos los usuarios que recibieron el correo malicioso.
+**Resultado esperado**: Lista de todos los empleados potencialmente contactados por el mismo atacante.
 
 ### Paso 3: Evaluar el Riesgo Inicial
 
@@ -57,17 +59,17 @@ Cuando se reporta un correo sospechoso, el equipo de respuesta reúne informaci�
 
 Clasifica el incidente según lo que pasó:
 
-- **Bajo riesgo**: El usuario vio el correo, le pareció sospechoso, no hizo nada, lo reportó.
-  - Acción siguiente: Contención (bloquear). No es urgente.
+- **Bajo riesgo**: El empleado vio el contacto sospechoso, no confió, lo reportó.
+  - Acción siguiente: Documentar. Alerta preventiva.
   
-- **Riesgo moderado**: El usuario hizo clic en el enlace pero no introdujo información.
-  - Acción siguiente: Investigar si descargó malware. Monitorear cuenta.
+- **Riesgo moderado**: El empleado proporcionó información no sensible (ej: extensión, nombre del jefe).
+  - Acción siguiente: Investigación técnica. Monitorear acceso.
   
-- **Riesgo alto**: El usuario descargó un archivo del correo.
-  - Acción siguiente: Investigar malware inmediatamente. Escanear máquina.
+- **Riesgo alto**: El empleado proporcionó información sensible o acceso limitado.
+  - Acción siguiente: Investigación técnica inmediata. Cambiar credenciales.
   
-- **Riesgo crítico**: El usuario introdujo su contraseña en un sitio falso.
-  - Acción siguiente: Cambiar contraseña de inmediato. Investigar acceso no autorizado a su cuenta.
+- **Riesgo crítico**: El empleado proporcionó credenciales administrativas o permitió acceso físico.
+  - Acción siguiente: Cambiar credenciales de inmediato. Investigación forense.
 
 **Comunica el nivel de riesgo al Incident Commander para que decida si esto necesita activación total del equipo o solo respuesta técnica**.
 
@@ -77,21 +79,19 @@ Clasifica el incidente según lo que pasó:
 **Tiempo**: Depende de hallazgos
 **Acciones**:
 
-Si el usuario hizo clic en un enlace:
-- Identifica la URL. ¿Es un sitio falso tratando de copiar un sitio legítimo? ¿O es un sitio comprometido?
-- Busca en indicadores de compromiso (IOCs) bases de datos como VirusTotal o urlhaus.
-- Si es un sitio falso, documenta: IP del servidor, registrador de dominio, cuándo fue registrado.
+Si se proporcionaron credenciales:
+- Busca intentos de inicio de sesión con esa cuenta desde ubicaciones anormales.
+- Busca acceso a sistemas o datos que ese usuario normalmente no accede.
+- Revisa qué pasó después de que se entregaron las credenciales.
 
-Si el usuario descargó un archivo:
-- Obtén el archivo (de la máquina del usuario, cuidadosamente, sin ejecutarlo).
-- Sube a VirusTotal para análisis.
-- Si es detectado como malware, identifica el tipo.
-- Si no es detectado pero es sospechoso (ej: .exe con nombre falso), envía para análisis profundo.
+Si hubo acceso físico comprometido:
+- Revisa logs de acceso físico (puertas, tarjetas, video).
+- ¿Qué sistemas o ubicaciones fueron accedidos?
+- ¿Qué se movió, copió, o modificó?
 
-Si el usuario introdujo credenciales:
-- Busca intentos de inicio de sesión en esa cuenta desde ubicaciones raras.
-- Busca acceso a datos que normalmente ese usuario no accede.
-- Revisa qué pasó después del compromiso de credenciales.
+Si involucró información de sistemas:
+- Busca si esa información (nombres de servidores, IP, ...) se usa en otros ataques.
+- Revisa si alguien accedió a información similar después de la llamada.
 
 ---
 
@@ -101,107 +101,88 @@ La remediación ocurre en tres fases: Contención, Erradicación, Recuperación.
 
 ### Contención
 
-**Objetivo**: Evitar que se propague el daño. Detener el correo, proteger la cuenta, aislar máquinas infectadas si es necesario.
+**Objetivo**: Evitar que la información comprometida se use para daño mayor. Proteger credenciales y accesos.
 
-#### Paso 1: Bloquear el Correo Malicioso
+#### Paso 1: Proteger Credenciales Comprometidas
 
-**Quién**: Administrador de correo
+**Quién**: Administrador de sistemas
 **Tiempo**: 5-10 minutos
 **Acciones**:
 
-- En el servidor de correo, crea una regla para bloquear correos de ese remitente.
-- Bloquea también el dominio si es necesario.
-- Retira el correo de las bandejas de otros usuarios que lo recibieron. No dejes que otros lo abran.
-- Si es una campaña grande, considera bloquear palabras clave del asunto (temporalmente).
-
-**Herramientas sugeridas**: Panel de administración del servidor de correo
-
-**Resultado**: El remitente es bloqueado. Otros empleados no pueden abrir correos similares.
-
-#### Paso 2: Proteger la Cuenta del Usuario Afectado
-
-**Quién**: Administrador de sistemas
-**Tiempo**: 5-15 minutos, al mismo tiempo que el Paso 1
-**Acciones**:
-
-Si el usuario introdujo su contraseña:
+Si se comprometieron credenciales:
 - Cambia la contraseña inmediatamente. Una contraseña fuerte, diferente a la anterior.
 - Si el usuario tiene privilegios de administrador, cambia esas credenciales también.
-- Si es posible, requiere autenticación de dos factores para esa cuenta (si no la tiene).
-- Informa al usuario que su contraseña fue comprometida y que ha sido cambiada.
+- Requiere autenticación de dos factores para esa cuenta (si no la tiene).
+- Informa al usuario que su información fue comprometida y que ha sido cambiada.
 
-Si solo hizo clic pero no introdujo contraseña:
-- No cambies contraseña ahora (no hay indicación de compromiso).
-- Pero notifica al usuario. Explica qué vio. Educa.
+Si se proporcionó información no-técnica (nombre del jefe, departamentos, ...):
+- No cambies credenciales (no hay indicación de compromiso técnico).
+- Pero notifica al usuario. Explica qué pasó. Educa sobre ingeniería social.
 
 **Herramientas sugeridas**: Active Directory, panel de cuentas de usuario
 
-#### Paso 3: Investigar Acceso No Autorizado (si hubo compromiso de credenciales)
+#### Paso 2: Investigar Acceso No Autorizado
 
 **Quién**: Investigador técnico
 **Tiempo**: 15-30 minutos, en paralelo
 **Acciones**:
 
-- Revisa logs de acceso. ¿Alguien usó esa cuenta desde una ubicación anormal? ¿A una hora rara?
-- Si es correo, revisa si alguien leyó correos, reenvió correos, o creó reglas de reenvío.
-- Si es acceso a archivos, ¿qué archivos fueron accedidos? ¿Se descargaron? ¿Se modificaron?
-- Si es acceso a aplicaciones (ERP, CRM), ¿qué datos se vieron?
+- Revisa logs de acceso: ¿alguien usó esa cuenta desde ubicación/hora anormal?
+- ¿Se accedió a sistemas críticos? ¿Se descargaron datos? ¿Se modificó algo?
+- ¿Se crearon reglas de reenvío, cuentas de usuario, o tareas programadas?
+- Busca si alguien exploró la red o buscó otros sistemas.
 
 **Documenta**: Qué se accedió, cuándo, desde dónde (IP).
 
-**Herramientas sugeridas**: Logs de servidor, logs de aplicación, Microsoft 365 audit logs
+**Herramientas sugeridas**: Logs de servidor, logs de aplicación, Microsoft 365 audit logs, firewall logs
+
+#### Paso 3: Aislar Acceso Comprometido (si es necesario)
+
+**Quién**: Administrador de sistemas
+**Tiempo**: 10-15 minutos, en paralelo
+**Acciones**:
+
+- Si la cuenta tiene acceso crítico, desactívala temporalmente mientras investigas.
+- Si hay acceso físico comprometido (tarjeta de acceso), bloquea la tarjeta.
+- Si se compromete una cuenta de servicio, desactívala y reasigna a otra.
 
 ---
 
 ### Erradicación
 
-**Objetivo**: Eliminar el malware (si hay), cerrar accesos no autorizados, eliminar puertas traseras que el atacante dejó.
+**Objetivo**: Eliminar accesos no autorizados, cerrar puertas traseras que el atacante dejó.
 
-#### Paso 1: Eliminar Malware (si hay)
-
-**Quién**: Técnico de antivirus
-**Tiempo**: 15-45 minutos
-**Acciones**:
-
-- En la máquina del usuario que descargó el archivo, ejecuta escaneo completo con antivirus actualizado.
-- En modo seguro del sistema si es posible (Windows Safe Mode).
-- Si el antivirus detecta malware, déjalo que lo elimine o ponlo en cuarentena.
-- Reinicia la máquina.
-- Ejecuta segundo escaneo para confirmar que no queda nada.
-- Si el malware persiste o no se puede eliminar, considera reinstalar el sistema operativo.
-
-**Herramientas sugeridas**: Windows Defender, Malwarebytes, antivirus corporativo
-
-#### Paso 2: Cerrar Accesos No Autorizados
+#### Paso 1: Cerrar Accesos No Autorizados
 
 **Quién**: Administrador de sistemas
 **Tiempo**: 10-20 minutos
 **Acciones**:
 
 - Si el atacante creó una cuenta de usuario, elimínala.
-- Si creó reglas de reenvío de correo, elimínalas.
-- Si accedió a través de una vulnerabilidad web, ciérrala (parcheando o deshabilitando la función).
-- Revisa permisos de archivos. ¿El atacante creó acceso a datos que no debería?
-- Si el atacante dejó una puerta trasera (ej: una tarea programada), elimínala.
+- Si creó reglas de reenvío, elimínalas.
+- Si se accedió a través de una vulnerabilidad, ciérrala (parcheando).
+- Si creó una puerta trasera (tarea programada, script, ...), elimínala.
+- Si se activo el acceso remoto no autorizado, desactívalo.
 
 **Busca indicadores en**:
 - Cuentas de usuario nuevas o modificadas
-- Reglas de correo nuevas
+- Reglas de reenvío de correo
 - Tareas programadas nuevas
 - Aplicaciones instaladas nuevas
 - Cambios en permisos de archivos
+- Credenciales nuevas o compartidas
 
 **Herramientas sugeridas**: Active Directory, Event Viewer, autoruns (Windows), cron jobs (Linux)
 
-#### Paso 3: Cambiar Todas las Credenciales Relacionadas
+#### Paso 2: Cambiar Todas las Credenciales Relacionadas
 
 **Quién**: Administrador
 **Tiempo**: 10-30 minutos
 **Acciones**:
 
 - Cambiar la contraseña de la cuenta del usuario (si no la cambiaste en contención).
-- Si el usuario tiene acceso a cuentas de servicio o credenciales compartidas, cambiar esas también.
-- Si el usuario accede a sistemas remotos (VPN...), cambiar esas credenciales.
+- Si el usuario tiene acceso a cuentas de servicio, cambiar esas también.
+- Si el usuario accede a sistemas remotos (VPN, ...), cambiar esas credenciales.
 - Notificar al usuario de todos los cambios.
 
 ---
@@ -210,15 +191,15 @@ Si solo hizo clic pero no introdujo contraseña:
 
 **Objetivo**: Devolver los sistemas a funcionamiento normal. Validar que todo está limpio.
 
-#### Paso 1: Validación Post-Limpieza
+#### Paso 1: Validación Post-Contención
 
 **Quién**: Investigador técnico
 **Tiempo**: 20-30 minutos
 **Acciones**:
 
-- En la máquina del usuario, ejecuta escaneo antivirus nuevamente. Debe estar limpio.
-- Verifica que las aplicaciones funcionen correctamente.
-- Pide al usuario que pruebe funciones críticas: abrir correo, acceder a archivos, acceder a aplicaciones.
+- Revisa que no hay acceso anormal en la cuenta después del cambio de contraseña.
+- Verifica que las aplicaciones funcionan correctamente.
+- Pide al usuario que acceda a sistemas críticos y valida funcionamiento.
 - Monitorea la cuenta durante 3-7 días buscando acceso sospechoso.
 
 #### Paso 2: Comunicar al Usuario
@@ -228,13 +209,12 @@ Si solo hizo clic pero no introdujo contraseña:
 **Acciones**:
 
 - Notifica al usuario que:
-  - Su máquina fue limpiada.
   - Su contraseña fue cambiada.
   - Su cuenta está siendo monitoreada.
   - Qué pasó exactamente (en términos simples).
-  - Cómo evitarlo en el futuro.
+  - Cómo evitarlo en el futuro (verificar identidad, colgar y llamar de vuelta, ...).
 
-- Aprovecha para educar: "Este es un ejemplo de phishing. En el futuro, si ves un correo que..."
+- Aprovecha para educar: "Este es un ejemplo de ingeniería social. En el futuro, si reciben una llamada que..."
 
 ---
 
@@ -252,25 +232,26 @@ Si solo hizo clic pero no introdujo contraseña:
 **Paso 2: Al Equipo de Seguridad**
 
 - Una vez confirmado, todos los miembros del equipo de respuesta deben saber.
-- Compartir indicadores de compromiso (IOCs) para que detecten variantes.
+- Compartir información específica (número de teléfono falso, nombre usado, tipo de excusa) para detectar intentos similares.
 
 **Paso 3: A los Usuarios Afectados**
 
-- Correo educativo (aunque no hayan hecho clic): "Recibiste un correo malicioso. Lo bloqueamos. Así se ve este tipo de ataque. En el futuro..."
-- Si hicieron clic o descargaron: "Tomamos estas acciones para protegerte. Tu cuenta está segura."
+- Comunicado educativo: "Recibiste un intento de ingeniería social. Lo reportaste bien. Así se ve este tipo de ataque. En el futuro..."
+- Si comprometieron credenciales: "Tomamos estas acciones para protegerte. Tu cuenta está segura."
 
 **Paso 4: Alerta a Toda la Empresa (si es campaña grande)**
 
-- Si el mismo correo fue a 50+ personas, envía alerta general.
-- Asunto: "ALERTA DE SEGURIDAD: Campaña de Phishing Detectada"
-- Incluir: Qué dice el correo, indicadores (remitente, asunto), qué NO hacer, a quién reportar
+- Si múltiples empleados recibieron contactos similares, envía alerta general.
+- Asunto: "ALERTA DE SEGURIDAD: Campaña de Ingeniería Social Detectada"
+- Incluir: Qué tipo de engaño usa (falsa identidad, urgencia creada, autoridad falsa, ...), qué NO hacer, a quién reportar
 - Esto previene que otros caigan en el mismo ataque.
 
 ### Comunicación Externa
 
-**Si datos de clientes fueron comprometidos**:
-- Consultar con departamento legal sobre obligación de notificación (RGPD requiere notificar a clientes en caso de acceso no autorizado a datos personales).
-- Preparar comunicado transparente: qué pasó, qué datos, qué estamos haciendo.
+**Si acceso o datos fueron expuestos**:
+- Consultar con departamento legal sobre obligación de notificación.
+- Preparar comunicado: qué pasó, qué datos, qué estamos haciendo.
+- Notificar según requisitos legales (RGPD u otros).
 
 ---
 
@@ -280,7 +261,7 @@ Si solo hizo clic pero no introdujo contraseña:
 **Tiempo**: 7 días mínimo
 
 - Monitorea la cuenta del usuario comprometido: busca acceso anormal.
-- Busca nuevas campañas de phishing similares.
+- Busca nuevos intentos de ingeniería social similares.
 - Revisa si el mismo atacante apunta a otros usuarios.
 - Si se detecta acceso no autorizado DESPUÉS de la remediación, activa nuevamente: es posible que haya dejado una puerta trasera.
 
@@ -291,18 +272,19 @@ Si solo hizo clic pero no introdujo contraseña:
 Después de resolver el incidente, el equipo se reúne:
 
 **Preguntas a responder**:
-- ¿Cómo el atacante obtuvo la dirección de correo? (¿es pública? ¿fue un list de datos comprometidos?)
-- ¿Por qué ese empleado en particular? ¿Es una figura objetivo?
-- ¿Qué hace creíble el correo falso? ¿Podemos mejorar el filtrado?
-- ¿El usuario tenía entrenamiento en phishing? ¿Debemos entrenar más?
-- ¿Nuestro antivirus detectó el malware? ¿Está actualizado?
+- ¿Cómo el atacante obtuvo el número o información? (¿es pública en redes sociales?)
+- ¿Por qué ese empleado en particular? ¿Tiene acceso especial?
+- ¿Qué hizo creíble el engaño? ¿Fue urgencia? ¿Falsa autoridad? ¿Amenaza?
+- ¿El usuario tenía entrenamiento en ingeniería social? ¿Debemos entrenar más?
 - ¿Tuvimos respuesta rápida? ¿Qué ralentizó las cosas?
+- ¿Hay formas de verificar identidad mejor? (Colgar y llamar de vuelta a número verificado, ...)
 
 **Mejoras identificadas**:
-- Actualizar filtros de correo para bloquear dominos similares.
-- Entrenar a empleados en indicadores de phishing.
-- Implementar autenticación de dos factores para cuentas de alto riesgo.
+- Entrenar a empleados en tácticas de ingeniería social.
+- Implementar protocolos de verificación de identidad.
+- Usar autenticación de dos factores para acceso crítico.
 - Mejorar monitoring de acceso anormal.
+- Crear cultura de reportar intentos sospechosos sin miedo.
 
 ---
 
@@ -310,25 +292,24 @@ Después de resolver el incidente, el equipo se reúne:
 
 ### Herramientas Recomendadas
 
-- **Servidor de correo**: Microsoft Exchange, Postfix - para bloquear remitentes y retirar correos
-- **Antivirus**: Windows Defender, Malwarebytes, Kaspersky - para escaneos profundos
-- **Análisis de URLs/Archivos**: VirusTotal, urlhaus - para investigación técnica
-- **Investigación de credenciales**: Have I Been Pwned, credential stuffing tools - para validar compromiso
-- **Logs**: Syslog, Windows Event Log, aplicación logs - para investigación
+- **Análisis de llamadas**: Logs de teléfono PBX, grabación de llamadas (si permitido)
+- **Investigación de identidad**: Búsqueda reversa de números, verificación de perfiles
+- **Monitoreo de acceso**: Logs de servidor, logs de aplicación, Microsoft 365 audit logs
+- **Logs**: Syslog, Windows Event Log, firewall logs - para investigación
 
 ### Personal Requerido
 
-- 1 Administrador de correo
-- 1-2 Investigadores técnicos
+- 1-2 Investigadores de seguridad
 - 1 Administrador de sistemas
 - 1 Incident Commander
 - 1 Especialista en comunicación (para alertas)
+- 1 Especialista en entrenamiento (para educación)
 
 ### Tiempo Típico de Respuesta
 
-- Detección a contención: 5-15 minutos
-- Contención a erradicación: 15-45 minutos
-- Investigación completa: 1-4 horas
+- Detección a contención: 5-10 minutos
+- Contención a erradicación: 10-30 minutos
+- Investigación completa: 1-3 horas
 - Monitoreo: 7 días
 
 ---
@@ -336,12 +317,12 @@ Después de resolver el incidente, el equipo se reúne:
 ## Referencias
 
 - NIST SP 800-61: Computer Security Incident Handling Guide
-- OWASP: Phishing - https://owasp.org/www-community/attacks/Phishing
-- Microsoft Security: Email phishing and malware - https://learn.microsoft.com/en-us/microsoft-365/security/
-- MITRE ATT&CK: Initial Access (T1193 - Phishing)
+- NIST SP 800-50: Building an Information Technology Security Awareness and Training Program
+- OWASP: Social Engineering
+- MITRE ATT&CK: Reconnaissance Techniques
 
 ---
 
 **Documento**: Playbook de Ingeniería Social
 **Grupo G5**: Iván Paúl Alba, Sergio González Noria, Manuel Pérez Romero, Javier Calvillo Acebedo
-**Fecha**: 16 de Mayo de 2026
+**Fecha**: Mayo 2026
