@@ -1,15 +1,15 @@
 # Para generar correctamente el plan de respuestas
-# hay que cambiar el string de la derecha (incluido los corchetes) 
-# por el dato que queramos. 
+# hay que cambiar el string de la derecha (incluido los corchetes)
+# por el dato que queramos.
 
 # The name of your organization (e.g., Acme, Inc.)
-COMPANY_NAME: 'NexaShield Labs'
+COMPANY_NAME: 'Asesoría de PYMES y Autónomos'
 
 # Name and email of plan author (e.g., Chris)
-AUTHOR_NAME: 'Grupo 5 (Sergio González, Iván Paúl, Manuel Pérez y Javier Calvillo)'
+AUTHOR_NAME: 'Grupo 5 (Sergio G., Iván P., Manuel P. y Javier C.)'
 
 # Email of plan author (e.g., contact@counteractive.net)
-AUTHOR_EMAIL: 'grupo5@nexashield.local'
+AUTHOR_EMAIL: 'grupo5@asesorias-pymes.local'
 
 # Document control metadata (e.g., 1)
 REVISION_NUMBER: '1.0'
@@ -21,40 +21,40 @@ RELEASE_DATE: '19 May 2026'
 REVIEW_DATE: '19 May 2026'
 
 # Date someone last tested the plan (e.g., 7 Jan 2021)
-TEST_DATE: '19 May 2026'
+TEST_DATE: '19 May 2026 (simulacro tabletop interno)'
 
 # URL or reference to IR chat program like Teams, Slack, or Discord (e.g., chat.acme.tld/codename)
-RESPONSE_CHAT: 'Servidor de Discord del grupo'
+RESPONSE_CHAT: 'Servidor de Discord del Grupo 5 - canal privado de respuesta a incidentes'
 
 # Phone number for response teleconference (e.g., 123-456-7890)
 RESPONSE_PHONE: '+34 000 00 00 00'
 
 # URL for response video teleconference (VTC) like Zoom or WebEx (e.g., zoom.acme.tld/codename)
-RESPONSE_VTC: 'Canal de voz de Discord'
+RESPONSE_VTC: 'Canal de voz de Discord del Grupo 5'
 
 # Description/URL for alternate email (e.g., alt 365 tenant at ir.acme.tld/othermail)
 ALTERNATE_EMAIL: 'grupo5.backup@gmail.com'
 
 # Domain name for your organization (e.g., acme.tld)
-ORGANIZATION_DOMAIN: 'nexashield.local'
+ORGANIZATION_DOMAIN: 'asesorias-pymes.local'
 
 # Number or URL to page Commander(s) (e.g., 555-PAGE)
 INCIDENT_COMMANDER_PAGER_NUMBER: 'Grupo5-IC'
 
 # Number or URL to page Commander(s) (e.g., ir.acme.tld/ic-page)
-INCIDENT_COMMANDER_PAGER_URL: 'Contacto interno por Discord'
+INCIDENT_COMMANDER_PAGER_URL: 'Contacto interno y mención directa mediante Discord'
 
 # URL/path to Commander roster/list (e.g., ir.acme.tld/ic-roster)
-INCIDENT_COMMANDER_ROSTER: 'Repositorio privado de GitHub del grupo'
+INCIDENT_COMMANDER_ROSTER: 'Repositorio privado de GitHub del Grupo 5 (roles y guardias)'
 
 # As above, for security team (e.g., ir.acme.tld/sec-roster)
-SECURITY_TEAM_ROSTER: 'Lista interna del equipo en GitHub'
+SECURITY_TEAM_ROSTER: 'Comité de Seguridad: CISO + TIC + RRHH + Legal + jefaturas según necesidad'
 
 # As above, for SMEs (e.g., ir.acme.tld/sme-roster)
-TEAM_SME_ROSTER: 'Documentación compartida en Drive'
+TEAM_SME_ROSTER: 'SMEs: Admin. Sistemas, Admin. Redes, responsables de procesos (RRHH, Legal, Comercial)'
 
 # As above, for executive team (e.g., ir.acme.tld/exec-roster)
-EXECUTIVE_ROSTER: 'Miembros principales del grupo'
+EXECUTIVE_ROSTER: 'Dirección General + responsables de área (TIC, RRHH, Legal, Comercial)'
 
 # Time to wait for on-duty IC on call (e.g., 15 minutes)
 INCIDENT_COMMANDER_RESPONSE_SLA: '15 minutos'
@@ -62,53 +62,56 @@ INCIDENT_COMMANDER_RESPONSE_SLA: '15 minutos'
 # Time between scheduled updates (e.g., 4 hours)
 UPDATE_FREQUENCY: '4 horas'
 
+# Next scheduled update time mentioned in scripts (placeholder text used during calls)
+UPDATE_TIME: 'por definir en la llamada'
+
 # URL/path to incident file (e.g., ir.acme.tld/files/codename)
-INCIDENT_FILE_LOCATION: 'Google Drive del proyecto'
+INCIDENT_FILE_LOCATION: 'Google Drive privado del proyecto + carpeta segura de incidentes'
 
 # URL/path to critical information list, data you want to protect (e.g., ir.acme.tld/cil)
-CRITICAL_INFO_LIST_LOCATION: 'Documento de activos críticos en Drive'
+CRITICAL_INFO_LIST_LOCATION: 'Activos/datos críticos: datos de clientes, RRHH, servidores y software de gestión (según PDS)'
 
 # URL/path to critical asset list, systems you want to protect (e.g., ir.acme.tld/cal)
-CRITICAL_ASSET_LIST_LOCATION: 'Inventario de sistemas del laboratorio'
+CRITICAL_ASSET_LIST_LOCATION: 'Inventario de activos del laboratorio y sistemas simulados de la asesoría'
 
 # URL/path to asset management DB (e.g., ir.acme.tld/assets)
-ASSET_MGMT_DB_LOCATION: 'Repositorio de documentación técnica'
+ASSET_MGMT_DB_LOCATION: 'Repositorio de documentación técnica y activos TIC'
 
 # URL/path to network map (e.g., ir.acme.tld/netmap)
-NETWORK_MAP_LOCATION: 'Esquema de red en Drive'
+NETWORK_MAP_LOCATION: 'Esquema de red y segmentación (PRY-004) almacenado en Drive'
 
 # URL to SIEM (e.g., siem.acme.tld)
 SIEM_CONSOLE_LOCATION: 'Servidor ELK del laboratorio'
 
 # URL to log aggregator (e.g., elk.acme.tld)
-LOG_AGGREGATOR_CONSOLE: 'Panel de logs de ELK'
+LOG_AGGREGATOR_CONSOLE: 'Panel centralizado de logs ELK'
 
-# Name/URL of live response tool (e.g., [velociraptor](https://www.velocidex.com))
+# Name/URL of live response tool (e.g., velociraptor)
 LIVE_RESPONSE_TOOL: 'Velociraptor'
 
-# Name/URL of memory collection tool (e.g., [winpmem](https://github.com/Velocidex/WinPmem))
+# Name/URL of memory collection tool (e.g., winpmem)
 MEMORY_COLLECTION_TOOL: 'WinPmem'
 
-# Name/URL of disk imaging tool (e.g., [sumuri](https://sumuri.com/software))
+# Name/URL of disk imaging tool (e.g., sumuri)
 DISK_IMAGE_TOOL: 'FTK Imager'
 
 # URL/path to IR report template (e.g., ir.acme.tld/report/template)
-INCIDENT_REPORT_TEMPLATE: 'Plantilla de informe en GitHub'
+INCIDENT_REPORT_TEMPLATE: 'Plantilla de informe de incidente almacenada en GitHub'
 
 # URL/path to report recipient list (e.g., ir.acme.tld/report/recipients)
-INCIDENT_REPORT_RECIPIENTS: 'Miembros del Grupo 5'
+INCIDENT_REPORT_RECIPIENTS: 'Dirección General, CISO, TIC, Legal, RRHH (según alcance y severidad)'
 
 # Compliance team name and contact info (e.g., the legal team, legal@acme.tld)
-COMPLIANCE_TEAM: 'Sergio González e Iván Paúl'
+COMPLIANCE_TEAM: 'Área Legal + CISO (RGPD/obligaciones contractuales)'
 
 # Communications team name and contact info (e.g., the marketing team, marketing@acme.tld)
-COMMUNICATIONS_TEAM: 'Grupo 5'
+COMMUNICATIONS_TEAM: 'Dirección General + Comunicación/RRSS (si aplica) + CISO'
 
 # Executive team name and contact info (e.g., the front office, bosses@acme.tld)
-EXECUTIVE_TEAM: 'Grupo coordinador del proyecto'
+EXECUTIVE_TEAM: 'Dirección General + responsables de área'
 
 # Legal team name (e.g., the legal team, legal@acme.tld)
-LEGAL_TEAM: 'No aplica (proyecto académico)'
+LEGAL_TEAM: 'Área Legal (en alcance según PDS)'
 
 # Local law enforcement contact info (e.g., Detective Jane Doe, police@local.gov.tld)
 LOCAL_LE_CONTACT: 'Policía Nacional'
@@ -116,8 +119,8 @@ LOCAL_LE_CONTACT: 'Policía Nacional'
 # FBI contact info (e.g., 1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us)
 FBI_CONTACT: 'No aplica'
 
-# Vendor for IR and infosec support (e.g., [Counteractive Security](https://www.counteractive.net))
-INCIDENT_RESPONSE_VENDOR: 'Herramientas open source y documentación pública'
+# Vendor for IR and infosec support (e.g., Counteractive Security)
+INCIDENT_RESPONSE_VENDOR: 'Soporte interno TIC + herramientas open source y documentación pública'
 
 # Vendor for PR support (e.g., public relations llc, pr.firm.tld)
 PUBLIC_RELATIONS_VENDOR: 'No aplica'
@@ -125,11 +128,22 @@ PUBLIC_RELATIONS_VENDOR: 'No aplica'
 # (Cyber) insurance provider (e.g., AAA insurance co., cyber.insurance.tld)
 INSURANCE_VENDOR: 'No aplica'
 
-# Industry ISAC contact info (e.g., FS ISAC, https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center)
-ISAC_CONTACT: 'Fuentes públicas de ciberseguridad'
+# Industry ISAC contact info (e.g., FS ISAC)
+ISAC_CONTACT: 'Fuentes públicas de ciberseguridad y comunidades de intercambio'
 
-# After action review (AAR) service level agreement (time after completion of incident to conduct AAR) (e.g., 5 business days)
-AAR_SLA: '5 días'
+# After action review (AAR) service level agreement (time after completion of incident to conduct AAR)
+AAR_SLA: '5 días laborables'
 
 # AAR attendees (e.g., ir.acme.tld/aar/attendees)
-AAR_ATTENDEES: 'Todos los miembros del Grupo 5'
+AAR_ATTENDEES: 'CISO, TIC (sistemas/redes), Legal, RRHH, Comercial/Delivery, Dirección y miembros del Grupo 5 según severidad'
+
+# Ventana mínima de monitorización sin IOCs activos antes de considerar el cierre técnico
+MONITORING_WINDOW: '14 días'
+
+# Objetivos de continuidad (RTO/RPO) para guiar decisiones de recuperación
+
+# RTO (Recovery Time Objective): tiempo máximo objetivo para restaurar el servicio
+RTO: '2 horas (objetivo operativo para restauración de datos, según KPI PRY-003)'
+
+# RPO (Recovery Point Objective): pérdida máxima de datos aceptable medida en el tiempo
+RPO: 'Pendiente de definir por proceso/dato crítico (no documentado en el PDS)'
