@@ -8,7 +8,7 @@ La revisión posterior a la acción (After Action Review, AAR) debe programarse 
 
 1. Nombrar un propietario del AAR. Por defecto será el Escriba, salvo que el Incident Commander designe a otra persona.
 2. Invitar a los asistentes definidos en {{AAR_ATTENDEES}} e incluir, como mínimo:
-   * Incident Commander e Incident Commander-Adjunto.
+   * Incident Commander.
    * Escriba.
    * Líderes de Investigación, Remediación y Comunicación.
    * Propietarios de los activos o servicios afectados.
