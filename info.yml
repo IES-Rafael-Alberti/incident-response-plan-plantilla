@@ -1,42 +1,40 @@
-# Para generar correctamente el plan de respuestas
-# hay que cambiar el string de la derecha (incluido los corchetes) 
-# por el dato que queramos. 
+---
 
 # The name of your organization (e.g., Acme, Inc.)
-COMPANY_NAME: '{{COMPANY_NAME}}'
+COMPANY_NAME: 'CyberConsulting SL'
 
 # Name and email of plan author (e.g., Chris)
-AUTHOR_NAME: '{{AUTHOR_NAME}}''
+AUTHOR_NAME: 'Grupo 2'
 
 # Email of plan author (e.g., contact@counteractive.net)
-AUTHOR_EMAIL: '{{AUTHOR_EMAIL}}'
+AUTHOR_EMAIL: 'contact@cyberconsulting.com'
 
 # Document control metadata (e.g., 1)
-REVISION_NUMBER: '{{REVISION_NUMBER}}'
+REVISION_NUMBER: '0.1'
 
 # Document control metadata (e.g., 7 Jan 2021)
-RELEASE_DATE: '{{RELEASE_DATE}}'
+RELEASE_DATE: '18-05-2026'
 
 # Date someone last reviewed the plan (e.g., 7 Jan 2021)
-REVIEW_DATE: '{{REVIEW_DATE}}'
+REVIEW_DATE: '18-05-2026'
 
 # Date someone last tested the plan (e.g., 7 Jan 2021)
-TEST_DATE: '{{TEST_DATE}}'
+TEST_DATE: '18-05-2026'
 
 # URL or reference to IR chat program like Teams, Slack, or Discord (e.g., chat.acme.tld/codename)
 RESPONSE_CHAT: '{{RESPONSE_CHAT}}'
 
 # Phone number for response teleconference (e.g., 123-456-7890)
-RESPONSE_PHONE: '{{RESPONSE_PHONE}}'
+RESPONSE_PHONE: '+34 600 000 000'
 
 # URL for response video teleconference (VTC) like Zoom or WebEx (e.g., zoom.acme.tld/codename)
-RESPONSE_VTC: '{{RESPONSE_VTC}}'
+RESPONSE_VTC: 'zoom.com/cyberconsulting'
 
 # Description/URL for alternate email (e.g., alt 365 tenant at ir.acme.tld/othermail)
-ALTERNATE_EMAIL: '{{ALTERNATE_EMAIL}}'
+ALTERNATE_EMAIL: 'contact-alternative@cyberconsulting.com'
 
 # Domain name for your organization (e.g., acme.tld)
-ORGANIZATION_DOMAIN: '{{ORGANIZATION_DOMAIN}}'
+ORGANIZATION_DOMAIN: 'cyberconsulting.com'
 
 # Number or URL to page Commander(s) (e.g., 555-PAGE)
 INCIDENT_COMMANDER_PAGER_NUMBER: '{{INCIDENT_COMMANDER_PAGER_NUMBER}}'
