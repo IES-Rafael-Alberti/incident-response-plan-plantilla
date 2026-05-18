@@ -82,6 +82,11 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Si existen otros clientes afectados o vulnerabilidades publicadas;
     * Si se ha producido ejecución de código, fuga de datos, sabotaje o simple indisponibilidad;
     * Si hay componentes internos que puedan haber heredado el compromiso.
+    * Qué relaciones de confianza concretas mantiene la organización con ese tercero: accesos, secretos, sincronizaciones, despliegues o soporte remoto.
+    * Si debemos suspender el servicio completo o solo una integración, versión, endpoint o canal concreto.
+    * Qué evidencia independiente tenemos además de la comunicación del proveedor.
+    * Si el incidente del tercero nos obliga a rotar credenciales, revocar certificados o invalidar software ya desplegado.
+    * Qué impacto tendría seguir operando mientras se espera la confirmación técnica del proveedor.
 
 ### Remediar
 

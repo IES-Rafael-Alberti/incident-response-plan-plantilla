@@ -78,6 +78,15 @@ Como mínimo, en este playbook deben intervenir estas funciones:
         * **alta**, si hay acceso a paneles, ficheros, cuentas o datos internos;
         * **crítica**, si afecta a la tienda online, a datos personales, a ejecución remota o a persistencia confirmada.
 
+#### Preguntas clave de investigación
+
+* Qué vulnerabilidad concreta ha sido explotada y si sigue siendo explotable en este momento.
+* Si el atacante solo ha ejecutado pruebas de explotación o ya ha logrado acceso persistente al entorno.
+* Qué componentes adicionales comparten la misma versión, configuración o dependencia vulnerable.
+* Si hubo acceso a datos de clientes, secretos de aplicación, credenciales, repositorios o paneles administrativos.
+* Si la explotación afectó también a registros, colas, tareas programadas, almacenamiento de objetos o integraciones API.
+* Qué evidencia necesitamos reunir antes de poner la aplicación en mantenimiento o restaurarla.
+
 ### Remediar
 
 * **Planificar eventos de remediación** en los que estos pasos se ejecuten juntos, o de forma coordinada, con los equipos adecuados preparados para evitar nueva explotación.

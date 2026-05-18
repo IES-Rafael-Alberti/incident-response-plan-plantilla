@@ -87,6 +87,15 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Verificar si se insertaron scripts para robo de credenciales o datos de pago.
     * Revisar si existen usuarios administrativos nuevos, cambios de permisos o puertas traseras persistentes.
 
+#### Preguntas clave de investigación
+
+* Si la alteración visible es el único efecto o solo la parte pública de un compromiso más amplio.
+* Qué acceso tuvo realmente el atacante: contenido, panel, base de datos, servidor o integraciones de terceros.
+* Si se han visto afectados formularios, pasarelas de pago, analítica o scripts cargados desde dominios externos.
+* Si el contenido alterado pudo exponer a clientes a fraude, malware o robo de credenciales.
+* Si la restauración desde copia limpia elimina también la causa raíz o solo revierte el contenido visible.
+* Qué indicios apuntan a que el atacante mantiene persistencia aunque la web vuelva a mostrarse correctamente.
+
 ### Remediar
 
 **Planificar eventos de reparación** en los que estos pasos se pongan en marcha juntos, o de forma coordinada, con los equipos adecuados listos para responder a cualquier interrupción.  

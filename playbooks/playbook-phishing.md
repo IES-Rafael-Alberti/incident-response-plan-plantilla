@@ -107,6 +107,15 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Verificar si existen reglas de reenvío automático, delegaciones de buzón o cambios no autorizados en firmas y bandejas.
     * Revisar si los equipos desde los que se abrió el correo muestran alertas del antivirus o comportamientos anómalos.
 
+#### Preguntas clave de investigación
+
+* Quién recibió el mensaje, quién interactuó con él y quién realizó la acción de mayor riesgo.
+* Si hubo entrega de credenciales, aprobación de MFA, descarga de malware, pago fraudulento o cambio de cuenta bancaria.
+* Si el ataque fue masivo o dirigido contra un perfil concreto de negocio, dirección o proveedor.
+* Si existen mensajes equivalentes aún no detectados en otras bandejas, sedes o cuentas compartidas.
+* Si el phishing fue el inicio de otro incidente mayor: compromiso de identidad, malware, fraude o acceso a terceros.
+* Qué evidencia conviene preservar antes de purgar correos, resetear cuentas o aislar equipos.
+
 ### Remediar
 
 * **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos, o de forma coordinada, con los equipos adecuados listos para responder a cualquier interrupción.

@@ -117,6 +117,15 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Cuándo se detectaron cambios de ficheros, alertas del antivirus o conexiones anómalas.
     * Si hubo actividad previa de movimiento lateral, creación de cuentas o desactivación de defensas.
 
+#### Preguntas clave de investigación
+
+* Qué activos siguen cifrándose o podrían empezar a cifrarse en las próximas horas si no se aíslan.
+* Si además de cifrado hubo exfiltración, borrado, sabotaje o robo de credenciales previo.
+* Qué copias de seguridad, snapshots o repositorios siguen siendo confiables y desde qué momento.
+* Si el paciente cero probable accedió recientemente por correo, VPN, RDP, proveedor externo o dispositivo extraíble.
+* Qué sistemas comparten credenciales, permisos, rutas de red o herramientas con los activos ya afectados.
+* Qué servicios mínimos necesita el negocio para operar mientras se completa la restauración.
+
 ### Remediar
 
 **Planificar eventos de remediación** en los que estos pasos se lancen juntos, o de forma coordinada, con los equipos apropiados listos para responder a cualquier interrupción.  

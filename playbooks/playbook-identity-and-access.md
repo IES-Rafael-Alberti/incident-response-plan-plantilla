@@ -73,6 +73,11 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Si se usaron las credenciales para movimiento lateral o acceso a otros sistemas;
     * Si existen más cuentas afectadas por la misma campaña o proveedor comprometido;
     * Si el atacante creó persistencia mediante reglas de correo, aplicaciones autorizadas o cuentas nuevas.
+    * Qué privilegios efectivos tenía la cuenta comprometida en el momento del acceso.
+    * Si hubo cambios en grupos, permisos, direcciones de recuperación, métodos MFA o dispositivos de confianza.
+    * Si la cuenta se utilizó para acceder a correo, VPN, paneles cloud, ERP/CRM, integraciones o datos regulados.
+    * Si el compromiso procede de phishing, malware local, fuga de proveedor o reutilización de contraseñas en otros servicios.
+    * Qué otras identidades relacionadas deben revisarse de inmediato: cuentas de servicio, compartidas, delegadas o administrativas.
 7. **Clasificar la severidad del incidente.**
     * **baja**, si solo hubo intentos fallidos sin acceso confirmado.
     * **media**, si hubo acceso a una cuenta de usuario sin privilegios y sin impacto aparente.

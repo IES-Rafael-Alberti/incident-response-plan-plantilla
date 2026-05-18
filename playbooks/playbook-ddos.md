@@ -78,6 +78,11 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Si existe un patrón repetitivo por franjas horarias o recursos concretos.
     * Si el ataque coincide con eventos de negocio relevantes o comunicaciones extorsivas.
     * Si el DDoS está ocultando intentos de explotación, intrusión o fraude.
+    * Qué servicios concretos deben mantenerse operativos aunque sea con funcionalidad reducida.
+    * Si el tráfico malicioso se concentra en una URL, host virtual, API, puerto o proveedor concreto.
+    * Si hay clientes, sedes o países legítimos que puedan verse bloqueados por las medidas de mitigación.
+    * Si el proveedor dispone ya de telemetría o reglas de mitigación aplicables a incidentes similares previos.
+    * Si existe riesgo de impacto contractual, campaña comercial fallida o pérdida de ventas por la duración estimada.
 
 ### Remediar
 
