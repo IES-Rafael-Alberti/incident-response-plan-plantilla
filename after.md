@@ -66,18 +66,18 @@ El AAR debe registrar, siempre que sea posible, las siguientes métricas:
 
 | Métrica | Descripción | Uso |
 |---|---|---|
-| MTTD | Tiempo hasta detectar el incidente. | Medir eficacia de monitorización, alertas, usuarios y proveedores. |
-| MTTA | Tiempo hasta reconocer la alerta y activar respuesta. | Medir rapidez de escalado y disponibilidad del equipo. |
-| MTTC | Tiempo hasta contener el incidente. | Medir eficacia de aislamiento, bloqueo, revocación y segmentación. |
-| MTTR | Tiempo hasta recuperar o resolver el incidente. | Medir capacidad de recuperación y continuidad de negocio. |
-| RTO real | Tiempo real de recuperación frente al objetivo esperado. | Evaluar si la continuidad del negocio fue suficiente. |
-| RPO real | Pérdida real de datos frente al punto de recuperación esperado. | Evaluar eficacia de copias de seguridad y sincronización. |
-| Alcance | Sistemas, cuentas, buzones, endpoints, servidores, datos o proveedores afectados. | Dimensionar impacto y necesidades de remediación. |
-| Severidad | Severidad inicial, máxima y final. | Evaluar si el escalado fue adecuado. |
-| Datos personales | Categorías de datos, número estimado de personas afectadas y riesgo. | Sustentar decisiones RGPD/LOPDGDD y comunicación. |
-| Comunicación | Mensajes emitidos, destinatarios, tiempos y aprobaciones. | Comprobar coordinación interna, externa y regulatoria. |
-| MISP | Evento creado, TLP, destinatarios e indicadores compartidos. | Medir cooperación con terceros y control de inteligencia. |
-| Eficacia del playbook | Pasos útiles, pasos omitidos y pasos que deben cambiarse. | Mejorar playbooks y entrenamiento. |
+| MTTD | Tiempo hasta detectar el incidente | Medir eficacia de monitorización, alertas, usuarios y proveedores. |
+| MTTA | Tiempo hasta reconocer la alerta y activar respuesta | Medir rapidez de escalado y disponibilidad del equipo. |
+| MTTC | Tiempo hasta contener el incidente | Medir eficacia de aislamiento, bloqueo, revocación y segmentación. |
+| MTTR | Tiempo hasta recuperar o resolver el incidente | Medir capacidad de recuperación y continuidad de negocio. |
+| RTO real | Tiempo real de recuperación frente al objetivo esperado | Evaluar si la continuidad del negocio fue suficiente. |
+| RPO real | Pérdida real de datos frente al punto de recuperación esperado | Evaluar eficacia de copias de seguridad y sincronización. |
+| Alcance | Sistemas, cuentas, buzones, endpoints, servidores, datos o proveedores afectados | Dimensionar impacto y necesidades de remediación. |
+| Severidad | Severidad inicial, máxima y final | Evaluar si el escalado fue adecuado. |
+| Datos personales | Categorías de datos, número estimado de personas afectadas y riesgo | Sustentar decisiones RGPD/LOPDGDD y comunicación. |
+| Comunicación | Mensajes emitidos, destinatarios, tiempos y aprobaciones | Comprobar coordinación interna, externa y regulatoria. |
+| MISP | Evento creado, TLP, destinatarios e indicadores compartidos | Medir cooperación con terceros y control de inteligencia. |
+| Eficacia del playbook | Pasos útiles, pasos omitidos y pasos que deben cambiarse | Mejorar playbooks y entrenamiento. |
 
 ## Evaluar resiliencia
 
@@ -88,39 +88,39 @@ El AAR debe comprobar si la respuesta permitió mantener o recuperar los servici
 | Identificación | ¿Detectamos a tiempo? ¿Faltaron logs, alertas, inventario o visibilidad de proveedor? |
 | Detección | ¿Los IOCs y TTPs se convirtieron en reglas SIEM/EDR/correo/cloud? |
 | Prevención | ¿Qué control habría evitado o reducido el incidente? |
-| Contención | ¿La propagación, exfiltración o exposición se cortó a tiempo? |
+| Contención | ¿Se cortó a tiempo la propagación, exfiltración o exposición? |
 | Erradicación | ¿Se eliminó la causa raíz o solo se mitigaron síntomas? |
-| Recuperación | ¿Los servicios críticos volvieron con datos íntegros, cambio de credenciales y monitorización? |
+| Recuperación | ¿Los servicios críticos volvieron con datos íntegros, credenciales cambiadas y monitorización? |
 | Cooperación | ¿Legal, Dirección, proveedores, INCIBE-CERT, SOC/CERT o comunidades MISP participaron cuando hacía falta? |
 
 ## Acciones correctivas
 
-Cada acción correctiva debe registrarse en el sistema de seguimiento acordado y enlazarse desde el AAR. Ningún incidente S1/S2 debe cerrarse sin acciones correctivas revisadas por el Incident Commander y Dirección.
+Cada acción correctiva se registra en el sistema de seguimiento acordado y se enlaza desde el AAR. Ningún incidente S1/S2 puede cerrarse sin acciones correctivas revisadas por el Incident Commander y Dirección.
 
 | Campo | Contenido mínimo |
 |---|---|
-| Acción | Cambio concreto que debe ejecutarse. |
-| Propietario | Persona o equipo responsable. |
-| Prioridad | Alta, media o baja según severidad, riesgo residual y exposición. |
-| Fecha límite | Fecha comprometida de implantación o revisión. |
-| Riesgo PDS | Riesgo o activo del Plan Director de Seguridad relacionado. |
-| Fase reforzada | Prevención, identificación, detección, contención, erradicación, recuperación o cooperación. |
-| Evidencia | Prueba esperada: captura, ticket, configuración, acta, informe, regla, backup validado, formación o contrato actualizado. |
-| Estado | Abierta, en curso, bloqueada, validada o cerrada. |
+| Acción | Cambio concreto que hay que ejecutar |
+| Propietario | Persona o equipo responsable |
+| Prioridad | Alta, media o baja según severidad, riesgo residual y exposición |
+| Fecha límite | Fecha comprometida de implantación o revisión |
+| Riesgo PDS | Riesgo o activo del Plan Director de Seguridad relacionado |
+| Fase reforzada | Prevención, identificación, detección, contención, erradicación, recuperación o cooperación |
+| Evidencia | Prueba esperada: captura, ticket, configuración, acta, informe, regla, backup validado, formación o contrato actualizado |
+| Estado | Abierta, en curso, bloqueada, validada o cerrada |
 
-Las acciones correctivas habituales para {{COMPANY_NAME}} deben considerar:
+Las acciones correctivas habituales para {{COMPANY_NAME}} deben contemplar:
 
 * Reglas de detección, alertas, IOCs y casos de uso para correo, EDR, firewall, VPN, servidores, CRM/ERP y servicios cloud.
 * Endurecimiento de MFA, contraseñas, permisos, cuentas privilegiadas y revisiones de acceso.
 * Segmentación, parcheado, reducción de exposición pública y bloqueo de servicios innecesarios.
 * Validación de copias de seguridad 3-2-1, restauraciones de prueba y protección frente a borrado o cifrado.
-* Formación específica para trabajadores si el incidente estuvo relacionado con phishing, credenciales, uso de datos o puesto de trabajo.
+* Formación específica si el incidente estuvo relacionado con phishing, credenciales, uso de datos o puesto de trabajo.
 * Ajustes en comunicación interna, comunicación a clientes/proveedores y criterios de notificación a la AEPD.
 * Actualización de eventos MISP o feeds internos si hubo inteligencia útil.
 
 ## Actualizar plan, playbooks y matrices
 
-Después de cada incidente real o simulacro, el propietario del AAR debe proponer cambios documentales cuando proceda:
+Tras cada incidente real o simulacro, el propietario del AAR debe proponer cambios documentales cuando proceda:
 
 1. Actualizar `during.md` si cambian criterios de severidad, escalado, comunicación, evidencias o recuperación.
 2. Actualizar el playbook usado si hubo pasos ambiguos, ausentes o poco realistas.
@@ -134,18 +134,18 @@ Después de cada incidente real o simulacro, el propietario del AAR debe propone
 
 Antes de cerrar el AAR, el Incident Commander debe confirmar que la organización trabaja con un nivel de riesgo aceptado:
 
-1. Los servicios críticos recuperados han sido validados por propietarios de negocio.
-2. Los accesos reabiertos usan credenciales cambiadas, MFA y permisos mínimos cuando aplique.
+1. Los servicios críticos recuperados han sido validados por los propietarios de negocio.
+2. Los accesos reabiertos usan credenciales nuevas, MFA y permisos mínimos cuando aplique.
 3. Los sistemas recuperados están parcheados, monitorizados y sin IOCs conocidos.
-4. Las copias de seguridad relevantes han sido verificadas o se ha creado una acción correctiva.
+4. Las copias de seguridad relevantes han sido verificadas o se ha creado una acción correctiva al respecto.
 5. Los proveedores implicados han entregado evidencias suficientes de contención, erradicación o recuperación.
-6. Las obligaciones de comunicación interna, externa, contractual o regulatoria han sido evaluadas por Legal/Cumplimiento.
+6. Legal/Cumplimiento han evaluado la obligaciones de comunicación interna, externa, contractual o regulatoria.
 7. Se mantiene monitorización reforzada durante el periodo definido en `during.md` o por el Incident Commander.
 8. Los riesgos residuales han sido aceptados formalmente por Dirección cuando proceda.
 
 ## Comunicar resultados
 
-El propietario del AAR, en coordinación con el Enlace interno y Comunicación, informará del estado y resultados según la audiencia:
+El propietario del AAR, en coordinación con el Enlace interno y Comunicación, informará de los resultados según la audiencia:
 
 * **Equipo de respuesta:** informe completo, línea temporal, decisiones, métricas, evidencias y acciones correctivas.
 * **Dirección:** resumen ejecutivo con impacto, estado de recuperación, riesgos residuales, decisiones pendientes y necesidades de inversión.
@@ -157,10 +157,10 @@ El propietario del AAR, en coordinación con el Enlace interno y Comunicación, 
 
 | Estado | Descripción |
 |---|---|
-| **Borrador** | La recopilación de evidencias, métricas y línea temporal sigue en curso. |
-| **En revisión** | El AAR está preparado para la reunión y pendiente de validación por los asistentes. |
-| **Revisado** | La reunión se ha celebrado y las conclusiones han sido acordadas. Si hay mensajes externos, Comunicación preparará las versiones aprobadas. |
-| **Acciones en seguimiento** | El incidente está operativamente cerrado, pero existen acciones correctivas abiertas con responsables y fechas. |
-| **Cerrado** | Las acciones obligatorias están cerradas o aceptadas formalmente como riesgo residual, la documentación está archivada y el plan/playbooks han sido actualizados si era necesario. |
+| **Borrador** | La recopilación de evidencias, métricas y línea temporal sigue en curso |
+| **En revisión** | El AAR está listo para la reunión y pendiente de validación por los asistentes |
+| **Revisado** | La reunión se ha celebrado y las conclusiones han sido acordadas. Si hay mensajes externos, Comunicación preparará las versiones aprobadas |
+| **Acciones en seguimiento** | El incidente está operativamente cerrado, pero existen acciones correctivas abiertas con responsables y fechas |
+| **Cerrado** | Las acciones obligatorias están cerradas o aceptadas formalmente como riesgo residual, la documentación está archivada y el plan/playbooks han sido actualizados si era necesario |
 
 El cierre del AAR debe conservarse junto al expediente del incidente para auditoría, mejora continua, evidencias de cumplimiento y preparación de futuras simulaciones.
