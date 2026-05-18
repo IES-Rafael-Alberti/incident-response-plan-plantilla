@@ -12,7 +12,7 @@ La revisión posterior a la acción (After Action Review, AAR) debe programarse 
    * Escriba.
    * Líderes de Investigación, Remediación y Comunicación.
    * Propietarios de los activos o servicios afectados.
-   * TIC/CISO y SME técnicos que participaron en la respuesta.
+   * CISO o dpto TIC que participaron en la respuesta.
    * Legal/Cumplimiento si hubo datos personales, evidencias legales, proveedores, contratos o comunicación regulatoria.
    * Dirección para incidentes S1/S2 o cuando existan decisiones de continuidad de negocio.
    * Proveedores implicados: SOC/CERT externo, proveedor cloud, proveedor web/tienda, EDR, backup, seguro o comunicación externa, cuando hayan participado en la respuesta.
