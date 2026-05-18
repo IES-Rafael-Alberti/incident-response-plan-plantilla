@@ -4,6 +4,16 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+### Aplicación del plan general
+
+Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
+
+1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
+2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
+3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
+4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
+5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante incidentes que afecten a proveedores, servicios externos, componentes software o integraciones de terceros de los que depende la empresa. Su finalidad es reducir el impacto sobre la operativa, cortar relaciones de confianza inseguras y coordinar la respuesta con los terceros implicados.
@@ -19,11 +29,25 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para coordinar y escalar la respuesta;
+* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
 * Equipo TIC, para revisar integraciones, accesos, configuraciones y dependencias;
 * Help desk, para centralizar avisos y registrar afectación operativa;
 * Responsables de negocio afectados, para priorizar servicios dependientes del tercero;
 * Proveedor implicado y, si procede, asesoría jurídica o apoyo RGPD.
+
+### Documentación y evidencias
+
+1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
+2. Registrar desde el inicio:
+   * Resumen inicial del incidente;
+   * Tercero, producto o integración afectados;
+   * Impacto funcional, contractual y de datos;
+   * Línea temporal de eventos y comunicaciones;
+   * Responsables asignados;
+   * Decisiones de contención, erradicación y restauración.
+3. Conservar comunicaciones del proveedor, logs, versiones, IOC, contratos, SLA y extractos técnicos con fecha, hora, origen y responsable de la recogida.
+4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -52,6 +76,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 5. Recopilar y preservar evidencia.
     * Comunicaciones del proveedor, logs de integración, cambios de versión, indicadores de compromiso, contratos, SLA y registros de acceso.
     * Línea temporal desde la actualización o dependencia sospechosa hasta la detección.
+    * Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 6. Formular preguntas clave.
     * Si el proveedor ha reconocido el incidente y ha dado medidas concretas;
     * Si existen otros clientes afectados o vulnerabilidades publicadas;
@@ -101,7 +126,7 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
 2. Contactar formalmente con el proveedor afectado y documentar todas las comunicaciones.
 3. Informar a departamentos internos afectados de restricciones, caídas de servicio o cambios operativos.
 4. Coordinar con asesoría legal y consultoría RGPD si el incidente implica datos personales o incumplimientos contractuales.
-5. Preparar comunicación externa para clientes o proveedores si la prestación del servicio se ha visto afectada.
+5. Preparar comunicación externa para clientes o proveedores si la prestación del servicio se ha visto afectada, siempre con autorización del `Incident Commander` y coordinación con Legal y Comunicación.
 6. Valorar notificación a organismos competentes si existe fuga de datos o afectación relevante a terceros.
 7. Registrar compromisos, tiempos de respuesta y medidas propuestas por el proveedor para futuras decisiones de riesgo.
 
@@ -124,6 +149,13 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
     * Cláusulas de notificación de incidentes;
     * Revisiones de seguridad periódicas;
     * Dependencia mínima necesaria.
+
+### Cierre y AAR
+
+1. El `Incident Commander` declarará el cierre operativo del incidente cuando el riesgo heredado del tercero esté controlado y las integraciones se hayan validado.
+2. Completar el expediente con cronología final, impacto, evidencias, comunicaciones del proveedor y resultado de la recuperación.
+3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
+4. Registrar acciones de mejora sobre gestión de terceros, cláusulas contractuales, segregación de accesos y validación de cambios.
 
 ### Guía operativa rápida
 

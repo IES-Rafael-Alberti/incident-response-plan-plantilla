@@ -4,6 +4,16 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+### Aplicación del plan general
+
+Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
+
+1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
+2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
+3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
+4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
+5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante ataques de denegación de servicio distribuida que afecten a la disponibilidad de servicios expuestos a Internet. Su finalidad es mantener operativos los servicios esenciales, coordinar la mitigación con proveedores y recuperar la normalidad con rapidez y control.
@@ -19,11 +29,25 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para coordinar la respuesta;
+* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
 * Equipo TIC, para análisis de disponibilidad, filtrado y priorización de servicios;
 * Proveedor de hosting, ISP o mitigación DDoS, por la necesidad de respuesta externa;
 * Help desk, para centralizar incidencias y estado del servicio;
-* Responsables de negocio y Comunicación, si la web o la tienda online se ven afectadas.
+* Responsables de negocio, Comunicación y SME de los servicios afectados, si la web o la tienda online se ven afectadas.
+
+### Documentación y evidencias
+
+1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
+2. Registrar desde el inicio:
+   * Resumen inicial del incidente;
+   * Servicios afectados;
+   * Impacto funcional;
+   * Línea temporal de eventos;
+   * Responsables asignados;
+   * Decisiones de contención y recuperación.
+3. Conservar logs, métricas, capturas, extractos del proveedor y artefactos asociados con fecha, hora, origen y responsable de la recogida.
+4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -40,6 +64,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Logs de firewall, WAF, balanceadores, router y proveedor de hosting.
     * Métricas de tráfico, capturas de red si están disponibles y cronología de alertas.
     * Hora de inicio, evolución de la intensidad, sistemas afectados y contramedidas aplicadas.
+    * Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 4. **Evaluar el impacto.**
     * Afectación a la disponibilidad de la web y la tienda online.
     * Impacto en captación de clientes, atención comercial y reputación.
@@ -99,7 +124,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 2. Comunicar de inmediato con el proveedor de hosting, CDN o mitigación DDoS si la web o la tienda online están implicadas.
 3. Documentar cronología, tráfico observado, impacto y medidas de mitigación aplicadas.
 4. Informar a usuarios internos y departamentos afectados sobre el estado del servicio y posibles restricciones temporales.
-5. Comunicar a clientes, si es necesario, la existencia de incidencias de disponibilidad sin generar alarma innecesaria.
+5. Comunicar a clientes, si es necesario, la existencia de incidencias de disponibilidad sin generar alarma innecesaria, siempre con autorización del `Incident Commander` y coordinación con Comunicación.
 6. Coordinar con asesoría legal si el ataque deriva en incumplimientos contractuales, extorsión o perjuicio relevante.
 7. Valorar notificación a INCIBE-CERT o a fuerzas y cuerpos de seguridad si el incidente es grave o reiterado.
 
@@ -119,6 +144,13 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Costes de mitigación.
 5. Ajustar capacidad, reglas y procedimientos con base en las lecciones aprendidas.
 6. Actualizar el plan de escalado con proveedores y tiempos máximos de respuesta.
+
+### Cierre y AAR
+
+1. El `Incident Commander` declarará el cierre operativo del incidente cuando la disponibilidad se haya estabilizado y las medidas temporales estén controladas.
+2. Completar el expediente con cronología final, impacto, decisiones, evidencias e informe de recuperación.
+3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
+4. Registrar acciones de mejora sobre monitorización, capacidad, contratos con proveedores y mensajes de crisis.
 
 ### Guía operativa rápida
 

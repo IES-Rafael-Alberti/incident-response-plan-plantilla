@@ -4,6 +4,16 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+### Aplicación del plan general
+
+Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
+
+1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
+2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
+3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
+4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
+5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante la explotación de aplicaciones o servicios expuestos a Internet. Su finalidad es contener el vector de ataque, evitar que el incidente escale a fuga de datos o compromiso persistente y devolver la aplicación a producción de forma segura.
@@ -19,12 +29,26 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para coordinar y escalar la respuesta;
+* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
 * Equipo TIC, para análisis técnico, bloqueo y restauración;
 * Proveedor de hosting o soporte web, al tratarse de un servicio expuesto y externalizado;
 * Help desk, para registro y trazabilidad de avisos;
 * Responsables de negocio y Comunicación, si la incidencia afecta a la web pública o a la tienda online;
 * Asesoría jurídica o apoyo RGPD, si existen datos personales implicados.
+
+### Documentación y evidencias
+
+1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
+2. Registrar desde el inicio:
+   * Resumen inicial del incidente;
+   * Aplicación o servicio afectado;
+   * Impacto funcional y de datos;
+   * Línea temporal de eventos;
+   * Responsables asignados;
+   * Decisiones de contención, erradicación y recuperación.
+3. Conservar logs, payloads, extractos del proveedor, capturas, archivos y cambios observados con fecha, hora, origen y responsable de la recogida.
+4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -44,6 +68,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Logs de aplicación, servidor, WAF, base de datos y proveedor externo, en la medida en que el proveedor los facilite o la empresa tenga acceso delegado.
     * Capturas de errores, muestras de payloads, archivos subidos, cambios en tablas o registros y cronología del incidente.
     * Configuración afectada, versiones del software y cambios recientes desplegados.
+    * Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 5. **Evaluar el impacto.**
     * Afectación a confidencialidad, integridad y disponibilidad.
     * Riesgo para datos personales de clientes y proveedores.
@@ -93,7 +118,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 2. Coordinar de inmediato con el proveedor de hosting o soporte web si la gestión es externa.
 3. Documentar la vulnerabilidad, los indicadores observados, el alcance y las medidas aplicadas, diferenciando claramente entre acciones propias y acciones ejecutadas por el proveedor.
 4. Informar a departamentos internos afectados sobre indisponibilidad, riesgos y cambios operativos.
-5. Comunicar a clientes si la incidencia afecta a formularios, tienda online o tratamiento de sus datos.
+5. Comunicar a clientes si la incidencia afecta a formularios, tienda online o tratamiento de sus datos, siempre con autorización del `Incident Commander` y coordinación con Comunicación.
 6. Coordinar con asesoría jurídica y consultoría RGPD si hubo acceso a datos personales o información regulada.
 7. Valorar notificación a INCIBE-CERT o a fuerzas y cuerpos de seguridad si el incidente es grave.
 
@@ -114,6 +139,13 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * WAF y reglas adaptadas;
     * Revisiones periódicas de vulnerabilidades;
     * Principio de mínimo privilegio.
+
+### Cierre y AAR
+
+1. El `Incident Commander` declarará el cierre operativo del incidente cuando el vector esté cerrado, la integridad validada y la monitorización reforzada activada.
+2. Completar el expediente con cronología final, impacto, evidencias, acciones del proveedor y resultado de las validaciones.
+3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
+4. Registrar acciones de mejora sobre gestión de vulnerabilidades, hardening, despliegues, registros y dependencia de terceros.
 
 ### Guía operativa rápida
 

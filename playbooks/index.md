@@ -41,4 +41,6 @@ La selección se ha realizado teniendo en cuenta:
 
 Estos playbooks no sustituyen al plan general de respuesta a incidentes, sino que lo desarrollan para escenarios concretos. Su objetivo es facilitar una respuesta más rápida, homogénea y coordinada ante los incidentes más relevantes para la empresa analizada.
 
+Todos los playbooks deberán aplicarse bajo la cadena de mando, los canales de coordinación, las reglas de comunicación, la gestión del expediente, la custodia de evidencias y el cierre mediante AAR definidos en [`plan.md`](../plan.md).
+
 

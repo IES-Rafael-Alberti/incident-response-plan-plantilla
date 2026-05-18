@@ -4,6 +4,16 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es meramente secuencial. Utiliza tu mejor criterio.
 
+### Aplicación del plan general
+
+Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
+
+1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
+2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
+3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
+4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
+5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante incidentes de phishing que afecten, o puedan afectar, al correo corporativo, a las credenciales, a los usuarios o a la información de la empresa. Su finalidad es detectar con rapidez el alcance del engaño, contener el posible compromiso de cuentas o equipos y coordinar una respuesta clara con TIC, Dirección y las áreas afectadas.
@@ -19,11 +29,25 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para coordinar decisiones y escalado;
+* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
 * Equipo TIC, para análisis técnico, bloqueo de cuentas, correo y equipos;
 * Help desk, para recepción de avisos y soporte a usuarios;
 * Responsables de departamento afectados, especialmente si intervienen pagos o datos sensibles;
 * Asesoría jurídica o apoyo RGPD, si existe riesgo para datos personales o fraude.
+
+### Documentación y evidencias
+
+1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
+2. Registrar desde el inicio:
+   * Resumen inicial del incidente;
+   * Usuarios, cuentas y buzones afectados;
+   * Impacto funcional, económico y de datos;
+   * Línea temporal de eventos;
+   * Responsables asignados;
+   * Decisiones de contención, erradicación y comunicación.
+3. Conservar mensajes, cabeceras, capturas, hashes, URL, logs, alertas y acciones de purgado con fecha, hora, origen y responsable de la recogida.
+4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -108,6 +132,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Reglas de reenvío;
     * Movimientos en servicios cloud y paneles de proveedores.
 * Confirmar con la subcontrata de antivirus que las firmas, políticas y telemetría están actualizadas en los activos afectados.
+* Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 
 #### Erradicar
 
@@ -135,7 +160,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     1. Informar rápidamente a los potenciales afectados para que no interactúen con el mensaje.
     2. Explicar el impacto operativo de las medidas de contención, como bloqueo de cuenta o aislamiento de equipo.
     3. Indicar claramente qué deben hacer: no borrar el correo, no reenviarlo, no seguir enlaces y avisar de cualquier mensaje similar.
-5. Comunicar a clientes o proveedores si sus datos, cuentas o transacciones pueden haberse visto afectados.
+5. Comunicar a clientes o proveedores si sus datos, cuentas o transacciones pueden haberse visto afectados, siempre con autorización del `Incident Commander` y coordinación con Legal, RGPD y Comunicación.
     1. Priorizar los casos en los que exista acceso no autorizado a información personal o fraude de suplantación.
     2. Preparar, si aplica, las notificaciones exigidas por RGPD y por contratos con terceros.
 6. Contactar con el proveedor de seguros, si la empresa dispone de cobertura de ciberincidentes.
@@ -168,6 +193,13 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Formalizar un procedimiento de verificación de pagos;
     * Revisar accesos desde dispositivos móviles y nube.
 6. Mantener una vigilancia reforzada de las cuentas afectadas durante los días posteriores para detectar nuevos accesos o intentos de fraude.
+
+### Cierre y AAR
+
+1. El `Incident Commander` declarará el cierre operativo del incidente cuando la campaña esté contenida, las cuentas saneadas y los mensajes maliciosos retirados o controlados.
+2. Completar el expediente con cronología final, impacto, evidencias, decisiones de comunicación y resultado de la recuperación.
+3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
+4. Registrar acciones de mejora sobre filtros de correo, MFA, concienciación, validación de pagos y coordinación con proveedores.
 
 ### Guía operativa rápida
 

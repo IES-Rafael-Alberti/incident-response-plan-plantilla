@@ -4,6 +4,16 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+### Aplicación del plan general
+
+Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
+
+1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
+2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
+3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
+4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
+5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante incidentes de fuga, extracción o exfiltración no autorizada de información. Su finalidad es cortar la salida de datos, preservar evidencias, valorar el impacto regulatorio y recuperar el control sobre la información comprometida.
@@ -19,11 +29,25 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para coordinar y escalar la respuesta;
+* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
 * Equipo TIC, para análisis técnico, contención y revisión de accesos;
 * Help desk, para trazabilidad inicial y soporte operativo;
 * Asesoría jurídica y apoyo RGPD, por el posible impacto regulatorio;
 * Responsables de negocio afectados, para priorizar procesos y datos críticos.
+
+### Documentación y evidencias
+
+1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
+2. Registrar desde el inicio:
+   * Resumen inicial del incidente;
+   * Datos, cuentas y sistemas afectados;
+   * Impacto funcional, legal y reputacional;
+   * Línea temporal de eventos;
+   * Responsables asignados;
+   * Decisiones de contención, erradicación y notificación.
+3. Conservar logs, trazas, exportaciones, capturas y registros de accesos con fecha, hora, origen y responsable de la recogida.
+4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -43,6 +67,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Logs de red, autenticación, correo, sistemas cloud y acceso a carpetas compartidas.
     * Trazas de dispositivos extraíbles o sincronizaciones externas, si están disponibles.
     * Evidencias del volumen, horario, usuario implicado, sistema de origen y destino aparente.
+    * Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 4. **Evaluar el impacto.**
     * Determinar la sensibilidad, volumen y criticidad de la información exfiltrada.
     * Confirmar si los datos incluyen información protegida por RGPD.
@@ -103,7 +128,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 3. Coordinar con asesoría jurídica y consultoría RGPD la valoración regulatoria, contractual y de notificación.
 4. Evaluar obligación de notificación a la AEPD y, si procede, a las personas afectadas.
 5. Informar a departamentos afectados sobre restricciones temporales y medidas operativas.
-6. Comunicar a clientes o proveedores cuando sus datos o servicios puedan haberse visto comprometidos.
+6. Comunicar a clientes o proveedores cuando sus datos o servicios puedan haberse visto comprometidos, siempre con autorización del `Incident Commander` y coordinación con Legal, RGPD y Comunicación.
 7. Valorar comunicación a INCIBE-CERT y a fuerzas y cuerpos de seguridad si hay indicios delictivos o perjuicio relevante.
 8. Mantener un registro completo de todas las comunicaciones y decisiones adoptadas.
 
@@ -120,6 +145,13 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 5. Reforzar monitorización sobre datos sensibles durante las semanas posteriores.
 6. Actualizar procedimientos sobre tratamiento de datos, permisos y uso de servicios externos.
 7. Impartir formación específica si la fuga se debió a error humano o mala práctica operativa.
+
+### Cierre y AAR
+
+1. El `Incident Commander` declarará el cierre operativo del incidente cuando la vía de fuga esté cerrada, los accesos saneados y el alcance suficientemente delimitado.
+2. Completar el expediente con cronología final, impacto, evidencias, decisiones regulatorias y resultado de la recuperación.
+3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
+4. Registrar acciones de mejora sobre DLP, permisos, compartición de información, monitorización y respuesta legal o regulatoria.
 
 ### Guía operativa rápida
 

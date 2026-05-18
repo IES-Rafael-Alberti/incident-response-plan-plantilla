@@ -4,6 +4,16 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+### Aplicación del plan general
+
+Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
+
+1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
+2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
+3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
+4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
+5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante el compromiso de identidades, cuentas y accesos corporativos. Su finalidad es detectar accesos no autorizados, contener rápidamente el abuso de credenciales, proteger la información sensible y restablecer el acceso legítimo con garantías.
@@ -19,11 +29,25 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para priorizar y escalar la respuesta;
+* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
 * Equipo TIC, para revisar autenticación, cuentas, permisos y endpoints;
 * Help desk, para validar usuarios, abrir incidentes y asistir en cambios de credenciales;
 * Responsables del área afectada, si se trata de cuentas con acceso a procesos críticos;
 * Asesoría jurídica o apoyo RGPD, si se accedió a datos personales o información regulada.
+
+### Documentación y evidencias
+
+1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
+2. Registrar desde el inicio:
+   * Resumen inicial del incidente;
+   * Cuentas y servicios afectados;
+   * Impacto funcional y de datos;
+   * Línea temporal de accesos y cambios;
+   * Responsables asignados;
+   * Decisiones de contención, erradicación y restauración.
+3. Conservar logs, alertas, exportaciones, sesiones, reglas, tokens y cambios administrativos con fecha, hora, origen y responsable de la recogida.
+4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -43,6 +67,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Intentos de acceso fallidos previos y posteriores.
 5. Recopilar evidencia relevante.
     * Logs de autenticación, exportación de alertas, mensajes de phishing asociados, sesiones abiertas, tokens, claves API y cambios administrativos.
+    * Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 6. Formular preguntas clave.
     * Si MFA estaba activado y funcionó correctamente;
     * Si se usaron las credenciales para movimiento lateral o acceso a otros sistemas;
@@ -109,7 +134,7 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
 4. Informar a usuarios y responsables afectados.
     1. Explicar cambios de contraseña, cierres de sesión y pasos de verificación.
     2. Aclarar que no deben reutilizar claves ni aprobar notificaciones MFA no iniciadas por ellos.
-5. Comunicar a proveedores externos si el acceso comprometido afecta a integraciones, hosting, nube o tienda online.
+5. Comunicar a proveedores externos si el acceso comprometido afecta a integraciones, hosting, nube o tienda online, siempre con autorización del `Incident Commander`.
 6. Valorar la notificación a organismos o fuerzas de seguridad si se aprecia acceso delictivo relevante o fraude.
 
 ### Recuperación
@@ -130,6 +155,13 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
     * Uso seguro de contraseñas;
     * Reconocimiento de alertas de acceso y MFA.
 7. Formalizar procedimientos de alta, baja y cambio de rol para evitar cuentas huérfanas o privilegios innecesarios.
+
+### Cierre y AAR
+
+1. El `Incident Commander` declarará el cierre operativo del incidente cuando las cuentas estén saneadas, las sesiones revocadas y la supervisión reforzada activada.
+2. Completar el expediente con cronología final, impacto, evidencias, decisiones sobre accesos y resultado de la recuperación.
+3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
+4. Registrar acciones de mejora sobre MFA, gestión de identidades, permisos, procedimientos de alta y baja, y controles sobre proveedores.
 
 ### Guía operativa rápida
 

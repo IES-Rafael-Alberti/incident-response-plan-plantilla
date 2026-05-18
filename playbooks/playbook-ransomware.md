@@ -4,6 +4,16 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+### Aplicación del plan general
+
+Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
+
+1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
+2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
+3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
+4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
+5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante incidentes de ransomware que afecten, o puedan afectar, a la disponibilidad, integridad o confidencialidad de la información corporativa. Su finalidad es frenar la propagación, proteger las copias de seguridad, preservar evidencias y recuperar la operativa desde estados confiables sin improvisación.
@@ -20,12 +30,26 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para dirigir la respuesta y priorizar decisiones;
+* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
 * Equipo TIC de sistemas y endpoints, para aislamiento, reconstrucción y restauración;
 * Equipo TIC de red y correo, para bloqueos, segmentación y revisión de accesos remotos;
 * Help desk, para recepción de avisos y soporte operativo a usuarios;
 * Responsables de proceso o negocio, para priorizar recuperación de servicios;
 * Dirección y apoyo legal o RGPD, cuando exista impacto alto, continuidad afectada o riesgo regulatorio.
+
+### Documentación y evidencias
+
+1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
+2. Registrar desde el inicio:
+   * Resumen inicial del incidente;
+   * Sistemas, cuentas y datos afectados;
+   * Impacto funcional, legal y de continuidad;
+   * Línea temporal de eventos;
+   * Responsables asignados;
+   * Decisiones de contención, erradicación, recuperación y continuidad.
+3. Conservar notas de rescate, muestras, logs, alertas, capturas, binarios, hashes y datos de restauración con fecha, hora, origen y responsable de la recogida.
+4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -80,8 +104,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
         * Riesgo regulatorio o contractual por pérdida de acceso o filtración.
     3. Criterio orientativo de severidad:
         * **alta**, si afecta a uno o varios puestos sin propagación confirmada;
-        * **muy alta**, si alcanza carpetas compartidas, servidores, varias sedes o cuentas privilegiadas;
-        * **crítica**, si compromete copias de seguridad, servicios esenciales, datos personales o la continuidad del negocio.
+        * **crítica**, si alcanza carpetas compartidas, servidores, varias sedes, cuentas privilegiadas, copias de seguridad, servicios esenciales, datos personales o la continuidad del negocio.
 4. **Encontrar el vector de infección.** Revisar las tácticas de acceso inicial más probables para esta empresa:
     * Correo de phishing con adjunto o enlace malicioso;
     * Credenciales comprometidas y acceso remoto;
@@ -118,6 +141,7 @@ Las cuarentenas deben impedir la propagación desde los sistemas infectados y pr
 #### Erradicar
 
 * Preservar evidencias relevantes antes de reconstruir: nota de rescate, binarios, logs, tareas programadas, claves de registro, eventos de autenticación y muestras de archivos cifrados.
+* Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 * Eliminar mecanismos de persistencia y accesos no autorizados detectados durante la investigación.
 * Reconstruir los sistemas infectados desde medios conocidos como seguros cuando no se pueda garantizar una limpieza completa.
 * Restaurar exclusivamente desde copias de seguridad limpias y verificadas.
@@ -138,12 +162,12 @@ Las cuarentenas deben impedir la propagación desde los sistemas infectados y pr
 > **No se recomienda pagar el rescate:** no garantiza la recuperación de los datos ni evita una futura extorsión o filtración.
 
 1. Elevar el incidente a Dirección, al responsable de seguridad y a los coordinadores de departamentos críticos.
-    1. Activar el comité de crisis interno cuando la severidad sea muy alta o crítica.
+    1. Activar el comité de crisis interno cuando la severidad sea crítica.
 2. Activar el plan de continuidad del negocio si la indisponibilidad afecta a operaciones esenciales.
 3. Documentar cronología, sistemas afectados, decisiones de contención, restauración y evidencias.
 4. Comunicarse con asesoría legal y consultoría RGPD si hay indicios de exfiltración o acceso a datos personales.
 5. Informar a usuarios internos de las restricciones temporales: indisponibilidad de carpetas, aislamiento de equipos, cambios de contraseña y procedimientos alternativos.
-6. Comunicar a clientes o proveedores si el incidente afecta a la prestación del servicio o a sus datos.
+6. Comunicar a clientes o proveedores si el incidente afecta a la prestación del servicio o a sus datos, siempre con autorización del `Incident Commander` y coordinación con Legal, RGPD y Comunicación.
 7. Contactar con el seguro, si existe, y cumplir plazos de notificación.
 8. Considerar la comunicación a:
     1. INCIBE-CERT;
@@ -167,6 +191,13 @@ Las cuarentenas deben impedir la propagación desde los sistemas infectados y pr
 5. Mantener monitorización reforzada de logs, actividad de autenticación, tráfico de red y endpoints tras la vuelta a producción.
 6. Documentar desde qué copia se restauró cada sistema, a qué hora y con qué resultado.
 
+### Cierre y AAR
+
+1. El `Incident Commander` declarará el cierre operativo del incidente cuando la propagación esté detenida, los sistemas prioritarios restaurados y la vigilancia reforzada estabilizada.
+2. Completar el expediente con cronología final, impacto, evidencias, decisiones sobre continuidad y resultado de las restauraciones.
+3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
+4. Registrar acciones de mejora sobre copias de seguridad, segmentación, accesos remotos, hardening y procedimientos de continuidad.
+
 ### Guía operativa rápida
 
 Durante la primera hora, la secuencia recomendada será la siguiente:
@@ -174,7 +205,7 @@ Durante la primera hora, la secuencia recomendada será la siguiente:
 | Paso | Acción operativa |
 |---|---|
 | 1 | Confirmar los indicios y abrir el incidente. |
-| 2 | Clasificar la severidad como alta, muy alta o crítica. |
+| 2 | Clasificar la severidad como alta o crítica. |
 | 3 | Aislar equipos, cuentas y comparticiones en riesgo. |
 | 4 | Proteger copias de seguridad y credenciales privilegiadas. |
 | 5 | Recoger evidencias mínimas antes de reconstruir. |
