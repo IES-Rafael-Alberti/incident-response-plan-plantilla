@@ -1,27 +1,47 @@
-
-## Rol: adjunto del Incident Commander (adjunto)
+## Rol: Adjunto del Incident Commander
 
 ### Descripción
 
-Un adjunto del Incident Commander (adjunto) es un papel de apoyo directo al Incident Commander (IC). El adjunto permite que el IC se centre en el problema que tiene entre manos, en lugar de preocuparse por documentar los pasos o controlar los tiempos. El adjunto apoya al IC y lo mantiene centrado en el incidente.  Como adjunto, se espera que asuma el mando del IC si éste lo solicita.
+El adjunto del Incident Commander (IC) es un rol de apoyo directo encargado de asistir al Incident Commander durante la gestión de un incidente. Su principal objetivo es facilitar que el IC pueda centrarse en la coordinación y resolución del incidente sin distraerse con tareas administrativas, seguimiento de tiempos o control operativo.
 
-### Funciones
+Este rol contribuye al mantenimiento del orden, la supervisión de tareas y la coordinación de la comunicación durante todo el incidente. Asimismo, debe estar preparado para asumir temporalmente las funciones del Incident Commander cuando sea necesario.
 
-1. 1. Plantear al Incident Commander cuestiones que, de otro modo, no se abordarían (vigilar los temporizadores que se han puesto en marcha, retomar los elementos que se han perdido de una lista, etc.).
-1. 1. Ser un Incident Commander "de reserva", en caso de que el jefe principal tenga que hacer la transición a un SME, o tenga que alejarse de la función de IC.
-1. 1. Gestionar la llamada del incidente y estar preparado para retirar a las personas de la llamada si así lo indica el Incident Commander.
-1. Supervisar el estado del incidente y notificar al IC si el nivel de gravedad del incidente aumenta.
-1. Supervise los temporizadores:
-    * controlar el tiempo que ha durado el incidente
-    * Notificar al IC cada X minutos para que pueda tomar medidas (por ejemplo, "IC, el incidente está ahora en la marca de 10 minutos").
-1. Supervisar los plazos de las tareas (_p.ej._, "IC, avisa de que el temporizador de la investigación de [TEAM] se ha agotado").
+---
 
-### Formación
+## Funciones
 
-* Leer y comprender el plan de respuesta a incidentes, incluyendo los roles y los libros de jugadas.
+- Proporcionar al Incident Commander recordatorios, avisos o preguntas relevantes que puedan pasar desapercibidos durante la gestión del incidente.
+- Sustituir al Incident Commander en caso de que este necesite abandonar temporalmente el rol o delegar la coordinación.
+- Ayudar en la gestión de la llamada y de los canales de comunicación asociados al incidente.
+- Retirar participantes de la llamada o del canal de comunicación cuando así lo indique el Incident Commander y estén dificultando la coordinación.
+- Supervisar el estado general del incidente y notificar al Incident Commander cualquier cambio relevante en la severidad o el impacto.
 
-#### Requisitos previos
+---
 
-* Estar entrenado como [Incident Commander](#role-incident-commander-ic).
+### Supervisión de temporizadores y tiempos
 
-Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
+- Controlar la duración total del incidente desde su apertura.
+- Informar periódicamente al Incident Commander sobre el tiempo transcurrido desde el inicio del incidente.
+- Supervisar los plazos establecidos para las tareas asignadas.
+- Notificar cuando los tiempos acordados estén próximos a finalizar o hayan expirado.
+- Recordar seguimientos pendientes o tareas sin actualizar.
+
+Ejemplos de comunicación:
+
+- “El incidente lleva 10 minutos activo”.
+- “El temporizador asignado al equipo X ha finalizado”.
+- “Quedan 5 minutos para la actualización comprometida”.
+
+---
+
+## Formación
+
+- Leer y comprender completamente el Plan de Respuesta a Incidentes, incluyendo los roles, responsabilidades y procedimientos establecidos.
+
+---
+
+## Requisitos previos
+
+- Haber recibido formación previa como Incident Commander.
+- Disponer de buenas habilidades de comunicación y coordinación.
+- Ser capaz de mantener el seguimiento de tareas, tiempos y participantes durante situaciones de presión.

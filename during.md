@@ -4,12 +4,9 @@ Autor: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}
 
 Revisión {{REVISION_NUMBER}}, Publicado {{RELEASE_DATE}}
 
-Este plan de respuesta a incidentes está basado en el plan conciso, directivo, específico, flexible y gratuito disponible en [Github](https://github.com/counteractive/incident-response-plan-template) de Counteractive Security y discutido en [www.counteractive.net](https://www.counteractive.net/blog/an-ir-plan-you-will-use/)
-
-
 Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en {{TEST_DATE}}.
 
-`TODO: Personalice esta plantilla para su organización utilizando las instrucciones en https://github.com/counteractive/incident-response-plan-template.  Para obtener servicios de respuesta a incidentes, o ayuda para personalizar, implementar o probar su plan, póngase en contacto con nosotros en contact@counteractive.net o en el (888) 925-5765.`
+La organización deberá revisar este documento al menos una vez al año o tras incidentes graves de seguridad, cambios significativos en infraestructura o modificaciones regulatorias relevantes.
 
 # Evaluar
 
@@ -20,42 +17,71 @@ Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en 
 
 ## Evaluar el impacto funcional
 
-¿Cuál es el impacto directo o probable en su trabajo? (_por ejemplo_, operaciones comerciales, empleados, clientes, usuarios)
+¿Cuál es el impacto directo o probable sobre el funcionamiento de la organización?
 
-* Degradación o fracaso del trabajo/negocio: **incidente!**
-* Ninguno: evalúe el impacto de la información.
+* Interrupción del CRM, ERP, correo electrónico o almacenamiento compartido.
+* Caída de la página web o tienda online.
+* Pérdida de disponibilidad de los sistemas de facturación, RRHH o ventas.
+* Acceso no autorizado a cuentas internas o servicios cloud.
+* Paralización parcial o total del trabajo remoto o presencial.
+* Incapacidad de prestar servicio a clientes.
+
+Si cualquiera de estas situaciones ocurre, deberá considerarse un incidente de seguridad.
 
 ## Evaluar el impacto de la información
 
-¿Cuál es el impacto directo o probable sobre sus datos/información, en particular los sensibles? (_por ejemplo_, información personal, datos de propiedad, financieros o sanitarios)
+¿Cuál es el impacto directo o probable sobre los datos de la organización?
 
-* Información a la que se ha accedido, cogido, cambiado o borrado: **incidente!**
-* Ninguno: gestión a través de canales no relacionados con incidentes (por ejemplo, un ticket de soporte).
+* Acceso no autorizado a datos personales de clientes, empleados o proveedores.
+* Modificación o borrado de documentos corporativos.
+* Fuga de información financiera, legal o contractual.
+* Acceso indebido a propiedad intelectual o información estratégica.
+* Compromiso de credenciales de acceso.
+* Exposición de datos almacenados en la nube.
 
-**Cada miembro del equipo está facultado para comenzar este proceso.** Si ves algo, dilo.
+Cualquier afectación sobre confidencialidad, integridad o disponibilidad de la información deberá tratarse como incidente.
 
-`TODO: Personalizar las categorías/severidades según sea necesario.  Este sencillo ejemplo (incidente vs. no incidente) se basa en las categorías de impacto del NIST SP 800-61r2.`
+## Categorías de severidad
+
+| Severidad | Descripción |
+| --- | --- |
+| Baja | Incidentes sin impacto operativo relevante y sin afectación de datos sensibles. |
+| Media | Incidentes con impacto limitado o posible afectación parcial de sistemas o usuarios. |
+| Alta | Interrupción relevante de servicios críticos, compromiso de cuentas privilegiadas o exposición de datos personales. |
+| Crítica | Paralización del negocio, ransomware, fuga masiva de datos o afectación legal/regulatoria grave. |
+
+**Cada miembro del equipo está facultado para comenzar este proceso.** Si ves algo, notifícalo inmediatamente.
 
 # Iniciar la respuesta
 
 ## Nombrar el incidente
 
-Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.html) para referirse al incidente -un nombre en clave- que se utilizará para el archivo y el canal del incidente. `Todo: Personalizar el procedimiento de nomenclatura de incidentes.`
+El incidente deberá nombrarse mediante una estructura simple y fácilmente identificable:
+
+**[TIPO]-[FECHA]-[PALABRA_CLAVE]**
+
+Ejemplos:
+
+* PHISHING-2026-CORREO
+* RANSOMWARE-2026-FACTURACION
+* CLOUD-2026-EXFILTRACION
+
+El nombre será utilizado para el expediente del incidente, canales de comunicación y almacenamiento de evidencias.
 
 ## Reunir el equipo de respuesta
 
-1. Llame al Incident Commander de turno/de guardia. `TODO: Añadir lista o procedimiento de llamada del Incident Commander`.
+1. Llame al Incident Commander de turno/de guardia.
 2. **No** discuta el incidente fuera del equipo de respuesta a menos que el Incident Commander lo autorice
-3. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}. `ToDo: Añadir el procedimiento de lanzamiento del chat de respuesta.`
-4. Iniciar y/o unirse a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}. `TODO: Añadir el procedimiento de lanzamiento de la llamada de respuesta.`
+3. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}. 
+4. Iniciar y/o unirse a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}. 
 5. Preferible usar la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
-6. **No** utilizar el correo electrónico principal si es posible.  Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}.  Encripte los correos electrónicos cuando cualquier participante esté fuera del dominio {{ORGANIZATION_DOMAIN}}.  `TODO: Añadir detalles y procedimiento de correo electrónico alternativo, por ejemplo, Office 365 o GSuite bajo demanda`.
+6. **No** utilizar el correo electrónico principal si es posible.  Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}.  Encripte los correos electrónicos cuando cualquier participante esté fuera del dominio {{ORGANIZATION_DOMAIN}}.  
 7. **No** usar SMS/texto para comunicar el incidente, a menos que sea para decirle a alguien que se mueva a un canal más seguro.
 8. Invite al personal de turno/guardia a la llamada y al chat de respuesta.
-    * Invite al equipo de seguridad.  `TODO: Añadir lista de contactos del equipo de seguridad o procedimiento.`
-    * Invitar al SME de los equipos y sistemas afectados. `TODO: Añadir la lista de contactos del SME del equipo o el procedimiento.`
-    * Invitar a las partes interesadas ejecutivas y a los asesores jurídicos lo antes posible, pero dar prioridad a los responsables operativos.  `TODO: añadir una lista de contactos de las partes interesadas ejecutivas o un procedimiento.`
-9. OPCIONAL:_ Establecer una sala de colaboración en persona ("sala de guerra") para incidentes complejos o graves. `TODO: Añadir el procedimiento de la sala de colaboración.`
+    * Invite al equipo de seguridad.  
+    * Invitar al SME de los equipos y sistemas afectados. 
+    * Invitar a las partes interesadas ejecutivas y a los asesores jurídicos lo antes posible, pero dar prioridad a los responsables operativos.  
+9. Para incidentes graves podrá habilitarse una sala de coordinación física en la sede principal.
 
 ### Referencia: Estructura del equipo de respuesta
 
@@ -71,20 +97,18 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
   * SME para equipos/unidades de negocio
   * SME para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
 
-`TODO: Modificar la estructura de roles según sea necesario`.
 
 ### Referencia: Información de contacto del equipo de respuesta
 
 Rol del equipo de respuesta         | Información de contacto
 ----------------------------------- | ---------------------------
-Localizador del Incident Commander  | {INCIDENT_COMMANDER_PAGER_NUMBER}}
+Localizador del Incident Commander  | {{INCIDENT_COMMANDER_PAGER_NUMBER}}
 Url del Incident Commander          | {{INCIDENT_COMMANDER_PAGER_URL}}
 Lista del Incident Commander        | {{INCIDENT_COMMANDER_ROSTER}}
 Lista del equipo de seguridad       | {{SECURITY_TEAM_ROSTER}}
 Lista del equipo SME                | {{TEAM_SME_ROSTER}}
 Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
-`TODO: Personalizar la información de contacto del equipo de respuesta.  Incluya los procedimientos de contacto en las listas, que pueden ser estáticas o dinámicas.`
 
 ## Establecer el ritmo de batalla
 
@@ -126,53 +150,68 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 ### Realizar la actualización de la respuesta
 
-* Llevar a cabo actualizaciones programadas utilizando la [estructura de llamada de actualización](#referencia-estructura-de-la-llamada-de-actualización-de-la-respuesta) cada {{UPDATE_FREQUENCY}} en el puente activo. `TODO: Personalizar la frecuencia de actualización y los scripts; se recomienda no más de dos veces al día.`
+* Llevar a cabo actualizaciones programadas utilizando la [estructura de llamada de actualización](#referencia-estructura-de-la-llamada-de-actualización-de-la-respuesta) cada {{UPDATE_FREQUENCY}} en el puente activo.
 * Ajustar la frecuencia según sea necesario.
 * Coordinar las actualizaciones independientes (_por ejemplo_, ejecutivas, legales) según sea necesario, pero con la menor frecuencia posible.
 
 #### Referencia: Estructura de la llamada de actualización de la respuesta
 
 * Incident Commander (IC): Desde la última actualización programada, el resumen del incidente es el siguiente:
+  * Estado actual del incidente. 
   * [Impacto]
   * [Vector]
+  * Sistemas afectados.
+  * Cambios relevantes desde la última actualización.
   * [Actualización del resumen]
   * [Actualización de la línea de tiempo]
 * IC: Equipo de investigación, por favor proporcione una breve actualización
-  * LÍDER DE LA INVESTIGACIÓN: [Actividades de investigación o "nada que informar"]
+  * LÍDER DE LA INVESTIGACIÓN: [Actividades de investigación realizadas o "nada que informar"]
   * ¿Cuál es su plan de investigación recomendado?
   * ¿Qué acciones de investigación necesitan ser asignadas o aprobadas?  [escuchar, obtener consenso, encargar/aprobar]
 * IC: Equipo de remediación, por favor proporcione una breve actualización
-  * Líder de remediación: [Actividades de remediación o "nada que informar"]
+  * Líder de remediación: [Acciones de remediación aplicadas o "nada que informar"]
   * ¿Cuál es su estrategia de corrección recomendada?  ¿Objeciones fuertes? [escuchar, obtener el consenso, asignar/aprobar]
   * ¿Qué acciones de corrección necesitan ser asignadas o aprobadas?
 * IC: Equipo de comunicación, por favor, proporcione una breve actualización:
-  * COMMUNICATIONS LEAD: [Actividades de comunicación o "nada que informar"]
+  * COMMUNICATIONS LEAD: [Actividades de comunicación realizadas o "nada que informar"]
   * ¿Cuál es su estrategia de comunicación recomendada?  ¿Objeciones fuertes? [escuchar, obtener consenso, encargar/aprobar]
   * ¿Qué acciones de comunicación necesitan ser asignadas o aprobadas?
+* IC: Por último hablaremos de
+  * Riesgos pendientes.
+  * Próximas acciones y responsables.
 * IC: Esta llamada y el chat permanecerán activos y disponibles hasta el cierre del incidente, por favor, utilícelos para todas las comunicaciones relacionadas con el incidente.  Si es posible, proporcione actualizaciones del estado en tiempo real en el chat.  ¿Hay alguna pregunta o aportación restante? [responde a las preguntas]
 * IC: Líderes de equipo, por favor procedan.  Nos reuniremos de nuevo en [{{UPDATE_TIME}}] para discutir el estado. Gracias.
 
 ## Supervisar el alcance
 
-* Supervisar el alcance de la respuesta para asegurarse de que no excede el ámbito de control del Incident Commander.
-* Si un incidente es lo suficientemente complejo y hay suficientes intervinientes, considere la posibilidad de crear subequipos.
+* El Incident Commander deberá supervisar continuamente el alcance del incidente.
+* Si el incidente crece o afecta múltiples áreas, podrán crearse subequipos especializados.
+* Se priorizarán los activos críticos relacionados con:
+  * Correo corporativo.
+  * CRM y ERP.
+  * Almacenamiento cloud.
+  * Página web y tienda online.
+  * Infraestructura de red.
 
 ### Crear Sub-Equipos
 
-* En la preparación de incidentes complejos, se predefinen tres subequipos: Investigación, Remediación y Comunicación, generalmente responsables de esas funciones de respuesta. `TODO: Personalizar la estructura de los subequipos si es necesario.`
-* Crear un puente de llamadas y un chat para cada subequipo.
+* Los subequipos definidos inicialmente serán:
+  * Investigación.
+  * Remediación.
+  * Comunicación.
+* Cada subequipo tendrá un líder responsable de coordinar acciones y reportar al Incident Commander.
 * El Incident Commander designará a los líderes de los equipos, que dependen del IC, y a los miembros de los equipos, que dependen de su líder.  _Los líderes de equipo no tienen que estar formados como Incident Commanders, pero es preferible que tengan alguna experiencia de liderazgo._
 * El Incident Commander puede ajustar el propósito o el nombre de los subequipos según sea necesario.
-* Si desea cambiar de equipo, pregunte a su **líder de equipo actual**.  **No** pregunte al Incident Commander, o al líder del otro(s) equipo(s).  Utilice la cadena de mando.
 
 ### Incidente dividido
 
 Si un incidente resulta ser dos o más incidentes distintos:
 
-* Establezca un nuevo [archivo de incidentes](#crear-el-archivo-del-incidente).
+* Establezca un [archivo de incidentes](#crear-el-archivo-del-incidente) independiente para cada incidente.
 * Haga un seguimiento y coordine la investigación, la reparación y la comunicación en el archivo correspondiente.
 * Considere la posibilidad de establecer subequipos para cada incidente.
-* **Mantener un Incident Commander de alto nivel**, para coordinar los activos de baja densidad y alta demanda y mantener la unidad de mando.
+* Se coordinarán recursos comunes desde el equipo de mando.
+* **Mantener un Incident Commander de alto nivel** como coordinación global.
 
 # Investigar
 
@@ -185,30 +224,39 @@ Si un incidente resulta ser dos o más incidentes distintos:
     * Proporcionar un intercambio de archivos seguro.
     * Obtener almacenamiento físico.
     * Compartir la ubicación del archivo del incidente en la llamada y el chat.
-    * `TODO: Personalizar y automatizar la ubicación del archivo y el procedimiento`.
-1. Documente el impacto funcional y de la información, si se conoce (véase [Evaluar](#evaluar)). `TODO: Personalizar las categorías de impacto, si es necesario.`
-2. Documentar el vector, si se conoce (_por ejemplo_ web, correo electrónico, medios extraíbles). `TODO: Personalizar la lista de vectores, si es necesario.`
+    * El acceso estará restringido al personal autorizado.
+    * Las evidencias físicas se custodiarán en la sede principal al finalizar el incidente.
+1. Documente el impacto funcional y de la información, si se conoce (véase [Evaluar](#evaluar)). 
+2. Documentar el vector, si se conoce (_por ejemplo_ web, correo electrónico, medios extraíbles). 
 3. Documente el resumen del incidente: un breve resumen del vector, el impacto, la investigación y la situación de la reparación, si se conoce.
-4. Documente la línea de tiempo del incidente, incluyendo la actividad del atacante y la actividad de la respuesta. `TODO: Añadir líneas de tiempo con diferentes detalles, según sea necesario.`
+4. Documente la línea de tiempo del incidente, incluyendo la actividad del atacante y la actividad de la respuesta. 
 5. Documente los pasos de investigación, reparación y comunicación.  Documente las actividades de forma independiente para que puedan combinarse y reutilizarse, si es posible.
 6. Registre la información significativa, como:
-    **Pruebas**, con la hora de recogida, la fuente, la cadena de custodia, _etc._.
+    **Evidencias**, con la hora de recogida, la fuente, la cadena de custodia, _etc._.
     * **Sistemas afectados**, con el modo y el momento en que se identificó el sistema, y el resumen del efecto (_por ejemplo, tiene malware, datos a los que se ha accedido).
     * **Archivos de interés**, como el malware o los archivos de datos, con el sistema y los metadatos.
     * **Datos accedidos y tomados**, con nombres de archivos, metadatos y hora de presunta exposición.
     * **Actividad significativa del atacante**, como inicios de sesión y ejecución de malware, con la hora del evento.
     * **Indicadores de compromiso (IOC)** basados en la red, como direcciones IP y dominios.
     * **Indicadores de compromiso basados en el host**, como nombres de archivos, hashes y claves de registro.
- * **Cuentas comprometidas**, con el alcance del acceso y la hora del compromiso.
+    * **Cuentas comprometidas**, con el alcance del acceso y la hora del compromiso.
 
-`TODO: Personalizar el procedimiento de documentación del incidente, incluyendo hojas de cálculo, bases de datos, formularios, sistemas y plantillas, si es necesario.`
+### Procedimiento de documentación del incidente
+
+La documentación del incidente se realizará mediante:
+
+* Expediente digital seguro almacenado en servidor interno.
+* Hojas de seguimiento compartidas únicamente con el equipo autorizado.
+* Registro cronológico de acciones realizadas.
+* Almacenamiento estructurado de evidencias.
+* Registro de cadena de custodia cuando proceda.
 
 ## Recoger las pistas iniciales
 
-1. Entrevistar a los reportadores del incidente.
-2. Recoger los datos de apoyo iniciales (_e._, alarmas, eventos, datos, suposiciones, intuiciones) en el archivo del incidente.
-3. Entrevistar a lo(s) SME con experiencia en el dominio o el sistema, para comprender los detalles técnicos, el contexto y el riesgo.
-4. Entrevistar a lo(s) SME de la unidad de negocio afectada, para comprender el impacto de la misión/negocio, el contexto y el riesgo.
+1. Entrevistar a los reportadores del incidente y usuarios afectados.
+2. Recoger los datos de apoyo iniciales (_e._, alarmas, eventos, datos, suposiciones, intuiciones, logs, correos sospechosos) en el archivo del incidente.
+3. Consultar al personal TIC y responsables de sistemas con experiencia en el dominio o el sistema, para comprender los detalles técnicos, el contexto y el riesgo.
+4. Validar el impacto operativo con los departamentos afectados, para comprender el impacto el negocio, el contexto y el riesgo.
 5. Asegúrese de que las pistas son relevantes, detalladas y procesables.
 
 ### Referencia: Lista de recursos de respuesta
@@ -222,9 +270,6 @@ Mapa de red                         | {{NETWORK_MAP_LOCATION}}
 Consola SIEM                        | {{SIEM_CONSOLE_LOCATION}}
 Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
 
-`TODO: Completar la información crítica y las listas de activos ("joyas de la corona"). Esto es increíblemente importante para una respuesta eficaz.`
-
-`TODO: Personalizar la lista de recursos de respuesta`.
 
 ## Actualizar el plan de investigación y el archivo del incidente
 
@@ -244,10 +289,10 @@ Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
         * **¿Cómo?**: compromiso (explotación), persistencia, acceso, exfiltración, movimiento lateral, etc.?
         * **¿Por qué?**: objetivo, momento, acceso a x datos, acceso a y sistema, etc.
         * **¿Quién?**: atacante, usuarios afectados, clientes afectados, etc.?
-1. **Identificar y priorizar los dispositivos y estrategias testigo** para responder a las preguntas clave.
+7. **Identificar y priorizar los dispositivos y estrategias testigo** para responder a las preguntas clave.
     * Consultar los diagramas de la red, los sistemas de gestión de activos y la experiencia de las SME
-    * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta))
-1. Consulte los [playbook de incidentes](#playbooks) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
+    * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta)
+8. Consulte los [playbook de incidentes](#playbooks) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
 
 **El plan de investigación es fundamental para una respuesta eficaz; impulsa todas las acciones de investigación.  Utilice el pensamiento crítico, la creatividad y el buen juicio.**
 
@@ -641,7 +686,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 * **No** notifique o actualice al personal que no responde hasta que el Incident Commander lo autorice.
 * Coordinar con {{EXECUTIVE_TEAM}} y {{LEGAL_TEAM}} antes de interactuar con las fuerzas del orden.
 * Póngase en contacto con las fuerzas del orden locales en {{LOCAL_LE_CONTACT}}.
-* Póngase en contacto con el FBI en {{FBI_CONTACT}} o a través del [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
+* Póngase en contacto con el INCIBE en {{FBI_CONTACT}} o a través del [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
 * Póngase en contacto con los operadores de los sistemas utilizados en el ataque, sus sistemas también pueden haber sido comprometidos.
 
 ### Contactar con el servicio de asistencia de respuesta externa

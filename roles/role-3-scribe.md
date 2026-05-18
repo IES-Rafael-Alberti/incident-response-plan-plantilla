@@ -1,36 +1,61 @@
-
-## Rol: Escriba
+## Rol: Scribe
 
 ### Descripción
 
-Un escriba documenta la línea de tiempo de un incidente a medida que avanza, y se asegura de que todas las decisiones y datos importantes se capturen para su posterior revisión.  El escriba debe centrarse en el archivo del incidente, así como en los elementos de seguimiento para una acción posterior.
+El escriba es responsable de documentar de forma continua la evolución del incidente, asegurando que todas las decisiones, acciones y eventos relevantes queden correctamente registrados para su posterior revisión y análisis.
 
-### Funciones
+Su función principal es mantener una línea temporal clara y estructurada del incidente, recopilando la información necesaria para auditorías, revisiones post-mortem y acciones de seguimiento posteriores.
 
-1. Asegurarse de que la llamada del incidente se está grabando.
-1. 2. Anotar en el chat y en la línea de tiempo del expediente: los datos, eventos y acciones importantes, a medida que se producen. Específicamente:
-    * Acciones clave a medida que se llevan a cabo
-    * Informes de estado cuando el IC los proporcione
-    * Cualquier llamada clave durante la llamada o en la revisión final
-1. Actualice el chat indicando quién es el IC, quién es el adjunto y que usted es el escribiente (si no lo ha hecho ya).
+---
 
-Escribir es más un arte que una ciencia. El objetivo es mantener un registro preciso de los eventos importantes que ocurrieron, Usa tu juicio y experiencia. Pero aquí hay algunas cosas generales que definitivamente querrás capturar como escribiente.
+## Funciones
 
-* El resultado de cualquier decisión de la votación.
-### Cualquier elemento de seguimiento que se llame "Deberíamos hacer esto..", "¿Por qué no se hizo esto?", etc.
+- Verificar que la llamada o reunión del incidente esté siendo grabada, cuando corresponda.
+- Registrar en el chat y en la línea temporal del incidente todos los eventos relevantes conforme ocurran, incluyendo:
+  - Acciones importantes realizadas durante la gestión del incidente.
+  - Actualizaciones de estado comunicadas por el Incident Commander.
+  - Decisiones relevantes tomadas durante la llamada y en la fase de cierre del incidente.
+- Actualizar los canales de comunicación indicando quién desempeña los roles de:
+  - Incident Commander.
+  - Adjunto del Incident Commander.
+  - Escriba.
+  
+  Esto deberá realizarse si dicha información aún no ha sido comunicada oficialmente.
 
-### Formación
+---
 
-Lea y comprenda el plan de respuesta a incidentes, incluyendo los roles y los libros de jugadas.
+### Registro y seguimiento de información relevante
 
-#### Requisitos previos
+El rol del escriba requiere criterio y capacidad de síntesis para identificar qué información resulta relevante dentro del incidente. No se trata de una transcripción literal, sino de un registro estructurado de los elementos importantes para la gestión y revisión posterior.
 
-* Excelentes habilidades de **comunicación verbal y escrita**.
-* Cualquiera puede actuar como escribiente durante un incidente, y son elegidos por el Incident Commander al inicio de la llamada.
-* Normalmente, el ayudante actuará como escribiente.
+El escriba debe asegurarse de registrar especialmente:
 
-#### Proceso de formación
+- El resultado de decisiones tomadas mediante consenso o votación.
+- Acciones pendientes o elementos que requieran seguimiento posterior.
+- Propuestas, dudas o cuestiones relevantes planteadas durante el incidente, tales como:
+  - “Deberíamos implementar esta medida”.
+  - “¿Por qué no se realizó esta acción?”.
+  - “Será necesario revisar este proceso posteriormente”.
 
-* Lea el plan de respuesta a incidentes, incluyendo todos los roles y libros de jugadas.
-* _OPCIONAL:_ Paralizar las acciones de un escriba durante un incidente o ejercicio, y buscar la opinión del escriba real y del Incident Commander.
+---
 
+## Formación
+
+El escriba debe leer y comprender el Plan de Respuesta a Incidentes, incluyendo los roles, responsabilidades y procedimientos definidos.
+
+---
+
+## Requisitos previos
+
+- Excelentes habilidades de comunicación oral y escrita.
+- Capacidad de síntesis y organización de la información.
+- Cualquier participante puede asumir el rol de escriba durante un incidente, normalmente por asignación directa del Incident Commander al inicio de la llamada.
+- Habitualmente, el adjunto del Incident Commander también desempeña las funciones de escriba.
+
+---
+
+## Proceso de formación
+
+- Estudiar el Plan de Respuesta a Incidentes completo, incluyendo roles, responsabilidades y manuales asociados.
+- Participar u observar incidentes reales o simulaciones para familiarizarse con la documentación de eventos.
+- Opcionalmente, comparar los registros realizados con los del Incident Commander para mejorar la calidad y precisión de la documentación.
