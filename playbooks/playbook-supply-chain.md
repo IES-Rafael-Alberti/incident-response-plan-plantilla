@@ -4,15 +4,7 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
-### Aplicación del plan general
-
-Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
-
-1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
-2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
-3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
-4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
-5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
 
 ### Finalidad y activación
 
@@ -25,29 +17,37 @@ Se activará ante cualquiera de estas señales:
 3. Detección interna de software, servicio o componente comprometido de origen externo;
 4. Sospecha de abuso de credenciales compartidas, API o accesos remotos de proveedor.
 
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar el incidente y el tercero afectado. |
+| 2 | Clasificar la severidad según el impacto de negocio y datos. |
+| 3 | Cortar accesos, integraciones o actualizaciones asociadas si existe riesgo activo. |
+| 4 | Preservar comunicaciones y evidencias técnicas. |
+| 5 | Escalar a Seguridad, Dirección y responsables de negocio afectados. |
+| 6 | Exigir al proveedor información técnica, alcance y medidas inmediatas. |
+| 7 | Definir qué servicios deben mantenerse, limitarse o detenerse temporalmente. |
+
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
-* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
-* Equipo TIC, para revisar integraciones, accesos, configuraciones y dependencias;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de integraciones, proveedores, cloud o seguridad, para revisar accesos, configuraciones y dependencias;
 * Help desk, para centralizar avisos y registrar afectación operativa;
 * Responsables de negocio afectados, para priorizar servicios dependientes del tercero;
-* Proveedor implicado y, si procede, asesoría jurídica o apoyo RGPD.
+* [Enlace](../roles/role-5-liaison.md), proveedor implicado y, si procede, asesoría jurídica o apoyo RGPD.
 
-### Documentación y evidencias
+#### Registro mínimo y herramientas prioritarias
 
-1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
-2. Registrar desde el inicio:
-   * Resumen inicial del incidente;
-   * Tercero, producto o integración afectados;
-   * Impacto funcional, contractual y de datos;
-   * Línea temporal de eventos y comunicaciones;
-   * Responsables asignados;
-   * Decisiones de contención, erradicación y restauración.
-3. Conservar comunicaciones del proveedor, logs, versiones, IOC, contratos, SLA y extractos técnicos con fecha, hora, origen y responsable de la recogida.
-4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es`, `https://ir.kiwiincidentes.es/assets` y documentación contractual o técnica del proveedor.
+* Registrar relaciones de confianza afectadas, comunicaciones del tercero, versiones, IOC y decisiones de suspensión o reconexión.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -155,27 +155,7 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
     * Cláusulas de notificación de incidentes;
     * Revisiones de seguridad periódicas;
     * Dependencia mínima necesaria.
-
-### Cierre y AAR
-
-1. El `Incident Commander` declarará el cierre operativo del incidente cuando el riesgo heredado del tercero esté controlado y las integraciones se hayan validado.
-2. Completar el expediente con cronología final, impacto, evidencias, comunicaciones del proveedor y resultado de la recuperación.
-3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
-4. Registrar acciones de mejora sobre gestión de terceros, cláusulas contractuales, segregación de accesos y validación de cambios.
-
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar el incidente y el tercero afectado. |
-| 2 | Clasificar la severidad según el impacto de negocio y datos. |
-| 3 | Cortar accesos, integraciones o actualizaciones asociadas si existe riesgo activo. |
-| 4 | Preservar comunicaciones y evidencias técnicas. |
-| 5 | Escalar a Seguridad, Dirección y responsables de negocio afectados. |
-| 6 | Exigir al proveedor información técnica, alcance y medidas inmediatas. |
-| 7 | Definir qué servicios deben mantenerse, limitarse o detenerse temporalmente. |
+7. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
 
 ### Recursos
 

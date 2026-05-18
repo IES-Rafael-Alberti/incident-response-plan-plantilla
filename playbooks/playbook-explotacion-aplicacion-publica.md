@@ -4,15 +4,7 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
-### Aplicación del plan general
-
-Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
-
-1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
-2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
-3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
-4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
-5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
 
 ### Finalidad y activación
 
@@ -25,30 +17,38 @@ Se activará ante cualquiera de estas señales:
 3. Hallazgo de accesos a paneles, bases de datos o recursos internos desde la aplicación pública;
 4. Notificación del proveedor o de terceros sobre explotación activa del servicio expuesto.
 
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar la explotación o el comportamiento anómalo. |
+| 2 | Clasificar la severidad inicial. |
+| 3 | Restringir el acceso o activar mantenimiento si el riesgo lo justifica. |
+| 4 | Solicitar el bloqueo de IP, firmas o funciones explotadas, o aplicarlo internamente si ese control está bajo gestión directa. |
+| 5 | Preservar logs, payloads y evidencias básicas. |
+| 6 | Escalar a TIC, Seguridad y proveedor externo. |
+| 7 | Valorar si existe exposición de datos, persistencia o afectación a la tienda online. |
+
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
-* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
-* Equipo TIC, para análisis técnico, bloqueo y restauración;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de aplicación, base de datos y hosting, para análisis técnico, bloqueo y restauración;
 * Proveedor de hosting o soporte web, al tratarse de un servicio expuesto y externalizado;
 * Help desk, para registro y trazabilidad de avisos;
-* Responsables de negocio y Comunicación, si la incidencia afecta a la web pública o a la tienda online;
+* [Enlace](../roles/role-5-liaison.md) y responsables de negocio, si la incidencia afecta a la web pública o a la tienda online;
 * Asesoría jurídica o apoyo RGPD, si existen datos personales implicados.
 
-### Documentación y evidencias
+#### Registro mínimo y herramientas prioritarias
 
-1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
-2. Registrar desde el inicio:
-   * Resumen inicial del incidente;
-   * Aplicación o servicio afectado;
-   * Impacto funcional y de datos;
-   * Línea temporal de eventos;
-   * Responsables asignados;
-   * Decisiones de contención, erradicación y recuperación.
-3. Conservar logs, payloads, extractos del proveedor, capturas, archivos y cambios observados con fecha, hora, origen y responsable de la recogida.
-4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es`, `https://ir.kiwiincidentes.es/assets`, `https://ir.kiwiincidentes.es/netmap` y del proveedor de hosting.
+* Registrar payloads, errores, consultas, cambios en tablas o ficheros, y actuaciones propias o del proveedor.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -148,27 +148,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * WAF y reglas adaptadas;
     * Revisiones periódicas de vulnerabilidades;
     * Principio de mínimo privilegio.
-
-### Cierre y AAR
-
-1. El `Incident Commander` declarará el cierre operativo del incidente cuando el vector esté cerrado, la integridad validada y la monitorización reforzada activada.
-2. Completar el expediente con cronología final, impacto, evidencias, acciones del proveedor y resultado de las validaciones.
-3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
-4. Registrar acciones de mejora sobre gestión de vulnerabilidades, hardening, despliegues, registros y dependencia de terceros.
-
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar la explotación o el comportamiento anómalo. |
-| 2 | Clasificar la severidad inicial. |
-| 3 | Restringir el acceso o activar mantenimiento si el riesgo lo justifica. |
-| 4 | Solicitar el bloqueo de IP, firmas o funciones explotadas, o aplicarlo internamente si ese control está bajo gestión directa. |
-| 5 | Preservar logs, payloads y evidencias básicas. |
-| 6 | Escalar a TIC, Seguridad y proveedor externo. |
-| 7 | Valorar si existe exposición de datos, persistencia o afectación a la tienda online. |
+8. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
 
 ### Recursos
 

@@ -4,15 +4,7 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
-### Aplicación del plan general
-
-Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
-
-1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
-2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
-3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
-4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
-5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
 
 ### Finalidad y activación
 
@@ -25,29 +17,37 @@ Se activará ante cualquiera de estas señales:
 3. Hallazgo de envíos, sincronizaciones o accesos fuera de horario o patrón habitual;
 4. Sospecha fundada de exposición de datos personales, contractuales o internos sensibles.
 
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar la sospecha y abrir el incidente. |
+| 2 | Clasificar la severidad según tipo y volumen de datos. |
+| 3 | Cortar accesos, sincronizaciones o canales de salida relacionados. |
+| 4 | Preservar logs y evidencias antes de modificar sistemas. |
+| 5 | Escalar a Seguridad, Dirección y apoyo legal o RGPD si hay datos personales. |
+| 6 | Identificar sistema, cuenta y destino probable de la salida de información. |
+| 7 | Definir restricciones temporales para evitar nuevas extracciones. |
+
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
-* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
-* Equipo TIC, para análisis técnico, contención y revisión de accesos;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de datos, correo, cloud o sistemas implicados, para análisis técnico, contención y revisión de accesos;
 * Help desk, para trazabilidad inicial y soporte operativo;
-* Asesoría jurídica y apoyo RGPD, por el posible impacto regulatorio;
+* [Enlace](../roles/role-5-liaison.md) interno, junto con asesoría jurídica y apoyo RGPD, por el posible impacto regulatorio;
 * Responsables de negocio afectados, para priorizar procesos y datos críticos.
 
-### Documentación y evidencias
+#### Registro mínimo y herramientas prioritarias
 
-1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
-2. Registrar desde el inicio:
-   * Resumen inicial del incidente;
-   * Datos, cuentas y sistemas afectados;
-   * Impacto funcional, legal y reputacional;
-   * Línea temporal de eventos;
-   * Responsables asignados;
-   * Decisiones de contención, erradicación y notificación.
-3. Conservar logs, trazas, exportaciones, capturas y registros de accesos con fecha, hora, origen y responsable de la recogida.
-4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es`, `https://ir.kiwiincidentes.es/assets`, `https://ir.kiwiincidentes.es/cil` y `https://ir.kiwiincidentes.es/cal`.
+* Registrar cuentas, sistemas, datos, destinos aparentes, restricciones temporales y decisiones regulatorias.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -151,27 +151,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 5. Reforzar monitorización sobre datos sensibles durante las semanas posteriores.
 6. Actualizar procedimientos sobre tratamiento de datos, permisos y uso de servicios externos.
 7. Impartir formación específica si la fuga se debió a error humano o mala práctica operativa.
-
-### Cierre y AAR
-
-1. El `Incident Commander` declarará el cierre operativo del incidente cuando la vía de fuga esté cerrada, los accesos saneados y el alcance suficientemente delimitado.
-2. Completar el expediente con cronología final, impacto, evidencias, decisiones regulatorias y resultado de la recuperación.
-3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
-4. Registrar acciones de mejora sobre DLP, permisos, compartición de información, monitorización y respuesta legal o regulatoria.
-
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar la sospecha y abrir el incidente. |
-| 2 | Clasificar la severidad según tipo y volumen de datos. |
-| 3 | Cortar accesos, sincronizaciones o canales de salida relacionados. |
-| 4 | Preservar logs y evidencias antes de modificar sistemas. |
-| 5 | Escalar a Seguridad, Dirección y apoyo legal o RGPD si hay datos personales. |
-| 6 | Identificar sistema, cuenta y destino probable de la salida de información. |
-| 7 | Definir restricciones temporales para evitar nuevas extracciones. |
+8. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
 
 ### Recursos
 

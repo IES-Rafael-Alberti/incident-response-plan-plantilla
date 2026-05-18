@@ -4,15 +4,7 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
-### Aplicación del plan general
-
-Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
-
-1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
-2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
-3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
-4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
-5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
 
 ### Finalidad y activación
 
@@ -26,30 +18,38 @@ Se activará ante cualquiera de estas señales:
 4. Pérdida repentina de acceso a comparticiones, bases de datos o sistemas de negocio por cifrado o corrupción;
 5. Amenaza de extorsión acompañada de posible exfiltración previa.
 
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar los indicios y abrir el incidente. |
+| 2 | Clasificar la severidad como alta o crítica. |
+| 3 | Aislar equipos, cuentas y comparticiones en riesgo. |
+| 4 | Proteger copias de seguridad y credenciales privilegiadas. |
+| 5 | Recoger evidencias mínimas antes de reconstruir. |
+| 6 | Delimitar alcance inicial y vector probable. |
+| 7 | Escalar a Dirección, Seguridad, responsables de proceso y apoyo legal si corresponde. |
+
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
-* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
-* Equipo TIC de sistemas y endpoints, para aislamiento, reconstrucción y restauración;
-* Equipo TIC de red y correo, para bloqueos, segmentación y revisión de accesos remotos;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de sistemas y endpoints, para aislamiento, reconstrucción y restauración;
+* [SME](../roles/role-4-expert.md) de red, correo y accesos remotos, para bloqueos, segmentación y revisión de accesos remotos;
 * Help desk, para recepción de avisos y soporte operativo a usuarios;
 * Responsables de proceso o negocio, para priorizar recuperación de servicios;
-* Dirección y apoyo legal o RGPD, cuando exista impacto alto, continuidad afectada o riesgo regulatorio.
+* [Enlace](../roles/role-5-liaison.md) interno, junto con Dirección y apoyo legal o RGPD, cuando exista impacto alto, continuidad afectada o riesgo regulatorio.
 
-### Documentación y evidencias
+#### Registro mínimo y herramientas prioritarias
 
-1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
-2. Registrar desde el inicio:
-   * Resumen inicial del incidente;
-   * Sistemas, cuentas y datos afectados;
-   * Impacto funcional, legal y de continuidad;
-   * Línea temporal de eventos;
-   * Responsables asignados;
-   * Decisiones de contención, erradicación, recuperación y continuidad.
-3. Conservar notas de rescate, muestras, logs, alertas, capturas, binarios, hashes y datos de restauración con fecha, hora, origen y responsable de la recogida.
-4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es`, `https://ir.kiwiincidentes.es/assets`, `https://ir.kiwiincidentes.es/netmap`, `https://ir.kiwiincidentes.es/cil` y `https://ir.kiwiincidentes.es/cal`.
+* Registrar notas de rescate, sistemas afectados, recursos compartidos, cuentas, copias disponibles y decisiones de continuidad.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -199,27 +199,7 @@ Las cuarentenas deben impedir la propagación desde los sistemas infectados y pr
 4. Confirmar que las cuentas asociadas a los sistemas restaurados ya han sido saneadas y rotadas.
 5. Mantener monitorización reforzada de logs, actividad de autenticación, tráfico de red y endpoints tras la vuelta a producción.
 6. Documentar desde qué copia se restauró cada sistema, a qué hora y con qué resultado.
-
-### Cierre y AAR
-
-1. El `Incident Commander` declarará el cierre operativo del incidente cuando la propagación esté detenida, los sistemas prioritarios restaurados y la vigilancia reforzada estabilizada.
-2. Completar el expediente con cronología final, impacto, evidencias, decisiones sobre continuidad y resultado de las restauraciones.
-3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
-4. Registrar acciones de mejora sobre copias de seguridad, segmentación, accesos remotos, hardening y procedimientos de continuidad.
-
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar los indicios y abrir el incidente. |
-| 2 | Clasificar la severidad como alta o crítica. |
-| 3 | Aislar equipos, cuentas y comparticiones en riesgo. |
-| 4 | Proteger copias de seguridad y credenciales privilegiadas. |
-| 5 | Recoger evidencias mínimas antes de reconstruir. |
-| 6 | Delimitar alcance inicial y vector probable. |
-| 7 | Escalar a Dirección, Seguridad, responsables de proceso y apoyo legal si corresponde. |
+7. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
 
 ### Recursos
 

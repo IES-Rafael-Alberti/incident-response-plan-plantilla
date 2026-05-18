@@ -4,15 +4,7 @@
 
 Asigna los pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
-### Aplicación del plan general
-
-Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
-
-1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
-2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
-3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
-4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
-5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
 
 ### Finalidad y activación
 
@@ -25,30 +17,38 @@ Se activará ante cualquiera de estas señales:
 3. Alertas del proveedor de hosting, WAF o monitorización web sobre alteraciones de ficheros o paneles;
 4. Detección de accesos administrativos sospechosos o cambios inesperados en contenidos públicos.
 
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar la alteración y capturar evidencias básicas. |
+| 2 | Retirar la web de exposición pública o pasarla a mantenimiento. |
+| 3 | Bloquear accesos y credenciales administrativas sospechosas. |
+| 4 | Avisar al proveedor externo y al responsable de seguridad. |
+| 5 | Valorar si existe acceso a base de datos, formularios o tienda online. |
+| 6 | Clasificar la severidad inicial. |
+| 7 | Preparar la restauración desde copia limpia solo después de preservar evidencias mínimas. |
+
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
-* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
-* Equipo TIC, para análisis técnico, bloqueo de accesos y restauración;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de web, hosting y base de datos, para análisis técnico, bloqueo de accesos y restauración;
 * Proveedor de hosting o soporte web, por tratarse de un servicio externalizado;
 * Help desk, para recepción de avisos y trazabilidad;
-* Responsables de Comunicación o RR. SS., por el impacto reputacional;
+* [Enlace](../roles/role-5-liaison.md) interno o externo, por el impacto reputacional;
 * Asesoría jurídica o apoyo RGPD, si existe riesgo sobre formularios o datos personales.
 
-### Documentación y evidencias
+#### Registro mínimo y herramientas prioritarias
 
-1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
-2. Registrar desde el inicio:
-   * Resumen inicial del incidente;
-   * URL o activos afectados;
-   * Impacto reputacional y operativo;
-   * Línea temporal de eventos;
-   * Responsables asignados;
-   * Decisiones de contención y restauración.
-3. Conservar capturas, ficheros, logs, copias, cambios de contenido y actuaciones del proveedor con fecha, hora, origen y responsable de la recogida.
-4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias del panel del proveedor, `https://logs.kiwiincidentes.es`, `https://siem.kiwiincidentes.es`, `https://ir.kiwiincidentes.es/assets` y `https://ir.kiwiincidentes.es/netmap`.
+* Registrar capturas, ficheros, cambios de contenido, accesos administrativos y actuaciones del proveedor.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -146,6 +146,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 3. Cambiar las credenciales de administración del sitio, de la tienda online y de cualquier cuenta asociada.
 4. Rehabilitar la web solo después de corregir la vulnerabilidad, validar integridad y confirmar con el proveedor externo que el entorno es seguro.
 5. Si procede, preparar una explicación breve para usuarios o clientes aclarando que el contenido alterado no representaba a la empresa.
+6. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
 
 #### Evitar riesgos
 
@@ -164,26 +165,6 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 * Logísticos: página de mantenimiento preparada, canales de contacto con proveedor externo y procedimiento de comunicación pública.
 * Financieros: soporte urgente del proveedor, auditoría web, restauración de servicio y posibles costes de reputación o notificación.
 
-### Cierre y AAR
-
-1. El `Incident Commander` declarará el cierre operativo del incidente cuando el entorno se haya saneado y la publicación sea estable.
-2. Completar el expediente con cronología final, impacto, evidencias, acciones del proveedor y resultado de la restauración.
-3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
-4. Registrar acciones de mejora sobre hardening web, control de cambios, accesos administrativos y supervisión del proveedor.
-
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar la alteración y capturar evidencias básicas. |
-| 2 | Retirar la web de exposición pública o pasarla a mantenimiento. |
-| 3 | Bloquear accesos y credenciales administrativas sospechosas. |
-| 4 | Avisar al proveedor externo y al responsable de seguridad. |
-| 5 | Valorar si existe acceso a base de datos, formularios o tienda online. |
-| 6 | Clasificar la severidad inicial. |
-| 7 | Preparar la restauración desde copia limpia solo después de preservar evidencias mínimas. |
 
 ### Recursos
 

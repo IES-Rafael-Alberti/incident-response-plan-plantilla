@@ -4,15 +4,7 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
-### Aplicación del plan general
-
-Este playbook desarrolla el escenario técnico, pero deberá ejecutarse siempre bajo el modelo operativo de [`plan.md`](../plan.md). En particular:
-
-1. El `Incident Commander` dirigirá la respuesta, designará adjunto y escriba cuando corresponda y autorizará las decisiones de escalado relevantes.
-2. Se abrirán la llamada, el chat y el expediente del incidente conforme al plan general.
-3. La documentación, la cronología, los IOC, las evidencias y la cadena de custodia se mantendrán en el expediente del incidente.
-4. Las actualizaciones de estado seguirán la cadencia definida en el plan general, con referencia de dos horas mientras el incidente permanezca activo, salvo ajuste expreso del `Incident Commander`.
-5. Ninguna comunicación externa o ampliación de la difusión interna fuera del equipo de respuesta se realizará sin autorización del `Incident Commander`.
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
 
 ### Finalidad y activación
 
@@ -25,29 +17,37 @@ Se activará ante cualquiera de estas señales:
 3. Accesos desde IP, ubicaciones o dispositivos inusuales;
 4. Sospecha de robo de credenciales por phishing, malware o proveedor externo.
 
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar la alerta o el aviso del usuario. |
+| 2 | Validar la identidad del afectado por un canal alternativo. |
+| 3 | Clasificar la severidad inicial. |
+| 4 | Bloquear o limitar la cuenta si existe acceso confirmado. |
+| 5 | Cerrar sesiones, revocar tokens y preservar evidencias. |
+| 6 | Revisar si hay más cuentas o servicios relacionados afectados. |
+| 7 | Escalar a Seguridad, Dirección o Legal si la cuenta es crítica o hay datos sensibles implicados. |
+
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* `Incident Commander`, para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
-* Adjunto del `Incident Commander` o escriba, para seguimiento de tiempos, tareas y cronología;
-* Equipo TIC, para revisar autenticación, cuentas, permisos y endpoints;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de identidad, correo, cloud o endpoints, para revisar autenticación, cuentas, permisos y endpoints;
 * Help desk, para validar usuarios, abrir incidentes y asistir en cambios de credenciales;
 * Responsables del área afectada, si se trata de cuentas con acceso a procesos críticos;
-* Asesoría jurídica o apoyo RGPD, si se accedió a datos personales o información regulada.
+* [Enlace](../roles/role-5-liaison.md) interno, junto con asesoría jurídica o apoyo RGPD, si se accedió a datos personales o información regulada.
 
-### Documentación y evidencias
+#### Registro mínimo y herramientas prioritarias
 
-1. Crear o actualizar el expediente del incidente con el nombre definido en el plan general.
-2. Registrar desde el inicio:
-   * Resumen inicial del incidente;
-   * Cuentas y servicios afectados;
-   * Impacto funcional y de datos;
-   * Línea temporal de accesos y cambios;
-   * Responsables asignados;
-   * Decisiones de contención, erradicación y restauración.
-3. Conservar logs, alertas, exportaciones, sesiones, reglas, tokens y cambios administrativos con fecha, hora, origen y responsable de la recogida.
-4. Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es` y `https://ir.kiwiincidentes.es/assets`.
+* Registrar cuentas afectadas, privilegios, sesiones, tokens, cambios administrativos y decisiones de contención.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -161,27 +161,7 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
     * Uso seguro de contraseñas;
     * Reconocimiento de alertas de acceso y MFA.
 7. Formalizar procedimientos de alta, baja y cambio de rol para evitar cuentas huérfanas o privilegios innecesarios.
-
-### Cierre y AAR
-
-1. El `Incident Commander` declarará el cierre operativo del incidente cuando las cuentas estén saneadas, las sesiones revocadas y la supervisión reforzada activada.
-2. Completar el expediente con cronología final, impacto, evidencias, decisiones sobre accesos y resultado de la recuperación.
-3. Programar la revisión posterior a la acción (AAR) dentro del plazo definido en el plan general.
-4. Registrar acciones de mejora sobre MFA, gestión de identidades, permisos, procedimientos de alta y baja, y controles sobre proveedores.
-
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar la alerta o el aviso del usuario. |
-| 2 | Validar la identidad del afectado por un canal alternativo. |
-| 3 | Clasificar la severidad inicial. |
-| 4 | Bloquear o limitar la cuenta si existe acceso confirmado. |
-| 5 | Cerrar sesiones, revocar tokens y preservar evidencias. |
-| 6 | Revisar si hay más cuentas o servicios relacionados afectados. |
-| 7 | Escalar a Seguridad, Dirección o Legal si la cuenta es crítica o hay datos sensibles implicados. |
+8. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
 
 ### Recursos
 
