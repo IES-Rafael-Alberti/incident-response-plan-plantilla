@@ -1,20 +1,20 @@
 # Revisión posterior al incidente
 
-La fase posterior al incidente convierte la respuesta en aprendizaje operativo. El objetivo no es buscar culpables, sino confirmar qué ocurrió, qué impacto tuvo en {{COMPANY_NAME}}, qué controles funcionaron, qué controles fallaron y qué cambios deben aplicarse para reducir la probabilidad o el impacto de incidentes similares.
+La fase posterior al incidente es donde convertimos lo que pasó en un aprendizaje real. El objetivo no es buscar culpables, sino confirmar qué ocurrió, qué impacto tuvo en {{COMPANY_NAME}}, qué controles funcionaron, qué controles fallaron y qué cambios deben aplicarse para reducir la probabilidad o el impacto de incidentes similares.
 
 La revisión posterior a la acción (After Action Review, AAR) debe programarse dentro de {{AAR_SLA}} tras declarar el cierre operativo del incidente. El Incident Commander puede adelantarla si el incidente fue S1/S2, afectó a datos personales, implicó a proveedores críticos, generó comunicación pública o dejó riesgos residuales relevantes.
 
 ## Preparar el AAR (After Action Review)
 
-1. Nombrar un propietario del AAR. Por defecto será el Escriba, salvo que el Incident Commander designe a otra persona.
-2. Invitar a los asistentes definidos en {{AAR_ATTENDEES}} e incluir, como mínimo:
+1. Designar un propietario del AAR. Por defecto será el Escriba, salvo que el Incident Commander designe a otra persona.
+2. Invitar a los asistentes definidos en {{AAR_ATTENDEES}}. Como mínimo deben estar:
    * Incident Commander.
    * Escriba.
    * Líderes de Investigación, Remediación y Comunicación.
    * Propietarios de los activos o servicios afectados.
    * CISO o dpto. TIC que participaron en la respuesta.
    * Legal/Cumplimiento si hubo datos personales, evidencias legales, proveedores o contratos.
-   * Dirección para incidentes S1/S2 o cuando existan decisiones de continuidad de negocio.
+   * Dirección para incidentes S1/S2 o cuando hayan decisiones de continuidad de negocio.
    * Proveedores implicados: SOC/CERT externo, proveedor cloud, proveedor web/tienda, EDR, backup, seguro o comunicación externa, cuando hayan participado en la respuesta.
 3. Revisar antes de la reunión:
    * Expediente del incidente.
@@ -31,7 +31,7 @@ La revisión posterior a la acción (After Action Review, AAR) debe programarse 
 
 ## Realizar la reunión AAR
 
-Documentar respuestas claras, verificables y sin atribución personal de culpa. La reunión debe centrarse en hechos, impacto, decisiones y mejora.
+Todo lo que se documente aquí debe ser claro, verificable y sin atribución personal de culpa. La reunión debe centrarse en hechos, impacto, decisiones y mejora.
 
 1. **Qué ocurrió.**
    * Construir una línea temporal desde la primera señal hasta el cierre operativo.
@@ -42,19 +42,19 @@ Documentar respuestas claras, verificables y sin atribución personal de culpa. 
    * Señalar decisiones de escalado, contención, comunicación y recuperación.
    * Registrar qué controles de prevención, detección, contención y recuperación funcionaron.
 3. **Qué impacto tuvo.**
-   * Indicar servicios afectados y duración de la indisponibilidad.
+   * Indicar servicios afectados y cuanto tiempo no estuvieron disponibles.
    * Registrar impacto sobre clientes, proveedores, empleados y obligaciones contractuales.
    * Evaluar si afectó a datos personales y si se cumplieron requisitos RGPD.
    * Comparar RTO/RPO esperados con RTO/RPO reales (RTO: Objetivo de Tiempo de Recuperación, RPO: Objetivo de Punto de Recuperación)
 4. **Cuáles fueron las causas raíz.**
-   * Diferenciar causa técnica, causa organizativa y causa de proceso.
+   * Separar causa técnica, causa organizativa y causa de proceso.
    * Relacionar la causa con riesgos del PDS, controles pendientes o controles insuficientes.
    * Identificar si el incidente deriva de phishing, identidad, cloud, proveedor, ransomware, web o fuga de datos.
 5. **Se compartió correctamente la inteligencia del incidente.**
    * Revisar si se creó un evento en MISP cuando existían IOCs o TTPs útiles para terceros de confianza.
    * Confirmar que el TLP aplicado fue correcto.
    * Confirmar que no se compartieron datos personales, credenciales, secretos, contratos ni evidencias forenses sensibles.
-   * Registrar identificador del evento MISP, destinatarios/comunidades, fecha de publicación y responsable que autorizó el intercambio.
+   * Registrar identificador del evento MISP, destinatarios/comunidades, fecha de publicación y quien autorizó el intercambio.
 6. **Cómo se debe mejorar.**
    * Definir acciones correctivas con propietario, prioridad, fecha límite y evidencia esperada.
    * Clasificar cada acción como prevención, identificación, detección, contención, erradicación, recuperación o cooperación con terceros.
