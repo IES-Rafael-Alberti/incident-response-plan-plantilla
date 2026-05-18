@@ -1,6 +1,6 @@
 # Revisión posterior al incidente
 
-La fase posterior al incidente convierte la respuesta en aprendizaje operativo. Su objetivo no es buscar culpables, sino confirmar qué ocurrió, qué impacto tuvo en {{COMPANY_NAME}}, qué controles funcionaron, qué controles fallaron y qué cambios deben aplicarse para reducir la probabilidad o el impacto de incidentes similares.
+La fase posterior al incidente convierte la respuesta en aprendizaje operativo. El objetivo no es buscar culpables, sino confirmar qué ocurrió, qué impacto tuvo en {{COMPANY_NAME}}, qué controles funcionaron, qué controles fallaron y qué cambios deben aplicarse para reducir la probabilidad o el impacto de incidentes similares.
 
 La revisión posterior a la acción (After Action Review, AAR) debe programarse dentro de {{AAR_SLA}} tras declarar el cierre operativo del incidente. El Incident Commander puede adelantarla si el incidente fue S1/S2, afectó a datos personales, implicó a proveedores críticos, generó comunicación pública o dejó riesgos residuales relevantes.
 
