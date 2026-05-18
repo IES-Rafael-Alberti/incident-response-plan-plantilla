@@ -273,51 +273,118 @@ Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
 
 ## Actualizar el plan de investigación y el archivo del incidente
 
-1. Revisar y perfeccionar el impacto del incidente.
-2. Revisar y refinar el vector del incidente.
-3. Revisar y perfeccionar el resumen del incidente.
-4. Revisar y perfeccionar la línea de tiempo del incidente con hechos e inferencias.
-5. Crear hipótesis: qué puede haber ocurrido y con qué seguridad.
-6. **Identificar y priorizar las preguntas clave** (lagunas de información) para apoyar o desacreditar las hipótesis.
-    * Utilizar la matriz ATT&CK de MITRE o un marco similar para [desarrollar preguntas](#reference-attacker-tactics-to-key-questions-matrix).
-        * [ATT&CK for Enterprise](https://attack.mitre.org/wiki/Main_Page), incluyendo enlaces a los específicos de Windows, Mac y Linux.
-        * [ATT&CK Mobile Profile](https://attack.mitre.org/mobile/index.php/Main_Page) para dispositivos móviles.
-    * Utilizar palabras interrogativas como inspiración:
-        * **¿Cuándo?**: primer compromiso, primera pérdida de datos, acceso a x datos, acceso a y sistema, etc.
-        * **¿Qué?**: impacto, vector, causa de origen, motivación, herramientas/explotaciones utilizadas, cuentas/sistemas comprometidos, datos atacados/perdidos, infraestructura, COIs, etc.?
-        * **¿Dónde?**: ubicación del atacante, unidades de negocio afectadas, infraestructura, etc.?
-        * **¿Cómo?**: compromiso (explotación), persistencia, acceso, exfiltración, movimiento lateral, etc.?
-        * **¿Por qué?**: objetivo, momento, acceso a x datos, acceso a y sistema, etc.
-        * **¿Quién?**: atacante, usuarios afectados, clientes afectados, etc.?
-7. **Identificar y priorizar los dispositivos y estrategias testigo** para responder a las preguntas clave.
-    * Consultar los diagramas de la red, los sistemas de gestión de activos y la experiencia de las SME
-    * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta)
-8. Consulte los [playbook de incidentes](#playbooks) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
+La actualización del plan de investigación se realizará de forma continua durante todo el ciclo del incidente, revisando el impacto, el vector, el alcance, la cronología y las hipótesis conforme se obtengan nuevas evidencias. En esta empresa, esta actividad tendrá como objetivo principal determinar si el incidente afecta al correo corporativo, al servidor de archivos, al CRM/ERP, al almacenamiento cloud, a la red interna, a la web o tienda online externalizada y, especialmente, si existe afectación a datos personales de clientes o proveedores.
 
-**El plan de investigación es fundamental para una respuesta eficaz; impulsa todas las acciones de investigación.  Utilice el pensamiento crítico, la creatividad y el buen juicio.**
+Para ello, el equipo de respuesta actualizará el expediente del incidente con los siguientes elementos:
+
+1. Revisión del impacto del incidente sobre la confidencialidad, integridad y disponibilidad de los activos afectados, prestando especial atención a la continuidad del negocio digital, la posible afectación a datos personales y la dependencia de terceros.
+
+2. Revisión y refinamiento del vector del incidente, valorando como hipótesis prioritarias el phishing, el uso de credenciales válidas, el acceso no autorizado a servicios cloud, el compromiso del proveedor web o la ejecución de malware en endpoints y servidores.
+
+3. Actualización del resumen del incidente, diferenciando claramente entre hechos confirmados, hipótesis de trabajo, limitaciones de visibilidad y riesgos aún no descartados.
+
+4. Revisión y ampliación de la línea de tiempo del incidente, incorporando hechos, eventos observados, decisiones adoptadas e inferencias analíticas debidamente identificadas como tales.
+
+5. Formulación y actualización de hipótesis sobre el posible recorrido del atacante, su nivel de acceso, los sistemas afectados, el posible acceso a información sensible y la existencia o no de persistencia, movimiento lateral, exfiltración o impacto.
+
+6. Identificación y priorización de preguntas clave o lagunas de información, utilizando MITRE ATT&CK for Enterprise como marco de apoyo para relacionar tácticas y técnicas con las evidencias observadas, con los activos críticos de la empresa y con las fuentes de información disponibles.
+
+7. Identificación y priorización de los sistemas testigo y de las estrategias de análisis que permitan responder a las preguntas clave, apoyándose en el inventario de activos, el conocimiento del departamento TIC, la experiencia de los responsables funcionales y los recursos técnicos disponibles.
+
+8. Revisión de los playbooks aplicables para adaptar la investigación a incidentes plausibles y de alto impacto en esta empresa, especialmente phishing, robo de credenciales, ransomware, fuga de datos, compromiso cloud y afectación de la web o tienda online.
+
+En esta fase se utilizará MITRE ATT&CK for Enterprise como marco estructurado para formular hipótesis, priorizar preguntas, clasificar evidencias y asociar las actividades del posible atacante a tácticas concretas observables. Como apoyo visual, se empleará ATT&CK Navigator mediante una capa específica de investigación inicial, en la que se han marcado y priorizado las técnicas más plausibles para este caso, con valores, colores y anotaciones orientadas al contexto de la empresa.
+
+La investigación partirá de la hipótesis principal de compromiso mediante phishing o uso indebido de credenciales, con posible acceso posterior a correo, servicios cloud, repositorios de información, accesos remotos o sistemas internos críticos. Esta hipótesis se considera razonable por la fuerte dependencia del correo corporativo, el almacenamiento cloud, el CRM/ERP, la red interna y la web/tienda online externalizada, así como por los riesgos ya identificados en el Plan Director de Seguridad, entre ellos phishing, ransomware, compromiso de cuentas, dependencia de terceros y fuga de datos personales.
+
+### Uso de MITRE ATT&CK y ATT&CK Navigator
+
+Para apoyar esta actualización del plan de investigación se ha creado una capa en ATT&CK Navigator sobre ATT&CK for Enterprise, con el fin de priorizar las técnicas más relevantes para el incidente y relacionarlas con las preguntas clave, las evidencias esperadas y los sistemas testigo. La capa se ha utilizado como apoyo metodológico y también como evidencia gráfica del trabajo realizado.
+
+Las técnicas priorizadas en la capa de ATT&CK Navigator son las siguientes:
+
+- T1566 – Phishing, como posible vector inicial asociado al uso intensivo del correo corporativo.
+
+- T1078 – Valid Accounts, por el riesgo de uso de credenciales válidas contra correo, cloud, CRM/ERP, VPN o paneles administrativos.
+
+- T1059 – Command and Scripting Interpreter, para analizar ejecución de scripts, PowerShell o comandos sospechosos en endpoints y servidores.
+
+- T1053 – Scheduled Task/Job, para comprobar posibles mecanismos simples de persistencia.
+
+- T1021 – Remote Services, para revisar uso de RDP, VPN, SSH u otros accesos remotos entre sedes o hacia servidores.
+
+- T1213 – Data from Information Repositories, por el valor de carpetas compartidas, buzones, CRM/ERP y almacenamiento cloud.
+
+- T1560 – Archive Collected Data, para detectar compresión o preparación de información antes de una posible exfiltración.
+
+- T1567 – Exfiltration Over Web Service, por la posibilidad de salida de información a través de servicios web, correo o cloud.
+
+- T1486 – Data Encrypted for Impact, por el riesgo de ransomware y cifrado de información crítica.
+
+Estas técnicas se han priorizado con una escala simple en Navigator, donde el score 3 identifica técnicas altamente relevantes para el incidente, el score 2 técnicas plausibles que requieren validación y el score 1 técnicas de apoyo o contexto. Esta priorización se basa en los activos críticos de la empresa, en los riesgos recogidos en el PDS y en la necesidad de orientar la investigación hacia las fuentes de evidencia más útiles.
+
+### Preguntas clave priorizadas
+
+A partir de las técnicas anteriores, se priorizarán las siguientes preguntas de investigación:
+
+- ¿El acceso inicial se produjo mediante phishing, credenciales comprometidas o acceso no autorizado a un servicio externo?
+
+- ¿Qué cuentas se han utilizado y desde cuándo, especialmente en correo, cloud, CRM/ERP, VPN o paneles administrativos?
+
+- ¿Se han ejecutado scripts, comandos o binarios sospechosos en endpoints, servidores o servicios administrados?
+
+- ¿Existen mecanismos de persistencia activos en equipos, servidores, buzones o servicios cloud?
+
+- ¿Se ha producido movimiento lateral entre puestos de usuario, servidores internos, accesos remotos o dos sedes?
+
+- ¿Se accedió a carpetas compartidas, documentación de clientes, buzones, CRM/ERP o almacenamiento cloud?
+
+- ¿Existen indicios de compresión, preparación o exfiltración de información hacia servicios externos?
+
+- ¿Se ha producido cifrado, borrado o indisponibilidad de activos críticos, como correo, servidor de archivos, aplicaciones o web/tienda online?
+
+### Sistemas testigo prioritarios
+
+Para responder a estas preguntas, los sistemas testigo prioritarios serán:
+
+- Servidor de correo corporativo y buzones de usuarios clave.
+
+- Servidor de archivos y recursos compartidos.
+
+- CRM/ERP y aplicaciones internas.
+
+- Equipos de usuarios de TIC, RRHH, ventas, dirección y otros perfiles con acceso privilegiado o a datos personales.
+
+- Infraestructura de red, firewall, router, WiFi, VPN y accesos remotos.
+
+- Cuentas y registros del almacenamiento cloud.
+
+- Activos, credenciales y registros relacionados con la web y tienda online externalizadas.
+
+La selección de estos sistemas testigo responde a su criticidad para la continuidad del negocio, a su exposición frente a las hipótesis de ATT&CK priorizadas y a su valor como fuentes de evidencia para confirmar o descartar compromiso, persistencia, exfiltración o impacto.
 
 ### Referencia: Táctica del atacante a la matriz de preguntas clave
 
-Táctica del atacante    | La forma en que los atacantes ...      | Posibles preguntas clave
------------------------ |----------------------------------------| -----------------------------------------
-Reconocimiento          | ... aprender sobre los objetivos       | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
-Desarrollo de recursos  | ... construir infraestructuras.        | ¿Qué sistemas?
-Acceso inicial          | ... entrar                             | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
-Ejecución               | ... ejecutar código hostil             | ¿Qué malware? ¿Qué herramientas? ¿Dónde? ¿Cuándo?
-Persistencia            | ... quedarse en el sistema             | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
-Escalada de Privilegios | ... obtener acceso de mayor nivel      | ¿Cómo? ¿Dónde? ¿Qué herramientas?
-Evasión de la defensa   | ... esquivar la seguridad              | ¿Cómo? ¿Dónde? ¿Desde cuándo?
-Acceso a credenciales   | ... obtener/crear cuentas              | ¿Qué cuentas? ¿Desde cuándo? ¿Por qué?
-Descubrimiento          | ... aprender nuestra red               | ¿Cómo? ¿Dónde? ¿Qué saben?
-Movimiento lateral      | ... moverse                            | ¿Cómo? ¿Cuándo? ¿Qué cuentas?
-Recogida                | ... encontrar y reunir datos           | ¿Qué datos? ¿Por qué? ¿Cuándo? ¿Dónde?
-Mando y control         | ... herramientas y sistemas de control | ¿Cómo? ¿Dónde? ¿Quién? ¿Por qué?
-Exfiltración            | ... tomar datos                        | ¿Qué datos? ¿Cómo? ¿Cuándo? ¿Dónde?
-Impacto                 | ... romper cosas.                      | ¿Qué sistemas o datos? ¿Cómo? ¿Cuándo? ¿Dónde? ¿Cómo de malo?
 
+| Táctica ATT&CK | Finalidad del atacante | Preguntas clave aplicadas a la empresa |
+|---|---|---|
+| Reconocimiento | Obtener información previa sobre la organización y sus objetivos. | ¿Qué información pública sobre la empresa, empleados, correos, proveedores o web pudo utilizarse para preparar el ataque? ¿Se identificaron usuarios especialmente expuestos, como dirección, RRHH, ventas o TIC? |
+| Desarrollo de recursos | Preparar infraestructura, cuentas, dominios o herramientas para el ataque. | ¿Se utilizaron dominios, correos, cuentas o servicios creados específicamente para suplantar a la empresa, a un proveedor o a un empleado? |
+| Acceso inicial | Conseguir la entrada al entorno objetivo. | ¿El acceso inicial se produjo mediante phishing, credenciales comprometidas, acceso remoto expuesto, compromiso del proveedor web o abuso de un servicio cloud? ¿Cuándo se observó el primer acceso no autorizado? |
+| Ejecución | Ejecutar código o acciones maliciosas en sistemas de la organización. | ¿Se ejecutaron scripts, macros, PowerShell, binarios o comandos sospechosos en equipos de usuario, servidores o sistemas administrados? ¿En qué activo ocurrió primero? |
+| Persistencia | Mantener el acceso en el tiempo. | ¿Existen tareas programadas, reglas de correo, sesiones activas, servicios persistentes o mecanismos de autoarranque que permitan al atacante volver a entrar? |
+| Escalada de privilegios | Obtener permisos superiores. | ¿Se produjo elevación de privilegios o uso de cuentas con mayores permisos de los necesarios? ¿Se comprometieron cuentas administrativas o técnicas? |
+| Evasión de defensas | Evitar la detección o dificultar la investigación. | ¿Se desactivaron antivirus, registros, alertas, MFA o controles de seguridad? ¿Existen borrados, alteraciones o vacíos anómalos en logs? |
+| Acceso a credenciales | Obtener, reutilizar o crear credenciales. | ¿Qué cuentas pudieron verse comprometidas? ¿Hubo reseteos sospechosos, cambios de contraseña, altas de cuentas, robo de sesión o bypass de MFA? |
+| Descubrimiento | Reconocer la red, usuarios, servicios y activos internos. | ¿El atacante enumeró usuarios, carpetas compartidas, equipos, servidores, grupos, servicios cloud o aplicaciones como CRM/ERP? |
+| Movimiento lateral | Desplazarse a otros sistemas dentro del entorno. | ¿Se detectaron accesos entre sedes, servidores, endpoints o servicios remotos mediante VPN, RDP, SMB, SSH u otros mecanismos? |
+| Recogida | Reunir la información de interés antes de extraerla o dañarla. | ¿Se accedió a documentación de clientes, carpetas compartidas, buzones, bases de datos, CRM/ERP o almacenamiento cloud? ¿Qué datos concretos pudieron ser recopilados? |
+| Mando y control | Mantener comunicaciones con infraestructura controlada por el atacante. | ¿Existen conexiones salientes anómalas a dominios, IPs o servicios externos desde endpoints, servidores o la web? ¿Desde qué sistemas se originaron? |
+| Exfiltración | Extraer información fuera del entorno corporativo. | ¿Se produjo salida de datos por correo, web, cloud o servicios externos? ¿Qué información pudo exfiltrarse, cuándo y desde qué activo? |
+| Impacto | Interrumpir, cifrar, borrar o alterar datos y servicios. | ¿Se produjo cifrado, borrado, alteración o indisponibilidad en correo, servidor de archivos, CRM/ERP, endpoints o web/tienda online? ¿Cuál fue el impacto real en la continuidad del negocio? |
 Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más información e ideas.
 
-La matriz ATT&CK se emplea en esta fase como marco de apoyo para formular hipótesis, priorizar preguntas, clasificar evidencias y asociar acciones de contención y erradicación a tácticas concretas observadas durante la investigación.
+La matriz ATT&CK se emplea en esta fase como marco de apoyo para formular hipótesis, priorizar preguntas, clasificar evidencias y orientar la selección de sistemas testigo. No se utiliza como un listado teórico cerrado, sino como una guía práctica para estructurar la investigación conforme a las tácticas más plausibles para el incidente y para los activos críticos de la empresa.
 
 ## Crear y desplegar indicadores de compromiso (IOC)
 
