@@ -37,6 +37,21 @@ Evidencias asociadas: `evidencias-mitre/attack-data-breach-layer.json` y `eviden
 5. Determinar si hay exfiltración confirmada o solo exposición potencial.
 6. Notificar inmediatamente a Legal/Cumplimiento para evaluar obligaciones RGPD/LOPDGDD.
 
+### Falso positivo y escalado
+
+La alerta puede cerrarse como falso positivo solo si se confirma que no hubo acceso no autorizado, envio indebido, publicacion, descarga anomala, perdida, modificacion ni exposicion de datos personales. Debe existir una explicacion legitima y documentada.
+
+Comprobaciones minimas:
+
+* Identificar el conjunto de datos, ubicacion, propietario y permisos aplicados.
+* Revisar logs de acceso, descarga, comparticion, envio, borrado y modificacion.
+* Confirmar destinatarios, enlaces publicos, permisos externos y caducidad de comparticiones.
+* Validar con el propietario si la transferencia o acceso estaba autorizado.
+* Comprobar si hay datos personales, fiscales, contables, laborales o contractuales.
+* Revisar si el origen esta relacionado con phishing, identidad, cloud o proveedor.
+
+Debe escalarse siempre a Legal/Cumplimiento si hay duda razonable sobre datos personales. Tambien debe escalarse si hay destinatario externo no autorizado, enlace publico, descarga masiva, cuenta comprometida, proveedor implicado, datos sensibles, muchas personas afectadas, exfiltracion probable o imposibilidad de reconstruir el alcance.
+
 ### Remediar
 
 * **Planificar eventos de remediación** con TIC/CISO, Legal, Comunicación y propietarios de datos.

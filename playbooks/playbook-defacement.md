@@ -35,6 +35,21 @@ Evidencias asociadas: `evidencias-mitre/attack-web-provider-layer.json` y `evide
 5. Comprobar si hubo exfiltración de formularios, datos de clientes o pedidos.
 6. Clasificar severidad como S1/S2 si hay tienda parada, datos personales, alteración de pagos o compromiso del proveedor.
 
+### Falso positivo y escalado
+
+La alerta puede cerrarse como falso positivo si el cambio en la web corresponde a una publicacion autorizada, mantenimiento, caida conocida del proveedor, error de monitorizacion, cache de CDN o despliegue planificado, y no hay cambios no autorizados en codigo, usuarios, ficheros o base de datos.
+
+Comprobaciones minimas:
+
+* Confirmar con el propietario de la web y el proveedor si habia mantenimiento o despliegue.
+* Revisar logs web, WAF/CDN, panel de hosting y cambios recientes.
+* Comparar ficheros, plugins, temas y base de datos con una version limpia.
+* Verificar si existen usuarios administrativos nuevos, sesiones raras o cambios de permisos.
+* Comprobar formularios, pagos, redirecciones y contenido publico.
+* Revisar si hay web shell, subida de archivos o intentos de explotacion.
+
+Debe escalarse si hay contenido no autorizado visible, redireccion maliciosa, web shell, alteracion de pagos, formularios capturando datos, cuenta administradora comprometida, datos personales afectados, proveedor implicado, caida de tienda/web o repeticion tras restaurar.
+
 ### Remediar
 
 * **Planificar eventos de remediación** con TIC/CISO, proveedor web, Legal y Comunicación.

@@ -38,6 +38,21 @@ Evidencias asociadas: `evidencias-mitre/attack-phishing-layer.json` y `evidencia
    * Campaña masiva sin interacción confirmada.
 7. Clasificar severidad según usuarios afectados, credenciales comprometidas, datos personales y propagación.
 
+### Falso positivo y escalado
+
+La alerta puede cerrarse como falso positivo si el mensaje es una comunicacion legitima, esperada y trazable, y no hay enlaces maliciosos, adjuntos peligrosos, suplantacion, robo de credenciales ni usuarios afectados.
+
+Comprobaciones minimas:
+
+* Revisar remitente real, cabeceras, SPF, DKIM y DMARC.
+* Analizar enlaces, dominios, adjuntos, macros, hashes y URLs acortadas.
+* Confirmar con el usuario o area de negocio si el mensaje era esperado.
+* Comprobar si algun usuario hizo clic, descargo adjuntos o introdujo credenciales.
+* Buscar mensajes similares en otros buzones.
+* Revisar logs de correo, proxy, DNS, EDR y autenticacion.
+
+Debe escalarse si hay credenciales introducidas, adjunto ejecutado, enlace malicioso visitado, varios destinatarios, suplantacion de cliente/proveedor, fraude financiero, reglas de correo creadas, inicio de sesion sospechoso, malware, ransomware o posible acceso a datos personales.
+
 ### Remediar
 
 * **Planificar eventos de remediación** con correo, EDR, directorio, soporte y comunicaciones internas.

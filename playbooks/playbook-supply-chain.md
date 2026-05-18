@@ -30,6 +30,21 @@ Evidencias asociadas: `evidencias-mitre/attack-supply-chain-layer.json` y `evide
 5. Determinar si hay afectación de datos personales, continuidad de negocio o integridad de servicios.
 6. Clasificar severidad como S1 si el proveedor compromete datos personales, CRM/ERP, web/tienda, backups o disponibilidad crítica.
 
+### Falso positivo y escalado
+
+La alerta puede cerrarse como falso positivo si el aviso del proveedor no afecta a los productos, versiones, integraciones, cuentas o datos usados por Nexo Lebrija, y las comprobaciones locales no muestran accesos, cambios ni indicadores relacionados.
+
+Comprobaciones minimas:
+
+* Confirmar producto, version, servicio, integracion y periodo afectado por el proveedor.
+* Revisar si Nexo Lebrija usa el componente vulnerable o comprometido.
+* Comprobar cuentas de proveedor, VPN, API keys, tokens, certificados y accesos tecnicos.
+* Revisar cambios recientes, actualizaciones instaladas y conexiones desde infraestructura del proveedor.
+* Solicitar al proveedor confirmacion escrita de alcance, IOCs y medidas aplicadas.
+* Revisar logs locales en CRM/ERP, cloud, web/tienda, correo, firewall y servidores.
+
+Debe escalarse si el proveedor confirma afectacion, hay acceso a datos personales, impacto en CRM/ERP, web/tienda, backups o correo, uso de cuentas de proveedor, actualizacion comprometida, integracion con permisos elevados, falta de informacion suficiente del proveedor o riesgo de interrupcion del servicio.
+
 ### Remediar
 
 * **Planificar eventos de remediación** con TIC/CISO, Legal, Compras, propietario del servicio y proveedor.

@@ -30,6 +30,21 @@ Evidencias asociadas: `evidencias-mitre/attack-identity-layer.json` y `evidencia
    * S3 si se limita a una cuenta de usuario sin evidencia de datos afectados.
    * S4 si es intento bloqueado sin acceso confirmado.
 
+### Falso positivo y escalado
+
+La alerta puede cerrarse como falso positivo si el acceso corresponde a una actividad legitima del usuario, proveedor o administrador, y no hay cambios de permisos, sesiones sospechosas, reglas de correo, MFA anomalo ni acceso a datos fuera del uso normal.
+
+Comprobaciones minimas:
+
+* Confirmar con el usuario si reconoce el inicio de sesion, dispositivo, ubicacion y hora.
+* Revisar si la IP corresponde a VPN corporativa, proveedor autorizado o viaje documentado.
+* Verificar MFA, cambios de contrasena, metodos de recuperacion y dispositivos recordados.
+* Revisar sesiones activas, tokens, reglas de buzon, delegaciones y aplicaciones OAuth.
+* Comprobar accesos a CRM/ERP, cloud, servidores de archivos y datos personales.
+* Revisar si hay actividad similar en otras cuentas.
+
+Debe escalarse si hay cuenta privilegiada implicada, inicio de sesion imposible o no reconocido, MFA rechazado o sospechoso, cambios de permisos, reenvios externos, tokens no autorizados, acceso a datos personales, uso de VPN/cloud anomalo, varias cuentas afectadas o indicios de phishing interno.
+
 ### Remediar
 
 * **Planificar eventos de remediación** con TIC/CISO, propietario del sistema y Legal si hay datos personales.

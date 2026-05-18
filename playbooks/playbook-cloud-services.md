@@ -1,8 +1,10 @@
 ## Playbook: Compromiso de servicios cloud
 
-**Investigar, remediar, comunicar y recuperar en paralelo.** Este playbook cubre accesos no autorizados, exposición de almacenamiento, abuso de cuentas cloud, tokens/API keys, errores de configuración o indisponibilidad de servicios cloud usados por Nexo Lebrija.
+**Investigar, remediar, comunicar y recuperar en paralelo.** Este playbook cubre accesos no autorizados, exposición de almacenamiento, abuso de cuentas, tokens/API keys, errores de configuración o indisponibilidad de servicios cloud usados por Nexo Lebrija.
 
-### Relación con MITRE ATT&CK y RE&CT
+### MITRE ATT&CK y RE&CT
+
+Para entender la relación de este playbook con las matrices att&ck y re&ct, se aporta esta tabla.
 
 Evidencias asociadas: `evidencias-mitre/attack-cloud-services-layer.json` y `evidencias-mitre/react-response-layer.json`.
 
@@ -13,9 +15,11 @@ Evidencias asociadas: `evidencias-mitre/attack-cloud-services-layer.json` y `evi
 | Erradicación | T1530 Data from Cloud Storage; T1567 Exfiltration Over Web Service | RS0004 Eradication; Remove malicious changes; Delete email/message/file when applicable | Eliminar configuraciones expuestas, integraciones maliciosas y permisos indebidos. |
 | Recuperación | T1531 Account Access Removal; T1489 Service Stop | RS0005 Recovery; Restore data from backup; Unlock locked user account | Restaurar acceso legítimo, datos y servicio con controles reforzados. |
 
+## PROCEDIMIENTO
+
 ### Investigar
 
-1. Identificar servicio cloud afectado: almacenamiento, correo, CRM/ERP SaaS, repositorio documental, backup cloud, panel web o herramienta colaborativa.
+1. Identificar servicio cloud afectado: almacenamiento, correo, CRM/ERP, repositorio documental, backup cloud o panel web.
 2. Recoger logs de:
    * Autenticación y MFA.
    * Creación o modificación de usuarios, roles, grupos y permisos.
@@ -29,8 +33,22 @@ Evidencias asociadas: `evidencias-mitre/attack-cloud-services-layer.json` y `evi
    * Integración o token filtrado.
    * Proveedor cloud afectado.
    * Dispositivo de usuario comprometido.
-5. Verificar dependencias: web/tienda, CRM/ERP, backups, correo o proveedor externo.
 6. Clasificar severidad según datos, continuidad, privilegios y extensión.
+
+### Falso positivo y escalado
+
+La alerta puede cerrarse como falso positivo si el acceso, cambio o descarga corresponde a una operacion legitima, documentada y autorizada, y no hay exposicion publica, permisos indebidos, tokens sospechosos, actividad anomala ni datos afectados.
+
+Comprobaciones minimas:
+
+* Confirmar con el propietario del servicio si el cambio o acceso era esperado.
+* Revisar usuario, rol, IP, ubicacion, dispositivo, MFA y hora del evento.
+* Comprobar auditoria de permisos, enlaces compartidos, descargas, borrados y cambios de configuracion.
+* Revisar API keys, tokens, aplicaciones OAuth, integraciones y dispositivos recordados.
+* Verificar si hay almacenamiento publico o comparticiones externas no justificadas.
+* Revisar si hay actividad similar en otros servicios cloud o cuentas.
+
+Debe escalarse si hay cuenta privilegiada, token/API key filtrado, almacenamiento publico con datos, descarga masiva, cambio de permisos no autorizado, integracion sospechosa, proveedor cloud implicado, borrado o cifrado de datos, datos personales expuestos o interrupcion de servicio.
 
 ### Remediar
 

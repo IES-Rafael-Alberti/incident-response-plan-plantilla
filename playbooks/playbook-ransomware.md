@@ -39,6 +39,21 @@ Evidencias asociadas: `evidencias-mitre/attack-ransomware-layer.json` y `evidenc
    * Logs de EDR, SIEM, correo, VPN, firewall, DNS y servidores.
    * Muestras de malware si se pueden recoger sin aumentar el riesgo.
 
+### Falso positivo y escalado
+
+La alerta puede cerrarse como falso positivo solo si se confirma que no hay cifrado, nota de rescate, procesos sospechosos, borrado de copias, propagacion ni actividad maliciosa. Tambien debe existir una explicacion legitima, como una prueba de backup, una herramienta de administracion, una actualizacion o un script autorizado.
+
+Comprobaciones minimas:
+
+* Revisar si existen archivos cifrados, extensiones nuevas o notas de rescate.
+* Verificar procesos, servicios, tareas programadas y comandos recientes.
+* Comprobar logs de EDR, SIEM, servidores, SMB/RDP/VPN y backup.
+* Confirmar que no hay borrado de shadow copies, snapshots o repositorios de copia.
+* Validar con el usuario o administrador si la actividad era esperada.
+* Buscar el mismo indicador en otros equipos, servidores o comparticiones.
+
+Debe escalarse de inmediato si hay cifrado confirmado, nota de rescate, varios equipos afectados, servidores implicados, backups tocados, cuentas privilegiadas usadas, datos personales afectados, conexion C2, borrado de copias o cualquier indicio de movimiento lateral.
+
 ### Remediar
 
 * **Planificar eventos de remediación** con equipos preparados para cortes de red, restauración y comunicación.
