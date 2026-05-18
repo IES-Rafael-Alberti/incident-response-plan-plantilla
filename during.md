@@ -343,12 +343,12 @@ Acciones para eliminar la causa:
 ## Momento de remediar
 
 * **Inmediata:** si hay cifrado, exfiltracion, fraude, propagacion activa, dano reputacional publico o riesgo para datos personales.
-* **Retrasada:** si actuar inmediatamente destruiria evidencias criticas y el dano esta controlado.
+* **Retrasada:** si actuar inmediatamente destruiria evidencias criticas y el daño esta controlado.
 * **Combinada:** contener lo imprescindible de inmediato y reservar acciones profundas hasta preservar evidencias.
 
 # Comunicar
 
-Toda comunicacion debe ser factual, breve, coordinada y aprobada por el Incident Commander. No se comunican hipotesis como hechos.
+Toda comunicacion debe ser basada en hechos, breve, coordinada y aprobada por el Incident Commander. No se comunican hipotesis como hechos.
 
 ## Comunicacion interna
 

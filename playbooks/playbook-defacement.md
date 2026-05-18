@@ -35,6 +35,20 @@ Evidencias asociadas: `evidencias-mitre/attack-web-provider-layer.json` y `evide
 5. Comprobar si hubo exfiltración de formularios, datos de clientes o pedidos.
 6. Clasificar severidad como S1/S2 si hay tienda parada, datos personales, alteración de pagos o compromiso del proveedor.
 
+#### Preguntas clave de la investigación
+
+* ¿Qué URL, dominio, subdominio o formulario muestra comportamiento anómalo?
+* ¿El incidente es solo desfiguración visible o hay web shell, malware, redirecciones, robo de formularios o caída de servicio?
+* ¿Cuándo se produjo el primer cambio no autorizado y qué usuario, IP o proceso lo realizó?
+* ¿Qué CMS, plugin, tema, librería, panel de hosting o componente público pudo ser explotado?
+* ¿Existen ficheros nuevos, modificados o sospechosos en rutas web, uploads, plugins, temas o temporales?
+* ¿Se han creado usuarios administradores, claves API, cuentas FTP/SFTP o accesos de proveedor no autorizados?
+* ¿Hay evidencias de exfiltración de formularios, datos de clientes, pedidos, pagos o credenciales?
+* ¿El proveedor web/hosting dispone de logs, snapshots y línea de tiempo suficientes?
+* ¿Qué impacto tiene en reputación, continuidad, clientes y obligaciones RGPD?
+* ¿Qué dominios, IPs, rutas, hashes o patrones deben bloquearse o compartirse en MISP si procede?
+* ¿Es necesario activar también los playbooks de fuga de datos, identidad, cloud o cadena de suministro?
+
 ### Remediar
 
 * **Planificar eventos de remediación** con TIC/CISO, proveedor web, Legal y Comunicación.

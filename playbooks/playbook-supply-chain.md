@@ -30,6 +30,20 @@ Evidencias asociadas: `evidencias-mitre/attack-supply-chain-layer.json` y `evide
 5. Determinar si hay afectación de datos personales, continuidad de negocio o integridad de servicios.
 6. Clasificar severidad como S1 si el proveedor compromete datos personales, CRM/ERP, web/tienda, backups o disponibilidad crítica.
 
+#### Preguntas clave de la investigación
+
+* ¿Qué proveedor, producto, integración, actualización o servicio gestionado está implicado?
+* ¿Qué relación mantiene con Nexo Lebrija: tratamiento de datos, acceso remoto, soporte, alojamiento, software o integración?
+* ¿Cuándo notificó el proveedor el incidente y qué evidencias técnicas ha entregado?
+* ¿Qué cuentas, VPN, API keys, tokens, certificados o usuarios técnicos del proveedor tienen acceso activo?
+* ¿Qué sistemas internos pudieron verse afectados: CRM/ERP, web/tienda, correo, cloud, servidores o backups?
+* ¿Se instalaron actualizaciones, agentes, scripts o binarios del proveedor durante la ventana de compromiso?
+* ¿Hay conexiones anómalas, transferencias de datos, cambios de permisos o actividad administrativa atribuible al proveedor?
+* ¿El proveedor ha contenido la causa raíz y puede demostrarlo con evidencias?
+* ¿Existe alternativa operativa o proveedor secundario para mantener continuidad?
+* ¿Qué IOCs, recomendaciones o TTPs del proveedor deben incorporarse a detecciones o MISP?
+* ¿Es necesario activar también los playbooks de cloud, web, identidad, ransomware o fuga de datos?
+
 ### Remediar
 
 * **Planificar eventos de remediación** con TIC/CISO, Legal, Compras, propietario del servicio y proveedor.

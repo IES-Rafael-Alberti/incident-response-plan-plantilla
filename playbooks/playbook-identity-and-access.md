@@ -30,6 +30,20 @@ Evidencias asociadas: `evidencias-mitre/attack-identity-layer.json` y `evidencia
    * S3 si se limita a una cuenta de usuario sin evidencia de datos afectados.
    * S4 si es intento bloqueado sin acceso confirmado.
 
+#### Preguntas clave de la investigación
+
+* ¿Qué identidad está afectada: usuario, administrador, cuenta de servicio, buzón compartido, API key o cuenta cloud?
+* ¿Cuál fue el primer inicio de sesión sospechoso y desde qué IP, país, dispositivo, navegador o cliente?
+* ¿La autenticación superó MFA o hubo fatiga MFA, bypass, dispositivo recordado o token robado?
+* ¿Qué sistemas fueron accedidos con esa identidad: correo, VPN, CRM/ERP, cloud, servidores o paneles de proveedor?
+* ¿Se modificaron permisos, grupos, reglas de correo, delegaciones, aplicaciones OAuth o métodos de recuperación?
+* ¿Se crearon cuentas nuevas o se elevaron privilegios?
+* ¿La cuenta se usó para phishing interno, exfiltración, movimiento lateral o cambios administrativos?
+* ¿Qué datos personales o información crítica pudo consultar, descargar o modificar la identidad?
+* ¿Qué otras cuentas presentan patrones de autenticación similares?
+* ¿Qué IOCs o patrones de comportamiento deben enviarse al SIEM o compartirse en MISP si procede?
+* ¿Es necesario activar también los playbooks de phishing, cloud, ransomware o fuga de datos?
+
 ### Remediar
 
 * **Planificar eventos de remediación** con TIC/CISO, propietario del sistema y Legal si hay datos personales.
