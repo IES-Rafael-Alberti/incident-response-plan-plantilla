@@ -52,3 +52,9 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Local AI runtime state
+.atl/
+
+# Archivos de Idea
+.idea/
