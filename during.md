@@ -1,6 +1,6 @@
 # Plan de respuesta a incidentes para {{COMPANY_NAME}}
 
-Autor: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}
+Autores: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}
 
 Revisión {{REVISION_NUMBER}}, Publicado {{RELEASE_DATE}}
 
@@ -9,7 +9,74 @@ Este plan de respuesta a incidentes está basado en el plan conciso, directivo, 
 
 Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en {{TEST_DATE}}.
 
-`TODO: Personalice esta plantilla para su organización utilizando las instrucciones en https://github.com/counteractive/incident-response-plan-template.  Para obtener servicios de respuesta a incidentes, o ayuda para personalizar, implementar o probar su plan, póngase en contacto con nosotros en contact@counteractive.net o en el (888) 925-5765.`
+## Contexto de la empresa y alcance (resumen operativo)
+
+La organización es una asesoría (contable/fiscal/laboral/legal) con ~150 empleados y 2 sedes. Opera en entorno híbrido (infraestructura interna + servicios externos/nube).
+
+Activos críticos destacados (según PDS):
+- Datos de clientes (confidencialidad e integridad altas; RGPD).
+- Servidores principales (servidor de archivos y aplicaciones).
+- Software de gestión interna.
+
+Riesgos más críticos documentados (según PDS):
+- Ransomware en servidor de archivos.
+- Accesos no autorizados en red interna (contraseñas débiles / segmentación insuficiente).
+- Debilidades en copias de seguridad (externalización/validación insuficientes).
+
+Áreas en alcance directo del PDS: TIC, RRHH, Facturación/Ventas y Legal. Fuera de alcance: web corporativa (proveedor), seguridad física (externalizada), equipos personales.
+
+## Preparación (mínimo necesario, alineado con el PDS)
+
+Esta sección existe porque los incidentes “durante” solo salen bien si lo previo está listo. Estado actual (según PDS): madurez global ~74% (ISO 27002), con brechas en formación y backups externos/validación.
+
+Controles/proyectos que habilitan respuesta eficaz (PDS 2025–2027):
+- PRY-001/002: formación + concienciación (phishing/errores humanos).
+- PRY-003: copias cifradas y externas con verificación y pruebas de restauración.
+- PRY-004: segmentación y monitorización de red.
+- PRY-005: SGSI (ISO 27001) para formalizar roles, políticas y evidencias.
+
+Entregables de preparación mínimos que deben existir antes de un SEV1/SEV2:
+- Lista de guardias y roles (Incident Commander, TIC, Legal, RRHH) y canal oficial de comunicación.
+- Ubicación de la carpeta segura del incidente (evidencias, timeline, decisiones, IOCs).
+- Procedimiento de preservación de evidencias (cadena de custodia, hash, acceso mínimo).
+- Fuentes de logs priorizadas: firewall, servidores, endpoints, autenticación (según disponibilidad).
+
+## Relación con MITRE ATT&CK y RE&CT (por qué se usa y cómo)
+
+Se usa MITRE ATT&CK como “lenguaje común” para describir TTPs observadas y para convertir síntomas en preguntas investigables (qué técnica, dónde y desde cuándo). Se usa RE&CT como estructura práctica para convertir técnicas en acciones de **detectar** y **responder**.
+
+Mapeo mínimo (taxonomía <-> ATT&CK) para esta organización (basado en tipos documentados):
+
+Tipo (taxonomía) | Técnicas ATT&CK sugeridas (ejemplos)
+---|---
+Ingeniería social / phishing | T1566 (Phishing)
+Acceso con vulneración de credenciales | T1110 (Brute Force), T1078 (Valid Accounts)
+Escaneo de redes | T1046 (Network Service Scanning)
+Análisis de paquetes (sniffing) | T1040 (Network Sniffing)
+Explotación de vulnerabilidades conocidas | T1190 (Exploit Public-Facing Application) (si aplica)
+Pérdida/exfiltración de datos | T1020/T1041/T1567 (según canal)
+Amplificador DDoS | T1498 (Network Denial of Service)
+
+Uso operativo durante el incidente:
+- Investigar: etiquetar eventos/artefactos con técnica ATT&CK y registrar evidencias (fuente + hora + hash si aplica).
+- Remediar: vincular cada técnica observada a controles de protección/detección/contención/erradicación (RE&CT).
+- Mejora continua: en el AAR, registrar qué técnicas se detectaron tarde y qué telemetría faltó.
+
+## Métricas y mejora continua (KPIs/KRIs)
+
+Estas métricas se alinean con los objetivos del PDS y se revisan en comité (cadencia sugerida: mensual para operativas, trimestral para estratégicas):
+
+Métrica | Definición | Objetivo (según PDS / recomendación)
+---|---|---
+MTTD | Tiempo medio desde el primer evento hasta la detección | Reducir trimestre a trimestre
+MTTC | Tiempo medio hasta contención efectiva | Reducir trimestre a trimestre
+MTTR | Tiempo medio hasta restauración segura | Compatible con continuidad y criticidad
+Backups externos validados | % de sistemas críticos con copia cifrada externa + verificación | 100% (PRY-003)
+Pruebas de restauración | Nº de pruebas/periodo y % exitosas | 4/año (PRY-003)
+Formación completada | % empleados formados en ciberseguridad | 90% (PRY-001)
+Phishing simulado | % de clics en campañas internas | <5% (PRY-002)
+Segmentación de red | % segmentación implementada | 100% (PRY-004)
+Incidentes de red | Nº incidentes de red (normalizado) | reducción >=50% (PRY-004)
 
 # Evaluar
 
@@ -29,33 +96,86 @@ Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en 
 
 ¿Cuál es el impacto directo o probable sobre sus datos/información, en particular los sensibles? (_por ejemplo_, información personal, datos de propiedad, financieros o sanitarios)
 
-* Información a la que se ha accedido, cogido, cambiado o borrado: **incidente!**
+* Información a la que se ha accedido, extraído, modificado o eliminado: **incidente!**
 * Ninguno: gestión a través de canales no relacionados con incidentes (por ejemplo, un ticket de soporte).
 
 **Cada miembro del equipo está facultado para comenzar este proceso.** Si ves algo, dilo.
 
-`TODO: Personalizar las categorías/severidades según sea necesario.  Este sencillo ejemplo (incidente vs. no incidente) se basa en las categorías de impacto del NIST SP 800-61r2.`
+## Determinar severidad (mínimo viable)
+
+Una vez confirmado que es un incidente, determine una severidad inicial para guiar escalado, comunicación y priorización.
+
+Severidad | Descripción | Ejemplo
+--------- | ----------- | ------
+SEV1 | Impacto crítico en negocio o datos sensibles | Ransomware, caída total
+SEV2 | Impacto importante parcialmente contenido | Compromiso de cuenta privilegiada
+SEV3 | Impacto limitado | Malware aislado
+SEV4 | Evento sin impacto confirmado | Phishing reportado
+
+## Tabla de clasificación inicial (triage)
+
+Complete estos campos en la primera llamada y en el archivo del incidente.
+
+Campo | Valor
+----- | -----
+Vector probable | Email/phishing; Endpoint; Credenciales; SaaS; Cloud; VPN; Web app; Insider; Supply chain
+Severidad inicial | SEV1/SEV2/SEV3/SEV4
+Sistemas/servicios afectados | 
+Identidad/cuenta afectada | 
+Datos potencialmente afectados | 
+Clasificación de datos afectada | Pública; Interna; Confidencial; Restringida
+Estado | Sospecha; Confirmado; Contenido; En recuperación; Cerrado
+Propietario de negocio | 
+
+## Escalado y toma de decisiones (diagrama)
+
+```mermaid
+flowchart TD
+  A[Detección / reporte] --> B{¿Hay indicios de incidente?}
+  B -- No --> C[Gestionar como ticket/soporte]
+  B -- Sí --> D[Asignar severidad inicial (SEV1–SEV4)]
+  D --> E{Severidad}
+  E -- SEV4 --> F[TIC/soporte: analizar, bloquear si procede, monitorizar]
+  E -- SEV3 --> G[Activar IR (TIC): carpeta del incidente + primera llamada]
+  E -- SEV2 --> H[Activar Comité de Seguridad (CISO+TIC+Legal+RRHH): contención prioritaria]
+  E -- SEV1 --> I[Activar {{EXECUTIVE_TEAM}} y {{COMPLIANCE_TEAM}}: contención inmediata + decisiones RGPD]
+  F --> J[Actualizaciones periódicas (mínimo cada {{UPDATE_FREQUENCY}}; ajustar según severidad)]
+  G --> J
+  H --> J
+  I --> J
+```
 
 # Iniciar la respuesta
 
-## Nombrar el incidente
+## Nombre del incidente
 
-Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.html) para referirse al incidente -un nombre en clave- que se utilizará para el archivo y el canal del incidente. `Todo: Personalizar el procedimiento de nomenclatura de incidentes.`
+Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.html) para referirse al incidente -un nombre en clave- que se utilizará para el archivo y el canal del incidente.
+
+Recomendación de nomenclatura (mínimo viable):
+1. Dos palabras, sin datos sensibles.
+2. Añada fecha si hay riesgo de colisión (por ejemplo, "Aurora Papel 2026-05-18").
+3. Use exactamente el mismo nombre en el chat/canal, en la carpeta del incidente y en el informe.
 
 ## Reunir el equipo de respuesta
 
-1. Llame al Incident Commander de turno/de guardia. `TODO: Añadir lista o procedimiento de llamada del Incident Commander`.
+1. Llame al Incident Commander de turno/de guardia usando {{INCIDENT_COMMANDER_PAGER_URL}} ({{INCIDENT_COMMANDER_PAGER_NUMBER}}) y validando el responsable en {{INCIDENT_COMMANDER_ROSTER}}.
 2. **No** discuta el incidente fuera del equipo de respuesta a menos que el Incident Commander lo autorice
-3. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}. `ToDo: Añadir el procedimiento de lanzamiento del chat de respuesta.`
-4. Iniciar y/o unirse a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}. `TODO: Añadir el procedimiento de lanzamiento de la llamada de respuesta.`
+3. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}.
+  - Cree un canal o hilo específico del incidente (por ejemplo, `#inc-<nombre-del-incidente>`).
+  - Fije un mensaje inicial con: nombre, hora de inicio, resumen (vector/impacto), y quién es el IC.
+4. Iniciar y/o unirse a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}.
+  - Publique en el chat el enlace/datos de acceso.
+  - Mantenga una única sala/puente “oficial” para evitar duplicidades.
 5. Preferible usar la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
-6. **No** utilizar el correo electrónico principal si es posible.  Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}.  Encripte los correos electrónicos cuando cualquier participante esté fuera del dominio {{ORGANIZATION_DOMAIN}}.  `TODO: Añadir detalles y procedimiento de correo electrónico alternativo, por ejemplo, Office 365 o GSuite bajo demanda`.
+6. **No** utilizar el correo electrónico principal si es posible. Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}.
+  - No incluya datos sensibles innecesarios en correo.
+  - Encripte los correos electrónicos cuando cualquier participante esté fuera del dominio {{ORGANIZATION_DOMAIN}}.
 7. **No** usar SMS/texto para comunicar el incidente, a menos que sea para decirle a alguien que se mueva a un canal más seguro.
 8. Invite al personal de turno/guardia a la llamada y al chat de respuesta.
-    * Invite al equipo de seguridad.  `TODO: Añadir lista de contactos del equipo de seguridad o procedimiento.`
-    * Invitar al SME de los equipos y sistemas afectados. `TODO: Añadir la lista de contactos del SME del equipo o el procedimiento.`
-    * Invitar a las partes interesadas ejecutivas y a los asesores jurídicos lo antes posible, pero dar prioridad a los responsables operativos.  `TODO: añadir una lista de contactos de las partes interesadas ejecutivas o un procedimiento.`
-9. OPCIONAL:_ Establecer una sala de colaboración en persona ("sala de guerra") para incidentes complejos o graves. `TODO: Añadir el procedimiento de la sala de colaboración.`
+   * Invite al equipo de seguridad según {{SECURITY_TEAM_ROSTER}}.
+   * Invitar al SME de los equipos y sistemas afectados según {{TEAM_SME_ROSTER}}.
+   * Invitar a ejecutivos y/o asesoría según {{EXECUTIVE_ROSTER}} (priorice operativos si hay urgencia).
+9. OPCIONAL:_ Establecer una sala de colaboración en persona ("sala de guerra") para incidentes complejos o graves. Si es remoto, use un canal de voz dedicado en {{RESPONSE_VTC}}.
 
 ### Referencia: Estructura del equipo de respuesta
 
@@ -71,20 +191,16 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
   * SME para equipos/unidades de negocio
   * SME para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
 
-`TODO: Modificar la estructura de roles según sea necesario`.
-
 ### Referencia: Información de contacto del equipo de respuesta
 
 Rol del equipo de respuesta         | Información de contacto
 ----------------------------------- | ---------------------------
-Localizador del Incident Commander  | {INCIDENT_COMMANDER_PAGER_NUMBER}}
-Url del Incident Commander          | {{INCIDENT_COMMANDER_PAGER_URL}}
+Pager del Incident Commander        | {{INCIDENT_COMMANDER_PAGER_NUMBER}}
+URL del Incident Commander          | {{INCIDENT_COMMANDER_PAGER_URL}}
 Lista del Incident Commander        | {{INCIDENT_COMMANDER_ROSTER}}
 Lista del equipo de seguridad       | {{SECURITY_TEAM_ROSTER}}
 Lista del equipo SME                | {{TEAM_SME_ROSTER}}
 Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
-
-`TODO: Personalizar la información de contacto del equipo de respuesta.  Incluya los procedimientos de contacto en las listas, que pueden ser estáticas o dinámicas.`
 
 ## Establecer el ritmo de batalla
 
@@ -99,7 +215,7 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 #### Referencia: Estructura de la llamada de respuesta inicial
 
-* Incident Commander (IC): Mi nombre es [NOMBRE], soy el Incident Commander.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como esccriba. ¿Quién está en la llamada?
+* Incident Commander (IC): Mi nombre es [NOMBRE], soy el Incident Commander.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como escriba. ¿Quién está en la llamada?
 * ESCRIBA: [Toma asistencia]
 * IC: [Si falta personal clave] Adjunto, por favor llame a [PERSONAL FALTANTE].
 * IC: [Hace preguntas para comprender la situación, los síntomas, el alcance, el vector, el impacto y el calendario del reportador del incidente, los SME aplicables para los sistemas y las unidades de negocio].
@@ -126,7 +242,7 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 ### Realizar la actualización de la respuesta
 
-* Llevar a cabo actualizaciones programadas utilizando la [estructura de llamada de actualización](#referencia-estructura-de-la-llamada-de-actualización-de-la-respuesta) cada {{UPDATE_FREQUENCY}} en el puente activo. `TODO: Personalizar la frecuencia de actualización y los scripts; se recomienda no más de dos veces al día.`
+* Llevar a cabo actualizaciones programadas utilizando la [estructura de llamada de actualización](#referencia-estructura-de-la-llamada-de-actualización-de-la-respuesta) cada {{UPDATE_FREQUENCY}} en el puente activo.
 * Ajustar la frecuencia según sea necesario.
 * Coordinar las actualizaciones independientes (_por ejemplo_, ejecutivas, legales) según sea necesario, pero con la menor frecuencia posible.
 
@@ -159,7 +275,7 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 ### Crear Sub-Equipos
 
-* En la preparación de incidentes complejos, se predefinen tres subequipos: Investigación, Remediación y Comunicación, generalmente responsables de esas funciones de respuesta. `TODO: Personalizar la estructura de los subequipos si es necesario.`
+* En la preparación de incidentes complejos, se predefinen tres subequipos: Investigación, Remediación y Comunicación, generalmente responsables de esas funciones de respuesta.
 * Crear un puente de llamadas y un chat para cada subequipo.
 * El Incident Commander designará a los líderes de los equipos, que dependen del IC, y a los miembros de los equipos, que dependen de su líder.  _Los líderes de equipo no tienen que estar formados como Incident Commanders, pero es preferible que tengan alguna experiencia de liderazgo._
 * El Incident Commander puede ajustar el propósito o el nombre de los subequipos según sea necesario.
@@ -169,44 +285,43 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 Si un incidente resulta ser dos o más incidentes distintos:
 
-* Establezca un nuevo [archivo de incidentes](#crear-el-archivo-del-incidente).
+* Establezca un nuevo [archivo de incidentes](#crear-archivo-del-incidente).
 * Haga un seguimiento y coordine la investigación, la reparación y la comunicación en el archivo correspondiente.
 * Considere la posibilidad de establecer subequipos para cada incidente.
 * **Mantener un Incident Commander de alto nivel**, para coordinar los activos de baja densidad y alta demanda y mantener la unidad de mando.
 
 # Investigar
 
-**[Investigar](#investigar), [Remediar](#remediar) y [comunicar](#communicate) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades.  Notifique al Incident Commander si hay pasos que el equipo debe considerar.
+**[Investigar](#investigar), [Remediar](#remediar) y [Comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades.  Notifique al Incident Commander si hay pasos que el equipo debe considerar.
 
-## Crear el archivo del incidente
+## Crear archivo del incidente
 
 1. Cree un nuevo archivo de incidentes en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#nombre-del-incidente).  Utilice este archivo para el almacenamiento seguro de documentación, pruebas, artefactos, _etc._.
     * Proporcionar un almacenamiento digital seguro.
     * Proporcionar un intercambio de archivos seguro.
     * Obtener almacenamiento físico.
     * Compartir la ubicación del archivo del incidente en la llamada y el chat.
-    * `TODO: Personalizar y automatizar la ubicación del archivo y el procedimiento`.
-1. Documente el impacto funcional y de la información, si se conoce (véase [Evaluar](#evaluar)). `TODO: Personalizar las categorías de impacto, si es necesario.`
-2. Documentar el vector, si se conoce (_por ejemplo_ web, correo electrónico, medios extraíbles). `TODO: Personalizar la lista de vectores, si es necesario.`
+1. Documente el impacto funcional y de la información, si se conoce (véase [Evaluar](#evaluar)).
+1. Documente la severidad inicial y la clasificación de datos afectada (véase [Tabla de clasificación inicial](#tabla-de-clasificacion-inicial-triage)).
+2. Documentar el vector, si se conoce (por ejemplo: web, correo electrónico, credenciales/acceso remoto, endpoint, red, nube/SaaS, medios extraíbles).
 3. Documente el resumen del incidente: un breve resumen del vector, el impacto, la investigación y la situación de la reparación, si se conoce.
-4. Documente la línea de tiempo del incidente, incluyendo la actividad del atacante y la actividad de la respuesta. `TODO: Añadir líneas de tiempo con diferentes detalles, según sea necesario.`
+4. Documente la línea de tiempo del incidente, incluyendo la actividad del atacante y la actividad de la respuesta.
 5. Documente los pasos de investigación, reparación y comunicación.  Documente las actividades de forma independiente para que puedan combinarse y reutilizarse, si es posible.
 6. Registre la información significativa, como:
     **Pruebas**, con la hora de recogida, la fuente, la cadena de custodia, _etc._.
     * **Sistemas afectados**, con el modo y el momento en que se identificó el sistema, y el resumen del efecto (_por ejemplo, tiene malware, datos a los que se ha accedido).
     * **Archivos de interés**, como el malware o los archivos de datos, con el sistema y los metadatos.
-    * **Datos accedidos y tomados**, con nombres de archivos, metadatos y hora de presunta exposición.
+    * **Datos accedidos y extraídos**, con nombres de archivos, metadatos y hora de presunta exposición.
     * **Actividad significativa del atacante**, como inicios de sesión y ejecución de malware, con la hora del evento.
     * **Indicadores de compromiso (IOC)** basados en la red, como direcciones IP y dominios.
     * **Indicadores de compromiso basados en el host**, como nombres de archivos, hashes y claves de registro.
  * **Cuentas comprometidas**, con el alcance del acceso y la hora del compromiso.
 
-`TODO: Personalizar el procedimiento de documentación del incidente, incluyendo hojas de cálculo, bases de datos, formularios, sistemas y plantillas, si es necesario.`
 
 ## Recoger las pistas iniciales
 
 1. Entrevistar a los reportadores del incidente.
-2. Recoger los datos de apoyo iniciales (_e._, alarmas, eventos, datos, suposiciones, intuiciones) en el archivo del incidente.
+2. Recoger los datos de apoyo iniciales (_p. ej._, alarmas, eventos, datos, suposiciones, intuiciones) en el archivo del incidente.
 3. Entrevistar a lo(s) SME con experiencia en el dominio o el sistema, para comprender los detalles técnicos, el contexto y el riesgo.
 4. Entrevistar a lo(s) SME de la unidad de negocio afectada, para comprender el impacto de la misión/negocio, el contexto y el riesgo.
 5. Asegúrese de que las pistas son relevantes, detalladas y procesables.
@@ -222,9 +337,6 @@ Mapa de red                         | {{NETWORK_MAP_LOCATION}}
 Consola SIEM                        | {{SIEM_CONSOLE_LOCATION}}
 Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
 
-`TODO: Completar la información crítica y las listas de activos ("joyas de la corona"). Esto es increíblemente importante para una respuesta eficaz.`
-
-`TODO: Personalizar la lista de recursos de respuesta`.
 
 ## Actualizar el plan de investigación y el archivo del incidente
 
@@ -234,20 +346,20 @@ Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
 4. Revisar y perfeccionar la línea de tiempo del incidente con hechos e inferencias.
 5. Crear hipótesis: qué puede haber ocurrido y con qué seguridad.
 6. **Identificar y priorizar las preguntas clave** (lagunas de información) para apoyar o desacreditar las hipótesis.
-    * Utilizar la matriz ATT&CK de MITRE o un marco similar para [desarrollar preguntas](#reference-attacker-tactics-to-key-questions-matrix).
+    * Utilizar la matriz ATT&CK de MITRE o un marco similar para [desarrollar preguntas](#referencia-tactica-del-atacante-a-la-matriz-de-preguntas-clave).
         * [ATT&CK for Enterprise](https://attack.mitre.org/wiki/Main_Page), incluyendo enlaces a los específicos de Windows, Mac y Linux.
         * [ATT&CK Mobile Profile](https://attack.mitre.org/mobile/index.php/Main_Page) para dispositivos móviles.
     * Utilizar palabras interrogativas como inspiración:
         * **¿Cuándo?**: primer compromiso, primera pérdida de datos, acceso a x datos, acceso a y sistema, etc.
-        * **¿Qué?**: impacto, vector, causa de origen, motivación, herramientas/explotaciones utilizadas, cuentas/sistemas comprometidos, datos atacados/perdidos, infraestructura, COIs, etc.?
+        * **¿Qué?**: impacto, vector, causa de origen, motivación, herramientas/explotaciones utilizadas, cuentas/sistemas comprometidos, datos atacados/perdidos, infraestructura, IOCs, etc.?
         * **¿Dónde?**: ubicación del atacante, unidades de negocio afectadas, infraestructura, etc.?
         * **¿Cómo?**: compromiso (explotación), persistencia, acceso, exfiltración, movimiento lateral, etc.?
         * **¿Por qué?**: objetivo, momento, acceso a x datos, acceso a y sistema, etc.
         * **¿Quién?**: atacante, usuarios afectados, clientes afectados, etc.?
 1. **Identificar y priorizar los dispositivos y estrategias testigo** para responder a las preguntas clave.
     * Consultar los diagramas de la red, los sistemas de gestión de activos y la experiencia de las SME
-    * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta))
-1. Consulte los [playbook de incidentes](#playbooks) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
+    * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta)
+1. Consulte las [guías operativas (playbooks)](#guias-operativas-playbooks) para conocer preguntas clave, dispositivos testigo y estrategias para investigar amenazas comunes o muy dañinas.
 
 **El plan de investigación es fundamental para una respuesta eficaz; impulsa todas las acciones de investigación.  Utilice el pensamiento crítico, la creatividad y el buen juicio.**
 
@@ -276,16 +388,16 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
 
 > Haga hincapié en los indicadores **dinámicos y de comportamiento** junto con las huellas digitales estáticas.
 
-* Crear IOCs basados en [pistas iniciales](#recoger-las-pistas-iniciales) y [análisis](#analyze-evidence).
-* Cree IOCs usando un formato abierto soportado por sus herramientas (_por ejemplo_, [STIX 2.0](https://oasis-open.github.io/cti-documentation/stix/intro)), si es posible. `TODO: Personalizar el formato de los COIs según sea necesario.`
-* Utilice la automatización, si es posible. `TODO: Añadir un procedimiento de despliegue/revocación de COIs.`
+* Crear IOCs basados en [pistas iniciales](#recoger-las-pistas-iniciales) y [análisis](#analizar-las-pruebas).
+* Cree IOCs usando un formato abierto soportado por sus herramientas (_por ejemplo_, [STIX 2.0](https://oasis-open.github.io/cti-documentation/stix/intro)), si es posible.
+* Utilice la automatización, si es posible.
 * **No** desplegar "feeds" de IOCs no relacionados y no curados, ya que pueden causar confusión y fatiga.
-* Considerar todos los tipos de IOC:
-  * IOC basados en la red, como direcciones IP o MAC, puertos, direcciones de correo electrónico, contenido o metadatos del correo electrónico, URLs, dominios o patrones PCAP.
-  * IOC basados en el host, como rutas, hashes de archivos, contenido o metadatos de archivos, claves de registro, MUTEXes, autoejecuciones o artefactos y permisos de usuarios.
+* Considerar todos los tipos de IOCs:
+  * IOCs basados en la red, como direcciones IP o MAC, puertos, direcciones de correo electrónico, contenido o metadatos del correo electrónico, URLs, dominios o patrones PCAP.
+  * IOCs basados en el host, como rutas, hashes de archivos, contenido o metadatos de archivos, claves de registro, MUTEXes, autoejecuciones o artefactos y permisos de usuarios.
   * IOCs basados en la nube, como patrones de registro para despliegues [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) o [IaaS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service)
-  * IOCs de comportamiento (a.ka., patrones, TTPs) tales como patrones de árbol de procesos, heurística, desviación de la línea base y patrones de inicio de sesión.
-* Correlacionar varios tipos de IOC, como indicadores basados en la red y en el host en los mismos sistemas.
+  * IOCs de comportamiento (a.k.a., patrones, TTPs) tales como patrones de árbol de procesos, heurística, desviación de la línea base y patrones de inicio de sesión.
+* Correlacionar varios tipos de IOCs, como indicadores basados en la red y en el host en los mismos sistemas.
 
 ## Identificar los sistemas de interés
 
@@ -296,17 +408,15 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
 ## Recogida de pruebas
 
 * Priorizar en base al plan de investigación
-* Recoger datos de respuesta en vivo utilizando {{LIVE_RESPONSE_TOOL}}.  `TODO: Personalizar las herramientas y el procedimiento de respuesta en vivo.`
-* Recoger los registros relevantes de los sistemas (si no forman parte de la respuesta en vivo), agregadores, SIEM o consolas de dispositivos.  `TODO: Personalizar las herramientas y el procedimiento de recopilación de registros.`
-* Recoger la imagen de la memoria, si es necesario y si no forma parte de la respuesta en vivo, utilizando {{MEMORY_COLLECTION_TOOL}}.  `TODO: Personalizar las herramientas y el procedimiento de recogida de memoria.`
-* Recoger la imagen del disco, si es necesario, utilizando {{DISK_IMAGE_TOOL}}.  `TODO: Personalizar la herramienta y el procedimiento de recogida de imágenes de disco.`
-* Recoger y almacenar las pruebas de acuerdo con la política, y con la cadena de custodia adecuada. `TODO: Personalizar la política de recogida de pruebas y cadena de custodia.`
+* Recoger datos de respuesta en vivo utilizando {{LIVE_RESPONSE_TOOL}}.
+* Recoger los registros relevantes de los sistemas (si no forman parte de la respuesta en vivo), agregadores, SIEM o consolas de dispositivos.
+* Recoger la imagen de la memoria, si es necesario y si no forma parte de la respuesta en vivo, utilizando {{MEMORY_COLLECTION_TOOL}}.
+* Recoger la imagen del disco, si es necesario, utilizando {{DISK_IMAGE_TOOL}}.
+* Recoger y almacenar las pruebas de acuerdo con la política, y con la cadena de custodia adecuada.
 
 Considere la posibilidad de recopilar los siguientes artefactos como evidencia, ya sea en tiempo real (_por ejemplo_, a través de EDR o un SIEM) o bajo demanda:
 
 ###  Ejemplo de artefactos útiles
-
-`TODO: Personalizar y priorizar los artefactos útiles.`
 
 * Procesos en ejecución
 * Servicios en ejecución
@@ -342,9 +452,7 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 
 ### Ejemplo de indicadores útiles
 
-`TODO: Personalizar y priorizar los indicadores útiles.`
-
-* Comportamiento inusual de autenticación (_e._, frecuencia, sistemas, hora del día, ubicación remota)
+* Comportamiento inusual de autenticación (_p. ej._, frecuencia, sistemas, hora del día, ubicación remota)
 * Nombres de usuario con formato no estándar
 * Binarios no firmados que se conectan a la red
 * Balizamiento o transferencias de datos significativas
@@ -358,6 +466,16 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 
 [Actualizar el plan de investigación](#actualizar-el-plan-de-investigación-y-el-archivo-del-incidente) y repetir hasta el cierre.
 
+# Guías operativas (Playbooks)
+
+Las guías operativas son anexos prácticos y accionables por tipo de incidente. Mantenga este IRP enfocado en lo estratégico/táctico y use playbooks para lo operativo.
+
+- [Playbook: Identity and Access](playbooks/playbook-identity-access.md)
+- [Playbook: Ingeniería Social](playbooks/playbook-ingenieria-social.md)
+- [Playbook: Phishing](playbooks/playbook-phishing.md)
+- [Playbook: Ransomware](playbooks/playbook-ransomware.md)
+- [Playbook: Supply Chain](playbooks/playbook-supply-chain.md)
+
 # Remediar
 
 **[Investigar](#investigar), [Remediar](#remediar) y [Comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades. Notifique al Incident Commander si hay pasos que el equipo debe considerar
@@ -365,11 +483,11 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 ## Actualización del plan de remediación
 
 1. Revise el archivo del incidente en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#nombre-del-incidente)
-2. Revise los [playbook](#playbooks) aplicables.
+2. Revise las [guías operativas (playbooks)](#guias-operativas-playbooks) aplicables.
 3. Revise la [lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta).
 4. Considere qué tácticas del atacante están en juego en este incidente.  Utilice la lista de MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) (_i._, Persistencia, Escalada de Privilegios, Evasión de la Defensa, Acceso a Credenciales, Descubrimiento, Movimiento Lateral, Ejecución, Recolección, Exfiltración y Mando y Control), o un marco similar.
 5. Desarrollar remedios para cada táctica en juego, en la medida en que sea factible teniendo en cuenta las herramientas y los recursos existentes.  Considere remedios para [Proteger](#protección), [Detectar](#detección), [Contener](#contención), y [Erradicar](#erradicar) cada comportamiento del atacante.
-6. Priorizar en base a la [estrategia de tiempo](#choose-remediation-timing), el impacto y la urgencia.
+6. Priorizar en base a la [estrategia de tiempo](#elegir-el-momento-de-la-reparacion), el impacto y la urgencia.
 7. Documentar en el archivo de incidentes.
 
 Utilice [marcos de seguridad de la información (infosec)](https://www.nist.gov/cyberframework) como inspiración, pero **no utilice la reparación de incidentes como sustituto de un programa de infosec con un marco apropiado.** Utilícelos para complementarse.
@@ -413,7 +531,7 @@ Utilice lo siguiente como punto de partida para la corrección de la contención
 * Desactivar o eliminar el acceso de las cuentas comprometidas.
 * Bloquear direcciones IP o redes maliciosas.
 * Bloquee los dominios maliciosos.
-* Actualizar las firmas de IPS y antimalware de la red y el host mediante COI.
+* Actualizar las firmas de IPS y antimalware de la red y el host mediante IOC.
 * Retirar de la red los sistemas críticos o comprometidos.
 * Póngase en contacto con los proveedores para obtener ayuda (por ejemplo, proveedores de servicios de Internet, proveedores de SaaS).
 * Poner en lista blanca las conexiones de red para los servidores y servicios críticos.
@@ -424,7 +542,7 @@ Utilice lo siguiente como punto de partida para la corrección de la contención
 
 > "¿Cómo podemos eliminar esto de nuestros activos?  ¿Cómo podemos mejorar la erradicación en el futuro?"
 
-Utilice lo siguiente como punto de partida para la remediación de la erradicación:
+Utilice lo siguiente como punto de partida para las acciones de erradicación:
 
 * Reconstruir o restaurar los sistemas y datos comprometidos a partir de un estado bueno conocido.
 * Restablecer las contraseñas de las cuentas.
@@ -443,7 +561,7 @@ Determine la estrategia de plazos -cuando se llevarán a cabo las acciones de re
 
 ## Ejecutar la remediación
 
-* Evaluar y explicar los riesgos de las acciones de remediación a las partes interesadas.  `TODO: Personalizar el procedimiento de aprobación de los riesgos de la remediación, si es necesario.`
+* Evaluar y explicar los riesgos de las acciones de remediación a las partes interesadas.
 * Implementar inmediatamente aquellas acciones de remediación que afecten poco o nada al atacante (a veces llamadas "acciones de postura"). Por ejemplo, muchas de las acciones de [protección](#protección) y [detección](#detección) anteriores son buenas candidatas.
 * Programar y asignar acciones de remediación de acuerdo con la estrategia de tiempo.
 * Ejecute las acciones de corrección en lotes, como eventos, para lograr la máxima eficacia y el mínimo riesgo.
@@ -464,7 +582,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 ### Notificar y actualizar a las partes interesadas
 
 * Comunicarse con las partes interesadas como parte de las llamadas iniciales y de actualización, así como a través de actualizaciones basadas en eventos en la llamada y el chat.
-* Coordinar las actualizaciones independientes (_e._, ejecutivas, legales) según sea necesario, pero con la menor frecuencia posible, para mantener el foco en la investigación y la reparación.
+* Coordinar las actualizaciones independientes (_p. ej._, ejecutivas, legales) según sea necesario, pero con la menor frecuencia posible, para mantener el foco en la investigación y la reparación.
 * Concéntrese en la mejor evaluación del vector, el impacto, el resumen y los aspectos más destacados de la línea de tiempo, incluidos los pasos de remediación.  No especule.
 
 ### Notificar y actualizar la organización
@@ -475,9 +593,8 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 ### Crear Informe de Incidentes
 
-* Tras el cierre del incidente, capture la información en el [archivo del incidente](#crear-archivo-del-incidente) para su distribución utilizando el formato en {{INCIDENT_REPORT_TEMPLATE}}.  **Si los informes de vector, impacto, resumen, línea de tiempo y actividad están completos, esto puede ser totalmente automatizado.**
-* Distribuir el informe de incidentes a lo siguiente: {{INCIDENT_REPORT_RECIPIENTS}}.
-* `TODO: Personalizar la creación y distribución del informe de incidentes, si es necesario`.
+* Tras el cierre del incidente, capture la información en el [archivo del incidente](#crear-archivo-del-incidente) para su distribución utilizando {{INCIDENT_REPORT_TEMPLATE}}.
+* Distribuir el informe de incidentes a: {{INCIDENT_REPORT_RECIPIENTS}}.
 
 ## Comunicar al exterior
 
@@ -485,7 +602,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 * **No** notifique ni ponga al día al personal que no ha respondido hasta que el Incident Commander lo autorice.
 * Notificar a los organismos reguladores (por ejemplo, HIPAA/HITRUST, PCI DSS, SOX) si es necesario y de acuerdo con la política.
-* Coordinar los requisitos, el formato y los plazos con el {{COMPLIANCE_TEAM}}.
+* Coordinar los requisitos, el formato y los plazos con {{COMPLIANCE_TEAM}}.
 
 ### Notificar a los clientes
 
@@ -511,28 +628,73 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 * **No** notifique o actualice al personal que no responde hasta que el Incident Commander lo autorice.
 * Coordinar con {{EXECUTIVE_TEAM}} y {{LEGAL_TEAM}} antes de interactuar con las fuerzas del orden.
-* Póngase en contacto con las fuerzas del orden locales en {{LOCAL_LE_CONTACT}}.
-* Póngase en contacto con el FBI en {{FBI_CONTACT}} o a través del [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
+* Póngase en contacto con las fuerzas del orden locales ({{LOCAL_LE_CONTACT}}) según procedimiento interno.
 * Póngase en contacto con los operadores de los sistemas utilizados en el ataque, sus sistemas también pueden haber sido comprometidos.
 
 ### Contactar con el servicio de asistencia de respuesta externa
 
-* Póngase en contacto con {{INCIDENT_RESPONSE_VENDOR}} para que le ayude a evaluar el riesgo, la gestión de incidentes, la respuesta a los mismos y el apoyo posterior al incidente.
-* Póngase en contacto con {{PUBLIC_RELATIONS_VENDOR}} para que le ayude con las relaciones públicas y la comunicación externa.
-* Póngase en contacto con {{INSURANCE_VENDOR}} para obtener ayuda con el seguro cibernético.
+* Póngase en contacto con {{INCIDENT_RESPONSE_VENDOR}} para apoyo especializado.
+* Póngase en contacto con {{PUBLIC_RELATIONS_VENDOR}} para coordinar comunicación externa.
+* Póngase en contacto con {{INSURANCE_VENDOR}}.
 
 ### Compartir Inteligencia
 
 * Comparta los IOCs con [Infragard](https://www.infragard.org/) si procede.
-* Comparta los IOCs con su [ISAC](https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center) de servicio a través de {{ISAC_CONTACT}}, si procede.
+* Comparta los IOCs con {{ISAC_CONTACT}} (si aplica).
 
 # Recuperación
 
-`TODO: Personalizar los pasos de recuperación.`
+La recuperación se centra en volver a la operación normal con seguridad, minimizando el riesgo de reinfección o re-compromiso.
 
-`TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.`
+En esta organización, la recuperación debe priorizar (según PDS):
+- Restauración segura del servidor de archivos y servicios internos críticos.
+- Recuperación desde copias cifradas/externas con verificación (PRY-003) y pruebas de restauración periódicas.
+- Reducción de reinfección mediante segmentación/monitorización (PRY-004) y rotación de credenciales.
+
+Checklist recomendado (genérico):
+
+1. Confirmar criterios de “sistema limpio” antes de levantar el servicio (sin IOCs activos, cuentas rotadas, parches aplicados, monitorización reforzada).
+2. Restaurar desde backups verificados cuando aplique (idealmente con pruebas de restauración previas y backups cifrados/externos).
+3. Rotar credenciales relevantes (usuarios afectados, cuentas privilegiadas, API keys/tokens, cuentas de servicio).
+4. Reaplicar hardening y configuración base (políticas, segmentación, MFA, reglas de firewall/WAF si aplica).
+5. Validar integridad y disponibilidad:
+  * pruebas funcionales por el área de negocio,
+  * verificación de integridad de datos (si aplica),
+  * verificación de logs/telemetría.
+6. Monitorización post-incidente:
+  * elevar el nivel de logging/alertas temporalmente,
+  * hunting proactivo de IOCs y comportamiento anómalo.
+7. Comunicación de vuelta a normalidad: informar a las partes interesadas del estado y de restricciones temporales.
+8. Programar el After Action Review (AAR) en un plazo de {{AAR_SLA}} con: {{AAR_ATTENDEES}}.
 
 **La recuperación suele estar dirigida por las unidades de negocio y los propietarios de los sistemas.  Tome medidas de recuperación sólo en colaboración con las partes interesadas pertinentes.**
 
 1. Poner en marcha un plan de continuidad de negocio/recuperación de desastres: Por ejemplo, considerar la migración a ubicaciones operativas alternativas, sitios de conmutación por error, sistemas de copia de seguridad.
 2. Integrar las acciones de seguridad con los esfuerzos de recuperación de la organización.
+
+## Criterios de cierre técnico
+
+El incidente podrá considerarse contenido y en recuperación cuando:
+
+- No existan IOCs activos durante {{MONITORING_WINDOW}}
+- Las credenciales comprometidas hayan sido rotadas
+- Los sistemas críticos hayan sido validados
+- Los propietarios de negocio aprueben la restauración
+- El Incident Commander autorice el cierre operativo
+
+RTO objetivo: {{RTO}}
+
+RPO objetivo: {{RPO}}
+
+## After Action Review (AAR)
+
+El AAR debe incluir:
+
+- Qué ocurrió
+- Qué funcionó bien
+- Qué falló
+- Decisiones clave
+- Brechas de detección
+- Brechas de comunicación
+- Acciones correctivas
+- Responsable y fecha objetivo de cada acción
