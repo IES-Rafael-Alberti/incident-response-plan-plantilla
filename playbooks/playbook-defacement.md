@@ -112,6 +112,18 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 3. Aplicar parches, retirar componentes inseguros y revisar permisos sobre ficheros, paneles y cuentas de administración.
 4. Verificar con el proveedor externo que el entorno ha sido revisado y saneado antes de proceder a la restauración pública.
 
+### Comunicar
+
+1. Elevar el incidente y comunicarlo a Dirección, al responsable de seguridad y a los responsables de Comunicación.
+    1. Escalado inmediato si la página alterada contiene contenido ofensivo, fraudulento, enlaces maliciosos o afecta a la tienda online.
+2. Documentar el incidente y conservar capturas, logs, cambios de contenido y actuaciones del proveedor externo.
+3. Comunicarse con asesoría jurídica y consultoría RGPD si existe sospecha de acceso a datos personales o formularios de clientes.
+4. Comunicar a usuarios internos el estado del servicio y las restricciones temporales.
+5. Comunicar a clientes, si procede, que la web o la tienda han sido intervenidas temporalmente por seguridad, siempre con autorización del `Incident Commander` y coordinación con Comunicación.
+6. Contactar con proveedores de seguros o soporte externo si existen.
+7. Considerar notificación a organismos o fuerzas de seguridad si el incidente es grave, persistente o con posible delito asociado.
+8. Coordinar toda comunicación externa para evitar mensajes contradictorios o alarmistas.
+
 ### Recuperación
 
 1. Orden recomendado de recuperación:
@@ -142,18 +154,6 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 * Técnicos: acceso al panel del proveedor, backups, logs web, base de datos, sistema de tickets y herramientas de escaneo o integridad.
 * Logísticos: página de mantenimiento preparada, canales de contacto con proveedor externo y procedimiento de comunicación pública.
 * Financieros: soporte urgente del proveedor, auditoría web, restauración de servicio y posibles costes de reputación o notificación.
-
-### Comunicar
-
-1. Elevar el incidente y comunicarlo a Dirección, al responsable de seguridad y a los responsables de Comunicación.
-    1. Escalado inmediato si la página alterada contiene contenido ofensivo, fraudulento, enlaces maliciosos o afecta a la tienda online.
-2. Documentar el incidente y conservar capturas, logs, cambios de contenido y actuaciones del proveedor externo.
-3. Comunicarse con asesoría jurídica y consultoría RGPD si existe sospecha de acceso a datos personales o formularios de clientes.
-4. Comunicar a usuarios internos el estado del servicio y las restricciones temporales.
-5. Comunicar a clientes, si procede, que la web o la tienda han sido intervenidas temporalmente por seguridad, siempre con autorización del `Incident Commander` y coordinación con Comunicación.
-6. Contactar con proveedores de seguros o soporte externo si existen.
-7. Considerar notificación a organismos o fuerzas de seguridad si el incidente es grave, persistente o con posible delito asociado.
-8. Coordinar toda comunicación externa para evitar mensajes contradictorios o alarmistas.
 
 ### Cierre y AAR
 
