@@ -8,7 +8,7 @@ Este plan de respuesta a incidentes se basa en la plantilla concisa, directiva, 
 
 Última revisión: {{REVIEW_DATE}}. Última prueba: {{TEST_DATE}}.
 
-`TODO: Adaptar esta plantilla a la organización siguiendo las instrucciones de https://github.com/counteractive/incident-response-plan-template.`
+`TODO: Adaptar esta plantilla a la organización siguiendo las instrucciones de https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/tree/traducion2526.`
 
 # Assess
 
