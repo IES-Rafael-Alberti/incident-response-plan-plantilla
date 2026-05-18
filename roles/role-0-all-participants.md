@@ -1,48 +1,47 @@
-
-## Roles: Todos los participantes
+## Rol: Todos los participantes
 
 ### Descripción
 
-Todos los participantes en la respuesta a un incidente tienen la responsabilidad de ayudar a resolver el incidente de acuerdo con el plan de respuesta a incidentes, bajo la autoridad del Incident Commander.
+Todos los participantes en la respuesta a un incidente tienen la responsabilidad de ayudar a resolverlo siguiendo el plan de respuesta, bajo la autoridad del Jefe de Respuesta.
 
 ### Deberes
 
-#### Exhibir la etiqueta de la llamada
+#### Seguir las normas de la llamada
 
-* Participar tanto en la llamada como en el chat.
+* Estar tanto en la llamada como en el chat.
 * Mantener el ruido de fondo al mínimo.
-* Mantener el micrófono silenciado hasta que tenga algo que decir.
-* Identifícarse cuando entre en la llamada; diga su nombre y su función (por ejemplo, "Soy el SME del equipo x").
+* Mantener el micrófono en silencio hasta que tenga algo que decir.
+* Identificarse al entrar en la llamada: diga su nombre y su función (por ejemplo, "Soy el especialista del equipo de ventas").
 * Hablar con claridad.
 * Ser directo y objetivo.
-* Mantener las conversaciones/debates breves y al grano.
-* Comunicar cualquier preocupación al Incident Commander (IC) en la llamada.
-* Respetar las limitaciones de tiempo dadas por el Incident Commander.
-* Si te unes a un solo canal (llamada o chat), no participar activamente, ya que provoca una comunicación inconexa.
-* **Utilizar una terminología clara y evitar usar acrónimos o abreviaturas. La claridad y la precisión son más importantes que la brevedad.**
+* Ir al grano en las conversaciones.
+* Comunicar cualquier preocupación al Jefe de Respuesta en la llamada.
+* Respetar los tiempos marcados por el Jefe de Respuesta.
+* Si solo estás en un canal (llamada o chat pero no ambos), no podrás participar bien y la comunicación será confusa.
+* **Usar un lenguaje claro y evitar siglas o abreviaturas. La claridad y la precisión son más importantes que la rapidez.**
 
-##### Referencia: Procedimiento común de voz
+##### Frases útiles durante la llamada
 
-El [procedimiento de voz] estándar de la radio (https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure) **no es obligatorio**, sin embargo, es posible que escuche ciertos términos (o que tenga que utilizarlos usted mismo). Las frases comunes incluyen:
+No es obligatorio usar un lenguaje de radio, pero puede resultar útil conocer algunas frases habituales:
 
-* **Ack/Rog:** "He recibido y entendido"
-* **Say Again:** "Repita su último mensaje"
-* **Standby:** "Por favor, espere un momento para la siguiente respuesta"
-* **Wilco:** "Cumpliré"
+* **Recibido/OK:** "He entendido el mensaje"
+* **Repite:** "Vuelve a decir tu último mensaje"
+* **Un momento:** "Por favor, espera para la siguiente respuesta"
+* **Confirmado:** "Lo haré"
 
-**No** invente nuevas abreviaturas; favorezca ser explícito sobre lo implícito.
+**No** inventes nuevas abreviaturas; mejor ser explícito que ir sobreentendido.
 
-#### Seguir al Incident Commander
+#### Seguir al Jefe de Respuesta
 
-El Incident Commander (IC) es el líder del proceso de respuesta al incidente.
+El Jefe de Respuesta (IC) dirige el proceso de respuesta al incidente.
 
-* Siga las instrucciones del Incident Commander.
-* No realice ninguna acción a menos que el Incident Commander se lo indique.
-* El jefe normalmente sondeará si hay objeciones fuertes antes de asignar una acción importante. Plantee sus objeciones si las tiene.
-* Una vez que el jefe haya tomado una decisión, sígala (incluso si no está de acuerdo).
-* Responde a cualquier pregunta que te haga el jefe de forma clara y concisa. Responder "no sé" es aceptable. No adivine.
-* El jefe puede pedirte que investigues algo y que le contestes en X minutos. Esté preparado con una respuesta dentro de ese tiempo. Pedir más tiempo es aceptable, pero proporcione al jefe una estimación.
+* Siga las instrucciones del Jefe de Respuesta.
+* No haga nada sin que el Jefe de Respuesta se lo indique.
+* Normalmente el Jefe preguntará si hay objeciones importantes antes de asignar una acción. Exprese sus objeciones si las tiene.
+* Una vez que el Jefe haya tomado una decisión, acátela (incluso si no está de acuerdo).
+* Responda a las preguntas del Jefe con claridad. Decir "no sé" es aceptable. No invente respuestas.
+* El Jefe puede pedirle que investigue algo y que le responda en X minutos. Esté preparado para dar una respuesta en ese plazo. Pedir más tiempo es aceptable, pero avise al Jefe.
 
-### Capacitación
+### Formación
 
-Lee y entiende el plan de respuesta a incidentes, incluyendo los roles y los libros de jugadas.
+Leer y entender el plan de respuesta a incidentes, incluyendo los roles y las guías de actuación.

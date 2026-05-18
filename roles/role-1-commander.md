@@ -1,78 +1,81 @@
+## Rol: Jefe de Respuesta
 
-## Rol: Incident Commander
+### Descripción
 
-### Descripcion
-El Incident Commander(IC) actua como la única fuente de lo que realmente está ocurriendo y va a ocurrir durante un incidente grave. El IC es el individuo con mayor rango en cualquier llamada de incidente, sin importar el rango en el dia a dia. Ellos son los que toman decisiones durante un incidente; delegan tareas y prestan atencion a expertos en la materia que están tratando para resolver el incidente. Las decisiones tomadas por el Incident commander las decisivas.
+El Jefe de Respuesta (IC) es la única fuente de información sobre lo que está ocurriendo y lo que va a ocurrir durante un incidente grave. Es la persona con mayor rango en cualquier llamada de incidente, sin importar su cargo en el día a día. Toma las decisiones durante un incidente, delega tareas y presta atención a los especialistas que están ayudando a resolverlo. Las decisiones del Jefe de Respuesta son definitivas.
 
-Tu trabajo como Incident commander evaluar la situación, proveer un guiado claro y coordinado, contratar otros trabajadores para recolectar contexto/detalles.**No realizar investigaciones o remedios**, delega estos trabajos.
+Tu trabajo como Jefe de Respuesta es evaluar la situación, dar una dirección clara y coordinada, y pedir ayuda a otras personas para recopilar información y detalles. **No investigues ni soluciones tú mismo**, delega esas tareas.
 
 ### Deberes
 
-Resuelve el incidente lo más rápido y seguro posible usando el plan de respuesta de incidentes como plantilla de trabajo: guia al equipo de investigacion, remedio, comunicación. Utiliza al adjunto para que te ayude, y delegue a relevantes enlaces y expertos a tu discreción.
+Resuelve el incidente lo más rápido y seguro posible usando el plan de respuesta como guía: dirige al equipo de investigación, solución y comunicación. Apóyate en el Adjunto para que te ayude y delega en los Enlaces y Especialistas según sea necesario.
 
-1. Ayuda a prepararos para los incidentes,
-    * Establecer canales de comunicación para incidentes.
-    * Redirige a las personas hacia estos canales de comunicación cuando acurra algún incidente grave.
-    * Entrena a miembros del equipo sobre como comunicarte durante incidentes y entrena a otros Incident Commanders.
-1. Dirige los incidentes hacia una solución,
-    * Lleva a todos al mismo canal de comunicación.
-    * Recolecta información de los miembros del equipo por sus servicios de estatus.
-    * Recolecta propuestas de reparación de acciones, después recomienda acciones de reparación para que se lleven a cabo.
-    * Delega todas la acciones de reparación, el Incident Commander no es un resolvedor.
-    * Es la única fuente de autoridad en el estado del sistema.
-1. Facilita las llamadas y reuniones,
-    * Gana consenso (Realiza encuestas durante las llamadas)
-    * Proporciona actualizaciones de estatus
-    * Reduce el alcance (despedir a los asistentes cuando sea posible)
-    * Spin off sub-equipos
-    * Transfiere el control cuando sea necesario
-    * Firmar las llamadas
-    * Mantener el orden
-    * Obtén respuestas directas
-    * Manejar las caídas de ejecutivos como
-        * Anular al Incident Commander
-        * Desmotivación
-        * Petición de información
-        * Cuestionar la severidad
-    * Manejar respuestas perturbadoras o beligerantes
-1. Post Mortem,
-    * Crear la plantilla inicial justo después del incidente para que las personas puedan escribir sus opiniones mientras están frescas.
-    * Asignar el post-mortem después de que el evento termine, esto puede darse después de terminar la llamada.
-    * Trabaja con los gerentes o jefes de equipo para organizar acciones preventivas.
+1. **Preparar el terreno para los incidentes:**
+   * Establecer canales de comunicación para incidentes.
+   * Redirigir a las personas hacia esos canales cuando ocurra un incidente grave.
+   * Formar a los miembros del equipo sobre cómo comunicarse durante incidentes y formar a otros Jefes de Respuesta.
 
-El Incident Commander utiliza métodos y lenguajes adicionales:
+2. **Dirigir los incidentes hacia una solución:**
+   * Reunir a todos en el mismo canal de comunicación.
+   * Recoger información de los miembros del equipo a través de sus informes de estado.
+   * Escuchar propuestas de solución y decidir qué acciones llevar a cabo.
+   * Delegar todas las acciones de solución. El Jefe de Respuesta no es quien resuelve, es quien coordina.
+   * Ser la única fuente de autoridad sobre el estado del sistema.
 
-* Siempre anuncie cuando se una a la llamada si es el IC de guardia.
+3. **Facilitar las llamadas y reuniones:**
+   * Buscar el consenso (preguntar durante las llamadas).
+   * Dar actualizaciones de estado.
+   * Reducir el ámbito (despedir a asistentes cuando sea posible).
+   * Crear subequipos si hace falta.
+   * Transferir el mando cuando sea necesario.
+   * Cerrar las llamadas.
+   * Mantener el orden.
+   * Obtener respuestas directas.
+   * Gestionar situaciones complicadas con directivos como:
+     * Que quieran anular al Jefe de Respuesta
+     * Desmotivación
+     * Peticiones de información
+     * Cuestionar la gravedad
+   * Manejar respuestas que interrumpan o sean agresivas.
+
+4. **Tras el incidente:**
+   * Crear una plantilla inicial justo después del incidente para que las personas puedan escribir sus impresiones mientras están frescas.
+   * Asignar la revisión posterior después de que el evento termine, puede hacerse después de terminar la llamada.
+   * Trabajar con los responsables o jefes de equipo para organizar acciones preventivas.
+
+Normas adicionales para el Jefe de Respuesta:
+
+* Anuncie siempre cuando se una a la llamada si es el Jefe de guardia.
 * **No** permita que las discusiones se salgan de control. Mantenga las conversaciones cortas.
-* Tenga en cuenta las objeciones de los demás, pero tu decision es la definitiva.
-* Si alguien está interrumpiendo activamente tu decision, expúlsalo.
-* Anuncia el final de la llamada.
-* Después de un incidente, comuníquese con otros Incident Commander sobre cualquier acción que considere necesaria.
+* Tenga en cuenta las objeciones de los demás, pero su decisión es la definitiva.
+* Si alguien está interfiriendo activamente en su labor, puede expulsarlo de la llamada.
+* Anuncie el final de la llamada.
+* Después de un incidente, hable con otros Jefes de Respuesta sobre cualquier acción que considere necesaria.
 
-**Utilice una terminología clara y evite las siglas o abreviaturas. La claridad y la precisión son más importantes que la brevedad.**
+**Use un lenguaje claro y evite las siglas o abreviaturas. La claridad y la precisión son más importantes que la rapidez.**
 
-### Prácticas
+### Formación práctica
 
-* Lea el plan de respuesta a incidentes, incluidos todos los roles y manuales.
-* Participar en un ejercicio de respuesta a incidentes.
-* Seguir a un Incident Commander actual sin participar activamente, manteniendo sus preguntas hasta el final.
-* Tomar la iniciativa de un Incident Commander. Responda a incidentes con el IC actual allí para hacerse cargo si es necesario.
-* _OPCIONAL:_ facilitar las prácticas
-* _OPCIONAL:_ recurre a [Incident Responders as Facilitators (and Therapists)](#FIX) y al [PagerDuty Incident Commander training](https://response.pagerduty.com/training/incident_commander/) para mas ideas y discussiones.
+* Lea el plan de respuesta a incidentes, incluidos todos los roles y guías de actuación.
+* Participe en un simulacro de respuesta a incidentes.
+* Acompañe a un Jefe de Respuesta actual sin participar activamente, guarde sus preguntas para el final.
+* Tome el mando como Jefe de Respuesta. Responda a incidentes con el Jefe actual presente para que pueda hacerse cargo si es necesario.
+* _OPCIONAL:_ Dirija simulacros.
+* _OPCIONAL:_ Consulte recursos como [PagerDuty Incident Commander training](https://response.pagerduty.com/training/incident_commander/) para más ideas.
 
-#### pre-requisitos
+#### Requisitos previos
 
-No hay requisitos previos de antigüedad o unidad de negocios para convertirse en Incident Commander, es un rol abierto a cualquier persona con la capacitación y la capacidad. Antes de que pueda ser un Incident Commander, se espera que cumpla con los siguientes criterios:
+No hace falta tener mucha antigüedad ni ser de un departamento concreto para ser Jefe de Respuesta. Es un rol abierto a cualquier persona con la formación y la capacidad adecuadas. Antes de ser Jefe de Respuesta, se espera que cumpla estos requisitos:
 
-* Excelentes **habilidades de comunicación** verbal y escrita.
-* **Conocimiento de alto nivel** de la infraestructura y las funciones comerciales.
-* Excelente pensamiento crítico, juicio y toma de decisiones.
-* Flexibilidad y capacidad para **escuchar comentarios de expertos**, modificando los planes según sea necesario.
-* **Participó en al menos dos respuestas a incidentes**.
-* Capacidad para **tomar el mando** y **disposición para expulsar a las personas de una llamada** para eliminar las distracciones, incluso si se trata del director ejecutivo.
+* Excelentes **habilidades de comunicación** oral y escrita.
+* **Conocimiento general** de la infraestructura y las funciones del negocio.
+* Excelente capacidad de pensamiento crítico, juicio y toma de decisiones.
+* Flexibilidad y capacidad para **escuchar a los especialistas**, modificando los planes según sea necesario.
+* **Haber participado en al menos dos respuestas a incidentes**.
+* Capacidad para **tomar el mando** y **saber expulsar a personas de una llamada** si es necesario para eliminar distracciones, incluso si se trata del director general.
 
-¡No se requieren conocimientos técnicos profundos! Los Incident Commander no requieren un conocimiento técnico profundo de nuestros sistemas. Su trabajo como Incident Commander es coordinar la respuesta, no realizar cambios técnicos. No crea que no puede ser un Incident Commander solo porque no está en el departamento de ingeniería.
+**¡No se necesitan conocimientos técnicos profundos!** Los Jefes de Respuesta no necesitan saber en detalle cómo funcionan los sistemas. Su trabajo es coordinar la respuesta, no hacer cambios técnicos. No piense que no puede ser Jefe de Respuesta solo porque no es del departamento de informática.
 
-#### Graduación
+#### Acreditación
 
-Al finalizar el entrenamiento, agréguese a la lista de Incident Commander.
+Al finalizar la formación, añádase a la lista de Jefes de Respuesta.

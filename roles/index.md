@@ -1,34 +1,49 @@
-# Roles
+# Roles del equipo de respuesta de Security S.L.
 
-A continuación se presentan las descripciones, los deberes y la formación para cada uno de los roles definidos en la respuesta a un incidente.
-
-`TODO: Personalizar los roles, las descripciones, las funciones y la formación, si es necesario.`
+A continuación se presentan las descripciones, funciones y formación para cada uno de los roles definidos en la respuesta a incidentes de Security S.L.
 
 ## Estructura de los roles
 
 * Equipo de Mando
-  * [Incident Commander](#rol-incident-commander)
-  * [Incident Commander-Adjunto](#rol-delegado-del-incident-commander-subdelegado)
-  * [Escriba](#rol-escriba)
-* Equipo de enlace
-  * Enlace Interno [Enlace](#rol-enlace)
-  * Enlace externo
+  * [Jefe de Respuesta](#rol-jefe-de-respuesta)
+  * [Adjunto](#rol-adjunto-del-jefe-de-respuesta)
+  * [Documentalista](#rol-documentalista)
+* Equipo de Enlace
+  * [Enlace Interno](#rol-enlace)
+  * [Enlace Externo](#rol-enlace)
 * Equipo de Operaciones
-  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (SMEs) para Sistemas
-  * SMEs para equipos/unidades de negocio
-  * SMEs para las funciones ejecutivas (_p.ej._, Legal, RRHH, Finanzas)
-En el caso de incidentes complejos de mayor envergadura, la estructura de funciones puede ajustarse para tener en cuenta la creación de subequipos. Para más información, lea cómo gestionamos los [Incidentes Complejos](/before/complex_incidents.md).
+  * [Especialistas](#rol-especialista) para sistemas
+  * Especialistas para equipos o áreas de negocio
+  * Especialistas para funciones de apoyo (Legal, RRHH, Finanzas)
 
-Esta es una **estructura flexible**: cada rol no será ocupado por una persona diferente para cada incidente. Por ejemplo, en un incidente pequeño, el adjunto podría actuar como escribiente y enlace interno. La estructura es flexible y se adapta al incidente.
+En incidentes más grandes y complejos, la estructura puede ajustarse para crear subequipos.
 
-## Tiempos de Guerra vs. Tiempos de Paz
+Esta es una **estructura flexible**: no todas las personas tienen un rol distinto en cada incidente. Por ejemplo, en un incidente pequeño, el Adjunto puede hacer también de Documentalista y de Enlace interno. La estructura se adapta al incidente.
 
-En las llamadas de respuesta a Incidentes ("tiempos de guerra"), una estructura organizativa diferente anula las operaciones normales ("tiempos de paz"):
+## Tiempos de crisis vs. tiempos normales
 
-* El Comandante del incidente está al mando. Independientemente de su rango en tiempos de paz, ahora es la persona de mayor rango en la llamada, superior al director general o CEO.
-* Los primeros intervinientes (las personas que actúan como primeros intervinientes de un equipo/servicio) son las personas de mayor rango de ese servicio.
-* Las decisiones serán tomadas por el IC tras considerar la información presentada. Una vez tomada la decisión, es definitiva.
-* El IC puede tomar decisiones más arriesgadas que las que normalmente se considerarían en tiempos de paz.
-* El IC puede ir en contra de una decisión consensuada. Si se hace una encuesta, y 9/10 personas están de acuerdo pero 1 está en desacuerdo. El IC puede elegir la opción del desacuerdo a pesar del voto de la mayoría. Aunque no esté de acuerdo, la decisión del IC es definitiva. Durante la convocatoria no es el momento de discutir con ellos.
-* El IC puede utilizar un lenguaje o comportarse de una manera que usted considere grosera. Esto es tiempo de guerra, y necesitan hacer lo que sea necesario para resolver la situación, por lo que a veces se producen groserías. Esto no es personal, y es algo que debes estar preparado para experimentar si nunca has estado en una situación de guerra.
-* Es posible que el IC te pida que abandones la llamada, o incluso que te eche a la fuerza de una llamada. Esto queda a discreción del IC si considera que no estás aportando nada útil. De nuevo, esto no es personal y debes recordar que los tiempo de guerra son diferentes a los tiempo de paz.
+Durante una respuesta a incidentes ("tiempos de crisis"), la forma de organizarse es distinta a la del día a día ("tiempos normales"):
+
+* El **Jefe de Respuesta** está al mando. Sin importar su cargo en tiempos normales, ahora es la persona con mayor rango en la llamada, por encima del director general.
+* Las primeras personas en intervenir (las que atienden un equipo o servicio) son las de mayor rango en ese servicio.
+* Las decisiones las toma el Jefe de Respuesta después de escuchar la información presentada. Una vez tomada la decisión, es definitiva.
+* El Jefe de Respuesta puede tomar decisiones más arriesgadas de lo normal.
+* El Jefe de Respuesta puede ir en contra de lo que opina la mayoría. Si se hace una votación y 9 de 10 personas están de acuerdo pero 1 no, el Jefe puede elegir la opción de esa persona. Aunque no esté de acuerdo, la decisión del Jefe es definitiva. Durante la llamada no es momento de discutirla.
+* El Jefe de Respuesta puede usar un lenguaje o comportarse de una manera que parezca brusca. Es tiempo de crisis y necesita hacer lo que sea necesario para resolver la situación. No es algo personal.
+* El Jefe de Respuesta puede pedirle que abandone la llamada, o incluso expulsarle, si considera que no está aportando nada útil. No es personal; recuerde que los tiempos de crisis son diferentes.
+
+## Responsables por defecto (Security S.L.)
+
+| Rol | Titular | Suplente |
+|-----|---------|----------|
+| Jefe de Respuesta | Responsable de Seguridad | Adjunto (Jefe Informática) |
+| Adjunto | Jefe de Informática | Especialista Sistemas |
+| Documentalista | Administrativo Informática | RRHH |
+| Enlace Interno | Jefe del Departamento afectado | Comunicación |
+| Enlace Externo | Legal | Dirección General |
+| Especialista Sistemas | Administrador Informática | Soporte Informático |
+| Especialista Forense | Analista Seguridad | Proveedor externo |
+| Especialista Redes | Administrador de Red | Infraestructura Informática |
+| Jefe de Investigación | Analista Senior | Especialista Forense |
+| Jefe de Solución | Jefe de Informática | Administrador de Red |
+| Jefe de Comunicación | Marketing/Comunicación | Legal |

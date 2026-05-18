@@ -1,27 +1,24 @@
-
-## Rol: adjunto del Incident Commander (adjunto)
+## Rol: Adjunto del Jefe de Respuesta
 
 ### Descripción
 
-Un adjunto del Incident Commander (adjunto) es un papel de apoyo directo al Incident Commander (IC). El adjunto permite que el IC se centre en el problema que tiene entre manos, en lugar de preocuparse por documentar los pasos o controlar los tiempos. El adjunto apoya al IC y lo mantiene centrado en el incidente.  Como adjunto, se espera que asuma el mando del IC si éste lo solicita.
+El Adjunto apoya directamente al Jefe de Respuesta (IC). Su función permite que el Jefe se centre en el problema principal, sin tener que preocuparse de documentar pasos o controlar los tiempos. El Adjunto apoya al Jefe y lo mantiene centrado en el incidente. También se espera que asuma el mando si el Jefe se lo pide.
 
 ### Funciones
 
-1. 1. Plantear al Incident Commander cuestiones que, de otro modo, no se abordarían (vigilar los temporizadores que se han puesto en marcha, retomar los elementos que se han perdido de una lista, etc.).
-1. 1. Ser un Incident Commander "de reserva", en caso de que el jefe principal tenga que hacer la transición a un SME, o tenga que alejarse de la función de IC.
-1. 1. Gestionar la llamada del incidente y estar preparado para retirar a las personas de la llamada si así lo indica el Incident Commander.
-1. Supervisar el estado del incidente y notificar al IC si el nivel de gravedad del incidente aumenta.
-1. Supervise los temporizadores:
-    * controlar el tiempo que ha durado el incidente
-    * Notificar al IC cada X minutos para que pueda tomar medidas (por ejemplo, "IC, el incidente está ahora en la marca de 10 minutos").
-1. Supervisar los plazos de las tareas (_p.ej._, "IC, avisa de que el temporizador de la investigación de [TEAM] se ha agotado").
+1. Plantear al Jefe de Respuesta cuestiones que de otro modo podrían pasarse por alto (vigilar los temporizadores, retomar elementos olvidados de una lista, etc.).
+2. Ser un Jefe de Respuesta "de reserva", por si el Jefe principal tiene que pasar a ser especialista o tiene que apartarse de su función.
+3. Gestionar la llamada del incidente y estar preparado para retirar a personas de la llamada si el Jefe de Respuesta lo indica.
+4. Supervisar el estado del incidente y avisar al Jefe si la gravedad del incidente aumenta.
+5. Controlar los tiempos:
+   * llevar la cuenta de cuánto dura el incidente.
+   * Avisar al Jefe cada cierto tiempo para que pueda tomar medidas (por ejemplo, "Jefe, el incidente lleva ya 10 minutos").
+6. Vigilar los plazos de las tareas (por ejemplo, "Jefe, el tiempo para la investigación del equipo de ventas se ha agotado").
 
 ### Formación
 
-* Leer y comprender el plan de respuesta a incidentes, incluyendo los roles y los libros de jugadas.
+* Leer y entender el plan de respuesta a incidentes, incluyendo los roles y las guías de actuación.
 
 #### Requisitos previos
 
-* Estar entrenado como [Incident Commander](#role-incident-commander-ic).
-
-Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
+* Haber sido formado como [Jefe de Respuesta](role-1-commander.md).

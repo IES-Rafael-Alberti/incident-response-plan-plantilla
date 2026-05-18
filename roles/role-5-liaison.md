@@ -1,56 +1,54 @@
-
 ## Rol: Enlace
 
 ### Descripción
 
-Los enlaces interactuan con otros equipos o partes interesadas fuera del equipo de respuesta a incidentes. A menudo incluyen:
+Los Enlaces se comunican con otros equipos o personas interesadas que están fuera del equipo de respuesta a incidentes. Normalmente hay dos tipos:
 
-* Enlace externo: responsable de interactuar con clientes, ya sea directamente o por vía pública.
-* Enlace interno: responsable de interactuar con las partes interesadas internas. Tanto si se trata de notificar un incidente al equipo interno como al movilizar respuestas adicionales dentro de la organización.
+* **Enlace externo**: responsable de comunicarse con los clientes, ya sea directamente o a través de canales públicos.
+* **Enlace interno**: responsable de comunicarse con las personas interesadas dentro de la empresa, ya sea para informar de un incidente o para movilizar ayuda adicional dentro de la organización.
 
-### Deberes
+### Funciones
 
-#### Enlace con el exterior o con el cliente
+#### Enlace externo o con el cliente
 
-1. Subir cualquier mensaje de cara al público con respecto al incidente (Twitter, etc).
-1. Notificar al IC de cualquier cliente o medios de comunicación que informen de los efectos del incidente.
-1. Proporcionar a los clientes el mensaje externo del post-mortem una vez que se haya completado.
-1. Contactar o interactuar con las partes interesadas externas, como proveedores, socios, fuerzas de seguridad, _etc._
-1. **No** sentirse responsable de la creación de cada mensaje: trabajar con el Incident Commander y otras partes interesadas.
-1. Según proceda, mantener a los clientes informados durante un incidente.
-1. Actuar como voz de nuestros clientes ante el Incident Commander, ya que esto es útil para la toma de decisiones del IC.
-1. Obtener la aprobación del mensaje después de haber elaborado el mensaje público: copiar el mensaje en el chat y esperar la confirmación verbal/escrita del IC antes de continuar.
+1. Publicar cualquier mensaje dirigido al público sobre el incidente (Twitter, web, etc.).
+2. Avisar al Jefe de Respuesta si algún cliente o medio de comunicación está informando sobre los efectos del incidente.
+3. Proporcionar a los clientes el mensaje externo de la revisión posterior una vez que esté completada.
+4. Contactar con partes externas como proveedores, socios, fuerzas de seguridad, etc.
+5. **No** sentirse responsable de crear cada mensaje: trabajar con el Jefe de Respuesta y otras partes interesadas.
+6. Según corresponda, mantener informados a los clientes durante un incidente.
+7. Actuar como la voz de los clientes ante el Jefe de Respuesta, ya que esto ayuda a tomar decisiones.
+8. Obtener la aprobación del mensaje después de haberlo redactado: copiar el mensaje en el chat y esperar la confirmación verbal o escrita del Jefe de Respuesta antes de seguir adelante.
 
-##### Pistas para mensajes públicos
+##### Consejos para mensajes públicos
 
-* Preparar de antemano un mensaje por defecto que pueda utilizarse para la actualización inicial si se desconoce el alcance del problema.
-* Sé honesto. No mientas o supongas.
-* Describa nuestros progresos en la resolución del incidente.
+* Preparar de antemano un mensaje por defecto que pueda usarse para la primera actualización si se desconoce el alcance del problema.
+* Sea honesto. No mienta ni suponga.
+* Describa los avances en la resolución del incidente:
   * _"Somos conscientes de un incidente..."_
-  * _"Estamos investigando los retrasos en las notificaciones..."_
-  * _"Se ha aplicado una corrección y se está desplegando actualmente..."_
+  * _"Estamos investigando..."_
+  * _"Se ha aplicado una solución y se está desplegando..."_
   * _"El problema ha sido resuelto..."_
-* Explique claramente cómo afecta el incidente a los clientes. Esta es la principal información que les interesa a los clientes.
-* Proporcionar soluciones que los clientes puedan utilizar hasta que se resuelva la incidencia.
-* No calcule los tiempos de resolución.
-* Proporcionar el nivel de detalle adecuado.
+* Explique claramente cómo afecta el incidente a los clientes. Es la información que más les interesa.
+* Ofrezca soluciones que los clientes puedan usar mientras se resuelve el incidente.
+* No calcule tiempos de resolución.
+* Dé el nivel de detalle adecuado.
 
 #### Enlace interno
 
-1. Página de SMEs u otro personal de guardia según las instrucciones del Incident Commander.
-1. Notificar o movilizar a otros equipos de la organización (por ejemplo, Finanzas, Legal, Marketing), según las instrucciones del Incident Commander.
-1. Seguir y anticiparse a los SMEs en la convocatoria.
-1. Interactuar con las partes interesadas y proporcionar actualizaciones de estado cuando sea necesario.
-1. Interactuar con las partes interesadas internas para responder a sus preguntas, para mantener la llamada principal libre de distracciones.
-1. Proporcionar actualizaciones periódicas de la situación al equipo ejecutivo, ofreciendo un resumen ejecutivo de la situación actual.
+1. Localizar a Especialistas u otro personal de guardia según las instrucciones del Jefe de Respuesta.
+2. Avisar o movilizar a otros equipos de la organización (por ejemplo, Finanzas, Legal, Marketing), según las instrucciones del Jefe de Respuesta.
+3. Seguir y anticiparse a los Especialistas en la convocatoria.
+4. Comunicarse con las partes interesadas y darles actualizaciones de estado cuando sea necesario.
+5. Responder a las preguntas de las partes interesadas internas para mantener la llamada principal libre de distracciones.
+6. Dar actualizaciones periódicas al equipo directivo, ofreciendo un resumen ejecutivo de la situación actual.
 
 ### Formación
 
-Leer y comprender el plan de respuesta a incidentes, incluyendo los roles y las guías.
+Leer y entender el plan de respuesta a incidentes, incluyendo los roles y las guías de actuación.
 
-#### Prerequisitos
+#### Requisitos previos
 
-* Excelentes **habilidades de comunicación** verbal y escrita.
+* Excelentes **habilidades de comunicación** oral y escrita.
 * _OPCIONAL:_ Formación en atención al cliente.
-* _OPCIONAL:_ Comunicación corporativa o formación en marketing.
-
+* _OPCIONAL:_ Formación en comunicación corporativa o marketing.

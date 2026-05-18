@@ -1,15 +1,18 @@
 # Plan de respuesta a incidentes para {{COMPANY_NAME}}
 
+**Empresa:** Security S.L. — Consultoría y Auditoría en Ciberseguridad  
+**Empleados:** 150 | **Sedes:** 2 (principal + secundaria)  
+**Sector:** Seguridad de redes, sistemas e información
+
 Autor: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}
 
 Revisión {{REVISION_NUMBER}}, Publicado {{RELEASE_DATE}}
 
-Este plan de respuesta a incidentes está basado en el plan conciso, directivo, específico, flexible y gratuito disponible en [Github](https://github.com/counteractive/incident-response-plan-template) de Counteractive Security y discutido en [www.counteractive.net](https://www.counteractive.net/blog/an-ir-plan-you-will-use/)
-
+Este plan de respuesta a incidentes está basado en el plan conciso, directivo, específico, flexible y gratuito disponible en [Github](https://github.com/counteractive/incident-response-plan-template) de Counteractive Security y discutido en [www.counteractive.net](https://www.counteractive.net/blog/an-ir-plan-you-will-use/). Ha sido personalizado para Security S.L. integrando los resultados del análisis de riesgos (MAGERIT), el Plan Director de Seguridad y la taxonomía de incidentes previamente desarrollada.
 
 Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en {{TEST_DATE}}.
 
-`TODO: Personalice esta plantilla para su organización utilizando las instrucciones en https://github.com/counteractive/incident-response-plan-template.  Para obtener servicios de respuesta a incidentes, o ayuda para personalizar, implementar o probar su plan, póngase en contacto con nosotros en contact@counteractive.net o en el (888) 925-5765.`
+> **Antecedentes:** Security S.L. sufrió un ataque de ransomware que motivó el desarrollo de este plan y del Plan Director de Seguridad. Las lecciones aprendidas de ese incidente han sido incorporadas en los procedimientos y playbooks.
 
 # Evaluar
 
