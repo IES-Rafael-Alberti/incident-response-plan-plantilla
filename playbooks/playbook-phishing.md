@@ -3,107 +3,14 @@
 
 ### Diagrama de Flujo del Proceso
 
-```mermaid
-flowchart TD
-    Inicio([Alerta o Reporte de Phishing]) --> Paralelo{Ejecución Simultánea Coordinada}
+[![diagrama](https://mermaid.ink/img/pako:eNqFVsFu20YQ_ZUBgQAJICsiJVmyArRgKNoVGssCbfVQ2ocVOaI2JXeZJSlHNnzoN_QLcsyhp35AgerHOsuVbMp1YQGmyeXM25l5b2Z5b0UyRmtkLVN5G62YKuFqfC2AfhPBIy7fhm6KqmQgIcBcqhIhRpiteLHiIrl5B0dHP8CMKZZiKu_9zxhVEd_-JeCSZ1Vabr8JZOBJqWIuWMweroVB37vU_hOxfmE1wOyFVU9me4w3b-DUvfTBHsFk-ot_eTU5cwPzqqgWiWL5Ck5ZgbWBWGNR8oQpY6B_MVcYlVwKuPr4tEqWod2GK8VZgqYKLAW7f9TtZDcmMPv-n78DjkUiwU1LCe_hlLITEUclf3x4ggpssofL7Z_GzQn9FNdMAYNJ0KJMRIIpPc5YIgvY6IUSBaqb5wjTXUG6odOGMZaoMtpPwfb3bMFp_w24S8qExbJo-jo7r8ZS1yz1wm6b6hvJnOsAXKJ1yaKSoii4ANQsluwgjp5x7Ie9o-M2uGL7LeUFL-Bq-z2iEskReGyBESpWtGAefNL5uPHnSpSHMfUNzjFV8KdqIam-lA2LjGZiTGFeVEzxwzIeH5RxEA7a8LEqIoqc1JArmfFCall6FQqS6ns4P3XpeuFW5ermOc6-mMNw-AgzUzJnCTNR1CEJ1nQc7FwaS0OzdBKeHNmdNmVfYiIVv9PlLNmXCqkAU76mjCiwM8XWGLN4h4kifq5hZwSBf-6PJy8rWL_GDGP-un7JLjRKqtMxkvXsMMC11LkWWJALaoIUtQRbpJo2iBTG2oU6rUmYZxt_J_yYSsqKACYXXkEpwBmlfMs2LRhPL1vUAYqe0rTpawTodUOXF1pnvohzyUWp9w5wHyEspUJRYNPT6NTrhbNKUc9CJJVCkmfGUj2VCrqlsqb0b1Hd6WyazkarvlIh_bGYR4bYhgmtGxubWpKbZlKYpKyGJUgd1gZYnhdGRY8bs-ZOvimO74SBLOvSUhV1F-HXvKLa1l1N-DnRphFumcL_l0CXeujifD6deC9rQL-XWUXd9roIyDCcypIv98nvVU0B-V-NvvfjlGpATZDWc2ms0YzDBj5hwg74JNu9kxNOBPGW1V6V6VmaHnKhEL5U2--wYqSq90Kam0MUZ4_SfQxSw0Qpp_7dKTOpUppnpFAaSYSxgWWVMM1OzA5HiobZ4_Vq5dMkq_EKAlGypbt7jWjANnBaobqriU7hQpHmX2TEu6ATJTjzp97EBZd605vP_MD1Jts_psYoONmdUtE8Nyu-83xFh9RcOyS8N3oJ95B0bUPTONdDUtPyevfTRuFMFuXRhNor1gU1TM_t0CX7dT01RclFxWki6YpOaXKRtmlijgNdbZaT1pvzb25on5POkUjXM67mfj-1HwXQ9DHFmHfDc_wsVd3DolSSxguUu0OjGMHl7JQGyM-Tc7qeu4H3XzLmhl06Yd-GdKl5I0YjGoaZ1ou8eWcMzTWiJi52Hy_A6m-XD803GmLJxQerZSWKx9aoVBW2rIzOVKYfrXttfW2VK5q319aIbmOmfru2rsUD-eRM_CpltndTskpW1mjJ0oKeqpzEiWP6cFDsyYRyQeVJOgqt0UmNYI3ura_WqOv02x2nc-ycDIfO0Hb6LWtDJr22M7C7vUGn1x-eDHu9h5Z1V2_ZaQ_tTq8zcPqDge0MusPjh38BV_4Hrg?type=png)](https://mermaid.live/edit#pako:eNqFVsFu20YQ_ZUBgQAJICsiJVmyArRgKNoVGssCbfVQ2ocVOaI2JXeZJSlHNnzoN_QLcsyhp35AgerHOsuVbMp1YQGmyeXM25l5b2Z5b0UyRmtkLVN5G62YKuFqfC2AfhPBIy7fhm6KqmQgIcBcqhIhRpiteLHiIrl5B0dHP8CMKZZiKu_9zxhVEd_-JeCSZ1Vabr8JZOBJqWIuWMweroVB37vU_hOxfmE1wOyFVU9me4w3b-DUvfTBHsFk-ot_eTU5cwPzqqgWiWL5Ck5ZgbWBWGNR8oQpY6B_MVcYlVwKuPr4tEqWod2GK8VZgqYKLAW7f9TtZDcmMPv-n78DjkUiwU1LCe_hlLITEUclf3x4ggpssofL7Z_GzQn9FNdMAYNJ0KJMRIIpPc5YIgvY6IUSBaqb5wjTXUG6odOGMZaoMtpPwfb3bMFp_w24S8qExbJo-jo7r8ZS1yz1wm6b6hvJnOsAXKJ1yaKSoii4ANQsluwgjp5x7Ie9o-M2uGL7LeUFL-Bq-z2iEskReGyBESpWtGAefNL5uPHnSpSHMfUNzjFV8KdqIam-lA2LjGZiTGFeVEzxwzIeH5RxEA7a8LEqIoqc1JArmfFCall6FQqS6ns4P3XpeuFW5ermOc6-mMNw-AgzUzJnCTNR1CEJ1nQc7FwaS0OzdBKeHNmdNmVfYiIVv9PlLNmXCqkAU76mjCiwM8XWGLN4h4kifq5hZwSBf-6PJy8rWL_GDGP-un7JLjRKqtMxkvXsMMC11LkWWJALaoIUtQRbpJo2iBTG2oU6rUmYZxt_J_yYSsqKACYXXkEpwBmlfMs2LRhPL1vUAYqe0rTpawTodUOXF1pnvohzyUWp9w5wHyEspUJRYNPT6NTrhbNKUc9CJJVCkmfGUj2VCrqlsqb0b1Hd6WyazkarvlIh_bGYR4bYhgmtGxubWpKbZlKYpKyGJUgd1gZYnhdGRY8bs-ZOvimO74SBLOvSUhV1F-HXvKLa1l1N-DnRphFumcL_l0CXeujifD6deC9rQL-XWUXd9roIyDCcypIv98nvVU0B-V-NvvfjlGpATZDWc2ms0YzDBj5hwg74JNu9kxNOBPGW1V6V6VmaHnKhEL5U2--wYqSq90Kam0MUZ4_SfQxSw0Qpp_7dKTOpUppnpFAaSYSxgWWVMM1OzA5HiobZ4_Vq5dMkq_EKAlGypbt7jWjANnBaobqriU7hQpHmX2TEu6ATJTjzp97EBZd605vP_MD1Jts_psYoONmdUtE8Nyu-83xFh9RcOyS8N3oJ95B0bUPTONdDUtPyevfTRuFMFuXRhNor1gU1TM_t0CX7dT01RclFxWki6YpOaXKRtmlijgNdbZaT1pvzb25on5POkUjXM67mfj-1HwXQ9DHFmHfDc_wsVd3DolSSxguUu0OjGMHl7JQGyM-Tc7qeu4H3XzLmhl06Yd-GdKl5I0YjGoaZ1ou8eWcMzTWiJi52Hy_A6m-XD803GmLJxQerZSWKx9aoVBW2rIzOVKYfrXttfW2VK5q319aIbmOmfru2rsUD-eRM_CpltndTskpW1mjJ0oKeqpzEiWP6cFDsyYRyQeVJOgqt0UmNYI3ura_WqOv02x2nc-ycDIfO0Hb6LWtDJr22M7C7vUGn1x-eDHu9h5Z1V2_ZaQ_tTq8zcPqDge0MusPjh38BV_4Hrg)
 
-    Paralelo --> Inv
-    Paralelo --> Rem
-    Paralelo --> Com
 
-    %% FASE 1: INVESTIGAR
-    subgraph Fase 1: Investigar
-        direction TB
-        Inv[1. Triage Inicial 15-30m] --> R1{¿Riesgo Alto / Financiero?}
-        R1 -- Sí --> R2[Elevar a IR, Congelar Pagos y Contener]
-        R1 -- No --> R3[2. Determinar Ámbito y Afectados]
-        R2 --> R3
-        R3 --> R4[3. Recopilar Artefactos sin ejecutar]
-        R4 --> R5[4-6. Análisis Técnico: Cabeceras, URLs y Adjuntos]
-        R5 --> R6{¿Hubo Interacción del Usuario?}
-        R6 -- Sí --> R7[7. Buscar Compromiso de Cuenta / MFA / OAuth]
-        R6 -- No --> R8[8. Buscar Propagación Interna]
-        R7 --> R8
-        R8 --> R9[9-10. Categorizar Ataque y Nivel de Gravedad]
-    end
-
-    %% FASE 2: REMEDIAR
-    subgraph Fase 2: Remediar
-        direction TB
-        Rem[Contención] --> C1[Revocar sesiones y restablecer credenciales]
-        C1 --> C2[Bloquear IOCs en Gateway, DNS, Firewall]
-        C2 --> C3[Aislar Endpoints y Retención forense]
-        C3 --> C4[Purgar correos maliciosos de los buzones]
-        C4 --> Err[Erradicación]
-        Err --> E1[Eliminar reglas de buzón y apps OAuth maliciosas]
-        E1 --> E2[Rotar secretos expuestos y limpiar malware]
-    end
-
-    %% FASE 3: COMUNICAR
-    subgraph Fase 3: Comunicar
-        direction TB
-        Com[Notificación Interna y Externa] --> Com1[Escalar a Dirección y Legal]
-        Com1 --> Com2[Informar a usuarios sobre qué hacer/no hacer]
-        Com2 --> Com3[Notificar a clientes y reguladores si hay fuga de datos]
-        Com3 --> Com4[Contactar a seguro, Proveedores y Fuerzas del Orden]
-    end
-
-    %% CONVERGENCIA A RECUPERACIÓN
-    R9 --> RecUp
-    E2 --> RecUp
-    Com4 --> RecUp
-
-    %% FASE 4: RECUPERACIÓN
-    subgraph Fase 4: Recuperación
-        direction TB
-        RecUp[Post-Incidente] --> U1[Activar Continuidad de Negocio / DR si aplica]
-        U1 --> U2[Reforzar formación de usuarios]
-        U2 --> U3[Mejorar controles técnicos: SPF, DKIM, DMARC]
-    end
-
-    U3 --> Fin([Fin del Procedimiento])
-    
-    class Inicio alerta;
-    class Fin fin;
-```
 
 **Investigar, remediar (contener, erradicar) y comunicar en paralelo.**
 
 Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es meramente secuencial. Utilice su mejor criterio.
 
-## Técnicas MITRE ATT&CK Relevantes en Este Playbook
-
-### Cadena de Ataque: Visualización Completa
-
-```mermaid
-flowchart LR
-    A[Entrega] --> B[Interacción]
-    B --> C[Acceso inicial]
-    C --> D[Acceso a credenciales / Token]
-    D --> E[Persistencia en correo]
-    E --> F[Reconocimiento y colección]
-    F --> G[Impacto / Fraude]
-    F --> H[Exfiltración]
-
-    %% Notas de contexto (resumen)
-    A -.-> A1[Correo: link/adjunto/servicio]
-    B -.-> B1[Clic, credenciales, MFA, OAuth]
-    C -.-> C1[Cuenta comprometida / sesión]
-    E -.-> E1[Reglas de buzón, reenvíos, OAuth apps]
-```
-
-| Fase | Técnica MITRE | Descripción | Cómo la Detectamos |
-|------|--------------|-------------|--------------------|
-| **Entrega** | [T1566: Phishing](https://attack.mitre.org/techniques/T1566/) | El atacante usa correo (o servicios de mensajería) para iniciar el engaño y llevar al usuario a una acción (clic, adjunto, credenciales, MFA, OAuth). | Alertas del gateway/seguridad de correo (detonaciones por URL/adjunto), picos de correos con asuntos similares, dominios “look‑alike”, y mensajes con `Reply-To` anómalo. |
-| **Entrega** | [T1566.002: Spearphishing Link](https://attack.mitre.org/techniques/T1566/002/) | El correo contiene enlaces a páginas falsas (login, pago, “documento compartido”) o cadenas de redirección. | Registros de proxy/SWG/DNS con accesos a dominios recién creados, redirecciones múltiples, punycode/typosquatting, y coincidencia con IOCs extraídos del mensaje. |
-| **Entrega** | [T1566.001: Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001/) | El correo incluye un adjunto que intenta ejecutar contenido activo o dejar malware (doc con macros, ISO/LNK, HTML smuggling, OneNote, etc.). | Detecciones EDR/AV al abrir el adjunto, procesos hijo inesperados (Office → PowerShell/Script), creación de ficheros en `%TEMP%`, y conexiones salientes tras la apertura. |
-| **Interacción** | [T1204: User Execution](https://attack.mitre.org/techniques/T1204/) | El éxito depende de que el usuario haga clic/ejecute/autorice algo (abrir adjunto, introducir credenciales, aprobar MFA, consentir OAuth). | Telemetría del endpoint (apertura/ejecución), y correlación temporal: “correo recibido” → “clic/descarga” → “login/consentimiento” o “alerta EDR”. |
-| **Acceso inicial** | [T1078: Valid Accounts](https://attack.mitre.org/techniques/T1078/) | Tras robar credenciales o tokens, el atacante accede como el usuario (correo, nube, VPN, SaaS). | Logs del IdP/SSO: inicio de sesión desde IP/ASN/país inusual, nuevo dispositivo, “impossible travel”, cambios de método MFA, y aumentos de fallos de autenticación previos al éxito. |
-| **Acceso a credenciales / Token** | [T1550.001: Application Access Token](https://attack.mitre.org/techniques/T1550/001/) | En phishing de consentimiento OAuth o robo de sesión, el atacante obtiene tokens (sin necesitar password) y accede a recursos. | Auditoría del tenant/IdP: apps OAuth “recientemente autorizadas”, permisos de alto impacto (mail.read, offline_access, files.read), y actividad API anómala. |
-| **Persistencia en correo** | [T1114.003: Email Forwarding Rule](https://attack.mitre.org/techniques/T1114/003/) | El atacante crea reglas para reenviar/ocultar correos, mantener acceso o espiar conversaciones (típico en BEC). | Auditoría del buzón: creación/modificación de reglas, reenvíos externos, delegaciones, cambios de bandejas/reglas “mover a RSS/eliminar”, y envíos salientes sospechosos. |
-| **Reconocimiento y colección** | [T1087: Account Discovery](https://attack.mitre.org/techniques/T1087/) | El atacante enumera usuarios/grupos para expandir alcance (campaña interna o suplantación). | Logs de directorio/IdP: consultas inusuales, enumeración de directorio, creación de listas, y cambios de permisos/roles que no encajan con el comportamiento del usuario. |
-| **Exfiltración** | [T1041: Exfiltration Over C2 Channel](https://attack.mitre.org/techniques/T1041/) | Tras comprometer cuenta/endpoint, el atacante extrae datos por canales salientes (HTTP/S, APIs, etc.). | Proxy/firewall/CASB: picos de subida, accesos masivos a ficheros/correos, descargas/exports inusuales, y conexiones a infra nueva poco frecuente para la organización. |
-| **Impacto / Fraude** | [T1657: Financial Theft](https://attack.mitre.org/techniques/T1657/) | BEC/fraude: cambio de cuenta bancaria, pagos urgentes, compra de gift cards o manipulación de facturas. | Señales de negocio: cambios de IBAN/cuentas, solicitudes urgentes fuera de canal, modificación de PDFs/facturas, y coincidencia con compromiso de buzón (reglas/reenvíos) o suplantación en hilos reales. |
 
 ### Investigar
 
@@ -252,10 +159,6 @@ Implicaciones típicas en phishing:
 * Revisar y endurecer políticas de acceso (p. ej., acceso condicional) si el vector fue credenciales.
 * Eliminar malware/persistencia del endpoint (reimagen si procede), y confirmar que no hay reinfección.
 
-#### Referencia: Recursos de Reparación
-
-`TODO: Especifique los recursos financieros, de personal y logísticos para llevar a cabo la reparación.`
-
 ### Comunicar
 
 `OBJETIVO: Personalizar los pasos de comunicación para phishing (quién comunica, mensajes y canales).`
@@ -272,18 +175,15 @@ Implicaciones típicas en phishing:
 1. Comunicar a los clientes
     1. Centrarse especialmente en aquellos cuyos datos se vieron afectados
     1. Genere las notificaciones requeridas en base a las regulaciones aplicables (particularmente aquellas que puedan considerar el phishing como una violación de datos o que requieren notificaciones de otro tipo)
-   `TODO: Ampliar los requisitos y procedimientos de notificación para las regulaciones aplicables`
     1. Si hubo suplantación en **RRSS** o en la **web/tienda**, comunicarlo en los canales oficiales (web/redes) con un mensaje breve y verificable (cómo identificar comunicaciones legítimas, canales de contacto, y qué hacer si fueron víctimas).
 1. Contactar con el/los proveedor/es de seguros
     1. Discutir qué recursos pueden poner a disposición, qué herramientas y proveedores apoyan y pagarán, _etc._
     1. Cumplir con los requisitos de presentación de informes y reclamaciones para proteger la elegibilidad.
 1. Considere la posibilidad de notificar e implicar a [las fuerzas del orden](https://www.policia.es/_es/tupolicia_conocenos_estructura_dao_cgpoliciajudicial_bcit.php)
-   `TODO: Vincule los siguiente puntos con los recursos reales de su organización`
     1. [Aplicación de la ley local](#TODO-enlace-a-actual-recurso)
     1. [Aplicación de la ley a nivel estatal o regional](#TODO-enlace-a-actual-recurso)
     1. [Fuerzas de seguridad nacionales o europeas](#TODO-enlace-a-actual-recurso)
 1. Comuníquese con los proveedores de seguridad y de TI
-   `TODO: Vincule las siguientes viñetas con los recursos reales de su organización`
     1. Notifique y colabore con [proveedores gestionados](#TODO-enlace-a-actual-recurso) para el procedimiento
     1. Notifique y colabore con [consultores de respuesta ante incidentes](#TODO-enlace-a-actual-recurso) para el procedimiento
 
@@ -341,7 +241,6 @@ Implicaciones típicas en phishing:
 
 1. Mantenga la calma y respire profundamente.
 1. Abra un ticket para documentar el incidente, según el procedimiento.
-   `TODO: Personalizar la plantilla con las preguntas clave (véase más abajo) y el flujo de trabajo posterior`
 1. Pídale al usuario que tome fotos/capturas mostrando lo que notó: el mensaje, el enlace (si lo abrió), la información del remitente, _etc._ Si es algo que notó directamente, haga lo mismo usted.
 1. Tome notas. Si se trata de un informe de usuario, haga preguntas detalladas, incluyendo:
     1. ¿Qué ha notado?
@@ -359,8 +258,29 @@ Implicaciones típicas en phishing:
 1. Obtenga información de contacto detallada del usuario (domicilio, oficina, móvil), si procede.
 1. Registre toda la información en el ticket, incluyendo evidencias.
 1. Ponga en cuarentena a los usuarios y sistemas afectados (si procede).
-   `TODO: Personalizar el contenido de los pasos, automatizar tanto como sea posible.`
 1. Póngase en contacto con el [equipo de seguridad](#TODO-enlace-a-actual-recurso) y prepárese para participar en la respuesta según las indicaciones: investigación, remediación, comunicación y recuperación.
+
+
+## Técnicas MITRE ATT&CK Relevantes en Este Playbook
+
+### Cadena de Ataque: Visualización Completa
+
+[![diagrama2](https://mermaid.ink/img/pako:eNpVkMGOmzAURX_FsjRSK5EECJkQFpUIIe1InbYadVXIwjUvxA3YyDbTzET5pK76CfNjfRCiNF7Zuuddv3uPlKsCaES3lfrNd0xb8vkplwRPnKXSaijZhoxGH8gye5AWNONcvP2VmzOz7KUkizkHo4iQggtWDWLSi6uLyAjXUIDsCDBkQr6rPVyMVj2bZt9AG2FsTxGQhCutQQ1Q2kPr7Am4koqLWoC0irwgVcHNXuue_Jg91A3jiEzIWrO2gBv5U5YetqKymGkYPat3d-SLssyQAtAZQx_Q4Z0G09Yg3w_lkNEYLWIvS_oNI1IJuZ-w4leLK00M6GesQl1r6ugl0pXgzk0RDnlcxw75Grd2dy2uwxPEW0yIxam60aoGKwqGWQyY_7KmZzr1sJeyOq_9s31FwCEaQD6__VFm-ICwpjEb6tBSi4JGVrfg0Bp0zbonPXaOObU7qCGnEV4Lpvc5zeUJZxomfyhVX8a0assdjbasMvhqm4JZWAlWanZFQBagE4Wd0Mib9hY0OtIDjab-bOz67r2_CEM_9PyZQ19otAjG_tybBnM3mIWLMAhODn3t_3THoecG7nzq3s99VL3TP_513HU?type=png)](https://mermaid.live/edit#pako:eNpVkMGOmzAURX_FsjRSK5EECJkQFpUIIe1InbYadVXIwjUvxA3YyDbTzET5pK76CfNjfRCiNF7Zuuddv3uPlKsCaES3lfrNd0xb8vkplwRPnKXSaijZhoxGH8gye5AWNONcvP2VmzOz7KUkizkHo4iQggtWDWLSi6uLyAjXUIDsCDBkQr6rPVyMVj2bZt9AG2FsTxGQhCutQQ1Q2kPr7Am4koqLWoC0irwgVcHNXuue_Jg91A3jiEzIWrO2gBv5U5YetqKymGkYPat3d-SLssyQAtAZQx_Q4Z0G09Yg3w_lkNEYLWIvS_oNI1IJuZ-w4leLK00M6GesQl1r6ugl0pXgzk0RDnlcxw75Grd2dy2uwxPEW0yIxam60aoGKwqGWQyY_7KmZzr1sJeyOq_9s31FwCEaQD6__VFm-ICwpjEb6tBSi4JGVrfg0Bp0zbonPXaOObU7qCGnEV4Lpvc5zeUJZxomfyhVX8a0assdjbasMvhqm4JZWAlWanZFQBagE4Wd0Mib9hY0OtIDjab-bOz67r2_CEM_9PyZQ19otAjG_tybBnM3mIWLMAhODn3t_3THoecG7nzq3s99VL3TP_513HU)
+
+| Fase | Técnica MITRE | Descripción | Cómo la Detectamos |
+|------|--------------|-------------|--------------------|
+| **Entrega** | [T1566: Phishing](https://attack.mitre.org/techniques/T1566/) | El atacante usa correo (o servicios de mensajería) para iniciar el engaño y llevar al usuario a una acción (clic, adjunto, credenciales, MFA, OAuth). | Alertas del gateway/seguridad de correo (detonaciones por URL/adjunto), picos de correos con asuntos similares, dominios “look‑alike”, y mensajes con `Reply-To` anómalo. |
+| **Entrega** | [T1566.002: Spearphishing Link](https://attack.mitre.org/techniques/T1566/002/) | El correo contiene enlaces a páginas falsas (login, pago, “documento compartido”) o cadenas de redirección. | Registros de proxy/SWG/DNS con accesos a dominios recién creados, redirecciones múltiples, punycode/typosquatting, y coincidencia con IOCs extraídos del mensaje. |
+| **Entrega** | [T1566.001: Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001/) | El correo incluye un adjunto que intenta ejecutar contenido activo o dejar malware (doc con macros, ISO/LNK, HTML smuggling, OneNote, etc.). | Detecciones EDR/AV al abrir el adjunto, procesos hijo inesperados (Office → PowerShell/Script), creación de ficheros en `%TEMP%`, y conexiones salientes tras la apertura. |
+| **Interacción** | [T1204: User Execution](https://attack.mitre.org/techniques/T1204/) | El éxito depende de que el usuario haga clic/ejecute/autorice algo (abrir adjunto, introducir credenciales, aprobar MFA, consentir OAuth). | Telemetría del endpoint (apertura/ejecución), y correlación temporal: “correo recibido” → “clic/descarga” → “login/consentimiento” o “alerta EDR”. |
+| **Acceso inicial** | [T1078: Valid Accounts](https://attack.mitre.org/techniques/T1078/) | Tras robar credenciales o tokens, el atacante accede como el usuario (correo, nube, VPN, SaaS). | Logs del IdP/SSO: inicio de sesión desde IP/ASN/país inusual, nuevo dispositivo, “impossible travel”, cambios de método MFA, y aumentos de fallos de autenticación previos al éxito. |
+| **Acceso a credenciales / Token** | [T1550.001: Application Access Token](https://attack.mitre.org/techniques/T1550/001/) | En phishing de consentimiento OAuth o robo de sesión, el atacante obtiene tokens (sin necesitar password) y accede a recursos. | Auditoría del tenant/IdP: apps OAuth “recientemente autorizadas”, permisos de alto impacto (mail.read, offline_access, files.read), y actividad API anómala. |
+| **Persistencia en correo** | [T1114.003: Email Forwarding Rule](https://attack.mitre.org/techniques/T1114/003/) | El atacante crea reglas para reenviar/ocultar correos, mantener acceso o espiar conversaciones (típico en BEC). | Auditoría del buzón: creación/modificación de reglas, reenvíos externos, delegaciones, cambios de bandejas/reglas “mover a RSS/eliminar”, y envíos salientes sospechosos. |
+| **Reconocimiento y colección** | [T1087: Account Discovery](https://attack.mitre.org/techniques/T1087/) | El atacante enumera usuarios/grupos para expandir alcance (campaña interna o suplantación). | Logs de directorio/IdP: consultas inusuales, enumeración de directorio, creación de listas, y cambios de permisos/roles que no encajan con el comportamiento del usuario. |
+| **Exfiltración** | [T1041: Exfiltration Over C2 Channel](https://attack.mitre.org/techniques/T1041/) | Tras comprometer cuenta/endpoint, el atacante extrae datos por canales salientes (HTTP/S, APIs, etc.). | Proxy/firewall/CASB: picos de subida, accesos masivos a ficheros/correos, descargas/exports inusuales, y conexiones a infra nueva poco frecuente para la organización. |
+| **Impacto / Fraude** | [T1657: Financial Theft](https://attack.mitre.org/techniques/T1657/) | BEC/fraude: cambio de cuenta bancaria, pagos urgentes, compra de gift cards o manipulación de facturas. | Señales de negocio: cambios de IBAN/cuentas, solicitudes urgentes fuera de canal, modificación de PDFs/facturas, y coincidencia con compromiso de buzón (reglas/reenvíos) o suplantación en hilos reales. |
+
+
 
 #### Información adicional
 
