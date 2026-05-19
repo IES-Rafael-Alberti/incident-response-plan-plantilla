@@ -6,7 +6,7 @@ classification: "CONFIDENCIAL"
 organization: "Security S.L."
 ---
 
-# after.md
+# Guía de acciones posteriores
 
 ## Propósito
 

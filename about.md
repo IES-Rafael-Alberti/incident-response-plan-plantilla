@@ -1,17 +1,17 @@
 
 # Acerca de
 
-Esta plantilla ha sido creada por el equipo de [Counteractive Security](https://www.counteractive.net), para ayudar a todas las organizaciones a comenzar de forma concisa, directa, especifica, flexible y gratuita un plan de respuesta de incidentes. crea un plan [que utilizaras](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) para responder de manera eficiente, minimizando los costes e impactos, para volver a trabajar lo mas rapido posible.
+Esta plantilla ha sido creada por el equipo de [Counteractive Security](https://www.counteractive.net), para ayudar a todas las organizaciones a comenzar de forma concisa, directa, específica, flexible y gratuita un plan de respuesta a incidentes. Crea un plan [que utilizarás](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) para responder de manera eficiente, minimizando los costes e impactos, para volver a trabajar lo más rápido posible.
 
 
 ## Licencia
 
-Esta plantilla esta proporcionado bajo la licencia de apache, version 2.0. puedes ver el codigo fuente en https://github.com/counteractive.
+Esta plantilla está proporcionada bajo la licencia Apache, versión 2.0. Puedes ver el código fuente en https://github.com/counteractive/incident-response-plan-template.
 
 
 ## Instrucciones
 
-Personaliza esta plantilla para tu organizacion. Las instrucciones estan disponibles en el [README](https://github.com/counteractive) del projecto. Para asistencia profesional con respuestas de incidentes, o con customizacion, implementacion, o testeo de tu plan, porfavor contacta con nosotros por [email](mailto:support@counteractive.net) o [telefono](tel:+18889255765).
+Personaliza esta plantilla para tu organización. Las instrucciones están disponibles en el [README](https://github.com/counteractive/incident-response-plan-template) del proyecto. Para asistencia profesional con respuestas a incidentes, o con personalización, implementación, o prueba de tu plan, por favor contacta con nosotros por [email](mailto:support@counteractive.net) o [teléfono](tel:+18889255765).
 
 
 ## Referencias y material adicional
@@ -37,4 +37,3 @@ Personaliza esta plantilla para tu organizacion. Las instrucciones estan disponi
 * [Informed's NIMS Incident Command System Field Guide](https://www.amazon.com/gp/product/1284038408) (Michael J. Ward)
 * [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
 * [Blame. Language. Sharing.](http://fractio.nl/2015/10/30/blame-language-sharing/)
-

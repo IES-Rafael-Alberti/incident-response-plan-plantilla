@@ -37,19 +37,19 @@ Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en 
 
 **Cada miembro del equipo está facultado para comenzar este proceso.** Si ves algo, dilo.
 
-`TODO: Personalizar las categorías/severidades según sea necesario.  Este sencillo ejemplo (incidente vs. no incidente) se basa en las categorías de impacto del NIST SP 800-61r2.`
+`TODO: Personalizar las categorías/severidades según sea necesario. Este sencillo ejemplo (incidente vs. no incidente) se basa en las categorías de impacto del NIST SP 800-61r2.`
 
 # Iniciar la respuesta
 
 ## Nombrar el incidente
 
-Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.html) para referirse al incidente -un nombre en clave- que se utilizará para el archivo y el canal del incidente. `Todo: Personalizar el procedimiento de nomenclatura de incidentes.`
+Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.html) para referirse al incidente -un nombre en clave- que se utilizará para el archivo y el canal del incidente. `TODO: Personalizar el procedimiento de nomenclatura de incidentes.`
 
 ## Reunir el equipo de respuesta
 
 1. Llame al Incident Commander de turno/de guardia. `TODO: Añadir lista o procedimiento de llamada del Incident Commander`.
-2. **No** discuta el incidente fuera del equipo de respuesta a menos que el Incident Commander lo autorice
-3. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}. `ToDo: Añadir el procedimiento de lanzamiento del chat de respuesta.`
+2. **No** discuta el incidente fuera del equipo de respuesta a menos que el Coordinador de Incidentes lo autorice.
+3. Inicie y/o únase al chat de respuesta en {{RESPONSE_CHAT}}. `TODO: Añadir el procedimiento de lanzamiento del chat de respuesta.`
 4. Iniciar y/o unirse a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}. `TODO: Añadir el procedimiento de lanzamiento de la llamada de respuesta.`
 5. Preferible usar la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
 6. **No** utilizar el correo electrónico principal si es posible.  Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}.  Encripte los correos electrónicos cuando cualquier participante esté fuera del dominio {{ORGANIZATION_DOMAIN}}.  `TODO: Añadir detalles y procedimiento de correo electrónico alternativo, por ejemplo, Office 365 o GSuite bajo demanda`.
@@ -63,14 +63,15 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
 ### Referencia: Estructura del equipo de respuesta
 
 * Equipo de Mando
-  * [Incident Commander](#rol-incident-commander)
-  * [Incident Commander-Adjunto](#rol-delegado-del-incident-commander-subdelegado)
-  * [Escriba](#rol-scriba)
-* Equipo de enlace
-  * Enlace [interno](#rol-enlace)
-  * Enlace externo
-* Equipo de operaciones
-  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (SME) para sistemas
+  * [Coordinador de Incidentes](#coordinador-de-incidentes)
+  * [Analista Técnico Principal](#analista-técnico-principal)
+  * [Técnico de Backup y Recuperación](#técnico-de-backup-y-recuperación)
+* Equipo de Soporte
+  * [Responsable de Comunicación](#responsable-de-comunicación)
+  * [Responsable Legal / DPO](#responsable-legal)
+  * [Dirección General](#dirección-general)
+* Equipo de Operaciones
+  * [Expertos en la materia](#todos-los-participantes) (SME) para sistemas
   * SME para equipos/unidades de negocio
   * SME para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
 
@@ -80,7 +81,7 @@ Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.h
 
 Rol del equipo de respuesta         | Información de contacto
 ----------------------------------- | ---------------------------
-Localizador del Incident Commander  | {INCIDENT_COMMANDER_PAGER_NUMBER}}
+Localizador del Incident Commander  | {{INCIDENT_COMMANDER_PAGER_NUMBER}}
 Url del Incident Commander          | {{INCIDENT_COMMANDER_PAGER_URL}}
 Lista del Incident Commander        | {{INCIDENT_COMMANDER_ROSTER}}
 Lista del equipo de seguridad       | {{SECURITY_TEAM_ROSTER}}
@@ -102,7 +103,7 @@ Lista de ejecutivos                 | {{EXECUTIVE_ROSTER}}
 
 #### Referencia: Estructura de la llamada de respuesta inicial
 
-* Incident Commander (IC): Mi nombre es [NOMBRE], soy el Incident Commander.  He designado a [NOMBRE] como adjunto y a [NOMBRE] como esccriba. ¿Quién está en la llamada?
+* Incident Commander (IC): Mi nombre es [NOMBRE], soy el Coordinador de Incidentes. He designado a [NOMBRE] como adjunto y a [NOMBRE] como escriba. ¿Quién está en la llamada?
 * ESCRIBA: [Toma asistencia]
 * IC: [Si falta personal clave] Adjunto, por favor llame a [PERSONAL FALTANTE].
 * IC: [Hace preguntas para comprender la situación, los síntomas, el alcance, el vector, el impacto y el calendario del reportador del incidente, los SME aplicables para los sistemas y las unidades de negocio].
@@ -179,11 +180,11 @@ Si un incidente resulta ser dos o más incidentes distintos:
 
 # Investigar
 
-**[Investigar](#investigar), [Remediar](#remediar) y [comunicar](#communicate) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades.  Notifique al Incident Commander si hay pasos que el equipo debe considerar.
+**[Investigar](#investigar), [Remediar](#remediar) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El Incident Commander coordinará estas actividades.  Notifique al Incident Commander si hay pasos que el equipo debe considerar.
 
 ## Crear el archivo del incidente
 
-1. Cree un nuevo archivo de incidentes en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#nombre-del-incidente).  Utilice este archivo para el almacenamiento seguro de documentación, pruebas, artefactos, _etc._.
+1. Cree un nuevo archivo de incidentes en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#nombrar-el-incidente).  Utilice este archivo para el almacenamiento seguro de documentación, pruebas, artefactos, _etc._.
     * Proporcionar un almacenamiento digital seguro.
     * Proporcionar un intercambio de archivos seguro.
     * Obtener almacenamiento físico.
@@ -237,7 +238,7 @@ Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
 4. Revisar y perfeccionar la línea de tiempo del incidente con hechos e inferencias.
 5. Crear hipótesis: qué puede haber ocurrido y con qué seguridad.
 6. **Identificar y priorizar las preguntas clave** (lagunas de información) para apoyar o desacreditar las hipótesis.
-    * Utilizar la matriz ATT&CK de MITRE o un marco similar para [desarrollar preguntas](#reference-attacker-tactics-to-key-questions-matrix).
+    * Utilizar la matriz ATT&CK de MITRE o un marco similar para [desarrollar preguntas](#referencia-táctica-del-atacante-a-la-matriz-de-preguntas-clave).
         * [ATT&CK for Enterprise](https://attack.mitre.org/wiki/Main_Page), incluyendo enlaces a los específicos de Windows, Mac y Linux.
         * [ATT&CK Mobile Profile](https://attack.mitre.org/mobile/index.php/Main_Page) para dispositivos móviles.
     * Utilizar palabras interrogativas como inspiración:
@@ -249,7 +250,7 @@ Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
         * **¿Quién?**: atacante, usuarios afectados, clientes afectados, etc.?
 1. **Identificar y priorizar los dispositivos y estrategias testigo** para responder a las preguntas clave.
     * Consultar los diagramas de la red, los sistemas de gestión de activos y la experiencia de las SME
-    * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta))
+    * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta)
 1. Consulte los [playbook de incidentes](#playbooks) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
 
 **El plan de investigación es fundamental para una respuesta eficaz; impulsa todas las acciones de investigación.  Utilice el pensamiento crítico, la creatividad y el buen juicio.**
@@ -279,7 +280,7 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
 
 > Haga hincapié en los indicadores **dinámicos y de comportamiento** junto con las huellas digitales estáticas.
 
-* Crear IOCs basados en [pistas iniciales](#recoger-las-pistas-iniciales) y [análisis](#analyze-evidence).
+* Crear IOCs basados en [pistas iniciales](#recoger-las-pistas-iniciales) y [análisis](#analizar-las-pruebas).
 * Cree IOCs usando un formato abierto soportado por sus herramientas (_por ejemplo_, [STIX 2.0](https://oasis-open.github.io/cti-documentation/stix/intro)), si es posible. `TODO: Personalizar el formato de los COIs según sea necesario.`
 * Utilice la automatización, si es posible. `TODO: Añadir un procedimiento de despliegue/revocación de COIs.`
 * **No** desplegar "feeds" de IOCs no relacionados y no curados, ya que pueden causar confusión y fatiga.
@@ -367,12 +368,12 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 
 ## Actualización del plan de remediación
 
-1. Revise el archivo del incidente en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#nombre-del-incidente)
+1. Revise el archivo del incidente en {{INCIDENT_FILE_LOCATION}} utilizando el [nombre del incidente](#nombrar-el-incidente)
 2. Revise los [playbook](#playbooks) aplicables.
 3. Revise la [lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta).
 4. Considere qué tácticas del atacante están en juego en este incidente.  Utilice la lista de MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) (_i._, Persistencia, Escalada de Privilegios, Evasión de la Defensa, Acceso a Credenciales, Descubrimiento, Movimiento Lateral, Ejecución, Recolección, Exfiltración y Mando y Control), o un marco similar.
 5. Desarrollar remedios para cada táctica en juego, en la medida en que sea factible teniendo en cuenta las herramientas y los recursos existentes.  Considere remedios para [Proteger](#protección), [Detectar](#detección), [Contener](#contención), y [Erradicar](#erradicar) cada comportamiento del atacante.
-6. Priorizar en base a la [estrategia de tiempo](#choose-remediation-timing), el impacto y la urgencia.
+6. Priorizar en base a la [estrategia de tiempo](#elegir-el-momento-de-la-reparación), el impacto y la urgencia.
 7. Documentar en el archivo de incidentes.
 
 Utilice [marcos de seguridad de la información (infosec)](https://www.nist.gov/cyberframework) como inspiración, pero **no utilice la reparación de incidentes como sustituto de un programa de infosec con un marco apropiado.** Utilícelos para complementarse.
@@ -478,7 +479,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 ### Crear Informe de Incidentes
 
-* Tras el cierre del incidente, capture la información en el [archivo del incidente](#crear-archivo-del-incidente) para su distribución utilizando el formato en {{INCIDENT_REPORT_TEMPLATE}}.  **Si los informes de vector, impacto, resumen, línea de tiempo y actividad están completos, esto puede ser totalmente automatizado.**
+* Tras el cierre del incidente, capture la información en el [archivo del incidente](#crear-el-archivo-del-incidente) para su distribución utilizando el formato en {{INCIDENT_REPORT_TEMPLATE}}.  **Si los informes de vector, impacto, resumen, línea de tiempo y actividad están completos, esto puede ser totalmente automatizado.**
 * Distribuir el informe de incidentes a lo siguiente: {{INCIDENT_REPORT_RECIPIENTS}}.
 * `TODO: Personalizar la creación y distribución del informe de incidentes, si es necesario`.
 

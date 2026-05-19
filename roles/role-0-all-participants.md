@@ -1,49 +1,55 @@
+---
+title: "Rol 00 - Todos los Participantes"
+version: "1.0"
+date: "Enero 2026"
+classification: "CONFIDENCIAL"
+organization: "Security S.L."
+---
 
-## Role: All Participants
+# Todos los Participantes
 
-### Description
+## Perfil
 
-All participants in an incident response have the responsibility to help resolve the incident according to the incident response plan, under the authority of the Incident Commander.
+Todos los participantes en una respuesta a incidentes tienen la responsabilidad de ayudar a resolver el incidente de acuerdo con el plan de respuesta, bajo la autoridad del Coordinador de Incidentes.
 
-### Duties
+## Deberes
 
-#### Exhibit Call Etiquette
+### Etiqueta en la llamada
 
-* Join both the call and chat.
-* Keep background noise to a minimum.
-* Keep your microphone muted until you have something to say.
-* Identify yourself when you join the call; State your name and role (_e.g._, "I am the SME for team x").
-* Speak up and speak clearly.
-* Be direct and factual.
-* Keep conversations/discussions short and to the point.
-* Bring any concerns to the Incident Commander (IC) on the call.
-* Respect time constraints given by the Incident Commander.
-* If you join only one channel (call or chat), do not actively participate, as it causes disjoined communication.
-* **Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.**
+* Únase tanto a la llamada como al chat.
+* Mantenga el ruido de fondo al mínimo.
+* Mantenga el micrófono silenciado hasta que tenga algo que decir.
+* Identifíquese cuando se una a la llamada; indique su nombre y función (_por ejemplo_, "Soy el SME del equipo x").
+* Hable alto y claro.
+* Sea directo y objetivo.
+* Mantenga las conversaciones/discusiones cortas y al grano.
+* Comunique cualquier preocupación al Coordinador de Incidentes (CI) en la llamada.
+* Respete las limitaciones de tiempo impuestas por el Coordinador de Incidentes.
+* Si se une solo a un canal (llamada o chat), no participe activamente, ya que provoca una comunicación descoordinada.
+* **Utilice una terminología clara y evite acrónimos o abreviaturas. La claridad y la precisión son más importantes que la brevedad.**
 
-##### Reference: Common Voice Procedure
+#### Referencia: Procedimiento de voz común
 
-Standard radio [voice procedure](https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure) **is not required**, however you may hear certain terms (or need to use them yourself). Common phrases include:
+El [procedimiento de voz](https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure) estándar de radio **no es obligatorio**, sin embargo puede escuchar ciertos términos (o necesitar usarlos usted mismo). Las frases comunes incluyen:
 
-* **Ack/Rog:** "I have received and understood"
-* **Say Again:** "Repeat your last message"
-* **Standby:** "Please wait a moment for the next response"
-* **Wilco:** "Will comply"
+* **Recibido / Entendido:** "He recibido y entendido"
+* **Repita:** "Repita su último mensaje"
+* **Espere:** "Por favor, espere un momento para la siguiente respuesta"
+* **Cumpliré:** "Cumpliré"
 
-**Do not** invent new abbreviations; favor being explicit over implicit.
+**No** invente nuevas abreviaturas; favorezca ser explícito antes que implícito.
 
-#### Follow the Incident Commander
+### Seguir al Coordinador de Incidentes
 
-The Incident Commander (IC) is the leader of the incident response process.
+El Coordinador de Incidentes (CI) es el líder del proceso de respuesta a incidentes.
 
-* Follow instructions from the incident commander.
-* Do not perform any actions unless the incident commander has told you to do so.
-* The commander will typically poll for strong objections before tasking a large action. Raise objections if you have them.
-* Once the commander has made a decision, follow that decision (even if you disagreed).
-* Answer any questions the commander asks you in a clear and concise way.  Answering "I don't know" is acceptable. Do not guess.
-* The commander may ask you to investigate something and get back to them in X minutes. Be ready with an answer within that time.  Asking for more time is acceptable, but provide the commander an estimate.
+* Siga las instrucciones del Coordinador de Incidentes.
+* No realice ninguna acción a menos que el Coordinador de Incidentes se lo haya indicado.
+* El Coordinador normalmente preguntará si hay objeciones fuertes antes de encargar una acción importante. Plantee objeciones si las tiene.
+* Una vez que el Coordinador ha tomado una decisión, siga esa decisión (incluso si no estaba de acuerdo).
+* Responda a cualquier pregunta que el Coordinador le haga de forma clara y concisa. Responder "no lo sé" es aceptable. No adivine.
+* El Coordinador puede pedirle que investigue algo y le informe en X minutos. Esté preparado con una respuesta en ese plazo. Pedir más tiempo es aceptable, pero proporcione al Coordinador una estimación.
 
-### Training
+## Notas de entrenamiento
 
-Read and understand the incident response plan, including the roles and playbooks.
-
+Lea y comprenda el plan de respuesta a incidentes, incluidos los roles y los playbooks.
