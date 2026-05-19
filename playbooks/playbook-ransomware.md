@@ -1,176 +1,188 @@
 
 ## Playbook: Ransomware
 
-**Investigar, remediar (contener, erradicar) y comunicar en paralelo. La contención es fundamental en los incidentes de ransomware, priorice en consecuencia.**
+**Investigar, remediar (contener, erradicar) y comunicar en paralelo. En ransomware, la contención es prioritaria: actúe rápido para frenar propagación y proteger copias de seguridad.**
 
-Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
+Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utilice su mejor criterio.
 
-### Investigación
+### Diagrama de Flujo del Proceso
 
-`OBJETIVO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el ransomware.`
+[![RANSOMWARE](https://mermaid.ink/img/pako:eNqNVNtu4zYQ_RWCTxusY1m-xBcUWziOtzCQpoYc7EPjfRhTY5lYiRSGVOI0yCf1YbEfUKD5sQ4lO123AVo_0OZY5_DM0Rk-SWVTlBO5ze2D2gF5cXu1NoI_C6OVtu_u1nKaI3mYCKW3BKkVkTDWg0hREDoFHrkyv0rW8vOZOD__IJZAkGNunxiqmMOgE2hEeSiv5fPaNGccn6xhC3P_RjXB4o3qzBZHDldtMoJyF_Dijhd0XmdAn5u_wyfVhMqzEHF7-Xd1EXNvcVvckoYMRee81yl-2NCHmTVbTQWQIDDOFg9AyL01GruM6bbFkjtHuudn8F6naJSGAL1hX1piB26HriW8LjDXJoC_O7XbEPWYqNcW01yBURjAc5OWVhvvokCtU8tnRKba_APfa_B9dvfPP-b7rc49gdIv34ywIrWbHAXuvSUXSj_WZr9i-4wVq5ffG4oBS-hDW6zw5Stb68IbxUBYuzBdXUZLsvvH6CPb9wB5fqqj5ro5vLqLQLU5pSrJlpA10gLj6ufLKLlaRj8tfzllGjQcQ-YYtMUnflWWhA7xg1rKcqfdTpusRn9a3kTzfZlb7aNVVZb54ynZxYGsKaFJ_5UTTpS44wVT_T9SkoSUcCQ8GiTxriRtSaeQivgsaJtql3MK3gtleUZIgFLorDvmJQl5YRc9ZozegPpSlS7gFqaoPGx0HrgiCCyFRuPtSTdJE5YkhGVOPHxaAQV4grrg0JpWmCpVp40POcTAoSL0tYjvqJrcJH2mSlBVJdKRynmoeCPq2PG8OlHyC3jt9JXmLTN5EMUdL5UJ0v7TzVlwc8r1MDoFmNQGCVfh2Ub7e3GNGeRH_2bBv4VxnqrjTcITgmSgdrFyFVAQ_MjiUzzteNaYNwvm8WDqLStsOAJU5cFunjDCrMr5WiMeu6wiG13P3-p4MTz412xnvZNt0q-3H7UJFyZ_8ZV4jUfJUBIzsZdB4JlsyYyNlRNuCluyQL5rwlY-Ba619DvO5lpO-GcK9GUt1-aZMSWYX60tjjCyVbaTky3kjndVmfI9fMUXGUHxWg2nIs1sZbyc9ONeTSInT3IvJ93BqN3v9HvdYW_cHQxHcUs-ysl5N75ojwad7sWAl3F3PHxuyd_qY-N2HMejYb_XGcedUTweD57_AstD9r8?type=png)](https://mermaid.live/edit#pako:eNqNVNtu4zYQ_RWCTxusY1m-xBcUWziOtzCQpoYc7EPjfRhTY5lYiRSGVOI0yCf1YbEfUKD5sQ4lO123AVo_0OZY5_DM0Rk-SWVTlBO5ze2D2gF5cXu1NoI_C6OVtu_u1nKaI3mYCKW3BKkVkTDWg0hREDoFHrkyv0rW8vOZOD__IJZAkGNunxiqmMOgE2hEeSiv5fPaNGccn6xhC3P_RjXB4o3qzBZHDldtMoJyF_Dijhd0XmdAn5u_wyfVhMqzEHF7-Xd1EXNvcVvckoYMRee81yl-2NCHmTVbTQWQIDDOFg9AyL01GruM6bbFkjtHuudn8F6naJSGAL1hX1piB26HriW8LjDXJoC_O7XbEPWYqNcW01yBURjAc5OWVhvvokCtU8tnRKba_APfa_B9dvfPP-b7rc49gdIv34ywIrWbHAXuvSUXSj_WZr9i-4wVq5ffG4oBS-hDW6zw5Stb68IbxUBYuzBdXUZLsvvH6CPb9wB5fqqj5ro5vLqLQLU5pSrJlpA10gLj6ufLKLlaRj8tfzllGjQcQ-YYtMUnflWWhA7xg1rKcqfdTpusRn9a3kTzfZlb7aNVVZb54ynZxYGsKaFJ_5UTTpS44wVT_T9SkoSUcCQ8GiTxriRtSaeQivgsaJtql3MK3gtleUZIgFLorDvmJQl5YRc9ZozegPpSlS7gFqaoPGx0HrgiCCyFRuPtSTdJE5YkhGVOPHxaAQV4grrg0JpWmCpVp40POcTAoSL0tYjvqJrcJH2mSlBVJdKRynmoeCPq2PG8OlHyC3jt9JXmLTN5EMUdL5UJ0v7TzVlwc8r1MDoFmNQGCVfh2Ub7e3GNGeRH_2bBv4VxnqrjTcITgmSgdrFyFVAQ_MjiUzzteNaYNwvm8WDqLStsOAJU5cFunjDCrMr5WiMeu6wiG13P3-p4MTz412xnvZNt0q-3H7UJFyZ_8ZV4jUfJUBIzsZdB4JlsyYyNlRNuCluyQL5rwlY-Ba619DvO5lpO-GcK9GUt1-aZMSWYX60tjjCyVbaTky3kjndVmfI9fMUXGUHxWg2nIs1sZbyc9ONeTSInT3IvJ93BqN3v9HvdYW_cHQxHcUs-ysl5N75ojwad7sWAl3F3PHxuyd_qY-N2HMejYb_XGcedUTweD57_AstD9r8)
 
-1. **Determinar el tipo** de ransomware (_es decir, _ ¿cuál es la familia, la variante o el tipo?)[<sup>[1]</sup>](#ransomware-playbook-ref-1)
-    1. Encuentre cualquier mensaje relacionado.  Compruebe:
-        * las interfaces gráficas de usuario (GUI) del propio malware
-        * archivos de texto o html, que a veces se abren automáticamente tras el cifrado
-        * archivos de imange, a menudo, como fondos de pantalla del sistema infectado
-        * correos electrónicos de contacto en extensiones de archivo encriptadas
-        * ventanas emergentes después de intentar abrir un archivo encriptado
-        * mensajes de voz
-    1. Analice los mensajes en busca de pistas sobre el tipo de ransomware:
-        * nombre del ransomware
-        * lenguaje, estructura, frases, material gráfico
-        * correo electrónico de contacto
-        * formato de la identificación del usuario
-        * especificaciones de la demanda de rescate (_p.ej._, moneda digital, tarjetas de regalo)
-        * dirección de pago en caso de moneda digital
-        * chat de soporte o página de soporte
-    1. Analice los archivos afectados y/o nuevos.  Compruebe:
-        * el esquema de cambio de nombre de los archivos encriptados, incluyendo la extensión (_p.ej._, `.cry`, `.cry`, `.locked`) y el nombre base
-        * corrupción de archivos frente a encriptación
-        * Tipos de archivos y ubicaciones objetivo
-        * usuario/grupo propietario de los archivos afectados
-        * Icono de los archivos encriptados
-        * marcadores de archivos
-        * existencia de listados de archivos, archivos clave u otros archivos de datos
+### Investigar
 
-    1. Analice los tipos de software o sistemas afectados.  Algunas variantes de ransomware sólo afectan a determinadas herramientas (_p.ej._, [databases](https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-professional-ransomware-group-gets-involved-infections-reach-28k-servers/)) or platforms (_e.g._, [NAS products](https://forum.synology.com/enu/viewtopic.php?f=3&t=88716))
-    1. Subir los indicadores a servicios de categorización automatizados como [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php), [ID Ransomware](https://id-ransomware.malwarehunterteam.com/), o similar.
-1. **Determinar el alcance:**
-    1. ¿Qué sistemas están afectados? `TODO: Especificar herramientas y procedimientos`
-        * Busque indicadores de compromiso (IOC), como archivos/hashes, procesos, conexiones de red, etc.  Utilice [endpoint protection/EDR](#TODO-link-to-actual-resource), [endpoint telemetry](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), etc.
-        * Comprobar la infección de sistemas similares (_por ejemplo, usuarios, grupos, datos, herramientas, departamento, configuración, estado de los parches): comprobar [IAM tools](#TODO-link-to-actual-resource), [permissions management tools](#TODO-link-to-actual-resource), [directory services](#TODO-link-to-actual-resource), _etc._
-        * Find external command and control (C2), if present, and find other systems connecting to it: check [firewall or IDS logs](#TODO-link-to-actual-resource), [system logs/EDR](#TODO-link-to-actual-resource), [DNS logs](#TODO-link-to-actual-resource), [netflow or router logs](#TODO-link-to-actual-resource), _etc._
-    1. ¿Qué datos están afectados? (_e.g._, tipos de archivo, departamento o grupo, software afectado) `TODO: Especifique la(s) herramienta(s) y el procedimiento`.
-        * Buscar cambios anómalos en los metadatos de los archivos, como cambios masivos en las horas de creación o modificación.  Comprobar [herramientas de búsqueda de metadatos de archivos](#TODO-link-to-actual-resource)
-        * Buscar cambios en archivos de datos normalmente estables o críticos.  Comprobar las herramientas de [supervisión de la integridad de los archivos](#TODO-link-to-actual-resource)
-1. **Evaluar el impacto** para priorizar y motivar los recursos
-    1. Evaluar el impacto funcional: impacto en la empresa o en la misión.
-        * ¿Cuánto dinero se pierde o está en riesgo?
-        * ¿Cuántas (y cuáles) misiones se degradan o están en riesgo?
-    1. Evaluar el impacto en la información: impacto en la confidencialidad, integridad y disponibilidad de los datos.
-        * ¿Qué importancia tienen los datos para la empresa/misión?
-        * ¿Cuán sensibles son los datos? (_p.ej._, secretos comerciales)
-        * ¿Cuál es la situación reglamentaria de los datos (_p.ej._, PII, PHI)?
+`OBJETIVO: Confirmar ransomware, frenar propagación, dimensionar alcance (2 sedes + nube + servidores), y estimar impacto (operativo, datos, legal).`
 
-1. **Encuentra el vector de infección.** Comprueba las tácticas capturadas en la [Initial Access tactic](https://attack.mitre.org/tactics/TA0001/) of MITRE ATT&CK[<sup>[4]</sup>](#ransomware-playbook-ref-4).  Los datos más comunes y las fuentes de datos son:
-    * archivo adjunto de correo electrónico: comprobar [email logs](#TODO-link-to-actual-resource), [email security appliances and services](#TODO-link-to-actual-resource), [e-discovery tools](#TODO-link-to-actual-resource), _etc._
-    * insecure remote desktop protocol (RDP): check [vulnerability scanning results](#TODO-link-to-actual-resource), [firewall configurations](#TODO-link-to-actual-resource), _etc._
-    * auto-propagación (worm or virus) (check [host telemetry/EDR](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), [forensic analysis](#TODO-link-to-actual-resource), _etc._)
+
+1. **Triage rápido (primeros 0–30 min)**
+    * Confirmar que es ransomware (no corrupción/backup defectuoso): nota de rescate, extensión, comportamiento EDR.
+    * Identificar **sede**, usuario y equipo(s) iniciales reportados.
+    * Preservar evidencia mínima (sin “limpiar” todavía):
+        * Nota de rescate (archivo/imagen), nombre/extensión de ficheros, rutas afectadas.
+        * Hashes de binarios/artefactos si el EDR lo permite.
+        * Hora aproximada del primer síntoma; capturas de pantalla.
+    * Abrir/actualizar ticket y asignar responsable de investigación + responsable de contención.
+
+1. **Determinar alcance técnico (rápido y ampliable)**
+    * Endpoints: puestos, portátiles, servidores, y terminales en ambas sedes.
+    * Servicios críticos: servidores de archivos, correo, CRM/ERP, aplicaciones internas, almacenamiento cloud.
+    * Web/tienda externa: validar si hay impacto colateral (credenciales, paneles, integraciones), aunque el cifrado sea interno.
+    * Fuentes típicas:
+        * EDR/AV: detecciones, aislamiento, árbol de procesos, persistencia.
+        * Logs Windows/Linux: eventos de seguridad, servicios, tareas programadas.
+        * Red (firewall/VPN/IDS/DNS/proxy): conexiones C2, escaneo, picos SMB/RDP.
+        * Nube/SaaS: auditoría (descargas masivas, tokens, apps autorizadas, accesos anómalos).
+
+1. **Confirmar si hay exfiltración / doble extorsión (no esperar al final)**
+    * Señales: tooling de compresión/archivado, transferencia saliente sostenida, uso de servicios de subida, exports desde CRM/ERP.
+    * Prioridad especial a datos: PII de clientes/proveedores, documentación laboral/fiscal, propiedad intelectual, procesos internos.
+
+1. **Identificar vector de acceso inicial (para cortar reinfección)**
+    * Hipótesis típicas:
+        * Phishing y robo de credenciales.
+        * Exposición de RDP/VPN/portales o credenciales reutilizadas.
+        * Vulnerabilidad en sistemas expuestos (correo, VPN, web, RMM).
+        * Cadena de suministro (software/RMM/proveedor).
+    * Recolectar evidencias: logs VPN, autenticación, correo, cambios de cuentas privilegiadas, creación de nuevos usuarios.
+
+1. **Clasificar gravedad y priorizar**
+    * Número de sistemas/servidores cifrados; si hay Domain Controllers/servidores de archivos afectados.
+    * Si hay backups comprometidos o repositorios de backup accesibles.
+    * Impacto en facturación/ventas/compras/delivery/mantenimiento; dependencia del CRM/ERP.
+    * Obligaciones de notificación si hay indicios de acceso a datos personales (coordinar con Legal).
 
 ### Remediar
 
-**Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
-**Considere el momento y las compensaciones** de las acciones de reparación: su respuesta tiene consecuencias.
+* **Planificar eventos de remediación** en los que contención/erradicación/recuperación se coordinen con TIC, negocio y sedes.
+* **Considere el momento y las compensaciones**: la contención agresiva puede causar caída de servicios, pero reduce propagación.
 
-#### Contención
+#### Contener (prioridad 1)
 
-`OBJETIVO: Personalizar los pasos de contención, tácticos y estratégicos, para el ransomware.`
+`OBJETIVO: Frenar propagación y proteger backups/activos críticos sin destruir evidencia.`
 
-`OBJETIVO: especificar las herramientas y los procedimientos para cada paso, a continuación.`
+* **Aislar sistemas comprometidos**
+    * Aislar por EDR o desconexión de red (si no hay EDR): quitar cable/Wi‑Fi.
+    * Si el cifrado afecta a shares, **cortar accesos SMB** temporalmente (por VLAN/ACL) según criticidad.
 
-**En situaciones de ransomware, la contención es fundamental.  Informar de las medidas de contención con los datos de la investigación.  Dé mayor prioridad a las cuarentenas y otras medidas de contención que durante una respuesta típica.**
+* **Cortar accesos y tokens**
+    * Deshabilitar cuentas sospechosas; reset de credenciales y **revocación de sesiones/tokens**.
+    * Rotar credenciales privilegiadas y cuentas de servicio si hay indicios.
 
-Las cuarentenas (lógicas, físicas o ambas) impiden la propagación _desde_ los sistemas infectados y evitan la propagación _hacia_ los sistemas y datos críticos. Las cuarentenas deben ser exhaustivas: incluir el acceso a la nube/SaaS, el inicio de sesión único, el acceso a sistemas como el ERP u otras herramientas empresariales, _etc._.
+* **Proteger copias de seguridad**
+    * Aislar repositorios de backup/snapshots (inmutables/offline donde sea posible).
+    * Pausar jobs que puedan sobrescribir backups limpios.
 
-* Poner en cuarentena los sistemas infectados
-* Poner en cuarentena a los usuarios y grupos afectados.
-* Ponga en cuarentena los archivos compartidos (no sólo los conocidos; proteja también los no infectados).
-* Ponga en cuarentena las bases de datos compartidas (no sólo los servidores infectados conocidos; proteja también las bases de datos no infectadas)
-* Ponga en cuarentena las copias de seguridad, si no están ya protegidas
-* Bloquee los dominios y direcciones de comando y control
-* Elimine los correos electrónicos vectoriales de las bandejas de entrada.
-* Confirme que la protección de los puntos finales (AV, NGAV, EDR, etc.) está actualizada y activada en todos los sistemas.
-* Confirmar que los parches se despliegan en todos los sistemas (priorizando los sistemas, SOs, software, _etc._).
-* Despliegue de firmas personalizadas en las herramientas de protección de puntos finales y de seguridad de la red, basándose en los COI descubiertos.
+* **Reducir daño por sincronización cloud**
+    * Si hay clientes de sincronización (almacenamiento en la nube), pausar/deshabilitar temporalmente en equipos sospechosos para evitar que el cifrado se propague a carpetas sincronizadas.
+    * Revisar auditoría del servicio cloud: borrados masivos, renombrados y descargas/exports.
 
-`OBJETIVO: Considerar la posibilidad de automatizar las medidas de contención mediante herramientas de orquestación.`
+* **Bloquear indicadores y activar detección**
+    * Bloquear dominios/IPs/hashes conocidos (EDR/SWG/DNS/firewall).
+    * Añadir reglas temporales en SIEM para: ejecución desde shares, borrado VSS, cambios GPO, picos SMB/RDP.
+
+* **Contención organizativa (2 sedes)**
+    * Instrucciones a usuarios: no conectar USBs/discos, no reiniciar equipos cifrados si se necesita forense.
+    * Coordinar con seguridad física para facilitar acceso controlado a salas técnicas y registrar visitas (sin interferir con evidencia).
+
+* **Proteger la operación financiera (si aplica)**
+    * Coordinar con Facturación/Compras para pausar pagos urgentes y reforzar verificación fuera de banda (doble aprobación / llamada a contacto conocido).
 
 #### Erradicar
 
-`OBJETIVO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el ransomware.`
+`OBJETIVO: Eliminar el malware y cerrar el vector para evitar reinfección.`
 
-`OBJETIVO: Especificar las herramientas y los procedimientos para cada paso, a continuación.`
+* **Eliminar persistencia y artefactos**
+    * Identificar y eliminar: servicios, tareas programadas, claves de arranque, scripts, herramientas remotas no autorizadas.
+    * Revisar Active Directory: cuentas nuevas, cambios en GPO, delegaciones y privilegios.
 
-* Reconstruir los sistemas infectados a partir de soportes conocidos como buenos.
-* Restaurar a partir de copias de seguridad conocidas y limpias.
-* Confirmar que la protección de los puntos finales (AV, NGAV, EDR, etc.) está actualizada y activada en todos los sistemas.
-* Confirmar que los parches se despliegan en todos los sistemas (dando prioridad a los sistemas, SO, software, etc.).
-* Despliegue de firmas personalizadas en las herramientas de protección de puntos finales y de seguridad de la red, basándose en los IOC descubiertos.
-* **Vigilar la reinfección:** considerar el aumento de la prioridad de las alarmas/alertas relacionadas con este incidente.
+* **Reimagen/limpieza**
+    * Reimaginar endpoints/servidores afectados desde imágenes “golden” conocidas.
+    * Aplicar parches críticos (SO y software expuesto), endurecer RDP/VPN y paneles de administración.
+
+* **Rotación de secretos**
+    * Rotar credenciales privilegiadas, secretos de aplicaciones, claves API, y credenciales de integraciones (incluye nube/tienda).
+
+* **Validación post-erradicación**
+    * Confirmar ausencia de reinfección: telemetría EDR estable, no hay borrado VSS, no hay lateral SMB/RDP.
 
 #### Referencia: Recursos de remediación
 
-`OBJETIVO: Especifique los recursos financieros, de personal y logísticos para llevar a cabo la reparación.`
+`OBJETIVO: Especifique recursos financieros, de personal y logísticos (IR externo/forense, ventanas de mantenimiento, soporte de proveedor).`
 
 ### Comunicar
 
-`OBJETIVO: Personalizar los pasos de comunicación para el ransomware.`
+`OBJETIVO: Coordinar comunicación interna/externa minimizando especulación y cumpliendo obligaciones.`
 
-`OBJETIVO: Especifique las herramientas y los procedimientos (incluyendo quién debe participar) para cada paso, a continuación, o remítase al plan general.`
+> **No se recomienda pagar el rescate:** no garantiza recuperación y puede aumentar el riesgo y la recurrencia.[<sup>[2]</sup>](#ransomware-playbook-ref-2)
 
-> **No recomendamos pagar el rescate:** no garantiza la solución del problema. Puede salir mal (_e._, los errores podrían hacer que los datos sean irrecuperables incluso con la clave).  Además, pagar demuestra que el ransomware funciona y podría aumentar los ataques contra ti o contra otros grupos.[<sup>[2, paraphrased]</sup>](#ransomware-playbook-ref-2)
+1. Activar cadena de mando: Dirección/Consejo, Legal, TIC/Seguridad, y responsables de áreas críticas.
+1. Comunicación interna (2 sedes): instrucciones claras (qué hacer/no hacer), canales oficiales, y estado de servicios (correo, ficheros, CRM/ERP).
+1. Coordinar con Legal:
+    * Evaluar notificación a clientes/proveedores/reguladores y aseguradora (si aplica), especialmente por datos personales.
+    * Preservación de evidencias y requisitos contractuales.
+1. Considerar notificar e implicar fuerzas del orden / CERT según procedimiento.
+1. Comunicación externa (si aplica): mensaje breve y verificable; canal oficial web/RRSS si hay impacto público.
 
-1. Poner en marcha un plan de continuidad de la actividad/recuperación de desastres: Por ejemplo, considerar la migración a ubicaciones operativas alternativas, sitios de conmutación por error, sistemas de respaldo.
-1. Recuperar los datos de las copias de seguridad ya limpias en sistemas ya limpios, parcheados y monitorizados (post-erradicación), de acuerdo con nuestra [well-tested backup strategy](#TODO-link-to-actual-resource).
-    *Comprobar las copias de seguridad en busca de indicadores de peligro
-    * Considerar la recuperación parcial y las pruebas de integridad de las copias de seguridad
-1. ¡Encuentre y pruebe desencriptadores conocidos para la(s) variante(s) descubierta(s) utilizando recursos como el proyecto No More Ransom! Project's [Decryption Tools page](https://www.nomoreransom.org/en/decryption-tools.html).
-1. Considerar el pago del rescate por los activos/datos críticos irrecuperables, de acuerdo con la política `OBJETIVO: Ampliar y socializar esta matriz de decisión`.
-    * Considerar las ramificaciones con las partes interesadas apropiadas
-    * Comprender las implicaciones financieras y el presupuesto
-    * Comprender las implicaciones legales, reglamentarias y de seguros
-    * Comprender los mecanismos (por ejemplo, tecnologías, plataformas, proveedores intermedios/intermediarios)
+### Recuperación
+
+`OBJETIVO: Restaurar operación de forma segura, priorizando servicios críticos, y evitar reinfección.`
+
+1. Definir orden de restauración por criticidad (ejemplo): identidades/AD → correo → ficheros → CRM/ERP → almacenamiento cloud → resto.
+1. Restaurar desde backups limpios:
+    * Verificar integridad y ausencia de IOCs antes de restaurar.
+    * Preferir restauraciones parciales y por oleadas; monitorizar durante la vuelta.
+1. Probar desencriptadores (si existen) según variante con recursos como No More Ransom.[<sup>[2]</sup>](#ransomware-playbook-ref-2)
+1. Reforzar controles post-incidente:
+    * MFA resistente a phishing para cuentas privilegiadas y acceso remoto.
+    * Segmentación entre sedes y zonas (usuarios/servidores/backups).
+    * Backups 3-2-1, inmutabilidad/offline y pruebas periódicas de restauración.
+    * Hardening de RDP/VPN, gestión de parches, EDR en endpoints y servidores.
+
+
+## Técnicas MITRE ATT&CK Relevantes en Este Playbook
+
+### Cadena de Ataque: Visualización Completa
+
+[![DIAGRAMAMERMAID](https://mermaid.ink/img/pako:eNpVkEtu2zAQhq9CzNov2rItaVHAluU0QJMaCZBFpCxYkramlUiBolKnhk_VI_RiHcl5tFwQQ873__M4gbRKQwz70v6UhXCefbnLDaOzylZS6sYyNChRlE9sOPzE1ln6XctW4p_f5ukCrvtEkt3YZ6xQG29ZKbx2JLkASQ9s3vwEk04rbTpT3bwym55Js2tT4Dd0zFGRmjz-LZT2zDZLcO-EsmzMrqtaSG__87jK0uMeS_-hfZ2HDUeUXvFsV2BToDnkubnb7MYPu1uK0mNdWvQU3bd1Xb4w2gaajwk6bcKz-5v1mESEXe2-0v1ZOyf6qUXDhKreJduLZMuz1EiHte86rkSDz5Zkt7bjlaY5G0nL6ruEARwcKoi9a_UAKu0q0T3h1Fnm4Atd6RxiCpVwP3LIzZk0tTCP1lZvMmfbQwHxXpQNvdpakf0GxYHafEe0UdoltjUe4qh3gPgER4hnwWwUBbPJPOBRNOXhcj6AF4j5ko8iPp1G0yCcBAv6Pg_gV190MlqEM_pbBgsehTycn_8CdaC8nA?type=png)](https://mermaid.live/edit#pako:eNpVkEtu2zAQhq9CzNov2rItaVHAluU0QJMaCZBFpCxYkramlUiBolKnhk_VI_RiHcl5tFwQQ873__M4gbRKQwz70v6UhXCefbnLDaOzylZS6sYyNChRlE9sOPzE1ln6XctW4p_f5ukCrvtEkt3YZ6xQG29ZKbx2JLkASQ9s3vwEk04rbTpT3bwym55Js2tT4Dd0zFGRmjz-LZT2zDZLcO-EsmzMrqtaSG__87jK0uMeS_-hfZ2HDUeUXvFsV2BToDnkubnb7MYPu1uK0mNdWvQU3bd1Xb4w2gaajwk6bcKz-5v1mESEXe2-0v1ZOyf6qUXDhKreJduLZMuz1EiHte86rkSDz5Zkt7bjlaY5G0nL6ruEARwcKoi9a_UAKu0q0T3h1Fnm4Atd6RxiCpVwP3LIzZk0tTCP1lZvMmfbQwHxXpQNvdpakf0GxYHafEe0UdoltjUe4qh3gPgER4hnwWwUBbPJPOBRNOXhcj6AF4j5ko8iPp1G0yCcBAv6Pg_gV190MlqEM_pbBgsehTycn_8CdaC8nA)
+
+| Fase | Técnica MITRE | Descripción | Cómo la Detectamos |
+|------|--------------|-------------|--------------------|
+| **Acceso inicial** | [T1566: Phishing](https://attack.mitre.org/techniques/T1566/) | Correo con adjunto/enlace o robo de credenciales previo para entrar. | Gateway de correo + proxy/SWG: campañas, URLs nuevas, adjuntos; correlación “correo → login anómalo → ejecución”. |
+| **Acceso inicial** | [T1133: External Remote Services](https://attack.mitre.org/techniques/T1133/) | Acceso por VPN/RDP/portales expuestos (a menudo con credenciales robadas). | Firewall/VPN: logins fuera de horario, IP/ASN inusual, nuevos dispositivos; escaneo previo y picos de intentos. |
+| **Acceso inicial** | [T1190: Exploit Public-Facing Application](https://attack.mitre.org/techniques/T1190/) | Explotación de servicios expuestos (web, VPN, RMM, correo). | Logs de acceso/app + WAF/IDS: patrones de explotación, errores 500/200 sospechosos, llamadas a endpoints raros. |
+| **Ejecución** | [T1059: Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/) | Uso de PowerShell/cmd/bash/python para desplegar payload y moverse. | EDR: árboles de procesos, scripts ofuscados, ejecución desde `%TEMP%`/shares, y conexiones de red post-ejecución. |
+| **Movimiento lateral** | [T1021: Remote Services](https://attack.mitre.org/techniques/T1021/) | Movimiento por RDP/SMB/WinRM/SSH hacia servidores y puestos. | Autenticación + red: picos de SMB/RDP, accesos a múltiples hosts, lateral en 2 sedes, y nuevas rutas admin. |
+| **Credenciales** | [T1003: OS Credential Dumping](https://attack.mitre.org/techniques/T1003/) | Volcado de credenciales (LSASS, SAM) para expansión. | EDR: acceso a LSASS, herramientas conocidas, eventos de seguridad; aparición de credenciales privilegiadas en uso. |
+| **Defensa evadida** | [T1562: Impair Defenses](https://attack.mitre.org/techniques/T1562/) | Desactivar AV/EDR, logging o tamper protections. | Alertas EDR/SIEM: servicios detenidos, exclusiones nuevas, caída de telemetría, cambios de políticas. |
+| **Inhibir recuperación** | [T1490: Inhibit System Recovery](https://attack.mitre.org/techniques/T1490/) | Borrado de copias sombra, sabotaje de backups y snapshots. | EDR + logs Windows: eliminación de VSS, cambios en jobs de backup, accesos al repositorio de backup. |
+| **Impacto** | [T1486: Data Encrypted for Impact](https://attack.mitre.org/techniques/T1486/) | Cifrado masivo de endpoints/servidores y shares; interrupción operativa. | Detección EDR: I/O masivo, renombrado/extensiones, notas de rescate; alertas de integridad en ficheros. |
+| **Exfiltración** | [T1041: Exfiltration Over C2 Channel](https://attack.mitre.org/techniques/T1041/) | Robo de datos para doble extorsión (por HTTPS/APIs). | Proxy/CASB/Firewall: picos de subida, destinos nuevos, descargas/exports inusuales en nube/CRM/ERP. |
+
+
 
 ### Recursos
 
-#### Referencia: Acciones de los usuarios ante la sospecha de ransomware
+#### Referencia: Acciones del usuario ante sospecha de ransomware
 
-`OBJETIVO: Personalizar los pasos para los usuarios ante la sospecha de ransomware`.
-
-1. Mantenga la calma y respire profundamente.
-1. Desconecte su sistema de la red `OBJETIVO: incluya pasos detallados con capturas de pantalla, una herramienta preinstalada o un script para facilitar esta tarea ("romper en caso de emergencia"), considere los interruptores de corte de red por hardware`.
-1. Haz fotos de tu pantalla con tu smartphone mostrando las cosas que has notado: mensajes de rescate, archivos encriptados, mensajes de error del sistema, _etc._.
-1. 2. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  Todo ayuda.  Documenta lo siguiente:
-    1. ¿Qué has notado?
-    1. ¿Por qué pensaste que era un problema?
-    1. ¿Qué estabas haciendo en el momento en que lo detectaste?
-    1. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
-    1. ¿Dónde estaba cuando ocurrió y en qué red? (oficina/casa/tienda, con cable/inalámbrica, con/sin VPN, _etc._)
-    1. ¿Qué sistemas está utilizando? (sistema operativo, nombre de host, _etc._)
-    1. ¿Qué cuenta utilizas?
-    1. ¿A qué datos suele acceder?
-    1. ¿Con quién más se ha puesto en contacto en relación con este incidente y qué le ha dicho?
-1. Contacta al  [help desk](#TODO-link-to-actual-resource) y ser lo más útil posible
-1. Tenga paciencia: la respuesta puede ser perturbadora, pero está protegiendo a su equipo y a la organización.  **Gracias.**
-
-#### Referencia: Acciones del servicio de asistencia técnica ante la sospecha de ransomware
-
-`OBJETIVO: Personalizar los pasos para el personal de la mesa de ayuda ante la sospecha de ransomware`.
+`OBJETIVO: Pasos claros para usuarios (puestos, portátiles y móviles).`
 
 1. Mantenga la calma y respire profundamente.
-1. Abra un ticket para documentar el incidente, según el procedimiento `TODO: Personalizar la plantilla con las preguntas clave (ver abajo) y el flujo de trabajo de seguimiento`.
-1. 2. Pida al usuario que tome fotos de su pantalla usando su smartphone mostrando las cosas que ha notado: mensajes de rescate, archivos encriptados, mensajes de error del sistema, _etc._ Si es algo que ha notado directamente, haga lo mismo usted.
-1. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  2. Si se trata de un informe de usuario, haz preguntas detalladas, incluyendo
-    1. ¿Qué ha notado?
-    1. ¿Por qué pensaste que era un problema?
-    1. ¿Qué estabas haciendo en el momento en que lo detectaste?
-    1. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
-    1. ¿De qué redes se trata? (oficina/casa/tienda, cableada/inalámbrica, con/sin VPN, _etc._)
-    1. 2. ¿De qué sistemas se trata? (sistema operativo, nombre de host, _etc._)
-    1. 2. ¿De qué datos se trata? (rutas, tipos de archivos, archivos compartidos, bases de datos, software, _etc._)
-    1. ¿Qué usuarios y cuentas están implicados? (directorio activo, SaaS, SSO, cuentas de servicio, _etc._)
-    1. ¿A qué datos suelen acceder los usuarios implicados?
-    1. ¿Con quién más has contactado acerca de este incidente y qué les has dicho?
-1. Haz las preguntas de seguimiento que sean necesarias.  **Usted es el encargado de responder al incidente, contamos con usted.**
-1. Obtenga información de contacto detallada del usuario (domicilio, oficina, móvil), si procede
-1. Registre toda la información en el ticket, incluyendo notas manuscritas y de voz
-1. Poner en cuarentena a los usuarios y sistemas afectados `OBJETIVO: Personalizar los pasos de contención, automatizar todo lo posible`.
-1. Póngase en contacto con el [equipo de seguridad](#TODO-link-to-actual-resource) y estar preparados para participar en la respuesta según las indicaciones: investigación, reparación, comunicación y recuperación
+1. Si ve cifrado o nota de rescate: **desconecte el equipo de la red** (cable/Wi‑Fi). No conecte USBs/discos externos.
+1. Haga fotos/capturas: nota de rescate, extensión de archivos, mensajes de error.
+1. Repórtelo al service desk y siga instrucciones. **No intente “limpiar”** por su cuenta.
+
+#### Referencia: Acciones del service desk ante sospecha de ransomware
+
+`OBJETIVO: Recoger datos útiles y activar contención rápida.`
+
+1. Abra ticket con prioridad alta y escale a Seguridad/TIC.
+1. Recoja: usuario, sede, equipo, hora, rutas afectadas, si hay nota de rescate, si hay shares implicados.
+1. Indique al usuario desconectar red y no reiniciar (salvo instrucción).
+1. Coordine aislamiento por EDR/IT y documente todas las acciones.
 
 #### Información adicional
 
 1. <a name="ransomware-playbook-ref-1"></a>["Ransomware Identification for the Judicious Analyst"](https://www.gdatasoftware.com/blog/2019/06/31666-ransomware-identification-for-the-judicious-analyst), Hahn (12 Jun 2019)
-1. <a name="ransomware-playbook-ref-2"></a>[No More Ransom!](https://www.nomoreransom.org) Project, including their [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php?lang=en) service and their [Q&A](https://www.nomoreransom.org/en/ransomware-qa.html)
-1. <a name="ransomware-playbook-ref-3"></a>[ID Ransomware](https://id-ransomware.malwarehunterteam.com/) service
-1. <a name="ransomware-playbook-ref-4"></a>[MITRE ATT&CK Matrix](https://attack.mitre.org), including the [Initial Access](https://attack.mitre.org/tactics/TA0001/) and [Impact](https://attack.mitre.org/tactics/TA0040/) tactics
+1. <a name="ransomware-playbook-ref-2"></a>[No More Ransom!](https://www.nomoreransom.org) (Crypto Sheriff, Q&A y herramientas de descifrado)
+1. <a name="ransomware-playbook-ref-3"></a>[ID Ransomware](https://id-ransomware.malwarehunterteam.com/)
+1. <a name="ransomware-playbook-ref-4"></a>[MITRE ATT&CK](https://attack.mitre.org) (tácticas de [Initial Access](https://attack.mitre.org/tactics/TA0001/) e [Impact](https://attack.mitre.org/tactics/TA0040/))
