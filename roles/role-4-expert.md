@@ -1,41 +1,197 @@
+# Rol: Experto en la Materia (Subject Matter Expert - SME)
 
-## Rol: Experto en la materia {Subject Matter Expert (SME)}
+## Descripción
 
-### Descripción
+El Experto en la Materia (SME) es la persona responsable de un área técnica concreta dentro de la respuesta a incidentes. Su área puede ser un sistema, un servicio, un componente de infraestructura o un equipo específico.
 
-Un experto en la materia (SME) es un experto en el dominio o responsable designado de un equipo, componente o servicio (un "área"). Está ahí para apoyar al Incident Commander en la identificación de la causa del incidente, sugiriendo y evaluando las acciones de investigación, remediación y comunicación, y realizando el seguimiento de las mismas según se le encomiende.
+Durante un incidente, el SME es el punto de referencia técnico de su área. Su trabajo es ayudar al Incident Commander (IC) a entender qué está pasando, qué impacto tiene y qué opciones existen para investigar o resolver el problema.
 
-### Funciones
+El SME no toma decisiones finales durante el incidente. El IC es quien dirige la respuesta. El SME propone, analiza y ejecuta acciones cuando se le indica.
 
-1. Diagnosticar problemas comunes dentro de su área de experiencia.
-1. Solucionar rápidamente los problemas detectados durante un incidente.
-1. Comunicación concisa:
-    * Estado: ¿Cuál es el estado actual de su área? ¿Está buen estado o no?
-    * Acciones: ¿Qué medidas hay que tomar si su zona no se encuentra en un buen estado?
-    * Necesidades: ¿Qué apoyo necesita para realizar una acción?
-1. Participar en las fases de investigación, remediación y/o comunicación de la respuesta.
-1. Anunciar todas las sugerencias al comandante del incidente, es su decisión cómo proceder, no siga ninguna acción a menos que se le indique.
+---
 
-Si está de guardia para cualquier equipo, puede ser llamado para un incidente y se espera que responda como experto en la materia (SME) para su equipo, componente o servicio. Cualquiera que se considere un "experto en la materia" puede actuar como SME para un incidente. Por lo general, el principal de guardia del equipo actuará como SME para ese equipo.
+## Deberes Principales
 
+### 1. Respuesta inicial ante incidentes
 
-#### Prepárese para el periodo de guardia
+Cuando se notifica un incidente:
 
-1. Esté preparado, habiéndose familiarizado ya con nuestras políticas y procedimientos de respuesta a incidentes.
-1. Asegúrese de que ha configurado sus métodos de alerta de acuerdo con nuestro procedimiento de guardia.
-1. Compruebe que puede unirse a la llamada de incidentes. Es posible que tenga que instalar un plugin para el navegador.
-1. Tenga en cuenta su próxima vez de guardia y organice los cambios en función de los viajes, las vacaciones, las citas, etc.
-1. Si usted es el Incident Commander, asegúrese de no estar de guardia con su equipo al mismo tiempo que está de guardia como Incident Commander.
+- **Unirse a la llamada rápidamente**: en un máximo de 5–10 minutos.
+- **Confirmar presencia**: “Soy el SME de [área], conectado.”
+- **Escuchar primero**: entender el contexto antes de responder o actuar.
 
-#### Durante el periodo de guardia
+---
 
-1. Tenga su ordenador portátil e Internet con usted en todo momento durante su período de guardia (oficina, casa, un MiFi, un teléfono con un plan de conexión, etc).
-1. Si tiene citas importantes, debe conseguir que otra persona de su equipo cubra esa franja horaria con antelación.
-1. Cuando recibas una alerta de incidente, se espera que te unas a la llamada de incidente y chatees lo antes posible (en cuestión de minutos).
-1. El Incident Commander le hará preguntas o le dará acciones. Responde a las preguntas de forma concisa y sigue todas las acciones que se te den (incluso si no estás de acuerdo con ellas).
-1. Si no estás seguro de algo, haz venir a otros miembros de tu equipo que puedan ayudarte. **Nunca dudes en escalar**, si es necesario.  
-1. No culpes. Este proceso de respuesta a incidentes no tiene ninguna culpa: culpar es contraproducente y distrae del problema en cuestión. La revisión posterior a la acción identificará los puntos en los que todos podemos mejorar.
+### 2. Diagnóstico del área
 
-### Formación
+Durante el incidente, el IC hará preguntas sobre tu área. Debes responder de forma clara y directa:
 
-* Lea y comprenda el plan de respuesta a incidentes, incluidas las funciones y las guías de actuación.
+- **Estado del sistema**:
+  - “El servicio está operativo sin errores visibles.”
+  - “Estamos viendo degradación en el rendimiento.”
+
+- **Posibles causas**:
+  - Explica solo lo que sepas.
+  - Si no hay información suficiente: “Necesito investigar 10–15 minutos para confirmarlo.”
+
+- **Acciones posibles**:
+  - “Podemos revisar logs, reiniciar el servicio o aislar el nodo afectado.”
+
+---
+
+### 3. Comunicación durante el incidente
+
+El SME debe comunicar de forma breve, estructurada y basada en hechos:
+
+- **Estado** → cómo está tu área ahora.
+- **Acciones** → qué se puede hacer para investigar o solucionar.
+- **Necesidades** → qué recursos o accesos hacen falta.
+
+Ejemplo:
+- Estado: “Base de datos funcionando con normalidad.”
+- Acciones: “Revisar consultas lentas o logs de errores.”
+- Necesidades: “Acceso a métricas del clúster.”
+
+Reglas de comunicación:
+- Ser breve y directo.
+- Evitar explicaciones largas.
+- Usar datos concretos (números, logs, eventos).
+- No especular sin evidencia.
+
+---
+
+### 4. Ejecución de acciones
+
+Cuando el Incident Commander asigna una tarea:
+
+- **Ejecutar exactamente lo indicado**.
+- **Informar del progreso**: “Estamos aplicando el cambio, estará listo en 10 minutos.”
+- **Si hay bloqueo**: “No puedo continuar porque falta acceso a X.”
+- **Escalar si es necesario**: pedir apoyo de otros SMEs o permisos adicionales.
+
+---
+
+### 5. Colaboración durante la investigación
+
+- Apoyar en el análisis técnico del incidente.
+- Aportar contexto sobre el comportamiento del sistema.
+- Sugerir alternativas si es necesario.
+- Coordinarse con otros SMEs si el incidente afecta a varias áreas.
+
+---
+
+### 6. No asignar culpas
+
+Durante el incidente:
+
+- No señalar responsables.
+- No justificar fallos de forma personal o organizativa.
+- Enfocarse únicamente en resolver el problema.
+
+El análisis de causas se hace después del incidente.
+
+---
+
+## Preparación para el periodo de guardia
+
+Antes de estar de guardia como SME:
+
+- Conocer el plan de respuesta a incidentes.
+- Entender los playbooks de su área.
+- Tener acceso configurado a herramientas de monitoreo y comunicación.
+- Verificar que puede unirse a llamadas de incidente.
+- Organizar disponibilidad durante el turno.
+- Coordinar relevos si hay ausencias previstas.
+- Evitar conflictos de rol (no ser IC y SME del mismo equipo a la vez).
+
+---
+
+## Durante el periodo de guardia
+
+### Disponibilidad
+
+- Tener acceso a portátil o dispositivo con conexión.
+- Estar localizable durante todo el turno.
+- Responder en 5–10 minutos a cualquier alerta.
+
+---
+
+### En la llamada de incidente
+
+- Responder preguntas del IC de forma clara.
+- Mantener el enfoque en hechos, no opiniones.
+- Seguir instrucciones sin desviarse del alcance asignado.
+- Indicar si algo no se sabe o requiere investigación.
+- Escalar bloqueos técnicos o de permisos.
+
+---
+
+### Gestión de problemas
+
+- Si detectas algo relevante, comunicarlo al IC aunque no lo pregunte.
+- Proponer mejoras o alternativas cuando sea útil.
+- Esperar aprobación antes de ejecutar cambios.
+
+---
+
+## Principios de actuación
+
+### Comunicación
+
+- Usar lenguaje claro y simple.
+- Evitar tecnicismos innecesarios.
+- Ser directo: responder lo preguntado, sin rodeos.
+- Priorizar información útil para la toma de decisiones.
+
+---
+
+### Actitud operativa
+
+- Trabajar bajo dirección del IC.
+- No improvisar cambios no autorizados.
+- Mantener calma en situaciones de presión.
+- Aceptar cambios de decisión sin conflicto.
+
+---
+
+### Trabajo en equipo
+
+- Colaborar con otros SMEs cuando sea necesario.
+- Compartir información relevante sin retrasos.
+- Ayudar a completar la visión global del incidente.
+
+---
+
+## Requisitos para ser SME
+
+### Requisitos básicos
+
+- Conocimiento sólido del área asignada.
+- Comprensión del plan de respuesta a incidentes.
+- Participación en simulacros o ejercicios internos.
+- Designación formal por el equipo responsable.
+
+---
+
+### Proceso de incorporación
+
+1. Asignación del rol por el responsable del equipo.
+2. Revisión de documentación de incidentes.
+3. Participación en ejercicios prácticos.
+4. Incorporación a la rotación de guardias.
+5. Activación como SME en incidentes reales.
+
+---
+
+## Recursos y referencias
+
+- Plan de respuesta a incidentes (documento principal)
+- Playbooks técnicos del área correspondiente
+- Rol de Incident Commander
+- Procedimientos internos de guardia y escalado
+
+---
+
+**Documento**: Rol - Experto en la Materia (SME)<br>
+**Grupo G5**: Sergio G., Iván P., Manuel P., Javier C.<br>
+**Fecha**: Mayo 2026
