@@ -1328,13 +1328,13 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ### Cadena de Ataque
 
-![Attack Chain: Acceso No Autorizado](./attack-chain-acceso-no-autorizado.svg)
+![Attack Chain: Acceso No Autorizado](../playbooks/acceso-no-autorizado/attack-chain-acceso-no-autorizado.svg)
 
 ---
 
 ### Investigar
 
-![MITRE ATT&CK Navigator – Acceso No Autorizado](./Acceso_No_Autorizado_ATTACK.svg)
+![MITRE ATT&CK Navigator – Acceso No Autorizado](../playbooks/acceso-no-autorizado/Acceso_No_Autorizado_ATTACK.svg)
 
 `OBJETIVO: Confirmar que se trata de un acceso no autorizado real (descartar falsos positivos), identificar el vector de entrada, el alcance del acceso y los datos o sistemas comprometidos.`
 
@@ -1405,7 +1405,7 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ### Remediar
 
-![Flujo de Respuesta – Acceso No Autorizado](./Acceso_No_Autorizado_REACT.svg)
+![Flujo de Respuesta – Acceso No Autorizado](../playbooks/acceso-no-autorizado/Acceso_No_Autorizado_REACT.svg)
 
 - **Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
 - **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
@@ -1918,13 +1918,13 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ### Cadena de Ataque
 
-![Attack Chain: Pérdida o Robo de Dispositivo](./attack-chain-perdida-robo-dispositivo.svg)
+![Attack Chain: Pérdida o Robo de Dispositivo](../playbooks/perdida-robo-dispositivo/attack-chain-perdida-robo-dispositivo.svg)
 
 ---
 
 ### Investigar
 
-![MITRE ATT&CK Navigator – Pérdida o Robo de Dispositivo](./Prdida_o_Robo_de_Dispositivo_ATTACK.svg)
+![MITRE ATT&CK Navigator – Pérdida o Robo de Dispositivo](../playbooks/perdida-robo-dispositivo/Prdida_o_Robo_de_Dispositivo_ATTACK.svg)
 
 `OBJETIVO: Confirmar que el dispositivo ha sido perdido o robado (descartar extravíos temporales), identificar qué datos y sistemas podrían estar expuestos, y evaluar el riesgo real según el estado del dispositivo.`
 
@@ -1973,7 +1973,7 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ### Remediar
 
-![Flujo de Respuesta – Pérdida o Robo de Dispositivo](./Prdida_o_Robo_de_Dispositivo_REACT.svg)
+![Flujo de Respuesta – Pérdida o Robo de Dispositivo](../playbooks/perdida-robo-dispositivo/Prdida_o_Robo_de_Dispositivo_REACT.svg)
 
 * **Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
 * **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
