@@ -18,7 +18,7 @@ Respuesta a ataques de ingenier√≠a social y phishing. Estos ataques buscan enga√
 
 ---
 
-### [Playbook: Compromiso de Identidad y Acceso](playbook-identity-and-access.md)
+### [Playbook: Compromiso de Identidad y Acceso](playbook-identity-access.md)
 
 Respuesta a compromiso de credenciales y acceso no autorizado a sistemas.
 
