@@ -27,7 +27,7 @@ Riesgos más críticos documentados (según PDS):
 
 ## Preparación (mínimo necesario, alineado con el PDS)
 
-Esta sección existe porque los incidentes “durante” solo salen bien si lo previo está listo. Estado actual (según PDS): madurez global ~74% (ISO 27002), con brechas en formación y backups externos/validación.
+Esta sección existe porque los incidentes "durante" solo salen bien si lo previo está listo. Estado actual (según PDS): madurez global ~74% (ISO 27002), con brechas en formación y backups externos/validación.
 
 Controles/proyectos que habilitan respuesta eficaz (PDS 2025–2027):
 - PRY-001/002: formación + concienciación (phishing/errores humanos).
@@ -43,12 +43,12 @@ Entregables de preparación mínimos que deben existir antes de un SEV1/SEV2:
 
 ## Relación con MITRE ATT&CK y RE&CT (por qué se usa y cómo)
 
-Se usa MITRE ATT&CK como “lenguaje común” para describir TTPs observadas y para convertir síntomas en preguntas investigables (qué técnica, dónde y desde cuándo). Se usa RE&CT como estructura práctica para convertir técnicas en acciones de **detectar** y **responder**.
+Se usa MITRE ATT&CK como "lenguaje común" para describir TTPs observadas y para convertir síntomas en preguntas investigables (qué técnica, dónde y desde cuándo). Se usa RE&CT como estructura práctica para convertir técnicas en acciones de **detectar** y **responder**.
 
 Mapeo mínimo (taxonomía <-> ATT&CK) para esta organización (basado en tipos documentados):
 
 Tipo (taxonomía) | Técnicas ATT&CK sugeridas (ejemplos)
----|---
+***|***
 Ingeniería social / phishing | T1566 (Phishing)
 Acceso con vulneración de credenciales | T1110 (Brute Force), T1078 (Valid Accounts)
 Escaneo de redes | T1046 (Network Service Scanning)
@@ -67,7 +67,7 @@ Uso operativo durante el incidente:
 Estas métricas se alinean con los objetivos del PDS y se revisan en comité (cadencia sugerida: mensual para operativas, trimestral para estratégicas):
 
 Métrica | Definición | Objetivo (según PDS / recomendación)
----|---|---
+***|***|***
 MTTD | Tiempo medio desde el primer evento hasta la detección | Reducir trimestre a trimestre
 MTTC | Tiempo medio hasta contención efectiva | Reducir trimestre a trimestre
 MTTR | Tiempo medio hasta restauración segura | Compatible con continuidad y criticidad
@@ -106,7 +106,7 @@ Incidentes de red | Nº incidentes de red (normalizado) | reducción >=50% (PRY-
 Una vez confirmado que es un incidente, determine una severidad inicial para guiar escalado, comunicación y priorización.
 
 Severidad | Descripción | Ejemplo
---------- | ----------- | ------
+********* | *********-- | ******
 SEV1 | Impacto crítico en negocio o datos sensibles | Ransomware, caída total
 SEV2 | Impacto importante parcialmente contenido | Compromiso de cuenta privilegiada
 SEV3 | Impacto limitado | Malware aislado
@@ -117,7 +117,7 @@ SEV4 | Evento sin impacto confirmado | Phishing reportado
 Complete estos campos en la primera llamada y en el archivo del incidente.
 
 Campo | Valor
------ | -----
+***** | *****
 Vector probable | Email/phishing; Endpoint; Credenciales; SaaS; Cloud; VPN; Web app; Insider; Supply chain
 Severidad inicial | SEV1/SEV2/SEV3/SEV4
 Sistemas/servicios afectados | 
@@ -165,7 +165,7 @@ Recomendación de nomenclatura (mínimo viable):
   - Fije un mensaje inicial con: nombre, hora de inicio, resumen (vector/impacto), y quién es el IC.
 4. Iniciar y/o unirse a la llamada de respuesta en {{RESPONSE_PHONE}} y/o {{RESPONSE_VTC}}.
   - Publique en el chat el enlace/datos de acceso.
-  - Mantenga una única sala/puente “oficial” para evitar duplicidades.
+  - Mantenga una única sala/puente "oficial" para evitar duplicidades.
 5. Preferible usar la llamada de voz, el chat y el intercambio seguro de archivos sobre cualquier otro método.
 6. **No** utilizar el correo electrónico principal si es posible. Si el correo electrónico es necesario, utilícelo con moderación o use {{ALTERNATE_EMAIL}}.
   - No incluya datos sensibles innecesarios en correo.
@@ -194,7 +194,7 @@ Recomendación de nomenclatura (mínimo viable):
 ### Referencia: Información de contacto del equipo de respuesta
 
 Rol del equipo de respuesta         | Información de contacto
------------------------------------ | ---------------------------
+*********************************** | ***************************
 Pager del Incident Commander        | {{INCIDENT_COMMANDER_PAGER_NUMBER}}
 URL del Incident Commander          | {{INCIDENT_COMMANDER_PAGER_URL}}
 Lista del Incident Commander        | {{INCIDENT_COMMANDER_ROSTER}}
@@ -329,7 +329,7 @@ Si un incidente resulta ser dos o más incidentes distintos:
 ### Referencia: Lista de recursos de respuesta
 
 Recurso                             | Ubicación
------------------------------------ | ------------------------------------
+*********************************** | ************************************
 Lista de información crítica        | {{CRITICAL_INFO_LIST_LOCATION}}
 Lista de activos críticos           | {{CRITICAL_ASSET_LIST_LOCATION}}
 Base de datos de gestión de activos | {{ASSET_MGMT_DB_LOCATION}}
@@ -366,7 +366,7 @@ Agregador de registros              | {{LOG_AGGREGATOR_CONSOLE}}
 ### Referencia: Táctica del atacante a la matriz de preguntas clave
 
 Táctica del atacante    | La forma en que los atacantes ...      | Posibles preguntas clave
------------------------ |----------------------------------------| -----------------------------------------
+*********************** |****************************************| *****************************************
 Reconocimiento          | ... aprender sobre los objetivos       | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
 Desarrollo de recursos  | ... construir infraestructuras.        | ¿Qué sistemas?
 Acceso inicial          | ... entrar                             | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
@@ -470,11 +470,13 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 
 Las guías operativas son anexos prácticos y accionables por tipo de incidente. Mantenga este IRP enfocado en lo estratégico/táctico y use playbooks para lo operativo.
 
-- [Playbook: Identity and Access](playbooks/playbook-identity-access.md)
-- [Playbook: Ingeniería Social](playbooks/playbook-ingenieria-social.md)
-- [Playbook: Phishing](playbooks/playbook-phishing.md)
-- [Playbook: Ransomware](playbooks/playbook-ransomware.md)
-- [Playbook: Supply Chain](playbooks/playbook-supply-chain.md)
+Nota: en esta carpeta del proyecto no se incluyen playbooks separados; aquí solo se deja la referencia de cuáles serían los mínimos recomendados.
+
+- Playbook: Identity and Access
+- Playbook: Ingeniería Social
+- Playbook: Phishing
+- Playbook: Ransomware
+- Playbook: Supply Chain
 
 # Remediar
 
@@ -653,7 +655,7 @@ En esta organización, la recuperación debe priorizar (según PDS):
 
 Checklist recomendado (genérico):
 
-1. Confirmar criterios de “sistema limpio” antes de levantar el servicio (sin IOCs activos, cuentas rotadas, parches aplicados, monitorización reforzada).
+1. Confirmar criterios de "sistema limpio" antes de levantar el servicio (sin IOCs activos, cuentas rotadas, parches aplicados, monitorización reforzada).
 2. Restaurar desde backups verificados cuando aplique (idealmente con pruebas de restauración previas y backups cifrados/externos).
 3. Rotar credenciales relevantes (usuarios afectados, cuentas privilegiadas, API keys/tokens, cuentas de servicio).
 4. Reaplicar hardening y configuración base (políticas, segmentación, MFA, reglas de firewall/WAF si aplica).
@@ -698,3 +700,336 @@ El AAR debe incluir:
 - Brechas de comunicación
 - Acciones correctivas
 - Responsable y fecha objetivo de cada acción
+
+# Respuesta a las preguntas (Actividad 4.01)
+
+> Esta sección responde de forma directa a las preguntas 1.a–3.a del enunciado.  
+> Para evitar repetir información del IRP, aquí se responden las preguntas y, cuando hace falta, se referencian apartados que ya están desarrollados en el documento principal.
+
+***
+## 1.a Relación MITRE ATT&CK / RE&CT con el plan de respuesta
+
+### ¿Qué relación existe?
+
+La relación entre MITRE ATT&CK y RE&CT con el plan de respuesta es bastante clara, porque ambos ayudan a organizar mejor la respuesta ante incidentes y a que el análisis no se quede en algo demasiado genérico.
+
+En lugar de limitarse a ideas generales como "investigar un incidente", estos marcos permiten concretar mejor:
+- qué técnicas puede estar utilizando un atacante,
+- qué evidencias deberían revisarse,
+- y qué acciones de contención o respuesta tienen más sentido en cada situación.
+
+En este plan:
+- **MITRE ATT&CK** se utiliza como referencia para identificar y describir técnicas de ataque. Por ejemplo, permite relacionar comportamientos observados con técnicas concretas como phishing o uso de credenciales válidas.
+- **RE&CT** se utiliza de una forma más práctica, ya que ayuda a traducir esas técnicas en acciones reales de detección y respuesta, como qué monitorizar, qué bloquear o qué sistemas aislar.
+
+***
+### ¿Cómo me ayudó el trabajo previo con las matrices?
+
+El trabajo previo con MITRE ATT&CK y RE&CT ha sido útil principalmente para estructurar mejor el plan y justificar algunas decisiones.
+
+1. **Priorización de riesgos**  
+   En lugar de intentar cubrir todos los escenarios posibles, se priorizan los más probables y críticos para la empresa, como phishing, robo de credenciales y ransomware, que además coinciden con el análisis de riesgos del PDS.
+
+2. **Mejor definición del triage**  
+   Ayuda a convertir síntomas en algo más concreto. Por ejemplo:
+   - muchos intentos fallidos de acceso → posible T1110 (fuerza bruta),
+   - uso de cuentas válidas → posible T1078 (credenciales legítimas).
+
+   Esto ayuda a pasar de un simple "algo raro está pasando" a preguntas más concretas como:
+   - qué usuario está implicado,
+   - desde dónde se conecta,
+   - cuándo empezó la actividad,
+   - o qué sistemas pueden estar afectados.
+
+3. **Definición de evidencias mínimas**  
+   Cada tipo de incidente necesita conservar información distinta antes de actuar:
+   - phishing: correo original, cabeceras y enlaces o adjuntos,
+   - ransomware: artefactos del sistema y línea temporal antes de restaurar,
+   - credenciales comprometidas: logs de autenticación y sesiones activas.
+
+4. **Relación entre detección y respuesta**  
+   RE&CT ayuda a no quedarse solo en la parte de análisis. Si se detecta un posible compromiso de credenciales, la respuesta no es únicamente investigar, sino también actuar: revocar sesiones, cambiar contraseñas y aplicar medidas de contención.
+
+***
+### Evidencias que se deberían aportar
+
+Como soporte de este apartado, lo más adecuado sería incluir:
+- un export de MITRE ATT&CK Navigator con las técnicas priorizadas,
+- y una tabla de relación ATT&CK → RE&CT donde se vea el vínculo entre técnicas y acciones de detección o respuesta.
+
+***
+## 1.b Playbooks necesarios y en qué me baso para identificarlos
+
+### Playbooks identificados
+
+A partir del análisis de riesgos, la taxonomía y las técnicas más relevantes, los playbooks mínimos para esta empresa serían:
+
+- Ransomware  
+- Phishing  
+- Ingeniería social  
+- Gestión de identidades y accesos (Identity & Access)  
+- Ataques a proveedores o cadena de suministro (Supply Chain)
+
+***
+### Criterios utilizados para seleccionarlos
+
+La selección de playbooks se basa en varios elementos del análisis previo.
+
+1. **Plan Director de Seguridad (PDS)**  
+   El PDS identifica riesgos importantes como:
+   - ransomware en servidores de archivos,
+   - problemas relacionados con copias de seguridad,
+   - debilidades en credenciales y accesos,
+   - y falta de concienciación de usuarios.
+
+   Esto justifica directamente la necesidad de playbooks relacionados con ransomware, phishing e identidad.
+
+2. **Taxonomía de incidentes**  
+   La taxonomía refuerza cuáles son los vectores más habituales dentro de la organización, especialmente correo, credenciales, acceso remoto y posibles terceros. Esto ayuda a priorizar los playbooks más útiles para incidentes reales.
+
+3. **MITRE ATT&CK / RE&CT**  
+   Las técnicas identificadas como más relevantes (por ejemplo T1566, T1078, T1110 o T1486) indican claramente qué tipos de incidentes necesitan una respuesta rápida y estandarizada.
+
+Además, algunos comportamientos como escaneo o sniffing no se consideran playbooks independientes, ya que normalmente forman parte de fases de reconocimiento dentro de incidentes más amplios.
+
+***
+### Diagrama de ejemplo de un playbook (ransomware)
+
+```mermaid
+flowchart TD
+  A[Alerta o detección] --> B{¿Indicios de cifrado}
+  B -- No --> C[Triage y monitorización]
+  B -- Sí --> D[Clasificación SEV1 / SEV2]
+  D --> E[Preservar evidencias]
+  E --> F[Contención: aislamiento de equipos]
+  F --> G[Erradicación del vector de entrada]
+  G --> H[Recuperación desde backups verificados]
+  H --> I[Revisión y lecciones aprendidas (AAR)]
+```
+
+## 1.c Cobertura de fases del plan y valoración de fases
+
+### ¿Cómo aseguro que cubro todas las fases?
+
+La cobertura del plan se asegura principalmente por la propia estructura del IRP, ya que cada fase del proceso de respuesta está separada y definida dentro del documento.  
+En lugar de repetir todo el contenido aquí, la evidencia está en que el flujo completo aparece organizado de forma secuencial:
+
+**Preparación → Evaluación → Investigación → Remediación → Comunicación → Recuperación → AAR (Lessons Learned)**
+
+Esto permite seguir el ciclo completo de gestión de incidentes sin dejar partes "sueltas" o poco definidas.
+
+Además, el plan no solo describe qué hacer en cada fase, sino también cuándo se considera completada una etapa y cuándo se puede pasar a la siguiente. Para ello se incluyen criterios de cierre técnico y condiciones mínimas de validación.
+
+***
+### Criterios de activación y transición entre fases
+
+Uno de los puntos importantes para que el plan sea útil es evitar ambigüedades. Por eso se definen criterios claros para activar el IRP y para escalar la severidad de un incidente.
+
+- **Paso de evento a incidente:**  
+  Se activa formalmente el proceso de respuesta cuando existe impacto funcional, afectación a la información o indicios razonables de compromiso.  
+  Si existe duda, se prioriza iniciar la respuesta y ajustar posteriormente la clasificación.
+
+- **Escalado de SEV3 a SEV2:**  
+  Algunos ejemplos que justificarían el escalado serían:
+  - afectación a sistemas críticos,
+  - compromiso de cuentas privilegiadas,
+  - múltiples equipos afectados,
+  - o indicios de acceso no autorizado mantenido en el tiempo.
+
+- **Escalado a SEV1:**  
+  Se considera especialmente crítico cuando existe:
+  - ransomware activo,
+  - caída generalizada de servicios,
+  - extorsión,
+  - o una posible brecha de datos relevante relacionada con RGPD.
+
+- **Estado de contención:**  
+  Un incidente se considera contenido cuando:
+  - se ha detenido la propagación,
+  - los accesos comprometidos han sido bloqueados,
+  - y la monitorización deja de mostrar actividad maliciosa asociada.
+
+- **Paso a recuperación:**  
+  La recuperación comienza cuando el equipo técnico considera que el entorno está suficientemente controlado y que ya es posible restaurar servicios sin riesgo alto de reinfección.
+
+- **Cierre técnico del incidente:**  
+  El cierre se realiza cuando:
+  - los sistemas han sido validados,
+  - las credenciales comprometidas han sido rotadas,
+  - la monitorización no detecta nueva actividad,
+  - y negocio aprueba el retorno a la normalidad.
+
+***
+### ¿Qué fase suele estar más floja en un plan de respuesta?
+
+En muchos casos, la fase más débil suele ser la de **erradicación**.
+
+Esto ocurre porque eliminar completamente la causa raíz no siempre es sencillo. A veces se restaura un sistema afectado, pero el vector inicial sigue presente, por ejemplo:
+- una cuenta comprometida,
+- una vulnerabilidad sin corregir,
+- o una regla maliciosa que continúa activa.
+
+Además, esta fase depende mucho de la visibilidad disponible. Si la organización no tiene buen inventario, SIEM o EDR correctamente configurados, identificar persistencia o movimiento lateral se vuelve más complicado.
+
+También es una fase que suele generar presión por parte de negocio, ya que una erradicación completa puede implicar:
+- reinicios,
+- cambios masivos de credenciales,
+- cortes de acceso,
+- o paradas temporales de servicios.
+
+Por último, actuar demasiado rápido puede provocar pérdida de evidencias útiles para el análisis posterior.
+
+***
+### ¿Qué fase está mejor trabajada en este plan?
+
+La parte más sólida del plan es la relacionada con el **triage y el escalado inicial**.
+
+Esto se debe a varios motivos:
+
+- La clasificación SEV1–SEV4 está bien definida.
+- El flujo de escalado evita decisiones improvisadas.
+- Las responsabilidades están repartidas de forma clara.
+- Existe una cadencia de comunicación definida según la severidad.
+- Se prioriza actuar rápido durante las primeras fases del incidente.
+
+En general, el plan intenta que las primeras decisiones sean lo más rápidas y organizadas posible, ya que normalmente son las que más influyen en limitar el impacto final.
+
+***
+## 2.a Flujo de toma de decisiones y escalado + plan de comunicación
+
+### ¿En qué consiste el flujo de toma de decisiones y escalado?
+
+El flujo principal de actuación ya aparece representado en el IRP mediante el diagrama de escalado y gestión de incidentes.  
+El proceso sigue una secuencia lógica:
+
+**detección → validación → clasificación → escalado → contención → recuperación**
+
+Sin embargo, más allá del flujo técnico, en incidentes reales suelen aparecer decisiones que no son totalmente automáticas y que requieren coordinación entre diferentes áreas.
+
+***
+### Puntos de ambigüedad y decisiones humanas
+
+Aunque el proceso esté definido, hay situaciones donde la parte humana tiene bastante peso.
+
+- **Aislamiento de sistemas críticos:**  
+  La decisión técnica suele tomarla el Incident Commander junto con el equipo técnico, pero el impacto operativo debe validarlo el responsable de negocio afectado.
+
+- **Comunicación externa:**  
+  Las decisiones relacionadas con clientes, reguladores o posibles brechas RGPD deben coordinarse con los equipos de legal y compliance para evitar comunicar información incorrecta o incompleta.
+
+- **Priorización durante el incidente:**  
+  Dependiendo del escenario, las prioridades cambian:
+  - si hay exfiltración activa, la prioridad es contener,
+  - si el ransomware se está propagando, lo urgente es aislar,
+  - y si hay caída de servicios críticos, debe buscarse equilibrio entre recuperación rápida y seguridad.
+
+- **Presión por restaurar servicios:**  
+  En algunos casos negocio puede pedir restaurar sistemas rápidamente.  
+  Aun así, antes de recuperar servicios se consideran mínimos necesarios:
+  - preservar evidencias,
+  - cortar el vector de entrada,
+  - y rotar credenciales comprometidas.
+
+***
+### Reglas básicas de decisión
+
+Para evitar conflictos o falta de coordinación, el plan define varios principios básicos:
+
+- El Incident Commander coordina la respuesta técnica.
+- Legal y Compliance gestionan la comunicación externa.
+- Negocio valida el impacto operativo y las prioridades de continuidad.
+- Seguridad mantiene la autoridad sobre los controles mínimos necesarios antes de restaurar servicios.
+
+***
+### ¿Existe un plan de comunicación?
+
+Sí. El plan incluye una fase específica de comunicación para reducir desorganización y evitar información contradictoria.
+
+Se definen:
+- canales oficiales,
+- responsables de comunicación,
+- frecuencia de actualizaciones,
+- y destinatarios según la severidad del incidente.
+
+La comunicación se divide principalmente en:
+- comunicación técnica interna,
+- comunicación a dirección,
+- y comunicación externa cuando aplica.
+
+***
+## 3.a Respuestas resilientes: por qué lo son y en qué fases se centran
+
+### ¿Cómo se asegura la resiliencia en el plan?
+
+La resiliencia se trabaja principalmente intentando que la organización pueda seguir operando o recuperarse rápidamente incluso después de un incidente grave.
+
+Para ello el plan incluye medidas como:
+
+- backups externos y verificados,
+- segmentación de red,
+- MFA y mínimo privilegio,
+- y preservación adecuada de evidencias.
+
+***
+### ¿Por qué estas medidas se consideran resilientes?
+
+Se consideran resilientes porque reducen el impacto cuando algo falla.
+
+Por ejemplo:
+- la segmentación limita la propagación,
+- las copias de seguridad permiten restaurar servicios,
+- y la gestión de identidades reduce el impacto de credenciales comprometidas.
+
+La idea no es evitar todos los incidentes, sino conseguir que el daño sea controlable y la recuperación más rápida.
+
+***
+### ¿En qué fases se centran principalmente?
+
+Las medidas resilientes aparecen sobre todo en tres fases:
+
+- **Preparación:**  
+  backups, segmentación, formación y controles de identidad.
+
+- **Contención:**  
+  aislamiento de equipos, bloqueo de accesos y limitación de propagación.
+
+- **Recuperación:**  
+  restauración controlada, validación de sistemas y monitorización posterior.
+
+***
+### Ejemplos prácticos de recuperación resiliente
+
+#### Ransomware en servidor de archivos
+
+- **Qué falla:**  
+  indisponibilidad del sistema y riesgo de propagación.
+
+- **Respuesta resiliente:**  
+  aislamiento rápido, bloqueo del movimiento lateral y restauración desde backups verificados.
+
+- **Fases principales:**  
+  contención y recuperación.
+
+***
+#### Compromiso de credenciales
+
+- **Qué falla:**  
+  acceso no autorizado usando cuentas legítimas.
+
+- **Respuesta resiliente:**  
+  revocación de sesiones, cambio de contraseñas, MFA y revisión de accesos sospechosos.
+
+- **Fases principales:**  
+  contención y erradicación.
+
+***
+#### Posible brecha de datos
+
+- **Qué falla:**  
+  riesgo legal, reputacional y posible exfiltración.
+
+- **Respuesta resiliente:**  
+  conservación de evidencias, bloqueo del canal de salida y coordinación con legal/compliance.
+
+- **Fases principales:**  
+  comunicación, remediación y recuperación.
