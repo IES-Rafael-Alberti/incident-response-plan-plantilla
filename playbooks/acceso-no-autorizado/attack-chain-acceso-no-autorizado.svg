@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320">
+  <defs>
+    <style>
+      .attack-box { fill: #fff3cd; stroke: #ff6b6b; stroke-width: 2; }
+      .attack-title { font-family: Arial, sans-serif; font-weight: bold; font-size: 13px; fill: #333; }
+      .attack-subtitle { font-family: Arial, sans-serif; font-size: 10px; fill: #666; }
+      .technique-id { font-family: monospace; font-size: 11px; fill: #d32f2f; font-weight: bold; }
+      .arrow { fill: none; stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+      .phase { font-family: Arial, sans-serif; font-weight: bold; font-size: 13px; fill: #fff; }
+      .detect-label { font-family: Arial, sans-serif; font-size: 10px; text-anchor: middle; fill: #333; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">
+    Cadena de Ataque: Acceso No Autorizado
+  </text>
+
+  <!-- Phase 1: Reconocimiento / Acceso Inicial -->
+  <rect x="20" y="55" width="155" height="115" class="attack-box" rx="5"/>
+  <text x="97" y="78" class="attack-title" text-anchor="middle">Acceso Inicial</text>
+  <text x="97" y="97" class="technique-id" text-anchor="middle">T1078 / T1566</text>
+  <text x="97" y="115" class="attack-subtitle" text-anchor="middle">Credenciales robadas,</text>
+  <text x="97" y="129" class="attack-subtitle" text-anchor="middle">phishing, brute force,</text>
+  <text x="97" y="143" class="attack-subtitle" text-anchor="middle">credential stuffing</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 175 112 L 215 112" class="arrow"/>
+
+  <!-- Phase 2: Bypass de MFA -->
+  <rect x="215" y="55" width="155" height="115" class="attack-box" rx="5"/>
+  <text x="292" y="78" class="attack-title" text-anchor="middle">Bypass MFA</text>
+  <text x="292" y="97" class="technique-id" text-anchor="middle">T1621 / T1111</text>
+  <text x="292" y="115" class="attack-subtitle" text-anchor="middle">MFA fatigue, SIM swap,</text>
+  <text x="292" y="129" class="attack-subtitle" text-anchor="middle">phishing OTP en tiempo</text>
+  <text x="292" y="143" class="attack-subtitle" text-anchor="middle">real, robo de token</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 370 112 L 410 112" class="arrow"/>
+
+  <!-- Phase 3: Establecimiento de Sesión -->
+  <rect x="410" y="55" width="155" height="115" class="attack-box" rx="5"/>
+  <text x="487" y="78" class="attack-title" text-anchor="middle">Sesión Activa</text>
+  <text x="487" y="97" class="technique-id" text-anchor="middle">T1563 / T1550</text>
+  <text x="487" y="115" class="attack-subtitle" text-anchor="middle">Session hijacking,</text>
+  <text x="487" y="129" class="attack-subtitle" text-anchor="middle">pass-the-cookie,</text>
+  <text x="487" y="143" class="attack-subtitle" text-anchor="middle">token OAuth robado</text>
+
+  <!-- Arrow 3 -->
+  <path d="M 565 112 L 605 112" class="arrow"/>
+
+  <!-- Phase 4: Reconocimiento Interno -->
+  <rect x="605" y="55" width="155" height="115" class="attack-box" rx="5"/>
+  <text x="682" y="78" class="attack-title" text-anchor="middle">Reconocimiento</text>
+  <text x="682" y="97" class="technique-id" text-anchor="middle">T1087 / T1083</text>
+  <text x="682" y="115" class="attack-subtitle" text-anchor="middle">Enumeración cuentas,</text>
+  <text x="682" y="129" class="attack-subtitle" text-anchor="middle">descubrimiento de datos,</text>
+  <text x="682" y="143" class="attack-subtitle" text-anchor="middle">escaneo de recursos</text>
+
+  <!-- Arrow 4 -->
+  <path d="M 760 112 L 800 112" class="arrow"/>
+
+  <!-- Phase 5: Persistencia -->
+  <rect x="800" y="55" width="155" height="115" class="attack-box" rx="5"/>
+  <text x="877" y="78" class="attack-title" text-anchor="middle">Persistencia</text>
+  <text x="877" y="97" class="technique-id" text-anchor="middle">T1098 / T1136</text>
+  <text x="877" y="115" class="attack-subtitle" text-anchor="middle">Nueva cuenta admin,</text>
+  <text x="877" y="129" class="attack-subtitle" text-anchor="middle">reglas de reenvío,</text>
+  <text x="877" y="143" class="attack-subtitle" text-anchor="middle">backdoor, clave SSH</text>
+
+  <!-- Arrow 5 -->
+  <path d="M 955 112 L 995 112" class="arrow"/>
+
+  <!-- Phase 6: Impacto (critical) -->
+  <rect x="995" y="55" width="155" height="115" class="attack-box" rx="5"/>
+  <rect x="1000" y="60" width="145" height="105" fill="#d32f2f" rx="3" opacity="0.92"/>
+  <text x="1072" y="85" class="phase" text-anchor="middle">Impacto</text>
+  <text x="1072" y="103" class="technique-id" text-anchor="middle" fill="#ffe0e0">T1530 / T1485</text>
+  <text x="1072" y="121" class="phase" font-size="10" text-anchor="middle">Exfiltración datos,</text>
+  <text x="1072" y="136" class="phase" font-size="10" text-anchor="middle">borrado, movimiento</text>
+  <text x="1072" y="151" class="phase" font-size="10" text-anchor="middle">lateral, fraude</text>
+
+  <!-- Bottom timeline -->
+  <line x1="20" y1="215" x2="1155" y2="215" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <!-- Detection points -->
+  <circle cx="97"   cy="215" r="5" fill="#4caf50"/>
+  <text x="97"   y="233" class="detect-label">Auth logs /</text>
+  <text x="97"   y="245" class="detect-label">alertas brute force</text>
+
+  <circle cx="292"  cy="215" r="5" fill="#ff9800"/>
+  <text x="292"  y="233" class="detect-label">Alerta MFA</text>
+  <text x="292"  y="245" class="detect-label">push/OTP anómalo</text>
+
+  <circle cx="487"  cy="215" r="5" fill="#ff9800"/>
+  <text x="487"  y="233" class="detect-label">IP / user-agent</text>
+  <text x="487"  y="245" class="detect-label">inusual en sesión</text>
+
+  <circle cx="682"  cy="215" r="5" fill="#ff9800"/>
+  <text x="682"  y="233" class="detect-label">SIEM: queries</text>
+  <text x="682"  y="245" class="detect-label">masivas / AD enum</text>
+
+  <circle cx="877"  cy="215" r="5" fill="#ff9800"/>
+  <text x="877"  y="233" class="detect-label">EDR: new account /</text>
+  <text x="877"  y="245" class="detect-label">mail rule creada</text>
+
+  <circle cx="1072" cy="215" r="5" fill="#d32f2f"/>
+  <text x="1072" y="233" class="detect-label">DLP / proxy:</text>
+  <text x="1072" y="245" class="detect-label">descarga masiva</text>
+
+  <!-- Legend -->
+  <circle cx="30"  cy="285" r="5" fill="#4caf50"/>
+  <text x="42" y="289" font-family="Arial" font-size="11" fill="#555">Detección temprana</text>
+  <circle cx="155" cy="285" r="5" fill="#ff9800"/>
+  <text x="167" y="289" font-family="Arial" font-size="11" fill="#555">Detección intermedia</text>
+  <circle cx="290" cy="285" r="5" fill="#d32f2f"/>
+  <text x="302" y="289" font-family="Arial" font-size="11" fill="#555">Fase crítica</text>
+  <text x="420" y="289" font-family="Arial" font-size="11" fill="#aaa">MITRE ATT&amp;CK — TA0001 Acceso Inicial | TA0006 Acceso a Credenciales | TA0003 Persistencia | TA0009/TA0040 Impacto</text>
+</svg>

@@ -6,7 +6,15 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ---
 
+### Cadena de Ataque
+
+![Attack Chain: Acceso No Autorizado](./attack-chain-acceso-no-autorizado.svg)
+
+---
+
 ### Investigar
+
+![MITRE ATT&CK Navigator – Acceso No Autorizado](./Acceso_No_Autorizado_ATTACK.svg)
 
 `OBJETIVO: Confirmar que se trata de un acceso no autorizado real (descartar falsos positivos), identificar el vector de entrada, el alcance del acceso y los datos o sistemas comprometidos.`
 
@@ -25,7 +33,7 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
         * Capturas de pantalla o exportaciones de logs relevantes.
 
 1. **Determinar el vector de acceso**
-    * Revisar los vectores de acceso inicial más comunes (MITRE ATT&CK [TA0001](https://attack.mitre.org/tactics/TA0001/)):
+    * Revisar los vectores de acceso inicial más comunes (MITRE ATT&CK TA0001:
         * Credenciales robadas o filtradas (phishing, credential stuffing, brute force, compra en dark web).
         * Sesión secuestrada (session hijacking, cookie theft, token robado).
         * Explotación de vulnerabilidad (servicio expuesto sin parchear: VPN, RDP, aplicación web).
@@ -70,6 +78,8 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 ---
 
 ### Remediar
+
+![Flujo de Respuesta – Acceso No Autorizado](./Acceso_No_Autorizado_REACT.svg)
 
 * **Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
 * **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
