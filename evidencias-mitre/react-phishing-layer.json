@@ -1,0 +1,168 @@
+{
+  "name": "Nexo Lebrija - RE&CT phishing",
+  "framework": "RE&CT",
+  "related_attack_layer": "attack-phishing-layer.json",
+  "playbook": "playbook-phishing.md",
+  "description": "Acciones RE&CT priorizadas para phishing y correo malicioso, alineadas con las tecnicas ATT&CK T1566.001, T1566.002, T1204, T1059, T1056, T1555.003, T1114 y T1041.",
+  "risks": ["R03", "R05", "R08"],
+  "assets": ["Correo corporativo", "Credenciales", "Puestos de trabajo", "Datos personales", "Buzones"],
+  "legendItems": [
+    { "label": "Prioridad media", "color": "#9ecae1" },
+    { "label": "Critico para el playbook", "color": "#3182bd" }
+  ],
+  "stages": [
+    {
+      "id": "RS0001",
+      "name": "Preparation",
+      "actions": [
+        "Raise personnel awareness",
+        "Get ability to delete email message",
+        "Set up relevant data collection",
+        "Prepare email quarantine procedure",
+        "Prepare credential reset procedure"
+      ],
+      "comments": [
+        {
+          "action": "Get ability to delete email message",
+          "priority": 3,
+          "attackTechniques": ["T1566.001", "T1566.002"],
+          "comment": "Permite purgar mensajes maliciosos de buzones cuando se confirma phishing."
+        },
+        {
+          "action": "Prepare credential reset procedure",
+          "priority": 3,
+          "attackTechniques": ["T1056", "T1555.003"],
+          "comment": "Permite reaccionar rapido si el phishing roba credenciales o tokens."
+        }
+      ]
+    },
+    {
+      "id": "RS0002",
+      "name": "Identification",
+      "actions": [
+        "Collect email message",
+        "List email message receivers",
+        "Collect logs",
+        "List victims of security alert",
+        "Collect evidence",
+        "Identify transferred data"
+      ],
+      "comments": [
+        {
+          "action": "Collect email message",
+          "priority": 3,
+          "attackTechniques": ["T1566.001", "T1566.002"],
+          "comment": "Recoge mensaje, cabeceras, adjuntos, URLs y remitente para confirmar el vector."
+        },
+        {
+          "action": "List email message receivers",
+          "priority": 3,
+          "attackTechniques": ["T1566.001", "T1566.002"],
+          "comment": "Permite saber quien recibio el correo y quien pudo interactuar."
+        },
+        {
+          "action": "Collect logs",
+          "priority": 3,
+          "attackTechniques": ["T1204", "T1059", "T1114"],
+          "comment": "Correlaciona clics, ejecuciones, reglas de buzon, accesos y actividad posterior."
+        }
+      ]
+    },
+    {
+      "id": "RS0003",
+      "name": "Containment",
+      "actions": [
+        "Quarantine email message",
+        "Block external domain",
+        "Block external IP address",
+        "Lock user account",
+        "Reset credentials",
+        "Isolate host"
+      ],
+      "comments": [
+        {
+          "action": "Quarantine email message",
+          "priority": 3,
+          "attackTechniques": ["T1566.001", "T1566.002"],
+          "comment": "Evita que mas usuarios interactuen con el correo malicioso."
+        },
+        {
+          "action": "Lock user account",
+          "priority": 3,
+          "attackTechniques": ["T1056", "T1555.003", "T1114"],
+          "comment": "Contiene cuentas con credenciales introducidas, robadas o usadas para acceder al buzon."
+        },
+        {
+          "action": "Isolate host",
+          "priority": 2,
+          "attackTechniques": ["T1204", "T1059"],
+          "comment": "Contiene endpoints donde se ejecuto adjunto, macro, script o comando."
+        }
+      ]
+    },
+    {
+      "id": "RS0004",
+      "name": "Eradication",
+      "actions": [
+        "Delete email message",
+        "Remove file",
+        "Remove malicious changes",
+        "Remove mailbox rule",
+        "Patch misconfiguration"
+      ],
+      "comments": [
+        {
+          "action": "Delete email message",
+          "priority": 3,
+          "attackTechniques": ["T1566.001", "T1566.002"],
+          "comment": "Elimina mensajes confirmados como maliciosos de los buzones."
+        },
+        {
+          "action": "Remove mailbox rule",
+          "priority": 3,
+          "attackTechniques": ["T1114"],
+          "comment": "Elimina reglas de reenvio o persistencia en buzon tras compromiso."
+        }
+      ]
+    },
+    {
+      "id": "RS0005",
+      "name": "Recovery",
+      "actions": [
+        "Unlock locked user account",
+        "Restore service",
+        "Validate restored access",
+        "Monitor restored account",
+        "Notify affected users"
+      ],
+      "comments": [
+        {
+          "action": "Monitor restored account",
+          "priority": 3,
+          "attackTechniques": ["T1114", "T1041"],
+          "comment": "Vigila actividad posterior en buzon y posibles salidas de informacion."
+        }
+      ]
+    },
+    {
+      "id": "RS0006",
+      "name": "Lessons Learned",
+      "actions": [
+        "Develop incident report",
+        "Conduct lessons learned exercise",
+        "Improve detections",
+        "Update playbook",
+        "Update MISP event",
+        "Run phishing awareness reinforcement"
+      ],
+      "comments": [
+        {
+          "action": "Improve detections",
+          "priority": 3,
+          "attackTechniques": ["T1566.001", "T1566.002", "T1204", "T1114"],
+          "comment": "Convierte remitentes, asuntos, URLs, hashes y patrones de buzon en nuevas detecciones."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "name": "Nexo Lebrija - RE&CT fuga de datos personales",
+  "framework": "RE&CT",
+  "related_attack_layer": "attack-data-breach-layer.json",
+  "playbook": "playbook-data-breach.md",
+  "description": "Acciones RE&CT priorizadas para fuga de datos personales y brecha RGPD, alineadas con las tecnicas ATT&CK T1213, T1567, T1041, T1070.001, T1222 y T1565.",
+  "risks": ["R03", "R01", "R02", "R11"],
+  "assets": ["Datos personales", "CRM/ERP", "Servidores de archivos", "Correo", "Cloud", "Proveedores"],
+  "legendItems": [
+    { "label": "Prioridad media", "color": "#bcbddc" },
+    { "label": "Critico para el playbook", "color": "#756bb1" }
+  ],
+  "stages": [
+    {
+      "id": "RS0001",
+      "name": "Preparation",
+      "actions": [
+        "Maintain critical information list",
+        "Set up relevant data collection",
+        "Prepare legal notification workflow",
+        "Prepare evidence retention"
+      ],
+      "comments": [
+        {
+          "action": "Maintain critical information list",
+          "priority": 3,
+          "attackTechniques": ["T1213", "T1565"],
+          "comment": "Permite saber que repositorios contienen datos personales y que impacto tendria su acceso, borrado o alteracion."
+        },
+        {
+          "action": "Prepare legal notification workflow",
+          "priority": 3,
+          "attackTechniques": ["T1567", "T1041"],
+          "comment": "Si hay exfiltracion, la evaluacion RGPD/AEPD debe iniciarse rapidamente."
+        }
+      ]
+    },
+    {
+      "id": "RS0002",
+      "name": "Identification",
+      "actions": [
+        "Collect evidence",
+        "Collect logs",
+        "Scope incident",
+        "Identify transferred data",
+        "List accessed repositories"
+      ],
+      "comments": [
+        {
+          "action": "List accessed repositories",
+          "priority": 3,
+          "attackTechniques": ["T1213"],
+          "comment": "Identifica ficheros, tablas, buzones o repositorios con datos personales accedidos."
+        },
+        {
+          "action": "Identify transferred data",
+          "priority": 3,
+          "attackTechniques": ["T1567", "T1041"],
+          "comment": "Determina si los datos salieron por servicio web/cloud o canal C2."
+        },
+        {
+          "action": "Collect evidence",
+          "priority": 3,
+          "attackTechniques": ["T1070.001", "T1222"],
+          "comment": "Preserva logs y permisos antes de que el atacante o procesos automaticos los alteren."
+        }
+      ]
+    },
+    {
+      "id": "RS0003",
+      "name": "Containment",
+      "actions": [
+        "Block external IP address",
+        "Block external domain",
+        "Disable public sharing",
+        "Lock user account",
+        "Stop data transfer"
+      ],
+      "comments": [
+        {
+          "action": "Stop data transfer",
+          "priority": 3,
+          "attackTechniques": ["T1567", "T1041"],
+          "comment": "Corta canales de salida usados para exfiltracion."
+        },
+        {
+          "action": "Disable public sharing",
+          "priority": 3,
+          "attackTechniques": ["T1213", "T1222"],
+          "comment": "Reduce exposicion de repositorios o permisos excesivos."
+        }
+      ]
+    },
+    {
+      "id": "RS0004",
+      "name": "Eradication",
+      "actions": [
+        "Restore permissions",
+        "Remove malicious changes",
+        "Remove unauthorized copy",
+        "Patch misconfiguration",
+        "Recover deleted logs when possible"
+      ],
+      "comments": [
+        {
+          "action": "Restore permissions",
+          "priority": 3,
+          "attackTechniques": ["T1222"],
+          "comment": "Revierte permisos indebidos sobre ficheros, carpetas o repositorios."
+        },
+        {
+          "action": "Recover deleted logs when possible",
+          "priority": 2,
+          "attackTechniques": ["T1070.001"],
+          "comment": "Ayuda a reconstruir actividad si se intentaron borrar registros."
+        }
+      ]
+    },
+    {
+      "id": "RS0005",
+      "name": "Recovery",
+      "actions": [
+        "Restore data from backup",
+        "Validate restored data",
+        "Restore service",
+        "Reopen access with least privilege",
+        "Monitor restored repositories"
+      ],
+      "comments": [
+        {
+          "action": "Validate restored data",
+          "priority": 3,
+          "attackTechniques": ["T1565"],
+          "comment": "Confirma integridad cuando los datos han sido manipulados, borrados o alterados."
+        }
+      ]
+    },
+    {
+      "id": "RS0006",
+      "name": "Lessons Learned",
+      "actions": [
+        "Develop incident report",
+        "Conduct lessons learned exercise",
+        "Improve detections",
+        "Update playbook",
+        "Document GDPR decision",
+        "Update MISP event"
+      ],
+      "comments": [
+        {
+          "action": "Document GDPR decision",
+          "priority": 3,
+          "attackTechniques": ["T1213", "T1567", "T1041"],
+          "comment": "Documenta si procede notificar a AEPD o personas afectadas por acceso o exfiltracion de datos personales."
+        }
+      ]
+    }
+  ]
+}

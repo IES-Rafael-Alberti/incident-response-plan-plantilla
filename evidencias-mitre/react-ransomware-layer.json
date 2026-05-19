@@ -1,0 +1,175 @@
+{
+  "name": "Nexo Lebrija - RE&CT ransomware",
+  "framework": "RE&CT",
+  "related_attack_layer": "attack-ransomware-layer.json",
+  "playbook": "playbook-ransomware.md",
+  "description": "Acciones RE&CT priorizadas para ransomware, alineadas con las tecnicas ATT&CK T1566, T1190, T1078, T1059, T1204, T1021, T1021.002, T1486 y T1490.",
+  "risks": ["R01", "R02", "R06", "R08"],
+  "assets": ["CRM/ERP", "Servidores", "Copias de seguridad", "Puestos de trabajo", "Datos personales"],
+  "legendItems": [
+    { "label": "Prioridad media", "color": "#fdbb84" },
+    { "label": "Critico para el playbook", "color": "#e34a33" }
+  ],
+  "stages": [
+    {
+      "id": "RS0001",
+      "name": "Preparation",
+      "actions": [
+        "Set up relevant data collection",
+        "Prepare isolation procedure",
+        "Prepare backup restore procedure",
+        "Practice",
+        "Prepare emergency communications"
+      ],
+      "comments": [
+        {
+          "action": "Prepare backup restore procedure",
+          "priority": 3,
+          "attackTechniques": ["T1486", "T1490"],
+          "comment": "La recuperacion depende de copias limpias si hay cifrado o ataque a mecanismos de recuperacion."
+        },
+        {
+          "action": "Prepare isolation procedure",
+          "priority": 3,
+          "attackTechniques": ["T1021", "T1021.002"],
+          "comment": "Permite cortar movimiento lateral por servicios remotos y SMB."
+        }
+      ]
+    },
+    {
+      "id": "RS0002",
+      "name": "Identification",
+      "actions": [
+        "Collect logs",
+        "List victims of security alert",
+        "List processes executed",
+        "Acquire forensic evidence",
+        "Collect evidence",
+        "Identify encrypted data"
+      ],
+      "comments": [
+        {
+          "action": "List processes executed",
+          "priority": 3,
+          "attackTechniques": ["T1059", "T1204"],
+          "comment": "Identifica comandos, scripts, binarios y ejecuciones relacionadas con el ransomware."
+        },
+        {
+          "action": "List victims of security alert",
+          "priority": 3,
+          "attackTechniques": ["T1021", "T1021.002", "T1486"],
+          "comment": "Delimita equipos, servidores y comparticiones afectadas."
+        },
+        {
+          "action": "Collect logs",
+          "priority": 3,
+          "attackTechniques": ["T1566", "T1190", "T1078"],
+          "comment": "Ayuda a identificar vector inicial: phishing, servicio expuesto o credenciales validas."
+        }
+      ]
+    },
+    {
+      "id": "RS0003",
+      "name": "Containment",
+      "actions": [
+        "Isolate host",
+        "Block internal IP address",
+        "Lock user account",
+        "Disable remote service",
+        "Protect backup repository",
+        "Block process by executable hash"
+      ],
+      "comments": [
+        {
+          "action": "Isolate host",
+          "priority": 3,
+          "attackTechniques": ["T1486", "T1059"],
+          "comment": "Corta cifrado activo y ejecucion maliciosa en hosts afectados."
+        },
+        {
+          "action": "Disable remote service",
+          "priority": 3,
+          "attackTechniques": ["T1021", "T1021.002"],
+          "comment": "Reduce movimiento lateral por RDP, SMB, VPN o servicios remotos."
+        },
+        {
+          "action": "Protect backup repository",
+          "priority": 3,
+          "attackTechniques": ["T1490"],
+          "comment": "Evita borrado, cifrado o sobrescritura de copias de seguridad."
+        }
+      ]
+    },
+    {
+      "id": "RS0004",
+      "name": "Eradication",
+      "actions": [
+        "Remove file",
+        "Remove malicious persistence",
+        "Patch vulnerability",
+        "Reset credentials",
+        "Reinstall host from golden image",
+        "Remove malicious changes"
+      ],
+      "comments": [
+        {
+          "action": "Patch vulnerability",
+          "priority": 3,
+          "attackTechniques": ["T1190"],
+          "comment": "Elimina vulnerabilidad explotada en servicio publico o aplicacion expuesta."
+        },
+        {
+          "action": "Reset credentials",
+          "priority": 3,
+          "attackTechniques": ["T1078"],
+          "comment": "Evita reutilizacion de credenciales validas usadas para propagacion."
+        }
+      ]
+    },
+    {
+      "id": "RS0005",
+      "name": "Recovery",
+      "actions": [
+        "Restore data from backup",
+        "Validate restored data",
+        "Restore service",
+        "Reinstall host from golden image",
+        "Monitor restored service"
+      ],
+      "comments": [
+        {
+          "action": "Restore data from backup",
+          "priority": 3,
+          "attackTechniques": ["T1486", "T1490"],
+          "comment": "Recupera datos cifrados desde copias limpias y verificadas."
+        },
+        {
+          "action": "Monitor restored service",
+          "priority": 3,
+          "attackTechniques": ["T1021", "T1059"],
+          "comment": "Busca reinfeccion, movimiento lateral o ejecucion posterior durante la recuperacion."
+        }
+      ]
+    },
+    {
+      "id": "RS0006",
+      "name": "Lessons Learned",
+      "actions": [
+        "Develop incident report",
+        "Conduct lessons learned exercise",
+        "Improve detections",
+        "Update playbook",
+        "Review backup resilience",
+        "Update MISP event"
+      ],
+      "comments": [
+        {
+          "action": "Review backup resilience",
+          "priority": 3,
+          "attackTechniques": ["T1490"],
+          "comment": "Refuerza inmutabilidad, pruebas de restauracion y proteccion de backups."
+        }
+      ]
+    }
+  ]
+}

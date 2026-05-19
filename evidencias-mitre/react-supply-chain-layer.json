@@ -1,0 +1,163 @@
+{
+  "name": "Nexo Lebrija - RE&CT cadena de suministro",
+  "framework": "RE&CT",
+  "related_attack_layer": "attack-supply-chain-layer.json",
+  "playbook": "playbook-supply-chain.md",
+  "description": "Acciones RE&CT priorizadas para compromiso de cadena de suministro, alineadas con las tecnicas ATT&CK T1195, T1199, T1078, T1098, T1505, T1554, T1489 y T1531.",
+  "risks": ["R11", "R04", "R03", "R01"],
+  "assets": ["Proveedores", "Integraciones", "Servicios gestionados", "Web/tienda", "Cloud", "Datos personales"],
+  "legendItems": [
+    { "label": "Prioridad media", "color": "#bdbdbd" },
+    { "label": "Critico para el playbook", "color": "#636363" }
+  ],
+  "stages": [
+    {
+      "id": "RS0001",
+      "name": "Preparation",
+      "actions": [
+        "Prepare third-party contact list",
+        "Maintain supplier inventory",
+        "Prepare contract evidence",
+        "Set up relevant data collection",
+        "Prepare alternate service"
+      ],
+      "comments": [
+        {
+          "action": "Maintain supplier inventory",
+          "priority": 3,
+          "attackTechniques": ["T1195", "T1199"],
+          "comment": "Permite identificar proveedores, software, integraciones y relaciones de confianza afectadas."
+        },
+        {
+          "action": "Prepare alternate service",
+          "priority": 2,
+          "attackTechniques": ["T1489", "T1531"],
+          "comment": "Permite continuidad si el proveedor causa parada de servicio o bloqueo de acceso."
+        }
+      ]
+    },
+    {
+      "id": "RS0002",
+      "name": "Identification",
+      "actions": [
+        "Contact external company",
+        "Collect logs",
+        "Scope incident",
+        "Collect evidence",
+        "List affected integrations",
+        "Identify transferred data"
+      ],
+      "comments": [
+        {
+          "action": "Contact external company",
+          "priority": 3,
+          "attackTechniques": ["T1195", "T1199"],
+          "comment": "Solicita al proveedor linea temporal, alcance, IOCs, medidas y evidencias."
+        },
+        {
+          "action": "List affected integrations",
+          "priority": 3,
+          "attackTechniques": ["T1078", "T1098", "T1554"],
+          "comment": "Identifica cuentas, integraciones, actualizaciones, binarios y permisos del proveedor."
+        }
+      ]
+    },
+    {
+      "id": "RS0003",
+      "name": "Containment",
+      "actions": [
+        "Lock user account",
+        "Revoke token",
+        "Block external IP address",
+        "Disable integration",
+        "Freeze supplier update",
+        "Segment supplier access"
+      ],
+      "comments": [
+        {
+          "action": "Disable integration",
+          "priority": 3,
+          "attackTechniques": ["T1199", "T1078", "T1098"],
+          "comment": "Corta accesos de proveedor, cuentas validas e integraciones comprometidas."
+        },
+        {
+          "action": "Freeze supplier update",
+          "priority": 3,
+          "attackTechniques": ["T1195", "T1554"],
+          "comment": "Detiene despliegue de software, binarios o actualizaciones sospechosas."
+        }
+      ]
+    },
+    {
+      "id": "RS0004",
+      "name": "Eradication",
+      "actions": [
+        "Remove malicious file",
+        "Remove malicious changes",
+        "Patch vulnerability",
+        "Rotate secrets",
+        "Reinstall trusted component",
+        "Restore permissions"
+      ],
+      "comments": [
+        {
+          "action": "Reinstall trusted component",
+          "priority": 3,
+          "attackTechniques": ["T1505", "T1554"],
+          "comment": "Sustituye agentes, binarios, componentes o actualizaciones comprometidas por versiones verificadas."
+        },
+        {
+          "action": "Rotate secrets",
+          "priority": 3,
+          "attackTechniques": ["T1078", "T1098"],
+          "comment": "Evita reutilizacion de cuentas, claves API o certificados del proveedor."
+        }
+      ]
+    },
+    {
+      "id": "RS0005",
+      "name": "Recovery",
+      "actions": [
+        "Restore service",
+        "Switch to alternate service",
+        "Restore data from backup",
+        "Validate restored data",
+        "Reopen supplier access gradually"
+      ],
+      "comments": [
+        {
+          "action": "Switch to alternate service",
+          "priority": 2,
+          "attackTechniques": ["T1489", "T1531"],
+          "comment": "Mantiene continuidad si el proveedor afectado no puede restablecer servicio o acceso seguro."
+        },
+        {
+          "action": "Reopen supplier access gradually",
+          "priority": 3,
+          "attackTechniques": ["T1199", "T1098"],
+          "comment": "Restablece la relacion de confianza solo tras evidencias de contencion y minimo privilegio."
+        }
+      ]
+    },
+    {
+      "id": "RS0006",
+      "name": "Lessons Learned",
+      "actions": [
+        "Develop incident report",
+        "Conduct lessons learned exercise",
+        "Improve detections",
+        "Update playbook",
+        "Review supplier contract",
+        "Update MISP event"
+      ],
+      "comments": [
+        {
+          "action": "Review supplier contract",
+          "priority": 3,
+          "attackTechniques": ["T1195", "T1199"],
+          "comment": "Refuerza SLA, obligaciones de notificacion, evidencias y controles de seguridad del proveedor."
+        }
+      ]
+    }
+  ]
+}

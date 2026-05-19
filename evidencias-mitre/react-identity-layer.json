@@ -1,0 +1,154 @@
+{
+  "name": "Nexo Lebrija - RE&CT identidad y accesos",
+  "framework": "RE&CT",
+  "related_attack_layer": "attack-identity-layer.json",
+  "playbook": "playbook-identity-and-access.md",
+  "description": "Acciones RE&CT priorizadas para compromiso de identidad y accesos, alineadas con las tecnicas ATT&CK T1078, T1110, T1098, T1136, T1548, T1087 y T1538.",
+  "risks": ["R01", "R03", "R05", "R08"],
+  "assets": ["Cuentas", "Correo", "VPN", "CRM/ERP", "Cloud", "Cuentas privilegiadas"],
+  "legendItems": [
+    { "label": "Prioridad media", "color": "#a1d99b" },
+    { "label": "Critico para el playbook", "color": "#31a354" }
+  ],
+  "stages": [
+    {
+      "id": "RS0001",
+      "name": "Preparation",
+      "actions": [
+        "Set up relevant data collection",
+        "Enable identity audit logs",
+        "Prepare privileged account roster",
+        "Prepare password reset procedure",
+        "Enforce MFA"
+      ],
+      "comments": [
+        {
+          "action": "Enable identity audit logs",
+          "priority": 3,
+          "attackTechniques": ["T1078", "T1110", "T1087"],
+          "comment": "Permite observar cuentas validas, fuerza bruta y descubrimiento de usuarios."
+        },
+        {
+          "action": "Prepare privileged account roster",
+          "priority": 3,
+          "attackTechniques": ["T1548", "T1098"],
+          "comment": "Facilita revisar abuso de privilegios y cambios en permisos."
+        }
+      ]
+    },
+    {
+      "id": "RS0002",
+      "name": "Identification",
+      "actions": [
+        "Collect logs",
+        "List users authenticated",
+        "Put compromised accounts on monitoring",
+        "Scope incident",
+        "Collect evidence"
+      ],
+      "comments": [
+        {
+          "action": "List users authenticated",
+          "priority": 3,
+          "attackTechniques": ["T1078", "T1110"],
+          "comment": "Identifica cuentas usadas, origenes de login, MFA y patrones de acceso."
+        },
+        {
+          "action": "Scope incident",
+          "priority": 3,
+          "attackTechniques": ["T1087", "T1538"],
+          "comment": "Determina que sistemas, cuentas, paneles cloud y permisos consulto el atacante."
+        }
+      ]
+    },
+    {
+      "id": "RS0003",
+      "name": "Containment",
+      "actions": [
+        "Lock user account",
+        "Reset credentials",
+        "Revoke token",
+        "Block external IP address",
+        "Remove active sessions",
+        "Remove suspicious privileges"
+      ],
+      "comments": [
+        {
+          "action": "Lock user account",
+          "priority": 3,
+          "attackTechniques": ["T1078", "T1110"],
+          "comment": "Corta uso de cuentas validas o comprometidas."
+        },
+        {
+          "action": "Remove suspicious privileges",
+          "priority": 3,
+          "attackTechniques": ["T1098", "T1548"],
+          "comment": "Contiene manipulacion de permisos o abuso de elevacion."
+        }
+      ]
+    },
+    {
+      "id": "RS0004",
+      "name": "Eradication",
+      "actions": [
+        "Remove rogue account",
+        "Remove malicious persistence",
+        "Restore permissions",
+        "Patch misconfiguration",
+        "Remove malicious changes"
+      ],
+      "comments": [
+        {
+          "action": "Remove rogue account",
+          "priority": 3,
+          "attackTechniques": ["T1136"],
+          "comment": "Elimina cuentas creadas por el atacante."
+        },
+        {
+          "action": "Remove malicious persistence",
+          "priority": 3,
+          "attackTechniques": ["T1098"],
+          "comment": "Elimina reglas, delegaciones, grupos, apps o permisos persistentes."
+        }
+      ]
+    },
+    {
+      "id": "RS0005",
+      "name": "Recovery",
+      "actions": [
+        "Unlock locked user account",
+        "Restore service",
+        "Reopen access with least privilege",
+        "Validate restored access",
+        "Monitor restored account"
+      ],
+      "comments": [
+        {
+          "action": "Reopen access with least privilege",
+          "priority": 3,
+          "attackTechniques": ["T1098", "T1548"],
+          "comment": "Devuelve acceso legitimo sin restaurar privilegios excesivos."
+        }
+      ]
+    },
+    {
+      "id": "RS0006",
+      "name": "Lessons Learned",
+      "actions": [
+        "Develop incident report",
+        "Improve detections",
+        "Update playbook",
+        "Review MFA coverage",
+        "Review privileged access"
+      ],
+      "comments": [
+        {
+          "action": "Improve detections",
+          "priority": 3,
+          "attackTechniques": ["T1078", "T1110", "T1098", "T1136"],
+          "comment": "Convierte patrones de acceso, fuerza bruta y cambios de cuentas en nuevas alertas."
+        }
+      ]
+    }
+  ]
+}

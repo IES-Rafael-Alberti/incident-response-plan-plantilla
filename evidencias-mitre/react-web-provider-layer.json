@@ -1,0 +1,163 @@
+{
+  "name": "Nexo Lebrija - RE&CT web y proveedor",
+  "framework": "RE&CT",
+  "related_attack_layer": "attack-web-provider-layer.json",
+  "playbook": "playbook-defacement.md",
+  "description": "Acciones RE&CT priorizadas para desfiguracion o compromiso web, alineadas con las tecnicas ATT&CK T1190, T1505.003, T1505, T1491, T1489 y T1567.",
+  "risks": ["R04", "R11", "R03"],
+  "assets": ["Web/tienda online", "Proveedor web", "CMS", "Datos de clientes", "Reputacion"],
+  "legendItems": [
+    { "label": "Prioridad media", "color": "#fd8d3c" },
+    { "label": "Critico para el playbook", "color": "#bd0026" }
+  ],
+  "stages": [
+    {
+      "id": "RS0001",
+      "name": "Preparation",
+      "actions": [
+        "Set up relevant data collection",
+        "Prepare web maintenance mode",
+        "Prepare provider contact",
+        "Maintain clean web backup",
+        "Prepare WAF rules"
+      ],
+      "comments": [
+        {
+          "action": "Prepare web maintenance mode",
+          "priority": 3,
+          "attackTechniques": ["T1491", "T1489"],
+          "comment": "Permite retirar contenido alterado o mantener continuidad si la web queda comprometida."
+        },
+        {
+          "action": "Maintain clean web backup",
+          "priority": 3,
+          "attackTechniques": ["T1505.003", "T1491"],
+          "comment": "Facilita restaurar contenido limpio tras web shell o defacement."
+        }
+      ]
+    },
+    {
+      "id": "RS0002",
+      "name": "Identification",
+      "actions": [
+        "Collect web logs",
+        "List host vulnerabilities",
+        "Collect evidence",
+        "Scope incident",
+        "Identify transferred data",
+        "Contact external company"
+      ],
+      "comments": [
+        {
+          "action": "List host vulnerabilities",
+          "priority": 3,
+          "attackTechniques": ["T1190"],
+          "comment": "Identifica CMS, plugin, panel o servicio expuesto explotado."
+        },
+        {
+          "action": "Collect web logs",
+          "priority": 3,
+          "attackTechniques": ["T1505.003", "T1505", "T1567"],
+          "comment": "Permite revisar web shells, componentes modificados, formularios y posible exfiltracion."
+        }
+      ]
+    },
+    {
+      "id": "RS0003",
+      "name": "Containment",
+      "actions": [
+        "Redirect traffic",
+        "Enable maintenance page",
+        "Block external IP address",
+        "Block external domain",
+        "Quarantine file by path",
+        "Disable compromised form"
+      ],
+      "comments": [
+        {
+          "action": "Enable maintenance page",
+          "priority": 3,
+          "attackTechniques": ["T1491", "T1489"],
+          "comment": "Reduce dano reputacional y evita que usuarios interactuen con una web comprometida."
+        },
+        {
+          "action": "Quarantine file by path",
+          "priority": 3,
+          "attackTechniques": ["T1505.003", "T1505"],
+          "comment": "Aisla web shells, scripts o componentes de servidor maliciosos."
+        }
+      ]
+    },
+    {
+      "id": "RS0004",
+      "name": "Eradication",
+      "actions": [
+        "Remove malicious file",
+        "Patch vulnerability",
+        "Remove malicious changes",
+        "Rotate secrets",
+        "Restore permissions",
+        "Harden web application"
+      ],
+      "comments": [
+        {
+          "action": "Remove malicious file",
+          "priority": 3,
+          "attackTechniques": ["T1505.003", "T1505"],
+          "comment": "Elimina web shells, plugins, scripts o componentes manipulados."
+        },
+        {
+          "action": "Patch vulnerability",
+          "priority": 3,
+          "attackTechniques": ["T1190"],
+          "comment": "Corrige la vulnerabilidad explotada en aplicacion publica, CMS o tienda."
+        }
+      ]
+    },
+    {
+      "id": "RS0005",
+      "name": "Recovery",
+      "actions": [
+        "Restore service",
+        "Restore data from backup",
+        "Validate restored data",
+        "Reopen web service",
+        "Monitor restored service"
+      ],
+      "comments": [
+        {
+          "action": "Restore service",
+          "priority": 3,
+          "attackTechniques": ["T1491", "T1489"],
+          "comment": "Restablece la web/tienda tras alteracion de contenido o parada de servicio."
+        },
+        {
+          "action": "Validate restored data",
+          "priority": 3,
+          "attackTechniques": ["T1567"],
+          "comment": "Comprueba formularios, pedidos, clientes o datos expuestos antes de reabrir."
+        }
+      ]
+    },
+    {
+      "id": "RS0006",
+      "name": "Lessons Learned",
+      "actions": [
+        "Develop incident report",
+        "Conduct lessons learned exercise",
+        "Improve detections",
+        "Update playbook",
+        "Review provider SLA",
+        "Update MISP event"
+      ],
+      "comments": [
+        {
+          "action": "Improve detections",
+          "priority": 3,
+          "attackTechniques": ["T1190", "T1505.003", "T1491"],
+          "comment": "Convierte rutas, hashes, IPs, WAF y patrones de cambios web en nuevas detecciones."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "name": "Nexo Lebrija - RE&CT servicios cloud",
+  "framework": "RE&CT",
+  "related_attack_layer": "attack-cloud-services-layer.json",
+  "playbook": "playbook-cloud-services.md",
+  "description": "Acciones RE&CT priorizadas para compromiso de servicios cloud, alineadas con las tecnicas ATT&CK T1078.004, T1538, T1098, T1528, T1530, T1567, T1531 y T1489.",
+  "risks": ["R11", "R03", "R01", "R04"],
+  "assets": ["Servicios cloud", "Correo SaaS", "Almacenamiento cloud", "CRM/ERP SaaS", "Integraciones", "Datos personales"],
+  "legendItems": [
+    { "label": "Prioridad media", "color": "#9ebcda" },
+    { "label": "Critico para el playbook", "color": "#8856a7" }
+  ],
+  "stages": [
+    {
+      "id": "RS0001",
+      "name": "Preparation",
+      "actions": [
+        "Set up relevant data collection",
+        "Access cloud audit logs",
+        "Maintain cloud asset inventory",
+        "Prepare cloud emergency contacts"
+      ],
+      "comments": [
+        {
+          "action": "Set up relevant data collection",
+          "priority": 3,
+          "attackTechniques": ["T1078.004", "T1538", "T1530"],
+          "comment": "Es necesario tener auditoria cloud antes del incidente para revisar cuentas validas, paneles cloud y acceso a almacenamiento."
+        },
+        {
+          "action": "Prepare cloud emergency contacts",
+          "priority": 2,
+          "attackTechniques": ["T1489", "T1531"],
+          "comment": "Si el servicio se degrada o se pierden accesos, el contacto con proveedor cloud debe estar preparado."
+        }
+      ]
+    },
+    {
+      "id": "RS0002",
+      "name": "Identification",
+      "actions": [
+        "Collect logs",
+        "List users authenticated",
+        "Scope incident",
+        "Collect evidence",
+        "Identify transferred data"
+      ],
+      "comments": [
+        {
+          "action": "List users authenticated",
+          "priority": 3,
+          "attackTechniques": ["T1078.004"],
+          "comment": "Permite identificar cuentas cloud validas usadas por el atacante."
+        },
+        {
+          "action": "Collect logs",
+          "priority": 3,
+          "attackTechniques": ["T1538", "T1098", "T1528"],
+          "comment": "Permite revisar paneles cloud, cambios de permisos y abuso de tokens o aplicaciones."
+        },
+        {
+          "action": "Identify transferred data",
+          "priority": 3,
+          "attackTechniques": ["T1530", "T1567"],
+          "comment": "Permite determinar si hubo acceso o exfiltracion de datos desde almacenamiento cloud."
+        }
+      ]
+    },
+    {
+      "id": "RS0003",
+      "name": "Containment",
+      "actions": [
+        "Lock user account",
+        "Revoke token",
+        "Block external IP address",
+        "Disable public sharing",
+        "Pause cloud synchronization"
+      ],
+      "comments": [
+        {
+          "action": "Lock user account",
+          "priority": 3,
+          "attackTechniques": ["T1078.004", "T1098"],
+          "comment": "Corta uso de cuentas validas y cambios de permisos no autorizados."
+        },
+        {
+          "action": "Revoke token",
+          "priority": 3,
+          "attackTechniques": ["T1528"],
+          "comment": "Contiene abuso de tokens, API keys o aplicaciones OAuth."
+        },
+        {
+          "action": "Disable public sharing",
+          "priority": 3,
+          "attackTechniques": ["T1530", "T1567"],
+          "comment": "Reduce exposicion o exfiltracion mediante almacenamiento y servicios web."
+        }
+      ]
+    },
+    {
+      "id": "RS0004",
+      "name": "Eradication",
+      "actions": [
+        "Remove malicious changes",
+        "Restore permissions",
+        "Remove rogue application",
+        "Rotate secrets",
+        "Patch misconfiguration"
+      ],
+      "comments": [
+        {
+          "action": "Remove malicious changes",
+          "priority": 3,
+          "attackTechniques": ["T1098", "T1538"],
+          "comment": "Elimina cambios maliciosos en usuarios, roles, grupos, reglas e integraciones."
+        },
+        {
+          "action": "Rotate secrets",
+          "priority": 3,
+          "attackTechniques": ["T1528", "T1078.004"],
+          "comment": "Reduce reutilizacion de tokens, claves API y credenciales comprometidas."
+        }
+      ]
+    },
+    {
+      "id": "RS0005",
+      "name": "Recovery",
+      "actions": [
+        "Restore data from backup",
+        "Unlock locked user account",
+        "Restore service",
+        "Validate restored data",
+        "Monitor restored service"
+      ],
+      "comments": [
+        {
+          "action": "Restore service",
+          "priority": 3,
+          "attackTechniques": ["T1531", "T1489"],
+          "comment": "Recupera accesos y servicio si el atacante provoco eliminacion de cuentas o parada del servicio."
+        },
+        {
+          "action": "Validate restored data",
+          "priority": 3,
+          "attackTechniques": ["T1530", "T1567"],
+          "comment": "Confirma integridad tras acceso o posible exfiltracion de datos cloud."
+        }
+      ]
+    },
+    {
+      "id": "RS0006",
+      "name": "Lessons Learned",
+      "actions": [
+        "Develop incident report",
+        "Improve detections",
+        "Update playbook",
+        "Review cloud permissions",
+        "Update MISP event"
+      ],
+      "comments": [
+        {
+          "action": "Improve detections",
+          "priority": 3,
+          "attackTechniques": ["T1078.004", "T1098", "T1528", "T1530"],
+          "comment": "Convierte cuentas, permisos, tokens y descargas anomales en nuevos casos de uso SIEM/cloud."
+        }
+      ]
+    }
+  ]
+}
