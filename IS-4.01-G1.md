@@ -24,6 +24,9 @@ Uno de los aspectos más relevantes del trabajo es que no se limita a un enfoque
 En conjunto, este trabajo pretende mostrar la importancia de abordar la ciberseguridad de forma estructurada, conectando la prevención, la gestión del riesgo y la respuesta a incidentes dentro de una misma línea de trabajo. El propósito final es contribuir a que la organización esté mejor preparada para proteger sus activos críticos, responder con mayor eficacia ante situaciones adversas y mantener la continuidad de su actividad en un entorno cada vez más expuesto a amenazas de seguridad.
 
 ## Plan de respuesta
+
+[plan-de-respuesta](/plan.md)
+
 ## Playbooks
 
 Los playbooks identificados como necesarios son:

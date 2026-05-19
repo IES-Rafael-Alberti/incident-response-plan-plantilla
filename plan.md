@@ -273,51 +273,176 @@ Agregador de registros              | https://logs.kiwiincidentes.es
 
 ## Actualizar el plan de investigación y el archivo del incidente
 
-1. Revisar y perfeccionar el impacto del incidente.
-2. Revisar y refinar el vector del incidente.
-3. Revisar y perfeccionar el resumen del incidente.
-4. Revisar y perfeccionar la línea de tiempo del incidente con hechos e inferencias.
-5. Crear hipótesis: qué puede haber ocurrido y con qué seguridad.
-6. **Identificar y priorizar las preguntas clave** (lagunas de información) para apoyar o desacreditar las hipótesis.
-    * Utilizar la matriz ATT&CK de MITRE o un marco similar para [desarrollar preguntas](#reference-attacker-tactics-to-key-questions-matrix).
-        * [ATT&CK for Enterprise](https://attack.mitre.org/wiki/Main_Page), incluyendo enlaces a los específicos de Windows, Mac y Linux.
-        * [ATT&CK Mobile Profile](https://attack.mitre.org/mobile/index.php/Main_Page) para dispositivos móviles.
-    * Utilizar palabras interrogativas como inspiración:
-        * **¿Cuándo?**: primer compromiso, primera pérdida de datos, acceso a x datos, acceso a y sistema, etc.
-        * **¿Qué?**: impacto, vector, causa de origen, motivación, herramientas/explotaciones utilizadas, cuentas/sistemas comprometidos, datos atacados/perdidos, infraestructura, COIs, etc.?
-        * **¿Dónde?**: ubicación del atacante, unidades de negocio afectadas, infraestructura, etc.?
-        * **¿Cómo?**: compromiso (explotación), persistencia, acceso, exfiltración, movimiento lateral, etc.?
-        * **¿Por qué?**: objetivo, momento, acceso a x datos, acceso a y sistema, etc.
-        * **¿Quién?**: atacante, usuarios afectados, clientes afectados, etc.?
-7. **Identificar y priorizar los dispositivos y estrategias testigo** para responder a las preguntas clave.
-    * Consultar los diagramas de la red, los sistemas de gestión de activos y la experiencia de las SME
-    * Consultar la [Lista de recursos de respuesta](#referencia-lista-de-recursos-de-respuesta)
-8. Consulte los [playbook de incidentes](#playbooks) para conocer las preguntas clave, los dispositivos testigos y las estrategias para investigar las amenazas comunes o muy dañinas.
+La actualización del plan de investigación se realizará de forma continua durante todo el ciclo del incidente, revisando el impacto, el vector, el alcance, la cronología y las hipótesis conforme se obtengan nuevas evidencias. En esta empresa, esta actividad tendrá como objetivo principal determinar si el incidente afecta al correo corporativo, al servidor de archivos, al CRM/ERP, al almacenamiento cloud, a la red interna, a la web o tienda online externalizada y, especialmente, si existe afectación a datos personales de clientes o proveedores.
 
-**El plan de investigación es fundamental para una respuesta eficaz; impulsa todas las acciones de investigación.  Utilice el pensamiento crítico, la creatividad y el buen juicio.**
+Para ello, el equipo de respuesta actualizará el expediente del incidente con los siguientes elementos:
+
+1. Revisión del impacto del incidente sobre la confidencialidad, integridad y disponibilidad de los activos afectados, prestando especial atención a la continuidad del negocio digital, la posible afectación a datos personales y la dependencia de terceros.
+
+2. Revisión y refinamiento del vector del incidente, valorando como hipótesis prioritarias el phishing, el uso de credenciales válidas, el acceso no autorizado a servicios cloud, el compromiso del proveedor web o la ejecución de malware en endpoints y servidores.
+
+3. Actualización del resumen del incidente, diferenciando claramente entre hechos confirmados, hipótesis de trabajo, limitaciones de visibilidad y riesgos aún no descartados.
+
+4. Revisión y ampliación de la línea de tiempo del incidente, incorporando hechos, eventos observados, decisiones adoptadas e inferencias analíticas debidamente identificadas como tales.
+
+5. Formulación y actualización de hipótesis sobre el posible recorrido del atacante, su nivel de acceso, los sistemas afectados, el posible acceso a información sensible y la existencia o no de persistencia, movimiento lateral, exfiltración o impacto.
+
+6. Identificación y priorización de preguntas clave o lagunas de información, utilizando MITRE ATT&CK for Enterprise como marco de apoyo para relacionar tácticas y técnicas con las evidencias observadas, con los activos críticos de la empresa y con las fuentes de información disponibles.
+
+7. Identificación y priorización de los sistemas testigo y de las estrategias de análisis que permitan responder a las preguntas clave, apoyándose en el inventario de activos, el conocimiento del departamento TIC, la experiencia de los responsables funcionales y los recursos técnicos disponibles.
+
+8. Revisión de los playbooks aplicables para adaptar la investigación a incidentes plausibles y de alto impacto en esta empresa, especialmente phishing, robo de credenciales, ransomware, fuga de datos, compromiso cloud y afectación de la web o tienda online.
+
+En esta fase se utilizará MITRE ATT&CK for Enterprise como marco estructurado para formular hipótesis, priorizar preguntas, clasificar evidencias y asociar las actividades del posible atacante a tácticas concretas observables. Como apoyo visual, se empleará ATT&CK Navigator mediante una capa específica de investigación inicial, en la que se han marcado y priorizado las técnicas más plausibles para este caso, con valores, colores y anotaciones orientadas al contexto de la empresa.
+
+La investigación partirá de la hipótesis principal de compromiso mediante phishing o uso indebido de credenciales, con posible acceso posterior a correo, servicios cloud, repositorios de información, accesos remotos o sistemas internos críticos. Esta hipótesis se considera razonable por la fuerte dependencia del correo corporativo, el almacenamiento cloud, el CRM/ERP, la red interna y la web/tienda online externalizada, así como por los riesgos ya identificados en el Plan Director de Seguridad, entre ellos phishing, ransomware, compromiso de cuentas, dependencia de terceros y fuga de datos personales.
+
+### Uso de MITRE ATT&CK y ATT&CK Navigator
+
+Para apoyar esta actualización del plan de investigación se ha creado una capa en ATT&CK Navigator sobre ATT&CK for Enterprise, con el fin de priorizar las técnicas más relevantes para el incidente y relacionarlas con las preguntas clave, las evidencias esperadas y los sistemas testigo. La capa se ha utilizado como apoyo metodológico y también como evidencia gráfica del trabajo realizado.
+
+Las técnicas priorizadas en la capa de ATT&CK Navigator son las siguientes:
+
+- T1566 – Phishing, como posible vector inicial asociado al uso intensivo del correo corporativo.
+
+- T1078 – Valid Accounts, por el riesgo de uso de credenciales válidas contra correo, cloud, CRM/ERP, VPN o paneles administrativos.
+
+- T1059 – Command and Scripting Interpreter, para analizar ejecución de scripts, PowerShell o comandos sospechosos en endpoints y servidores.
+
+- T1053 – Scheduled Task/Job, para comprobar posibles mecanismos simples de persistencia.
+
+- T1021 – Remote Services, para revisar uso de RDP, VPN, SSH u otros accesos remotos entre sedes o hacia servidores.
+
+- T1213 – Data from Information Repositories, por el valor de carpetas compartidas, buzones, CRM/ERP y almacenamiento cloud.
+
+- T1560 – Archive Collected Data, para detectar compresión o preparación de información antes de una posible exfiltración.
+
+- T1567 – Exfiltration Over Web Service, por la posibilidad de salida de información a través de servicios web, correo o cloud.
+
+- T1486 – Data Encrypted for Impact, por el riesgo de ransomware y cifrado de información crítica.
+
+Estas técnicas se han priorizado con una escala simple en Navigator, donde el score 3 identifica técnicas altamente relevantes para el incidente, el score 2 técnicas plausibles que requieren validación y el score 1 técnicas de apoyo o contexto. Esta priorización se basa en los activos críticos de la empresa, en los riesgos recogidos en el PDS y en la necesidad de orientar la investigación hacia las fuentes de evidencia más útiles.
+
+La tabla de las técnicas seleccionadas en ATT&CK Navigator se encuentra en el Anexo de [IS-4.01-G1](IS-4.01-G1.md)
+
+### Preguntas clave priorizadas
+
+A partir de las técnicas anteriores, se priorizarán las siguientes preguntas de investigación:
+
+- ¿El acceso inicial se produjo mediante phishing, credenciales comprometidas o acceso no autorizado a un servicio externo?
+
+- ¿Qué cuentas se han utilizado y desde cuándo, especialmente en correo, cloud, CRM/ERP, VPN o paneles administrativos?
+
+- ¿Se han ejecutado scripts, comandos o binarios sospechosos en endpoints, servidores o servicios administrados?
+
+- ¿Existen mecanismos de persistencia activos en equipos, servidores, buzones o servicios cloud?
+
+- ¿Se ha producido movimiento lateral entre puestos de usuario, servidores internos, accesos remotos o dos sedes?
+
+- ¿Se accedió a carpetas compartidas, documentación de clientes, buzones, CRM/ERP o almacenamiento cloud?
+
+- ¿Existen indicios de compresión, preparación o exfiltración de información hacia servicios externos?
+
+- ¿Se ha producido cifrado, borrado o indisponibilidad de activos críticos, como correo, servidor de archivos, aplicaciones o web/tienda online?
+
+### Sistemas testigo prioritarios
+
+Para responder a estas preguntas, los sistemas testigo prioritarios serán:
+
+- Servidor de correo corporativo y buzones de usuarios clave.
+
+- Servidor de archivos y recursos compartidos.
+
+- CRM/ERP y aplicaciones internas.
+
+- Equipos de usuarios de TIC, RRHH, ventas, dirección y otros perfiles con acceso privilegiado o a datos personales.
+
+- Infraestructura de red, firewall, router, WiFi, VPN y accesos remotos.
+
+- Cuentas y registros del almacenamiento cloud.
+
+- Activos, credenciales y registros relacionados con la web y tienda online externalizadas.
+
+La selección de estos sistemas testigo responde a su criticidad para la continuidad del negocio, a su exposición frente a las hipótesis de ATT&CK priorizadas y a su valor como fuentes de evidencia para confirmar o descartar compromiso, persistencia, exfiltración o impacto.
 
 ### Referencia: Táctica del atacante a la matriz de preguntas clave
 
-Táctica del atacante    | La forma en que los atacantes ...      | Posibles preguntas clave
------------------------ |----------------------------------------| -----------------------------------------
-Reconocimiento          | ... aprender sobre los objetivos       | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
-Desarrollo de recursos  | ... construir infraestructuras.        | ¿Qué sistemas?
-Acceso inicial          | ... entrar                             | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
-Ejecución               | ... ejecutar código hostil             | ¿Qué malware? ¿Qué herramientas? ¿Dónde? ¿Cuándo?
-Persistencia            | ... quedarse en el sistema             | ¿Cómo? ¿Desde cuándo? ¿Dónde? ¿Qué sistemas?
-Escalada de Privilegios | ... obtener acceso de mayor nivel      | ¿Cómo? ¿Dónde? ¿Qué herramientas?
-Evasión de la defensa   | ... esquivar la seguridad              | ¿Cómo? ¿Dónde? ¿Desde cuándo?
-Acceso a credenciales   | ... obtener/crear cuentas              | ¿Qué cuentas? ¿Desde cuándo? ¿Por qué?
-Descubrimiento          | ... aprender nuestra red               | ¿Cómo? ¿Dónde? ¿Qué saben?
-Movimiento lateral      | ... moverse                            | ¿Cómo? ¿Cuándo? ¿Qué cuentas?
-Recogida                | ... encontrar y reunir datos           | ¿Qué datos? ¿Por qué? ¿Cuándo? ¿Dónde?
-Mando y control         | ... herramientas y sistemas de control | ¿Cómo? ¿Dónde? ¿Quién? ¿Por qué?
-Exfiltración            | ... tomar datos                        | ¿Qué datos? ¿Cómo? ¿Cuándo? ¿Dónde?
-Impacto                 | ... romper cosas.                      | ¿Qué sistemas o datos? ¿Cómo? ¿Cuándo? ¿Dónde? ¿Cómo de malo?
 
+| Táctica ATT&CK | Finalidad del atacante | Preguntas clave aplicadas a la empresa |
+|---|---|---|
+| Reconocimiento | Obtener información previa sobre la organización y sus objetivos. | ¿Qué información pública sobre la empresa, empleados, correos, proveedores o web pudo utilizarse para preparar el ataque? ¿Se identificaron usuarios especialmente expuestos, como dirección, RRHH, ventas o TIC? |
+| Desarrollo de recursos | Preparar infraestructura, cuentas, dominios o herramientas para el ataque. | ¿Se utilizaron dominios, correos, cuentas o servicios creados específicamente para suplantar a la empresa, a un proveedor o a un empleado? |
+| Acceso inicial | Conseguir la entrada al entorno objetivo. | ¿El acceso inicial se produjo mediante phishing, credenciales comprometidas, acceso remoto expuesto, compromiso del proveedor web o abuso de un servicio cloud? ¿Cuándo se observó el primer acceso no autorizado? |
+| Ejecución | Ejecutar código o acciones maliciosas en sistemas de la organización. | ¿Se ejecutaron scripts, macros, PowerShell, binarios o comandos sospechosos en equipos de usuario, servidores o sistemas administrados? ¿En qué activo ocurrió primero? |
+| Persistencia | Mantener el acceso en el tiempo. | ¿Existen tareas programadas, reglas de correo, sesiones activas, servicios persistentes o mecanismos de autoarranque que permitan al atacante volver a entrar? |
+| Escalada de privilegios | Obtener permisos superiores. | ¿Se produjo elevación de privilegios o uso de cuentas con mayores permisos de los necesarios? ¿Se comprometieron cuentas administrativas o técnicas? |
+| Evasión de defensas | Evitar la detección o dificultar la investigación. | ¿Se desactivaron antivirus, registros, alertas, MFA o controles de seguridad? ¿Existen borrados, alteraciones o vacíos anómalos en logs? |
+| Acceso a credenciales | Obtener, reutilizar o crear credenciales. | ¿Qué cuentas pudieron verse comprometidas? ¿Hubo reseteos sospechosos, cambios de contraseña, altas de cuentas, robo de sesión o bypass de MFA? |
+| Descubrimiento | Reconocer la red, usuarios, servicios y activos internos. | ¿El atacante enumeró usuarios, carpetas compartidas, equipos, servidores, grupos, servicios cloud o aplicaciones como CRM/ERP? |
+| Movimiento lateral | Desplazarse a otros sistemas dentro del entorno. | ¿Se detectaron accesos entre sedes, servidores, endpoints o servicios remotos mediante VPN, RDP, SMB, SSH u otros mecanismos? |
+| Recogida | Reunir la información de interés antes de extraerla o dañarla. | ¿Se accedió a documentación de clientes, carpetas compartidas, buzones, bases de datos, CRM/ERP o almacenamiento cloud? ¿Qué datos concretos pudieron ser recopilados? |
+| Mando y control | Mantener comunicaciones con infraestructura controlada por el atacante. | ¿Existen conexiones salientes anómalas a dominios, IPs o servicios externos desde endpoints, servidores o la web? ¿Desde qué sistemas se originaron? |
+| Exfiltración | Extraer información fuera del entorno corporativo. | ¿Se produjo salida de datos por correo, web, cloud o servicios externos? ¿Qué información pudo exfiltrarse, cuándo y desde qué activo? |
+| Impacto | Interrumpir, cifrar, borrar o alterar datos y servicios. | ¿Se produjo cifrado, borrado, alteración o indisponibilidad en correo, servidor de archivos, CRM/ERP, endpoints o web/tienda online? ¿Cuál fue el impacto real en la continuidad del negocio? |
 Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más información e ideas.
 
-La matriz ATT&CK se emplea en esta fase como marco de apoyo para formular hipótesis, priorizar preguntas, clasificar evidencias y asociar acciones de contención y erradicación a tácticas concretas observadas durante la investigación.
+La matriz ATT&CK se emplea en esta fase como marco de apoyo para formular hipótesis, priorizar preguntas, clasificar evidencias y orientar la selección de sistemas testigo. No se utiliza como un listado teórico cerrado, sino como una guía práctica para estructurar la investigación conforme a las tácticas más plausibles para el incidente y para los activos críticos de la empresa.
+
+
+## Aplicación de RE&CT al plan
+
+RE&CT se utilizará como marco de apoyo para estructurar la respuesta defensiva de la empresa, de forma que las acciones no se limiten a reaccionar ante el incidente, sino que sigan un orden claro de preparación, identificación, contención, erradicación, recuperación y aprendizaje posterior.
+
+En este caso, la matriz nos servirá para relacionar cada fase con las actividades concretas que debe realizar el equipo de respuesta sobre correo, CRM, ERP, cloud, web y tienda online.
+
+
+### Preparación
+
+La preparación consiste en dejar la empresa lista para responder con rapidez y con el menor impacto posible. En esta fase se revisarán los procedimientos, los contactos, las herramientas disponibles, los accesos de emergencia, los repositorios de evidencias y los playbooks que puedan activarse según el tipo de incidente.
+
+También se comprobará que los responsables de seguridad, TIC, negocio y comunicación conocen su función y que el proceso de escalado está definido antes de que ocurra el incidente.
+
+
+## Identificación
+
+La identificación se centrará en entender qué ha pasado, qué activos están afectados y cuál es el alcance inicial del incidente. Para ello se recopilarán alertas, logs, evidencias iniciales, avisos de usuarios, datos de SIEM, telemetría de endpoints y cualquier pista útil para confirmar la naturaleza del incidente.
+
+En esta fase también se apoyará la investigación con MITRE ATT&CK, para relacionar los hechos observados con tácticas y técnicas concretas del atacante.
+
+
+### Contención
+
+La contención busca impedir que el incidente se extienda o empeore. En esta empresa, esto implica aislar sistemas afectados, bloquear cuentas comprometidas, cortar accesos remotos, suspender integraciones sospechosas y frenar dominios, IP o servicios maliciosos cuando sea necesario.
+
+Si el riesgo operativo lo exige, algunos servicios podrán pasar temporalmente a mantenimiento o a modo restringido mientras se analiza el alcance real del incidente.
+
+
+### Erradicación
+
+La erradicación consiste en eliminar la amenaza y corregir la causa que la permitió entrar. Aquí se retirarán malware, puertas traseras, cuentas no autorizadas, credenciales comprometidas, tareas maliciosas o configuraciones inseguras detectadas durante la investigación.
+
+Además, se revisará el vector inicial para evitar que el mismo incidente vuelva a repetirse, aplicando los cambios necesarios en sistemas, accesos y controles de seguridad.
+
+
+### Recuperación
+
+La recuperación busca volver a la normalidad de forma controlada y segura. Antes de restaurar servicios, se confirmará que la contención y la erradicación han funcionado, que las credenciales afectadas han sido renovadas y que las copias o estados de restauración son íntegros y confiables.
+
+Después, los servicios se recuperarán de forma escalonada, priorizando primero correo, servidores de archivos, CRM, ERP, cloud y, por último, la web y la tienda online si han quedado afectadas.
+
+
+### Lecciones aprendidas
+
+La fase de lecciones aprendidas servirá para revisar qué ha funcionado, qué ha fallado y qué mejoras se deben incorporar al plan. En esta empresa, esta revisión será importante para actualizar procedimientos, reforzar la monitorización, mejorar la formación y ajustar los playbooks en función de lo ocurrido.
+
+Con esto se pretende que cada incidente sirva también para fortalecer la capacidad de respuesta futura y no solo para cerrar el caso.
+
+### Relación con el plan
+
+RE&CT complementa a MITRE ATT&CK porque nos ayuda a pasar del análisis del atacante a una respuesta estructurada y defensiva. Mientras ATT&CK nos orienta sobre cómo actúa la amenaza, RE&CT nos organiza la respuesta para preparar, identificar, contener, erradicar, recuperar y aprender.
+
+Por eso, esta matriz encaja especialmente bien en la parte operativa del plan y en la definición de los playbooks, ya que nos permite convertir la teoría en acciones concretas y repetibles.
+
 
 ## Crear y desplegar indicadores de compromiso (IOC)
 
@@ -686,7 +811,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 * **No** notifique o actualice al personal que no responde hasta que el Incident Commander lo autorice.
 * Coordinar con Consejo de Administración (direccion@kiwiincidentes.es) y Departamento Legal (legal@kiwiincidentes.es) antes de interactuar con las fuerzas del orden.
 * Póngase en contacto con las fuerzas del orden locales en Policía Nacional - Unidad de Ciberdelincuencia (091).
-* Póngase en contacto con el INCIBE en INCIBE 017 (España) o a través del [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
+* Póngase en contacto con el INCIBE en INCIBE 017 (España) o a través de la Policía Nacional.
 * Póngase en contacto con los operadores de los sistemas utilizados en el ataque, sus sistemas también pueden haber sido comprometidos.
 
 ### Contactar con el servicio de asistencia de respuesta externa
@@ -793,12 +918,16 @@ La selección se ha realizado teniendo en cuenta:
 
 Estos playbooks no sustituyen al plan general de respuesta a incidentes, sino que lo desarrollan para escenarios concretos. Su objetivo es facilitar una respuesta más rápida, homogénea y coordinada ante los incidentes más relevantes para la empresa analizada.
 
+Todos los playbooks deberán aplicarse bajo la cadena de mando, los canales de coordinación, las reglas de comunicación, la gestión del expediente, la custodia de evidencias y el cierre mediante AAR definidos en [`plan.md`](../plan.md).
+
 
 ## Playbook: Ataque DDoS
 
 **Investigar, remediar (contener, erradicar) y comunicar en paralelo.**
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
+
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
 
 ### Finalidad y activación
 
@@ -815,11 +944,19 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para coordinar la respuesta;
-* Equipo TIC, para análisis de disponibilidad, filtrado y priorización de servicios;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de red, web y servicios públicos, para análisis de disponibilidad, filtrado y priorización de servicios;
 * Proveedor de hosting, ISP o mitigación DDoS, por la necesidad de respuesta externa;
 * Help desk, para centralizar incidencias y estado del servicio;
-* Responsables de negocio y Comunicación, si la web o la tienda online se ven afectadas.
+* [Enlace](../roles/role-5-liaison.md) interno o externo, junto con responsables de negocio, si la web o la tienda online se ven afectadas.
+
+#### Registro mínimo y herramientas prioritarias
+
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es`, `https://ir.kiwiincidentes.es/netmap` y del panel del proveedor o CDN.
+* Verificar activos críticos afectados en `https://ir.kiwiincidentes.es/cal` y dependencias en `https://ir.kiwiincidentes.es/assets`.
+* Registrar cronología, impacto, mitigaciones, responsables y cadena de custodia cuando proceda.
 
 ### Investigar
 
@@ -836,6 +973,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Logs de firewall, WAF, balanceadores, router y proveedor de hosting.
     * Métricas de tráfico, capturas de red si están disponibles y cronología de alertas.
     * Hora de inicio, evolución de la intensidad, sistemas afectados y contramedidas aplicadas.
+    * Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 4. **Evaluar el impacto.**
     * Afectación a la disponibilidad de la web y la tienda online.
     * Impacto en captación de clientes, atención comercial y reputación.
@@ -844,11 +982,17 @@ Como mínimo, en este playbook deben intervenir estas funciones:
         * **media**, si hay degradación limitada y breve;
         * **alta**, si la web o la tienda online quedan inestables o parcialmente inaccesibles;
         * **crítica**, si existe caída prolongada, extorsión o afectación simultánea de varios servicios públicos.
-5. **Formular preguntas clave.**
-    * Cuándo empezó el ataque y cuánto dura.
-    * Si existe un patrón repetitivo por franjas horarias o recursos concretos.
-    * Si el ataque coincide con eventos de negocio relevantes o comunicaciones extorsivas.
-    * Si el DDoS está ocultando intentos de explotación, intrusión o fraude.
+#### Preguntas clave de investigación
+
+* Cuándo empezó el ataque y cuánto dura.
+* Si existe un patrón repetitivo por franjas horarias o recursos concretos.
+* Si el ataque coincide con eventos de negocio relevantes o comunicaciones extorsivas.
+* Si el DDoS está ocultando intentos de explotación, intrusión o fraude.
+* Qué servicios concretos deben mantenerse operativos aunque sea con funcionalidad reducida.
+* Si el tráfico malicioso se concentra en una URL, host virtual, API, puerto o proveedor concreto.
+* Si hay clientes, sedes o países legítimos que puedan verse bloqueados por las medidas de mitigación.
+* Si el proveedor dispone ya de telemetría o reglas de mitigación aplicables a incidentes similares previos.
+* Si existe riesgo de impacto contractual, campaña comercial fallida o pérdida de ventas por la duración estimada.
 
 ### Remediar
 
@@ -895,7 +1039,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 2. Comunicar de inmediato con el proveedor de hosting, CDN o mitigación DDoS si la web o la tienda online están implicadas.
 3. Documentar cronología, tráfico observado, impacto y medidas de mitigación aplicadas.
 4. Informar a usuarios internos y departamentos afectados sobre el estado del servicio y posibles restricciones temporales.
-5. Comunicar a clientes, si es necesario, la existencia de incidencias de disponibilidad sin generar alarma innecesaria.
+5. Comunicar a clientes, si es necesario, la existencia de incidencias de disponibilidad sin generar alarma innecesaria, siempre con autorización del `Incident Commander` y coordinación con Comunicación.
 6. Coordinar con asesoría legal si el ataque deriva en incumplimientos contractuales, extorsión o perjuicio relevante.
 7. Valorar notificación a INCIBE-CERT o a fuerzas y cuerpos de seguridad si el incidente es grave o reiterado.
 
@@ -915,6 +1059,9 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Costes de mitigación.
 5. Ajustar capacidad, reglas y procedimientos con base en las lecciones aprendidas.
 6. Actualizar el plan de escalado con proveedores y tiempos máximos de respuesta.
+7. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
 
 ### Guía operativa rápida
 
@@ -963,6 +1110,8 @@ Durante la primera hora, la secuencia recomendada será la siguiente:
 
 Asigna los pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante incidentes de desfiguración o alteración no autorizada de contenidos web públicos. Su finalidad es retirar rápidamente el contenido malicioso, contener el acceso del atacante, preservar evidencias y recuperar la presencia pública de la empresa con seguridad.
@@ -978,12 +1127,20 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para coordinar la respuesta y el escalado;
-* Equipo TIC, para análisis técnico, bloqueo de accesos y restauración;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de web, hosting y base de datos, para análisis técnico, bloqueo de accesos y restauración;
 * Proveedor de hosting o soporte web, por tratarse de un servicio externalizado;
 * Help desk, para recepción de avisos y trazabilidad;
-* Responsables de Comunicación o RRSS, por el impacto reputacional;
+* [Enlace](../roles/role-5-liaison.md) interno o externo, por el impacto reputacional;
 * Asesoría jurídica o apoyo RGPD, si existe riesgo sobre formularios o datos personales.
+
+#### Registro mínimo y herramientas prioritarias
+
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias del panel del proveedor, `https://logs.kiwiincidentes.es`, `https://siem.kiwiincidentes.es`, `https://ir.kiwiincidentes.es/assets` y `https://ir.kiwiincidentes.es/netmap`.
+* Registrar capturas, ficheros, cambios de contenido, accesos administrativos y actuaciones del proveedor.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -1016,10 +1173,20 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Cambios visibles en código fuente, enlaces, formularios o pasarelas de pago.
     * Identificación del servidor, CMS o plataforma afectada, si se conoce.
     * Relación con otros sistemas internos o bases de datos de clientes.
+    * Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 5. Ampliar la investigación al posible compromiso lateral.
     * Comprobar si el atacante accedió también al panel de tienda, base de datos, correo asociado o repositorios de código.
     * Verificar si se insertaron scripts para robo de credenciales o datos de pago.
     * Revisar si existen usuarios administrativos nuevos, cambios de permisos o puertas traseras persistentes.
+
+#### Preguntas clave de investigación
+
+* Si la alteración visible es el único efecto o solo la parte pública de un compromiso más amplio.
+* Qué acceso tuvo realmente el atacante: contenido, panel, base de datos, servidor o integraciones de terceros.
+* Si se han visto afectados formularios, pasarelas de pago, analítica o scripts cargados desde dominios externos.
+* Si el contenido alterado pudo exponer a clientes a fraude, malware o robo de credenciales.
+* Si la restauración desde copia limpia elimina también la causa raíz o solo revierte el contenido visible.
+* Qué indicios apuntan a que el atacante mantiene persistencia aunque la web vuelva a mostrarse correctamente.
 
 ### Remediar
 
@@ -1059,6 +1226,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 3. Cambiar las credenciales de administración del sitio, de la tienda online y de cualquier cuenta asociada.
 4. Rehabilitar la web solo después de corregir la vulnerabilidad, validar integridad y confirmar con el proveedor externo que el entorno es seguro.
 5. Si procede, preparar una explicación breve para usuarios o clientes aclarando que el contenido alterado no representaba a la empresa.
+6. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
 
 #### Evitar riesgos
 
@@ -1077,6 +1245,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 * Logísticos: página de mantenimiento preparada, canales de contacto con proveedor externo y procedimiento de comunicación pública.
 * Financieros: soporte urgente del proveedor, auditoría web, restauración de servicio y posibles costes de reputación o notificación.
 
+
 ### Comunicar
 
 1. Elevar el incidente y comunicarlo a Dirección, al responsable de seguridad y a los responsables de Comunicación.
@@ -1084,7 +1253,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 2. Documentar el incidente y conservar capturas, logs, cambios de contenido y actuaciones del proveedor externo.
 3. Comunicarse con asesoría jurídica y consultoría RGPD si existe sospecha de acceso a datos personales o formularios de clientes.
 4. Comunicar a usuarios internos el estado del servicio y las restricciones temporales.
-5. Comunicar a clientes, si procede, que la web o la tienda han sido intervenidas temporalmente por seguridad.
+5. Comunicar a clientes, si procede, que la web o la tienda han sido intervenidas temporalmente por seguridad, siempre con autorización del `Incident Commander` y coordinación con Comunicación.
 6. Contactar con proveedores de seguros o soporte externo si existen.
 7. Considerar notificación a organismos o fuerzas de seguridad si el incidente es grave, persistente o con posible delito asociado.
 8. Coordinar toda comunicación externa para evitar mensajes contradictorios o alarmistas.
@@ -1147,6 +1316,8 @@ Durante la primera hora, la secuencia recomendada será la siguiente:
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante la explotación de aplicaciones o servicios expuestos a Internet. Su finalidad es contener el vector de ataque, evitar que el incidente escale a fuga de datos o compromiso persistente y devolver la aplicación a producción de forma segura.
@@ -1162,12 +1333,20 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para coordinar y escalar la respuesta;
-* Equipo TIC, para análisis técnico, bloqueo y restauración;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de aplicación, base de datos y hosting, para análisis técnico, bloqueo y restauración;
 * Proveedor de hosting o soporte web, al tratarse de un servicio expuesto y externalizado;
 * Help desk, para registro y trazabilidad de avisos;
-* Responsables de negocio y Comunicación, si la incidencia afecta a la web pública o a la tienda online;
+* [Enlace](../roles/role-5-liaison.md) y responsables de negocio, si la incidencia afecta a la web pública o a la tienda online;
 * Asesoría jurídica o apoyo RGPD, si existen datos personales implicados.
+
+#### Registro mínimo y herramientas prioritarias
+
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es`, `https://ir.kiwiincidentes.es/assets`, `https://ir.kiwiincidentes.es/netmap` y del proveedor de hosting.
+* Registrar payloads, errores, consultas, cambios en tablas o ficheros, y actuaciones propias o del proveedor.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -1187,6 +1366,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Logs de aplicación, servidor, WAF, base de datos y proveedor externo, en la medida en que el proveedor los facilite o la empresa tenga acceso delegado.
     * Capturas de errores, muestras de payloads, archivos subidos, cambios en tablas o registros y cronología del incidente.
     * Configuración afectada, versiones del software y cambios recientes desplegados.
+    * Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 5. **Evaluar el impacto.**
     * Afectación a confidencialidad, integridad y disponibilidad.
     * Riesgo para datos personales de clientes y proveedores.
@@ -1195,6 +1375,15 @@ Como mínimo, en este playbook deben intervenir estas funciones:
         * **media**, si la explotación no supera un fallo puntual sin acceso confirmado;
         * **alta**, si hay acceso a paneles, ficheros, cuentas o datos internos;
         * **crítica**, si afecta a la tienda online, a datos personales, a ejecución remota o a persistencia confirmada.
+
+#### Preguntas clave de investigación
+
+* Qué vulnerabilidad concreta ha sido explotada y si sigue siendo explotable en este momento.
+* Si el atacante solo ha ejecutado pruebas de explotación o ya ha logrado acceso persistente al entorno.
+* Qué componentes adicionales comparten la misma versión, configuración o dependencia vulnerable.
+* Si hubo acceso a datos de clientes, secretos de aplicación, credenciales, repositorios o paneles administrativos.
+* Si la explotación afectó también a registros, colas, tareas programadas, almacenamiento de objetos o integraciones API.
+* Qué evidencia necesitamos reunir antes de poner la aplicación en mantenimiento o restaurarla.
 
 ### Remediar
 
@@ -1236,7 +1425,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 2. Coordinar de inmediato con el proveedor de hosting o soporte web si la gestión es externa.
 3. Documentar la vulnerabilidad, los indicadores observados, el alcance y las medidas aplicadas, diferenciando claramente entre acciones propias y acciones ejecutadas por el proveedor.
 4. Informar a departamentos internos afectados sobre indisponibilidad, riesgos y cambios operativos.
-5. Comunicar a clientes si la incidencia afecta a formularios, tienda online o tratamiento de sus datos.
+5. Comunicar a clientes si la incidencia afecta a formularios, tienda online o tratamiento de sus datos, siempre con autorización del `Incident Commander` y coordinación con Comunicación.
 6. Coordinar con asesoría jurídica y consultoría RGPD si hubo acceso a datos personales o información regulada.
 7. Valorar notificación a INCIBE-CERT o a fuerzas y cuerpos de seguridad si el incidente es grave.
 
@@ -1257,6 +1446,9 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * WAF y reglas adaptadas;
     * Revisiones periódicas de vulnerabilidades;
     * Principio de mínimo privilegio.
+8. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
 
 ### Guía operativa rápida
 
@@ -1306,6 +1498,8 @@ Durante la primera hora, la secuencia recomendada será la siguiente:
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante incidentes de fuga, extracción o exfiltración no autorizada de información. Su finalidad es cortar la salida de datos, preservar evidencias, valorar el impacto regulatorio y recuperar el control sobre la información comprometida.
@@ -1321,11 +1515,19 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para coordinar y escalar la respuesta;
-* Equipo TIC, para análisis técnico, contención y revisión de accesos;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de datos, correo, cloud o sistemas implicados, para análisis técnico, contención y revisión de accesos;
 * Help desk, para trazabilidad inicial y soporte operativo;
-* Asesoría jurídica y apoyo RGPD, por el posible impacto regulatorio;
+* [Enlace](../roles/role-5-liaison.md) interno, junto con asesoría jurídica y apoyo RGPD, por el posible impacto regulatorio;
 * Responsables de negocio afectados, para priorizar procesos y datos críticos.
+
+#### Registro mínimo y herramientas prioritarias
+
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es`, `https://ir.kiwiincidentes.es/assets`, `https://ir.kiwiincidentes.es/cil` y `https://ir.kiwiincidentes.es/cal`.
+* Registrar cuentas, sistemas, datos, destinos aparentes, restricciones temporales y decisiones regulatorias.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -1345,6 +1547,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Logs de red, autenticación, correo, sistemas cloud y acceso a carpetas compartidas.
     * Trazas de dispositivos extraíbles o sincronizaciones externas, si están disponibles.
     * Evidencias del volumen, horario, usuario implicado, sistema de origen y destino aparente.
+    * Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 4. **Evaluar el impacto.**
     * Determinar la sensibilidad, volumen y criticidad de la información exfiltrada.
     * Confirmar si los datos incluyen información protegida por RGPD.
@@ -1353,11 +1556,17 @@ Como mínimo, en este playbook deben intervenir estas funciones:
         * **media**, si afecta a información interna limitada y sin datos personales;
         * **alta**, si afecta a información sensible o a varios usuarios o departamentos;
         * **crítica**, si incluye datos personales, información financiera, contractual o gran volumen de datos.
-5. **Formular preguntas clave.**
-    * Cuándo empezó la exfiltración y cuánto duró.
-    * Si fue un hecho único o una extracción continuada.
-    * Si existió escalado de privilegios, movimiento lateral o borrado de rastros.
-    * Si la información puede haberse publicado o transferido a terceros.
+#### Preguntas clave de investigación
+
+* Cuándo empezó la exfiltración y cuánto duró.
+* Si fue un hecho único o una extracción continuada.
+* Si existió escalado de privilegios, movimiento lateral o borrado de rastros.
+* Si la información puede haberse publicado o transferido a terceros.
+* Qué datos exactos salieron, en qué formato y con qué nivel de sensibilidad o protección regulatoria.
+* Si el destino de la información es controlado por un atacante, por un tercero legítimo o por un servicio cloud mal configurado.
+* Si la fuga sigue activa o puede reanudarse con las mismas credenciales, reglas o integraciones.
+* Qué usuarios, departamentos o clientes concretos pueden verse afectados por la exposición.
+* Qué plazos regulatorios o contractuales empiezan a correr desde la detección o confirmación.
 
 ### Remediar
 
@@ -1405,7 +1614,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 3. Coordinar con asesoría jurídica y consultoría RGPD la valoración regulatoria, contractual y de notificación.
 4. Evaluar obligación de notificación a la AEPD y, si procede, a las personas afectadas.
 5. Informar a departamentos afectados sobre restricciones temporales y medidas operativas.
-6. Comunicar a clientes o proveedores cuando sus datos o servicios puedan haberse visto comprometidos.
+6. Comunicar a clientes o proveedores cuando sus datos o servicios puedan haberse visto comprometidos, siempre con autorización del `Incident Commander` y coordinación con Legal, RGPD y Comunicación.
 7. Valorar comunicación a INCIBE-CERT y a fuerzas y cuerpos de seguridad si hay indicios delictivos o perjuicio relevante.
 8. Mantener un registro completo de todas las comunicaciones y decisiones adoptadas.
 
@@ -1422,6 +1631,9 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 5. Reforzar monitorización sobre datos sensibles durante las semanas posteriores.
 6. Actualizar procedimientos sobre tratamiento de datos, permisos y uso de servicios externos.
 7. Impartir formación específica si la fuga se debió a error humano o mala práctica operativa.
+8. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
 
 ### Guía operativa rápida
 
@@ -1471,6 +1683,8 @@ Durante la primera hora, la secuencia recomendada será la siguiente:
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante el compromiso de identidades, cuentas y accesos corporativos. Su finalidad es detectar accesos no autorizados, contener rápidamente el abuso de credenciales, proteger la información sensible y restablecer el acceso legítimo con garantías.
@@ -1486,11 +1700,19 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para priorizar y escalar la respuesta;
-* Equipo TIC, para revisar autenticación, cuentas, permisos y endpoints;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de identidad, correo, cloud o endpoints, para revisar autenticación, cuentas, permisos y endpoints;
 * Help desk, para validar usuarios, abrir incidentes y asistir en cambios de credenciales;
 * Responsables del área afectada, si se trata de cuentas con acceso a procesos críticos;
-* Asesoría jurídica o apoyo RGPD, si se accedió a datos personales o información regulada.
+* [Enlace](../roles/role-5-liaison.md) interno, junto con asesoría jurídica o apoyo RGPD, si se accedió a datos personales o información regulada.
+
+#### Registro mínimo y herramientas prioritarias
+
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es` y `https://ir.kiwiincidentes.es/assets`.
+* Registrar cuentas afectadas, privilegios, sesiones, tokens, cambios administrativos y decisiones de contención.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -1510,11 +1732,18 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Intentos de acceso fallidos previos y posteriores.
 5. Recopilar evidencia relevante.
     * Logs de autenticación, exportación de alertas, mensajes de phishing asociados, sesiones abiertas, tokens, claves API y cambios administrativos.
-6. Formular preguntas clave.
-    * Si MFA estaba activado y funcionó correctamente;
-    * Si se usaron las credenciales para movimiento lateral o acceso a otros sistemas;
-    * Si existen más cuentas afectadas por la misma campaña o proveedor comprometido;
-    * Si el atacante creó persistencia mediante reglas de correo, aplicaciones autorizadas o cuentas nuevas.
+    * Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
+#### Preguntas clave de investigación
+
+* Si MFA estaba activado y funcionó correctamente.
+* Si se usaron las credenciales para movimiento lateral o acceso a otros sistemas.
+* Si existen más cuentas afectadas por la misma campaña o proveedor comprometido.
+* Si el atacante creó persistencia mediante reglas de correo, aplicaciones autorizadas o cuentas nuevas.
+* Qué privilegios efectivos tenía la cuenta comprometida en el momento del acceso.
+* Si hubo cambios en grupos, permisos, direcciones de recuperación, métodos MFA o dispositivos de confianza.
+* Si la cuenta se utilizó para acceder a correo, VPN, paneles cloud, ERP/CRM, integraciones o datos regulados.
+* Si el compromiso procede de phishing, malware local, fuga de proveedor o reutilización de contraseñas en otros servicios.
+* Qué otras identidades relacionadas deben revisarse de inmediato: cuentas de servicio, compartidas, delegadas o administrativas.
 7. **Clasificar la severidad del incidente.**
     * **baja**, si solo hubo intentos fallidos sin acceso confirmado.
     * **media**, si hubo acceso a una cuenta de usuario sin privilegios y sin impacto aparente.
@@ -1576,7 +1805,7 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
 4. Informar a usuarios y responsables afectados.
     1. Explicar cambios de contraseña, cierres de sesión y pasos de verificación.
     2. Aclarar que no deben reutilizar claves ni aprobar notificaciones MFA no iniciadas por ellos.
-5. Comunicar a proveedores externos si el acceso comprometido afecta a integraciones, hosting, nube o tienda online.
+5. Comunicar a proveedores externos si el acceso comprometido afecta a integraciones, hosting, nube o tienda online, siempre con autorización del `Incident Commander`.
 6. Valorar la notificación a organismos o fuerzas de seguridad si se aprecia acceso delictivo relevante o fraude.
 
 ### Recuperación
@@ -1597,6 +1826,9 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
     * Uso seguro de contraseñas;
     * Reconocimiento de alertas de acceso y MFA.
 7. Formalizar procedimientos de alta, baja y cambio de rol para evitar cuentas huérfanas o privilegios innecesarios.
+8. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
 
 ### Guía operativa rápida
 
@@ -1648,6 +1880,8 @@ Durante la primera hora, la secuencia recomendada será la siguiente:
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es meramente secuencial. Utiliza tu mejor criterio.
 
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante incidentes de phishing que afecten, o puedan afectar, al correo corporativo, a las credenciales, a los usuarios o a la información de la empresa. Su finalidad es detectar con rapidez el alcance del engaño, contener el posible compromiso de cuentas o equipos y coordinar una respuesta clara con TIC, Dirección y las áreas afectadas.
@@ -1663,11 +1897,19 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para coordinar decisiones y escalado;
-* Equipo TIC, para análisis técnico, bloqueo de cuentas, correo y equipos;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de correo, endpoints y servicios cloud, para análisis técnico, bloqueo de cuentas, correo y equipos;
 * Help desk, para recepción de avisos y soporte a usuarios;
 * Responsables de departamento afectados, especialmente si intervienen pagos o datos sensibles;
-* Asesoría jurídica o apoyo RGPD, si existe riesgo para datos personales o fraude.
+* [Enlace](../roles/role-5-liaison.md) interno o externo, junto con asesoría jurídica o apoyo RGPD, si existe riesgo para datos personales o fraude.
+
+#### Registro mínimo y herramientas prioritarias
+
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es` y del servicio corporativo de correo o cloud afectado.
+* Registrar mensajes, cabeceras, URL, hashes, usuarios afectados, acciones realizadas y decisiones de purgado o bloqueo.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -1727,6 +1969,15 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Verificar si existen reglas de reenvío automático, delegaciones de buzón o cambios no autorizados en firmas y bandejas.
     * Revisar si los equipos desde los que se abrió el correo muestran alertas del antivirus o comportamientos anómalos.
 
+#### Preguntas clave de investigación
+
+* Quién recibió el mensaje, quién interactuó con él y quién realizó la acción de mayor riesgo.
+* Si hubo entrega de credenciales, aprobación de MFA, descarga de malware, pago fraudulento o cambio de cuenta bancaria.
+* Si el ataque fue masivo o dirigido contra un perfil concreto de negocio, dirección o proveedor.
+* Si existen mensajes equivalentes aún no detectados en otras bandejas, sedes o cuentas compartidas.
+* Si el phishing fue el inicio de otro incidente mayor: compromiso de identidad, malware, fraude o acceso a terceros.
+* Qué evidencia conviene preservar antes de purgar correos, resetear cuentas o aislar equipos.
+
 ### Remediar
 
 * **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos, o de forma coordinada, con los equipos adecuados listos para responder a cualquier interrupción.
@@ -1752,6 +2003,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Reglas de reenvío;
     * Movimientos en servicios cloud y paneles de proveedores.
 * Confirmar con la subcontrata de antivirus que las firmas, políticas y telemetría están actualizadas en los activos afectados.
+* Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 
 #### Erradicar
 
@@ -1779,7 +2031,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     1. Informar rápidamente a los potenciales afectados para que no interactúen con el mensaje.
     2. Explicar el impacto operativo de las medidas de contención, como bloqueo de cuenta o aislamiento de equipo.
     3. Indicar claramente qué deben hacer: no borrar el correo, no reenviarlo, no seguir enlaces y avisar de cualquier mensaje similar.
-5. Comunicar a clientes o proveedores si sus datos, cuentas o transacciones pueden haberse visto afectados.
+5. Comunicar a clientes o proveedores si sus datos, cuentas o transacciones pueden haberse visto afectados, siempre con autorización del `Incident Commander` y coordinación con Legal, RGPD y Comunicación.
     1. Priorizar los casos en los que exista acceso no autorizado a información personal o fraude de suplantación.
     2. Preparar, si aplica, las notificaciones exigidas por RGPD y por contratos con terceros.
 6. Contactar con el proveedor de seguros, si la empresa dispone de cobertura de ciberincidentes.
@@ -1812,6 +2064,9 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Formalizar un procedimiento de verificación de pagos;
     * Revisar accesos desde dispositivos móviles y nube.
 6. Mantener una vigilancia reforzada de las cuentas afectadas durante los días posteriores para detectar nuevos accesos o intentos de fraude.
+7. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
 
 ### Guía operativa rápida
 
@@ -1882,6 +2137,8 @@ Durante la primera hora, la secuencia recomendada será la siguiente:
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante incidentes de ransomware que afecten, o puedan afectar, a la disponibilidad, integridad o confidencialidad de la información corporativa. Su finalidad es frenar la propagación, proteger las copias de seguridad, preservar evidencias y recuperar la operativa desde estados confiables sin improvisación.
@@ -1898,12 +2155,20 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para dirigir la respuesta y priorizar decisiones;
-* Equipo TIC de sistemas y endpoints, para aislamiento, reconstrucción y restauración;
-* Equipo TIC de red y correo, para bloqueos, segmentación y revisión de accesos remotos;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de sistemas y endpoints, para aislamiento, reconstrucción y restauración;
+* [SME](../roles/role-4-expert.md) de red, correo y accesos remotos, para bloqueos, segmentación y revisión de accesos remotos;
 * Help desk, para recepción de avisos y soporte operativo a usuarios;
 * Responsables de proceso o negocio, para priorizar recuperación de servicios;
-* Dirección y apoyo legal o RGPD, cuando exista impacto alto, continuidad afectada o riesgo regulatorio.
+* [Enlace](../roles/role-5-liaison.md) interno, junto con Dirección y apoyo legal o RGPD, cuando exista impacto alto, continuidad afectada o riesgo regulatorio.
+
+#### Registro mínimo y herramientas prioritarias
+
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es`, `https://ir.kiwiincidentes.es/assets`, `https://ir.kiwiincidentes.es/netmap`, `https://ir.kiwiincidentes.es/cil` y `https://ir.kiwiincidentes.es/cal`.
+* Registrar notas de rescate, sistemas afectados, recursos compartidos, cuentas, copias disponibles y decisiones de continuidad.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -1958,8 +2223,7 @@ Como mínimo, en este playbook deben intervenir estas funciones:
         * Riesgo regulatorio o contractual por pérdida de acceso o filtración.
     3. Criterio orientativo de severidad:
         * **alta**, si afecta a uno o varios puestos sin propagación confirmada;
-        * **muy alta**, si alcanza carpetas compartidas, servidores, varias sedes o cuentas privilegiadas;
-        * **crítica**, si compromete copias de seguridad, servicios esenciales, datos personales o la continuidad del negocio.
+        * **crítica**, si alcanza carpetas compartidas, servidores, varias sedes, cuentas privilegiadas, copias de seguridad, servicios esenciales, datos personales o la continuidad del negocio.
 4. **Encontrar el vector de infección.** Revisar las tácticas de acceso inicial más probables para esta empresa:
     * Correo de phishing con adjunto o enlace malicioso;
     * Credenciales comprometidas y acceso remoto;
@@ -1971,6 +2235,15 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Qué usuario o sistema fue el paciente cero probable.
     * Cuándo se detectaron cambios de ficheros, alertas del antivirus o conexiones anómalas.
     * Si hubo actividad previa de movimiento lateral, creación de cuentas o desactivación de defensas.
+
+#### Preguntas clave de investigación
+
+* Qué activos siguen cifrándose o podrían empezar a cifrarse en las próximas horas si no se aíslan.
+* Si además de cifrado hubo exfiltración, borrado, sabotaje o robo de credenciales previo.
+* Qué copias de seguridad, snapshots o repositorios siguen siendo confiables y desde qué momento.
+* Si el paciente cero probable accedió recientemente por correo, VPN, RDP, proveedor externo o dispositivo extraíble.
+* Qué sistemas comparten credenciales, permisos, rutas de red o herramientas con los activos ya afectados.
+* Qué servicios mínimos necesita el negocio para operar mientras se completa la restauración.
 
 ### Remediar
 
@@ -1996,6 +2269,7 @@ Las cuarentenas deben impedir la propagación desde los sistemas infectados y pr
 #### Erradicar
 
 * Preservar evidencias relevantes antes de reconstruir: nota de rescate, binarios, logs, tareas programadas, claves de registro, eventos de autenticación y muestras de archivos cifrados.
+* Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
 * Eliminar mecanismos de persistencia y accesos no autorizados detectados durante la investigación.
 * Reconstruir los sistemas infectados desde medios conocidos como seguros cuando no se pueda garantizar una limpieza completa.
 * Restaurar exclusivamente desde copias de seguridad limpias y verificadas.
@@ -2016,12 +2290,12 @@ Las cuarentenas deben impedir la propagación desde los sistemas infectados y pr
 > **No se recomienda pagar el rescate:** no garantiza la recuperación de los datos ni evita una futura extorsión o filtración.
 
 1. Elevar el incidente a Dirección, al responsable de seguridad y a los coordinadores de departamentos críticos.
-    1. Activar el comité de crisis interno cuando la severidad sea muy alta o crítica.
+    1. Activar el comité de crisis interno cuando la severidad sea crítica.
 2. Activar el plan de continuidad del negocio si la indisponibilidad afecta a operaciones esenciales.
 3. Documentar cronología, sistemas afectados, decisiones de contención, restauración y evidencias.
 4. Comunicarse con asesoría legal y consultoría RGPD si hay indicios de exfiltración o acceso a datos personales.
 5. Informar a usuarios internos de las restricciones temporales: indisponibilidad de carpetas, aislamiento de equipos, cambios de contraseña y procedimientos alternativos.
-6. Comunicar a clientes o proveedores si el incidente afecta a la prestación del servicio o a sus datos.
+6. Comunicar a clientes o proveedores si el incidente afecta a la prestación del servicio o a sus datos, siempre con autorización del `Incident Commander` y coordinación con Legal, RGPD y Comunicación.
 7. Contactar con el seguro, si existe, y cumplir plazos de notificación.
 8. Considerar la comunicación a:
     1. INCIBE-CERT;
@@ -2044,6 +2318,9 @@ Las cuarentenas deben impedir la propagación desde los sistemas infectados y pr
 4. Confirmar que las cuentas asociadas a los sistemas restaurados ya han sido saneadas y rotadas.
 5. Mantener monitorización reforzada de logs, actividad de autenticación, tráfico de red y endpoints tras la vuelta a producción.
 6. Documentar desde qué copia se restauró cada sistema, a qué hora y con qué resultado.
+7. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
 
 ### Guía operativa rápida
 
@@ -2052,7 +2329,7 @@ Durante la primera hora, la secuencia recomendada será la siguiente:
 | Paso | Acción operativa |
 |---|---|
 | 1 | Confirmar los indicios y abrir el incidente. |
-| 2 | Clasificar la severidad como alta, muy alta o crítica. |
+| 2 | Clasificar la severidad como alta o crítica. |
 | 3 | Aislar equipos, cuentas y comparticiones en riesgo. |
 | 4 | Proteger copias de seguridad y credenciales privilegiadas. |
 | 5 | Recoger evidencias mínimas antes de reconstruir. |
@@ -2117,6 +2394,8 @@ Durante la primera hora, la secuencia recomendada será la siguiente:
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utiliza tu mejor criterio.
 
+Aplica siempre los pasos comunes de activación, llamada, chat, expediente, comunicaciones y AAR definidos en [`plan.md`](../plan.md). En una activación real, comienza por la guía operativa rápida y ejecuta el resto del playbook bajo la coordinación del `Incident Commander`.
+
 ### Finalidad y activación
 
 Este playbook define la respuesta específica ante incidentes que afecten a proveedores, servicios externos, componentes software o integraciones de terceros de los que depende la empresa. Su finalidad es reducir el impacto sobre la operativa, cortar relaciones de confianza inseguras y coordinar la respuesta con los terceros implicados.
@@ -2132,11 +2411,19 @@ Se activará ante cualquiera de estas señales:
 
 Como mínimo, en este playbook deben intervenir estas funciones:
 
-* Responsable del incidente o responsable de seguridad, para coordinar y escalar la respuesta;
-* Equipo TIC, para revisar integraciones, accesos, configuraciones y dependencias;
+* [Incident Commander](../roles/role-1-commander.md), para coordinar la respuesta y aprobar el escalado operativo y de comunicación;
+* [Adjunto del Incident Commander](../roles/role-2-deputy.md) o [Escriba](../roles/role-3-scribe.md), para seguimiento de tiempos, tareas y cronología;
+* [SME](../roles/role-4-expert.md) de integraciones, proveedores, cloud o seguridad, para revisar accesos, configuraciones y dependencias;
 * Help desk, para centralizar avisos y registrar afectación operativa;
 * Responsables de negocio afectados, para priorizar servicios dependientes del tercero;
-* Proveedor implicado y, si procede, asesoría jurídica o apoyo RGPD.
+* [Enlace](../roles/role-5-liaison.md), proveedor implicado y, si procede, asesoría jurídica o apoyo RGPD.
+
+#### Registro mínimo y herramientas prioritarias
+
+* Abrir o actualizar el expediente del incidente en `https://ir.kiwiincidentes.es/incidents`.
+* Priorizar evidencias de `https://siem.kiwiincidentes.es`, `https://logs.kiwiincidentes.es`, `https://ir.kiwiincidentes.es/assets` y documentación contractual o técnica del proveedor.
+* Registrar relaciones de confianza afectadas, comunicaciones del tercero, versiones, IOC y decisiones de suspensión o reconexión.
+* Aplicar cadena de custodia cuando las evidencias puedan ser relevantes para acciones legales, contractuales o periciales.
 
 ### Investigar
 
@@ -2165,11 +2452,18 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 5. Recopilar y preservar evidencia.
     * Comunicaciones del proveedor, logs de integración, cambios de versión, indicadores de compromiso, contratos, SLA y registros de acceso.
     * Línea temporal desde la actualización o dependencia sospechosa hasta la detección.
-6. Formular preguntas clave.
-    * Si el proveedor ha reconocido el incidente y ha dado medidas concretas;
-    * Si existen otros clientes afectados o vulnerabilidades publicadas;
-    * Si se ha producido ejecución de código, fuga de datos, sabotaje o simple indisponibilidad;
-    * Si hay componentes internos que puedan haber heredado el compromiso.
+    * Registrar en el expediente el origen de cada evidencia y la persona responsable de su recogida.
+#### Preguntas clave de investigación
+
+* Si el proveedor ha reconocido el incidente y ha dado medidas concretas.
+* Si existen otros clientes afectados o vulnerabilidades publicadas.
+* Si se ha producido ejecución de código, fuga de datos, sabotaje o simple indisponibilidad.
+* Si hay componentes internos que puedan haber heredado el compromiso.
+* Qué relaciones de confianza concretas mantiene la organización con ese tercero: accesos, secretos, sincronizaciones, despliegues o soporte remoto.
+* Si debemos suspender el servicio completo o solo una integración, versión, endpoint o canal concreto.
+* Qué evidencia independiente tenemos además de la comunicación del proveedor.
+* Si el incidente del tercero nos obliga a rotar credenciales, revocar certificados o invalidar software ya desplegado.
+* Qué impacto tendría seguir operando mientras se espera la confirmación técnica del proveedor.
 
 ### Remediar
 
@@ -2214,7 +2508,7 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
 2. Contactar formalmente con el proveedor afectado y documentar todas las comunicaciones.
 3. Informar a departamentos internos afectados de restricciones, caídas de servicio o cambios operativos.
 4. Coordinar con asesoría legal y consultoría RGPD si el incidente implica datos personales o incumplimientos contractuales.
-5. Preparar comunicación externa para clientes o proveedores si la prestación del servicio se ha visto afectada.
+5. Preparar comunicación externa para clientes o proveedores si la prestación del servicio se ha visto afectada, siempre con autorización del `Incident Commander` y coordinación con Legal y Comunicación.
 6. Valorar notificación a organismos competentes si existe fuga de datos o afectación relevante a terceros.
 7. Registrar compromisos, tiempos de respuesta y medidas propuestas por el proveedor para futuras decisiones de riesgo.
 
@@ -2237,6 +2531,9 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
     * Cláusulas de notificación de incidentes;
     * Revisiones de seguridad periódicas;
     * Dependencia mínima necesaria.
+7. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
 
 ### Guía operativa rápida
 
@@ -2289,24 +2586,25 @@ A continuación se presentan las descripciones, los deberes y la formación para
 
 ### Equipo de Mando
 
-- [Incident Commander](roles/role-1-commander.md)
-- [Incident Commander - Adjunto](roles/role-2-deputy.md)
-- [Escriba](roles/role-3-scribe.md)
+- [Incident Commander](role-1-commander.md)
+- [Incident Commander - Adjunto](role-2-deputy.md)
+- [Escriba](role-3-scribe.md)
 
 ---
 
 ### Equipo de Enlace
 
-- [Enlace interno](roles/role-5-liaison.md)
-- Enlace externo
+- [Enlace interno](role-5-liaison.md)
+
 
 ---
 
 ### Equipo de Operaciones
 
-- [Expertos en la materia (SME)](roles/role-4-expert.md)
+- [Expertos en la materia (SME)](role-4-expert.md)
 - SMEs para equipos/unidades de negocio
-- SMEs para las funciones ejecutivas (_p.ej._, Legal, RRHH, Finanzas)
+- SMEs para funciones ejecutivas (Legal, RRHH, Finanzas)
+
 
 Esta es una **estructura flexible**: cada rol no será ocupado por una persona diferente para cada incidente. Por ejemplo, en un incidente pequeño, el adjunto podría actuar como escribiente y enlace interno. La estructura es flexible y se adapta al incidente.
 
@@ -2681,12 +2979,11 @@ Existen dos modalidades principales:
 
 ## Funciones del enlace interno
 
-- Contactar con expertos en la materia (SME) u otros equipos cuando lo indique el Incident Commander.
-- Notificar y coordinar la participación de equipos internos como legal, finanzas, marketing u otros, según sea necesario.
-- Facilitar la comunicación entre equipos internos implicados en la resolución del incidente.
-- Mantener informadas a las partes interesadas internas sin interrumpir la coordinación principal del incidente.
-- Proporcionar resúmenes de estado a la dirección o partes interesadas cuando sea requerido.
-
+- Contactar con [Expertos SME](role-4-expert.md).
+- Coordinar con [Escriba](role-3-scribe.md) cuando sea necesario.
+- Facilitar comunicación entre equipos internos.
+- Mantener informadas partes internas sin interrumpir el incidente.
+- Proporcionar resúmenes a dirección si se solicita.
 ---
 
 ## Formación
