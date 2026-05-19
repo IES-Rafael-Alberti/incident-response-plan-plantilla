@@ -156,7 +156,7 @@ Son resilientes porque:
 
 Las fases donde más se nota esa resiliencia son **contención**, **recuperación** y **preparación**, aunque también está presente en la forma de tomar decisiones y comunicar durante todo el incidente. La justificación es que la empresa depende de correo, cloud, CRM/ERP y web para seguir prestando servicio, así que una respuesta válida no puede limitarse a aislar, sino que debe permitir seguir operando de forma degradada o recuperar primero lo más crítico. Precisamente por eso el plan insiste en impacto funcional, priorización, continuidad y recuperación ordenada.
 
-## Conlusiones
+## Conclusiones
 
 ### 1. Importancia de una respuesta organizada
 El plan demuestra que una gestión eficaz de incidentes requiere una estructura clara de actuación. La definición de roles, responsabilidades y procedimientos permite responder de forma coordinada y reducir la improvisación durante situaciones críticas.
@@ -180,6 +180,58 @@ La aplicación de este plan ayuda a disminuir el impacto técnico, económico y 
 El plan deja claro que la eficacia de la respuesta depende también de la preparación previa del personal. La formación, los simulacros y la revisión periódica del plan son elementos esenciales para garantizar una respuesta eficiente ante futuras amenazas.
 
 ## Bibliografía
+
+Fecha de consulta de las fuentes web: 19 de mayo de 2026.
+
+### Fuentes metodológicas generales
+
+1. Counteractive Security. (s. f.). *Incident Response Plan Template*. https://github.com/counteractive/incident-response-plan-template
+2. National Institute of Standards and Technology. (2012). *NIST SP 800-61 Rev. 2: Computer Security Incident Handling Guide*. https://csrc.nist.gov/pubs/sp/800/61/r2/final
+3. National Institute of Standards and Technology. (s. f.). *Cybersecurity Framework*. https://www.nist.gov/cyberframework
+4. SANS Institute. (s. f.). *Incident Handler's Handbook*. https://www.sans.org/reading-room/whitepapers/incident/incident-handlers-handbook-33901
+5. PagerDuty. (s. f.). *Incident Response Documentation*. https://response.pagerduty.com/
+
+### Marcos de amenazas y respuesta
+
+6. MITRE. (s. f.). *MITRE ATT&CK*. https://attack.mitre.org/
+7. MITRE. (s. f.). *MITRE ATT&CK Navigator*. https://mitre-attack.github.io/attack-navigator/
+8. ATC Project. (s. f.). *RE&CT: Response and Detection Engineering Framework*. https://atc-project.github.io/atc-react/
+
+### Normativa, notificación y organismos de referencia
+
+9. Parlamento Europeo y Consejo de la Unión Europea. (2016). *Reglamento (UE) 2016/679, Reglamento General de Protección de Datos*. https://eur-lex.europa.eu/eli/reg/2016/679/oj?locale=ES
+10. Agencia Española de Protección de Datos. (s. f.). *Notificación de brechas de datos personales*. https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion/notificaciones-de-brechas-de-datos-personales
+11. Agencia Española de Protección de Datos. (s. f.). *Guía para la notificación de brechas de datos personales*. https://www.aepd.es/media/guias/guia-brechas-seguridad.pdf
+12. INCIBE-CERT. (s. f.). *Respuesta a incidentes*. https://www.incibe.es/incibe-cert/incidentes/respuesta-incidentes
+
+### Fuentes específicas utilizadas en los playbooks
+
+13. CISA. (s. f.). *Avoiding Social Engineering and Phishing Attacks*. https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks
+14. CISA. (s. f.). *Recognize and Report Phishing*. https://www.cisa.gov/secure-our-world/recognize-and-report-phishing
+15. CISA. (s. f.). *#StopRansomware Guide*. https://www.cisa.gov/stopransomware/ransomware-guide
+16. CISA. (s. f.). *Defending Against Software Supply Chain Attacks*. https://www.cisa.gov/resources-tools/resources/software-supply-chain-attacks
+17. No More Ransom. (s. f.). *No More Ransom Project*. https://www.nomoreransom.org/
+18. ID Ransomware. (s. f.). *ID Ransomware Service*. https://id-ransomware.malwarehunterteam.com/
+19. National Cyber Security Centre. (s. f.). *Supply Chain Security Collection*. https://www.ncsc.gov.uk/collection/supply-chain-security
+20. Cloudflare. (s. f.). *¿Qué es un ataque DDoS?*. https://www.cloudflare.com/es-es/learning/ddos/what-is-a-ddos-attack/
+21. OWASP Foundation. (s. f.). *SQL Injection Prevention Cheat Sheet*. https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+22. OWASP Foundation. (s. f.). *Path Traversal*. https://owasp.org/www-community/attacks/Path_Traversal
+23. OWASP Foundation. (s. f.). *Multifactor Authentication Cheat Sheet*. https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html
+24. National Institute of Standards and Technology. (2010). *NIST SP 800-122: Guide to Protecting the Confidentiality of Personally Identifiable Information*. https://csrc.nist.gov/pubs/sp/800/122/final
+25. National Institute of Standards and Technology. (s. f.). *NIST SP 800-63B: Digital Identity Guidelines: Authentication and Authenticator Management*. https://pages.nist.gov/800-63-4/sp800-63b.html
+
+### Técnicas MITRE ATT&CK citadas en los playbooks
+
+26. MITRE. (s. f.). *Phishing (T1566)*. https://attack.mitre.org/techniques/T1566/
+27. MITRE. (s. f.). *Valid Accounts (T1078)*. https://attack.mitre.org/techniques/T1078/
+28. MITRE. (s. f.). *Data Encrypted for Impact (T1486)*. https://attack.mitre.org/techniques/T1486/
+29. MITRE. (s. f.). *Supply Chain Compromise (T1195)*. https://attack.mitre.org/techniques/T1195/
+30. MITRE. (s. f.). *External Defacement (T1491.002)*. https://attack.mitre.org/techniques/T1491/002/
+31. MITRE. (s. f.). *Internal Defacement (T1491.001)*. https://attack.mitre.org/techniques/T1491/001/
+32. MITRE. (s. f.). *Network Denial of Service (T1498)*. https://attack.mitre.org/techniques/T1498/
+33. MITRE. (s. f.). *Exfiltration (TA0010)*. https://attack.mitre.org/tactics/TA0010/
+34. MITRE. (s. f.). *Exploit Public-Facing Application (T1190)*. https://attack.mitre.org/techniques/T1190/
+35. MITRE. (s. f.). *Credential Access (TA0006)*. https://attack.mitre.org/tactics/TA0006/
 
 ## Anexo
 
