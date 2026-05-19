@@ -22,7 +22,7 @@ REVIEW_DATE: '18-05-2026'
 TEST_DATE: '18-05-2026'
 
 # URL or reference to IR chat program like Teams, Slack, or Discord (e.g., chat.acme.tld/codename)
-RESPONSE_CHAT: '{{RESPONSE_CHAT}}'
+RESPONSE_CHAT: 'Microsoft Teams: Equipo "IR" / Canal "incidentes"'
 
 # Phone number for response teleconference (e.g., 123-456-7890)
 RESPONSE_PHONE: '+34 600 000 000'
@@ -31,103 +31,103 @@ RESPONSE_PHONE: '+34 600 000 000'
 RESPONSE_VTC: 'zoom.com/cyberconsulting'
 
 # Description/URL for alternate email (e.g., alt 365 tenant at ir.acme.tld/othermail)
-ALTERNATE_EMAIL: 'contact-alternative@cyberconsulting.com'
+ALTERNATE_EMAIL: 'ir@cyberconsulting.com'
 
 # Domain name for your organization (e.g., acme.tld)
 ORGANIZATION_DOMAIN: 'cyberconsulting.com'
 
 # Number or URL to page Commander(s) (e.g., 555-PAGE)
-INCIDENT_COMMANDER_PAGER_NUMBER: '{{INCIDENT_COMMANDER_PAGER_NUMBER}}'
+INCIDENT_COMMANDER_PAGER_NUMBER: '+34 900 123 456 (guardia) / Ext. 777'
 
 # Number or URL to page Commander(s) (e.g., ir.acme.tld/ic-page)
-INCIDENT_COMMANDER_PAGER_URL: '{{INCIDENT_COMMANDER_PAGER_URL}}'
+INCIDENT_COMMANDER_PAGER_URL: 'https://oncall.cyberconsulting.com/ic'
 
 # URL/path to Commander roster/list (e.g., ir.acme.tld/ic-roster)
-INCIDENT_COMMANDER_ROSTER: '{{INCIDENT_COMMANDER_ROSTER}}'
+INCIDENT_COMMANDER_ROSTER: 'https://wiki.cyberconsulting.com/ir/rosters/incident-commander'
 
 # As above, for security team (e.g., ir.acme.tld/sec-roster)
-SECURITY_TEAM_ROSTER: '{{SECURITY_TEAM_ROSTER}}'
+SECURITY_TEAM_ROSTER: 'https://wiki.cyberconsulting.com/ir/rosters/security-team'
 
 # As above, for SMEs (e.g., ir.acme.tld/sme-roster)
-TEAM_SME_ROSTER: '{{TEAM_SME_ROSTER}}'
+TEAM_SME_ROSTER: 'https://wiki.cyberconsulting.com/ir/rosters/sme'
 
 # As above, for executive team (e.g., ir.acme.tld/exec-roster)
-EXECUTIVE_ROSTER: '{{EXECUTIVE_ROSTER}}'
+EXECUTIVE_ROSTER: 'https://wiki.cyberconsulting.com/ir/rosters/executive'
 
 # Time to wait for on-duty IC on call (e.g., 15 minutes)
-INCIDENT_COMMANDER_RESPONSE_SLA: '{{INCIDENT_COMMANDER_RESPONSE_SLA}}'
+INCIDENT_COMMANDER_RESPONSE_SLA: '15 minutos'
 
 # Time between scheduled updates (e.g., 4 hours)
-UPDATE_FREQUENCY: '{{UPDATE_FREQUENCY}}'
+UPDATE_FREQUENCY: '4 horas (SEV-1: 1 hora)'
 
 # URL/path to incident file (e.g., ir.acme.tld/files/codename)
-INCIDENT_FILE_LOCATION: '{{INCIDENT_FILE_LOCATION}}'
+INCIDENT_FILE_LOCATION: 'https://share.cyberconsulting.com/sites/IR/Incidents/<INC-CODENAME>'
 
 # URL/path to critical information list, data you want to protect (e.g., ir.acme.tld/cil)
-CRITICAL_INFO_LIST_LOCATION: '{{CRITICAL_INFO_LIST_LOCATION}}'
+CRITICAL_INFO_LIST_LOCATION: 'https://share.cyberconsulting.com/sites/IR/Lists/Critical-Info'
 
 # URL/path to critical asset list, systems you want to protect (e.g., ir.acme.tld/cal)
-CRITICAL_ASSET_LIST_LOCATION: '{{CRITICAL_ASSET_LIST_LOCATION}}'
+CRITICAL_ASSET_LIST_LOCATION: 'https://share.cyberconsulting.com/sites/IR/Lists/Critical-Assets'
 
 # URL/path to asset management DB (e.g., ir.acme.tld/assets)
-ASSET_MGMT_DB_LOCATION: '{{ASSET_MGMT_DB_LOCATION}}'
+ASSET_MGMT_DB_LOCATION: 'https://cmdb.cyberconsulting.com'
 
 # URL/path to network map (e.g., ir.acme.tld/netmap)
-NETWORK_MAP_LOCATION:  '{NETWORK_MAP_LOCATION{}}'
+NETWORK_MAP_LOCATION: 'https://wiki.cyberconsulting.com/it/network-map'
 
 # URL to SIEM (e.g., siem.acme.tld)
-SIEM_CONSOLE_LOCATION: '{{SIEM_CONSOLE_LOCATION}}'
+SIEM_CONSOLE_LOCATION: 'Microsoft Sentinel (Azure Portal)'
 
 # URL to log aggregator (e.g., elk.acme.tld)
-LOG_AGGREGATOR_CONSOLE: '{{LOG_AGGREGATOR_CONSOLE}}'
+LOG_AGGREGATOR_CONSOLE: 'https://logs.cyberconsulting.com (Kibana)'
 
 # Name/URL of live response tool (e.g., [velociraptor](https://www.velocidex.com))
-LIVE_RESPONSE_TOOL: '{{LIVE_RESPONSE_TOOL}}'
+LIVE_RESPONSE_TOOL: 'Microsoft Defender for Endpoint (MDE)'
 
 # Name/URL of memory collection tool (e.g., [winpmem](https://github.com/Velocidex/WinPmem))
-MEMORY_COLLECTION_TOOL: '{{MEMORY_COLLECTION_TOOL}}'
+MEMORY_COLLECTION_TOOL: 'WinPmem (https://github.com/Velocidex/WinPmem)'
 
 # Name/URL of disk imaging tool (e.g., [sumuri](https://sumuri.com/software))
-DISK_IMAGE_TOOL: '{{DISK_IMAGE_TOOL}}'
+DISK_IMAGE_TOOL: 'FTK Imager (https://www.exterro.com/ftk-imager)'
 
 # URL/path to IR report template (e.g., ir.acme.tld/report/template)
-INCIDENT_REPORT_TEMPLATE: '{{INCIDENT_REPORT_TEMPLATE}}'
+INCIDENT_REPORT_TEMPLATE: 'https://wiki.cyberconsulting.com/ir/templates/incident-report'
 
 # URL/path to report recipient list (e.g., ir.acme.tld/report/recipients)
-INCIDENT_REPORT_RECIPIENTS: '{{INCIDENT_REPORT_RECIPIENTS}}'
+INCIDENT_REPORT_RECIPIENTS: 'seguridad@cyberconsulting.com; it-ops@cyberconsulting.com; legal@cyberconsulting.com; dpo@cyberconsulting.com; direccion@cyberconsulting.com'
 
 # Compliance team name and contact info (e.g., the legal team, legal@acme.tld)
-COMPLIANCE_TEAM:  '{COMPLIANCE_TEAM{}}'
+COMPLIANCE_TEAM: 'Compliance/DPO (dpo@cyberconsulting.com)'
 
 # Communications team name and contact info (e.g., the marketing team, marketing@acme.tld)
-COMMUNICATIONS_TEAM: '{{COMMUNICATIONS_TEAM}}'
+COMMUNICATIONS_TEAM: 'Comunicación (comunicacion@cyberconsulting.com)'
 
 # Executive team name and contact info (e.g., the front office, bosses@acme.tld)
-EXECUTIVE_TEAM: '{{EXECUTIVE_TEAM}}'
+EXECUTIVE_TEAM: 'Dirección (direccion@cyberconsulting.com)'
 
 # Legal team name (e.g., the legal team, legal@acme.tld)
-LEGAL_TEAM: '{{LEGAL_TEAM}}'
+LEGAL_TEAM: 'Legal (legal@cyberconsulting.com)'
 
 # Local law enforcement contact info (e.g., Detective Jane Doe, police@local.gov.tld)
-LOCAL_LE_CONTACT: '{{LOCAL_LE_CONTACT}}'
+LOCAL_LE_CONTACT: 'Policía Nacional (091) / Guardia Civil (062)'
 
 # FBI contact info (e.g., 1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us)
-FBI_CONTACT: '{{FBI_CONTACT}}'
+FBI_CONTACT: 'N/A (España) — sustituir por contacto nacional/INCIBE-CERT'
 
 # Vendor for IR and infosec support (e.g., [Counteractive Security](https://www.counteractive.net))
-INCIDENT_RESPONSE_VENDOR: '{{INCIDENT_RESPONSE_VENDOR}}'
+INCIDENT_RESPONSE_VENDOR: 'SecurityResponse Iberia (https://securityresponse.example)'
 
 # Vendor for PR support (e.g., public relations llc, pr.firm.tld)
-PUBLIC_RELATIONS_VENDOR: '{{PUBLIC_RELATIONS_VENDOR}}'
+PUBLIC_RELATIONS_VENDOR: 'PR & Comunicación Externa (https://pr-cyber.example)'
 
 # (Cyber) insurance provider (e.g., AAA insurance co., cyber.insurance.tld)
-INSURANCE_VENDOR: '{{INSURANCE_VENDOR}}'
+INSURANCE_VENDOR: 'Seguro Ciber (poliza CYB-2026-0001)'
 
 # Industry ISAC contact info (e.g., FS ISAC, https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center)
-ISAC_CONTACT: '{{ISAC_CONTACT}}'
+ISAC_CONTACT: 'INCIBE-CERT (https://www.incibe.es/incibe-cert)'
 
 # After action review (AAR) service level agreement (time after completion of incident to conduct AAR) (e.g., 5 business days)
-AAR_SLA: '{{AAR_SLA}}'
+AAR_SLA: '5 días laborables'
 
 # AAR attendees (e.g., ir.acme.tld/aar/attendees)
-AAR_ATTENDEES: '{{AAR_ATTENDEES}}'
+AAR_ATTENDEES: 'Incident Commander; Seguridad; IT Ops; Propietarios de servicio; Legal; DPO/Compliance; Comunicación'

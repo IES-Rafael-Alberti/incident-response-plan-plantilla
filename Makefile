@@ -17,10 +17,10 @@ build/_pandoc.yml: info.yml pandoc.yml
 	mkdir -p build
 	mustache info.yml pandoc.yml > build/_pandoc.yml
 
-build/_plan.md: *.md playbooks/*.md reference/*.md roles/*.md
+build/_plan.md: *.md playbooks/*.md playbooks/*/*.md reference/*.md roles/*.md
 	mkdir -p build
 	cat during.md \
-	    playbooks/index.md playbooks/playbook-*.md \
+	    playbooks/playbook-*.md playbooks/*/playbook-*.md \
 	    roles/index.md roles/role-*.md \
 	    after.md about.md > build/_plan.md
 
