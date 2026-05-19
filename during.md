@@ -388,6 +388,62 @@ Consulte la página [MITRE ATT&CK](https://attack.mitre.org/) para obtener más 
 
 La matriz ATT&CK se emplea en esta fase como marco de apoyo para formular hipótesis, priorizar preguntas, clasificar evidencias y orientar la selección de sistemas testigo. No se utiliza como un listado teórico cerrado, sino como una guía práctica para estructurar la investigación conforme a las tácticas más plausibles para el incidente y para los activos críticos de la empresa.
 
+
+## Aplicación de RE&CT al plan
+
+RE&CT se utilizará como marco de apoyo para estructurar la respuesta defensiva de la empresa, de forma que las acciones no se limiten a reaccionar ante el incidente, sino que sigan un orden claro de preparación, identificación, contención, erradicación, recuperación y aprendizaje posterior.
+
+En este caso, la matriz nos servirá para relacionar cada fase con las actividades concretas que debe realizar el equipo de respuesta sobre correo, CRM, ERP, cloud, web y tienda online.
+
+
+### Preparación
+
+La preparación consiste en dejar la empresa lista para responder con rapidez y con el menor impacto posible. En esta fase se revisarán los procedimientos, los contactos, las herramientas disponibles, los accesos de emergencia, los repositorios de evidencias y los playbooks que puedan activarse según el tipo de incidente.
+
+También se comprobará que los responsables de seguridad, TIC, negocio y comunicación conocen su función y que el proceso de escalado está definido antes de que ocurra el incidente.
+
+
+## Identificación
+
+La identificación se centrará en entender qué ha pasado, qué activos están afectados y cuál es el alcance inicial del incidente. Para ello se recopilarán alertas, logs, evidencias iniciales, avisos de usuarios, datos de SIEM, telemetría de endpoints y cualquier pista útil para confirmar la naturaleza del incidente.
+
+En esta fase también se apoyará la investigación con MITRE ATT&CK, para relacionar los hechos observados con tácticas y técnicas concretas del atacante.
+
+
+### Contención
+
+La contención busca impedir que el incidente se extienda o empeore. En esta empresa, esto implica aislar sistemas afectados, bloquear cuentas comprometidas, cortar accesos remotos, suspender integraciones sospechosas y frenar dominios, IP o servicios maliciosos cuando sea necesario.
+
+Si el riesgo operativo lo exige, algunos servicios podrán pasar temporalmente a mantenimiento o a modo restringido mientras se analiza el alcance real del incidente.
+
+
+### Erradicación
+
+La erradicación consiste en eliminar la amenaza y corregir la causa que la permitió entrar. Aquí se retirarán malware, puertas traseras, cuentas no autorizadas, credenciales comprometidas, tareas maliciosas o configuraciones inseguras detectadas durante la investigación.
+
+Además, se revisará el vector inicial para evitar que el mismo incidente vuelva a repetirse, aplicando los cambios necesarios en sistemas, accesos y controles de seguridad.
+
+
+### Recuperación
+
+La recuperación busca volver a la normalidad de forma controlada y segura. Antes de restaurar servicios, se confirmará que la contención y la erradicación han funcionado, que las credenciales afectadas han sido renovadas y que las copias o estados de restauración son íntegros y confiables.
+
+Después, los servicios se recuperarán de forma escalonada, priorizando primero correo, servidores de archivos, CRM, ERP, cloud y, por último, la web y la tienda online si han quedado afectadas.
+
+
+### Lecciones aprendidas
+
+La fase de lecciones aprendidas servirá para revisar qué ha funcionado, qué ha fallado y qué mejoras se deben incorporar al plan. En esta empresa, esta revisión será importante para actualizar procedimientos, reforzar la monitorización, mejorar la formación y ajustar los playbooks en función de lo ocurrido.
+
+Con esto se pretende que cada incidente sirva también para fortalecer la capacidad de respuesta futura y no solo para cerrar el caso.
+
+### Relación con el plan
+
+RE&CT complementa a MITRE ATT&CK porque nos ayuda a pasar del análisis del atacante a una respuesta estructurada y defensiva. Mientras ATT&CK nos orienta sobre cómo actúa la amenaza, RE&CT nos organiza la respuesta para preparar, identificar, contener, erradicar, recuperar y aprender.
+
+Por eso, esta matriz encaja especialmente bien en la parte operativa del plan y en la definición de los playbooks, ya que nos permite convertir la teoría en acciones concretas y repetibles.
+
+
 ## Crear y desplegar indicadores de compromiso (IOC)
 
 Los indicadores de compromiso se van a crear a partir de las pistas iniciales recopiladas, los artefactos recopilados y los resultados del análisis, priorizando indicadores dinámicos y de comportamiento sobre indicadores estáticos aislados. El objetivo será mejorar la detección, acelerar la contención y permitir la correlación entre correo, red, endpoints, servicios cloud y proveedores externos. 
