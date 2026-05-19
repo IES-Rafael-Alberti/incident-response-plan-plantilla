@@ -448,20 +448,7 @@ Tenemos claros los escenarios: si un admin pierde su cuenta, sabemos que el atac
 
 Y lo más importante: el plan dice específicamente qué hacer. No dice "aislar sistemas". Dice "cuarentena lógica del servidor X, del usuario Y, del almacenamiento compartido Z". Eso es lo que necesitas en un incidente real.
 
----
 
-El siguiente modelo de madurez evidencia gráficamente por qué la fase de Preparación es la más débil del plan (Concienciación y Políticas al 45%) y por qué la Contención es la más sólida (dominios de Infraestructura y Endpoint por encima del 70%):
-
-![Figura 2 — Modelo de Madurez de Ciberseguridad: Madurez Actual vs. Objetivo (CiberConsulting S.L., 2025)](modelo_madurez.svg)
-
-**Leyenda de valores:**
-
-- Gestión de Accesos y MFA: actual 65% / objetivo 90%
-- Protección de Infraestructura y Red: actual 75% / objetivo 90%
-- Seguridad Web y Servicios Externalizados: actual 55% / objetivo 85%
-- Protección Endpoint y Antimalware: actual 70% / objetivo 90%
-- Concienciación y Políticas de Seguridad: actual 45% / objetivo 85%
-- Continuidad de Negocio y Backups: actual 70% / objetivo 90%
 
 #### Resumen de cómo cubrimos cada fase
 
@@ -514,9 +501,6 @@ Son resilientes porque combinan:
 - comunicación estructurada con escalado claro,
 - enfoque en contención y recuperación paralelas.
 
-El modelo de madurez siguiente ilustra que los dominios que sustentan la resiliencia del plan (Protección de Infraestructura y Red, Protección Endpoint y Continuidad de Negocio) son precisamente los de mayor madurez actual, lo que valida el enfoque del plan:
-
-![Figura 3 — Modelo de Madurez de Ciberseguridad: Madurez Actual vs. Objetivo (CiberConsulting S.L., 2025)](modelo_madurez.svg)
 
 **Leyenda de valores:**
 
