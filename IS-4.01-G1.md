@@ -25,7 +25,7 @@ En conjunto, este trabajo pretende mostrar la importancia de abordar la ciberseg
 
 ## Plan de respuesta
 
-[plan-de-respuesta](/plan.md)
+[Enlace a Documento](/plan.md)
 
 ## Playbooks
 
