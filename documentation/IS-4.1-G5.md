@@ -813,14 +813,14 @@ Además, algunos comportamientos como escaneo o sniffing no se consideran playbo
 
 ```mermaid
 flowchart TD
-  A[Alerta o detección] --> B{¿Indicios de cifrado}
+  A[Alerta o detección] --> B{¿Indicios de cifrado?}
   B -- No --> C[Triage y monitorización]
-  B -- Sí --> D[Clasificación SEV1 / SEV2]
+  B -- Sí --> D[Clasificación SEV1 o SEV2]
   D --> E[Preservar evidencias]
   E --> F[Contención: aislamiento de equipos]
   F --> G[Erradicación del vector de entrada]
   G --> H[Recuperación desde backups verificados]
-  H --> I[Revisión y lecciones aprendidas (AAR)]
+  H --> I[Revisión y lecciones aprendidas AAR]
 ```
 
 ## 1.c Cobertura de fases del plan y valoración de fases
