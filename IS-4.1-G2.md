@@ -52,7 +52,13 @@ El resultado se concreta en 6 playbooks que cubren los escenarios de mayor impac
 
 ## Plan de respuesta
 
-[Estructura general del Plan de Respuesta y asignación de roles técnicos de CiberConsulting S.L.]
+[Plan de respuesta en markdown](plan_respuesta/plan.md)
+
+[Plan de respuesta en pdf](plan_respuesta/plan.pdf)
+
+[Plan de respuesta en html](plan_respuesta/plan.html)
+
+[Plan de respuesta en docx](plan_respuesta/plan.docx)
 
 ## Playbooks
 
