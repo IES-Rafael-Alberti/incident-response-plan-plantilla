@@ -26,7 +26,18 @@
 
 ## Introducción
 
-Inventario completo de activos
+Este documento define el plan de respuesta a incidentes de CiberConsulting S.L. y los playbooks operativos asociados, ajustados al contexto real de la empresa: 150 empleados, dos sedes físicas y una web/tienda online externalizada. El objetivo es que, ante un incidente, el equipo pueda actuar de forma coordinada, rápida y verificable: confirmar el incidente, contenerlo, erradicar la causa, recuperar la operación y capturar lecciones aprendidas.
+
+Para que el plan no sea genérico, el enfoque combina:
+
+- Identificación de activos y criticidad (qué hay que proteger y con qué prioridad).
+- Modelado de amenazas y técnicas (MITRE ATT&CK) para aterrizar “qué nos puede pasar”.
+- Acciones defensivas concretas (RE&CT) para traducir la teoría en pasos ejecutables.
+- Cobertura de ciclo de vida de respuesta (NIST SP 800-61 / PICERL) para asegurar que no se omiten fases.
+
+El resultado se concreta en 6 playbooks que cubren los escenarios de mayor impacto/probabilidad para la organización (exfiltración web, phishing, ransomware, acceso no autorizado, compromiso de proveedores y pérdida/robo de dispositivo), con evidencias de flujo (diagramas) y guías de actuación.
+
+### Inventario de activos
 
 | ID      | Activo                                     | Tipo        | Categoría              | Propietario        | Valor C | Valor I | Valor D | Criticidad |
 | :------ | :----------------------------------------- | :---------- | :--------------------- | :----------------- | :------ | :------ | :------ | :--------- |
@@ -47,12 +58,12 @@ Inventario completo de activos
 
 Aquí se listan los 6 playbooks detallados creados por el equipo:
 
-- [Playbook 1: Exfiltración de Datos (Web/Tienda Online)](./playbook_exfiltracion.md)
-- [Playbook 2: Amenaza Interna / Riesgo Físico (Extracción USB)](./playbook_insider.md)
-- [Playbook 3: Infección por Ransomware](./playbook_ransomware.md)
-- [Playbook 4: Ataque de Phishing](./playbook_phishing.md)
-- [Playbook 5: Account Takeover (Robo de Cuentas)](./playbook_account.md)
-- [Playbook 6: Insider Threat Secundario](./playbook_insider2.md)
+- [Playbook 1: Exfiltración de Datos (Web/Tienda Online)](./playbooks/exfiltracion-datos/playbook-data-exfiltration.md)
+- [Playbook 2: Ataque de Phishing](./playbooks/playbook-phishing.md)
+- [Playbook 3: Infección por Ransomware](./playbooks/playbook-ransomware.md)
+- [Playbook 4: Acceso No Autorizado (Físico y Lógico)](./playbooks/acceso-no-autorizado/playbook-acceso-no-autorizado.md)
+- [Playbook 5: Compromiso de la Cadena de Suministro / Proveedores](./playbooks/playbook-supply-chain.md)
+- [Playbook 6: Pérdida o Robo de Dispositivo](./playbooks/perdida-robo-dispositivo/playbook-perdida-robo-dispositivo.md)
 
 ---
 
@@ -112,25 +123,25 @@ Para identificar los playbooks, no fue complicado. Miramos qué nos puede pasar 
 
 La tienda está en un servidor que no controlamos. Tiene datos de clientes, tarjetas, cuentas bancarias. Si alguien la ataca, nos roba eso. Es muy delicado porque si roban datos personales, tenemos 72 horas para notificarlo a la autoridad por RGPD. Este playbook es sobre parar rápido el ataque y mirar qué se llevaron.
 
-**Playbook 2: Ransomware**
+**Playbook 2: Ataque de Phishing**
 
-Un ataque de ransomware nos para el negocio directamente. Si alguien nos encripta los datos, no facturamos, no trabamos con clientes, se nos cae todo. Es el más peligroso. Lo que hacemos es aislar los sistemas rapidísimo, proteger las copias de seguridad para que no las encripten también, y bloquear al atacante.
+Nuestros empleados reciben muchos mails de fuera. Un atacante puede hacerse pasar por un cliente, un proveedor, o la administración pública. Si alguien hace clic, entrega credenciales o aprueba MFA, el atacante puede escalar a correo, nube y aplicaciones internas. Este playbook guía el análisis del mensaje, el alcance y la contención rápida (bloqueo/purga de correos, revocación de sesiones/tokens, etc.).
 
-**Playbook 3: Phishing y Compromiso de Cuenta**
+**Playbook 3: Ransomware**
 
-Nuestros empleados reciben muchos mails de fuera. Un atacante puede hacerse pasar por un cliente, un proveedor, o la administración pública. Si alguien hace clic, tiene acceso. Y si es un admin el que hace clic, el atacante entra a todo: correos, bases de datos, sistemas de backup. Es lo que más fácil entra en cualquier empresa.
+Un ataque de ransomware nos para el negocio directamente. Si alguien nos encripta los datos, no facturamos, no trabajamos con clientes, se nos cae todo. Es el más peligroso. Lo que hacemos es aislar los sistemas rapidísimo, proteger las copias de seguridad para que no las encripten también, y bloquear al atacante.
 
-**Playbook 4: Account Takeover (Robo de Cuentas)**
-
-Este es diferente al phishing. Aquí alguien te roba la cuenta. No es que hagas clic en un enlace, sino que alguien entra directamente. Si es una cuenta de admin (firewall, Active Directory, servidor de correo), la cagamos. Porque con eso, un atacante entra en todo sin que nadie lo vea.
-
-**Playbook 5: Acceso No Autorizado (Físico y Lógico)**
+**Playbook 4: Acceso No Autorizado (Físico y Lógico)**
 
 En nuestras oficinas entran técnicos, gente de limpieza, visitantes. Cualquiera podría conectar un USB malicioso, robar datos en físico, o acceder a un equipo. Además, a veces la gente se va de vacaciones y deja la sesión abierta. Este playbook cubre ambas cosas: acceso físico y acceso lógico sin permiso.
 
-**Playbook 6: Compromiso de Proveedores**
+**Playbook 5: Compromiso de la Cadena de Suministro / Proveedores**
 
 Usamos Microsoft 365, CRM en la nube, hosting de terceros. No controlamos sus servidores. Si uno de ellos se ve comprometido, nosotros también estamos en riesgo. Necesitamos saber si el problema es nuestro o del proveedor, y actuar en consecuencia.
+
+**Playbook 6: Pérdida o Robo de Dispositivo**
+
+Usamos portátiles, móviles y tabletas. Si se pierde o roba un dispositivo, el riesgo no es solo el hardware: puede implicar exposición de datos, sesiones activas, credenciales guardadas y acceso a almacenamiento en la nube. Este playbook define acciones rápidas de bloqueo/contención (revocación de sesiones, rotación de credenciales, MDM si aplica) y verificación de accesos anómalos.
 
 ---
 
@@ -275,11 +286,75 @@ Las fases más centradas en resiliencia son:
 
 ## Conclusiones
 
-[Conclusión final del proyecto de CiberConsulting S.L.]
+El plan y los playbooks entregan una respuesta aplicable a la realidad de CiberConsulting S.L., evitando un documento “teórico” y priorizando decisiones y acciones que se pueden ejecutar bajo presión. La parte más sólida del trabajo es la contención: para los escenarios críticos (ransomware, phishing y exfiltración) se definen medidas inmediatas que reducen impacto y limitan la propagación, y se conectan con ATT&CK/RE&CT para que sean trazables y, potencialmente, automatizables.
+
+Las principales conclusiones del proyecto son:
+
+- El plan queda acotado a 6 playbooks alineados con el riesgo real y los activos más sensibles, lo que facilita entrenar, mantener y ejecutar.
+- El enfoque ATT&CK + RE&CT ayuda a pasar de “qué podría ocurrir” a “qué hacemos exactamente”, mejorando consistencia y repetibilidad.
+- La fase más débil identificada es Preparación: faltan políticas por escrito, entrenamiento operativo y validación periódica (simulacros y pruebas de restauración de copias).
+- Para aumentar la resiliencia, el siguiente paso no es añadir más playbooks, sino mejorar la ejecución: ejercicios de mesa, checklist de comunicaciones, y verificación de tiempos objetivo (MTTD/MTTC/MTTR) por escenario.
 
 ## Bibliografía
 
-- MITRE ATT&CK Matrix v19
-- RE&CT Navigator v2.2
-- NIST SP 800-61 Rev. 2 (Computer Security Incident Handling Guide)
-- INCIBE (Instituto Nacional de Ciberseguridad)
+### Marcos y guías
+
+- [MITRE ATT&CK](https://attack.mitre.org/) (matriz y técnicas enlazadas a lo largo de los playbooks)
+- [MITRE RE&CT (Response Actions)](https://github.com/mitre-attack/react)
+- [NIST SP 800-61 Rev. 2: Computer Security Incident Handling Guide](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
+- [NIST Digital Identity Guidelines (SP 800-63 - familia)](https://pages.nist.gov/800-63-3/)
+- [NIST SP 800-63B: Digital Identity Guidelines – Authentication](https://pages.nist.gov/800-63-3/sp800-63b.html)
+- [NIST SP 800-124r2: Guidelines for Managing the Security of Mobile Devices in the Enterprise](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-124r2.pdf)
+- [NIST SP 800-161r1: Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations](https://csrc.nist.gov/publications/detail/sp/800-161/rev-1/final)
+- [NIST SP 800-218: Secure Software Development Framework (SSDF)](https://csrc.nist.gov/publications/detail/sp/800-218/final)
+
+### Organismos y recursos
+
+- [INCIBE: Gestión de incidentes de seguridad](https://www.incibe.es/empresas/tematicas/gestion-incidentes)
+- [INCIBE: Phishing (orientación al usuario)](https://www.incibe.es/ciudadania/avisos/phishing)
+- [INCIBE: Robo o pérdida de dispositivos móviles en la empresa](https://www.incibe.es/empresas/tematicas/dispositivos-moviles)
+- [CCN-CERT: guías y recursos (España)](https://www.ccn-cert.cni.es/)
+- [AEPD: Guía para la notificación de brechas de datos personales (PDF)](https://www.aepd.es/guias/guia-brechas-seguridad.pdf)
+- [RGPD Art. 33 – Notificación a la autoridad de control](https://gdpr-info.eu/art-33-gdpr/)
+- [CISA: Report Phishing](https://www.cisa.gov/report)
+- [CISA: Cybersecurity Advisories (incluye supply chain)](https://www.cisa.gov/news-events/cybersecurity-advisories)
+- [ENISA: Phishing (panorama y recomendaciones)](https://www.enisa.europa.eu/topics/csirts-in-europe/glossary/phishing)
+- [ENISA: Threat Landscape 2023](https://www.enisa.europa.eu/publications/enisa-threat-landscape-2023)
+- [ENISA: Guidelines for SMEs on the Security of Personal Data Processing](https://www.enisa.europa.eu/publications/guidelines-for-smes-on-the-security-of-personal-data-processing)
+- [ENISA: Smartphone Secure Development Guidelines](https://www.enisa.europa.eu/publications/smartphone-secure-development-guidelines)
+- [NCSC (UK): Phishing](https://www.ncsc.gov.uk/guidance/phishing)
+- [FBI IC3: Report Internet Crime](https://www.ic3.gov/)
+
+### Estándares y buenas prácticas (correo)
+
+- [RFC 5322: Internet Message Format](https://www.rfc-editor.org/rfc/rfc5322)
+- [DMARC (RFC 7489)](https://www.rfc-editor.org/rfc/rfc7489), [SPF (RFC 7208)](https://www.rfc-editor.org/rfc/rfc7208) y [DKIM (RFC 6376)](https://www.rfc-editor.org/rfc/rfc6376)
+- [ICANN: IDN / Homograph attacks (conceptos)](https://www.icann.org/resources/pages/idn-2012-02-25-en)
+
+### Herramientas y recursos operativos (citados en playbooks)
+
+- [VirusTotal](https://www.virustotal.com/gui/)
+- [urlscan.io](https://urlscan.io/)
+- [Google Admin Toolbox: Messageheader](https://toolbox.googleapps.com/apps/messageheader/)
+- [Microsoft: Message Header Analyzer (MHA)](https://mha.azurewebsites.net/)
+- [Reverse WHOIS (Whoxy)](https://www.whoxy.com/reverse-whois/)
+- [No More Ransom!](https://www.nomoreransom.org)
+- [ID Ransomware](https://id-ransomware.malwarehunterteam.com/)
+- [Microsoft: Consent phishing (mitigación)](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/identify-and-remediate-oauth-apps-that-are-approved-by-users)
+- [CISA: Implementing Phishing-Resistant MFA](https://www.cisa.gov/resources-tools/resources/implementing-phishing-resistant-mfa)
+- [OWASP: Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+- [CIS Controls](https://www.cisecurity.org/controls/)
+- [Apple: Find My](https://support.apple.com/es-es/find-my)
+
+### Supply chain (recursos adicionales citados)
+
+- [SLSA: Supply-chain Levels for Software Artifacts](https://slsa.dev/)
+- [OWASP: Software Supply Chain Security](https://owasp.org/www-project-software-supply-chain-security/)
+- [CNCF: Software Supply Chain Best Practices](https://www.cncf.io/blog/2022/02/10/software-supply-chain-best-practices/)
+
+### Lecturas complementarias citadas
+
+- [GDATA: Ransomware Identification for the Judicious Analyst](https://www.gdatasoftware.com/blog/2019/06/31666-ransomware-identification-for-the-judicious-analyst)
+- [Ejemplos de correos de phishing (Phishing.org)](https://www.phishing.org/phishing-examples)
+- [SecurityMetrics: 7 ways to recognize phishing emails](https://www.securitymetrics.com/blog/7-ways-recognize-phishing-email)
+- [InfoSec Institute: Anti-phishing resources](https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/top-16-anti-phishing-resources/#gref) y [best practices](https://resources.infosecinstitute.com/category/enterprise/phishing/phishing-countermeasures/anti-phishing-best-practices/#gref)
