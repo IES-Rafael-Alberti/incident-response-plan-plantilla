@@ -2,7 +2,7 @@
 
 ### Description
 
-A Subject Matter Expert (SME) is a domain expert or designated owner of a team, component, or service (an "area").  You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluation investigation, remediation, and communication actions, and following through on them as tasked.
+A Subject Matter Expert (SME) is a domain expert or designated owner of a team, component, or service (an "area").  You are there to support the incident commander in identifying the cause of the incident, suggesting and evaluating investigation, remediation, and communication actions, and following through on them as tasked.
 
 ### Duties
 
@@ -11,7 +11,7 @@ A Subject Matter Expert (SME) is a domain expert or designated owner of a team, 
 1. Concise communication:
     * Condition: What is the current state of your area? Is it healthy or not?
     * Actions: What actions need to be taken if your area is not in a healthy state?
-    * Needs: What support do you need need to perform an action?
+    * Needs: What support do you need to perform an action?
 1. Participate in the investigation, remediation, and/or communication phases of the response.
 1. Announce all suggestions to the incident commander, it is their decision on how to proceed, do not follow any actions unless told to do so.
 
@@ -37,4 +37,3 @@ If you are on-call for any team, you may be paged for an incident and will be ex
 ### Training
 
 * Read and understand the incident response plan, including the roles and playbooks.
-
