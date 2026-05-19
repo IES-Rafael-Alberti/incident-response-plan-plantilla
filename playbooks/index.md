@@ -1,27 +1,23 @@
-# Playbooks de Security S.L.
+---
+title: "Índice de playbooks"
+version: "1.0"
+date: "Enero 2026"
+classification: "CONFIDENCIAL"
+organization: "Security S.L."
+---
 
-Los siguientes playbooks capturan los pasos comunes de investigación, remediación y comunicación para determinados tipos de incidentes identificados en el análisis de riesgos de Security S.L.
+# Playbooks
 
-## Playbooks Disponibles
+## Playbooks disponibles
 
-| Playbook | Prioridad | Riesgo Asociado |
-|----------|-----------|-----------------|
-| [Ransomware](playbook-ransomware.md) | 🔴 Crítica | Ransomware en servidores (riesgo 9/9) |
-| [Phishing](playbook-phishing.md) | 🔴 Alta | Phishing en puestos (riesgo 6/9) |
-| [Fuga de Datos](playbook-data-breach.md) | 🔴 Crítica | Acceso no autorizado a datos (riesgo 9/9) |
-| [Compromiso de Identidad](playbook-identity-compromise.md) | 🟠 Alta | Abuso de privilegios (riesgo 6/9) |
-| [Cadena de Suministro](playbook-supply-chain.md) | 🟡 Media | Caída servicios cloud / proveedores (riesgo 6/9) |
-| [Defacement Web](playbook-defacement.md) | 🟡 Media | Ataque a página web / tienda online (riesgo 6/9) |
+Esta sección reúne los procedimientos específicos de respuesta para los incidentes más probables y con mayor impacto para Security S.L.
 
-## Estructura Común
+Los playbooks incluidos en esta versión son:
+- `playbook-ransomware.md`
+- `playbook-compromiso-credenciales.md`
+- `playbook-fuga-informacion.md`
+- `playbook-phishing.md`
 
-Cada playbook sigue la estructura:
+## Propósito
 
-1. **Investigar** — Preguntas clave, fuentes de datos, análisis.
-2. **Remediar** — Acciones de contención y erradicación.
-3. **Comunicar** — Notificaciones internas y externas.
-4. **Recursos** — Herramientas, referencias, checklist.
-
-## Actualización
-
-Los playbooks se revisan anualmente o tras cada incidente significativo que genere lecciones aplicables.
+Cada playbook describe cómo investigar, contener, erradicar, recuperar y comunicar un incidente concreto. El objetivo es reducir la improvisación durante la crisis y asegurar una respuesta homogénea, rápida y trazable.
