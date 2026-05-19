@@ -2,229 +2,163 @@
 
 ## Descripción
 
-El Especialista en Recuperación es el responsable de **restaurar sistemas de forma segura** después de un incidente. Su trabajo es:
+El Especialista en Recuperación es la persona responsable de restaurar sistemas y servicios después de un incidente, asegurando que la recuperación se realiza de forma segura, controlada y verificada.
 
-- Verificar que backups no estén comprometidos
-- Restaurar de forma segura y verificada
-- Asegurar que no se restaura malware
-- Validar que los sistemas funcionan correctamente después
+Su objetivo principal es devolver los sistemas a funcionamiento normal sin reintroducir el problema original (por ejemplo, malware o configuraciones comprometidas).
 
-En una asesoría con datos GDPR y riesgos de ransomware, **este rol es crítico**. Un backup comprometido significa desastre total.
+Este rol es especialmente crítico en escenarios como ransomware o compromiso de datos, donde restaurar mal un backup puede empeorar la situación.
 
 ---
 
-## Deberes Principales
+## Responsabilidades Principales
 
-### 1. Evaluación de Backups Antes de Restaurar
+### 1. Evaluación de backups antes de la restauración
 
-**ANTES de tocar backups:**
+Antes de restaurar cualquier sistema, es necesario validar la seguridad e integridad del backup:
 
-- **¿Cuándo fue el último backup limpio?**
-  - Si el compromiso fue el 15/05, ¿el backup del 10/05 está limpio?
-  - Si no estamos seguros, restaurar es arriesgado (podemos restaurar malware)
+- Identificar el último backup limpio disponible.
+- Confirmar que el backup no está comprometido.
+- Verificar la ubicación del backup (idealmente externo o aislado).
+- Revisar logs de generación del backup (errores, anomalías, interrupciones).
 
-- **¿Están los backups también comprometidos?**
-  - En ransomware, a veces el atacante accede a backups también
-  - Verificar: integridad, no hay archivos criptados, logs normales
+Preguntas clave:
+- ¿De qué fecha es el backup?
+- ¿Está almacenado en un entorno seguro?
+- ¿Se ha verificado su integridad recientemente?
+- ¿Hay indicios de compromiso en ese periodo?
 
-- **¿Disponibilidad de backups?**
-  - ¿Tenemos backups externos? ¿Están accesibles?
-  - Según el PDS, esto fue gap (PRY-003)
-
-**Preguntas a hacer:**
-```
-¿Dónde está el backup?
-¿Cuándo fue tomado?
-¿Está en almacenamiento seguro externo?
-¿Se verifica regularmente?
-¿Hay malware detectado en él?
-```
-
-### 2. Validación de Integridad del Backup
-
-Si restauramos de backup, primero verificamos:
-
-- **Hash/Checksum**: Si existe, verificar que no cambió
-  ```
-  SHA256 del backup 10/05 = ABC123 (documentado)
-  SHA256 del archivo guardado = ABC123 (verifica!)
-  ```
-
-- **Análisis antivirus**: Escanear backup por malware
-  - A veces es overkill, pero en ransomware es prudente
-
-- **Integridad de archivos**: Spots checks
-  - Abrir unos ficheros: ¿Se ven normales? ¿Timestamp tiene sentido?
-
-- **Logs del sistema**: Examinar logs de backup
-  - ¿Se completó sin errores?
-  - ¿El tamaño es razonable?
-
-### 3. Planificación de Restauración
-
-**NO restauramos todo de una vez.** Plan:
-
-```
-FASE 1 (Día 1, 10:00-12:00):
-- Restaurar servidor de correo desde backup 10/05
-- Validar que correo funciona
-- Monitorear por anomalías 2 horas
-
-FASE 2 (Día 1, 14:00-16:00):
-- Restaurar servidor de archivos
-- Validar que clientes pueden acceder
-- Monitorear
-
-FASE 3 (Día 2):
-- Si todo bien, restaurar resto de sistemas
-```
-
-**Por qué en fases:**
-- Si restauración causa problema, solo afecta ese sistema
-- Tiempo para verificar cada paso
-- Menos riesgo de propagación de malware
-
-### 4. Ejecución de Restauración
-
-Cuando el IC autoriza:
-
-- **Aislar sistema**: Desconectar de red antes de restaurar
-  - Si hay malware persistente, no queremos que se comunique
-  
-- **Restaurar desde backup**: Seguir procedimiento documentado
-  - Logs de cada paso
-  - Tiempos de inicio/fin
-  
-- **Reconectar seguramente**: Pequeño aislamiento
-  - Conectar a VLAN de cuarentena
-  - Verificar antes de conectar al resto
-  
-- **Validación post-restauración**:
-  - ¿Servicio iniciado?
-  - ¿Datos accesibles?
-  - ¿Performance normal?
-
-**Documentar TODO:**
-```
-14:00 - Desconectado servidor de correo de red
-14:05 - Restauración iniciada desde backup 10/05 (5GB)
-14:25 - Restauración completada
-14:30 - Reconectado a VLAN de prueba
-14:35 - Correo iniciado, primeros 100 users probando acceso
-14:40 - Todo funciona, reconectado a red productiva
-```
-
-### 5. Verificación de Limpieza
-
-Después de restaurar:
-
-- **¿El malware está eliminado?**
-  - Si el archivo malicioso estaba en /tmp, probablemente desaparecerá al restaurar
-  - Pero si estaba en datos compartidos, verificar que no regresó
-
-- **¿La puerta trasera está cerrada?**
-  - Si el atacante creó usuario "admin2", verificar que no existe después de restaurar
-
-- **¿Logs muestran compromiso históricamente?**
-  - En el backup anterior, ¿hay evidencia de que ya estaba comprometido?
-  - Si SÍ, ese backup también está contaminado
-
-### 6. Plan de Recuperación ante Desastre
-
-**Si TODOS los backups están comprometidos:**
-
-- Escalar a IC y Legal inmediatamente
-- Opciones (malas todas):
-  1. Restaurar y acepta riesgo (docméntalo)
-  2. Reconstruir desde cero (muy lento, días)
-  3. Datos perdidos permanentemente (worst case)
-
-**Por eso PRY-003 fue importante:** Backups externos, verificados, en múltiples ubicaciones.
+Si no se puede garantizar la limpieza del backup, no debe usarse hasta nueva validación.
 
 ---
 
-## Habilidades Necesarias
+### 2. Validación de integridad del backup
 
-### Experiencia con Backup/Recovery
-- Sistemas de backup (Veeam, Bacula, Duplicati)
-- Restauración de bare metal (SO completo)
-- Restauración selectiva (archivos específicos)
+Antes de iniciar la restauración, se deben realizar comprobaciones básicas de integridad:
 
-### Conocimiento de Sistemas
-- Linux/Windows servers
-- Storage y almacenamiento
-- Redes (VLAN, segmentación)
+- Verificación de hash o checksum (si está disponible).
+- Escaneo antivirus o antimalware del backup (si es posible).
+- Revisión de consistencia de archivos (muestras aleatorias).
+- Validación de logs del sistema de backup.
 
-### Atención al Detalle
-- Verificación cuidadosa
-- Documentación precisa
-- No apresurarse ("mañana", "probablemente está ok" = mal)
+El objetivo es confirmar que el backup es válido y seguro antes de restaurar nada.
 
 ---
 
-## Procedimiento de Pruebas Regulares
+### 3. Planificación de la restauración
 
-Para que este rol funcione, **antes de un incidente:**
+La restauración debe realizarse de forma gradual, no masiva:
 
-- **Pruebas mensuales**: Restaurar archivos aleatorios de backup
-- **Pruebas trimestrales**: Restauración completa de servidor de prueba
-- **Pruebas anuales**: Restore de bare metal (sistema entero)
+- Restaurar sistemas por fases.
+- Priorizar servicios críticos (correo, archivos, autenticación).
+- Validar cada fase antes de continuar con la siguiente.
+- Monitorizar cada sistema tras su restauración.
 
-**Docomentar:**
-```
-Prueba del 01/04/2026:
-- Restaurado servidor correo (test) desde backup 31/03
-- Resultado: Exitoso, correo funciona, 50 users probados
-- Tiempo: 45 minutos
-- Próxima: 01/05/2026
-```
+Ejemplo de planificación:
+
+- Fase 1: Restauración de sistemas críticos (correo / identidad)
+- Fase 2: Restauración de servicios de soporte (archivos, aplicaciones internas)
+- Fase 3: Restauración completa del resto de infraestructura
 
 ---
 
-## Después del Incidente
+### 4. Ejecución de la restauración
 
-El Especialista en Recuperación:
+Cuando el Incident Commander lo autoriza:
 
-1. **Reporte de Restauración**:
-   - Qué se restauró
-   - De qué backup
-   - Validaciones ejecutadas
-   - Problemas encontrados
+- Aislar el sistema antes de restaurar.
+- Restaurar desde el backup validado.
+- Registrar todos los pasos y tiempos del proceso.
+- Realizar una reconexión controlada (idealmente en entorno aislado o de pruebas).
+- Validar el funcionamiento del servicio restaurado.
 
-2. **Validación Final**:
-   - IC confirma: "Los sistemas son confiables"
-   - Usuarios verifican: "Mis datos están ahí"
-   - Forensics verifica: "No hay malware"
-
-3. **Plan de Mejora**:
-   - "Necesitamos backup externo con pruebas mensuales"
-   - "Necesitamos alertas de integridad de backup"
-   - "Necesitamos restauración más rápida"
+Es obligatorio documentar el proceso de forma clara y cronológica.
 
 ---
 
-## Capacitación Requerida
+### 5. Verificación post-restauración
 
-Antes de este rol:
+Tras la restauración, se debe comprobar:
 
-- ✓ Experiencia con sistemas de backup de la empresa
-- ✓ Certificación en recovery (o equivalente experiencia)
-- ✓ Leído el incident response plan
-- ✓ Participado en pruebas de restauración exitosas
+- Que el servicio funciona correctamente.
+- Que no hay signos de malware persistente.
+- Que no existen usuarios o configuraciones sospechosas.
+- Que los datos restaurados son coherentes.
 
----
-
-## Recursos y Referencias
-
-- Documentación del backup (dónde está, cómo funciona)
-- Procedimientos de restauración (por sistema)
-- Historiales de pruebas de backup
-- Rol: Incident Commander
-- Rol: SME de Sistemas
-- Rol: Forense (para validar limpieza)
+Si se detecta cualquier anomalía, se debe detener la expansión de la restauración y escalar al Incident Commander.
 
 ---
 
-**Documento**: Rol - Especialista en Recuperación
-**Grupo G5**: Iván Paúl Alba, Sergio González Noria, Manuel Pérez Romero, Javier Calvillo Acebedo
+### 6. Escenarios críticos
+
+Si no existen backups válidos o todos están comprometidos:
+
+- Escalar inmediatamente al Incident Commander.
+- Evaluar opciones alternativas:
+  - Restauración parcial con riesgo controlado.
+  - Reconstrucción completa del sistema.
+  - Pérdida parcial o total de datos (último recurso).
+
+---
+
+## Buenas prácticas durante la recuperación
+
+- No restaurar todo de golpe.
+- No asumir que un backup es seguro sin validación.
+- Documentar cada acción realizada.
+- Mantener comunicación constante con el Incident Commander.
+- No tomar decisiones críticas sin autorización.
+
+---
+
+## Capacidades necesarias
+
+- Conocimiento de sistemas de backup y restauración.
+- Experiencia en sistemas operativos (Linux / Windows Server).
+- Nociones de redes y segmentación (VLAN, aislamiento).
+- Capacidad de documentación clara y precisa.
+- Atención al detalle bajo presión.
+
+---
+
+## Pruebas y mantenimiento del rol
+
+Para asegurar que el proceso funciona correctamente:
+
+- Pruebas periódicas de restauración de archivos.
+- Simulacros de recuperación de sistemas completos.
+- Validación de backups de forma regular.
+
+### Ejemplo de registro
+
+- **Fecha:** 01/04/2026
+- **Sistema:** Servidor de pruebas
+- **Backup:** 31/03/2026
+- **Resultado:** Correcto
+- **Tiempo:** 45 minutos
+
+---
+
+## Después del incidente
+
+El Recovery Specialist debe:
+
+- Documentar el proceso completo de restauración.
+- Indicar qué backups se utilizaron.
+- Reportar incidencias durante la recuperación.
+- Participar en la revisión posterior al incidente.
+
+---
+
+## Recursos
+
+- Plan de respuesta a incidentes
+- Procedimientos de backup y restauración
+- Rol de Incident Commander
+- Rol de SME técnico
+- Herramientas de backup y recuperación del entorno
+
+---
+
+**Documento**: Rol - Especialista en Recuperación (Recovery Specialist)<br>
+**Grupo G5**: Iván Paúl Alba, Sergio González Noria, Manuel Pérez Romero, Javier Calvillo Acebedo<br>
 **Fecha**: Mayo 2026
