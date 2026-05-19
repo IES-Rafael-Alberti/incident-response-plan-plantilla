@@ -26,7 +26,22 @@
 
 ## Introducción
 
-[Inserte aquí la introducción de la empresa de asesoría basada en info.yml]
+
+Inventario completo de activos
+
+| ID | Activo | Tipo | Categoría | Propietario | Valor C | Valor I | Valor D | Criticidad |
+| :------ | :------ | :------ | :------ | :------ | :------ | :------ | :------ | :------ |
+| ACT-001 | **Datos personales (RGPD)** | Datos | Clientes / Legal | Director Legal | **5** | **5** | 4 | **Alta** |
+| ACT-002 | **Página web / Tienda online** | Servicio | Ventas / Marketing | Director Comercial | 4 | **5** | **5** | **Alta** |
+| ACT-003 | Aplicaciones empresariales (CRM/ERP) | Software | Procesos / Operaciones | Director TIC | 4 | 4 | **5** | **Alta** |
+| ACT-004 | Servidores de Archivos (Local) | Hardware/SW | Almacenamiento | Director TIC | 4 | 4 | 4 | Media |
+| ACT-005 | Propiedad intelectual (Informes) | Datos | Negocio / Legal | Dir. General | **5** | 4 | 3 | Media |
+| ACT-006 | Dispositivos Móviles (Portátiles/Tabletas) | Hardware | Empleados | Director RRHH | 3 | 3 | 3 | Media |
+| ACT-007 | Personal cualificado | Persona | RRHH | Director RRHH | 5 | 4 | 4 | Media |
+| ACT-008 | Servidores de Correo Electrónico (Local) | Servicio | Comunicaciones | Director TIC | 4 | 4 | 4 | Media |
+
+
+
 
 ## Plan de respuesta
 
