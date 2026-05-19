@@ -34,7 +34,7 @@ El Incident Commander es el líder absoluto durante la crisis.
 ## Requisito de formación
 Para participar de forma útil, es obligatorio haberse leído y entendido bien el plan de respuesta a incidentes de la empresa, incluyendo cómo funcionan el resto de roles y los playbooks técnicos.
 
----
+***
 **Documento:** Rol - Todos los participantes
 <br>
 **Grupo G5:** Iván Paúl Alba, Sergio González Noria, Manuel Pérez Romero, Javier Calvillo Acebedo
