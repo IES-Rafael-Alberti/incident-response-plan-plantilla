@@ -50,7 +50,7 @@ A continuación se muestra el mapeo directo entre nuestros incidentes más proba
 ### 1. Mapa de Amenazas (MITRE ATT&CK)
 Se han priorizado las técnicas que afectan directamente al sector (Ransomware, Phishing, Robo de identidades y Cadena de Suministro).
 
-![Mapa ATT&CK](../mitre/attack-navigator.svg)
+![Mapa ATT&CK](mitre/Asesora_TT.svg)
 
 * **Riesgo Crítico (Rojo):** `T1486` (Data Encrypted for Impact) y `T1048` (Exfiltration Over Alternative Protocol). Estos conforman el **Playbook de Ransomware**, donde el riesgo de paralización del negocio y la doble extorsión por pérdida de datos fiscales es inaceptable.
 * **Riesgo Alto (Naranja):** `T1566` (Phishing), `T1078` (Valid Accounts) y `T1195` (Supply Chain Compromise). Técnicas abordadas en nuestros **Playbooks de Phishing, Identidad y Cadena de Suministro**.
@@ -59,7 +59,7 @@ Se han priorizado las técnicas que afectan directamente al sector (Ransomware, 
 ### 2. Acciones Defensivas y Resiliencia (MITRE RE&CT)
 Cada técnica detectada desencadena acciones concretas de los playbooks en las fases de Contención, Erradicación y Recuperación, apostando siempre por mantener la continuidad operativa.
 
-![Mapa RE&CT](../mitre/react-navigator.svg)
+![Mapa ATT&CK](mitre/Asesoria_TT.svg)
 
 **Medidas implementadas en el plan:**
 * **Contención:** 
