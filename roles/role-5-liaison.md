@@ -41,12 +41,11 @@ Existen dos modalidades principales:
 
 ## Funciones del enlace interno
 
-- Contactar con expertos en la materia (SME) u otros equipos cuando lo indique el Incident Commander.
-- Notificar y coordinar la participación de equipos internos como legal, finanzas, marketing u otros, según sea necesario.
-- Facilitar la comunicación entre equipos internos implicados en la resolución del incidente.
-- Mantener informadas a las partes interesadas internas sin interrumpir la coordinación principal del incidente.
-- Proporcionar resúmenes de estado a la dirección o partes interesadas cuando sea requerido.
-
+- Contactar con [Expertos SME](role-4-expert.md).
+- Coordinar con [Escriba](role-3-scribe.md) cuando sea necesario.
+- Facilitar comunicación entre equipos internos.
+- Mantener informadas partes internas sin interrumpir el incidente.
+- Proporcionar resúmenes a dirección si se solicita.
 ---
 
 ## Formación

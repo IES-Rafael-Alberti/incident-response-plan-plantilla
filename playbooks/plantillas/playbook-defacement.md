@@ -1,5 +1,5 @@
 
-## Playbook: Desaparición de sitios web
+## Playbook: Desfiguración de sitios web
 
 **Investigar, remediar (contener, erradicar) y comunicar en paralelo!**
 Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es puramente secuencial. Utilice su mejor criterio.

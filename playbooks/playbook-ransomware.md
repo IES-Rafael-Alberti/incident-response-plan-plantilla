@@ -18,20 +18,6 @@ Se activará ante cualquiera de estas señales:
 4. Pérdida repentina de acceso a comparticiones, bases de datos o sistemas de negocio por cifrado o corrupción;
 5. Amenaza de extorsión acompañada de posible exfiltración previa.
 
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar los indicios y abrir el incidente. |
-| 2 | Clasificar la severidad como alta o crítica. |
-| 3 | Aislar equipos, cuentas y comparticiones en riesgo. |
-| 4 | Proteger copias de seguridad y credenciales privilegiadas. |
-| 5 | Recoger evidencias mínimas antes de reconstruir. |
-| 6 | Delimitar alcance inicial y vector probable. |
-| 7 | Escalar a Dirección, Seguridad, responsables de proceso y apoyo legal si corresponde. |
-
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
@@ -200,6 +186,22 @@ Las cuarentenas deben impedir la propagación desde los sistemas infectados y pr
 5. Mantener monitorización reforzada de logs, actividad de autenticación, tráfico de red y endpoints tras la vuelta a producción.
 6. Documentar desde qué copia se restauró cada sistema, a qué hora y con qué resultado.
 7. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
+
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar los indicios y abrir el incidente. |
+| 2 | Clasificar la severidad como alta o crítica. |
+| 3 | Aislar equipos, cuentas y comparticiones en riesgo. |
+| 4 | Proteger copias de seguridad y credenciales privilegiadas. |
+| 5 | Recoger evidencias mínimas antes de reconstruir. |
+| 6 | Delimitar alcance inicial y vector probable. |
+| 7 | Escalar a Dirección, Seguridad, responsables de proceso y apoyo legal si corresponde. |
 
 ### Recursos
 

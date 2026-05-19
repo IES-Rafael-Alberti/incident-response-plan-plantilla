@@ -17,20 +17,6 @@ Se activará ante cualquiera de estas señales:
 3. Hallazgo de envíos, sincronizaciones o accesos fuera de horario o patrón habitual;
 4. Sospecha fundada de exposición de datos personales, contractuales o internos sensibles.
 
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar la sospecha y abrir el incidente. |
-| 2 | Clasificar la severidad según tipo y volumen de datos. |
-| 3 | Cortar accesos, sincronizaciones o canales de salida relacionados. |
-| 4 | Preservar logs y evidencias antes de modificar sistemas. |
-| 5 | Escalar a Seguridad, Dirección y apoyo legal o RGPD si hay datos personales. |
-| 6 | Identificar sistema, cuenta y destino probable de la salida de información. |
-| 7 | Definir restricciones temporales para evitar nuevas extracciones. |
-
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
@@ -152,6 +138,22 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 6. Actualizar procedimientos sobre tratamiento de datos, permisos y uso de servicios externos.
 7. Impartir formación específica si la fuga se debió a error humano o mala práctica operativa.
 8. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
+
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar la sospecha y abrir el incidente. |
+| 2 | Clasificar la severidad según tipo y volumen de datos. |
+| 3 | Cortar accesos, sincronizaciones o canales de salida relacionados. |
+| 4 | Preservar logs y evidencias antes de modificar sistemas. |
+| 5 | Escalar a Seguridad, Dirección y apoyo legal o RGPD si hay datos personales. |
+| 6 | Identificar sistema, cuenta y destino probable de la salida de información. |
+| 7 | Definir restricciones temporales para evitar nuevas extracciones. |
 
 ### Recursos
 

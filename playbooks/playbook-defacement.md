@@ -1,4 +1,4 @@
-## Playbook: Desaparición de sitios web
+## Playbook: Desfiguración de sitios web
 
 **Investigar, remediar (contener, erradicar) y comunicar en paralelo.**
 
@@ -16,20 +16,6 @@ Se activará ante cualquiera de estas señales:
 2. Avisos de clientes, usuarios o proveedores sobre cambios anómalos en la web o tienda online;
 3. Alertas del proveedor de hosting, WAF o monitorización web sobre alteraciones de ficheros o paneles;
 4. Detección de accesos administrativos sospechosos o cambios inesperados en contenidos públicos.
-
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar la alteración y capturar evidencias básicas. |
-| 2 | Retirar la web de exposición pública o pasarla a mantenimiento. |
-| 3 | Bloquear accesos y credenciales administrativas sospechosas. |
-| 4 | Avisar al proveedor externo y al responsable de seguridad. |
-| 5 | Valorar si existe acceso a base de datos, formularios o tienda online. |
-| 6 | Clasificar la severidad inicial. |
-| 7 | Preparar la restauración desde copia limpia solo después de preservar evidencias mínimas. |
 
 ### Roles mínimos implicados
 
@@ -121,18 +107,6 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 3. Aplicar parches, retirar componentes inseguros y revisar permisos sobre ficheros, paneles y cuentas de administración.
 4. Verificar con el proveedor externo que el entorno ha sido revisado y saneado antes de proceder a la restauración pública.
 
-### Comunicar
-
-1. Elevar el incidente y comunicarlo a Dirección, al responsable de seguridad y a los responsables de Comunicación.
-    1. Escalado inmediato si la página alterada contiene contenido ofensivo, fraudulento, enlaces maliciosos o afecta a la tienda online.
-2. Documentar el incidente y conservar capturas, logs, cambios de contenido y actuaciones del proveedor externo.
-3. Comunicarse con asesoría jurídica y consultoría RGPD si existe sospecha de acceso a datos personales o formularios de clientes.
-4. Comunicar a usuarios internos el estado del servicio y las restricciones temporales.
-5. Comunicar a clientes, si procede, que la web o la tienda han sido intervenidas temporalmente por seguridad, siempre con autorización del `Incident Commander` y coordinación con Comunicación.
-6. Contactar con proveedores de seguros o soporte externo si existen.
-7. Considerar notificación a organismos o fuerzas de seguridad si el incidente es grave, persistente o con posible delito asociado.
-8. Coordinar toda comunicación externa para evitar mensajes contradictorios o alarmistas.
-
 ### Recuperación
 
 1. Orden recomendado de recuperación:
@@ -165,6 +139,32 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 * Logísticos: página de mantenimiento preparada, canales de contacto con proveedor externo y procedimiento de comunicación pública.
 * Financieros: soporte urgente del proveedor, auditoría web, restauración de servicio y posibles costes de reputación o notificación.
 
+
+### Comunicar
+
+1. Elevar el incidente y comunicarlo a Dirección, al responsable de seguridad y a los responsables de Comunicación.
+    1. Escalado inmediato si la página alterada contiene contenido ofensivo, fraudulento, enlaces maliciosos o afecta a la tienda online.
+2. Documentar el incidente y conservar capturas, logs, cambios de contenido y actuaciones del proveedor externo.
+3. Comunicarse con asesoría jurídica y consultoría RGPD si existe sospecha de acceso a datos personales o formularios de clientes.
+4. Comunicar a usuarios internos el estado del servicio y las restricciones temporales.
+5. Comunicar a clientes, si procede, que la web o la tienda han sido intervenidas temporalmente por seguridad, siempre con autorización del `Incident Commander` y coordinación con Comunicación.
+6. Contactar con proveedores de seguros o soporte externo si existen.
+7. Considerar notificación a organismos o fuerzas de seguridad si el incidente es grave, persistente o con posible delito asociado.
+8. Coordinar toda comunicación externa para evitar mensajes contradictorios o alarmistas.
+
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar la alteración y capturar evidencias básicas. |
+| 2 | Retirar la web de exposición pública o pasarla a mantenimiento. |
+| 3 | Bloquear accesos y credenciales administrativas sospechosas. |
+| 4 | Avisar al proveedor externo y al responsable de seguridad. |
+| 5 | Valorar si existe acceso a base de datos, formularios o tienda online. |
+| 6 | Clasificar la severidad inicial. |
+| 7 | Preparar la restauración desde copia limpia solo después de preservar evidencias mínimas. |
 
 ### Recursos
 

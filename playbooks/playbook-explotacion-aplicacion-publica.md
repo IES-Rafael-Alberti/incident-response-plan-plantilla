@@ -17,20 +17,6 @@ Se activará ante cualquiera de estas señales:
 3. Hallazgo de accesos a paneles, bases de datos o recursos internos desde la aplicación pública;
 4. Notificación del proveedor o de terceros sobre explotación activa del servicio expuesto.
 
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar la explotación o el comportamiento anómalo. |
-| 2 | Clasificar la severidad inicial. |
-| 3 | Restringir el acceso o activar mantenimiento si el riesgo lo justifica. |
-| 4 | Solicitar el bloqueo de IP, firmas o funciones explotadas, o aplicarlo internamente si ese control está bajo gestión directa. |
-| 5 | Preservar logs, payloads y evidencias básicas. |
-| 6 | Escalar a TIC, Seguridad y proveedor externo. |
-| 7 | Valorar si existe exposición de datos, persistencia o afectación a la tienda online. |
-
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
@@ -149,6 +135,22 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Revisiones periódicas de vulnerabilidades;
     * Principio de mínimo privilegio.
 8. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
+
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar la explotación o el comportamiento anómalo. |
+| 2 | Clasificar la severidad inicial. |
+| 3 | Restringir el acceso o activar mantenimiento si el riesgo lo justifica. |
+| 4 | Solicitar el bloqueo de IP, firmas o funciones explotadas, o aplicarlo internamente si ese control está bajo gestión directa. |
+| 5 | Preservar logs, payloads y evidencias básicas. |
+| 6 | Escalar a TIC, Seguridad y proveedor externo. |
+| 7 | Valorar si existe exposición de datos, persistencia o afectación a la tienda online. |
 
 ### Recursos
 
