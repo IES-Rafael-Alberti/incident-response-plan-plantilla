@@ -186,5 +186,7 @@ Antes de este rol:
 ---
 
 **Documento**: Rol - Investigador Forense
+<br>
 **Grupo G5**: Iván Paúl Alba, Sergio González Noria, Manuel Pérez Romero, Javier Calvillo Acebedo
+<br>
 **Fecha**: Mayo 2026
