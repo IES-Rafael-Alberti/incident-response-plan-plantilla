@@ -41,26 +41,38 @@ Entregables de preparación mínimos que deben existir antes de un SEV1/SEV2:
 - Procedimiento de preservación de evidencias (cadena de custodia, hash, acceso mínimo).
 - Fuentes de logs priorizadas: firewall, servidores, endpoints, autenticación (según disponibilidad).
 
-## Relación con MITRE ATT&CK y RE&CT (por qué se usa y cómo)
+## Mapeo de Amenazas y Respuesta (MITRE ATT&CK & RE&CT)
 
-Se usa MITRE ATT&CK como "lenguaje común" para describir TTPs observadas y para convertir síntomas en preguntas investigables (qué técnica, dónde y desde cuándo). Se usa RE&CT como estructura práctica para convertir técnicas en acciones de **detectar** y **responder**.
+Para estructurar la respuesta durante un incidente, este plan utiliza las matrices **MITRE ATT&CK** (perspectiva del atacante) y **MITRE RE&CT** (perspectiva del defensor), garantizando que las respuestas sean estándar, eficaces y, sobre todo, **ciberresilientes**.
 
-Mapeo mínimo (taxonomía <-> ATT&CK) para esta organización (basado en tipos documentados):
+A continuación se muestra el mapeo directo entre nuestros incidentes más probables (según el análisis de riesgos sectorial de Asesoría PYMES) y los Playbooks específicos desarrollados:
 
-Tipo (taxonomía) | Técnicas ATT&CK sugeridas (ejemplos)
-***|***
-Ingeniería social / phishing | T1566 (Phishing)
-Acceso con vulneración de credenciales | T1110 (Brute Force), T1078 (Valid Accounts)
-Escaneo de redes | T1046 (Network Service Scanning)
-Análisis de paquetes (sniffing) | T1040 (Network Sniffing)
-Explotación de vulnerabilidades conocidas | T1190 (Exploit Public-Facing Application) (si aplica)
-Pérdida/exfiltración de datos | T1020/T1041/T1567 (según canal)
-Amplificador DDoS | T1498 (Network Denial of Service)
+### 1. Mapa de Amenazas (MITRE ATT&CK)
+Se han priorizado las técnicas que afectan directamente al sector (Ransomware, Phishing, Robo de identidades y Cadena de Suministro).
+
+![Mapa ATT&CK](../mitre/attack-navigator.svg)
+
+* **Riesgo Crítico (Rojo):** `T1486` (Data Encrypted for Impact) y `T1048` (Exfiltration Over Alternative Protocol). Estos conforman el **Playbook de Ransomware**, donde el riesgo de paralización del negocio y la doble extorsión por pérdida de datos fiscales es inaceptable.
+* **Riesgo Alto (Naranja):** `T1566` (Phishing), `T1078` (Valid Accounts) y `T1195` (Supply Chain Compromise). Técnicas abordadas en nuestros **Playbooks de Phishing, Identidad y Cadena de Suministro**.
+* **Riesgo Medio (Amarillo):** `T1598` (Phishing for Information) y `T1110` (Brute Force). Acciones pre-ataque mitigadas en el **Playbook de Ingeniería Social**.
+
+### 2. Acciones Defensivas y Resiliencia (MITRE RE&CT)
+Cada técnica detectada desencadena acciones concretas de los playbooks en las fases de Contención, Erradicación y Recuperación, apostando siempre por mantener la continuidad operativa.
+
+![Mapa RE&CT](../mitre/react-navigator.svg)
+
+**Medidas implementadas en el plan:**
+* **Contención:** 
+  * *Isolate Network:* Aislamiento inmediato de servidores afectados por Ransomware para cortar el cifrado de datos fiscales.
+  * *Disable Account* y *Reset Password:* Bloqueo de identidades comprometidas en ataques T1078.
+* **Erradicación:** 
+  * *Delete Email Message / Remove File:* Purga a nivel organizativo de los vectores iniciales (phishing/malware).
+* **Recuperación (Ciberresiliencia):**
+  * *Restore System from Backup:* Medida vital tras un ataque de Ransomware. Asegura que la empresa levanta su ERP/CRM desde copias desconectadas sin tener que negociar la extorsión.
 
 Uso operativo durante el incidente:
-- Investigar: etiquetar eventos/artefactos con técnica ATT&CK y registrar evidencias (fuente + hora + hash si aplica).
-- Remediar: vincular cada técnica observada a controles de protección/detección/contención/erradicación (RE&CT).
-- Mejora continua: en el AAR, registrar qué técnicas se detectaron tarde y qué telemetría faltó.
+- **Investigar:** Buscar siempre el TTP (Técnica) según ATT&CK en el EDR o en los logs.
+- **Remediar:** Vincular cada TTP detectado de forma estricta a su bloque en RE&CT (Ej. detectar T1486 -> activar Isolate Network inmediatamente).
 
 ## Métricas y mejora continua (KPIs/KRIs)
 
