@@ -11,6 +11,31 @@ En conjunto, este trabajo pretende mostrar la importancia de abordar la ciberseg
 
 ## Plan de respuesta
 ## Playbooks
+
+Los playbooks identificados como necesarios son:
+
+1. Phishing.
+2. Ransomware.
+3. Compromiso de identidad y acceso.
+4. Compromiso de la cadena de suministro.
+5. Desfiguración o desaparición de sitios web.
+6. Ataque DDoS.
+7. Fuga de datos o exfiltración de información.
+8. Explotación de aplicación expuesta a Internet.
+
+La selección se ha basado en la empresa del caso: uso intensivo de correo, tratamiento de datos personales, dependencia de servicios cloud, web y tienda online externalizadas, exposición pública en Internet y madurez de seguridad básica. También se ha tenido en cuenta la taxonomía de incidentes, el impacto sobre CRM, ERP, correo, almacenamiento compartido y continuidad del negocio, y la relación de estos incidentes con ATT&CK y RE&CT.
+
+La justificación de cada uno es:
+
+1. `Phishing` es necesario porque el correo es un canal crítico y además es una vía habitual de robo de credenciales, malware y fraude.
+2. `Ransomware` es prioritario porque la empresa depende de ficheros, aplicaciones internas y continuidad operativa.
+3. `Compromiso de identidad y acceso` es clave por el uso de servicios cloud, correo y accesos remotos.
+4. `Cadena de suministro` es necesario porque hay varios servicios externalizados, especialmente web, tienda online, antivirus y consultoría.
+5. `Defacement` encaja por la exposición pública de la web y el impacto reputacional directo.
+6. `DDoS` está justificado por la dependencia del canal web y de la disponibilidad de servicios expuestos a Internet.
+7. `Fuga de datos` es imprescindible por el tratamiento de datos personales y documentación sensible.
+8. `Explotación de aplicación pública` es coherente con la existencia de servicios web accesibles desde Internet y con la falta de control directo sobre su securización.
+
 ## Respuesta a las preguntas
 ## Conlusiones
 
