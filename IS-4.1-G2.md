@@ -227,7 +227,49 @@ Y lo más importante: el plan dice específicamente qué hacer. No dice "aislar 
 
 ### 2.a ¿En qué consiste el Flujo de Toma de Decisiones y Escalado de tu plan de respuesta? ¿Existe un plan de comunicación, protocolos, etc? Si la respuesta es correcta, haz un resumen del plan y protocolos. Deja evidencias del flujo, mediante un diagrama.
 
+![Diagrama de Toma de Decisiones y Escalado](https://mermaid.ink/img/pako:eNpdU8tu2zAQ_BWCQIEESALLsmPHhxaJnfcDQZJTZR825NpmK5EqRblNDH9Mjj3k1A8oUP9Yl5TlOBEMQ-Tu7M7srOZcGIm8x8ep-SmmYB17GAw1o-fTJ3aHY7SohQI2U0UJaRUpyseJhXy6GU_e3kdVln_uouTWGoGFYYaBcGqmJMjNhOb8ttTOMIn0E6pQyz96sRGPt5ITpSmWstxXkipTSIDRdpWEWg71mvBJWn4zlKiIR17TPUxujFNjJUD46sw3cyiqgy_ssyUVxRHb3f3MjpLD1MH7CHtioJcvKREsqD6mREODXSk5Crj-_N_f8ywnmYZZlCVBzZdFza5POex--RpSB8mDBQeVFJYbywpD_9TH5EgRNTOr0oOQf5z0jbU1Z8hTEiOBSM0gpYmG6xXgOABOtpK-QoJ8ELj9js6NCcmnno0u1l5CyvBHqXLDsMjJFOrxDLJmdBowZ17sejoFztB6j4VdvjolNnSfbeo-_2CF0hk5SpNgQCMrcqMLeEyxIGVS1XpXfc9DhYvk0K8RvLlHa-GMMGnYIWG9Q6N3zVcqL2mGxFVXyE0_3fK30ER61egypF9RelbqDaoOrfZEly8WoWAwRuHIhbduFwF4ndzjpFytKRPUU-nSfPChAlxVgBp_HY43yZUXbjSNAWjVtCSH_UREbehYaRVWhO_wiVWS95wtcYdnaDPwRz73BYfcTTHDIe_RqwT7fciHekGYHPRXY7IaZk05mfLeGNKCTmUuweFAAX3i2frW00DbN_St8l4zjkMR3pvzX7y3223tRa39bqvb6cat_XZzhz_RbdRo7-81o1Y3arajdqPTaS92-HPo29xrxXEjjuJmo92JugcHrcV_MK2EvA)
+
+El flujo de toma de decisiones se basa en un proceso escalonado y documentado:
+
+- Alerta inicial: detección de un incidente posible por phishing, acceso no autorizado, ransomware, exfiltración o compromiso de proveedor.
+- Triage rápido: evaluación en las primeras 1-2 horas para distinguir falso positivo de incidente real.
+- Identificación: determinar el tipo de incidente, vector de entrada y alcance del daño.
+- Dimensionamiento: estimar sistemas afectados, datos expuestos, persistencia y movimiento lateral.
+- Escalado: activar comité de crisis, legal y dirección según el impacto; notificar a clientes y reguladores cuando corresponda.
+- Remediación en paralelo: contención inmediata, comunicación coordinada, erradicación técnica y recuperación controlada.
+- Monitoreo intensivo: vigilancia activa durante al menos 72 horas tras la acción inicial.
+- Lecciones aprendidas: reunión AAR para documentar causas, fallos y mejoras.
+
+El plan incluye un protocolo de comunicación y roles predefinidos:
+
+- Roles: Incident Commander, deputy, scribe, experto y liaison.
+- Canales: chat de incidente, teléfono de crisis, correo de notificación y reuniones de escalado.
+- Protocolos operativos: bloquear cuentas, desactivar sesiones, cuarentena lógica de servidores, protección de backups, cambio forzado de credenciales, aislamiento de redes, notificación RGPD/AEPD cuando sea necesario.
+- Playbooks específicos: cada tipo de incidente tiene instrucciones concretas (phishing, ransomware, acceso no autorizado, exfiltración, proveedor comprometido).
+
 ### 3.a ¿Cómo te has asegurado de que tu plan tiene respuestas resilientes? ¿Por qué son resilientes y en qué fases se centran?
+
+El plan se asegura de ser resiliente porque no es solo una respuesta aislada, sino un ciclo completo basado en NIST SP 800-61:
+
+- Preparación: roles definidos, canales de comunicación preparados, herramientas y playbooks listos.
+- Identificación: detección rápida, triage estructurado y clasificación del incidente.
+- Contención: acciones inmediatas y específicas para detener la propagación, proteger backups y aislar sistemas.
+- Erradicación: eliminación de rastros del atacante, parches, revocación de accesos y cambio de credenciales.
+- Recuperación: restauración ordenada de servicios, validación de copias de seguridad y control de reinfección.
+- Lecciones aprendidas: análisis post-incidente para ajustar el plan.
+
+Son resilientes porque combinan:
+
+- decisiones rápidas y bien definidas,
+- protocolos concretos escritos en los playbooks,
+- comunicación estructurada con escalado claro,
+- enfoque en contención y recuperación paralelas.
+
+Las fases más centradas en resiliencia son:
+
+- Contención: es la más fuerte y mejor trabajada del plan.
+- Recuperación: busca restaurar sin reinfectar y establecer continuidad controlada.
+- Lecciones aprendidas: garantiza que el plan se mejore tras cada incidente.
 
 ---
 
