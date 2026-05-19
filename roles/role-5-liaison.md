@@ -37,3 +37,8 @@ Normalmente se divide en dos enfoques:
 * Tener mucha soltura comunicándose, tanto hablando como por escrito. Hay que saber calmar las aguas.
 * Haberse leído y entendido bien el plan de respuesta a incidentes de la empresa.
 * Es muy recomendable tener algo de experiencia en atención al cliente, comunicación corporativa o marketing.
+
+**Documento**: Rol - Enlace<br>
+**Grupo G5**: Sergio G., Iván P., Manuel P., Javier C.<br>
+**Fecha**: Mayo 2026
+
