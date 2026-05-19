@@ -22,13 +22,13 @@ REVIEW_DATE: '19/05/2026'
 TEST_DATE: '19/05/2026'
 
 # URL or reference to IR chat program like Teams, Slack, or Discord (e.g., chat.acme.tld/codename)
-RESPONSE_CHAT: 'discord/mid_ex882'
+RESPONSE_CHAT: 'Discord #incidentes y canal privado #[CODENAME-INCIDENTE]'
 
 # Phone number for response teleconference (e.g., 123-456-7890)
-RESPONSE_PHONE: '664011121'
+RESPONSE_PHONE: 'Discord canal de voz Incidentes'
 
 # URL for response video teleconference (VTC) like Zoom or WebEx (e.g., zoom.acme.tld/codename)
-RESPONSE_VTC: 'zoom'
+RESPONSE_VTC: 'Discord canal de voz Incidentes'
 
 # Description/URL for alternate email (e.g., alt 365 tenant at ir.acme.tld/othermail)
 ALTERNATE_EMAIL: 'agardom573@g.educaand.es'
@@ -46,7 +46,7 @@ INCIDENT_COMMANDER_PAGER_URL: 'ir.nexo-lebrija.tld/ic-page'
 INCIDENT_COMMANDER_ROSTER: 'ir.nexo-lebrija.tld/ic-roster'
 
 # As above, for security team (e.g., ir.acme.tld/sec-roster)
-SECURITY_TEAM_ROSTER: 'ir.nexo-lebrija.tld/sex-roster'
+SECURITY_TEAM_ROSTER: 'ir.nexo-lebrija.tld/sec-roster'
 
 # As above, for SMEs (e.g., ir.acme.tld/sme-roster)
 TEAM_SME_ROSTER: 'ir.nexo-lebrija.tld/sme-roster'
@@ -55,13 +55,13 @@ TEAM_SME_ROSTER: 'ir.nexo-lebrija.tld/sme-roster'
 EXECUTIVE_ROSTER: 'ir.nexo-lebrija.tld/exec-roster'
 
 # Time to wait for on-duty IC on call (e.g., 15 minutes)
-INCIDENT_COMMANDER_RESPONSE_SLA: '10 seconds'
+INCIDENT_COMMANDER_RESPONSE_SLA: '15 minutos'
 
 # Time between scheduled updates (e.g., 4 hours)
 UPDATE_FREQUENCY: '5 horas'
 
 # URL/path to incident file (e.g., ir.acme.tld/files/codename)
-INCIDENT_FILE_LOCATION: 'ir.nexo-lebrija.tld/files/respones'
+INCIDENT_FILE_LOCATION: 'ir.nexo-lebrija.tld/files/response'
 
 # URL/path to critical information list, data you want to protect (e.g., ir.acme.tld/cil)
 CRITICAL_INFO_LIST_LOCATION: 'ir.nexo-lebrija.tld/cil'
@@ -115,19 +115,19 @@ LOCAL_LE_CONTACT: 'legal@nexo-lebrija.es'
 FBI_CONTACT: 'legal@nexo-lebrija.es'
 
 # Vendor for IR and infosec support (e.g., [Counteractive Security](https://www.counteractive.net))
-INCIDENT_RESPONSE_VENDOR: 'https://www.counteractive.net'
+INCIDENT_RESPONSE_VENDOR: 'S2 Grupo / proveedor SOC-CERT externo'
 
 # Vendor for PR support (e.g., public relations llc, pr.firm.tld)
 PUBLIC_RELATIONS_VENDOR: 'legal@nexo-lebrija.es'
 
 # (Cyber) insurance provider (e.g., AAA insurance co., cyber.insurance.tld)
-INSURANCE_VENDOR: 'cyber.insurance.tld'
+INSURANCE_VENDOR: 'No contratado / pendiente de definir'
 
 # Industry ISAC contact info (e.g., FS ISAC, https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center)
 ISAC_CONTACT: 'https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center'
 
 # After action review (AAR) service level agreement (time after completion of incident to conduct AAR) (e.g., 5 business days)
-AAR_SLA: '2 business days'
+AAR_SLA: '5 días hábiles'
 
 # AAR attendees (e.g., ir.acme.tld/aar/attendees)
 AAR_ATTENDEES: 'ir.nexo-lebrija.tld/aar/attendees'

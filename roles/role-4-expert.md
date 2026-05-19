@@ -35,8 +35,8 @@ Si está de guardia para su equipo, puede ser convocado a un incidente y se espe
 #### Preparación para el período de guardia
 
 1. Familiarícese previamente con este plan y los playbooks aplicables a su área.
-2. Asegúrese de tener configuradas las alertas (Discord notificaciones, teléfono 664011121).
-3. Compruebe que puede unirse a la llamada Zoom (`https://zoom.us/j/nexolebrija-ir`).
+2. Asegúrese de tener configuradas las alertas de Discord.
+3. Compruebe que puede unirse al canal de voz de Discord **Incidentes**.
 4. Conozca su próxima guardia y organice cambios con antelación.
 5. Si es IC, no coincida como SME de su equipo en el mismo turno.
 

@@ -15,18 +15,29 @@ A continuación se presentan las descripciones, deberes y formación para cada u
   - SMEs para unidades de negocio
   - SMEs para funciones ejecutivas (Legal, RRHH, Dirección)
 
-En incidentes complejos (S1), la estructura puede ajustarse creando subequipos de Investigación, Remediación y Comunicación. Ver sección [Crear subequipos](../during.md#crear-subequipos) del plan.
+En incidentes complejos (S1), la estructura puede ajustarse creando subequipos de Investigación, Remediación y Comunicación. 
 
-Esta es una **estructura flexible**: en incidentes pequeños (S3/S4) el Adjunto puede actuar también como Escriba y Enlace interno.
+Ver sección [Subequipos](../during.md#subequipos) del plan.
 
-## Tiempos de Guerra vs. Tiempos de Paz
+Es una **estructura flexible**: en incidentes pequeños (S3/S4) el Adjunto puede actuar también como Escriba y Enlace interno.
 
-En las llamadas de respuesta a incidentes ("tiempos de guerra"), una estructura organizativa diferente anula las operaciones normales ("tiempos de paz"):
+## Modo respuesta vs. operación normal
 
-- El IC está al mando. Independientemente de su rango habitual, es la persona de mayor rango en la llamada — por encima del CEO/Dirección General.
-- Los primeros respondedores de cada equipo/servicio son los de mayor rango para ese servicio.
-- Las decisiones las toma el IC tras considerar la información. Una vez tomada, es definitiva.
-- El IC puede tomar decisiones más arriesgadas de lo habitual en tiempos de paz.
-- El IC puede ir contra el consenso. Si 9/10 están de acuerdo y 1 no, el IC puede elegir la opción minoritaria. La decisión del IC es final. La llamada no es el momento de discutir.
-- El IC puede comportarse con brusquedad. Es tiempo de guerra. No es personal.
-- El IC puede pedirte que abandones la llamada. Es a su discreción si considera que no estás aportando valor.
+Cuando se activa el plan de respuesta a incidentes, las reglas cambian. Porque en una crisis la coordinación clara salva tiempo, y el tiempo salva datos, clientes y reputación.
+
+Estas son las diferencias prácticas:
+
+**Durante un incidente:**
+
+- El IC manda. No importa que en el día a día sea técnico de TIC y la persona al otro lado de la llamada sea la Dirección General. En este contexto, el IC decide.
+- Cada SME es la máxima autoridad en su área. Si el responsable de servidores dice que el sistema está comprometido, eso no se cuestiona, se actúa.
+- Las decisiones son rápidas y definitivas. El IC escucha, valora y decide. Si hay objeciones fuertes, se plantean antes de que se tome la decisión, no después.
+- El IC puede ir contra la mayoría. Si nueve personas opinan una cosa y una opina otra, el IC puede elegir la opción minoritaria si considera que es la correcta.
+- El IC puede pedirte que salgas de la llamada. Si en un momento dado tu presencia no está aportando y está dificultando la coordinación, el IC tomará esa decisión.
+- El IC puede parecer brusco. La presión es real. No lo tomes como algo personal.
+
+**En el día a día (fuera de incidentes):**
+
+- Las jerarquías habituales vuelven. El IC no tiene autoridad especial fuera de una respuesta activa.
+- Es el momento de revisar, mejorar, entrenar y prepararse para la próxima vez.
+- Las discusiones sobre decisiones tomadas durante el incidente tienen su lugar aquí: en el post-mortem (AAR), con calma y sin culpas.
