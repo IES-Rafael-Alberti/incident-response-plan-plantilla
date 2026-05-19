@@ -4,11 +4,29 @@
   "related_attack_layer": "attack-data-breach-layer.json",
   "playbook": "playbook-data-breach.md",
   "description": "Acciones RE&CT priorizadas para fuga de datos personales y brecha RGPD, alineadas con las tecnicas ATT&CK T1213, T1567, T1041, T1070.001, T1222 y T1565.",
-  "risks": ["R03", "R01", "R02", "R11"],
-  "assets": ["Datos personales", "CRM/ERP", "Servidores de archivos", "Correo", "Cloud", "Proveedores"],
+  "risks": [
+    "R03",
+    "R01",
+    "R02",
+    "R11"
+  ],
+  "assets": [
+    "Datos personales",
+    "CRM/ERP",
+    "Servidores de archivos",
+    "Correo",
+    "Cloud",
+    "Proveedores"
+  ],
   "legendItems": [
-    { "label": "Prioridad media", "color": "#bcbddc" },
-    { "label": "Critico para el playbook", "color": "#756bb1" }
+    {
+      "label": "Prioridad media",
+      "color": "#bcbddc"
+    },
+    {
+      "label": "Critico para el playbook",
+      "color": "#756bb1"
+    }
   ],
   "stages": [
     {
@@ -24,13 +42,19 @@
         {
           "action": "Maintain critical information list",
           "priority": 3,
-          "attackTechniques": ["T1213", "T1565"],
+          "attackTechniques": [
+            "T1213",
+            "T1565"
+          ],
           "comment": "Permite saber que repositorios contienen datos personales y que impacto tendria su acceso, borrado o alteracion."
         },
         {
           "action": "Prepare legal notification workflow",
           "priority": 3,
-          "attackTechniques": ["T1567", "T1041"],
+          "attackTechniques": [
+            "T1567",
+            "T1041"
+          ],
           "comment": "Si hay exfiltracion, la evaluacion RGPD/AEPD debe iniciarse rapidamente."
         }
       ]
@@ -49,19 +73,27 @@
         {
           "action": "List accessed repositories",
           "priority": 3,
-          "attackTechniques": ["T1213"],
+          "attackTechniques": [
+            "T1213"
+          ],
           "comment": "Identifica ficheros, tablas, buzones o repositorios con datos personales accedidos."
         },
         {
           "action": "Identify transferred data",
           "priority": 3,
-          "attackTechniques": ["T1567", "T1041"],
+          "attackTechniques": [
+            "T1567",
+            "T1041"
+          ],
           "comment": "Determina si los datos salieron por servicio web/cloud o canal C2."
         },
         {
           "action": "Collect evidence",
           "priority": 3,
-          "attackTechniques": ["T1070.001", "T1222"],
+          "attackTechniques": [
+            "T1070.001",
+            "T1222"
+          ],
           "comment": "Preserva logs y permisos antes de que el atacante o procesos automaticos los alteren."
         }
       ]
@@ -80,13 +112,19 @@
         {
           "action": "Stop data transfer",
           "priority": 3,
-          "attackTechniques": ["T1567", "T1041"],
+          "attackTechniques": [
+            "T1567",
+            "T1041"
+          ],
           "comment": "Corta canales de salida usados para exfiltracion."
         },
         {
           "action": "Disable public sharing",
           "priority": 3,
-          "attackTechniques": ["T1213", "T1222"],
+          "attackTechniques": [
+            "T1213",
+            "T1222"
+          ],
           "comment": "Reduce exposicion de repositorios o permisos excesivos."
         }
       ]
@@ -105,13 +143,17 @@
         {
           "action": "Restore permissions",
           "priority": 3,
-          "attackTechniques": ["T1222"],
+          "attackTechniques": [
+            "T1222"
+          ],
           "comment": "Revierte permisos indebidos sobre ficheros, carpetas o repositorios."
         },
         {
           "action": "Recover deleted logs when possible",
           "priority": 2,
-          "attackTechniques": ["T1070.001"],
+          "attackTechniques": [
+            "T1070.001"
+          ],
           "comment": "Ayuda a reconstruir actividad si se intentaron borrar registros."
         }
       ]
@@ -130,7 +172,9 @@
         {
           "action": "Validate restored data",
           "priority": 3,
-          "attackTechniques": ["T1565"],
+          "attackTechniques": [
+            "T1565"
+          ],
           "comment": "Confirma integridad cuando los datos han sido manipulados, borrados o alterados."
         }
       ]
@@ -150,10 +194,466 @@
         {
           "action": "Document GDPR decision",
           "priority": 3,
-          "attackTechniques": ["T1213", "T1567", "T1041"],
+          "attackTechniques": [
+            "T1213",
+            "T1567",
+            "T1041"
+          ],
           "comment": "Documenta si procede notificar a AEPD o personas afectadas por acceso o exfiltracion de datos personales."
         }
       ]
+    }
+  ],
+  "version": "2.2",
+  "domain": "atc-react",
+  "filters": {
+    "stages": [
+      "preparation",
+      "identification",
+      "containment",
+      "eradication",
+      "recovery",
+      "lessons-learned"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ]
+  },
+  "sorting": 0,
+  "viewMode": 0,
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "RA1005",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Set up relevant data collection: Set up relevant data collection.\nCollect logs: Collect logs. Equivalente RE&CT: Set up relevant data collection. Equivalente RE&CT: Set up relevant data collection.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Set up relevant data collection"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Collect logs"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Set up relevant data collection"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1007",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Prepare legal notification workflow: Si hay exfiltracion, la evaluacion RGPD/AEPD debe iniciarse rapidamente. ATT&CK: T1567, T1041. Equivalente RE&CT: Develop communication map.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare legal notification workflow"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Develop communication map"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1567, T1041"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1010",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Restore permissions: Revierte permisos indebidos sobre ficheros, carpetas o repositorios. ATT&CK: T1222. Equivalente RE&CT: Get access control matrix.\nReopen access with least privilege: Reopen access with least privilege. Equivalente RE&CT: Get access control matrix. Equivalente RE&CT: Get access control matrix.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore permissions"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Get access control matrix"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1222"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Reopen access with least privilege"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1011",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Maintain critical information list: Permite saber que repositorios contienen datos personales y que impacto tendria su acceso, borrado o alteracion. ATT&CK: T1213, T1565. Equivalente RE&CT: Develop assets knowledge base.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Maintain critical information list"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Develop assets knowledge base"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1213, T1565"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1012",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Prepare evidence retention: Prepare evidence retention. Equivalente RE&CT: Check analysis toolset. Equivalente RE&CT: Check analysis toolset.\nCollect evidence: Preserva logs y permisos antes de que el atacante o procesos automaticos los alteren. ATT&CK: T1070.001, T1222. Equivalente RE&CT: Check analysis toolset.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare evidence retention"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Check analysis toolset"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Collect evidence"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1070.001, T1222"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1014",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Update MISP event: Update MISP event. Equivalente RE&CT: Connect with trusted communities. Equivalente RE&CT: Connect with trusted communities.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Update MISP event"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Connect with trusted communities"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2001",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Scope incident: Scope incident. Equivalente RE&CT: List victims of security alert. Equivalente RE&CT: List victims of security alert.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Scope incident"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "List victims of security alert"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2112",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Identify transferred data: Determina si los datos salieron por servicio web/cloud o canal C2. ATT&CK: T1567, T1041.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Identify transferred data"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1567, T1041"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2304",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "List accessed repositories: Identifica ficheros, tablas, buzones o repositorios con datos personales accedidos. ATT&CK: T1213. Equivalente RE&CT: List files downloaded.\nMonitor restored repositories: Monitor restored repositories. Equivalente RE&CT: List files downloaded. Equivalente RE&CT: List files downloaded.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List accessed repositories"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "List files downloaded"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1213"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Monitor restored repositories"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3001",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Remove malicious changes: Remove malicious changes. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.\nPatch misconfiguration: Patch misconfiguration. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious changes"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Patch vulnerability"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Patch misconfiguration"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3101",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block external IP address: Block external IP address.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block external IP address"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3103",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block external domain: Block external domain.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block external domain"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3111",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Disable public sharing: Reduce exposicion de repositorios o permisos excesivos. ATT&CK: T1213, T1222. Equivalente RE&CT: Block data transferring by content pattern.\nStop data transfer: Corta canales de salida usados para exfiltracion. ATT&CK: T1567, T1041. Equivalente RE&CT: Block data transferring by content pattern.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Disable public sharing"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Block data transferring by content pattern"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1213, T1222"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Stop data transfer"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1567, T1041"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3601",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Lock user account: Lock user account.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Lock user account"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4301",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Remove unauthorized copy: Remove unauthorized copy. Equivalente RE&CT: Remove file. Equivalente RE&CT: Remove file.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove unauthorized copy"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Remove file"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5002",
+      "tactic": "recovery",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Recover deleted logs when possible: Ayuda a reconstruir actividad si se intentaron borrar registros. ATT&CK: T1070.001. Equivalente RE&CT: Restore data from backup.\nRestore data from backup: Restore data from backup.\nValidate restored data: Confirma integridad cuando los datos han sido manipulados, borrados o alterados. ATT&CK: T1565. Equivalente RE&CT: Restore data from backup.\nRestore service: Restore service. Equivalente RE&CT: Restore data from backup. Equivalente RE&CT: Restore data from backup.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Recover deleted logs when possible"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1070.001"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Validate restored data"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1565"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Restore service"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6001",
+      "tactic": "lessons-learned",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Develop incident report: Develop incident report.\nDocument GDPR decision: Documenta si procede notificar a AEPD o personas afectadas por acceso o exfiltracion de datos personales. ATT&CK: T1213, T1567, T1041. Equivalente RE&CT: Develop incident report.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Develop incident report"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Document GDPR decision"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Develop incident report"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1213, T1567, T1041"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6002",
+      "tactic": "lessons-learned",
+      "score": 1,
+      "color": "#482569",
+      "comment": "Conduct lessons learned exercise: Conduct lessons learned exercise.\nImprove detections: Improve detections. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.\nUpdate playbook: Update playbook. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Improve detections"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Update playbook"
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#9ecae1",
+      "#3182bd",
+      "#d73027"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "metadata": [
+    {
+      "name": "Empresa",
+      "value": "Nexo Lebrija"
+    },
+    {
+      "name": "Uso",
+      "value": "Capa RE&CT para evidenciar acciones de respuesta priorizadas por playbook"
+    },
+    {
+      "name": "Capa ATT&CK relacionada",
+      "value": "attack-data-breach-layer.json"
+    },
+    {
+      "name": "Playbook",
+      "value": "playbook-data-breach.md"
     }
   ]
 }

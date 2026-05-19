@@ -4,11 +4,27 @@
   "related_attack_layer": "attack-web-provider-layer.json",
   "playbook": "playbook-defacement.md",
   "description": "Acciones RE&CT priorizadas para desfiguracion o compromiso web, alineadas con las tecnicas ATT&CK T1190, T1505.003, T1505, T1491, T1489 y T1567.",
-  "risks": ["R04", "R11", "R03"],
-  "assets": ["Web/tienda online", "Proveedor web", "CMS", "Datos de clientes", "Reputacion"],
+  "risks": [
+    "R04",
+    "R11",
+    "R03"
+  ],
+  "assets": [
+    "Web/tienda online",
+    "Proveedor web",
+    "CMS",
+    "Datos de clientes",
+    "Reputacion"
+  ],
   "legendItems": [
-    { "label": "Prioridad media", "color": "#fd8d3c" },
-    { "label": "Critico para el playbook", "color": "#bd0026" }
+    {
+      "label": "Prioridad media",
+      "color": "#fd8d3c"
+    },
+    {
+      "label": "Critico para el playbook",
+      "color": "#bd0026"
+    }
   ],
   "stages": [
     {
@@ -25,13 +41,19 @@
         {
           "action": "Prepare web maintenance mode",
           "priority": 3,
-          "attackTechniques": ["T1491", "T1489"],
+          "attackTechniques": [
+            "T1491",
+            "T1489"
+          ],
           "comment": "Permite retirar contenido alterado o mantener continuidad si la web queda comprometida."
         },
         {
           "action": "Maintain clean web backup",
           "priority": 3,
-          "attackTechniques": ["T1505.003", "T1491"],
+          "attackTechniques": [
+            "T1505.003",
+            "T1491"
+          ],
           "comment": "Facilita restaurar contenido limpio tras web shell o defacement."
         }
       ]
@@ -51,13 +73,19 @@
         {
           "action": "List host vulnerabilities",
           "priority": 3,
-          "attackTechniques": ["T1190"],
+          "attackTechniques": [
+            "T1190"
+          ],
           "comment": "Identifica CMS, plugin, panel o servicio expuesto explotado."
         },
         {
           "action": "Collect web logs",
           "priority": 3,
-          "attackTechniques": ["T1505.003", "T1505", "T1567"],
+          "attackTechniques": [
+            "T1505.003",
+            "T1505",
+            "T1567"
+          ],
           "comment": "Permite revisar web shells, componentes modificados, formularios y posible exfiltracion."
         }
       ]
@@ -77,13 +105,19 @@
         {
           "action": "Enable maintenance page",
           "priority": 3,
-          "attackTechniques": ["T1491", "T1489"],
+          "attackTechniques": [
+            "T1491",
+            "T1489"
+          ],
           "comment": "Reduce dano reputacional y evita que usuarios interactuen con una web comprometida."
         },
         {
           "action": "Quarantine file by path",
           "priority": 3,
-          "attackTechniques": ["T1505.003", "T1505"],
+          "attackTechniques": [
+            "T1505.003",
+            "T1505"
+          ],
           "comment": "Aisla web shells, scripts o componentes de servidor maliciosos."
         }
       ]
@@ -103,13 +137,18 @@
         {
           "action": "Remove malicious file",
           "priority": 3,
-          "attackTechniques": ["T1505.003", "T1505"],
+          "attackTechniques": [
+            "T1505.003",
+            "T1505"
+          ],
           "comment": "Elimina web shells, plugins, scripts o componentes manipulados."
         },
         {
           "action": "Patch vulnerability",
           "priority": 3,
-          "attackTechniques": ["T1190"],
+          "attackTechniques": [
+            "T1190"
+          ],
           "comment": "Corrige la vulnerabilidad explotada en aplicacion publica, CMS o tienda."
         }
       ]
@@ -128,13 +167,18 @@
         {
           "action": "Restore service",
           "priority": 3,
-          "attackTechniques": ["T1491", "T1489"],
+          "attackTechniques": [
+            "T1491",
+            "T1489"
+          ],
           "comment": "Restablece la web/tienda tras alteracion de contenido o parada de servicio."
         },
         {
           "action": "Validate restored data",
           "priority": 3,
-          "attackTechniques": ["T1567"],
+          "attackTechniques": [
+            "T1567"
+          ],
           "comment": "Comprueba formularios, pedidos, clientes o datos expuestos antes de reabrir."
         }
       ]
@@ -154,10 +198,554 @@
         {
           "action": "Improve detections",
           "priority": 3,
-          "attackTechniques": ["T1190", "T1505.003", "T1491"],
+          "attackTechniques": [
+            "T1190",
+            "T1505.003",
+            "T1491"
+          ],
           "comment": "Convierte rutas, hashes, IPs, WAF y patrones de cambios web en nuevas detecciones."
         }
       ]
+    }
+  ],
+  "version": "2.2",
+  "domain": "atc-react",
+  "filters": {
+    "stages": [
+      "preparation",
+      "identification",
+      "containment",
+      "eradication",
+      "recovery",
+      "lessons-learned"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ]
+  },
+  "sorting": 0,
+  "viewMode": 0,
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "RA1005",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Set up relevant data collection: Set up relevant data collection.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Set up relevant data collection"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1007",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Prepare web maintenance mode: Permite retirar contenido alterado o mantener continuidad si la web queda comprometida. ATT&CK: T1491, T1489. Equivalente RE&CT: Develop communication map.\nPrepare provider contact: Prepare provider contact. Equivalente RE&CT: Develop communication map. Equivalente RE&CT: Develop communication map.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare web maintenance mode"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Develop communication map"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1491, T1489"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare provider contact"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1008",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Maintain clean web backup: Facilita restaurar contenido limpio tras web shell o defacement. ATT&CK: T1505.003, T1491. Equivalente RE&CT: Make sure there are backups.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Maintain clean web backup"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Make sure there are backups"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1505.003, T1491"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1010",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Restore permissions: Restore permissions. Equivalente RE&CT: Get access control matrix. Equivalente RE&CT: Get access control matrix.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore permissions"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Get access control matrix"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1012",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Collect evidence: Collect evidence. Equivalente RE&CT: Check analysis toolset. Equivalente RE&CT: Check analysis toolset.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Collect evidence"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Check analysis toolset"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1014",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Update MISP event: Update MISP event. Equivalente RE&CT: Connect with trusted communities. Equivalente RE&CT: Connect with trusted communities.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Update MISP event"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Connect with trusted communities"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1104",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Collect web logs: Permite revisar web shells, componentes modificados, formularios y posible exfiltracion. ATT&CK: T1505.003, T1505, T1567. Equivalente RE&CT: Access external HTTP logs.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Collect web logs"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Access external HTTP logs"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1505.003, T1505, T1567"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1115",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Prepare WAF rules: Prepare WAF rules. Equivalente RE&CT: Get ability to block external URL. Equivalente RE&CT: Get ability to block external URL.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare WAF rules"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Get ability to block external URL"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2001",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Scope incident: Scope incident. Equivalente RE&CT: List victims of security alert. Equivalente RE&CT: List victims of security alert.\nMonitor restored service: Monitor restored service. Equivalente RE&CT: List victims of security alert. Equivalente RE&CT: List victims of security alert.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Scope incident"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "List victims of security alert"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Monitor restored service"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2002",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "List host vulnerabilities: Identifica CMS, plugin, panel o servicio expuesto explotado. ATT&CK: T1190.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List host vulnerabilities"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1190"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2112",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Identify transferred data: Identify transferred data.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Identify transferred data"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3001",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Patch vulnerability: Corrige la vulnerabilidad explotada en aplicacion publica, CMS o tienda. ATT&CK: T1190.\nRemove malicious changes: Remove malicious changes. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.\nHarden web application: Harden web application. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Patch vulnerability"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1190"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious changes"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Patch vulnerability"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Harden web application"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3101",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block external IP address: Block external IP address.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block external IP address"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3103",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block external domain: Block external domain.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block external domain"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3105",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Redirect traffic: Redirect traffic. Equivalente RE&CT: Block external URL. Equivalente RE&CT: Block external URL.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Redirect traffic"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Block external URL"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3303",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Quarantine file by path: Aisla web shells, scripts o componentes de servidor maliciosos. ATT&CK: T1505.003, T1505.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Quarantine file by path"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1505.003, T1505"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3501",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Enable maintenance page: Reduce dano reputacional y evita que usuarios interactuen con una web comprometida. ATT&CK: T1491, T1489. Equivalente RE&CT: Disable system service.\nDisable compromised form: Disable compromised form. Equivalente RE&CT: Disable system service. Equivalente RE&CT: Disable system service.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Enable maintenance page"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Disable system service"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1491, T1489"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Disable compromised form"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4001",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Contact external company: Contact external company. Equivalente RE&CT: Report incident to external companies. Equivalente RE&CT: Report incident to external companies.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Contact external company"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Report incident to external companies"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4301",
+      "tactic": "eradication",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Remove malicious file: Elimina web shells, plugins, scripts o componentes manipulados. ATT&CK: T1505.003, T1505. Equivalente RE&CT: Remove file.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious file"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Remove file"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1505.003, T1505"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4601",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Rotate secrets: Rotate secrets. Equivalente RE&CT: Revoke authentication credentials. Equivalente RE&CT: Revoke authentication credentials.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Rotate secrets"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Revoke authentication credentials"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5002",
+      "tactic": "recovery",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Restore service: Restablece la web/tienda tras alteracion de contenido o parada de servicio. ATT&CK: T1491, T1489. Equivalente RE&CT: Restore data from backup.\nRestore data from backup: Restore data from backup.\nValidate restored data: Comprueba formularios, pedidos, clientes o datos expuestos antes de reabrir. ATT&CK: T1567. Equivalente RE&CT: Restore data from backup.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore service"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1491, T1489"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Validate restored data"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1567"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5501",
+      "tactic": "recovery",
+      "score": 1,
+      "color": "#86308c",
+      "comment": "Reopen web service: Reopen web service. Equivalente RE&CT: Enable disabled service. Equivalente RE&CT: Enable disabled service.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Reopen web service"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Enable disabled service"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6001",
+      "tactic": "lessons-learned",
+      "score": 1,
+      "color": "#482569",
+      "comment": "Develop incident report: Develop incident report.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Develop incident report"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6002",
+      "tactic": "lessons-learned",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Conduct lessons learned exercise: Conduct lessons learned exercise.\nImprove detections: Convierte rutas, hashes, IPs, WAF y patrones de cambios web en nuevas detecciones. ATT&CK: T1190, T1505.003, T1491. Equivalente RE&CT: Conduct lessons learned exercise.\nUpdate playbook: Update playbook. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.\nReview provider SLA: Review provider SLA. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Improve detections"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1190, T1505.003, T1491"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Update playbook"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Review provider SLA"
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#9ecae1",
+      "#3182bd",
+      "#d73027"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "metadata": [
+    {
+      "name": "Empresa",
+      "value": "Nexo Lebrija"
+    },
+    {
+      "name": "Uso",
+      "value": "Capa RE&CT para evidenciar acciones de respuesta priorizadas por playbook"
+    },
+    {
+      "name": "Capa ATT&CK relacionada",
+      "value": "attack-web-provider-layer.json"
+    },
+    {
+      "name": "Playbook",
+      "value": "playbook-defacement.md"
     }
   ]
 }

@@ -4,11 +4,29 @@
   "related_attack_layer": "attack-cloud-services-layer.json",
   "playbook": "playbook-cloud-services.md",
   "description": "Acciones RE&CT priorizadas para compromiso de servicios cloud, alineadas con las tecnicas ATT&CK T1078.004, T1538, T1098, T1528, T1530, T1567, T1531 y T1489.",
-  "risks": ["R11", "R03", "R01", "R04"],
-  "assets": ["Servicios cloud", "Correo SaaS", "Almacenamiento cloud", "CRM/ERP SaaS", "Integraciones", "Datos personales"],
+  "risks": [
+    "R11",
+    "R03",
+    "R01",
+    "R04"
+  ],
+  "assets": [
+    "Servicios cloud",
+    "Correo SaaS",
+    "Almacenamiento cloud",
+    "CRM/ERP SaaS",
+    "Integraciones",
+    "Datos personales"
+  ],
   "legendItems": [
-    { "label": "Prioridad media", "color": "#9ebcda" },
-    { "label": "Critico para el playbook", "color": "#8856a7" }
+    {
+      "label": "Prioridad media",
+      "color": "#9ebcda"
+    },
+    {
+      "label": "Critico para el playbook",
+      "color": "#8856a7"
+    }
   ],
   "stages": [
     {
@@ -24,13 +42,20 @@
         {
           "action": "Set up relevant data collection",
           "priority": 3,
-          "attackTechniques": ["T1078.004", "T1538", "T1530"],
+          "attackTechniques": [
+            "T1078.004",
+            "T1538",
+            "T1530"
+          ],
           "comment": "Es necesario tener auditoria cloud antes del incidente para revisar cuentas validas, paneles cloud y acceso a almacenamiento."
         },
         {
           "action": "Prepare cloud emergency contacts",
           "priority": 2,
-          "attackTechniques": ["T1489", "T1531"],
+          "attackTechniques": [
+            "T1489",
+            "T1531"
+          ],
           "comment": "Si el servicio se degrada o se pierden accesos, el contacto con proveedor cloud debe estar preparado."
         }
       ]
@@ -49,19 +74,28 @@
         {
           "action": "List users authenticated",
           "priority": 3,
-          "attackTechniques": ["T1078.004"],
+          "attackTechniques": [
+            "T1078.004"
+          ],
           "comment": "Permite identificar cuentas cloud validas usadas por el atacante."
         },
         {
           "action": "Collect logs",
           "priority": 3,
-          "attackTechniques": ["T1538", "T1098", "T1528"],
+          "attackTechniques": [
+            "T1538",
+            "T1098",
+            "T1528"
+          ],
           "comment": "Permite revisar paneles cloud, cambios de permisos y abuso de tokens o aplicaciones."
         },
         {
           "action": "Identify transferred data",
           "priority": 3,
-          "attackTechniques": ["T1530", "T1567"],
+          "attackTechniques": [
+            "T1530",
+            "T1567"
+          ],
           "comment": "Permite determinar si hubo acceso o exfiltracion de datos desde almacenamiento cloud."
         }
       ]
@@ -80,19 +114,27 @@
         {
           "action": "Lock user account",
           "priority": 3,
-          "attackTechniques": ["T1078.004", "T1098"],
+          "attackTechniques": [
+            "T1078.004",
+            "T1098"
+          ],
           "comment": "Corta uso de cuentas validas y cambios de permisos no autorizados."
         },
         {
           "action": "Revoke token",
           "priority": 3,
-          "attackTechniques": ["T1528"],
+          "attackTechniques": [
+            "T1528"
+          ],
           "comment": "Contiene abuso de tokens, API keys o aplicaciones OAuth."
         },
         {
           "action": "Disable public sharing",
           "priority": 3,
-          "attackTechniques": ["T1530", "T1567"],
+          "attackTechniques": [
+            "T1530",
+            "T1567"
+          ],
           "comment": "Reduce exposicion o exfiltracion mediante almacenamiento y servicios web."
         }
       ]
@@ -111,13 +153,19 @@
         {
           "action": "Remove malicious changes",
           "priority": 3,
-          "attackTechniques": ["T1098", "T1538"],
+          "attackTechniques": [
+            "T1098",
+            "T1538"
+          ],
           "comment": "Elimina cambios maliciosos en usuarios, roles, grupos, reglas e integraciones."
         },
         {
           "action": "Rotate secrets",
           "priority": 3,
-          "attackTechniques": ["T1528", "T1078.004"],
+          "attackTechniques": [
+            "T1528",
+            "T1078.004"
+          ],
           "comment": "Reduce reutilizacion de tokens, claves API y credenciales comprometidas."
         }
       ]
@@ -136,13 +184,19 @@
         {
           "action": "Restore service",
           "priority": 3,
-          "attackTechniques": ["T1531", "T1489"],
+          "attackTechniques": [
+            "T1531",
+            "T1489"
+          ],
           "comment": "Recupera accesos y servicio si el atacante provoco eliminacion de cuentas o parada del servicio."
         },
         {
           "action": "Validate restored data",
           "priority": 3,
-          "attackTechniques": ["T1530", "T1567"],
+          "attackTechniques": [
+            "T1530",
+            "T1567"
+          ],
           "comment": "Confirma integridad tras acceso o posible exfiltracion de datos cloud."
         }
       ]
@@ -161,10 +215,491 @@
         {
           "action": "Improve detections",
           "priority": 3,
-          "attackTechniques": ["T1078.004", "T1098", "T1528", "T1530"],
+          "attackTechniques": [
+            "T1078.004",
+            "T1098",
+            "T1528",
+            "T1530"
+          ],
           "comment": "Convierte cuentas, permisos, tokens y descargas anomales en nuevos casos de uso SIEM/cloud."
         }
       ]
+    }
+  ],
+  "version": "2.2",
+  "domain": "atc-react",
+  "filters": {
+    "stages": [
+      "preparation",
+      "identification",
+      "containment",
+      "eradication",
+      "recovery",
+      "lessons-learned"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ]
+  },
+  "sorting": 0,
+  "viewMode": 0,
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "RA1005",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Set up relevant data collection: Es necesario tener auditoria cloud antes del incidente para revisar cuentas validas, paneles cloud y acceso a almacenamiento. ATT&CK: T1078.004, T1538, T1530.\nAccess cloud audit logs: Access cloud audit logs. Equivalente RE&CT: Set up relevant data collection. Equivalente RE&CT: Set up relevant data collection.\nCollect logs: Permite revisar paneles cloud, cambios de permisos y abuso de tokens o aplicaciones. ATT&CK: T1538, T1098, T1528. Equivalente RE&CT: Set up relevant data collection.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Set up relevant data collection"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1078.004, T1538, T1530"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Access cloud audit logs"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Set up relevant data collection"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Collect logs"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1538, T1098, T1528"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1007",
+      "tactic": "preparation",
+      "score": 2,
+      "color": "#3182bd",
+      "comment": "Prepare cloud emergency contacts: Si el servicio se degrada o se pierden accesos, el contacto con proveedor cloud debe estar preparado. ATT&CK: T1489, T1531. Equivalente RE&CT: Develop communication map.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare cloud emergency contacts"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Develop communication map"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1489, T1531"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1010",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Restore permissions: Restore permissions. Equivalente RE&CT: Get access control matrix. Equivalente RE&CT: Get access control matrix.\nReview cloud permissions: Review cloud permissions. Equivalente RE&CT: Get access control matrix. Equivalente RE&CT: Get access control matrix.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore permissions"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Get access control matrix"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Review cloud permissions"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1011",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Maintain cloud asset inventory: Maintain cloud asset inventory. Equivalente RE&CT: Develop assets knowledge base. Equivalente RE&CT: Develop assets knowledge base.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Maintain cloud asset inventory"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Develop assets knowledge base"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1012",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Collect evidence: Collect evidence. Equivalente RE&CT: Check analysis toolset. Equivalente RE&CT: Check analysis toolset.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Collect evidence"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Check analysis toolset"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1014",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Update MISP event: Update MISP event. Equivalente RE&CT: Connect with trusted communities. Equivalente RE&CT: Connect with trusted communities.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Update MISP event"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Connect with trusted communities"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2001",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Scope incident: Scope incident. Equivalente RE&CT: List victims of security alert. Equivalente RE&CT: List victims of security alert.\nMonitor restored service: Monitor restored service. Equivalente RE&CT: List victims of security alert. Equivalente RE&CT: List victims of security alert.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Scope incident"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "List victims of security alert"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Monitor restored service"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2112",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Identify transferred data: Permite determinar si hubo acceso o exfiltracion de datos desde almacenamiento cloud. ATT&CK: T1530, T1567.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Identify transferred data"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1530, T1567"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2601",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "List users authenticated: Permite identificar cuentas cloud validas usadas por el atacante. ATT&CK: T1078.004.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List users authenticated"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1078.004"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3001",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Remove malicious changes: Elimina cambios maliciosos en usuarios, roles, grupos, reglas e integraciones. ATT&CK: T1098, T1538. Equivalente RE&CT: Patch vulnerability.\nPatch misconfiguration: Patch misconfiguration. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious changes"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Patch vulnerability"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1098, T1538"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Patch misconfiguration"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3101",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block external IP address: Block external IP address.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block external IP address"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3111",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Disable public sharing: Reduce exposicion o exfiltracion mediante almacenamiento y servicios web. ATT&CK: T1530, T1567. Equivalente RE&CT: Block data transferring by content pattern.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Disable public sharing"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Block data transferring by content pattern"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1530, T1567"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3501",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Pause cloud synchronization: Pause cloud synchronization. Equivalente RE&CT: Disable system service. Equivalente RE&CT: Disable system service.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Pause cloud synchronization"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Disable system service"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3601",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Lock user account: Corta uso de cuentas validas y cambios de permisos no autorizados. ATT&CK: T1078.004, T1098.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Lock user account"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1078.004, T1098"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4502",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Remove rogue application: Remove rogue application. Equivalente RE&CT: Remove service. Equivalente RE&CT: Remove service.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove rogue application"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Remove service"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4601",
+      "tactic": "eradication",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Revoke token: Contiene abuso de tokens, API keys o aplicaciones OAuth. ATT&CK: T1528. Equivalente RE&CT: Revoke authentication credentials.\nRotate secrets: Reduce reutilizacion de tokens, claves API y credenciales comprometidas. ATT&CK: T1528, T1078.004. Equivalente RE&CT: Revoke authentication credentials.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Revoke token"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Revoke authentication credentials"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1528"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Rotate secrets"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1528, T1078.004"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5002",
+      "tactic": "recovery",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Restore data from backup: Restore data from backup.\nRestore service: Recupera accesos y servicio si el atacante provoco eliminacion de cuentas o parada del servicio. ATT&CK: T1531, T1489. Equivalente RE&CT: Restore data from backup.\nValidate restored data: Confirma integridad tras acceso o posible exfiltracion de datos cloud. ATT&CK: T1530, T1567. Equivalente RE&CT: Restore data from backup.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Restore service"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1531, T1489"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Validate restored data"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1530, T1567"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5601",
+      "tactic": "recovery",
+      "score": 1,
+      "color": "#86308c",
+      "comment": "Unlock locked user account: Unlock locked user account.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Unlock locked user account"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6001",
+      "tactic": "lessons-learned",
+      "score": 1,
+      "color": "#482569",
+      "comment": "Develop incident report: Develop incident report.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Develop incident report"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6002",
+      "tactic": "lessons-learned",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Improve detections: Convierte cuentas, permisos, tokens y descargas anomales en nuevos casos de uso SIEM/cloud. ATT&CK: T1078.004, T1098, T1528, T1530. Equivalente RE&CT: Conduct lessons learned exercise.\nUpdate playbook: Update playbook. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Improve detections"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1078.004, T1098, T1528, T1530"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Update playbook"
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#9ecae1",
+      "#3182bd",
+      "#d73027"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "metadata": [
+    {
+      "name": "Empresa",
+      "value": "Nexo Lebrija"
+    },
+    {
+      "name": "Uso",
+      "value": "Capa RE&CT para evidenciar acciones de respuesta priorizadas por playbook"
+    },
+    {
+      "name": "Capa ATT&CK relacionada",
+      "value": "attack-cloud-services-layer.json"
+    },
+    {
+      "name": "Playbook",
+      "value": "playbook-cloud-services.md"
     }
   ]
 }

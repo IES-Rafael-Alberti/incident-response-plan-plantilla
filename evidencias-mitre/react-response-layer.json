@@ -75,5 +75,525 @@
         "Update playbook"
       ]
     }
+  ],
+  "version": "2.2",
+  "domain": "atc-react",
+  "filters": {
+    "stages": [
+      "preparation",
+      "identification",
+      "containment",
+      "eradication",
+      "recovery",
+      "lessons-learned"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ]
+  },
+  "sorting": 0,
+  "viewMode": 0,
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "RA1001",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Practice: Practice.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Practice"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1002",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Take trainings: Take trainings.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Take trainings"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1003",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Raise personnel awareness: Raise personnel awareness.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Raise personnel awareness"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1005",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Set up relevant data collection: Set up relevant data collection.\nCollect logs: Collect logs. Equivalente RE&CT: Set up relevant data collection. Equivalente RE&CT: Set up relevant data collection.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Set up relevant data collection"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Collect logs"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Set up relevant data collection"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1010",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Restore permissions: Restore permissions. Equivalente RE&CT: Get access control matrix. Equivalente RE&CT: Get access control matrix.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore permissions"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Get access control matrix"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1012",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Collect evidence: Collect evidence. Equivalente RE&CT: Check analysis toolset. Equivalente RE&CT: Check analysis toolset.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Collect evidence"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Check analysis toolset"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1107",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Access VPN logs: Access VPN logs.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Access VPN logs"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1205",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Get ability to delete email message: Get ability to delete email message.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Get ability to delete email message"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2001",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "List victims of security alert: List victims of security alert.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List victims of security alert"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2112",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Identify transferred data: Identify transferred data.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Identify transferred data"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2202",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Collect email message: Collect email message.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Collect email message"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2203",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "List email message receivers: List email message receivers.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List email message receivers"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2401",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "List processes executed: List processes executed.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List processes executed"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2601",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "List users authenticated: List users authenticated.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List users authenticated"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3001",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Remove malicious changes: Remove malicious changes. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.\nPatch vulnerability: Patch vulnerability.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious changes"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Patch vulnerability"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Patch vulnerability"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3101",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block external IP address: Block external IP address.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block external IP address"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3102",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block internal IP address: Block internal IP address.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block internal IP address"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3103",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block external domain: Block external domain.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block external domain"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3203",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Quarantine email message: Quarantine email message.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Quarantine email message"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3303",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Quarantine file by path: Quarantine file by path.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Quarantine file by path"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3403",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block process by executable hash: Block process by executable hash.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block process by executable hash"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3601",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Lock user account: Lock user account.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Lock user account"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4201",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Delete email message: Delete email message.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Delete email message"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4301",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Remove file: Remove file.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove file"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4602",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Remove user account: Remove user account.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove user account"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5001",
+      "tactic": "recovery",
+      "score": 1,
+      "color": "#86308c",
+      "comment": "Reinstall host from golden image: Reinstall host from golden image.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Reinstall host from golden image"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5002",
+      "tactic": "recovery",
+      "score": 1,
+      "color": "#86308c",
+      "comment": "Restore data from backup: Restore data from backup.\nRestore service: Restore service. Equivalente RE&CT: Restore data from backup. Equivalente RE&CT: Restore data from backup.\nValidate restored data: Validate restored data. Equivalente RE&CT: Restore data from backup. Equivalente RE&CT: Restore data from backup.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Restore service"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Validate restored data"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5601",
+      "tactic": "recovery",
+      "score": 1,
+      "color": "#86308c",
+      "comment": "Unlock locked user account: Unlock locked user account.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Unlock locked user account"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6001",
+      "tactic": "lessons-learned",
+      "score": 1,
+      "color": "#482569",
+      "comment": "Develop incident report: Develop incident report.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Develop incident report"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6002",
+      "tactic": "lessons-learned",
+      "score": 1,
+      "color": "#482569",
+      "comment": "Conduct lessons learned exercise: Conduct lessons learned exercise.\nImprove detections: Improve detections. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.\nUpdate playbook: Update playbook. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Improve detections"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Update playbook"
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#9ecae1",
+      "#3182bd",
+      "#d73027"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "metadata": [
+    {
+      "name": "Empresa",
+      "value": "Nexo Lebrija"
+    },
+    {
+      "name": "Uso",
+      "value": "Capa RE&CT para evidenciar acciones de respuesta priorizadas por playbook"
+    },
+    {
+      "name": "Capa ATT&CK relacionada",
+      "value": "N/A"
+    },
+    {
+      "name": "Playbook",
+      "value": "N/A"
+    }
   ]
 }

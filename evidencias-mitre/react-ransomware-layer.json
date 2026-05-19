@@ -4,11 +4,28 @@
   "related_attack_layer": "attack-ransomware-layer.json",
   "playbook": "playbook-ransomware.md",
   "description": "Acciones RE&CT priorizadas para ransomware, alineadas con las tecnicas ATT&CK T1566, T1190, T1078, T1059, T1204, T1021, T1021.002, T1486 y T1490.",
-  "risks": ["R01", "R02", "R06", "R08"],
-  "assets": ["CRM/ERP", "Servidores", "Copias de seguridad", "Puestos de trabajo", "Datos personales"],
+  "risks": [
+    "R01",
+    "R02",
+    "R06",
+    "R08"
+  ],
+  "assets": [
+    "CRM/ERP",
+    "Servidores",
+    "Copias de seguridad",
+    "Puestos de trabajo",
+    "Datos personales"
+  ],
   "legendItems": [
-    { "label": "Prioridad media", "color": "#fdbb84" },
-    { "label": "Critico para el playbook", "color": "#e34a33" }
+    {
+      "label": "Prioridad media",
+      "color": "#fdbb84"
+    },
+    {
+      "label": "Critico para el playbook",
+      "color": "#e34a33"
+    }
   ],
   "stages": [
     {
@@ -25,13 +42,19 @@
         {
           "action": "Prepare backup restore procedure",
           "priority": 3,
-          "attackTechniques": ["T1486", "T1490"],
+          "attackTechniques": [
+            "T1486",
+            "T1490"
+          ],
           "comment": "La recuperacion depende de copias limpias si hay cifrado o ataque a mecanismos de recuperacion."
         },
         {
           "action": "Prepare isolation procedure",
           "priority": 3,
-          "attackTechniques": ["T1021", "T1021.002"],
+          "attackTechniques": [
+            "T1021",
+            "T1021.002"
+          ],
           "comment": "Permite cortar movimiento lateral por servicios remotos y SMB."
         }
       ]
@@ -51,19 +74,30 @@
         {
           "action": "List processes executed",
           "priority": 3,
-          "attackTechniques": ["T1059", "T1204"],
+          "attackTechniques": [
+            "T1059",
+            "T1204"
+          ],
           "comment": "Identifica comandos, scripts, binarios y ejecuciones relacionadas con el ransomware."
         },
         {
           "action": "List victims of security alert",
           "priority": 3,
-          "attackTechniques": ["T1021", "T1021.002", "T1486"],
+          "attackTechniques": [
+            "T1021",
+            "T1021.002",
+            "T1486"
+          ],
           "comment": "Delimita equipos, servidores y comparticiones afectadas."
         },
         {
           "action": "Collect logs",
           "priority": 3,
-          "attackTechniques": ["T1566", "T1190", "T1078"],
+          "attackTechniques": [
+            "T1566",
+            "T1190",
+            "T1078"
+          ],
           "comment": "Ayuda a identificar vector inicial: phishing, servicio expuesto o credenciales validas."
         }
       ]
@@ -83,19 +117,27 @@
         {
           "action": "Isolate host",
           "priority": 3,
-          "attackTechniques": ["T1486", "T1059"],
+          "attackTechniques": [
+            "T1486",
+            "T1059"
+          ],
           "comment": "Corta cifrado activo y ejecucion maliciosa en hosts afectados."
         },
         {
           "action": "Disable remote service",
           "priority": 3,
-          "attackTechniques": ["T1021", "T1021.002"],
+          "attackTechniques": [
+            "T1021",
+            "T1021.002"
+          ],
           "comment": "Reduce movimiento lateral por RDP, SMB, VPN o servicios remotos."
         },
         {
           "action": "Protect backup repository",
           "priority": 3,
-          "attackTechniques": ["T1490"],
+          "attackTechniques": [
+            "T1490"
+          ],
           "comment": "Evita borrado, cifrado o sobrescritura de copias de seguridad."
         }
       ]
@@ -115,13 +157,17 @@
         {
           "action": "Patch vulnerability",
           "priority": 3,
-          "attackTechniques": ["T1190"],
+          "attackTechniques": [
+            "T1190"
+          ],
           "comment": "Elimina vulnerabilidad explotada en servicio publico o aplicacion expuesta."
         },
         {
           "action": "Reset credentials",
           "priority": 3,
-          "attackTechniques": ["T1078"],
+          "attackTechniques": [
+            "T1078"
+          ],
           "comment": "Evita reutilizacion de credenciales validas usadas para propagacion."
         }
       ]
@@ -140,13 +186,19 @@
         {
           "action": "Restore data from backup",
           "priority": 3,
-          "attackTechniques": ["T1486", "T1490"],
+          "attackTechniques": [
+            "T1486",
+            "T1490"
+          ],
           "comment": "Recupera datos cifrados desde copias limpias y verificadas."
         },
         {
           "action": "Monitor restored service",
           "priority": 3,
-          "attackTechniques": ["T1021", "T1059"],
+          "attackTechniques": [
+            "T1021",
+            "T1059"
+          ],
           "comment": "Busca reinfeccion, movimiento lateral o ejecucion posterior durante la recuperacion."
         }
       ]
@@ -166,10 +218,538 @@
         {
           "action": "Review backup resilience",
           "priority": 3,
-          "attackTechniques": ["T1490"],
+          "attackTechniques": [
+            "T1490"
+          ],
           "comment": "Refuerza inmutabilidad, pruebas de restauracion y proteccion de backups."
         }
       ]
+    }
+  ],
+  "version": "2.2",
+  "domain": "atc-react",
+  "filters": {
+    "stages": [
+      "preparation",
+      "identification",
+      "containment",
+      "eradication",
+      "recovery",
+      "lessons-learned"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ]
+  },
+  "sorting": 0,
+  "viewMode": 0,
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "RA1001",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Practice: Practice.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Practice"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1005",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Set up relevant data collection: Set up relevant data collection.\nCollect logs: Ayuda a identificar vector inicial: phishing, servicio expuesto o credenciales validas. ATT&CK: T1566, T1190, T1078. Equivalente RE&CT: Set up relevant data collection.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Set up relevant data collection"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Collect logs"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Set up relevant data collection"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1566, T1190, T1078"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1007",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Prepare emergency communications: Prepare emergency communications. Equivalente RE&CT: Develop communication map. Equivalente RE&CT: Develop communication map.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare emergency communications"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Develop communication map"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1008",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Prepare backup restore procedure: La recuperacion depende de copias limpias si hay cifrado o ataque a mecanismos de recuperacion. ATT&CK: T1486, T1490. Equivalente RE&CT: Make sure there are backups.\nProtect backup repository: Evita borrado, cifrado o sobrescritura de copias de seguridad. ATT&CK: T1490. Equivalente RE&CT: Make sure there are backups.\nReview backup resilience: Refuerza inmutabilidad, pruebas de restauracion y proteccion de backups. ATT&CK: T1490. Equivalente RE&CT: Make sure there are backups.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare backup restore procedure"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Make sure there are backups"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1486, T1490"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Protect backup repository"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1490"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Review backup resilience"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1012",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Collect evidence: Collect evidence. Equivalente RE&CT: Check analysis toolset. Equivalente RE&CT: Check analysis toolset.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Collect evidence"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Check analysis toolset"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1014",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Update MISP event: Update MISP event. Equivalente RE&CT: Connect with trusted communities. Equivalente RE&CT: Connect with trusted communities.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Update MISP event"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Connect with trusted communities"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1112",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Prepare isolation procedure: Permite cortar movimiento lateral por servicios remotos y SMB. ATT&CK: T1021, T1021.002. Equivalente RE&CT: Get ability to block internal IP address.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare isolation procedure"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Get ability to block internal IP address"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1021, T1021.002"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2001",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "List victims of security alert: Delimita equipos, servidores y comparticiones afectadas. ATT&CK: T1021, T1021.002, T1486.\nMonitor restored service: Busca reinfeccion, movimiento lateral o ejecucion posterior durante la recuperacion. ATT&CK: T1021, T1059. Equivalente RE&CT: List victims of security alert.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List victims of security alert"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1021, T1021.002, T1486"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Monitor restored service"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "List victims of security alert"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1021, T1059"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2310",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Identify encrypted data: Identify encrypted data. Equivalente RE&CT: Find file by content pattern. Equivalente RE&CT: Find file by content pattern.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Identify encrypted data"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Find file by content pattern"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2311",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Acquire forensic evidence: Acquire forensic evidence. Equivalente RE&CT: Collect file. Equivalente RE&CT: Collect file.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Acquire forensic evidence"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Collect file"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2401",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "List processes executed: Identifica comandos, scripts, binarios y ejecuciones relacionadas con el ransomware. ATT&CK: T1059, T1204.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List processes executed"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1059, T1204"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3001",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Patch vulnerability: Elimina vulnerabilidad explotada en servicio publico o aplicacion expuesta. ATT&CK: T1190.\nRemove malicious changes: Remove malicious changes. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Patch vulnerability"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1190"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious changes"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Patch vulnerability"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3102",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Isolate host: Corta cifrado activo y ejecucion maliciosa en hosts afectados. ATT&CK: T1486, T1059. Equivalente RE&CT: Block internal IP address.\nBlock internal IP address: Block internal IP address.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Isolate host"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Block internal IP address"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1486, T1059"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Block internal IP address"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3403",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block process by executable hash: Block process by executable hash.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block process by executable hash"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3501",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Disable remote service: Reduce movimiento lateral por RDP, SMB, VPN o servicios remotos. ATT&CK: T1021, T1021.002. Equivalente RE&CT: Disable system service.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Disable remote service"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Disable system service"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1021, T1021.002"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3601",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Lock user account: Lock user account.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Lock user account"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4301",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Remove file: Remove file.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove file"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4501",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Remove malicious persistence: Remove malicious persistence. Equivalente RE&CT: Remove registry key. Equivalente RE&CT: Remove registry key.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious persistence"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Remove registry key"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4601",
+      "tactic": "eradication",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Reset credentials: Evita reutilizacion de credenciales validas usadas para propagacion. ATT&CK: T1078. Equivalente RE&CT: Revoke authentication credentials.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Reset credentials"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Revoke authentication credentials"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1078"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5001",
+      "tactic": "recovery",
+      "score": 1,
+      "color": "#86308c",
+      "comment": "Reinstall host from golden image: Reinstall host from golden image.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Reinstall host from golden image"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5002",
+      "tactic": "recovery",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Restore data from backup: Recupera datos cifrados desde copias limpias y verificadas. ATT&CK: T1486, T1490.\nValidate restored data: Validate restored data. Equivalente RE&CT: Restore data from backup. Equivalente RE&CT: Restore data from backup.\nRestore service: Restore service. Equivalente RE&CT: Restore data from backup. Equivalente RE&CT: Restore data from backup.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1486, T1490"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Validate restored data"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Restore service"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6001",
+      "tactic": "lessons-learned",
+      "score": 1,
+      "color": "#482569",
+      "comment": "Develop incident report: Develop incident report.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Develop incident report"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6002",
+      "tactic": "lessons-learned",
+      "score": 1,
+      "color": "#482569",
+      "comment": "Conduct lessons learned exercise: Conduct lessons learned exercise.\nImprove detections: Improve detections. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.\nUpdate playbook: Update playbook. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Improve detections"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Update playbook"
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#9ecae1",
+      "#3182bd",
+      "#d73027"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "metadata": [
+    {
+      "name": "Empresa",
+      "value": "Nexo Lebrija"
+    },
+    {
+      "name": "Uso",
+      "value": "Capa RE&CT para evidenciar acciones de respuesta priorizadas por playbook"
+    },
+    {
+      "name": "Capa ATT&CK relacionada",
+      "value": "attack-ransomware-layer.json"
+    },
+    {
+      "name": "Playbook",
+      "value": "playbook-ransomware.md"
     }
   ]
 }

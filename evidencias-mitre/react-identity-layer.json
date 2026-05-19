@@ -4,11 +4,29 @@
   "related_attack_layer": "attack-identity-layer.json",
   "playbook": "playbook-identity-and-access.md",
   "description": "Acciones RE&CT priorizadas para compromiso de identidad y accesos, alineadas con las tecnicas ATT&CK T1078, T1110, T1098, T1136, T1548, T1087 y T1538.",
-  "risks": ["R01", "R03", "R05", "R08"],
-  "assets": ["Cuentas", "Correo", "VPN", "CRM/ERP", "Cloud", "Cuentas privilegiadas"],
+  "risks": [
+    "R01",
+    "R03",
+    "R05",
+    "R08"
+  ],
+  "assets": [
+    "Cuentas",
+    "Correo",
+    "VPN",
+    "CRM/ERP",
+    "Cloud",
+    "Cuentas privilegiadas"
+  ],
   "legendItems": [
-    { "label": "Prioridad media", "color": "#a1d99b" },
-    { "label": "Critico para el playbook", "color": "#31a354" }
+    {
+      "label": "Prioridad media",
+      "color": "#a1d99b"
+    },
+    {
+      "label": "Critico para el playbook",
+      "color": "#31a354"
+    }
   ],
   "stages": [
     {
@@ -25,13 +43,20 @@
         {
           "action": "Enable identity audit logs",
           "priority": 3,
-          "attackTechniques": ["T1078", "T1110", "T1087"],
+          "attackTechniques": [
+            "T1078",
+            "T1110",
+            "T1087"
+          ],
           "comment": "Permite observar cuentas validas, fuerza bruta y descubrimiento de usuarios."
         },
         {
           "action": "Prepare privileged account roster",
           "priority": 3,
-          "attackTechniques": ["T1548", "T1098"],
+          "attackTechniques": [
+            "T1548",
+            "T1098"
+          ],
           "comment": "Facilita revisar abuso de privilegios y cambios en permisos."
         }
       ]
@@ -50,13 +75,19 @@
         {
           "action": "List users authenticated",
           "priority": 3,
-          "attackTechniques": ["T1078", "T1110"],
+          "attackTechniques": [
+            "T1078",
+            "T1110"
+          ],
           "comment": "Identifica cuentas usadas, origenes de login, MFA y patrones de acceso."
         },
         {
           "action": "Scope incident",
           "priority": 3,
-          "attackTechniques": ["T1087", "T1538"],
+          "attackTechniques": [
+            "T1087",
+            "T1538"
+          ],
           "comment": "Determina que sistemas, cuentas, paneles cloud y permisos consulto el atacante."
         }
       ]
@@ -76,13 +107,19 @@
         {
           "action": "Lock user account",
           "priority": 3,
-          "attackTechniques": ["T1078", "T1110"],
+          "attackTechniques": [
+            "T1078",
+            "T1110"
+          ],
           "comment": "Corta uso de cuentas validas o comprometidas."
         },
         {
           "action": "Remove suspicious privileges",
           "priority": 3,
-          "attackTechniques": ["T1098", "T1548"],
+          "attackTechniques": [
+            "T1098",
+            "T1548"
+          ],
           "comment": "Contiene manipulacion de permisos o abuso de elevacion."
         }
       ]
@@ -101,13 +138,17 @@
         {
           "action": "Remove rogue account",
           "priority": 3,
-          "attackTechniques": ["T1136"],
+          "attackTechniques": [
+            "T1136"
+          ],
           "comment": "Elimina cuentas creadas por el atacante."
         },
         {
           "action": "Remove malicious persistence",
           "priority": 3,
-          "attackTechniques": ["T1098"],
+          "attackTechniques": [
+            "T1098"
+          ],
           "comment": "Elimina reglas, delegaciones, grupos, apps o permisos persistentes."
         }
       ]
@@ -126,7 +167,10 @@
         {
           "action": "Reopen access with least privilege",
           "priority": 3,
-          "attackTechniques": ["T1098", "T1548"],
+          "attackTechniques": [
+            "T1098",
+            "T1548"
+          ],
           "comment": "Devuelve acceso legitimo sin restaurar privilegios excesivos."
         }
       ]
@@ -145,10 +189,449 @@
         {
           "action": "Improve detections",
           "priority": 3,
-          "attackTechniques": ["T1078", "T1110", "T1098", "T1136"],
+          "attackTechniques": [
+            "T1078",
+            "T1110",
+            "T1098",
+            "T1136"
+          ],
           "comment": "Convierte patrones de acceso, fuerza bruta y cambios de cuentas en nuevas alertas."
         }
       ]
+    }
+  ],
+  "version": "2.2",
+  "domain": "atc-react",
+  "filters": {
+    "stages": [
+      "preparation",
+      "identification",
+      "containment",
+      "eradication",
+      "recovery",
+      "lessons-learned"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ]
+  },
+  "sorting": 0,
+  "viewMode": 0,
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "RA1005",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Set up relevant data collection: Set up relevant data collection.\nEnable identity audit logs: Permite observar cuentas validas, fuerza bruta y descubrimiento de usuarios. ATT&CK: T1078, T1110, T1087. Equivalente RE&CT: Set up relevant data collection.\nCollect logs: Collect logs. Equivalente RE&CT: Set up relevant data collection. Equivalente RE&CT: Set up relevant data collection.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Set up relevant data collection"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Enable identity audit logs"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Set up relevant data collection"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1078, T1110, T1087"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Collect logs"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1010",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Prepare privileged account roster: Facilita revisar abuso de privilegios y cambios en permisos. ATT&CK: T1548, T1098. Equivalente RE&CT: Get access control matrix.\nRemove suspicious privileges: Contiene manipulacion de permisos o abuso de elevacion. ATT&CK: T1098, T1548. Equivalente RE&CT: Get access control matrix.\nRestore permissions: Restore permissions. Equivalente RE&CT: Get access control matrix. Equivalente RE&CT: Get access control matrix.\nReopen access with least privilege: Devuelve acceso legitimo sin restaurar privilegios excesivos. ATT&CK: T1098, T1548. Equivalente RE&CT: Get access control matrix.\nReview privileged access: Review privileged access. Equivalente RE&CT: Get access control matrix. Equivalente RE&CT: Get access control matrix.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare privileged account roster"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Get access control matrix"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1548, T1098"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Remove suspicious privileges"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1098, T1548"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Restore permissions"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Reopen access with least privilege"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Review privileged access"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1012",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Collect evidence: Collect evidence. Equivalente RE&CT: Check analysis toolset. Equivalente RE&CT: Check analysis toolset.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Collect evidence"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Check analysis toolset"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1601",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Prepare password reset procedure: Prepare password reset procedure. Equivalente RE&CT: Manage identity management system. Equivalente RE&CT: Manage identity management system.\nEnforce MFA: Enforce MFA. Equivalente RE&CT: Manage identity management system. Equivalente RE&CT: Manage identity management system.\nReview MFA coverage: Review MFA coverage. Equivalente RE&CT: Manage identity management system. Equivalente RE&CT: Manage identity management system.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare password reset procedure"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Manage identity management system"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Enforce MFA"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Review MFA coverage"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2001",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Scope incident: Determina que sistemas, cuentas, paneles cloud y permisos consulto el atacante. ATT&CK: T1087, T1538. Equivalente RE&CT: List victims of security alert.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Scope incident"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "List victims of security alert"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1087, T1538"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2003",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Put compromised accounts on monitoring: Put compromised accounts on monitoring.\nMonitor restored account: Monitor restored account. Equivalente RE&CT: Put compromised accounts on monitoring. Equivalente RE&CT: Put compromised accounts on monitoring.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Put compromised accounts on monitoring"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Monitor restored account"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Put compromised accounts on monitoring"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2601",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "List users authenticated: Identifica cuentas usadas, origenes de login, MFA y patrones de acceso. ATT&CK: T1078, T1110.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List users authenticated"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1078, T1110"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3001",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Patch misconfiguration: Patch misconfiguration. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.\nRemove malicious changes: Remove malicious changes. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Patch misconfiguration"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Patch vulnerability"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious changes"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3101",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block external IP address: Block external IP address.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block external IP address"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3601",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Lock user account: Corta uso de cuentas validas o comprometidas. ATT&CK: T1078, T1110.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Lock user account"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1078, T1110"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4501",
+      "tactic": "eradication",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Remove malicious persistence: Elimina reglas, delegaciones, grupos, apps o permisos persistentes. ATT&CK: T1098. Equivalente RE&CT: Remove registry key.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious persistence"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Remove registry key"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1098"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4601",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Reset credentials: Reset credentials. Equivalente RE&CT: Revoke authentication credentials. Equivalente RE&CT: Revoke authentication credentials.\nRevoke token: Revoke token. Equivalente RE&CT: Revoke authentication credentials. Equivalente RE&CT: Revoke authentication credentials.\nRemove active sessions: Remove active sessions. Equivalente RE&CT: Revoke authentication credentials. Equivalente RE&CT: Revoke authentication credentials.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Reset credentials"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Revoke authentication credentials"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Revoke token"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Remove active sessions"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4602",
+      "tactic": "eradication",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Remove rogue account: Elimina cuentas creadas por el atacante. ATT&CK: T1136. Equivalente RE&CT: Remove user account.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove rogue account"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Remove user account"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1136"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5002",
+      "tactic": "recovery",
+      "score": 1,
+      "color": "#86308c",
+      "comment": "Restore service: Restore service. Equivalente RE&CT: Restore data from backup. Equivalente RE&CT: Restore data from backup.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore service"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Restore data from backup"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5601",
+      "tactic": "recovery",
+      "score": 1,
+      "color": "#86308c",
+      "comment": "Unlock locked user account: Unlock locked user account.\nValidate restored access: Validate restored access. Equivalente RE&CT: Unlock locked user account. Equivalente RE&CT: Unlock locked user account.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Unlock locked user account"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Validate restored access"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Unlock locked user account"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6001",
+      "tactic": "lessons-learned",
+      "score": 1,
+      "color": "#482569",
+      "comment": "Develop incident report: Develop incident report.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Develop incident report"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6002",
+      "tactic": "lessons-learned",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Improve detections: Convierte patrones de acceso, fuerza bruta y cambios de cuentas en nuevas alertas. ATT&CK: T1078, T1110, T1098, T1136. Equivalente RE&CT: Conduct lessons learned exercise.\nUpdate playbook: Update playbook. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Improve detections"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1078, T1110, T1098, T1136"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Update playbook"
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#9ecae1",
+      "#3182bd",
+      "#d73027"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "metadata": [
+    {
+      "name": "Empresa",
+      "value": "Nexo Lebrija"
+    },
+    {
+      "name": "Uso",
+      "value": "Capa RE&CT para evidenciar acciones de respuesta priorizadas por playbook"
+    },
+    {
+      "name": "Capa ATT&CK relacionada",
+      "value": "attack-identity-layer.json"
+    },
+    {
+      "name": "Playbook",
+      "value": "playbook-identity-and-access.md"
     }
   ]
 }

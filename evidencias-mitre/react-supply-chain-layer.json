@@ -4,11 +4,29 @@
   "related_attack_layer": "attack-supply-chain-layer.json",
   "playbook": "playbook-supply-chain.md",
   "description": "Acciones RE&CT priorizadas para compromiso de cadena de suministro, alineadas con las tecnicas ATT&CK T1195, T1199, T1078, T1098, T1505, T1554, T1489 y T1531.",
-  "risks": ["R11", "R04", "R03", "R01"],
-  "assets": ["Proveedores", "Integraciones", "Servicios gestionados", "Web/tienda", "Cloud", "Datos personales"],
+  "risks": [
+    "R11",
+    "R04",
+    "R03",
+    "R01"
+  ],
+  "assets": [
+    "Proveedores",
+    "Integraciones",
+    "Servicios gestionados",
+    "Web/tienda",
+    "Cloud",
+    "Datos personales"
+  ],
   "legendItems": [
-    { "label": "Prioridad media", "color": "#bdbdbd" },
-    { "label": "Critico para el playbook", "color": "#636363" }
+    {
+      "label": "Prioridad media",
+      "color": "#bdbdbd"
+    },
+    {
+      "label": "Critico para el playbook",
+      "color": "#636363"
+    }
   ],
   "stages": [
     {
@@ -25,13 +43,19 @@
         {
           "action": "Maintain supplier inventory",
           "priority": 3,
-          "attackTechniques": ["T1195", "T1199"],
+          "attackTechniques": [
+            "T1195",
+            "T1199"
+          ],
           "comment": "Permite identificar proveedores, software, integraciones y relaciones de confianza afectadas."
         },
         {
           "action": "Prepare alternate service",
           "priority": 2,
-          "attackTechniques": ["T1489", "T1531"],
+          "attackTechniques": [
+            "T1489",
+            "T1531"
+          ],
           "comment": "Permite continuidad si el proveedor causa parada de servicio o bloqueo de acceso."
         }
       ]
@@ -51,13 +75,20 @@
         {
           "action": "Contact external company",
           "priority": 3,
-          "attackTechniques": ["T1195", "T1199"],
+          "attackTechniques": [
+            "T1195",
+            "T1199"
+          ],
           "comment": "Solicita al proveedor linea temporal, alcance, IOCs, medidas y evidencias."
         },
         {
           "action": "List affected integrations",
           "priority": 3,
-          "attackTechniques": ["T1078", "T1098", "T1554"],
+          "attackTechniques": [
+            "T1078",
+            "T1098",
+            "T1554"
+          ],
           "comment": "Identifica cuentas, integraciones, actualizaciones, binarios y permisos del proveedor."
         }
       ]
@@ -77,13 +108,20 @@
         {
           "action": "Disable integration",
           "priority": 3,
-          "attackTechniques": ["T1199", "T1078", "T1098"],
+          "attackTechniques": [
+            "T1199",
+            "T1078",
+            "T1098"
+          ],
           "comment": "Corta accesos de proveedor, cuentas validas e integraciones comprometidas."
         },
         {
           "action": "Freeze supplier update",
           "priority": 3,
-          "attackTechniques": ["T1195", "T1554"],
+          "attackTechniques": [
+            "T1195",
+            "T1554"
+          ],
           "comment": "Detiene despliegue de software, binarios o actualizaciones sospechosas."
         }
       ]
@@ -103,13 +141,19 @@
         {
           "action": "Reinstall trusted component",
           "priority": 3,
-          "attackTechniques": ["T1505", "T1554"],
+          "attackTechniques": [
+            "T1505",
+            "T1554"
+          ],
           "comment": "Sustituye agentes, binarios, componentes o actualizaciones comprometidas por versiones verificadas."
         },
         {
           "action": "Rotate secrets",
           "priority": 3,
-          "attackTechniques": ["T1078", "T1098"],
+          "attackTechniques": [
+            "T1078",
+            "T1098"
+          ],
           "comment": "Evita reutilizacion de cuentas, claves API o certificados del proveedor."
         }
       ]
@@ -128,13 +172,19 @@
         {
           "action": "Switch to alternate service",
           "priority": 2,
-          "attackTechniques": ["T1489", "T1531"],
+          "attackTechniques": [
+            "T1489",
+            "T1531"
+          ],
           "comment": "Mantiene continuidad si el proveedor afectado no puede restablecer servicio o acceso seguro."
         },
         {
           "action": "Reopen supplier access gradually",
           "priority": 3,
-          "attackTechniques": ["T1199", "T1098"],
+          "attackTechniques": [
+            "T1199",
+            "T1098"
+          ],
           "comment": "Restablece la relacion de confianza solo tras evidencias de contencion y minimo privilegio."
         }
       ]
@@ -154,10 +204,537 @@
         {
           "action": "Review supplier contract",
           "priority": 3,
-          "attackTechniques": ["T1195", "T1199"],
+          "attackTechniques": [
+            "T1195",
+            "T1199"
+          ],
           "comment": "Refuerza SLA, obligaciones de notificacion, evidencias y controles de seguridad del proveedor."
         }
       ]
+    }
+  ],
+  "version": "2.2",
+  "domain": "atc-react",
+  "filters": {
+    "stages": [
+      "preparation",
+      "identification",
+      "containment",
+      "eradication",
+      "recovery",
+      "lessons-learned"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ]
+  },
+  "sorting": 0,
+  "viewMode": 0,
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "RA1005",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Set up relevant data collection: Set up relevant data collection.\nCollect logs: Collect logs. Equivalente RE&CT: Set up relevant data collection. Equivalente RE&CT: Set up relevant data collection.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Set up relevant data collection"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Collect logs"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Set up relevant data collection"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1007",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Prepare third-party contact list: Prepare third-party contact list. Equivalente RE&CT: Develop communication map. Equivalente RE&CT: Develop communication map.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare third-party contact list"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Develop communication map"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1008",
+      "tactic": "preparation",
+      "score": 2,
+      "color": "#3182bd",
+      "comment": "Prepare alternate service: Permite continuidad si el proveedor causa parada de servicio o bloqueo de acceso. ATT&CK: T1489, T1531. Equivalente RE&CT: Make sure there are backups.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare alternate service"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Make sure there are backups"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1489, T1531"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1010",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Restore permissions: Restore permissions. Equivalente RE&CT: Get access control matrix. Equivalente RE&CT: Get access control matrix.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore permissions"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Get access control matrix"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1011",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Maintain supplier inventory: Permite identificar proveedores, software, integraciones y relaciones de confianza afectadas. ATT&CK: T1195, T1199. Equivalente RE&CT: Develop assets knowledge base.\nList affected integrations: Identifica cuentas, integraciones, actualizaciones, binarios y permisos del proveedor. ATT&CK: T1078, T1098, T1554. Equivalente RE&CT: Develop assets knowledge base.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Maintain supplier inventory"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Develop assets knowledge base"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1195, T1199"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "List affected integrations"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1078, T1098, T1554"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1012",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Prepare contract evidence: Prepare contract evidence. Equivalente RE&CT: Check analysis toolset. Equivalente RE&CT: Check analysis toolset.\nCollect evidence: Collect evidence. Equivalente RE&CT: Check analysis toolset. Equivalente RE&CT: Check analysis toolset.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare contract evidence"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Check analysis toolset"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Collect evidence"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1014",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Update MISP event: Update MISP event. Equivalente RE&CT: Connect with trusted communities. Equivalente RE&CT: Connect with trusted communities.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Update MISP event"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Connect with trusted communities"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2001",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Scope incident: Scope incident. Equivalente RE&CT: List victims of security alert. Equivalente RE&CT: List victims of security alert.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Scope incident"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "List victims of security alert"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2112",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Identify transferred data: Identify transferred data.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Identify transferred data"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3001",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Remove malicious changes: Remove malicious changes. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.\nPatch vulnerability: Patch vulnerability.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious changes"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Patch vulnerability"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Patch vulnerability"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3101",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block external IP address: Block external IP address.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block external IP address"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3109",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Segment supplier access: Segment supplier access. Equivalente RE&CT: Block user external communication. Equivalente RE&CT: Block user external communication.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Segment supplier access"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Block user external communication"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3501",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Disable integration: Corta accesos de proveedor, cuentas validas e integraciones comprometidas. ATT&CK: T1199, T1078, T1098. Equivalente RE&CT: Disable system service.\nFreeze supplier update: Detiene despliegue de software, binarios o actualizaciones sospechosas. ATT&CK: T1195, T1554. Equivalente RE&CT: Disable system service.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Disable integration"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Disable system service"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1199, T1078, T1098"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Freeze supplier update"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1195, T1554"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3601",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Lock user account: Lock user account.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Lock user account"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4001",
+      "tactic": "eradication",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Contact external company: Solicita al proveedor linea temporal, alcance, IOCs, medidas y evidencias. ATT&CK: T1195, T1199. Equivalente RE&CT: Report incident to external companies.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Contact external company"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Report incident to external companies"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1195, T1199"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4301",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Remove malicious file: Remove malicious file. Equivalente RE&CT: Remove file. Equivalente RE&CT: Remove file.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious file"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Remove file"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4601",
+      "tactic": "eradication",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Revoke token: Revoke token. Equivalente RE&CT: Revoke authentication credentials. Equivalente RE&CT: Revoke authentication credentials.\nRotate secrets: Evita reutilizacion de cuentas, claves API o certificados del proveedor. ATT&CK: T1078, T1098. Equivalente RE&CT: Revoke authentication credentials.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Revoke token"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Revoke authentication credentials"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Rotate secrets"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1078, T1098"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5001",
+      "tactic": "recovery",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Reinstall trusted component: Sustituye agentes, binarios, componentes o actualizaciones comprometidas por versiones verificadas. ATT&CK: T1505, T1554. Equivalente RE&CT: Reinstall host from golden image.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Reinstall trusted component"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Reinstall host from golden image"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1505, T1554"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5002",
+      "tactic": "recovery",
+      "score": 2,
+      "color": "#3182bd",
+      "comment": "Restore service: Restore service. Equivalente RE&CT: Restore data from backup. Equivalente RE&CT: Restore data from backup.\nSwitch to alternate service: Mantiene continuidad si el proveedor afectado no puede restablecer servicio o acceso seguro. ATT&CK: T1489, T1531. Equivalente RE&CT: Restore data from backup.\nRestore data from backup: Restore data from backup.\nValidate restored data: Validate restored data. Equivalente RE&CT: Restore data from backup. Equivalente RE&CT: Restore data from backup.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore service"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Switch to alternate service"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1489, T1531"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Restore data from backup"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Validate restored data"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5105",
+      "tactic": "recovery",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Reopen supplier access gradually: Restablece la relacion de confianza solo tras evidencias de contencion y minimo privilegio. ATT&CK: T1199, T1098. Equivalente RE&CT: Unblock blocked user.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Reopen supplier access gradually"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Unblock blocked user"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1199, T1098"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6001",
+      "tactic": "lessons-learned",
+      "score": 1,
+      "color": "#482569",
+      "comment": "Develop incident report: Develop incident report.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Develop incident report"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6002",
+      "tactic": "lessons-learned",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Conduct lessons learned exercise: Conduct lessons learned exercise.\nImprove detections: Improve detections. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.\nUpdate playbook: Update playbook. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.\nReview supplier contract: Refuerza SLA, obligaciones de notificacion, evidencias y controles de seguridad del proveedor. ATT&CK: T1195, T1199. Equivalente RE&CT: Conduct lessons learned exercise.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Improve detections"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Update playbook"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Review supplier contract"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1195, T1199"
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#9ecae1",
+      "#3182bd",
+      "#d73027"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "metadata": [
+    {
+      "name": "Empresa",
+      "value": "Nexo Lebrija"
+    },
+    {
+      "name": "Uso",
+      "value": "Capa RE&CT para evidenciar acciones de respuesta priorizadas por playbook"
+    },
+    {
+      "name": "Capa ATT&CK relacionada",
+      "value": "attack-supply-chain-layer.json"
+    },
+    {
+      "name": "Playbook",
+      "value": "playbook-supply-chain.md"
     }
   ]
 }

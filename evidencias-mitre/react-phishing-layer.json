@@ -4,11 +4,27 @@
   "related_attack_layer": "attack-phishing-layer.json",
   "playbook": "playbook-phishing.md",
   "description": "Acciones RE&CT priorizadas para phishing y correo malicioso, alineadas con las tecnicas ATT&CK T1566.001, T1566.002, T1204, T1059, T1056, T1555.003, T1114 y T1041.",
-  "risks": ["R03", "R05", "R08"],
-  "assets": ["Correo corporativo", "Credenciales", "Puestos de trabajo", "Datos personales", "Buzones"],
+  "risks": [
+    "R03",
+    "R05",
+    "R08"
+  ],
+  "assets": [
+    "Correo corporativo",
+    "Credenciales",
+    "Puestos de trabajo",
+    "Datos personales",
+    "Buzones"
+  ],
   "legendItems": [
-    { "label": "Prioridad media", "color": "#9ecae1" },
-    { "label": "Critico para el playbook", "color": "#3182bd" }
+    {
+      "label": "Prioridad media",
+      "color": "#9ecae1"
+    },
+    {
+      "label": "Critico para el playbook",
+      "color": "#3182bd"
+    }
   ],
   "stages": [
     {
@@ -25,13 +41,19 @@
         {
           "action": "Get ability to delete email message",
           "priority": 3,
-          "attackTechniques": ["T1566.001", "T1566.002"],
+          "attackTechniques": [
+            "T1566.001",
+            "T1566.002"
+          ],
           "comment": "Permite purgar mensajes maliciosos de buzones cuando se confirma phishing."
         },
         {
           "action": "Prepare credential reset procedure",
           "priority": 3,
-          "attackTechniques": ["T1056", "T1555.003"],
+          "attackTechniques": [
+            "T1056",
+            "T1555.003"
+          ],
           "comment": "Permite reaccionar rapido si el phishing roba credenciales o tokens."
         }
       ]
@@ -51,19 +73,29 @@
         {
           "action": "Collect email message",
           "priority": 3,
-          "attackTechniques": ["T1566.001", "T1566.002"],
+          "attackTechniques": [
+            "T1566.001",
+            "T1566.002"
+          ],
           "comment": "Recoge mensaje, cabeceras, adjuntos, URLs y remitente para confirmar el vector."
         },
         {
           "action": "List email message receivers",
           "priority": 3,
-          "attackTechniques": ["T1566.001", "T1566.002"],
+          "attackTechniques": [
+            "T1566.001",
+            "T1566.002"
+          ],
           "comment": "Permite saber quien recibio el correo y quien pudo interactuar."
         },
         {
           "action": "Collect logs",
           "priority": 3,
-          "attackTechniques": ["T1204", "T1059", "T1114"],
+          "attackTechniques": [
+            "T1204",
+            "T1059",
+            "T1114"
+          ],
           "comment": "Correlaciona clics, ejecuciones, reglas de buzon, accesos y actividad posterior."
         }
       ]
@@ -83,19 +115,29 @@
         {
           "action": "Quarantine email message",
           "priority": 3,
-          "attackTechniques": ["T1566.001", "T1566.002"],
+          "attackTechniques": [
+            "T1566.001",
+            "T1566.002"
+          ],
           "comment": "Evita que mas usuarios interactuen con el correo malicioso."
         },
         {
           "action": "Lock user account",
           "priority": 3,
-          "attackTechniques": ["T1056", "T1555.003", "T1114"],
+          "attackTechniques": [
+            "T1056",
+            "T1555.003",
+            "T1114"
+          ],
           "comment": "Contiene cuentas con credenciales introducidas, robadas o usadas para acceder al buzon."
         },
         {
           "action": "Isolate host",
           "priority": 2,
-          "attackTechniques": ["T1204", "T1059"],
+          "attackTechniques": [
+            "T1204",
+            "T1059"
+          ],
           "comment": "Contiene endpoints donde se ejecuto adjunto, macro, script o comando."
         }
       ]
@@ -114,13 +156,18 @@
         {
           "action": "Delete email message",
           "priority": 3,
-          "attackTechniques": ["T1566.001", "T1566.002"],
+          "attackTechniques": [
+            "T1566.001",
+            "T1566.002"
+          ],
           "comment": "Elimina mensajes confirmados como maliciosos de los buzones."
         },
         {
           "action": "Remove mailbox rule",
           "priority": 3,
-          "attackTechniques": ["T1114"],
+          "attackTechniques": [
+            "T1114"
+          ],
           "comment": "Elimina reglas de reenvio o persistencia en buzon tras compromiso."
         }
       ]
@@ -139,7 +186,10 @@
         {
           "action": "Monitor restored account",
           "priority": 3,
-          "attackTechniques": ["T1114", "T1041"],
+          "attackTechniques": [
+            "T1114",
+            "T1041"
+          ],
           "comment": "Vigila actividad posterior en buzon y posibles salidas de informacion."
         }
       ]
@@ -159,10 +209,563 @@
         {
           "action": "Improve detections",
           "priority": 3,
-          "attackTechniques": ["T1566.001", "T1566.002", "T1204", "T1114"],
+          "attackTechniques": [
+            "T1566.001",
+            "T1566.002",
+            "T1204",
+            "T1114"
+          ],
           "comment": "Convierte remitentes, asuntos, URLs, hashes y patrones de buzon en nuevas detecciones."
         }
       ]
+    }
+  ],
+  "version": "2.2",
+  "domain": "atc-react",
+  "filters": {
+    "stages": [
+      "preparation",
+      "identification",
+      "containment",
+      "eradication",
+      "recovery",
+      "lessons-learned"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ]
+  },
+  "sorting": 0,
+  "viewMode": 0,
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "RA1003",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Raise personnel awareness: Raise personnel awareness.\nRun phishing awareness reinforcement: Run phishing awareness reinforcement. Equivalente RE&CT: Raise personnel awareness. Equivalente RE&CT: Raise personnel awareness.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Raise personnel awareness"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Run phishing awareness reinforcement"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Raise personnel awareness"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1005",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Set up relevant data collection: Set up relevant data collection.\nCollect logs: Correlaciona clics, ejecuciones, reglas de buzon, accesos y actividad posterior. ATT&CK: T1204, T1059, T1114. Equivalente RE&CT: Set up relevant data collection.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Set up relevant data collection"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Collect logs"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Set up relevant data collection"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1204, T1059, T1114"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1007",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Notify affected users: Notify affected users. Equivalente RE&CT: Develop communication map. Equivalente RE&CT: Develop communication map.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Notify affected users"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Develop communication map"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1012",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Collect evidence: Collect evidence. Equivalente RE&CT: Check analysis toolset. Equivalente RE&CT: Check analysis toolset.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Collect evidence"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Check analysis toolset"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1014",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Update MISP event: Update MISP event. Equivalente RE&CT: Connect with trusted communities. Equivalente RE&CT: Connect with trusted communities.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Update MISP event"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Connect with trusted communities"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1205",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Get ability to delete email message: Permite purgar mensajes maliciosos de buzones cuando se confirma phishing. ATT&CK: T1566.001, T1566.002.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Get ability to delete email message"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1566.001, T1566.002"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1206",
+      "tactic": "preparation",
+      "score": 1,
+      "color": "#ffd300",
+      "comment": "Prepare email quarantine procedure: Prepare email quarantine procedure. Equivalente RE&CT: Get ability to quarantine email message. Equivalente RE&CT: Get ability to quarantine email message.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare email quarantine procedure"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Get ability to quarantine email message"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA1601",
+      "tactic": "preparation",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Prepare credential reset procedure: Permite reaccionar rapido si el phishing roba credenciales o tokens. ATT&CK: T1056, T1555.003. Equivalente RE&CT: Manage identity management system.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Prepare credential reset procedure"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Manage identity management system"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1056, T1555.003"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2001",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "List victims of security alert: List victims of security alert.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List victims of security alert"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2003",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Monitor restored account: Vigila actividad posterior en buzon y posibles salidas de informacion. ATT&CK: T1114, T1041. Equivalente RE&CT: Put compromised accounts on monitoring.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Monitor restored account"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Put compromised accounts on monitoring"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1114, T1041"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2112",
+      "tactic": "identification",
+      "score": 1,
+      "color": "#01c26d",
+      "comment": "Identify transferred data: Identify transferred data.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Identify transferred data"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2202",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Collect email message: Recoge mensaje, cabeceras, adjuntos, URLs y remitente para confirmar el vector. ATT&CK: T1566.001, T1566.002.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Collect email message"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1566.001, T1566.002"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA2203",
+      "tactic": "identification",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "List email message receivers: Permite saber quien recibio el correo y quien pudo interactuar. ATT&CK: T1566.001, T1566.002.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "List email message receivers"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1566.001, T1566.002"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3001",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Remove malicious changes: Remove malicious changes. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.\nPatch misconfiguration: Patch misconfiguration. Equivalente RE&CT: Patch vulnerability. Equivalente RE&CT: Patch vulnerability.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove malicious changes"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Patch vulnerability"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Patch misconfiguration"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3101",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block external IP address: Block external IP address.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block external IP address"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3102",
+      "tactic": "containment",
+      "score": 2,
+      "color": "#3182bd",
+      "comment": "Isolate host: Contiene endpoints donde se ejecuto adjunto, macro, script o comando. ATT&CK: T1204, T1059. Equivalente RE&CT: Block internal IP address.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Isolate host"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Block internal IP address"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1204, T1059"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3103",
+      "tactic": "containment",
+      "score": 1,
+      "color": "#007b84",
+      "comment": "Block external domain: Block external domain.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Block external domain"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3203",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Quarantine email message: Evita que mas usuarios interactuen con el correo malicioso. ATT&CK: T1566.001, T1566.002.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Quarantine email message"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1566.001, T1566.002"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA3601",
+      "tactic": "containment",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Lock user account: Contiene cuentas con credenciales introducidas, robadas o usadas para acceder al buzon. ATT&CK: T1056, T1555.003, T1114.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Lock user account"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1056, T1555.003, T1114"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4201",
+      "tactic": "eradication",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Delete email message: Elimina mensajes confirmados como maliciosos de los buzones. ATT&CK: T1566.001, T1566.002.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Delete email message"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1566.001, T1566.002"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4301",
+      "tactic": "eradication",
+      "score": 1,
+      "color": "#075190",
+      "comment": "Remove file: Remove file.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Remove file"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA4601",
+      "tactic": "eradication",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Reset credentials: Reset credentials. Equivalente RE&CT: Revoke authentication credentials. Equivalente RE&CT: Revoke authentication credentials.\nRemove mailbox rule: Elimina reglas de reenvio o persistencia en buzon tras compromiso. ATT&CK: T1114. Equivalente RE&CT: Revoke authentication credentials.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Reset credentials"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Revoke authentication credentials"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Remove mailbox rule"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1114"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5002",
+      "tactic": "recovery",
+      "score": 1,
+      "color": "#86308c",
+      "comment": "Restore service: Restore service. Equivalente RE&CT: Restore data from backup. Equivalente RE&CT: Restore data from backup.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Restore service"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Restore data from backup"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA5601",
+      "tactic": "recovery",
+      "score": 1,
+      "color": "#86308c",
+      "comment": "Unlock locked user account: Unlock locked user account.\nValidate restored access: Validate restored access. Equivalente RE&CT: Unlock locked user account. Equivalente RE&CT: Unlock locked user account.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Unlock locked user account"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Validate restored access"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Unlock locked user account"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6001",
+      "tactic": "lessons-learned",
+      "score": 1,
+      "color": "#482569",
+      "comment": "Develop incident report: Develop incident report.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Develop incident report"
+        }
+      ]
+    },
+    {
+      "techniqueID": "RA6002",
+      "tactic": "lessons-learned",
+      "score": 3,
+      "color": "#d73027",
+      "comment": "Conduct lessons learned exercise: Conduct lessons learned exercise.\nImprove detections: Convierte remitentes, asuntos, URLs, hashes y patrones de buzon en nuevas detecciones. ATT&CK: T1566.001, T1566.002, T1204, T1114. Equivalente RE&CT: Conduct lessons learned exercise.\nUpdate playbook: Update playbook. Equivalente RE&CT: Conduct lessons learned exercise. Equivalente RE&CT: Conduct lessons learned exercise.",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Accion del playbook",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Improve detections"
+        },
+        {
+          "name": "Accion RE&CT equivalente",
+          "value": "Conduct lessons learned exercise"
+        },
+        {
+          "name": "MITRE ATT&CK",
+          "value": "T1566.001, T1566.002, T1204, T1114"
+        },
+        {
+          "name": "Accion del playbook",
+          "value": "Update playbook"
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#9ecae1",
+      "#3182bd",
+      "#d73027"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "showTacticRowBackground": false,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "metadata": [
+    {
+      "name": "Empresa",
+      "value": "Nexo Lebrija"
+    },
+    {
+      "name": "Uso",
+      "value": "Capa RE&CT para evidenciar acciones de respuesta priorizadas por playbook"
+    },
+    {
+      "name": "Capa ATT&CK relacionada",
+      "value": "attack-phishing-layer.json"
+    },
+    {
+      "name": "Playbook",
+      "value": "playbook-phishing.md"
     }
   ]
 }
