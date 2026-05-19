@@ -17,20 +17,6 @@ Se activará ante cualquiera de estas señales:
 3. Accesos desde IP, ubicaciones o dispositivos inusuales;
 4. Sospecha de robo de credenciales por phishing, malware o proveedor externo.
 
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar la alerta o el aviso del usuario. |
-| 2 | Validar la identidad del afectado por un canal alternativo. |
-| 3 | Clasificar la severidad inicial. |
-| 4 | Bloquear o limitar la cuenta si existe acceso confirmado. |
-| 5 | Cerrar sesiones, revocar tokens y preservar evidencias. |
-| 6 | Revisar si hay más cuentas o servicios relacionados afectados. |
-| 7 | Escalar a Seguridad, Dirección o Legal si la cuenta es crítica o hay datos sensibles implicados. |
-
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
@@ -162,6 +148,22 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
     * Reconocimiento de alertas de acceso y MFA.
 7. Formalizar procedimientos de alta, baja y cambio de rol para evitar cuentas huérfanas o privilegios innecesarios.
 8. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
+
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar la alerta o el aviso del usuario. |
+| 2 | Validar la identidad del afectado por un canal alternativo. |
+| 3 | Clasificar la severidad inicial. |
+| 4 | Bloquear o limitar la cuenta si existe acceso confirmado. |
+| 5 | Cerrar sesiones, revocar tokens y preservar evidencias. |
+| 6 | Revisar si hay más cuentas o servicios relacionados afectados. |
+| 7 | Escalar a Seguridad, Dirección o Legal si la cuenta es crítica o hay datos sensibles implicados. |
 
 ### Recursos
 

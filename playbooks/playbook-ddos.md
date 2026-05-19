@@ -17,20 +17,6 @@ Se activará ante cualquiera de estas señales:
 3. Alertas del proveedor de hosting, CDN, firewall o herramientas de monitorización sobre saturación o abuso;
 4. Amenaza de extorsión acompañada de indisponibilidad o picos de tráfico.
 
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar que la incidencia es de disponibilidad y no un fallo local. |
-| 2 | Clasificar la severidad según alcance e indisponibilidad. |
-| 3 | Escalar a TIC, Seguridad y proveedor externo. |
-| 4 | Activar la mitigación disponible y las reglas temporales de filtrado. |
-| 5 | Priorizar servicios esenciales y limitar funciones no críticas. |
-| 6 | Documentar cronología, tráfico e impacto. |
-| 7 | Preparar comunicación interna y externa básica si el servicio al cliente se ve afectado. |
-
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
@@ -151,6 +137,22 @@ Como mínimo, en este playbook deben intervenir estas funciones:
 5. Ajustar capacidad, reglas y procedimientos con base en las lecciones aprendidas.
 6. Actualizar el plan de escalado con proveedores y tiempos máximos de respuesta.
 7. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
+
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar que la incidencia es de disponibilidad y no un fallo local. |
+| 2 | Clasificar la severidad según alcance e indisponibilidad. |
+| 3 | Escalar a TIC, Seguridad y proveedor externo. |
+| 4 | Activar la mitigación disponible y las reglas temporales de filtrado. |
+| 5 | Priorizar servicios esenciales y limitar funciones no críticas. |
+| 6 | Documentar cronología, tráfico e impacto. |
+| 7 | Preparar comunicación interna y externa básica si el servicio al cliente se ve afectado. |
 
 ### Recursos
 

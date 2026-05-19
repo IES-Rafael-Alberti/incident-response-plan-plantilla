@@ -777,7 +777,7 @@ La selección se ha realizado teniendo en cuenta:
 4. [Playbook: Compromiso de la cadena de suministro](./playbook-supply-chain.md)
    Necesario por la dependencia de terceros como el proveedor de hosting, la subcontrata del antivirus, servicios cloud y consultoría externa.
 
-5. [Playbook: Desaparición de sitios web](./playbook-defacement.md)
+5. [Playbook: Desfiguración de sitios web](./playbook-defacement.md)
    Importante por la exposición pública de la web y la tienda online, y por el impacto reputacional directo ante clientes.
 
 6. [Playbook: Ataque DDoS](./playbook-ddos.md)
@@ -957,7 +957,7 @@ Durante la primera hora, la secuencia recomendada será la siguiente:
 2. [MITRE ATT&CK - Network Denial of Service (T1498)](https://attack.mitre.org/techniques/T1498/)
 3. [NIST SP 800-61 Rev. 2 - Computer Security Incident Handling Guide](https://csrc.nist.gov/pubs/sp/800/61/r2/final)
 
-## Playbook: Desaparición de sitios web
+## Playbook: Desfiguración de sitios web
 
 **Investigar, remediar (contener, erradicar) y comunicar en paralelo.**
 

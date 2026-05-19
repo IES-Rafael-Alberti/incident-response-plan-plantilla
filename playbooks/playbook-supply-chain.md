@@ -17,20 +17,6 @@ Se activará ante cualquiera de estas señales:
 3. Detección interna de software, servicio o componente comprometido de origen externo;
 4. Sospecha de abuso de credenciales compartidas, API o accesos remotos de proveedor.
 
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar el incidente y el tercero afectado. |
-| 2 | Clasificar la severidad según el impacto de negocio y datos. |
-| 3 | Cortar accesos, integraciones o actualizaciones asociadas si existe riesgo activo. |
-| 4 | Preservar comunicaciones y evidencias técnicas. |
-| 5 | Escalar a Seguridad, Dirección y responsables de negocio afectados. |
-| 6 | Exigir al proveedor información técnica, alcance y medidas inmediatas. |
-| 7 | Definir qué servicios deben mantenerse, limitarse o detenerse temporalmente. |
-
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
@@ -156,6 +142,22 @@ Además de los pasos y orientaciones generales del plan de respuesta a incidente
     * Revisiones de seguridad periódicas;
     * Dependencia mínima necesaria.
 7. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
+
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar el incidente y el tercero afectado. |
+| 2 | Clasificar la severidad según el impacto de negocio y datos. |
+| 3 | Cortar accesos, integraciones o actualizaciones asociadas si existe riesgo activo. |
+| 4 | Preservar comunicaciones y evidencias técnicas. |
+| 5 | Escalar a Seguridad, Dirección y responsables de negocio afectados. |
+| 6 | Exigir al proveedor información técnica, alcance y medidas inmediatas. |
+| 7 | Definir qué servicios deben mantenerse, limitarse o detenerse temporalmente. |
 
 ### Recursos
 

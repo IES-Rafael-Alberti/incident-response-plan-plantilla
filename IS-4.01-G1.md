@@ -18,7 +18,7 @@ Los playbooks identificados como necesarios son:
 2. [Ransomware](playbooks/playbook-ransomware.md)
 3. [Compromiso de identidad y acceso](playbooks/playbook-identity-and-access.md)
 4. [Compromiso de la cadena de suministro](playbooks/playbook-supply-chain.md)
-5. [Desfiguración o desaparición de sitios web](playbooks/playbook-defacement.md)
+5. [Desfiguración de sitios web](playbooks/playbook-defacement.md)
 6. [Ataque DDoS](playbooks/playbook-ddos.md)
 7. [Fuga de datos o exfiltración de información](playbooks/playbook-fuga-de-datos.md)
 8. [Explotación de aplicación expuesta a Internet](playbooks/playbook-explotacion-aplicacion-publica.md)
@@ -31,7 +31,7 @@ La justificación de cada uno es:
 2. `Ransomware` es prioritario porque la empresa depende de ficheros, aplicaciones internas y continuidad operativa.
 3. `Compromiso de identidad y acceso` es clave por el uso de servicios cloud, correo y accesos remotos.
 4. `Cadena de suministro` es necesario porque hay varios servicios externalizados, especialmente web, tienda online, antivirus y consultoría.
-5. `Defacement` encaja por la exposición pública de la web y el impacto reputacional directo.
+5. `Desfiguración de sitios web` encaja por la exposición pública de la web y el impacto reputacional directo.
 6. `DDoS` está justificado por la dependencia del canal web y de la disponibilidad de servicios expuestos a Internet.
 7. `Fuga de datos` es imprescindible por el tratamiento de datos personales y documentación sensible.
 8. `Explotación de aplicación pública` es coherente con la existencia de servicios web accesibles desde Internet y con la falta de control directo sobre su securización.
@@ -53,7 +53,7 @@ Los playbooks identificados como necesarios son:
 2. [Ransomware](playbooks/playbook-ransomware.md)
 3. [Compromiso de identidad y acceso](playbooks/playbook-identity-and-access.md)
 4. [Compromiso de la cadena de suministro](playbooks/playbook-supply-chain.md)
-5. [Desfiguración o desaparición de sitios web](playbooks/playbook-defacement.md)
+5. [Desfiguración de sitios web](playbooks/playbook-defacement.md)
 6. [Ataque DDoS](playbooks/playbook-ddos.md)
 7. [Fuga de datos o exfiltración de información](playbooks/playbook-fuga-de-datos.md)
 8. [Explotación de aplicación expuesta a Internet](playbooks/playbook-explotacion-aplicacion-publica.md)

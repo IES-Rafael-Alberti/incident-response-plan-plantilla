@@ -25,7 +25,7 @@ La selección se ha realizado teniendo en cuenta:
 4. [Playbook: Compromiso de la cadena de suministro](./playbook-supply-chain.md)
    Necesario por la dependencia de terceros como el proveedor de hosting, la subcontrata del antivirus, servicios cloud y consultoría externa.
 
-5. [Playbook: Desaparición de sitios web](./playbook-defacement.md)
+5. [Playbook: Desfiguración de sitios web](./playbook-defacement.md)
    Importante por la exposición pública de la web y la tienda online, y por el impacto reputacional directo ante clientes.
 
 6. [Playbook: Ataque DDoS](./playbook-ddos.md)

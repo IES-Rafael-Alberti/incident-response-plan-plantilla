@@ -17,20 +17,6 @@ Se activará ante cualquiera de estas señales:
 3. Alertas del servidor de correo, antivirus o servicios cloud relacionadas con campañas de phishing;
 4. Detección de reglas de reenvío, accesos anómalos o cambios sospechosos en buzones.
 
-### Guía operativa rápida
-
-Durante la primera hora, la secuencia recomendada será la siguiente:
-
-| Paso | Acción operativa |
-|---|---|
-| 1 | Confirmar el aviso y abrir el incidente. |
-| 2 | Clasificar la severidad inicial. |
-| 3 | Identificar si hubo clic, descarga, entrega de credenciales o fraude. |
-| 4 | Bloquear cuentas, sesiones, dominios o correos relacionados. |
-| 5 | Aislar equipos si hubo descarga o ejecución. |
-| 6 | Conservar evidencias básicas. |
-| 7 | Escalar a Dirección, Seguridad, departamento afectado y apoyo legal si procede. |
-
 ### Roles mínimos implicados
 
 Como mínimo, en este playbook deben intervenir estas funciones:
@@ -203,6 +189,22 @@ Como mínimo, en este playbook deben intervenir estas funciones:
     * Revisar accesos desde dispositivos móviles y nube.
 6. Mantener una vigilancia reforzada de las cuentas afectadas durante los días posteriores para detectar nuevos accesos o intentos de fraude.
 7. Al cierre, completar el expediente, declarar el estado final por el `Incident Commander` y convocar la AAR según [`plan.md`](../plan.md).
+
+
+
+### Guía operativa rápida
+
+Durante la primera hora, la secuencia recomendada será la siguiente:
+
+| Paso | Acción operativa |
+|---|---|
+| 1 | Confirmar el aviso y abrir el incidente. |
+| 2 | Clasificar la severidad inicial. |
+| 3 | Identificar si hubo clic, descarga, entrega de credenciales o fraude. |
+| 4 | Bloquear cuentas, sesiones, dominios o correos relacionados. |
+| 5 | Aislar equipos si hubo descarga o ejecución. |
+| 6 | Conservar evidencias básicas. |
+| 7 | Escalar a Dirección, Seguridad, departamento afectado y apoyo legal si procede. |
 
 ### Recursos
 
