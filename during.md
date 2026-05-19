@@ -755,7 +755,7 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 * **No** notifique o actualice al personal que no responde hasta que el Incident Commander lo autorice.
 * Coordinar con {{EXECUTIVE_TEAM}} y {{LEGAL_TEAM}} antes de interactuar con las fuerzas del orden.
 * Póngase en contacto con las fuerzas del orden locales en {{LOCAL_LE_CONTACT}}.
-* Póngase en contacto con el INCIBE en {{FBI_CONTACT}} o a través del [Internet Crime Complaint Center (IC3)](https://www.ic3.gov).
+* Póngase en contacto con el INCIBE en {{FBI_CONTACT}} o a través de la Policía Nacional.
 * Póngase en contacto con los operadores de los sistemas utilizados en el ataque, sus sistemas también pueden haber sido comprometidos.
 
 ### Contactar con el servicio de asistencia de respuesta externa
