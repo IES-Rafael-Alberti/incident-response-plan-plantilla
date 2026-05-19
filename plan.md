@@ -86,14 +86,14 @@ El nombre será utilizado para el expediente del incidente, canales de comunicac
 ### Referencia: Estructura del equipo de respuesta
 
 * Equipo de Mando
-  * [Incident Commander](#rol-incident-commander)
-  * [Incident Commander-Adjunto](#rol-delegado-del-incident-commander-subdelegado)
-  * [Escriba](#rol-scriba)
+  * [Incident Commander](roles/role-1-commander.md)
+  * [Incident Commander - Adjunto](roles/role-2-deputy.md)
+  * [Escriba](roles/role-3-scribe.md)
 * Equipo de enlace
-  * Enlace [interno](#rol-enlace)
+  * [Enlace interno](roles/role-5-liaison.md)
   * Enlace externo
 * Equipo de operaciones
-  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (SME) para sistemas
+  * [Expertos en la materia (SME)](roles/role-4-expert.md)
   * SME para equipos/unidades de negocio
   * SME para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
 
@@ -2287,18 +2287,26 @@ A continuación se presentan las descripciones, los deberes y la formación para
 
 ## Estructura de los roles
 
-* Equipo de Mando
-  * [Incident Commander](#rol-incident-commander)
-  * [Incident Commander-Adjunto](#rol-delegado-del-incident-commander-subdelegado)
-  * [Escriba](#rol-escriba)
-* Equipo de enlace
-  * Enlace Interno [Enlace](#rol-enlace)
-  * Enlace externo
-* Equipo de Operaciones
-  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (SMEs) para Sistemas
-  * SMEs para equipos/unidades de negocio
-  * SMEs para las funciones ejecutivas (_p.ej._, Legal, RRHH, Finanzas)
-En el caso de incidentes complejos de mayor envergadura, la estructura de funciones puede ajustarse para tener en cuenta la creación de subequipos. Para más información, lea cómo gestionamos los [Incidentes Complejos](/before/complex_incidents.md).
+### Equipo de Mando
+
+- [Incident Commander](roles/role-1-commander.md)
+- [Incident Commander - Adjunto](roles/role-2-deputy.md)
+- [Escriba](roles/role-3-scribe.md)
+
+---
+
+### Equipo de Enlace
+
+- [Enlace interno](roles/role-5-liaison.md)
+- Enlace externo
+
+---
+
+### Equipo de Operaciones
+
+- [Expertos en la materia (SME)](roles/role-4-expert.md)
+- SMEs para equipos/unidades de negocio
+- SMEs para las funciones ejecutivas (_p.ej._, Legal, RRHH, Finanzas)
 
 Esta es una **estructura flexible**: cada rol no será ocupado por una persona diferente para cada incidente. Por ejemplo, en un incidente pequeño, el adjunto podría actuar como escribiente y enlace interno. La estructura es flexible y se adapta al incidente.
 

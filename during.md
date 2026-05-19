@@ -86,14 +86,14 @@ El nombre será utilizado para el expediente del incidente, canales de comunicac
 ### Referencia: Estructura del equipo de respuesta
 
 * Equipo de Mando
-  * [Incident Commander](#rol-incident-commander)
-  * [Incident Commander-Adjunto](#rol-delegado-del-incident-commander-subdelegado)
-  * [Escriba](#rol-scriba)
+  * [Incident Commander](roles/role-1-commander.md)
+  * [Incident Commander - Adjunto](roles/role-2-deputy.md)
+  * [Escriba](roles/role-3-scribe.md)
 * Equipo de enlace
-  * Enlace [interno](#rol-enlace)
+  * [Enlace interno](roles/role-5-liaison.md)
   * Enlace externo
 * Equipo de operaciones
-  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (SME) para sistemas
+  * [Expertos en la materia (SME)](roles/role-4-expert.md)
   * SME para equipos/unidades de negocio
   * SME para Funciones Ejecutivas (_por ejemplo_, Legal, RRHH, Finanzas)
 
