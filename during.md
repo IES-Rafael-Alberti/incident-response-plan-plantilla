@@ -118,7 +118,7 @@ Incidentes de red | Nº incidentes de red (normalizado) | reducción >=50% (PRY-
 Una vez confirmado que es un incidente, determine una severidad inicial para guiar escalado, comunicación y priorización.
 
 Severidad | Descripción | Ejemplo
-********* | *********-- | ******
+********* | *********** | ******
 SEV1 | Impacto crítico en negocio o datos sensibles | Ransomware, caída total
 SEV2 | Impacto importante parcialmente contenido | Compromiso de cuenta privilegiada
 SEV3 | Impacto limitado | Malware aislado
