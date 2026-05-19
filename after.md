@@ -1,36 +1,74 @@
-# Realizar una revisión posterior a la acción (Conduct an After Action Review, AAR)
+---
+title: "Guía de acciones posteriores"
+version: "1.0"
+date: "Enero 2026"
+classification: "CONFIDENCIAL"
+organization: "Security S.L."
+---
 
-1. Programe una reunión de revisión posterior a la acción (AAR) dentro de {{AAR_SLA}} e invite a los asistentes que figuran en {{AAR_ATTENDEES}}. Incluya siempre a los siguientes:
-    * El Incident Commander.
-    * Los propietarios de los servicios implicados en el incidente.
-    * Ingeniero(s)/responsable(s) clave(s) implicado(s) en el incidente.
-1. Designe a un propietario del AAR que investigue el incidente antes de la reunión para prepararlo, estudiando el proceso del incidente en sí, incluyendo la revisión de notas e informes.
+# after.md
 
-## Realización de la reunión AAR
+## Propósito
 
-Documente las respuestas a las siguientes preguntas clave:
+Esta guía define las acciones posteriores a una respuesta a incidentes, también conocidas como hotwash, debrief o post-mortem.
 
-1. **¿Qué ocurrió?** Cree una línea de tiempo, apoyada con datos u otros artefactos. **Evitar las culpas. Busca los hechos.**
-1. **¿Qué se suponía que iba a ocurrir?**
-    * Detallar las desviaciones del proceso, el procedimiento o las mejores prácticas, incluidas las evaluaciones de los SME.
-    * Identifique las formas en que el incidente podría haberse detectado antes o haberse respondido con mayor eficacia.
-1. **¿Cuáles fueron las causas fundamentales?** Encuentre la raíz de lo que ocurrió y de lo que debería haber ocurrido.
-1. **¿Cómo podemos mejorar?**  Capture los elementos de acción con asignados y fechas de vencimiento. Considerar:
-    * Detener: ¿Qué debemos dejar de hacer?
-    * Empezar: ¿Qué deberíamos empezar a hacer?
-    * Continuar: ¿Qué debemos seguir haciendo?
+Su objetivo es consolidar aprendizajes, identificar mejoras y actualizar el plan y los playbooks a partir de la experiencia real del incidente.
 
-## Comunicar el estado y los resultados del AAR
+## Reunión post-incidente
 
-El propietario del informe, en coordinación con el enlace interno, comunicará el estado del informe (véase más abajo).
+Dentro de los 7 días posteriores al cierre del incidente, el CSIRT celebrará una reunión de revisión con todos los participantes relevantes.
 
-### Descripciones de estado
+La reunión debe cubrir:
+- Cronología completa del incidente.
+- Decisiones tomadas y por qué se tomaron.
+- Qué funcionó bien.
+- Qué falló o llegó tarde.
+- Qué información faltó.
+- Qué cambios deben incorporarse al plan.
 
-| Estado          | Descripción                                                                                                                                                                                                                                                                                                              |
-|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Borrador**    | La investigación de la AAR sigue en curso                                                                                                                                                                                                                                                                                |
-| **En revisión** | La investigación AAR se ha completado, y está lista para ser revisada durante la reunión AAR.                                                                                                                                                                                                                            |
-| **Revisado**    | La reunión de AAR ha terminado y el contenido ha sido revisado y acordado. <br/>Si hay "Mensajes externos" adicionales, el equipo de comunicación tomará medidas para prepararlos.                                                                                                                                            |
-| **Cerrado**     | No es necesario realizar más acciones en el AAR (los problemas pendientes se rastrean en los tickets).<br>Si no hay "Mensajes Externos", pase directamente a esto una vez que la reunión haya terminado.<br/>Si hay "Mensajes Externos" adicionales, el equipo de comunicaciones actualizará el AAR Cerrado una vez enviado. |
+## Informe preliminar
 
-Comunicar internamente los resultados del AAR y finalizar la documentación del AAR.
+El Coordinador de Incidentes elaborará un informe preliminar en las 24 horas posteriores a la contención del incidente.
+
+Este informe debe incluir:
+- Resumen ejecutivo.
+- Activos afectados.
+- Medidas de contención aplicadas.
+- Estado de la erradicación.
+- Próximos pasos de recuperación.
+
+## Informe final
+
+El informe final se emitirá en un plazo máximo de 15 días desde el cierre del incidente.
+
+Debe incluir:
+- Cronología consolidada.
+- Causa raíz.
+- Impacto técnico, operativo, económico y reputacional.
+- Medidas correctoras aplicadas.
+- Recomendaciones para prevenir recurrencia.
+
+## Análisis de causa raíz
+
+La causa raíz debe documentarse con claridad, evitando descripciones genéricas.
+
+Debe responder, al menos, a estas preguntas:
+- Cómo entró el atacante.
+- Qué controles fallaron.
+- Qué controles no existían.
+- Qué se puede hacer para reducir el riesgo en el futuro.
+
+## Acciones de mejora
+
+Todas las acciones de mejora deben registrarse con:
+- Responsable.
+- Fecha objetivo.
+- Estado.
+- Prioridad.
+- Evidencia de cierre.
+
+Las mejoras deben trasladarse al plan, a los playbooks o a los controles técnicos cuando corresponda.
+
+## Cierre
+
+No debe darse por cerrado un incidente hasta que queden documentadas las lecciones aprendidas y se hayan registrado las acciones de mejora necesarias.

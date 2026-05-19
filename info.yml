@@ -1,46 +1,59 @@
-# Configuración personalizada para Security S.L.
+organization: "Security S.L."
+plan_name: "Plan de Respuesta a Incidentes y Playbooks Sectoriales de Ciberseguridad"
+version: "1.0"
+date: "Enero 2026"
+classification: "CONFIDENCIAL"
+language: "es"
+review_period: "anual"
+next_review: "2027-01"
 
-COMPANY_NAME: 'Security S.L.'
-AUTHOR_NAME: 'Equipo CSIRT Security S.L.'
-AUTHOR_EMAIL: 'csirt@securitysl.com'
-REVISION_NUMBER: '1.0'
-RELEASE_DATE: '18 Mayo 2026'
-REVIEW_DATE: '18 Mayo 2026'
-TEST_DATE: '18 Mayo 2026'
-RESPONSE_CHAT: 'https://teams.securitysl.com/ir-response'
-RESPONSE_PHONE: '+34 900 123 456'
-RESPONSE_VTC: 'https://zoom.securitysl.com/ir-bridge'
-ALTERNATE_EMAIL: 'ir-alternate@securitysl.com'
-ORGANIZATION_DOMAIN: 'securitysl.com'
-INCIDENT_COMMANDER_PAGER_NUMBER: '+34 600 111 222'
-INCIDENT_COMMANDER_PAGER_URL: 'https://pager.securitysl.com/ic-oncall'
-INCIDENT_COMMANDER_ROSTER: 'https://securitysl.sharepoint.com/sites/IR/IC-Roster'
-SECURITY_TEAM_ROSTER: 'https://securitysl.sharepoint.com/sites/IR/Sec-Roster'
-TEAM_SME_ROSTER: 'https://securitysl.sharepoint.com/sites/IR/SME-Roster'
-EXECUTIVE_ROSTER: 'https://securitysl.sharepoint.com/sites/IR/Exec-Roster'
-INCIDENT_COMMANDER_RESPONSE_SLA: '15 minutes'
-UPDATE_FREQUENCY: '4 hours'
-INCIDENT_FILE_LOCATION: '\\server-files\incidentes\'
-CRITICAL_INFO_LIST_LOCATION: 'https://securitysl.sharepoint.com/sites/IR/CIL'
-CRITICAL_ASSET_LIST_LOCATION: 'https://securitysl.sharepoint.com/sites/IR/CAL'
-ASSET_MGMT_DB_LOCATION: 'https://securitysl.sharepoint.com/sites/CMDB'
-NETWORK_MAP_LOCATION: 'https://securitysl.sharepoint.com/sites/IR/NetMap'
-SIEM_CONSOLE_LOCATION: 'https://wazuh.securitysl.com'
-LOG_AGGREGATOR_CONSOLE: 'https://elk.securitysl.com'
-LIVE_RESPONSE_TOOL: '[Velociraptor](https://www.velocidex.com)'
-MEMORY_COLLECTION_TOOL: '[Winpmem](https://github.com/Velocidex/WinPmem)'
-DISK_IMAGE_TOOL: '[FTK Imager](https://www.exterro.com/ftk-imager)'
-INCIDENT_REPORT_TEMPLATE: 'https://securitysl.sharepoint.com/sites/IR/Templates'
-INCIDENT_REPORT_RECIPIENTS: 'direccion@securitysl.com, legal@securitysl.com, compliance@securitysl.com'
-COMPLIANCE_TEAM: 'Departamento Compliance, compliance@securitysl.com'
-COMMUNICATIONS_TEAM: 'Departamento Comunicación, comunicacion@securitysl.com'
-EXECUTIVE_TEAM: 'Dirección General, direccion@securitysl.com'
-LEGAL_TEAM: 'Departamento Legal, legal@securitysl.com'
-LOCAL_LE_CONTACT: 'Policía Nacional - Brigada Investigación Tecnológica, bit@policia.es'
-FBI_CONTACT: '1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us'
-INCIDENT_RESPONSE_VENDOR: '[Counteractive Security](https://www.counteractive.net)'
-PUBLIC_RELATIONS_VENDOR: 'LLM Comunicación, comunicacion@llmpr.es'
-INSURANCE_VENDOR: 'AAA Seguros Cibernéticos, ciberseguros@aaa.es'
-ISAC_CONTACT: 'ISAC Sectorial Ciberseguridad España, info@isac-es.org'
-AAR_SLA: '5 business days'
-AAR_ATTENDEES: 'https://securitysl.sharepoint.com/sites/IR/AAR-Attendees'
+contacts:
+  incident_channel_email: "incidentes@securitysl.es"
+  incident_channel_phone: "TIC interno"
+  incident_channel_form: "Formulario web interno"
+
+roles:
+  coordinator: "Coordinador de Incidentes"
+  analyst: "Analista Técnico Principal"
+  backup_recovery: "Técnico de Backup y Recuperación"
+  communications: "Responsable de Comunicación"
+  legal_dpo: "Responsable Legal / DPO"
+  management: "Dirección General"
+
+playbooks:
+  ransomware: "PB-01 Ransomware y Cifrado Malicioso"
+  credentials: "PB-02 Compromiso de Credenciales y Acceso No Autorizado"
+  data_breach: "PB-03 Fuga de Información / Data Breach"
+  phishing: "PB-04 Phishing e Ingeniería Social"
+
+timings:
+  critical_declaration: "15 minutos"
+  high_declaration: "30 minutos"
+  medium_declaration: "2 horas"
+  low_declaration: "8 horas"
+  preliminary_report: "24 horas"
+  final_report: "15 días"
+  lessons_learned: "7 días"
+
+rto:
+  fileserver: "4 horas"
+  mailserver: "4 horas"
+  crm_erp: "8 horas"
+  laptops: "4 horas por equipo"
+  website: "24 horas"
+  cloud_services: "8 horas"
+
+rpo:
+  fileserver: "1 hora"
+  mailserver: "2 horas"
+  crm_erp: "4 horas"
+  laptops: "NA"
+  website: "6 horas"
+  cloud_services: "según SLA"
+
+policy:
+  no_ransom_payment: true
+  rgpd_notification_hours: 72
+  annual_training: true
+  phishing_simulation_frequency: "trimestral"
+  tabletop_frequency: "semestral"
