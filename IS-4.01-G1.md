@@ -1,4 +1,18 @@
-## Indice
+## Índice
+
+1. [Introducción](#introducción)
+2. [Plan de respuesta](#plan-de-respuesta)
+3. [Playbooks](#playbooks)
+4. [Respuesta a las preguntas](#respuesta-a-las-preguntas)
+   1. [Pregunta 1.a: relación entre MITRE ATT&CK, RE&CT y el plan](#pregunta-1a)
+   2. [Pregunta 1.b: playbooks identificados y criterios de selección](#pregunta-1b)
+   3. [Pregunta 1.c: cobertura de las fases del plan](#pregunta-1c)
+   4. [Pregunta 2.a: toma de decisiones, escalado y comunicación](#pregunta-2a)
+   5. [Pregunta 3.a: resiliencia de las respuestas](#pregunta-3a)
+5. [Conclusiones](#conclusiones)
+6. [Bibliografía](#bibliografía)
+7. [Anexo](#anexo)
+
 ## Introducción
 
 En la actualidad, la seguridad de la información se ha convertido en un aspecto fundamental para cualquier organización que dependa de sistemas digitales para desarrollar su actividad diaria. En empresas como la analizada en este trabajo, donde buena parte de la operativa se apoya en el correo corporativo, el almacenamiento en la nube, la web, la tienda online y distintas aplicaciones de gestión, cualquier incidente de seguridad puede afectar de forma directa a la continuidad del negocio, a la protección de los datos y a la confianza de clientes y proveedores.
@@ -37,6 +51,9 @@ La justificación de cada uno es:
 8. `Explotación de aplicación pública` es coherente con la existencia de servicios web accesibles desde Internet y con la falta de control directo sobre su securización.
 
 ## Respuesta a las preguntas
+
+<a id="pregunta-1a"></a>
+
 ### 1.a   ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.
 
 El trabajo con MITRE ATT&CK y RE&CT está directamente relacionado con el plan porque ha servido para identificar **qué amenazas son más probables**, **cómo se manifiestan** y **qué respuestas operativas conviene preparar**. No se trata solo de citar marcos conocidos, sino de utilizarlos para pasar de una visión general del riesgo a procedimientos concretos. En el plan esto se refleja, por ejemplo, en el uso de tácticas ATT&CK para formular preguntas de investigación, priorizar IOCs y orientar el análisis del vector, el alcance y el impacto del incidente.
@@ -44,6 +61,8 @@ El trabajo con MITRE ATT&CK y RE&CT está directamente relacionado con el plan p
 ATT&CK ha ayudado sobre todo a entender el comportamiento del atacante: acceso inicial, abuso de credenciales, exfiltración, cifrado, explotación de aplicaciones públicas o denegación de servicio. Esto encaja con los incidentes más relevantes para la empresa, ya que depende del correo, del cloud, de la web y tienda online externalizadas y del tratamiento de datos personales. RE&CT resulta útil para aterrizar la respuesta: validación de indicadores, recogida de evidencias, contención, comunicación y recuperación. Gracias a ese trabajo previo, el plan no se queda en principios generales, sino que baja a acciones concretas y a playbooks específicos, y además permite justificar por qué se priorizan unos incidentes frente a otros.
 
 ![alt text](Investigacin_inicial.svg)
+
+<a id="pregunta-1b"></a>
 
 ### 1.b   ¿Qué playbooks has identificado como necesarios en este plan de respuesta y en que te has basado para identificar esos playbooks y saber que son los necesarios? Deja algún diagrama que describa el flujo de un playbook.
 
@@ -81,6 +100,8 @@ Diagrama propuesto de flujo general de playbook:
 ```
 
 
+<a id="pregunta-1c"></a>
+
 ### 1.c   ¿Como te has asegurado que has cubierto todas las fases del plan de respuesta? ¿Qué fase consideras que está más floja en un plan? ¿Cuál de ellas consideras que está mejor trabajada en tu plan? Asegúrate de hablar de todas las fases y como las cubres.
 
 Se ha intentado cubrir todas las fases exigidas, y esa cobertura se puede justificar porque el plan no se limita a hablar de incidentes, sino que organiza la respuesta desde antes de que ocurran hasta después de cerrarlos:
@@ -94,6 +115,8 @@ Se ha intentado cubrir todas las fases exigidas, y esa cobertura se puede justif
 Además, el plan incluye una revisión posterior mediante AAR, lo que refuerza la cobertura global porque introduce aprendizaje y mejora continua, aunque esa fase vaya más allá de las cinco que el enunciado menciona expresamente.
 
 La fase que suele quedar más floja en muchos planes es **preparación**, porque depende de que existan previamente roles claros, contactos actualizados, formación y procedimientos aprobados. En esta empresa eso es especialmente importante porque la madurez de seguridad es básica y además no existen políticas de seguridad por escrito en sentido amplio. La fase mejor trabajada en este plan es **la coordinación y el escalado durante la respuesta**, porque el documento desarrolla con bastante detalle el papel del Incident Commander, los canales, las llamadas de respuesta, el reparto en subequipos, la frecuencia de actualización y la comunicación interna y externa.
+
+<a id="pregunta-2a"></a>
 
 ### 2.a   ¿En que consiste el Flujo de Toma de Decisiones y Escalado de tu plan de respuesta? ¿Existe un plan de comunicación, protocolos, etc? Si la respuesta es correcta, haz un resumen del plan y protocolos. Deja evidencias del flujo, mediante un diagrama. 
 
@@ -141,6 +164,8 @@ flowchart TD
     R --> S[Cierre del incidente]
     S --> T[AAR / Lecciones aprendidas]
 ```
+
+<a id="pregunta-3a"></a>
 
 ### 3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?
 
