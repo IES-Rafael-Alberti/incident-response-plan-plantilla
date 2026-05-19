@@ -137,6 +137,6 @@ Una vez completada tu capacitación:
 
 ---
 
-**Documento**: Rol - Incident Commander
-**Grupo G5**: Iván Paúl Alba, Sergio González Noria, Manuel Pérez Romero, Javier Calvillo Acebedo
+**Documento**: Rol - Incident Commander</br>
+**Grupo G5**: Iván Paúl Alba, Sergio González Noria, Manuel Pérez Romero, Javier Calvillo Acebedo</br>
 **Fecha**: Mayo 2026

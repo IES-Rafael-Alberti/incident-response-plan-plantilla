@@ -1,4 +1,3 @@
-
 # Rol: Diputado del Incident Commander
 
 ## Descripción
@@ -122,6 +121,6 @@ Una vez completada tu capacitación:
 
 ---
 
-**Documento**: Rol - Diputado del Incident Commander
-**Grupo G5**: Iván Paúl Alba, Sergio González Noria, Manuel Pérez Romero, Javier Calvillo Acebedo
+**Documento**: Rol - Diputado del Incident Commander</br>
+**Grupo G5**: Iván Paúl Alba, Sergio González Noria, Manuel Pérez Romero, Javier Calvillo Acebedo</br>
 **Fecha**: Mayo 2026
