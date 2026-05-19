@@ -37,6 +37,18 @@ Para que el plan no sea genérico, el enfoque combina:
 
 El resultado se concreta en 6 playbooks que cubren los escenarios de mayor impacto/probabilidad para la organización (exfiltración web, phishing, ransomware, acceso no autorizado, compromiso de proveedores y pérdida/robo de dispositivo), con evidencias de flujo (diagramas) y guías de actuación.
 
+Como punto de partida, el siguiente modelo de madurez refleja el estado actual de la organización frente al objetivo a alcanzar en los seis dominios de ciberseguridad más críticos, y justifica la necesidad del presente plan:
+
+![Figura 1 — Modelo de Madurez de Ciberseguridad: Madurez Actual vs. Objetivo (CiberConsulting S.L., 2025)](modelo_madurez.svg)
+
+**Leyenda de valores:**
+- Gestión de Accesos y MFA: actual 65% / objetivo 90%
+- Protección de Infraestructura y Red: actual 75% / objetivo 90%
+- Seguridad Web y Servicios Externalizados: actual 55% / objetivo 85%
+- Protección Endpoint y Antimalware: actual 70% / objetivo 90%
+- Concienciación y Políticas de Seguridad: actual 45% / objetivo 85%
+- Continuidad de Negocio y Backups: actual 70% / objetivo 90%
+
 ### Inventario de activos
 
 | ID      | Activo                                     | Tipo        | Categoría              | Propietario        | Valor C | Valor I | Valor D | Criticidad |
@@ -231,6 +243,18 @@ Y lo más importante: el plan dice específicamente qué hacer. No dice "aislar 
 
 ---
 
+El siguiente modelo de madurez evidencia gráficamente por qué la fase de Preparación es la más débil del plan (Concienciación y Políticas al 45%) y por qué la Contención es la más sólida (dominios de Infraestructura y Endpoint por encima del 70%):
+
+![Figura 2 — Modelo de Madurez de Ciberseguridad: Madurez Actual vs. Objetivo (CiberConsulting S.L., 2025)](modelo_madurez.svg)
+
+**Leyenda de valores:**
+- Gestión de Accesos y MFA: actual 65% / objetivo 90%
+- Protección de Infraestructura y Red: actual 75% / objetivo 90%
+- Seguridad Web y Servicios Externalizados: actual 55% / objetivo 85%
+- Protección Endpoint y Antimalware: actual 70% / objetivo 90%
+- Concienciación y Políticas de Seguridad: actual 45% / objetivo 85%
+- Continuidad de Negocio y Backups: actual 70% / objetivo 90%
+
 #### Resumen de cómo cubrimos cada fase
 
 | Fase                 | ¿Está cubierta? | Qué tal está   | Notas                                                      |
@@ -281,6 +305,18 @@ Son resilientes porque combinan:
 - protocolos concretos escritos en los playbooks,
 - comunicación estructurada con escalado claro,
 - enfoque en contención y recuperación paralelas.
+
+El modelo de madurez siguiente ilustra que los dominios que sustentan la resiliencia del plan (Protección de Infraestructura y Red, Protección Endpoint y Continuidad de Negocio) son precisamente los de mayor madurez actual, lo que valida el enfoque del plan:
+
+![Figura 3 — Modelo de Madurez de Ciberseguridad: Madurez Actual vs. Objetivo (CiberConsulting S.L., 2025)](modelo_madurez.svg)
+
+**Leyenda de valores:**
+- Gestión de Accesos y MFA: actual 65% / objetivo 90%
+- Protección de Infraestructura y Red: actual 75% / objetivo 90%
+- Seguridad Web y Servicios Externalizados: actual 55% / objetivo 85%
+- Protección Endpoint y Antimalware: actual 70% / objetivo 90%
+- Concienciación y Políticas de Seguridad: actual 45% / objetivo 85%
+- Continuidad de Negocio y Backups: actual 70% / objetivo 90%
 
 Las fases más centradas en resiliencia son:
 

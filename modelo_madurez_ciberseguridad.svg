@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg" role="img" width="800" height="700">
+  <title>Modelo de Madurez de Ciberseguridad</title>
+  <desc>Gráfico radar comparando madurez actual vs objetivo en 6 dominios de ciberseguridad</desc>
+  <rect width="800" height="700" fill="#F5F4F0"/>
+  <g transform="translate(400,360)">
+    <circle r="54" fill="none" stroke="#D3D1C7" stroke-width="0.8" stroke-dasharray="4,3"/>
+    <circle r="108" fill="none" stroke="#D3D1C7" stroke-width="0.8" stroke-dasharray="4,3"/>
+    <circle r="162" fill="none" stroke="#D3D1C7" stroke-width="0.8" stroke-dasharray="4,3"/>
+    <circle r="216" fill="none" stroke="#D3D1C7" stroke-width="0.8" stroke-dasharray="4,3"/>
+    <circle r="270" fill="none" stroke="#D3D1C7" stroke-width="1"/>
+    <text x="6" y="-56" font-family="system-ui,sans-serif" font-size="11" fill="#888780">20%</text>
+    <text x="6" y="-110" font-family="system-ui,sans-serif" font-size="11" fill="#888780">40%</text>
+    <text x="6" y="-164" font-family="system-ui,sans-serif" font-size="11" fill="#888780">60%</text>
+    <text x="6" y="-218" font-family="system-ui,sans-serif" font-size="11" fill="#888780">80%</text>
+    <text x="6" y="-272" font-family="system-ui,sans-serif" font-size="11" fill="#888780">100%</text>
+    <line x1="0" y1="0" x2="0" y2="-270" stroke="#D3D1C7" stroke-width="0.8"/>
+    <line x1="0" y1="0" x2="233.8" y2="-135" stroke="#D3D1C7" stroke-width="0.8"/>
+    <line x1="0" y1="0" x2="233.8" y2="135" stroke="#D3D1C7" stroke-width="0.8"/>
+    <line x1="0" y1="0" x2="0" y2="270" stroke="#D3D1C7" stroke-width="0.8"/>
+    <line x1="0" y1="0" x2="-233.8" y2="135" stroke="#D3D1C7" stroke-width="0.8"/>
+    <line x1="0" y1="0" x2="-233.8" y2="-135" stroke="#D3D1C7" stroke-width="0.8"/>
+    <polygon points="0,-243 210.4,-121.5 198.8,114.75 0,243 -198.8,114.75 -210.4,-121.5" fill="#E24B4A" fill-opacity="0.15" stroke="#E24B4A" stroke-width="2" stroke-dasharray="8,5"/>
+    <polygon points="0,-175.5 175.4,-101.25 128.6,74.25 0,189 -105.2,60.75 -163.7,-94.5" fill="#3266ad" fill-opacity="0.35" stroke="#3266ad" stroke-width="2.5"/>
+    <circle cx="0" cy="-175.5" r="4" fill="#3266ad"/>
+    <circle cx="175.4" cy="-101.25" r="4" fill="#3266ad"/>
+    <circle cx="128.6" cy="74.25" r="4" fill="#3266ad"/>
+    <circle cx="0" cy="189" r="4" fill="#3266ad"/>
+    <circle cx="-105.2" cy="60.75" r="4" fill="#3266ad"/>
+    <circle cx="-163.7" cy="-94.5" r="4" fill="#3266ad"/>
+  </g>
+  <text x="400" y="68" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#2C2C2A">Gestión de Accesos y MFA</text>
+  <text x="655" y="250" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#2C2C2A">Protección de</text>
+  <text x="655" y="266" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#2C2C2A">Infraestructura y Red</text>
+  <text x="655" y="478" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#2C2C2A">Seguridad Web y</text>
+  <text x="655" y="494" text-anchor="start" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#2C2C2A">Servicios Externalizados</text>
+  <text x="400" y="650" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#2C2C2A">Continuidad de Negocio y Backups</text>
+  <text x="145" y="478" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#2C2C2A">Concienciación y</text>
+  <text x="145" y="494" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#2C2C2A">Políticas de Seguridad</text>
+  <text x="145" y="250" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#2C2C2A">Protección Endpoint</text>
+  <text x="145" y="266" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#2C2C2A">y Antimalware</text>
+  <rect x="530" y="32" width="240" height="70" rx="8" fill="white" fill-opacity="0.95" stroke="#D3D1C7" stroke-width="0.8"/>
+  <line x1="550" y1="57" x2="590" y2="57" stroke="#3266ad" stroke-width="2.5"/>
+  <circle cx="570" cy="57" r="4" fill="#3266ad"/>
+  <text x="600" y="61" font-family="system-ui,sans-serif" font-size="13" fill="#2C2C2A">Madurez actual</text>
+  <line x1="550" y1="82" x2="590" y2="82" stroke="#E24B4A" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="600" y="86" font-family="system-ui,sans-serif" font-size="13" fill="#2C2C2A">Madurez objetivo</text>
+</svg>
