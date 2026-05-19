@@ -5,18 +5,27 @@ A continuación se presentan las descripciones, los deberes y la formación para
 
 ## Estructura de los roles
 
-* Equipo de Mando
-  * [Incident Commander](#rol-incident-commander)
-  * [Incident Commander-Adjunto](#rol-delegado-del-incident-commander-subdelegado)
-  * [Escriba](#rol-escriba)
-* Equipo de enlace
-  * Enlace Interno [Enlace](#rol-enlace)
-  * Enlace externo
-* Equipo de Operaciones
-  * [Expertos en la materia](#rol-experto-en-la-materia-subject-matter-expert-sme) (SMEs) para Sistemas
-  * SMEs para equipos/unidades de negocio
-  * SMEs para las funciones ejecutivas (_p.ej._, Legal, RRHH, Finanzas)
-En el caso de incidentes complejos de mayor envergadura, la estructura de funciones puede ajustarse para tener en cuenta la creación de subequipos. Para más información, lea cómo gestionamos los [Incidentes Complejos](/before/complex_incidents.md).
+### Equipo de Mando
+
+- [Incident Commander](role-1-commander.md)
+- [Incident Commander - Adjunto](role-2-deputy.md)
+- [Escriba](role-3-scribe.md)
+
+---
+
+### Equipo de Enlace
+
+- [Enlace interno](role-5-liaison.md)
+
+
+---
+
+### Equipo de Operaciones
+
+- [Expertos en la materia (SME)](role-4-expert.md)
+- SMEs para equipos/unidades de negocio
+- SMEs para funciones ejecutivas (Legal, RRHH, Finanzas)
+
 
 Esta es una **estructura flexible**: cada rol no será ocupado por una persona diferente para cada incidente. Por ejemplo, en un incidente pequeño, el adjunto podría actuar como escribiente y enlace interno. La estructura es flexible y se adapta al incidente.
 
