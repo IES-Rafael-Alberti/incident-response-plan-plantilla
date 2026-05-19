@@ -48,8 +48,8 @@ La selección de los playbooks se realizó combinando tres criterios: nivel de r
 Los cuatro playbooks incluidos en la versión 1.0 son:
 - [PB-01 Ransomware y Cifrado Malicioso](#pb-01-ransomware)
 - [PB-02 Compromiso de Credenciales y Acceso No Autorizado](#pb-02-compromiso-de-credenciales)
-- [PB-03 Fuga de Información / Data Breach](#pb-03-fuga-de-informacion)
-- [PB-04 Phishing e Ingeniería Social](#pb-04-phishing)
+- [PB-03 Fuga de Información](#pb-03-fuga-de-informacion)
+- [PB-04 Phishing](#pb-04-phishing)
 
 Se descartaron temporalmente escenarios como DoS/DDoS, compromiso de cadena de suministro e insider threat, por estar fuera de la prioridad de esta versión o por requerir mayor madurez de controles.
 
@@ -323,7 +323,7 @@ Los playbooks incluidos en esta versión son:
 - [PB-01 Ransomware y Cifrado Malicioso](#pb-01-ransomware)
 - [PB-02 Compromiso de Credenciales y Acceso No Autorizado](#pb-02-compromiso-de-credenciales)
 - [PB-03 Fuga de Información](#pb-03-fuga-de-informacion)
-- [PB-04 Phishing e Ingeniería Social](#pb-04-phishing)
+- [PB-04 Phishing](#pb-04-phishing)
 
 ## Propósito
 
