@@ -1,47 +1,49 @@
-## Rol: Todos los participantes
 
-### Descripción
+## Role: All Participants
 
-Todos los participantes en la respuesta a un incidente tienen la responsabilidad de ayudar a resolverlo siguiendo el plan de respuesta, bajo la autoridad del Jefe de Respuesta.
+### Description
 
-### Deberes
+All participants in an incident response have the responsibility to help resolve the incident according to the incident response plan, under the authority of the Incident Commander.
 
-#### Seguir las normas de la llamada
+### Duties
 
-* Estar tanto en la llamada como en el chat.
-* Mantener el ruido de fondo al mínimo.
-* Mantener el micrófono en silencio hasta que tenga algo que decir.
-* Identificarse al entrar en la llamada: diga su nombre y su función (por ejemplo, "Soy el especialista del equipo de ventas").
-* Hablar con claridad.
-* Ser directo y objetivo.
-* Ir al grano en las conversaciones.
-* Comunicar cualquier preocupación al Jefe de Respuesta en la llamada.
-* Respetar los tiempos marcados por el Jefe de Respuesta.
-* Si solo estás en un canal (llamada o chat pero no ambos), no podrás participar bien y la comunicación será confusa.
-* **Usar un lenguaje claro y evitar siglas o abreviaturas. La claridad y la precisión son más importantes que la rapidez.**
+#### Exhibit Call Etiquette
 
-##### Frases útiles durante la llamada
+* Join both the call and chat.
+* Keep background noise to a minimum.
+* Keep your microphone muted until you have something to say.
+* Identify yourself when you join the call; State your name and role (_e.g._, "I am the SME for team x").
+* Speak up and speak clearly.
+* Be direct and factual.
+* Keep conversations/discussions short and to the point.
+* Bring any concerns to the Incident Commander (IC) on the call.
+* Respect time constraints given by the Incident Commander.
+* If you join only one channel (call or chat), do not actively participate, as it causes disjoined communication.
+* **Use clear terminology, and avoid acronyms or abbreviations. Clarity and accuracy is more important than brevity.**
 
-No es obligatorio usar un lenguaje de radio, pero puede resultar útil conocer algunas frases habituales:
+##### Reference: Common Voice Procedure
 
-* **Recibido/OK:** "He entendido el mensaje"
-* **Repite:** "Vuelve a decir tu último mensaje"
-* **Un momento:** "Por favor, espera para la siguiente respuesta"
-* **Confirmado:** "Lo haré"
+Standard radio [voice procedure](https://en.wikipedia.org/wiki/Voice_procedure#Words_in_voice_procedure) **is not required**, however you may hear certain terms (or need to use them yourself). Common phrases include:
 
-**No** inventes nuevas abreviaturas; mejor ser explícito que ir sobreentendido.
+* **Ack/Rog:** "I have received and understood"
+* **Say Again:** "Repeat your last message"
+* **Standby:** "Please wait a moment for the next response"
+* **Wilco:** "Will comply"
 
-#### Seguir al Jefe de Respuesta
+**Do not** invent new abbreviations; favor being explicit over implicit.
 
-El Jefe de Respuesta (IC) dirige el proceso de respuesta al incidente.
+#### Follow the Incident Commander
 
-* Siga las instrucciones del Jefe de Respuesta.
-* No haga nada sin que el Jefe de Respuesta se lo indique.
-* Normalmente el Jefe preguntará si hay objeciones importantes antes de asignar una acción. Exprese sus objeciones si las tiene.
-* Una vez que el Jefe haya tomado una decisión, acátela (incluso si no está de acuerdo).
-* Responda a las preguntas del Jefe con claridad. Decir "no sé" es aceptable. No invente respuestas.
-* El Jefe puede pedirle que investigue algo y que le responda en X minutos. Esté preparado para dar una respuesta en ese plazo. Pedir más tiempo es aceptable, pero avise al Jefe.
+The Incident Commander (IC) is the leader of the incident response process.
 
-### Formación
+* Follow instructions from the incident commander.
+* Do not perform any actions unless the incident commander has told you to do so.
+* The commander will typically poll for strong objections before tasking a large action. Raise objections if you have them.
+* Once the commander has made a decision, follow that decision (even if you disagreed).
+* Answer any questions the commander asks you in a clear and concise way.  Answering "I don't know" is acceptable. Do not guess.
+* The commander may ask you to investigate something and get back to them in X minutes. Be ready with an answer within that time.  Asking for more time is acceptable, but provide the commander an estimate.
 
-Leer y entender el plan de respuesta a incidentes, incluyendo los roles y las guías de actuación.
+### Training
+
+Read and understand the incident response plan, including the roles and playbooks.
+
