@@ -36,3 +36,9 @@ La aplicación de este plan ayuda a disminuir el impacto técnico, económico y 
 El plan deja claro que la eficacia de la respuesta depende también de la preparación previa del personal. La formación, los simulacros y la revisión periódica del plan son elementos esenciales para garantizar una respuesta eficiente ante futuras amenazas.
 
 ## Bibliografía
+
+## Anexo
+
+### MITRE ATT&CK
+
+[Anexo MITRE ATT&CK](Investigacin_inicial.svg)

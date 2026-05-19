@@ -323,6 +323,8 @@ Las técnicas priorizadas en la capa de ATT&CK Navigator son las siguientes:
 
 Estas técnicas se han priorizado con una escala simple en Navigator, donde el score 3 identifica técnicas altamente relevantes para el incidente, el score 2 técnicas plausibles que requieren validación y el score 1 técnicas de apoyo o contexto. Esta priorización se basa en los activos críticos de la empresa, en los riesgos recogidos en el PDS y en la necesidad de orientar la investigación hacia las fuentes de evidencia más útiles.
 
+La tabla de las técnicas seleccionadas en ATT&CK Navigator se encuentra en el Anexo de [IS-4.01-G1](IS-4.01-G1.md)
+
 ### Preguntas clave priorizadas
 
 A partir de las técnicas anteriores, se priorizarán las siguientes preguntas de investigación:
