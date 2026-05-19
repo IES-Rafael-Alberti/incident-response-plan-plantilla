@@ -71,9 +71,9 @@ Cuando el Enlace quiere comunicar algo externamente:
 - **¿Cuándo notificar?** - Plazo GDPR vs. plazo prudente
 
 **Ejemplos:**
-- ✅ "Detectamos un acceso no autorizado y lo bloqueamos" (vago, seguro)
-- ❌ "El atacante accedió a 500 clientes, nombres y números de teléfono" (muy específico, riesgo pánico)
-- ✅ "Algunos datos de clientes pueden haber sido accedidos. Notificaremos en 24 horas si es confirmado" (informativo, prudente)
+-  "Detectamos un acceso no autorizado y lo bloqueamos" (vago, seguro)
+-  "El atacante accedió a 500 clientes, nombres y números de teléfono" (muy específico, riesgo pánico)
+-  "Algunos datos de clientes pueden haber sido accedidos. Notificaremos en 24 horas si es confirmado" (informativo, prudente)
 
 ### 5. Decisiones de Escalado Legal
 
@@ -155,5 +155,7 @@ Antes de este rol:
 ---
 
 **Documento**: Rol - Asesor Legal y Cumplimiento
+<br>
 **Grupo G5**: Iván Paúl Alba, Sergio González Noria, Manuel Pérez Romero, Javier Calvillo Acebedo
+<br>
 **Fecha**: Mayo 2026
