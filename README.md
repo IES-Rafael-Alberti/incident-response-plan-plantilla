@@ -4,6 +4,8 @@ Este repositorio contiene el Plan de Respuesta a Incidentes desarrollado para Ne
 
 El objetivo es disponer de un plan operativo, coherente con el Plan Director de Seguridad, que permita identificar, contener, erradicar, comunicar y recuperar incidentes de ciberseguridad manteniendo la continuidad del negocio siempre que sea posible.
 
+Enlace al plan: https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2526-4.1-G3/2526-4.1-G3.md
+
 ## Contenido
 
 * `during.md`: procedimiento principal durante el incidente, con evaluación, activación, investigación, remediación, comunicación, MISP y recuperación.
